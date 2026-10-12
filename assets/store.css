@@ -104,3 +104,13 @@ section.wrap { padding-top: 64px; padding-bottom: 16px; }
   .hero { padding: 64px 0 48px; }
   #search { min-width: 0; flex: 1 1 100%; }
 }
+
+/* Free lessons */
+.see-all { color: var(--teal); font-weight: 600; text-decoration: none; }
+.see-all:hover { text-decoration: underline; }
+.free-lead { color: var(--ink-soft); max-width: 60ch; margin: 0 0 8px; }
+.free-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 20px; }
+.free-card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); transition: border-color .15s, transform .15s; }
+.free-card:hover { border-color: var(--teal); transform: translateY(-2px); }
+.free-card h3 { font-size: 1.05rem; margin: 0; }
+.free-card p { margin: 0; color: var(--ink-soft); font-size: .9rem; }
