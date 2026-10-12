@@ -6,36 +6,36 @@ A free, static website of English grammar and vocabulary lessons and downloadabl
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Home page with level cards and lesson list |
-| `library.html` | Searchable, filterable catalogue of every resource |
-| `levels.html` | Guide to the CEFR levels |
-| `lessons/` | Web lessons, one HTML file each |
-| `pdfs/b1` … `pdfs/c2` | PDF files, one folder per level |
-| `data/library.json` | The catalogue that powers the library page |
-| `assets/` | Shared stylesheet and script |
+| `index.html` | Home page and PDF store: hero, level picker, filterable library, how it works |
+| `assets/catalog.js` | **Your catalogue.** Edit this file to add, remove or change PDF titles, prices and buy links |
+| `assets/store.css`, `assets/store.js` | Styles and behaviour for the home page |
+| `library.html`, `levels.html`, `lessons/` | Free web lessons with a searchable index |
+| `pdfs/b1` … `pdfs/c2` | Free lesson PDFs, one folder per level |
+| `data/library.json` | The index that powers the free lessons page |
 
-## Adding a PDF
+## Adding a PDF to the store
 
-1. Put the file in the folder for its level, for example `pdfs/b2/reported-speech.pdf`.
-2. Add an entry to `data/library.json`:
+Open `assets/catalog.js` and copy one of the entries in `window.BOOKS`:
 
-```json
+```js
 {
-  "title": "Reported speech",
-  "level": "B2",
-  "skill": "Grammar",
-  "type": "pdf",
-  "path": "pdfs/b2/reported-speech.pdf",
-  "description": "Rules and practice for reporting what people said.",
-  "tags": ["grammar", "b2"]
-}
+  title: "Mastering Phrasal Verbs",
+  subtitle: "Part One",
+  level: "B1–B2",
+  category: "Vocabulary",
+  description: "The phrasal verbs you meet every day, grouped by particle.",
+  price: "$2",
+  cover: "assets/covers/phrasal-verbs.jpg",
+  link: "https://your-store.example/phrasal-verbs",
+},
 ```
 
-`level` must be one of `B1`, `B2`, `C1`, `C2`. `skill` can be Grammar, Vocabulary, Reading, Writing, Listening or Speaking. `path` can also be a full `https://` link to a file hosted elsewhere.
+- `level` can be one level such as `B2` or a range such as `B1–C1`. A range appears under every level it covers.
+- `category` creates a filter chip automatically.
+- `cover` is optional. Leave it as `""` to get a generated cover.
+- `link` is where the "Get PDF" button goes, for example your Wix, PayPal or Gumroad product page. While it is `"#"`, the button does nothing.
 
-## Adding a web lesson
-
-Copy any file in `lessons/`, change the content, and add a matching entry to `data/library.json` with `"type": "lesson"`.
+Set `storeUrl` in `window.SITE` to your main store address to turn the header button into a "Visit store" link. Set `contactEmail` to show an email link in the footer.
 
 ## Running locally
 

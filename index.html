@@ -1,57 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>mastering-english-library</title>
-<meta name="description" content="Free English grammar and vocabulary lessons for CEFR levels B1 to C2.">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mastering English Library — Academic PDFs, B1 to C2</title>
+  <meta name="description" content="Master English with our curated library of academic PDFs. From B1 to C2, find the resources you need for immediate learning and instant access." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/store.css" />
 </head>
 <body>
-<header class="site">
-  <div class="wrap">
-    <a class="brand" href="index.html">mastering-english-library</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="library.html">Library</a>
-      <a href="levels.html">Levels</a>
-    </nav>
-  </div>
-</header>
-<main>
-  <div class="wrap">
-<h1>mastering-english-library</h1>
-<p class="lead">Free grammar and vocabulary lessons and downloadable PDFs for learners moving from intermediate to proficient English, organised by CEFR level.</p>
-<h2>Choose your level</h2>
-<div class="grid">
-<a class="card" href="library.html#B1"><span class="badge b1">B1</span><h3>Intermediate</h3><p>Handle everyday situations, describe experiences and give simple reasons for opinions.</p></a>
-<a class="card" href="library.html#B2"><span class="badge b2">B2</span><h3>Upper intermediate</h3><p>Talk fluently with native speakers on a wide range of topics and argue a point of view.</p></a>
-<a class="card" href="library.html#C1"><span class="badge c1">C1</span><h3>Advanced</h3><p>Use English flexibly for social, academic and professional purposes, with well-structured, detailed text.</p></a>
-<a class="card" href="library.html#C2"><span class="badge c2">C2</span><h3>Proficiency</h3><p>Understand virtually everything and express yourself precisely, with fine shades of meaning.</p></a>
-</div>
-<p>Not sure where you are? Read the <a href="levels.html">level guide</a>.</p>
-<h2>Lessons</h2>
-<div class="grid">
-<a class="card" href="lessons/b1-present-perfect-vs-past-simple.html"><span class="badge b1">B1</span> <span class="badge type">Grammar</span><h3>Present perfect or past simple?</h3><p>When to use 'I have done' and when to use 'I did', with clear signal words.</p></a>
-<a class="card" href="lessons/b1-everyday-phrasal-verbs.html"><span class="badge b1">B1</span> <span class="badge type">Vocabulary</span><h3>Everyday phrasal verbs</h3><p>Twelve common phrasal verbs for daily life, with examples you can reuse.</p></a>
-<a class="card" href="lessons/b1-writing-informal-email.html"><span class="badge b1">B1</span> <span class="badge type">Writing</span><h3>Writing an informal email</h3><p>How to open, organise and close a friendly email, with useful phrases.</p></a>
-<a class="card" href="lessons/b2-conditionals.html"><span class="badge b2">B2</span> <span class="badge type">Grammar</span><h3>Conditionals: zero to mixed</h3><p>All four main conditional patterns plus mixed conditionals, in one table.</p></a>
-<a class="card" href="lessons/b2-collocations-work.html"><span class="badge b2">B2</span> <span class="badge type">Vocabulary</span><h3>Collocations for work and study</h3><p>Natural word partnerships such as 'meet a deadline' and 'raise an issue'.</p></a>
-<a class="card" href="lessons/b2-opinion-essay.html"><span class="badge b2">B2</span> <span class="badge type">Writing</span><h3>Writing an opinion essay</h3><p>A four-paragraph plan and linking words for clear, persuasive essays.</p></a>
-<a class="card" href="lessons/c1-inversion-for-emphasis.html"><span class="badge c1">C1</span> <span class="badge type">Grammar</span><h3>Inversion for emphasis</h3><p>Using 'Never have I...', 'Not only...' and 'Little did they...' in formal writing.</p></a>
-<a class="card" href="lessons/c1-academic-vocabulary.html"><span class="badge c1">C1</span> <span class="badge type">Vocabulary</span><h3>Academic vocabulary for essays</h3><p>High-value words from academic English that lift the register of your writing.</p></a>
-<a class="card" href="lessons/c1-formal-report.html"><span class="badge c1">C1</span> <span class="badge type">Writing</span><h3>Writing a formal report</h3><p>Headings, impersonal language and recommendations for workplace and exam reports.</p></a>
-<a class="card" href="lessons/c2-cleft-sentences.html"><span class="badge c2">C2</span> <span class="badge type">Grammar</span><h3>Cleft sentences and fronting</h3><p>Shift focus with 'It was ... that' and 'What I need is ...' for precise emphasis.</p></a>
-<a class="card" href="lessons/c2-idioms-and-nuance.html"><span class="badge c2">C2</span> <span class="badge type">Vocabulary</span><h3>Idioms and nuance</h3><p>Idiomatic expressions with subtle meanings that mark near-native fluency.</p></a>
-<a class="card" href="lessons/c2-style-and-register.html"><span class="badge c2">C2</span> <span class="badge type">Writing</span><h3>Style, register and concision</h3><p>Edit for precision: cut wordiness, control register and vary sentence rhythm.</p></a>
-</div>
-<p><a href="library.html">Browse and search the full library &rarr;</a></p>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><span class="mark">ME</span><span class="brand-name">Mastering English</span></a>
+      <nav class="links">
+        <a href="#library">Library</a>
+        <a href="#levels">Levels</a>
+        <a href="#how">How it works</a>
+      </nav>
+      <a class="btn btn-small" id="storeBtn" href="#library">Browse PDFs</a>
+    </div>
+  </header>
 
-  </div>
-</main>
-<footer class="site">
-  <div class="wrap">mastering-english-library. Free to use for self-study and teaching.</div>
-</footer>
-<script src="assets/app.js"></script>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Academic PDF library · CEFR B1 → C2</p>
+        <h1>Master English with our curated library of academic PDFs.</h1>
+        <p class="lead">From B1 to C2, find the resources you need for immediate learning and instant access.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#library">Explore the library</a>
+          <a class="btn btn-ghost" href="#levels">Find your level</a>
+        </div>
+        <ul class="stats">
+          <li><strong id="statCount">0</strong><span>PDF titles</span></li>
+          <li><strong>B1–C2</strong><span>CEFR levels</span></li>
+          <li><strong>Instant</strong><span>download</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="levels wrap" id="levels">
+      <h2>Start at your level</h2>
+      <div class="level-grid">
+        <button class="level-card" data-level="B1"><span class="lv">B1</span><span>Intermediate</span><small>Build solid foundations</small></button>
+        <button class="level-card" data-level="B2"><span class="lv">B2</span><span>Upper-intermediate</span><small>Gain fluency and range</small></button>
+        <button class="level-card" data-level="C1"><span class="lv">C1</span><span>Advanced</span><small>Academic precision</small></button>
+        <button class="level-card" data-level="C2"><span class="lv">C2</span><span>Mastery</span><small>Near-native control</small></button>
+      </div>
+    </section>
+
+    <section class="library wrap" id="library">
+      <div class="lib-head">
+        <h2>The library</h2>
+        <input id="search" type="search" placeholder="Search titles…" aria-label="Search titles" />
+      </div>
+      <div class="filters" id="levelFilters" aria-label="Filter by level"></div>
+      <div class="filters" id="catFilters" aria-label="Filter by category"></div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No titles match. Try another level or search.</p>
+    </section>
+
+    <section class="how wrap" id="how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><span>1</span><h3>Choose</h3><p>Filter by level or skill and pick the PDF you need.</p></li>
+        <li><span>2</span><h3>Pay securely</h3><p>Checkout takes a minute through our trusted store.</p></li>
+        <li><span>3</span><h3>Learn instantly</h3><p>Download right away and study on any device.</p></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <p>© <span id="year"></span> <span id="author"></span>. All rights reserved.</p>
+      <p id="contact"></p>
+    </div>
+  </footer>
+
+  <script src="assets/catalog.js"></script>
+  <script src="assets/store.js"></script>
 </body>
 </html>
