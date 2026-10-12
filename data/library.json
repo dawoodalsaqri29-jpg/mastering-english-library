@@ -13,6 +13,18 @@
       ]
     },
     {
+      "title": "Present perfect or past simple?",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-present-perfect-vs-past-simple.pdf",
+      "description": "When to use 'I have done' and when to use 'I did', with clear signal words.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
       "title": "Everyday phrasal verbs",
       "level": "B1",
       "skill": "Vocabulary",
@@ -25,11 +37,59 @@
       ]
     },
     {
+      "title": "Everyday phrasal verbs",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-everyday-phrasal-verbs.pdf",
+      "description": "Twelve common phrasal verbs for daily life, with examples you can reuse.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
+      "title": "Writing an informal email",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b1-writing-informal-email.html",
+      "description": "How to open, organise and close a friendly email, with useful phrases.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
+      "title": "Writing an informal email",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-writing-informal-email.pdf",
+      "description": "How to open, organise and close a friendly email, with useful phrases.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
       "type": "lesson",
       "path": "lessons/b2-conditionals.html",
+      "description": "All four main conditional patterns plus mixed conditionals, in one table.",
+      "tags": [
+        "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "Conditionals: zero to mixed",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-conditionals.pdf",
       "description": "All four main conditional patterns plus mixed conditionals, in one table.",
       "tags": [
         "grammar",
@@ -49,11 +109,59 @@
       ]
     },
     {
+      "title": "Collocations for work and study",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-collocations-work.pdf",
+      "description": "Natural word partnerships such as 'meet a deadline' and 'raise an issue'.",
+      "tags": [
+        "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing an opinion essay",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b2-opinion-essay.html",
+      "description": "A four-paragraph plan and linking words for clear, persuasive essays.",
+      "tags": [
+        "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing an opinion essay",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-opinion-essay.pdf",
+      "description": "A four-paragraph plan and linking words for clear, persuasive essays.",
+      "tags": [
+        "writing",
+        "b2"
+      ]
+    },
+    {
       "title": "Inversion for emphasis",
       "level": "C1",
       "skill": "Grammar",
       "type": "lesson",
       "path": "lessons/c1-inversion-for-emphasis.html",
+      "description": "Using 'Never have I...', 'Not only...' and 'Little did they...' in formal writing.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
+      "title": "Inversion for emphasis",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-inversion-for-emphasis.pdf",
       "description": "Using 'Never have I...', 'Not only...' and 'Little did they...' in formal writing.",
       "tags": [
         "grammar",
@@ -73,11 +181,59 @@
       ]
     },
     {
+      "title": "Academic vocabulary for essays",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-academic-vocabulary.pdf",
+      "description": "High-value words from academic English that lift the register of your writing.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
+      "title": "Writing a formal report",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c1-formal-report.html",
+      "description": "Headings, impersonal language and recommendations for workplace and exam reports.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
+      "title": "Writing a formal report",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-formal-report.pdf",
+      "description": "Headings, impersonal language and recommendations for workplace and exam reports.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
       "type": "lesson",
       "path": "lessons/c2-cleft-sentences.html",
+      "description": "Shift focus with 'It was ... that' and 'What I need is ...' for precise emphasis.",
+      "tags": [
+        "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "Cleft sentences and fronting",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-cleft-sentences.pdf",
       "description": "Shift focus with 'It was ... that' and 'What I need is ...' for precise emphasis.",
       "tags": [
         "grammar",
@@ -93,6 +249,42 @@
       "description": "Idiomatic expressions with subtle meanings that mark near-native fluency.",
       "tags": [
         "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "Idioms and nuance",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-idioms-and-nuance.pdf",
+      "description": "Idiomatic expressions with subtle meanings that mark near-native fluency.",
+      "tags": [
+        "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "Style, register and concision",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c2-style-and-register.html",
+      "description": "Edit for precision: cut wordiness, control register and vary sentence rhythm.",
+      "tags": [
+        "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Style, register and concision",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-style-and-register.pdf",
+      "description": "Edit for precision: cut wordiness, control register and vary sentence rhythm.",
+      "tags": [
+        "writing",
         "c2"
       ]
     }
