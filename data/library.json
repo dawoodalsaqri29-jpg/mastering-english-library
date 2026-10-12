@@ -1,0 +1,100 @@
+{
+  "resources": [
+    {
+      "title": "Present perfect or past simple?",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b1-present-perfect-vs-past-simple.html",
+      "description": "When to use 'I have done' and when to use 'I did', with clear signal words.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
+      "title": "Everyday phrasal verbs",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b1-everyday-phrasal-verbs.html",
+      "description": "Twelve common phrasal verbs for daily life, with examples you can reuse.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
+      "title": "Conditionals: zero to mixed",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b2-conditionals.html",
+      "description": "All four main conditional patterns plus mixed conditionals, in one table.",
+      "tags": [
+        "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "Collocations for work and study",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b2-collocations-work.html",
+      "description": "Natural word partnerships such as 'meet a deadline' and 'raise an issue'.",
+      "tags": [
+        "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Inversion for emphasis",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c1-inversion-for-emphasis.html",
+      "description": "Using 'Never have I...', 'Not only...' and 'Little did they...' in formal writing.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
+      "title": "Academic vocabulary for essays",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c1-academic-vocabulary.html",
+      "description": "High-value words from academic English that lift the register of your writing.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
+      "title": "Cleft sentences and fronting",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c2-cleft-sentences.html",
+      "description": "Shift focus with 'It was ... that' and 'What I need is ...' for precise emphasis.",
+      "tags": [
+        "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "Idioms and nuance",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c2-idioms-and-nuance.html",
+      "description": "Idiomatic expressions with subtle meanings that mark near-native fluency.",
+      "tags": [
+        "vocabulary",
+        "c2"
+      ]
+    }
+  ]
+}

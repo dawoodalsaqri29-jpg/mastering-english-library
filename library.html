@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library | Mastering English Library</title>
+<meta name="description" content="Free English grammar and vocabulary lessons for CEFR levels B1 to C2.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Mastering English Library</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="library.html">Library</a>
+      <a href="levels.html">Levels</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+<h1>Library</h1>
+<p class="lead">Search every lesson and PDF. Filter by level, skill or format.</p>
+<div class="filters">
+  <input type="search" id="f-search" placeholder="Search titles and topics" aria-label="Search">
+  <label>Level <select id="f-level"><option value="">All</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></label>
+  <label>Skill <select id="f-skill"><option value="">All</option><option>Grammar</option><option>Vocabulary</option><option>Reading</option><option>Writing</option><option>Listening</option><option>Speaking</option></select></label>
+  <label>Format <select id="f-type"><option value="">All</option><option value="lesson">Web lesson</option><option value="pdf">PDF</option></select></label>
+  <span class="count" id="f-count"></span>
+</div>
+<div data-catalog data-base=""><p class="empty">Loading&hellip;</p></div>
+<script>
+  // Allow links such as library.html#B2 to preselect a level.
+  (function () {
+    var h = location.hash.replace("#", "").toUpperCase();
+    if (/^(B1|B2|C1|C2)$/.test(h)) document.getElementById("f-level").value = h;
+  })();
+</script>
+
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">Mastering English Library. Free to use for self-study and teaching.</div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

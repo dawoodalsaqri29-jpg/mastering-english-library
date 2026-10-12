@@ -1,0 +1,138 @@
+:root {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #5f6b7a;
+  --border: #e3e6ea;
+  --accent: #1f6f8b;
+  --accent-soft: #e4f1f5;
+  --b1: #2e7d32;
+  --b2: #1565c0;
+  --c1: #6a1b9a;
+  --c2: #b71c1c;
+  --radius: 10px;
+  --max: 1040px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15191e;
+    --surface: #1e242b;
+    --text: #e8ecf0;
+    --muted: #a0aab6;
+    --border: #2d353f;
+    --accent: #6cc1dd;
+    --accent-soft: #223640;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 2rem; margin: 0 0 .5rem; }
+h2 { font-size: 1.4rem; margin: 2rem 0 .75rem; }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .9em; background: var(--accent-soft); padding: .1em .35em; border-radius: 4px; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 60px; flex-wrap: wrap; }
+header.site .brand { font-weight: 700; text-decoration: none; color: var(--text); font-size: 1.05rem; }
+header.site nav a { margin-left: 1.1rem; text-decoration: none; color: var(--muted); font-size: .95rem; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: var(--accent); }
+main { padding: 2rem 0 3rem; }
+footer.site { border-top: 1px solid var(--border); padding: 1.5rem 0; color: var(--muted); font-size: .9rem; font-family: system-ui, sans-serif; }
+.lead { font-size: 1.15rem; color: var(--muted); margin: 0 0 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.card:hover { border-color: var(--accent); }
+.card h3 { margin: .25rem 0 .4rem; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.badge {
+  display: inline-block;
+  font-family: system-ui, sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .15em .55em;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--muted);
+}
+.badge.b1 { background: var(--b1); }
+.badge.b2 { background: var(--b2); }
+.badge.c1 { background: var(--c1); }
+.badge.c2 { background: var(--c2); }
+.badge.type { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.filters {
+  display: flex; flex-wrap: wrap; gap: .75rem; align-items: center;
+  font-family: system-ui, sans-serif; font-size: .95rem;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: .9rem 1rem; margin-bottom: 1.25rem;
+}
+.filters label { display: flex; align-items: center; gap: .4rem; }
+.filters input[type=search], .filters select {
+  font: inherit; padding: .4rem .6rem; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--text);
+}
+.filters input[type=search] { flex: 1 1 200px; }
+.count { color: var(--muted); font-size: .9rem; margin-left: auto; }
+.list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+.list li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: .9rem 1.1rem; }
+.list li .meta { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-bottom: .3rem; }
+.list li a.title { font-weight: 600; text-decoration: none; color: var(--text); font-size: 1.05rem; }
+.list li a.title:hover { color: var(--accent); }
+.list li p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
+.empty { color: var(--muted); padding: 2rem 0; text-align: center; }
+.lesson-head { margin-bottom: 1.5rem; }
+.lesson-head .meta { display: flex; gap: .5rem; align-items: center; margin-bottom: .5rem; }
+.box { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1.25rem 0; }
+.box.tip { border-left-color: var(--b1); }
+.box.warn { border-left-color: var(--c2); }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .97rem; }
+th, td { text-align: left; padding: .5rem .6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { font-family: system-ui, sans-serif; font-size: .85rem; letter-spacing: .03em; color: var(--muted); }
+.example { font-style: italic; }
+.vocab { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .6rem; }
+.vocab li { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: .8rem 1rem; }
+.vocab .word { font-weight: 700; }
+.vocab .pos { color: var(--muted); font-family: system-ui, sans-serif; font-size: .85rem; margin-left: .4rem; }
+.vocab .def, .vocab .ex { margin: .2rem 0 0; }
+.vocab .ex { color: var(--muted); font-style: italic; }
+.quiz-mode .vocab .def, .quiz-mode .vocab .ex { display: none; }
+.quiz-mode .vocab li.revealed .def, .quiz-mode .vocab li.revealed .ex { display: block; }
+.quiz-mode .vocab li { cursor: pointer; }
+button.toggle {
+  font: inherit; font-family: system-ui, sans-serif; font-size: .9rem;
+  padding: .45rem .9rem; border-radius: 6px; border: 1px solid var(--accent);
+  background: var(--accent-soft); color: var(--text); cursor: pointer;
+}
+details { margin: .75rem 0; }
+summary { cursor: pointer; font-weight: 600; }
+.exercise ol { padding-left: 1.3rem; }
+.exercise li { margin: .4rem 0; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-family: system-ui, sans-serif; font-size: .95rem; }
+.levels-table td:first-child { white-space: nowrap; }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.6rem; }
+  header.site nav a { margin-left: .8rem; }
+}
