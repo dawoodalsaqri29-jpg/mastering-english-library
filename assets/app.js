@@ -1,4 +1,4 @@
-// Shared behaviour for the Mastering English Library static site.
+// Shared behaviour for the mastering-english-library static site.
 (function () {
   "use strict";
 

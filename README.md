@@ -1,4 +1,4 @@
-# Mastering English Library
+# mastering-english-library
 
 A free, static website of English grammar and vocabulary lessons and downloadable PDFs for CEFR levels B1, B2, C1 and C2. It runs on GitHub Pages with no build step.
 
