@@ -114,3 +114,5 @@ section.wrap { padding-top: 64px; padding-bottom: 16px; }
 .free-card:hover { border-color: var(--teal); transform: translateY(-2px); }
 .free-card h3 { font-size: 1.05rem; margin: 0; }
 .free-card p { margin: 0; color: var(--ink-soft); font-size: .9rem; }
+.btn-soon { background: transparent; color: var(--ink-soft); border-color: var(--line); cursor: default; }
+.btn-soon:hover { transform: none; }

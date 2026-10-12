@@ -32,14 +32,18 @@
   }
 
   function card(b, i) {
-    const linkAttrs = b.link && b.link !== "#" ? `href="${esc(b.link)}" target="_blank" rel="noopener"` : `href="#" aria-disabled="true"`;
+    // Titles without a real link show a disabled "Coming soon" label instead of a button that jumps to the top.
+    const hasLink = b.link && b.link !== "#";
+    const action = hasLink
+      ? `<a class="btn btn-small" href="${esc(b.link)}" target="_blank" rel="noopener">Get PDF</a>`
+      : `<span class="btn btn-small btn-soon" aria-disabled="true">Coming soon</span>`;
     return `<article class="book">
       ${cover(b, i)}
       <div class="book-body">
         <div class="meta"><span class="tag">${esc(b.level)}</span><span class="tag cat">${esc(b.category)}</span></div>
         <h3>${esc(b.title)}</h3>
         <p>${esc(b.description)}</p>
-        <div class="buy"><span class="price">${esc(b.price)}</span><a class="btn btn-small" ${linkAttrs}>Get PDF</a></div>
+        <div class="buy"><span class="price">${esc(b.price)}</span>${action}</div>
       </div>
     </article>`;
   }
