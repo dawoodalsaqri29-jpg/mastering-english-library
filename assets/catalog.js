@@ -13,7 +13,7 @@ window.BOOKS = [
     category: "Grammar",
     description: "Every tense on a timeline diagram, with the contrasts learners actually confuse.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/tenses.jpg",
     link: "#",
   },
   {
@@ -23,7 +23,7 @@ window.BOOKS = [
     category: "Grammar",
     description: "Possibility, obligation and advice laid out on clear strength scales.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/modals.jpg",
     link: "#",
   },
   {
@@ -33,7 +33,7 @@ window.BOOKS = [
     category: "Grammar",
     description: "Relative, noun, adverbial and conditional clauses, built step by step.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/clauses.jpg",
     link: "#",
   },
   {
@@ -43,7 +43,7 @@ window.BOOKS = [
     category: "Vocabulary",
     description: "The word partnerships that make English sound natural.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/collocations.jpg",
     link: "#",
   },
   {
@@ -53,7 +53,7 @@ window.BOOKS = [
     category: "Vocabulary",
     description: "Choose the exact word: register, strength and context for every synonym set.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/synonyms.jpg",
     link: "#",
   },
   {
@@ -63,7 +63,7 @@ window.BOOKS = [
     category: "Writing",
     description: "Connect ideas clearly in essays, emails and speech.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/linking-words.jpg",
     link: "#",
   },
   {
@@ -73,7 +73,7 @@ window.BOOKS = [
     category: "Writing",
     description: "Fourteen marks, comma-splice repairs and the rules that matter.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/punctuation.jpg",
     link: "#",
   },
   {
@@ -83,7 +83,7 @@ window.BOOKS = [
     category: "Exams",
     description: "Proven strategies for reading, listening, writing and speaking papers.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/exam-skills.jpg",
     link: "#",
   },
   {
@@ -93,7 +93,7 @@ window.BOOKS = [
     category: "Vocabulary",
     description: "Idioms grouped by image, so they stick in memory.",
     price: "$2",
-    cover: "",
+    cover: "assets/covers/idioms.jpg",
     link: "#",
   },
 ];
