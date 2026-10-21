@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Writing Tools Stories</title>
+<style>
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-400-normal.woff2);font-weight:400}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-500-normal.woff2);font-weight:500}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-900-normal.woff2);font-weight:900}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Int;src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Int;src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Int;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Int;src:url(fonts/inter-latin-700-normal.woff2);font-weight:700}
+
+:root{--navy:#0f1d33;--navy2:#172a47;--teal:#13777a;--gold:#d9a441;--gold2:#f0c977;--cream:#f7f0e2;--ink:#14213a;--red:#d64545}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;font-family:Taj,Int,sans-serif;display:flex;flex-wrap:wrap;gap:40px;padding:40px}
+.s{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);background:var(--bg)}
+.safe{position:absolute;left:72px;right:72px;top:270px;bottom:330px;display:flex;flex-direction:column}
+.en{font-family:Int,sans-serif;direction:ltr;unicode-bidi:isolate}
+.serif{font-family:Play,serif}
+.brand{display:flex;align-items:center;justify-content:space-between;font-family:Int;font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);direction:ltr;font-weight:600}
+.brand .num{letter-spacing:.1em}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:26px 0 0;position:relative}
+.rule:after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+.kick{display:inline-flex;align-self:flex-start;align-items:center;gap:14px;padding:12px 26px;border-radius:999px;font-size:30px;font-weight:700;background:var(--chip);color:var(--chipfg)}
+h1{font-family:Cai,Taj,sans-serif;font-weight:900;font-size:92px;line-height:1.28;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:42px;line-height:1.6;color:var(--muted);font-weight:500}
+.card{background:#fff;border-radius:28px;box-shadow:0 30px 70px rgba(0,0,0,.28),0 0 0 3px var(--accent);overflow:hidden;color:#1d2533}
+.browser{height:58px;background:#eef0f4;display:flex;align-items:center;gap:12px;padding:0 24px;direction:ltr}
+.browser i{width:16px;height:16px;border-radius:50%;background:#cfd4dc;display:block}
+.browser .url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;font-family:Int;font-size:19px;color:#7a8394;display:flex;align-items:center;padding:0 18px}
+.ui{direction:ltr;text-align:left;font-family:Int,sans-serif;padding:30px 34px}
+.ui h3{font-family:Play,serif;font-size:46px;color:var(--ink);font-weight:700}
+.ui .tag{font-size:24px;color:#6b7383;margin-top:4px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.tab{border:1.5px solid #d9dde5;border-radius:999px;padding:14px 6px;font-size:23px;font-weight:600;color:#3a4357;text-align:center;white-space:nowrap}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 0 0 4px rgba(217,164,65,.55)}
+.ta{margin-top:24px;border:1.5px solid #d9dde5;border-radius:16px;padding:26px 28px;font-size:34px;line-height:1.55;color:#20283a;min-height:150px;background:#fbfbfd}
+.bad{text-decoration:underline wavy var(--red);text-decoration-thickness:2.5px;text-underline-offset:7px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--teal);color:#fff;font-weight:700;font-size:28px;padding:18px 34px;border-radius:14px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:16px;font-size:34px;font-weight:700;color:var(--accent)}
+.arrow{width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent);display:grid;place-items:center}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 12% 18%,rgba(240,201,119,.55),transparent 60%),radial-gradient(1.6px 1.6px at 82% 9%,rgba(255,255,255,.35),transparent 60%),radial-gradient(2px 2px at 70% 34%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.3),transparent 60%),radial-gradient(2px 2px at 90% 72%,rgba(240,201,119,.45),transparent 60%),radial-gradient(1.5px 1.5px at 40% 88%,rgba(255,255,255,.3),transparent 60%),radial-gradient(1.8px 1.8px at 6% 90%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 55% 5%,rgba(255,255,255,.3),transparent 60%)}
+.frame{position:absolute;inset:34px;border:1.5px solid var(--line);border-radius:6px;pointer-events:none}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(40px);opacity:.5}
+.cur{position:absolute;width:44px;height:44px}
+</style>
+</head>
+<body>
+
+<!-- 1 · OPEN -->
+<section class="s" id="s1" style="--bg:radial-gradient(120% 80% at 80% 0%,#1d3557 0%,#0f1d33 55%,#0a1424 100%);--fg:#fff;--muted:#aab6cb;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Mastering English Library</span><span class="num">1/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:90px;font-size:100px">تكتب بالإنجليزي…<br>وما تدري كلامك<br><em>صح ولا غلط؟</em></h1>
+    <div class="card" style="margin-top:80px">
+      <div class="browser"><i></i><i></i><i></i><div class="url">masteringenglish-lib.wixsite.com/mastering-english</div></div>
+      <div class="ui">
+        <div style="font-size:22px;color:#6b7383;font-weight:600;letter-spacing:.04em">YOUR TEXT</div>
+        <div class="ta" style="min-height:0">Yesterday I <span class="bad">go</span> to the market and <span class="bad">buyed</span> many <span class="bad">thing</span> for my family.</div>
+        <div style="margin-top:22px;font-size:28px;color:var(--red);font-weight:600">3 mistakes — can you spot them?</div>
+      </div>
+    </div>
+    <div class="foot"><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c977" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>بوريك كيف تصلّحها في ثواني</div>
+  </div>
+</section>
+
+<!-- 2 · HOW -->
+<section class="s" id="s2" style="--bg:#f7f0e2;--fg:#14213a;--muted:#5d6577;--accent:#c48a22;--chip:#14213a;--chipfg:#f0c977;--line:rgba(196,138,34,.35)">
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Writing Tools</span><span class="num">2/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:56px">كيف تستخدمها؟<br><em>3 خطوات بس</em></h1>
+    <div style="margin-top:56px;display:flex;flex-direction:column;gap:30px">
+      <div style="display:flex;gap:24px;align-items:center"><div style="width:76px;height:76px;flex:none;border-radius:50%;background:#14213a;color:#f0c977;font-family:Cai;font-weight:900;font-size:40px;display:grid;place-items:center">1</div><div style="font-size:46px;font-weight:700">افتح <span class="en">Writing Tools</span> من الموقع</div></div>
+      <div style="display:flex;gap:24px;align-items:center"><div style="width:76px;height:76px;flex:none;border-radius:50%;background:#14213a;color:#f0c977;font-family:Cai;font-weight:900;font-size:40px;display:grid;place-items:center">2</div><div style="font-size:46px;font-weight:700">اختار <span class="en">Fix Text</span> واكتب جملتك</div></div>
+      <div style="display:flex;gap:24px;align-items:center"><div style="width:76px;height:76px;flex:none;border-radius:50%;background:#13777a;color:#fff;font-family:Cai;font-weight:900;font-size:40px;display:grid;place-items:center">3</div><div style="font-size:46px;font-weight:700">اضغط <span class="en">Fix my text</span></div></div>
+    </div>
+    <div class="card" style="margin-top:70px;position:relative">
+      <div class="ui">
+        <h3>Writing Tools</h3>
+        <div class="tag">Your English writing assistant, made for Arabic speakers.</div>
+        <div class="tabs">
+          <div class="tab">Custom</div><div class="tab">Vocabulary</div><div class="tab on">Fix Text</div><div class="tab">Synonyms</div>
+        </div>
+        <div class="ta" style="min-height:0;font-size:30px">Yesterday I go to the market and buyed many thing for my family.</div>
+        <div style="display:flex;justify-content:space-between;align-items:center"><div class="btn">Fix my text</div><div style="margin-top:24px;font-size:23px;color:#8a92a3">Free · 3 AI uses today</div></div>
+      </div>
+      <svg class="cur" style="left:236px;bottom:30px" viewBox="0 0 24 24"><path d="M4 2l15 10-6.5 1.4L16 21l-3 1.3-3.4-7.6L4 19z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · RESULT -->
+<section class="s" id="s3" style="--bg:#ffffff;--fg:#14213a;--muted:#5d6577;--accent:#13777a;--chip:#e3f2f1;--chipfg:#0f5f62;--line:rgba(19,119,122,.25)">
+  
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Fix Text</span><span class="num">3/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:70px;font-size:100px">تصحيح فوري…<br><em>مع السبب</em></h1>
+    <div class="sub" style="margin-top:14px">يقولك وين غلطت وليش — حتى بالعربي</div>
+    <div class="card" style="margin-top:64px;box-shadow:0 30px 70px rgba(15,29,51,.16),0 0 0 3px #13777a">
+      <div class="ui" style="padding:40px 40px">
+        <div style="font-family:Play;font-weight:700;font-size:36px;color:#14213a">Corrected text</div>
+        <div style="font-size:33px;line-height:1.55;margin-top:12px;color:#1d2533">Yesterday I <b style="color:#0f7a4f">went</b> to the market and <b style="color:#0f7a4f">bought</b> many <b style="color:#0f7a4f">things</b> for my family.</div>
+        <div style="font-family:Play;font-weight:700;font-size:36px;color:#14213a;margin-top:34px">What I changed</div>
+        <div style="font-size:29px;line-height:1.8;margin-top:8px;color:#2b3346">
+          <div><s style="color:#b04040">go</s> → <b>went</b> &nbsp;<span style="color:#6b7383">past tense; “yesterday” needs past</span></div>
+          <div><s style="color:#b04040">buyed</s> → <b>bought</b> &nbsp;<span style="color:#6b7383">irregular verb</span></div>
+          <div><s style="color:#b04040">thing</s> → <b>things</b> &nbsp;<span style="color:#6b7383">plural; you said “many”</span></div>
+        </div>
+      </div>
+      <div style="background:#fbf1dc;border-top:2px solid #e2b85c;padding:28px 36px;direction:rtl;font-size:32px;line-height:1.6;color:#4a3a14;font-weight:500">استخدمت <span class="en">present tense</span> بدل <span class="en">past tense</span>، وكتبت صيغة خاطئة للفعل <span class="en">“buy”</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · 8 TOOLS + POLL -->
+<section class="s" id="s4" style="--bg:linear-gradient(170deg,#0f5f62 0%,#0b4648 60%,#083537 100%);--fg:#fff;--muted:#bfe0de;--accent:#f0c977;--chip:rgba(255,255,255,.12);--chipfg:#fff;--line:rgba(240,201,119,.3)">
+  <div class="stars" style="opacity:.6"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Writing Tools</span><span class="num">4/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:50px;font-size:86px"><em>8 أدوات</em> في مكان واحد</h1>
+    <div style="margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="tool"><b class="en">Fix Text</b><span>يصحح جملتك</span></div>
+      <div class="tool"><b class="en">Grammar</b><span>يشرح لك القاعدة</span></div>
+      <div class="tool"><b class="en">Vocabulary</b><span>معنى الكلمة بالعربي</span></div>
+      <div class="tool"><b class="en">Synonyms</b><span>المرادفات</span></div>
+      <div class="tool"><b class="en">Text Style</b><span>رسمي أو عادي</span></div>
+      <div class="tool"><b class="en">Topic Ideas</b><span>لو محتار وش تكتب</span></div>
+      <div class="tool"><b class="en">Sample</b><span>نموذج على مستواك</span></div>
+      <div class="tool"><b class="en">Custom</b><span>اطلب اللي تبيه</span></div>
+    </div>
+    <div style="margin-top:auto;text-align:center">
+      <div style="font-family:Cai;font-weight:800;font-size:54px">أي وحدة بتجرّب أول؟</div>
+      <div style="font-size:34px;color:var(--muted);margin-top:10px">رد على الستوري باسمها، وأرسل لك جملة تجرّبها</div>
+      <div style="height:230px"></div>
+    </div>
+  </div>
+  <style>
+    #s4 .tool{background:rgba(255,255,255,.08);border:1.5px solid rgba(240,201,119,.35);border-radius:22px;padding:28px 28px;display:flex;flex-direction:column;gap:6px}
+    #s4 .tool b{font-size:38px;font-weight:700;color:#f0c977;text-align:right}
+    #s4 .tool span{font-size:32px;color:#e6f3f2;font-weight:500}
+  </style>
+</section>
+
+<!-- 5 · PRICE -->
+<section class="s" id="s5" style="--bg:#f2b84b;--fg:#14213a;--muted:#5b4316;--accent:#14213a;--chip:#14213a;--chipfg:#f0c977;--line:rgba(20,33,58,.25)">
+  
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Free &amp; Pro</span><span class="num">5/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:70px;font-size:100px">كم تكلّفك؟</h1>
+    <div class="sub" style="margin-top:6px">تقدر تبدأ ببلاش</div>
+    <div style="margin-top:60px;background:#fff8ea;border-radius:30px;padding:40px 44px;box-shadow:0 20px 50px rgba(90,60,10,.18)">
+      <div style="font-size:30px;font-weight:700;color:#8a6516">مجاناً</div>
+      <div style="font-family:Cai;font-weight:900;font-size:76px;line-height:1.2;margin-top:4px">3 محاولات<span style="font-size:44px;font-weight:800;color:#5b4316"> كل يوم</span></div>
+      <div style="font-size:30px;color:#5b4316;margin-top:6px">تجرّب فيها كل الأدوات</div>
+    </div>
+    <div style="margin-top:44px;background:#14213a;color:#fff;border-radius:30px;padding:40px 44px;box-shadow:0 26px 60px rgba(20,33,58,.35),0 0 0 3px #f0c977;position:relative">
+      <div style="position:absolute;top:-22px;left:44px;background:#f0c977;color:#14213a;font-family:Int;font-weight:700;font-size:22px;padding:8px 20px;border-radius:999px;letter-spacing:.06em">PRO</div>
+      <div class="en serif" style="font-size:38px;color:#f0c977;font-weight:700;text-align:right">Writing Tools Pro</div>
+      <div style="display:flex;align-items:baseline;gap:16px;margin-top:6px"><span class="en" style="font-family:Int;font-weight:700;font-size:96px;line-height:1">$4.99</span><span style="font-size:34px;color:#c9d2e2">بالشهر</span></div>
+      <div style="font-size:32px;line-height:1.7;margin-top:18px;color:#e8ecf4">
+        <div>✦ &nbsp;30 محاولة يومياً لكل الأدوات</div>
+        <div>✦ &nbsp;تلغي الاشتراك متى ما تبي</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · LIBRARY -->
+<section class="s" id="s6" style="--bg:linear-gradient(180deg,#1e3a5f 0%,#162c49 100%);--fg:#fff;--muted:#b9c7dc;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.25)">
+  <div class="stars" style="opacity:.5"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>PDF Library</span><span class="num">6/7</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:50px">وفي الموقع بعد…<br><em>61 كتاب PDF</em></h1>
+    <div class="sub" style="margin-top:6px">من <span class="en">B1</span> لين <span class="en">C2</span> — تحميل فوري</div>
+    <div style="margin-top:46px;display:flex;justify-content:center;gap:18px;direction:ltr;height:400px;align-items:flex-end">
+      <div class="bk" style="--c1:#2b2f6b;--c2:#7c5cff;transform:rotate(-5deg) translateY(16px)"><small>The Timeline Edition</small><b>TENSES</b><i>&amp; Time</i></div>
+      <div class="bk" style="--c1:#13403f;--c2:#1fa58f"><small>Clear Answers</small><b>EXPLAIN IT</b><i>English, simply</i></div>
+      <div class="bk" style="--c1:#5a1730;--c2:#e2456b"><small>Daily Practice</small><b>7-DAY</b><i>Challenges</i></div>
+      <div class="bk" style="--c1:#3e2a0c;--c2:#e0a23a;transform:rotate(5deg) translateY(16px)"><small>Ready to Use</small><b>WRITING</b><i>Templates</i></div>
+    </div>
+    <div style="margin-top:40px;display:flex;flex-direction:column;gap:18px">
+      <div class="feat"><span class="en pill">Look inside</span>تشوف صفحات من الكتاب قبل لا تشتري</div>
+      <div class="feat"><span class="en pill">Free samples</span>وفيه عينات مجانية تحمّلها الحين</div>
+    </div>
+  </div>
+  <style>
+    #s6 .bk{width:208px;height:310px;border-radius:6px 14px 14px 6px;background:linear-gradient(155deg,var(--c1) 0 58%,var(--c2) 58%);box-shadow:0 24px 40px rgba(0,0,0,.4),inset 8px 0 0 rgba(0,0,0,.18);padding:26px 20px;display:flex;flex-direction:column;color:#fff;font-family:Int}
+    #s6 .bk small{font-size:14px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+    #s6 .bk b{font-size:34px;font-weight:700;margin-top:auto;line-height:1.05}
+    #s6 .bk i{font-family:Play;font-style:italic;font-size:24px;margin-top:4px;opacity:.9}
+    #s6 .feat{display:flex;align-items:center;gap:20px;font-size:33px;font-weight:600;background:rgba(255,255,255,.07);border:1.5px solid rgba(240,201,119,.3);border-radius:22px;padding:22px 26px}
+    #s6 .pill{flex:none;background:#e2456b;color:#fff;font-weight:700;font-size:24px;padding:10px 20px;border-radius:999px}
+  </style>
+</section>
+
+<!-- 7 · CLOSE + LINK -->
+<section class="s" id="s7" style="--bg:radial-gradient(110% 70% at 50% 30%,#1d3557 0%,#0f1d33 60%,#0a1424 100%);--fg:#fff;--muted:#aab6cb;--accent:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars"></div><div class="frame"></div>
+  <div class="safe" style="align-items:center;text-align:center">
+    <div class="brand" style="width:100%"><span>Mastering English Library</span><span class="num">7/7</span></div>
+    <div class="rule" style="width:100%"></div>
+    <div style="margin-top:70px;width:170px;height:170px;border-radius:50%;border:3px solid #f0c977;display:grid;place-items:center;font-family:Play;font-weight:600;font-size:70px;color:#f0c977;direction:ltr">ME</div>
+    <h1 style="margin-top:48px">جرّبها اليوم<br><em>ببلاش</em></h1>
+    <div class="sub" style="margin-top:14px">3 محاولات كل يوم في <span class="en">Writing Tools</span><br>ما تحتاج تدفع شي عشان تبدأ</div>
+    <div style="margin-top:50px;direction:ltr;font-family:Int;font-weight:600;font-size:31px;color:#14213a;background:#f0c977;padding:22px 34px;border-radius:999px;box-shadow:0 14px 34px rgba(240,201,119,.25);display:flex;align-items:center;gap:14px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14213a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>masteringenglish-lib.wixsite.com/mastering-english</div><div style="margin-top:30px;font-size:32px;font-weight:700;color:#f0c977">اضغط الرابط تحت</div>
+    <svg style="margin-top:10px" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f0c977" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+    <div style="height:130px"></div>
+    <div style="margin-top:auto;font-size:32px;color:var(--muted);line-height:1.6">وبعدها رد علي:<br><b style="color:#fff">كم غلطة صلّحت لك؟</b></div>
+  </div>
+</section>
+
+</body>
+</html>
