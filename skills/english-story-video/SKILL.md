@@ -115,6 +115,29 @@ python3 scripts/make_packs.py story.json packs/
 writes `pictures-pack.md` (reference prompts + numbered shot prompts with their lines) and
 `voice-A.txt …`. Send them with SendUserFile (batch the shot prompts as in step 4).
 
+## 5b. When Dawood sends storyboard grids
+
+He sometimes generates a whole chapter as one picture with many panels (a comic grid, often with
+chapter banners, caption boxes or speech bubbles). His rule: **every panel is its own full-screen
+frame — never show the neighbouring panels; put a blurred copy of the panel behind it.**
+
+1. `python3 scripts/grid_panels.py split grid1.png grid2.png … --out work/` → look at
+   `work/sheet.jpg`. Irregular layouts (inset panels, speech bubbles spanning gutters) may need
+   manual boxes — crop them with PIL by pixel box.
+2. He usually sends 3–4 variants of the same chapter. For every narration line pick the cleanest
+   panel that shows exactly that moment; vary between variants so nothing repeats back to back.
+3. Trim baked-in text (chapter banners, captions, speech bubbles) with `grid_panels.py trim`;
+   skip panels whose text can't be cropped away. In-world text that matches the narration (e.g. the
+   letter being read aloud) is fine.
+4. `grid_panels.py finish work/sel/*.png --out clips/` (fast 4× AI upscale + blurred-background
+   16:9 composition), then map line → panel id in `lines[].shots`. Panels are small (~250 px), so
+   say honestly that full-size ElevenLabs pictures will look sharper than upscaled panels.
+5. For the 8–12 most magical moments, make `animate-story-picture`'s `magic_motion.py` clips
+   (sparkles / dust / fireflies) and save them as `<id>.mp4` next to the PNG — the assembler
+   prefers the MP4.
+6. Until Lily's MP3s arrive, render a **silent preview** with placeholder voice files (bursts of
+   noise sized to each line) and strip the audio; re-run with the real MP3s for the final.
+
 ## 6. Assemble
 
 Uploads land in `/root/.claude/uploads/<session>/`; copy them into `clips/` (pictures and clips,
