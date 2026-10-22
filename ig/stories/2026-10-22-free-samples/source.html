@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Free Samples Stories</title>
+<style>
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-400-normal.woff2);font-weight:400}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-500-normal.woff2);font-weight:500}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-900-normal.woff2);font-weight:900}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Int;src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Int;src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Int;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Int;src:url(fonts/inter-latin-700-normal.woff2);font-weight:700}
+
+:root{--navy:#0f1d33;--navy2:#172a47;--teal:#13777a;--gold:#d9a441;--gold2:#f0c977;--cream:#f7f0e2;--ink:#14213a;--red:#d64545}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;font-family:Taj,Int,sans-serif;display:flex;flex-wrap:wrap;gap:40px;padding:40px}
+.s{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);background:var(--bg)}
+.safe{position:absolute;left:72px;right:72px;top:270px;bottom:330px;display:flex;flex-direction:column}
+.en{font-family:Int,sans-serif;direction:ltr;unicode-bidi:isolate}
+.serif{font-family:Play,serif}
+.brand{display:flex;align-items:center;justify-content:space-between;font-family:Int;font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);direction:ltr;font-weight:600}
+.brand .num{letter-spacing:.1em}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:26px 0 0;position:relative}
+.rule:after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+.kick{display:inline-flex;align-self:flex-start;align-items:center;gap:14px;padding:12px 26px;border-radius:999px;font-size:30px;font-weight:700;background:var(--chip);color:var(--chipfg)}
+h1{font-family:Cai,Taj,sans-serif;font-weight:900;font-size:92px;line-height:1.28;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:42px;line-height:1.6;color:var(--muted);font-weight:500}
+.card{background:#fff;border-radius:28px;box-shadow:0 30px 70px rgba(0,0,0,.28),0 0 0 3px var(--accent);overflow:hidden;color:#1d2533}
+.browser{height:58px;background:#eef0f4;display:flex;align-items:center;gap:12px;padding:0 24px;direction:ltr}
+.browser i{width:16px;height:16px;border-radius:50%;background:#cfd4dc;display:block}
+.browser .url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;font-family:Int;font-size:19px;color:#7a8394;display:flex;align-items:center;padding:0 18px}
+.ui{direction:ltr;text-align:left;font-family:Int,sans-serif;padding:30px 34px}
+.ui h3{font-family:Play,serif;font-size:46px;color:var(--ink);font-weight:700}
+.ui .tag{font-size:24px;color:#6b7383;margin-top:4px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.tab{border:1.5px solid #d9dde5;border-radius:999px;padding:14px 6px;font-size:23px;font-weight:600;color:#3a4357;text-align:center;white-space:nowrap}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 0 0 4px rgba(217,164,65,.55)}
+.ta{margin-top:24px;border:1.5px solid #d9dde5;border-radius:16px;padding:26px 28px;font-size:34px;line-height:1.55;color:#20283a;min-height:150px;background:#fbfbfd}
+.bad{text-decoration:underline wavy var(--red);text-decoration-thickness:2.5px;text-underline-offset:7px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--teal);color:#fff;font-weight:700;font-size:28px;padding:18px 34px;border-radius:14px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:16px;font-size:34px;font-weight:700;color:var(--accent)}
+.arrow{width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent);display:grid;place-items:center}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 12% 18%,rgba(240,201,119,.55),transparent 60%),radial-gradient(1.6px 1.6px at 82% 9%,rgba(255,255,255,.35),transparent 60%),radial-gradient(2px 2px at 70% 34%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.3),transparent 60%),radial-gradient(2px 2px at 90% 72%,rgba(240,201,119,.45),transparent 60%),radial-gradient(1.5px 1.5px at 40% 88%,rgba(255,255,255,.3),transparent 60%),radial-gradient(1.8px 1.8px at 6% 90%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 55% 5%,rgba(255,255,255,.3),transparent 60%)}
+.frame{position:absolute;inset:34px;border:1.5px solid var(--line);border-radius:6px;pointer-events:none}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(40px);opacity:.5}
+.cur{position:absolute;width:44px;height:44px}
+.step{display:flex;gap:24px;align-items:center}
+.step .n{width:72px;height:72px;flex:none;border-radius:50%;background:#1f2a5c;color:#f0c977;font-family:Cai;font-weight:900;font-size:38px;display:grid;place-items:center}
+.step .t{font-size:42px;font-weight:700}
+.feat{display:flex;gap:26px;align-items:center;background:#fff;border-radius:24px;padding:26px 30px;box-shadow:0 14px 34px rgba(31,42,92,.10);border:1.5px solid rgba(91,79,168,.22)}
+.feat .ic{width:96px;height:96px;flex:none;border-radius:22px;background:#ece8f7;color:#3d3486;font-family:Int;font-weight:900;font-size:42px;display:grid;place-items:center}
+.feat .tx b{display:block;font-size:40px;font-weight:800;color:#1f2a5c}
+.feat .tx span{font-size:30px;color:#5a5f78;font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- 1 · HOOK -->
+<section class="s" id="s1" style="--bg:radial-gradient(120% 80% at 80% 0%,#33408a 0%,#1f2a5c 55%,#121a3d 100%);--fg:#fff;--muted:#b7bfe0;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Mastering English Library</span><span class="num">1/5</span></div>
+    <div class="rule"></div>
+    <div class="kick" style="margin-top:70px"><span class="en">Fossilised errors</span></div>
+    <h1 style="margin-top:34px;font-size:90px">في أخطاء بالإنجليزي<br>ثابتة معك <em>من سنين</em>…<br>وللحين ما تنتبه لها؟</h1>
+    <div class="sub" style="margin-top:26px">مب جهل بالقاعدة… الغلطة بس صارت عادة</div>
+    <div class="card" style="margin-top:80px">
+      <div class="browser"><i></i><i></i><i></i><div class="url">Sound familiar?</div></div>
+      <div class="ui" style="font-size:36px;line-height:1.9;color:#20283a">
+        <div>I <span class="bad">am agree</span> with you.</div>
+        <div>She <span class="bad">married with</span> him last year.</div>
+        <div><span class="bad">Informations</span> about the course?</div>
+      </div>
+    </div>
+    <div class="foot"><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c977" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>في الموقع شي مجاني يساعدك</div>
+  </div>
+</section>
+
+<!-- 2 · HOW -->
+<section class="s" id="s2" style="--bg:#e8eef9;--fg:#1f2a5c;--muted:#56607d;--accent:#3d5bb5;--chip:#1f2a5c;--chipfg:#f0c977;--line:rgba(61,91,181,.3)">
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Free Samples</span><span class="num">2/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:64px;font-size:88px">دليل <em>مجاني</em><br>تحمّله في ثواني</h1>
+    <div style="margin-top:64px;display:flex;flex-direction:column;gap:34px">
+      <div class="step"><div class="n">1</div><div class="t">افتح <span class="en">Shop</span> من قائمة الموقع</div></div>
+      <div class="step"><div class="n">2</div><div class="t">اختار <span class="en">Free Samples</span></div></div>
+      <div class="step"><div class="n" style="background:#3d5bb5;color:#fff">3</div><div class="t">اضغط <span class="en">DOWNLOAD THE FREE PDF</span></div></div>
+    </div>
+    <div class="card" style="margin-top:72px;position:relative;box-shadow:0 30px 70px rgba(31,42,92,.20),0 0 0 3px #3d5bb5">
+      <div class="browser"><i></i><i></i><i></i><div class="url">…/mastering-english/free-samples</div></div>
+      <div class="ui">
+        <h3 style="font-size:42px">Free Learning Samples</h3>
+        <div style="margin-top:20px;border:1.5px solid #d9dde5;border-radius:18px;padding:24px 26px;background:#fbfbfd">
+          <div style="font-size:20px;font-weight:700;color:#3d5bb5;letter-spacing:.08em">FREE GUIDE · LEVEL B1–C1</div>
+          <div style="font-family:Play;font-weight:700;font-size:34px;line-height:1.3;color:#14213a;margin-top:8px">20 English Mistakes Arabic Speakers Make</div>
+          <div style="font-size:23px;line-height:1.5;color:#5d6577;margin-top:10px">An 8-page PDF with the 20 most common mistakes, clear corrections, a 20-question self-test and an answer key.</div>
+          <div class="btn" style="background:#1f2a5c;font-size:24px;padding:16px 28px;margin-top:20px">DOWNLOAD THE FREE PDF</div>
+        </div>
+      </div>
+      <svg class="cur" style="left:300px;bottom:34px" viewBox="0 0 24 24"><path d="M4 2l15 10-6.5 1.4L16 21l-3 1.3-3.4-7.6L4 19z" fill="#111" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · WHAT YOU GET -->
+<section class="s" id="s3" style="--bg:#f3f0fa;--fg:#1f2a5c;--muted:#5a5f78;--accent:#5b4fa8;--chip:#ece8f7;--chipfg:#3d3486;--line:rgba(91,79,168,.28)">
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Inside the guide</span><span class="num">3/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:54px;font-size:86px">وش بتلقى <em>داخله؟</em></h1>
+    <div class="sub" style="margin-top:6px">ملف <span class="en">PDF</span> من 8 صفحات، مركّز على اللي يغلط فيه المتكلم بالعربي</div>
+    <div style="margin-top:54px;display:flex;flex-direction:column;gap:26px">
+      <div class="feat"><div class="ic">20</div><div class="tx"><b>أشهر 20 خطأ</b><span>الأخطاء الأكثر شيوعاً عند العرب</span></div></div>
+      <div class="feat"><div class="ic">✓</div><div class="tx"><b>تصحيح واضح</b><span><span class="en">Clear corrections</span> لكل خطأ</span></div></div>
+      <div class="feat"><div class="ic">?</div><div class="tx"><b>اختبار ذاتي من 20 سؤال</b><span><span class="en">Self-test</span> تقيس فيه نفسك</span></div></div>
+      <div class="feat"><div class="ic">🔑</div><div class="tx"><b>مفتاح الإجابات</b><span><span class="en">Answer key</span> تراجع فيه حلّك</span></div></div>
+    </div>
+    <div style="margin-top:44px;background:#1f2a5c;color:#e9ecf7;border-radius:22px;padding:24px 30px;font-size:31px;line-height:1.6;font-weight:500">ولو محتار في مستواك، الموقع نفسه ينصحك تبدأ بهالدليل</div>
+  </div>
+</section>
+
+<!-- 4 · ASK -->
+<section class="s" id="s4" style="--bg:linear-gradient(170deg,#1d5f86 0%,#144868 60%,#0d354f 100%);--fg:#fff;--muted:#c3dcec;--accent:#f0c977;--chip:rgba(255,255,255,.12);--chipfg:#fff;--line:rgba(240,201,119,.3)">
+  <div class="stars" style="opacity:.6"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Your turn</span><span class="num">4/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:70px;font-size:88px">وش الغلطة اللي<br><em>دايماً تشك فيها</em><br>وانت تكتب؟</h1>
+    <div class="sub" style="margin-top:30px">حرف جر؟ <span class="en">tense</span>؟ ولا <span class="en">articles</span>؟</div>
+    <div style="margin-top:80px;background:rgba(255,255,255,.08);border:1.5px solid rgba(240,201,119,.4);border-radius:28px;padding:40px 40px">
+      <div class="en" style="font-size:36px;font-weight:600;color:#f0c977;text-align:right">Reply with the sentence you always doubt.</div>
+      <div style="font-size:38px;margin-top:16px;line-height:1.6;font-weight:500">رد على الستوري واكتب الجملة اللي تحيّرك</div>
+    </div>
+    <div style="margin-top:56px;display:flex;flex-wrap:wrap;gap:18px;justify-content:center;direction:ltr">
+      <div class="chipq">interested <i>or</i> interesting?</div>
+      <div class="chipq">since <i>or</i> for?</div>
+      <div class="chipq">make <i>or</i> do?</div>
+      <div class="chipq">in <i>or</i> on <i>or</i> at?</div>
+    </div>
+    <div style="margin-top:auto;display:flex;align-items:center;gap:18px;direction:ltr;border:2px solid rgba(255,255,255,.55);border-radius:999px;padding:22px 34px;font-family:Int;font-size:30px;color:rgba(255,255,255,.75)">Send message…<span style="margin-left:auto;font-size:34px">↩</span></div>
+    <style>#s4 .chipq{font-family:Int;font-size:30px;font-weight:600;color:#fff;background:rgba(255,255,255,.12);border:1.5px solid rgba(240,201,119,.45);border-radius:999px;padding:16px 28px}#s4 .chipq i{font-style:normal;color:#f0c977;font-weight:500}</style>
+  </div>
+</section>
+
+<!-- 5 · CLOSE -->
+<section class="s" id="s5" style="--bg:radial-gradient(110% 70% at 50% 30%,#33408a 0%,#1f2a5c 60%,#121a3d 100%);--fg:#fff;--muted:#b7bfe0;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Mastering English Library</span><span class="num">5/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:80px">حمّله اليوم<br><em>ببلاش</em></h1>
+    <div class="sub" style="margin-top:12px"><span class="en">Shop</span> ← <span class="en">Free Samples</span></div>
+    <div style="margin-top:60px;background:#fff;border-radius:26px;padding:30px 30px;box-shadow:0 0 0 3px #f0c977">
+      <div class="en" style="font-size:31px;font-weight:700;color:#1f2a5c;text-align:center">masteringenglish-lib.wixsite.com/mastering-english</div>
+    </div>
+    <div style="margin-top:44px;text-align:center;font-family:Cai;font-weight:800;font-size:50px;color:#f0c977">اضغط الرابط تحت ↓</div>
+    <div style="margin-top:70px;align-self:center;display:flex;gap:22px;align-items:center;background:rgba(255,255,255,.08);border:1.5px solid rgba(240,201,119,.35);border-radius:24px;padding:24px 34px">
+      <div style="width:70px;height:90px;border-radius:8px;background:linear-gradient(160deg,#f0c977,#d9a441);color:#1f2a5c;font-family:Int;font-weight:800;font-size:22px;display:grid;place-items:center">PDF</div>
+      <div class="en" style="font-size:28px;line-height:1.45;text-align:left"><b style="color:#f0c977">FREE GUIDE · B1–C1</b><br>20 English Mistakes Arabic Speakers Make</div>
+    </div>
+    <div style="margin-top:auto;text-align:center;font-size:42px;line-height:1.6;font-weight:700">وبعد الاختبار…<br>كم من العشرين طلعت تغلط فيها؟</div>
+  </div>
+</section>
+
+</body>
+</html>
