@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Writing Tools Pro Highlight</title>
+<style>
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-400-normal.woff2);font-weight:400}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-500-normal.woff2);font-weight:500}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-900-normal.woff2);font-weight:900}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Int;src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Int;src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Int;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Int;src:url(fonts/inter-latin-700-normal.woff2);font-weight:700}
+
+:root{--navy:#0f1d33;--navy2:#172a47;--teal:#13777a;--gold:#d9a441;--gold2:#f0c977;--cream:#f7f0e2;--ink:#14213a;--red:#d64545}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;font-family:Taj,Int,sans-serif;display:flex;flex-wrap:wrap;gap:40px;padding:40px}
+.s{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);background:var(--bg)}
+.safe{position:absolute;left:72px;right:72px;top:270px;bottom:330px;display:flex;flex-direction:column}
+.en{font-family:Int,sans-serif;direction:ltr;unicode-bidi:isolate}
+.serif{font-family:Play,serif}
+.brand{display:flex;align-items:center;justify-content:space-between;font-family:Int;font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);direction:ltr;font-weight:600}
+.brand .num{letter-spacing:.1em}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:26px 0 0;position:relative}
+.rule:after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+.kick{display:inline-flex;align-self:flex-start;align-items:center;gap:14px;padding:12px 26px;border-radius:999px;font-size:30px;font-weight:700;background:var(--chip);color:var(--chipfg)}
+h1{font-family:Cai,Taj,sans-serif;font-weight:900;font-size:92px;line-height:1.28;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:42px;line-height:1.6;color:var(--muted);font-weight:500}
+.card{background:#fff;border-radius:28px;box-shadow:0 30px 70px rgba(0,0,0,.28),0 0 0 3px var(--accent);overflow:hidden;color:#1d2533}
+.browser{height:58px;background:#eef0f4;display:flex;align-items:center;gap:12px;padding:0 24px;direction:ltr}
+.browser i{width:16px;height:16px;border-radius:50%;background:#cfd4dc;display:block}
+.browser .url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;font-family:Int;font-size:19px;color:#7a8394;display:flex;align-items:center;padding:0 18px}
+.ui{direction:ltr;text-align:left;font-family:Int,sans-serif;padding:30px 34px}
+.ui h3{font-family:Play,serif;font-size:46px;color:var(--ink);font-weight:700}
+.ui .tag{font-size:24px;color:#6b7383;margin-top:4px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.tab{border:1.5px solid #d9dde5;border-radius:999px;padding:14px 6px;font-size:23px;font-weight:600;color:#3a4357;text-align:center;white-space:nowrap}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 0 0 4px rgba(217,164,65,.55)}
+.ta{margin-top:24px;border:1.5px solid #d9dde5;border-radius:16px;padding:26px 28px;font-size:34px;line-height:1.55;color:#20283a;min-height:150px;background:#fbfbfd}
+.bad{text-decoration:underline wavy var(--red);text-decoration-thickness:2.5px;text-underline-offset:7px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--teal);color:#fff;font-weight:700;font-size:28px;padding:18px 34px;border-radius:14px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:16px;font-size:34px;font-weight:700;color:var(--accent)}
+.arrow{width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent);display:grid;place-items:center}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 12% 18%,rgba(240,201,119,.55),transparent 60%),radial-gradient(1.6px 1.6px at 82% 9%,rgba(255,255,255,.35),transparent 60%),radial-gradient(2px 2px at 70% 34%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.3),transparent 60%),radial-gradient(2px 2px at 90% 72%,rgba(240,201,119,.45),transparent 60%),radial-gradient(1.5px 1.5px at 40% 88%,rgba(255,255,255,.3),transparent 60%),radial-gradient(1.8px 1.8px at 6% 90%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 55% 5%,rgba(255,255,255,.3),transparent 60%)}
+.frame{position:absolute;inset:34px;border:1.5px solid var(--line);border-radius:6px;pointer-events:none}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(40px);opacity:.5}
+.cur{position:absolute;width:44px;height:44px}
+</style>
+</head>
+<body>
+<section class="s" id="s1" style="--bg:radial-gradient(120% 80% at 80% 0%,#1d3557 0%,#0f1d33 55%,#0a1424 100%);--fg:#fff;--muted:#aab6cb;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars"></div><div class="frame"></div>
+  <div class="safe" style="top:250px;bottom:320px">
+    <div class="brand"><span>Mastering English Library</span><span class="num">PRO</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:40px;font-size:84px"><span class="en serif" style="font-family:Play;font-weight:700">Writing Tools Pro</span><br><em>باختصار</em></h1>
+
+    <div style="margin-top:34px;background:#f0c977;color:#14213a;border-radius:28px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between">
+      <div><span class="en" style="font-family:Int;font-weight:700;font-size:84px;line-height:1">$4.99</span><span style="font-size:34px;font-weight:700;margin-right:12px">بالشهر</span></div>
+      <div style="font-size:30px;font-weight:700;line-height:1.5;text-align:left">30 استخدام <span class="en">AI</span> كل يوم<br>وتلغي متى ما تبا</div>
+    </div>
+
+    <div style="margin-top:34px;font-size:32px;font-weight:700;color:var(--muted)">شو تحصل؟</div>
+    <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:12px;direction:ltr">
+      <span class="tg">Fix Text</span><span class="tg">Grammar</span><span class="tg">Text Style</span><span class="tg">Topic Ideas</span><span class="tg">Sample</span><span class="tg">Custom</span><span class="tg">Vocabulary</span><span class="tg">Synonyms</span>
+    </div>
+    <div style="margin-top:14px;font-size:30px;color:#dfe6f1">والمعاني والمرادفات معها شرح بالعربي</div>
+
+    <div style="margin-top:40px;font-size:32px;font-weight:700;color:var(--muted)">كيف تشترك؟</div>
+    <div style="margin-top:18px;display:flex;flex-direction:column;gap:22px">
+      <div class="st"><div class="n">1</div><div>افتح <span class="en">Writing Tools</span> من قائمة الموقع</div></div>
+      <div class="st"><div class="n">2</div><div>اختار <span class="en">Writing Tools Pro</span> واشترك <span class="en">Monthly</span></div></div>
+      <div class="st"><div class="n" style="background:#13777a;color:#fff">3</div><div>تدير اشتراكك أو تلغيه من <span class="en">My Subscriptions</span></div></div>
+    </div>
+
+    <div style="margin-top:auto;direction:ltr;align-self:center;font-family:Int;font-weight:600;font-size:29px;color:#14213a;background:#f0c977;padding:18px 30px;border-radius:999px;display:flex;align-items:center;gap:12px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14213a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>masteringenglish-lib.wixsite.com/mastering-english</div>
+  </div>
+  <style>
+    #s1 .tg{font-family:Int;font-weight:600;font-size:27px;color:#f0c977;border:1.5px solid rgba(240,201,119,.45);background:rgba(255,255,255,.06);padding:12px 22px;border-radius:999px}
+    #s1 .st{display:flex;gap:22px;align-items:center;font-size:36px;font-weight:700;line-height:1.4}
+    #s1 .st .n{width:64px;height:64px;flex:none;border-radius:50%;background:#f0c977;color:#14213a;font-family:Int;font-weight:700;font-size:32px;display:grid;place-items:center}
+  </style>
+</section>
+</body>
+</html>
