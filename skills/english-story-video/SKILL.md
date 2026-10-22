@@ -104,6 +104,16 @@ subtitles, no watermark, consistent character design`.
 - Vocabulary part: Lily says the English word, a one-line meaning and the story sentence; the
   Arabic gloss is on screen only.
 
+## 4b. No ElevenLabs credits? Narrate here for free
+
+Dawood's ElevenLabs credits can run out (pictures use them too). Then don't stop the project:
+`scripts/narrate.py story.json voice/ --voice bf_lily --speed 0.85` makes all chunk MP3s with
+Kokoro, an open-source neural voice that runs in this workspace (setup steps in the script header).
+`bf_lily` is a warm British female voice — the closest free match to his ElevenLabs "Lily"; he
+asked for speed 0.85 like his ElevenLabs settings. Send him a 10-second sample first if he hasn't
+heard it, and say plainly it is a free voice, not his ElevenLabs one. Never copy an ElevenLabs
+"audio effect" such as "Bright Phone" from his screenshots — it makes the voice sound like a phone call.
+
 ## 5. story.json and the packs
 
 Format and example: `references/story_schema.md`. Then:
