@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Library Stories</title>
+<style>
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-400-normal.woff2);font-weight:400}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-500-normal.woff2);font-weight:500}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Taj;src:url(fonts/tajawal-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-700-normal.woff2);font-weight:700}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-800-normal.woff2);font-weight:800}
+@font-face{font-family:Cai;src:url(fonts/cairo-arabic-900-normal.woff2);font-weight:900}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Play;src:url(fonts/playfair-display-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Int;src:url(fonts/inter-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Int;src:url(fonts/inter-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Int;src:url(fonts/inter-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:Int;src:url(fonts/inter-latin-700-normal.woff2);font-weight:700}
+
+:root{--navy:#0f1d33;--navy2:#172a47;--teal:#13777a;--gold:#d9a441;--gold2:#f0c977;--cream:#f7f0e2;--ink:#14213a;--red:#d64545}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#222;font-family:Taj,Int,sans-serif;display:flex;flex-wrap:wrap;gap:40px;padding:40px}
+.s{width:1080px;height:1920px;position:relative;overflow:hidden;color:var(--fg);background:var(--bg)}
+.safe{position:absolute;left:72px;right:72px;top:270px;bottom:330px;display:flex;flex-direction:column}
+.en{font-family:Int,sans-serif;direction:ltr;unicode-bidi:isolate}
+.serif{font-family:Play,serif}
+.brand{display:flex;align-items:center;justify-content:space-between;font-family:Int;font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);direction:ltr;font-weight:600}
+.brand .num{letter-spacing:.1em}
+.rule{height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:26px 0 0;position:relative}
+.rule:after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;background:var(--accent);transform:translateX(-50%) rotate(45deg)}
+.kick{display:inline-flex;align-self:flex-start;align-items:center;gap:14px;padding:12px 26px;border-radius:999px;font-size:30px;font-weight:700;background:var(--chip);color:var(--chipfg)}
+h1{font-family:Cai,Taj,sans-serif;font-weight:900;font-size:92px;line-height:1.28;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{font-size:42px;line-height:1.6;color:var(--muted);font-weight:500}
+.card{background:#fff;border-radius:28px;box-shadow:0 30px 70px rgba(0,0,0,.28),0 0 0 3px var(--accent);overflow:hidden;color:#1d2533}
+.browser{height:58px;background:#eef0f4;display:flex;align-items:center;gap:12px;padding:0 24px;direction:ltr}
+.browser i{width:16px;height:16px;border-radius:50%;background:#cfd4dc;display:block}
+.browser .url{margin-left:18px;flex:1;height:34px;border-radius:17px;background:#fff;font-family:Int;font-size:19px;color:#7a8394;display:flex;align-items:center;padding:0 18px}
+.ui{direction:ltr;text-align:left;font-family:Int,sans-serif;padding:30px 34px}
+.ui h3{font-family:Play,serif;font-size:46px;color:var(--ink);font-weight:700}
+.ui .tag{font-size:24px;color:#6b7383;margin-top:4px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.tab{border:1.5px solid #d9dde5;border-radius:999px;padding:14px 6px;font-size:23px;font-weight:600;color:#3a4357;text-align:center;white-space:nowrap}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 0 0 4px rgba(217,164,65,.55)}
+.ta{margin-top:24px;border:1.5px solid #d9dde5;border-radius:16px;padding:26px 28px;font-size:34px;line-height:1.55;color:#20283a;min-height:150px;background:#fbfbfd}
+.bad{text-decoration:underline wavy var(--red);text-decoration-thickness:2.5px;text-underline-offset:7px}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:24px;background:var(--teal);color:#fff;font-weight:700;font-size:28px;padding:18px 34px;border-radius:14px}
+.foot{margin-top:auto;display:flex;align-items:center;gap:16px;font-size:34px;font-weight:700;color:var(--accent)}
+.arrow{width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent);display:grid;place-items:center}
+.stars{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 12% 18%,rgba(240,201,119,.55),transparent 60%),radial-gradient(1.6px 1.6px at 82% 9%,rgba(255,255,255,.35),transparent 60%),radial-gradient(2px 2px at 70% 34%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.3),transparent 60%),radial-gradient(2px 2px at 90% 72%,rgba(240,201,119,.45),transparent 60%),radial-gradient(1.5px 1.5px at 40% 88%,rgba(255,255,255,.3),transparent 60%),radial-gradient(1.8px 1.8px at 6% 90%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.5px 1.5px at 55% 5%,rgba(255,255,255,.3),transparent 60%)}
+.frame{position:absolute;inset:34px;border:1.5px solid var(--line);border-radius:6px;pointer-events:none}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;filter:blur(40px);opacity:.5}
+.cur{position:absolute;width:44px;height:44px}
+</style>
+</head>
+<body>
+<style>
+.stars.w{background-image:radial-gradient(2px 2px at 12% 18%,rgba(240,201,119,.5),transparent 60%),radial-gradient(1.6px 1.6px at 82% 9%,rgba(255,255,255,.3),transparent 60%),radial-gradient(2px 2px at 70% 34%,rgba(240,201,119,.35),transparent 60%),radial-gradient(1.5px 1.5px at 22% 62%,rgba(255,255,255,.25),transparent 60%),radial-gradient(2px 2px at 90% 72%,rgba(240,201,119,.4),transparent 60%),radial-gradient(1.8px 1.8px at 6% 90%,rgba(240,201,119,.35),transparent 60%)}
+.lv{display:inline-block;font-family:Int;font-weight:700;font-size:24px;padding:6px 14px;border-radius:10px;direction:ltr}
+.step{display:flex;gap:24px;align-items:center}
+.step .n{width:72px;height:72px;flex:none;border-radius:50%;font-family:Int;font-weight:700;font-size:38px;display:grid;place-items:center}
+.step .t{font-size:40px;font-weight:700;line-height:1.45}
+</style>
+
+<!-- 1 · OPEN (burgundy) -->
+<section class="s" id="s1" style="--bg:radial-gradient(120% 80% at 80% 0%,#6b2240 0%,#45142a 55%,#2c0c1a 100%);--fg:#fff;--muted:#e2bfcb;--accent:#f0c977;--chip:rgba(240,201,119,.14);--chipfg:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars w"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Mastering English Library</span><span class="num">1/5</span></div>
+    <div class="rule"></div>
+    <div class="kick" style="margin-top:70px"><span class="en">PDF Library</span></div>
+    <h1 style="margin-top:40px;font-size:84px">تدوّر مصدر إنجليزي<br>على مستواك بالضبط…<br><em>وكل شي تلقاه</em><br><em>يا سهل يا صعب؟</em></h1>
+    <div class="card" style="margin-top:70px">
+      <div class="ui" style="padding:34px 38px">
+        <div style="font-size:22px;color:#6b7383;font-weight:600;letter-spacing:.06em">WHERE ARE YOU ON THE CEFR SCALE?</div>
+        <div style="display:flex;gap:12px;margin-top:22px;align-items:center">
+          <span class="lv" style="background:#eef0f4;color:#9aa1ae">A1</span>
+          <span class="lv" style="background:#eef0f4;color:#9aa1ae">A2</span>
+          <span class="lv" style="background:#eef0f4;color:#9aa1ae">B1</span>
+          <span class="lv" style="background:#eef0f4;color:#9aa1ae">B2</span>
+          <span class="lv" style="background:#45142a;color:#f0c977;box-shadow:0 0 0 4px rgba(240,201,119,.55)">C1</span>
+          <span class="lv" style="background:#45142a;color:#f0c977;box-shadow:0 0 0 4px rgba(240,201,119,.55)">C2</span>
+        </div>
+        <div style="margin-top:24px;font-size:28px;color:#3a4357;line-height:1.5"><i class="serif" style="font-size:32px">“Too basic to stretch me, too dense to finish.”</i></div>
+      </div>
+    </div>
+    <div class="foot"><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f0c977" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></div>شوف شو في المكتبة</div>
+  </div>
+</section>
+
+<!-- 2 · WHAT (sage) -->
+<section class="s" id="s2" style="--bg:#e7eee4;--fg:#1d2e24;--muted:#56665b;--accent:#7a2a48;--chip:#1d2e24;--chipfg:#f0c977;--line:rgba(122,42,72,.3)">
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>PDF Library</span><span class="num">2/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:56px"><em>61 منتج PDF</em><br>في المتجر</h1>
+    <div class="sub" style="margin-top:8px">وكل منتج مكتوب عليه مستواه <span class="en">(CEFR)</span></div>
+    <div style="margin-top:46px;display:flex;flex-direction:column;gap:16px">
+      <div class="ser"><b class="en">Shades of Meaning</b><span>12 جزء — الفروق الدقيقة بين الكلمات</span></div>
+      <div class="ser"><b class="en">Synonyms by Level</b><span>8 كتب — من <span class="en">A2–B2</span> لين <span class="en">C2</span></span></div>
+      <div class="ser"><b class="en">Self-Check Tools for Arabic Speakers</b><span>أدوات تكشف أخطاءك بنفسك</span></div>
+      <div class="ser"><b class="en">Exam Quick-Packs</b><span>تجهيز سريع للاختبارات</span></div>
+      <div class="ser"><b class="en">Writing Templates · Speaking Boosters</b><span>للكتابة والمحادثة</span></div>
+      <div class="ser"><b class="en">7-Day Challenges</b><span>تحديات أسبوع كامل</span></div>
+    </div>
+  </div>
+  <style>
+    #s2 .ser{background:#fff;border-radius:20px;padding:22px 28px;display:flex;flex-direction:column;gap:4px;box-shadow:0 10px 26px rgba(29,46,36,.10);border-right:8px solid #7a2a48}
+    #s2 .ser b{font-size:34px;font-weight:700;color:#1d2e24;text-align:right}
+    #s2 .ser span{font-size:30px;color:#56665b;font-weight:500}
+  </style>
+</section>
+
+<!-- 3 · HOW + WHAT YOU GET (blush) -->
+<section class="s" id="s3" style="--bg:#f6e8e2;--fg:#2c1620;--muted:#6e5560;--accent:#7a2a48;--chip:#e9d3cb;--chipfg:#7a2a48;--line:rgba(122,42,72,.28)">
+  <div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>How it works</span><span class="num">3/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:50px;font-size:80px">تشتري…<br><em>ويوصلك الملف على طول</em></h1>
+    <div class="card" style="margin-top:44px;box-shadow:0 26px 60px rgba(44,22,32,.16),0 0 0 3px #7a2a48">
+      <div class="browser"><i></i><i></i><i></i><div class="url">masteringenglish-lib.wixsite.com/mastering-english/shop</div></div>
+      <div class="ui" style="display:flex;gap:30px;align-items:center;padding:30px 34px">
+        <div style="width:150px;height:205px;flex:none;border-radius:4px 10px 10px 4px;background:linear-gradient(155deg,#2b2f6b 0 58%,#7c5cff 58%);box-shadow:inset 6px 0 0 rgba(0,0,0,.18);padding:16px 14px;display:flex;flex-direction:column;color:#fff"><small style="font-size:12px;letter-spacing:.1em;opacity:.8">SYNONYMS BY LEVEL</small><b style="margin-top:auto;font-size:30px;line-height:1">C2</b><i class="serif" style="font-size:16px">Proficiency</i></div>
+        <div style="flex:1">
+          <div style="font-size:27px;font-weight:600;line-height:1.35;color:#1d2533">Synonyms by Level 5 — Proficiency Synonyms C2 · I (A–D)</div>
+          <div style="display:flex;gap:10px;margin-top:14px"><span class="lv" style="background:#f3e6ea;color:#7a2a48;font-size:20px">PDF</span><span class="lv" style="background:#f3e6ea;color:#7a2a48;font-size:20px">C2</span></div>
+          <div style="font-size:36px;font-weight:700;margin-top:14px;color:#14213a">$15.00</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:46px;display:flex;flex-direction:column;gap:26px">
+      <div class="step"><div class="n" style="background:#7a2a48;color:#f0c977">1</div><div class="t">تختار الكتاب اللي على مستواك من <span class="en">Shop</span></div></div>
+      <div class="step"><div class="n" style="background:#7a2a48;color:#f0c977">2</div><div class="t">تكمّل الدفع</div></div>
+      <div class="step"><div class="n" style="background:#13777a;color:#fff">3</div><div class="t">رابط التحميل يطلع في صفحة الشكر، ويوصلك على إيميلك بعد</div></div>
+    </div>
+    <div style="margin-top:30px;font-size:30px;color:var(--muted);font-weight:500">ملف <span class="en">PDF</span> تقدر تطبعه — ولو أخذت <span class="en">bundle</span> يجيك ملف <span class="en">ZIP</span> واحد</div>
+  </div>
+</section>
+
+<!-- 4 · ASK (forest) -->
+<section class="s" id="s4" style="--bg:linear-gradient(170deg,#24503f 0%,#1a3c2f 60%,#122b22 100%);--fg:#fff;--muted:#c4dccf;--accent:#f0c977;--chip:rgba(255,255,255,.12);--chipfg:#fff;--line:rgba(240,201,119,.3)">
+  <div class="stars w" style="opacity:.6"></div><div class="frame"></div>
+  <div class="safe">
+    <div class="brand"><span>Your turn</span><span class="num">4/5</span></div>
+    <div class="rule"></div>
+    <h1 style="margin-top:70px;font-size:90px">لو بتشتغل على<br><em>مهارة وحدة</em> هالشهر…<br>شو بتكون؟</h1>
+    <div style="margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div class="op"><b class="en">Vocabulary</b><span>الفروق بين المرادفات</span></div>
+      <div class="op"><b class="en">Writing</b><span>مقال، ملخص، <span class="en">CV</span></span></div>
+      <div class="op"><b class="en">Speaking</b><span>تتكلم بثقة</span></div>
+      <div class="op"><b class="en">Exams</b><span>تجهيز للاختبار</span></div>
+    </div>
+    <div style="margin-top:70px;text-align:center">
+      <div style="font-family:Cai;font-weight:800;font-size:52px">رد على الستوري باسم المهارة</div>
+      <div style="font-size:34px;color:var(--muted);margin-top:12px;line-height:1.6">وأقترح لك إصدار يناسب مستواك</div>
+    </div>
+  </div>
+  <style>
+    #s4 .op{background:rgba(255,255,255,.08);border:1.5px solid rgba(240,201,119,.35);border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;gap:6px}
+    #s4 .op b{font-size:40px;font-weight:700;color:#f0c977;text-align:right}
+    #s4 .op span{font-size:31px;color:#e6f1ea;font-weight:500}
+  </style>
+</section>
+
+<!-- 5 · CLOSE + LINK (burgundy) -->
+<section class="s" id="s5" style="--bg:radial-gradient(110% 70% at 50% 30%,#6b2240 0%,#45142a 60%,#2c0c1a 100%);--fg:#fff;--muted:#e2bfcb;--accent:#f0c977;--line:rgba(240,201,119,.28)">
+  <div class="stars w"></div><div class="frame"></div>
+  <div class="safe" style="align-items:center;text-align:center">
+    <div class="brand" style="width:100%"><span>Mastering English Library</span><span class="num">5/5</span></div>
+    <div class="rule" style="width:100%"></div>
+    <h1 style="margin-top:80px">جرّبها اليوم<br><em>وابدأ ببلاش</em></h1>
+    <div style="margin-top:44px;background:rgba(255,255,255,.08);border:1.5px solid rgba(240,201,119,.4);border-radius:26px;padding:30px 36px;width:100%">
+      <div style="font-size:30px;color:var(--muted);font-weight:600">دليل مجاني في المتجر</div>
+      <div class="en serif" style="font-size:42px;font-weight:700;color:#fff;margin-top:10px;text-align:center;line-height:1.3">20 English Mistakes<br>Arabic Speakers Make</div>
+      <div class="en" style="font-size:30px;font-weight:700;color:#f0c977;margin-top:10px;text-align:center">$0.00</div>
+    </div>
+    <div style="margin-top:50px;direction:ltr;font-family:Int;font-weight:600;font-size:31px;color:#2c0c1a;background:#f0c977;padding:22px 34px;border-radius:999px;box-shadow:0 14px 34px rgba(240,201,119,.25);display:flex;align-items:center;gap:14px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2c0c1a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>masteringenglish-lib.wixsite.com/mastering-english</div>
+    <div style="margin-top:30px;font-size:34px;font-weight:700;color:#f0c977">اضغط الرابط تحت</div>
+    <svg style="margin-top:10px" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f0c977" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+    <div style="height:110px"></div>
+    <div style="margin-top:auto;font-size:34px;color:var(--muted);line-height:1.6">وبعدها قول لي:<br><b style="color:#fff">أي غلطة من العشرين كنت تسويها؟</b></div>
+  </div>
+</section>
+
+</body>
+</html>
