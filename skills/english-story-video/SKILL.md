@@ -40,6 +40,14 @@ branch of `dawoodalsaqri29-jpg/mastering-english-library` under `yt/stories/<YYY
 after each step, because sessions get reclaimed and a project spans days. Big MP4s over ~50 MB:
 keep the source clips, not the final render.
 
+## 0. Open with a hook (always)
+
+Every video starts with a 20–40 s cold open — the `story-hook` skill has the formula. Short version:
+6–9 punchy lines that flash forward through the journey's best moments up to the threshold of the
+climax, end on an open question, never reveal the ending. Hook lines go first in `story.json` with
+`"section": "hook"`, `"chunk": "HOOK"` and `ar` translations; 1–2 pictures per line. The
+assembler adds white-flash cuts inside the hook and subtitles it like the story.
+
 ## 1. The story
 
 - **Length**: about 1,500–1,700 words of story narration (≈ 12–13 min with Lily at ~0.85 speed)
@@ -165,6 +173,17 @@ and writes `story.mp4`, `story.srt`, `story.ar.srt`, `thumbnail.jpg`, `timeline.
 `--preset ultrafast` for quick previews. It warns about missing shots (holds the previous picture)
 and about lines whose timing looks wrong — tell Dawood which shot numbers are missing instead of
 shipping a gap.
+
+## 6b. 4K and Reels
+
+- YouTube 4K: add `--uhd` to `assemble.py` (final picture upscaled to 3840×2160 with Lanczos +
+  light sharpening), or upscale a finished 1080p file with
+  `ffmpeg -i in.mp4 -vf "scale=3840:2160:flags=lanczos,unsharp=5:5:0.5" -c:v libx264 -preset veryfast -crf 20 -c:a copy out.mp4`.
+  It takes ~3× the video length on this machine — start it in the background. YouTube gives 4K
+  uploads a much higher bitrate, so even upscaled 4K looks cleaner than 1080p after YouTube's compression.
+- Reel / Short: render the hook with `--no-subs`, then
+  `python3 scripts/make_reel.py story.json hook_render/ reel.mp4` → 1080×1920 with title, bilingual
+  subtitles and a YouTube call-to-action in the safe zone.
 
 ## 7. Check before delivering
 

@@ -6,7 +6,8 @@
 3. Improve Your English with a Fairy Tale ✨ The Map That Glowed | 8 C1 Words
 
 ## Description
-A brittle old map. A black cat with emerald eyes. A line of light that leads to a secret on the highest hill… ✨
+Some maps show you where to go. This one… glows. ✨
+A brittle old map, a black cat with emerald eyes, and a secret door on the highest hill.
 Listen, read and learn: an English story for B1–C1 learners with English and Arabic subtitles, then 8 powerful words from the story and a quick quiz.
 
 📚 8 words from the story | 8 كلمات من القصة
@@ -20,14 +21,14 @@ Listen, read and learn: an English story for B1–C1 learners with English and A
 • resilient — صامد، سريع التعافي
 
 ⏱️ Chapters
-0:00 Introduction
-0:10 Chapter 1: The Brittle Map
-2:39 Chapter 2: Into the Whispering Hills
-4:12 Chapter 3: The Treacherous Stream
-6:07 Chapter 4: Lost in the Mist
-7:57 Chapter 5: The Treasure Under the Stars
-11:26 Words from the story
-12:40 Quick quiz
+0:00 Hook — a map that glows ✨
+0:42 Chapter 1: The Brittle Map
+3:11 Chapter 2: Into the Whispering Hills
+4:44 Chapter 3: The Treacherous Stream
+6:39 Chapter 4: Lost in the Mist
+8:29 Chapter 5: The Treasure Under the Stars
+11:58 Words from the story
+13:12 Quick quiz
 
 💬 If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments — in English!
 
@@ -41,5 +42,5 @@ https://www.instagram.com/dawood_alsaqri
 learn english through story, english story, english story with subtitles, english listening practice, english story for learners, b1 english, c1 english, fairy tale english, bedtime story english, english vocabulary, english with arabic subtitles, IELTS vocabulary, story with arabic translation, تعلم الانجليزي, قصص انجليزية, قصة بالانجليزي مترجمة, تعلم اللغة الانجليزية من القصص, استماع انجليزي, مفردات انجليزية
 
 ## Files
-story.mp4 (1080p) · story.srt (English) · story.ar.srt (Arabic) · thumbnail.jpg (1280×720)
+map-that-glowed-4k.mp4 (4K) / map-that-glowed-1080p.mp4 · map-that-glowed-reel.mp4 (vertical Reel/Short) · story.srt (English) · story.ar.srt (Arabic) · thumbnail.jpg (1280×720)
 Narration: Kokoro voice bf_lily, speed 0.85 (free, generated in Claude)

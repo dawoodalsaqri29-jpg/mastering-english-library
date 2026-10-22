@@ -178,6 +178,7 @@ def main():
     ap.add_argument("--music")
     ap.add_argument("--no-subs", action="store_true")
     ap.add_argument("--preset", default="veryfast")
+    ap.add_argument("--uhd", action="store_true", help="upscale the final video to 4K (3840x2160) for YouTube")
     a = ap.parse_args()
     story = json.load(open(a.story))
     os.makedirs(a.out, exist_ok=True)
@@ -245,7 +246,7 @@ def main():
             if segs and segs[-1][:2] == v:
                 segs[-1][3] = tl["start"] + (j + 1) * span
             else:
-                segs.append([v[0], v[1], s0, tl["start"] + (j + 1) * span])
+                segs.append([v[0], v[1], s0, tl["start"] + (j + 1) * span, l.get("section", "story")])
     segs[-1][3] = total
 
     shot_ids = [s["id"] for s in story["shots"]]
@@ -277,7 +278,7 @@ def main():
     subs = []
     if not a.no_subs:
         for l, tl in zip(lines, timeline):
-            if l.get("section", "story") == "story":
+            if l.get("section", "story") in ("story", "hook"):
                 fn = os.path.join(tmp, f"sub_{l['id']:04d}.png")
                 body, css = sub_html(l["text"], l.get("ar", ""))
                 items.append((body, css, fn))
@@ -290,7 +291,7 @@ def main():
     last_media = None
     seg_files = []
     vf_cover = f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos,crop={W}:{H},setsar=1"
-    for n, (kind, sid, s0, s1) in enumerate(segs):
+    for n, (kind, sid, s0, s1, *_rest) in enumerate(segs):
         dur = s1 - s0 + (xf if n + 1 < len(segs) else 0)
         out = os.path.join(tmp, f"seg_{n:04d}.mp4")
         enc = ["-an", "-c:v", "libx264", "-preset", a.preset, "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), out]
@@ -328,7 +329,7 @@ def main():
         print(f"  seg {n+1}/{len(segs)} {kind} {sid} {dur:.1f}s", file=sys.stderr)
 
     # ---- join with crossfades (in batches to keep filter graphs small)
-    def xjoin(files, starts, out):
+    def xjoin(files, starts, out, trans=None):
         if len(files) == 1:
             shutil.copy(files[0], out)
             return
@@ -339,19 +340,22 @@ def main():
         for i in range(1, len(files)):
             off = starts[i] - starts[0]
             lab = f"[x{i}]"
-            fc.append(f"{last}[{i}:v]xfade=transition=fade:duration={xf}:offset={off:.3f}{lab}")
+            tr = (trans[i] if trans else "fade")
+            fc.append(f"{last}[{i}:v]xfade=transition={tr}:duration={xf}:offset={off:.3f}{lab}")
             last = lab
         run(["ffmpeg", "-v", "error", "-y"] + inp + ["-filter_complex", ";".join(fc), "-map", last,
              "-c:v", "libx264", "-preset", a.preset, "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), out])
 
     starts = [s[2] for s in segs]
+    # hook (cold open): quick trailer-style white flashes between its shots
+    trans = ["fadewhite" if k and segs[k][4] == "hook" and segs[k - 1][4] == "hook" else "fade" for k in range(len(segs))]
     B = 25
     parts, pstarts = [], []
     for i in range(0, len(seg_files), B):
         fs, ss = seg_files[i:i + B], starts[i:i + B]
         # every batch but the last keeps its trailing xf overlap (last seg of batch was rendered with +xf)
         out = os.path.join(tmp, f"part_{i // B:03d}.mp4")
-        xjoin(fs, ss, out)
+        xjoin(fs, ss, out, ["fade"] + trans[i + 1:i + B])
         parts.append(out)
         pstarts.append(ss[0])
     joined = os.path.join(tmp, "joined.mp4")
@@ -386,7 +390,8 @@ def main():
         inputs += ["-f", "concat", "-safe", "0", "-i", sl]
         fc.append(f"[2:v]fps={FPS},format=rgba[subs];[0:v][subs]overlay=0:0:format=auto:shortest=0[v1]")
         vchain = "[v1]"
-    fc.append(f"{vchain}fade=t=in:st=0:d=0.6,fade=t=out:st={total - 1.0:.3f}:d=1.0,format=yuv420p[v]")
+    up4k = ",scale=3840:2160:flags=lanczos,unsharp=5:5:0.6" if a.uhd else ""
+    fc.append(f"{vchain}fade=t=in:st=0:d=0.6,fade=t=out:st={total - 1.0:.3f}:d=1.0{up4k},format=yuv420p[v]")
     achain = "[1:a]"
     if a.music:
         inputs += ["-stream_loop", "-1", "-i", a.music]
