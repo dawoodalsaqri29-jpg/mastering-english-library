@@ -36,7 +36,8 @@ for w,name,mean,ex,col in W:
 # 4 REAL-LIFE EXAMPLES
 Q = [("At work","Let's not decide today. I'd rather we deliberate on it first."),
      ("With friends","I'm contemplating a career change, but I haven't told anyone yet."),
-     ("In the news","Analysts speculate that the new rules will cut costs.")]
+     ("In the news","Analysts speculate that the new rules will cut costs."),
+     ("In an essay","Some people envisage a future in which machines do most of the work.")]
 for i,(tag,q) in enumerate(Q,1):
     s=f'real-{i}'
     P(4,s,1,f"{tag}: \"{q}\"")
@@ -51,8 +52,12 @@ P(5,'deep-xy1',1,"Let's go deeper. Ponder or ruminate?")
 P(5,'deep-xy1',2,"Ponder is neutral and calm. Ruminate is often negative: you go round in circles and can't stop thinking.")
 P(5,'deep-xy2',1,"Presume or speculate?")
 P(5,'deep-xy2',2,"When you presume, you're fairly sure. When you speculate, you're openly guessing, and you might be wrong.")
+P(5,'deep-xy3',1,"And contemplate or deliberate?")
+P(5,'deep-xy3',2,"You usually contemplate alone, about your own future. People deliberate together, before an official decision, like a jury, a committee, or a family.")
 P(5,'deep-levelup',1,"Now, level up a sentence. Before: \"I think the company will grow, and I am thinking about joining it.\"")
 P(5,'deep-levelup',2,"After: \"I envisage the company growing, and I am contemplating joining it.\" Same meaning, but it sounds like C1.")
+P(5,'deep-levelup2',1,"One more. Before: \"I think he is busy, because he didn't answer.\"")
+P(5,'deep-levelup2',2,"After: \"I surmise that he is busy, since he didn't answer.\" You're guessing from a clue, so surmise is perfect here.",pause=1.5)
 P(5,'deep-family',1,"Word families help you write more. Contemplate, contemplation. Deliberate, deliberation. Speculate, speculation, speculative. Presume, presumably.")
 P(5,'deep-starters',1,"Here are three ready-made sentence starters. One: \"It is widely speculated that...\"")
 P(5,'deep-starters',2,"Two: \"After much deliberation, we decided to...\"")
@@ -73,9 +78,10 @@ for i,(bad,tip,good) in enumerate(M,1):
 P(7,'pron-tips',1,"Now, pronunciation. Many of these verbs end in -ate. Put the stress three syllables from the end: CON-tem-plate, SPEC-u-late, RU-mi-nate.")
 P(7,'pron-tips',2,"Careful with deliberate. The verb ends with \"rate\". The adjective ends with \"rut\": a de-LIB-er-ut choice.")
 P(7,'pron-tips',3,"Two words are stressed at the end: pre-SUME and sur-MISE. And envisage is stressed in the middle: en-VIS-age.")
-for w in ["contemplate","deliberate","ruminate","surmise","envisage"]:
+for w in ["contemplate","deliberate","ruminate","speculate","presume","surmise","envisage"]:
     P(7,'pron-'+w,1,f"Listen and repeat. {w.capitalize()}.",pause=3.8)
 P(7,'pron-sentence',1,"Now say it with me: \"I presume you've pondered this carefully.\"",pause=4.5)
+P(7,'pron-sentence2',1,"And one more: \"It's too early to speculate about the results.\"",pause=4.5)
 
 # 8 STORY
 P(8,'story',1,"Here's a short story with all eight words. Listen and follow.")
@@ -84,11 +90,14 @@ P(8,'story',3,"Her friends speculated that she was unhappy, and her manager pres
 P(8,'story',4,"Finally, Layla stopped ruminating, deliberated with her family, and made her choice. Today, she can't envisage working anywhere else.")
 P(8,'story-q',1,"Quick question: who guessed the truth from Layla's quiet mood? Pause the video and answer.",pause=4)
 P(8,'story-q',2,"Her sister. She surmised it.")
+P(8,'story-q2',1,"And one more: which word tells us Layla kept thinking about the same question, again and again?",pause=4)
+P(8,'story-q2',2,"Ruminating. She stopped ruminating, and finally made a decision.")
 
 # 9 PRACTICE
 MC = [("The committee will _____ on the proposal tomorrow.","a, speculate. b, deliberate. c, envisage.","b, deliberate."),
       ("I _____ you've finished the report, since it's Friday.","a, presume. b, ponder. c, ruminate.","a, presume."),
-      ("We _____ a city with clean air and green streets.","a, surmise. b, ruminate. c, envisage.","c, envisage.")]
+      ("We _____ a city with clean air and green streets.","a, surmise. b, ruminate. c, envisage.","c, envisage."),
+      ("Nobody knows why he resigned, but journalists continue to _____.","a, speculate. b, presume. c, deliberate.","a, speculate.")]
 for i,(q,o,a) in enumerate(MC,1):
     s=f'quiz-{i}'
     P(9,s,1,f"Question {i}. {q.replace('_____','blank')}")
@@ -96,6 +105,8 @@ for i,(q,o,a) in enumerate(MC,1):
     P(9,s,3,f"The answer is {a}")
 P(9,'quiz-correct',1,"Now, correct this sentence: \"She is contemplating to quit her job.\"",pause=4)
 P(9,'quiz-correct',2,"Correct: \"She is contemplating quitting her job.\"")
+P(9,'quiz-correct2',1,"And this one: \"The managers discussed about the budget for two hours.\"",pause=4)
+P(9,'quiz-correct2',2,"Correct: \"The managers discussed the budget for two hours.\" Or even better: \"The managers deliberated on the budget for two hours.\"")
 P(9,'quiz-gap',1,"Fill the gap: \"Don't _____ on your mistakes; learn from them.\" Hint: it starts with R.",pause=4)
 P(9,'quiz-gap',2,"The answer is ruminate.")
 P(9,'quiz-comment',1,"Comment challenge: write one sentence about your future with the word envisage. I'll read your comments.")
