@@ -1,0 +1,3249 @@
+{
+ "slug": "the-lantern-of-whispering-woods",
+ "title": "The Lantern of Whispering Woods",
+ "level": "B1–C1",
+ "voice": {
+  "name": "Lily",
+  "id": "3XD5qTvPWht0mpTnYXY0",
+  "speed": 0.85
+ },
+ "style": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere",
+ "negative": "no text, no letters, no subtitles, no watermark, consistent character design",
+ "characters": [
+  {
+   "id": "noor",
+   "name": "Noor",
+   "bible": "Noor, a 10-year-old girl with warm olive skin, big dark-brown eyes and one long thick black braid, wearing a long deep-plum hooded wool cloak over a plain ankle-length sand-coloured dress, brown leather boots, and a small cream canvas satchel across her shoulder"
+  },
+  {
+   "id": "ember",
+   "name": "Ember",
+   "bible": "Ember, a small red fox cub with a bright rust-orange coat, a cream-white chest and throat, black socks on all four paws, oversized pointed black-backed ears, bright amber eyes, and a bushy tail with a snow-white tip"
+  },
+  {
+   "id": "elder",
+   "name": "the Elder Oak",
+   "bible": "the Elder Oak, an enormous ancient oak tree with deep-grooved silver-grey bark folded into a wise old face, softly glowing moss-green eyes, a long beard of pale hanging moss, and huge twisting roots spread across the forest floor"
+  }
+ ],
+ "locations": [
+  {
+   "id": "cottage",
+   "bible": "a small round stone cottage with a mossy turf roof, one round window and a crooked wooden gate tangled with brambles, at the very edge of a towering blue-green forest"
+  },
+  {
+   "id": "woods",
+   "bible": "the Whispering Woods, an ancient forest of towering twisted trees with silver bark and blue-green leaves, blue mushrooms among mossy roots, drifting fireflies and thin silver mist"
+  },
+  {
+   "id": "river",
+   "bible": "the Misty River, a wide, slow river of dark silver water under thick drifting white mist, with half-hidden mossy stepping stones and tall reeds along its banks"
+  },
+  {
+   "id": "hollow",
+   "bible": "the Dark Hollow, a deep shadowy hollow beneath the forest, where huge black roots arch overhead like ribs and tangled tunnels lead into darkness, with a few faint pale mushrooms"
+  },
+  {
+   "id": "glade",
+   "bible": "the Heart Glade, a round moonlit clearing ringed by ancient standing stones furred with silver moss, with a tall old lantern of dark twisted vine-like iron and clear glass resting on a grey stone pedestal at its centre"
+  }
+ ],
+ "references": [
+  {
+   "id": "R1",
+   "kind": "character",
+   "of": "noor",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Noor, a 10-year-old girl with warm olive skin, big dark-brown eyes and one long thick black braid, wearing a long deep-plum hooded wool cloak over a plain ankle-length sand-coloured dress, brown leather boots, and a small cream canvas satchel across her shoulder, standing calmly, three-quarter front view, plain softly painted deep blue-green background, bathed in pale silver moonlight, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R2",
+   "kind": "character",
+   "of": "ember",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Ember, a small red fox cub with a bright rust-orange coat, a cream-white chest and throat, black socks on all four paws, oversized pointed black-backed ears, bright amber eyes, and a bushy tail with a snow-white tip, standing calmly, three-quarter front view, plain softly painted deep blue-green background, bathed in pale silver moonlight, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R3",
+   "kind": "character",
+   "of": "elder",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of the Elder Oak, an enormous ancient oak tree with deep-grooved silver-grey bark folded into a wise old face, softly glowing moss-green eyes, a long beard of pale hanging moss, and huge twisting roots spread across the forest floor, whole tree visible from roots to crown, front view, plain softly painted deep blue-green background, bathed in pale silver moonlight, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R4",
+   "kind": "location",
+   "of": "cottage",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of a small round stone cottage with a mossy turf roof, one round window and a crooked wooden gate tangled with brambles, at the very edge of a towering blue-green forest, no people, bathed in deep blue-green twilight, pale silver moonlight and a few faint glowing blue mushrooms, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R5",
+   "kind": "location",
+   "of": "woods",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of the Whispering Woods, an ancient forest of towering twisted trees with silver bark and blue-green leaves, blue mushrooms among mossy roots, drifting fireflies and thin silver mist, no people, bathed in deep blue-green twilight, pale silver moonlight and a few faint glowing blue mushrooms, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R6",
+   "kind": "location",
+   "of": "river",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of the Misty River, a wide, slow river of dark silver water under thick drifting white mist, with half-hidden mossy stepping stones and tall reeds along its banks, no people, bathed in deep blue-green twilight, pale silver moonlight and a few faint glowing blue mushrooms, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R7",
+   "kind": "location",
+   "of": "hollow",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of the Dark Hollow, a deep shadowy hollow beneath the forest, where huge black roots arch overhead like ribs and tangled tunnels lead into darkness, with a few faint pale mushrooms, no people, bathed in deep blue-green twilight, pale silver moonlight and a few faint glowing blue mushrooms, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R8",
+   "kind": "location",
+   "of": "glade",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of the Heart Glade, a round moonlit clearing ringed by ancient standing stones furred with silver moss, with a tall old lantern of dark twisted vine-like iron and clear glass resting on a grey stone pedestal at its centre, no people, bathed in deep blue-green twilight, pale silver moonlight and a few faint glowing blue mushrooms, no text, no letters, no subtitles, no watermark, consistent character design."
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Fading Light",
+   "ar": "الضوء الذي يخبو"
+  },
+  {
+   "n": 2,
+   "title": "The Riddle of the Elder Oak",
+   "ar": "لغز شجرة البلوط العتيقة"
+  },
+  {
+   "n": 3,
+   "title": "Across the Misty River",
+   "ar": "عبر النهر الضبابي"
+  },
+  {
+   "n": 4,
+   "title": "The Dark Hollow",
+   "ar": "الوادي المظلم"
+  },
+  {
+   "n": 5,
+   "title": "The Lantern's Secret",
+   "ar": "سرّ الفانوس"
+  }
+ ],
+ "thumb_shot": "S113",
+ "thumb_text": "WHO LIT THE LANTERN?",
+ "thumb_ar": "سرّ الفانوس السحري ✨ قصة بالإنجليزي",
+ "shots": [
+  {
+   "id": "S001",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow push-in",
+   "who": [],
+   "where": "cottage",
+   "light": "soft blue mushroom and golden firefly",
+   "action": "the little cottage sits beneath enormous glowing trees as fireflies drift slowly over its mossy roof",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S002",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "soft blue mushroom and warm candle",
+   "action": "medium shot through the round window from outside, Noor resting her head sleepily on the windowsill, the blue glow of the forest on her face",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S003",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow sideways pan",
+   "who": [],
+   "where": "woods",
+   "light": "soft blue mushroom and golden firefly",
+   "action": "a cluster of glowing blue mushrooms between mossy roots, softly pulsing with light",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S004",
+   "type": "image",
+   "who": [],
+   "where": "woods",
+   "light": "soft blue mushroom and golden firefly",
+   "action": "medium shot of golden fireflies drifting between silver branches like floating sparks",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S005",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, gentle upward tilt",
+   "who": [],
+   "where": "woods",
+   "light": "soft blue mushroom and golden firefly",
+   "action": "tall glowing trees sway gently together as their blue-green leaves shimmer, as if they are singing",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S006",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "faint, fading grey-blue moon",
+   "action": "close-up of Noor's worried face at the round window, frowning out at the darkening forest",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S007",
+   "type": "video",
+   "duration": 5,
+   "camera": "extreme close-up, very slow push-in",
+   "who": [],
+   "where": "woods",
+   "light": "faint, fading grey-blue moon",
+   "action": "a single blue mushroom whose glow slowly fades to dull grey",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S008",
+   "type": "image",
+   "who": [],
+   "where": "woods",
+   "light": "faint, fading grey-blue moon",
+   "action": "wide view of the forest gone dark and grey, its mushrooms dull and only two lonely fireflies left among the still branches",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S009",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "warm candle and cool blue moon",
+   "action": "medium shot inside the cottage, Noor sitting at the round window with her chin in her hands, lost in thought",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S010",
+   "type": "image",
+   "who": [],
+   "where": "cottage",
+   "light": "warm candle and cool blue moon",
+   "action": "insert shot of an old open storybook on the windowsill, its page painted with a glowing iron lantern standing in the heart of a dark forest",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S011",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "warm golden lantern and soft blue mushroom",
+   "action": "wide dreamlike vision of the ancient lantern shining on its stone pedestal, golden light spreading outward through the trees",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S012",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "warm candle and cool blue moon",
+   "action": "medium shot inside the cottage of Noor rising from the window seat, her small fist clenched with determination",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S013",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "warm candle and cool blue moon",
+   "action": "close-up of Noor turning her head sharply towards the window, startled, eyes wide",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S014",
+   "type": "image",
+   "who": [],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "insert shot of the bramble bush by the crooked gate shaking in the dark garden",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S015",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot following her",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Noor pulls her hood over her head and hurries out of the cottage door into the night",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S016",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "wide shot of the crooked wooden gate in the frosty garden at night, Noor approaching a dark tangle of brambles",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S017",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Ember caught in a thorny bramble by the gate, his fur snagged, his amber eyes wide with fear",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S018",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of Noor kneeling in the frosty grass beside the bramble, one hand held out gently towards Ember",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S019",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, very slow push-in",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Noor's careful fingers lift a thorny stem away from Ember's fur, a small red scratch on her hand",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S020",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Ember's amber eyes softening as he grows calm and still",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S021",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "low-angle medium shot of Ember sitting in the frosty grass, gazing up with shining amber eyes",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S022",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close two-shot of Noor smiling warmly down at Ember, their faces close together in the moonlight",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S023",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Ember tilting his head curiously, ears pricked",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S024",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium-wide shot, slow pan",
+   "who": [
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Ember trots a few steps towards the dark tree line, stops and looks back over his shoulder",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S025",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Noor's face in her raised hood, nervous but determined, her breath misting in the cold air",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S026",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot from behind, slow crane up",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Noor and Ember walk side by side away from the camera, between towering dark trees under a thin crescent moon",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S027",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "wide shot of Noor and Ember small among huge twisted trunks whose long shadows lean over the path",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S028",
+   "type": "image",
+   "who": [],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "insert close-up of dewy moss and dark curling ferns on the forest floor, beads of rain glinting",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S029",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot",
+   "who": [
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Ember leaps lightly over a fallen mossy log and slips beneath an arching root",
+   "refs": [
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S030",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "woods",
+   "light": "faint, fading grey-blue moon",
+   "action": "medium shot of Noor stepping carefully along the root-covered path, clutching her cloak, a few weak blue mushrooms flickering at her boots",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S031",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Noor frozen mid-step, eyes wide, listening",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S032",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow orbit",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the leaves all around Noor and Ember begin to tremble and rustle as they look about in wonder",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S033",
+   "type": "image",
+   "who": [],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "insert close-up of silver bark with thin veins of pale blue light shimmering along its grooves",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S034",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "low-angle wide shot of towering trees bending their tops together over Noor and Ember like curious giants",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S035",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow tilt up from the roots to the crown",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the huge oak towers over the end of the path, its bark folded into a sleeping face",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S036",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the Elder Oak's knotted eyelids slowly open to reveal glowing moss-green eyes",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S037",
+   "type": "video",
+   "duration": 5,
+   "camera": "low-angle medium shot, gentle push-in",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the Elder Oak's mouth of bark moves as it speaks, its moss beard swaying",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S038",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Noor swallowing hard, her hands clenched at her sides",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S039",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of Noor standing tall before the giant tree's roots, chin lifted, Ember pressed against her boots",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S040",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, static camera",
+   "who": [],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "thick mossy roots slowly slide and coil across the forest path, blocking the way",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S041",
+   "type": "image",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of the Elder Oak's face, stern and wise, its glowing eyes narrowed",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S042",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember",
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "wide shot of tiny Noor and Ember facing the enormous Elder Oak in a perfectly still forest",
+   "refs": [
+    "R1",
+    "R2",
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S043",
+   "type": "image",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "extreme close-up of one glowing moss-green eye of the Elder Oak as a single leaf drifts past it",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S044",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of Noor glancing back over her shoulder at the path behind her, thinking hard",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S045",
+   "type": "video",
+   "duration": 5,
+   "camera": "insert shot, slow pan along the ground",
+   "who": [],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "a trail of small boot prints and tiny fox paw prints pressed side by side into the soft mud",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S046",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of Noor pointing at the footprints with a delighted grin as Ember bounces up beside her",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S047",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow push-in",
+   "who": [
+    "noor",
+    "ember",
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the Elder Oak's face crinkles into a smile as its great roots slide apart, revealing the path beyond",
+   "refs": [
+    "R1",
+    "R2",
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S048",
+   "type": "image",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of the Elder Oak's face, kind but serious, a faint blue glimmer in the moss of its beard",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S049",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Noor looking up, puzzled, her lips parted in a question",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S050",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, static camera",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "the Elder Oak's glowing eyes slowly close and fade back into ordinary bark",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S051",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "misty silver moon",
+   "action": "medium shot of Noor and Ember pausing between the trees, listening, as white mist creeps towards them along the ground",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S052",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow push-in over the water",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "Noor and Ember stand small on the reedy bank as thick mist rolls slowly over the dark river",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S053",
+   "type": "image",
+   "who": [],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "insert shot of dark water lapping against a single mossy stepping stone, half hidden in white mist",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S054",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "close-up of Noor leaning forward and peering anxiously into the white mist",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S055",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow pan",
+   "who": [],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "the fast black current swirls and foams around the edge of a hidden stone",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S056",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "close-up of Noor's frightened face in the mist, her hands gripping the edges of her cloak",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S057",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "insert close-up of Noor's boots trembling at the slippery edge of the river bank",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S058",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "insert close-up of Ember's small black nose pressed gently against Noor's open hand",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S059",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, tracking the jump",
+   "who": [
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "Ember springs from the bank and disappears into the swirling white mist",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S060",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow push-in",
+   "who": [
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "Ember lands softly on a mossy stepping stone in the mist and turns to look back",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S061",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "the snow-white tip of Ember's bushy tail glows softly like a tiny star in the mist",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S062",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "close-up of Noor's face lighting up with understanding, a hopeful smile breaking through",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S063",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow sideways tracking",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "Noor steps carefully from stone to stone across the misty river, following the small white glow of Ember's tail ahead",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S064",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "insert close-up of Noor's brown leather boot stepping onto a wet mossy stone in the mist",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S065",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "medium shot of Noor crouching on a stepping stone, peering down at something tiny on a wet rock",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S066",
+   "type": "image",
+   "who": [],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "insert close-up of a single tiny firefly on a wet black rock, its wings soaked and drooping",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S067",
+   "type": "video",
+   "duration": 5,
+   "camera": "macro close-up, very slow push-in",
+   "who": [],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "the firefly's tiny light flickers weakly, dimming almost to nothing",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S068",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "close-up of Noor's cupped hands holding the tiny firefly as she blows on it gently",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S069",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow tilt up",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "warm golden firefly and misty silver moon",
+   "action": "the firefly glows warm gold in Noor's palm, then lifts off and floats up into the mist",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S070",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "medium shot of Noor waving softly at a tiny golden speck of light disappearing into the mist",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S071",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "river",
+   "light": "misty silver moon",
+   "action": "Noor leaps from the last stepping stone and lands safely on the grassy bank beside Ember",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S072",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow crane down into the hollow",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "Noor and Ember stand at the rim of the deep hollow, looking down into the darkness below",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S073",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "close-up of Noor's pale face in the darkness, one hand pressed to her chest",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S074",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "low-angle wide shot of huge black roots arching overhead like giant ribs, Noor and Ember tiny beneath them",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S075",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "medium shot of Noor and Ember standing before three dark tunnel mouths among the tangled roots",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S076",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "close-up of Ember with his ears pressed flat and his amber eyes wide with fear",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S077",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "medium shot of Noor kneeling with Ember wrapped gently inside her plum cloak, holding him close",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S078",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "close-up of Noor's face beside Ember's, her eyes determined as she whispers to him",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S079",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "medium shot of Noor lifting her head, an idea dawning in her eyes",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S080",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "close-up of Noor holding one wet finger up in the darkness, perfectly still, eyes half closed in concentration",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S081",
+   "type": "image",
+   "who": [],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "medium shot of the three tunnel mouths, faint silver wisps of air drifting only from the middle one",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S082",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, static camera",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "a loose strand of Noor's black hair stirs gently in a soft breeze from the tunnel",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S083",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "medium shot of Noor pointing towards the middle tunnel as Ember's ears prick up",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S084",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot into the tunnel",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "faint, cold blue",
+   "action": "Noor and Ember edge into a pitch-dark root tunnel as thin roots brush against her cloak",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S085",
+   "type": "video",
+   "duration": 5,
+   "camera": "insert shot, slow push-in",
+   "who": [],
+   "where": "hollow",
+   "light": "faint cold blue and tiny golden firefly",
+   "action": "a single tiny golden light blinks on far ahead in the black tunnel",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S086",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, static camera",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "warm golden firefly",
+   "action": "a single firefly hovers in front of Noor's astonished face as more golden lights appear behind it",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S087",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow push through the tunnel",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "warm golden firefly",
+   "action": "hundreds of golden fireflies stream through the root tunnel like a river of stars, lighting it gold around Noor and Ember",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S088",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "hollow",
+   "light": "warm golden firefly",
+   "action": "close-up of Noor laughing with tears shining in her eyes, golden fireflies reflected in them",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S089",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot",
+   "who": [
+    "ember"
+   ],
+   "where": "hollow",
+   "light": "warm golden firefly",
+   "action": "Ember bounds happily ahead through the glowing tunnel, fireflies swirling around him",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S090",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "warm golden firefly",
+   "action": "wide shot of Noor and Ember climbing out of a root tunnel onto a moonlit hillside, a cloud of fireflies around them",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S091",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow orbit",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Noor and Ember stand at the edge of the circle of standing stones, gazing towards its centre",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S092",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of the tall dark iron lantern standing alone on its grey stone pedestal, cold and unlit",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S093",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "medium shot of Ember sitting beside the pedestal, looking up at the tall lantern of twisted iron and clear glass",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S094",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "insert close-up of the lantern's dark iron frame twisted like vines around clear, frosty glass",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S095",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "insert close-up looking through the lantern's empty clear glass, nothing inside but cold moonlight",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S096",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, static camera",
+   "who": [
+    "noor"
+   ],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "Noor strikes a small flint stone beside the lantern glass, tiny orange sparks fly and die at once",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S097",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "glade",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "close-up of Noor's disappointed face, the flint stone resting in her open hand",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S098",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pull-back",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "faint, fading grey-blue moon",
+   "action": "the glade sinks into darkness as the last fireflies dim and frost creeps over the standing stones",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S099",
+   "type": "image",
+   "who": [
+    "ember"
+   ],
+   "where": "glade",
+   "light": "faint, fading grey-blue moon",
+   "action": "close-up of Ember curled up and shivering on the cold stone, eyes heavy with tiredness",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S100",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "faint, fading grey-blue moon",
+   "action": "medium shot of Noor sitting at the foot of the lantern pedestal, her cloak wrapped around Ember in her arms",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S101",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "faint, fading grey-blue moon",
+   "action": "close-up of Noor whispering into Ember's ear with tender eyes, her cheek resting against his fur",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S102",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "faint, fading grey-blue moon",
+   "action": "insert close-up of Ember gently licking Noor's scratched fingers",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S103",
+   "type": "video",
+   "duration": 5,
+   "camera": "insert shot, slow push-in",
+   "who": [],
+   "where": "glade",
+   "light": "faint grey-blue moon and one tiny golden spark",
+   "action": "a single tiny golden spark flickers into life inside the empty lantern glass",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S104",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow orbit",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "warm golden spark and grey-blue moon",
+   "action": "glowing golden sparks drift up from Noor's open hands and Ember's fur, floating towards the lantern",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S105",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "warm golden spark",
+   "action": "insert shot of a tiny glowing golden thorn floating upwards through the dark air",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S106",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "warm golden spark",
+   "action": "insert shot of a golden firefly-shaped spark of light drifting upwards past the standing stones",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S107",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "warm golden spark",
+   "action": "medium shot of Noor and Ember gazing up in wonder as golden motes of light swirl around them like falling stars",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S108",
+   "type": "image",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "deep blue-green twilight and pale silver moon",
+   "action": "wide shot of the Elder Oak far away in the dark forest, its moss-green eyes open and glowing",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S109",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "pale silver moon and distant gold",
+   "action": "the Elder Oak's face softens into a gentle smile, a warm golden glow reflected in its eyes",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S110",
+   "type": "image",
+   "who": [],
+   "where": "glade",
+   "light": "warm golden spark",
+   "action": "insert close-up of golden sparks gathering and swirling together inside the lantern glass",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S111",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "warm golden",
+   "action": "close-up of Noor and Ember's faces lit warm gold from the side, awed and still",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S112",
+   "type": "video",
+   "duration": 10,
+   "camera": "medium shot, slow push-in",
+   "who": [],
+   "where": "glade",
+   "light": "radiant warm lantern-gold",
+   "action": "the iron lantern bursts into brilliant golden light, beams pouring out between the standing stones",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S113",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "radiant warm lantern-gold",
+   "action": "medium shot with Noor and Ember on the right half of the frame, kneeling beside the blazing golden lantern, their faces lit with wonder, open dark sky on the left",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S114",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow crane up",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "radiant warm lantern-gold",
+   "action": "a great ring of golden light ripples outward from the lantern across the glade and into the dark trees",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S115",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow sideways pan",
+   "who": [],
+   "where": "woods",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "mushrooms burst into glowing blue and violet light one after another beneath the roots",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S116",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow tilt up",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "glade",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "thousands of golden fireflies rise from the grass around Noor and Ember, who turn in delight",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S117",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow upward tilt",
+   "who": [],
+   "where": "woods",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "the great trees sway and shimmer with blue and gold light, their leaves glittering as if singing",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S118",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "woods",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "Noor and Ember walk happily along a path lined with glowing mushrooms and fireflies",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S119",
+   "type": "image",
+   "who": [
+    "elder"
+   ],
+   "where": "woods",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "close-up of the Elder Oak's smiling face, its branches bowing low, glowing moss-green eyes warm and kind",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S120",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "river",
+   "light": "radiant silver moon and golden firefly",
+   "action": "wide shot of Noor and Ember crossing the stepping stones of the river, now shining like liquid moonlight under clear skies",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S121",
+   "type": "image",
+   "who": [],
+   "where": "cottage",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "wide view from the cottage garden of the whole forest glowing blue and gold, a warm golden light shining from its heart",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S122",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "medium shot of Noor at her round window again, smiling out at the brightly glowing forest",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S123",
+   "type": "image",
+   "who": [
+    "noor",
+    "ember"
+   ],
+   "where": "cottage",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "medium shot of Noor and Ember sitting side by side on the mossy garden wall, gazing at the radiant woods",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S124",
+   "type": "image",
+   "who": [
+    "noor"
+   ],
+   "where": "cottage",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "close-up of Noor smiling knowingly, warm golden light on her face",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S125",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow pull-back and crane up",
+   "who": [],
+   "where": "woods",
+   "light": "radiant lantern-gold and glowing blue mushroom",
+   "action": "the whole forest glows blue and gold under the moon, the tiny cottage shining at its edge",
+   "refs": [
+    "R5"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "chunk": "A",
+   "section": "title",
+   "text": "Welcome to a new English story. Tonight, we walk into a forest where the light is slowly fading. Listen closely, and read along.",
+   "slide": "title"
+  },
+  {
+   "id": 2,
+   "chunk": "A",
+   "section": "chapter",
+   "text": "Chapter one. The Fading Light.",
+   "slide": "chapter-1"
+  },
+  {
+   "id": 3,
+   "chunk": "A",
+   "section": "story",
+   "text": "At the edge of the Whispering Woods, in a small stone cottage with a mossy roof, there lived a girl named Noor.",
+   "ar": "على طرف الغابة الهامسة، في كوخ حجري صغير سقفه مكسوّ بالطحالب، عاشت فتاة اسمها نور.",
+   "shots": [
+    "S001"
+   ]
+  },
+  {
+   "id": 4,
+   "chunk": "A",
+   "section": "story",
+   "text": "Every night, Noor fell asleep to the glow of the forest outside her window.",
+   "ar": "كانت نور تغفو كل ليلة على وهج الغابة خارج نافذتها.",
+   "shots": [
+    "S002"
+   ]
+  },
+  {
+   "id": 5,
+   "chunk": "A",
+   "section": "story",
+   "text": "Mushrooms shone like tiny blue moons between the roots. Fireflies drifted through the branches like sparks from a gentle fire.",
+   "ar": "كان الفطر يلمع بين الجذور كأقمار زرقاء صغيرة، واليراعات تسبح بين الأغصان كشرارات من نار هادئة.",
+   "shots": [
+    "S003",
+    "S004"
+   ]
+  },
+  {
+   "id": 6,
+   "chunk": "A",
+   "section": "story",
+   "text": "And the trees themselves would murmur soft songs that no one could quite understand, but everyone could feel.",
+   "ar": "وكانت الأشجار نفسها تهمس بأغانٍ ناعمة لا يفهمها أحد تمامًا، لكن الجميع يشعر بها.",
+   "shots": [
+    "S005"
+   ]
+  },
+  {
+   "id": 7,
+   "chunk": "A",
+   "section": "story",
+   "text": "But this autumn, something was wrong.",
+   "ar": "لكن في هذا الخريف، كان ثمة خطب ما.",
+   "shots": [
+    "S006"
+   ]
+  },
+  {
+   "id": 8,
+   "chunk": "A",
+   "section": "story",
+   "text": "Night by night, the glow began to dwindle, the way a candle shrinks when no one remembers to tend it.",
+   "ar": "ليلةً بعد ليلة، بدأ الوهج يتضاءل، كما تذوي الشمعة حين لا يتذكّرها أحد.",
+   "shots": [
+    "S007"
+   ]
+  },
+  {
+   "id": 9,
+   "chunk": "A",
+   "section": "story",
+   "text": "The mushrooms faded to grey. The fireflies vanished one by one. And the songs of the trees became a thin, eerie silence.",
+   "ar": "خبا الفطر حتى صار رماديًا، واختفت اليراعات واحدة تلو الأخرى، وصارت أغاني الأشجار صمتًا رقيقًا موحشًا.",
+   "shots": [
+    "S008"
+   ]
+  },
+  {
+   "id": 10,
+   "chunk": "A",
+   "section": "story",
+   "text": "Noor sat at her window, chin in hands, remembering her grandmother's old story.",
+   "ar": "جلست نور عند نافذتها، وذقنها بين كفّيها، تتذكّر حكاية جدّتها القديمة.",
+   "shots": [
+    "S009"
+   ]
+  },
+  {
+   "id": 11,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Deep in the heart of the woods,” Grandmother would whisper, “there is an ancient Lantern. As long as it shines, the forest shines too.”",
+   "ar": "كانت الجدّة تهمس: «في قلب الغابة يوجد فانوس قديم، وما دام يضيء، تضيء الغابة معه.»",
+   "shots": [
+    "S010",
+    "S011"
+   ]
+  },
+  {
+   "id": 12,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Then someone must find it,” Noor said. “Before the light is gone for ever.”",
+   "ar": "قالت نور: «إذن لا بدّ أن يجده أحد، قبل أن ينطفئ الضوء إلى الأبد.»",
+   "shots": [
+    "S012"
+   ]
+  },
+  {
+   "id": 13,
+   "chunk": "B",
+   "section": "story",
+   "text": "Just then, a sharp little cry came from the garden.",
+   "ar": "وفي تلك اللحظة، جاءت صرخة صغيرة حادّة من الحديقة.",
+   "shots": [
+    "S013",
+    "S014"
+   ]
+  },
+  {
+   "id": 14,
+   "chunk": "B",
+   "section": "story",
+   "text": "Noor pulled on her cloak and hurried out into the cold blue dark.",
+   "ar": "ارتدت نور عباءتها، وأسرعت إلى الخارج في الظلمة الزرقاء الباردة.",
+   "shots": [
+    "S015"
+   ]
+  },
+  {
+   "id": 15,
+   "chunk": "B",
+   "section": "story",
+   "text": "There, caught in the brambles by the gate, was a fox cub no bigger than a cat, with a coat the colour of autumn leaves.",
+   "ar": "وهناك، عالقًا في الأشواك عند البوابة، كان شبل ثعلب لا يزيد حجمه على قطّة، وفروه بلون أوراق الخريف.",
+   "shots": [
+    "S016",
+    "S017"
+   ]
+  },
+  {
+   "id": 16,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Hush now,” Noor murmured, kneeling down. “I won't hurt you.”",
+   "ar": "همست نور وهي تجثو على ركبتيها: «اهدأ، لن أؤذيك.»",
+   "shots": [
+    "S018"
+   ]
+  },
+  {
+   "id": 17,
+   "chunk": "B",
+   "section": "story",
+   "text": "Slowly, gently, she untangled each thorn from his fur, even though the brambles scratched her fingers.",
+   "ar": "ببطء ورفق، خلّصت كل شوكة من فروه، مع أنّ الأشواك خدشت أصابعها.",
+   "shots": [
+    "S019",
+    "S020"
+   ]
+  },
+  {
+   "id": 18,
+   "chunk": "B",
+   "section": "story",
+   "text": "Once free, the cub didn't run away. He sat in the frosty grass and looked up at her with bright amber eyes.",
+   "ar": "وحين تحرّر، لم يهرب الشبل، بل جلس على العشب المتجمّد ونظر إليها بعينين كهرمانيتين لامعتين.",
+   "shots": [
+    "S021"
+   ]
+  },
+  {
+   "id": 19,
+   "chunk": "B",
+   "section": "story",
+   "text": "“I'll call you Ember,” she smiled, “because you look like the last spark of a fire.”",
+   "ar": "ابتسمت وقالت: «سأسمّيك إمبر، أي الجمرة، لأنك تشبه آخر شرارة في النار.»",
+   "shots": [
+    "S022"
+   ]
+  },
+  {
+   "id": 20,
+   "chunk": "B",
+   "section": "story",
+   "text": "Ember tilted his head. Then he trotted three steps towards the dark trees, stopped, and looked back at her.",
+   "ar": "أمال إمبر رأسه، ثم خطا ثلاث خطوات نحو الأشجار المظلمة، وتوقّف، والتفت إليها.",
+   "shots": [
+    "S023",
+    "S024"
+   ]
+  },
+  {
+   "id": 21,
+   "chunk": "B",
+   "section": "story",
+   "text": "“You want me to follow you?” Noor whispered. Her heart was beating fast, but her feet were already moving.",
+   "ar": "همست نور: «تريدني أن أتبعك؟» كان قلبها يخفق بسرعة، لكنّ قدميها كانتا قد بدأتا تتحرّكان.",
+   "shots": [
+    "S025"
+   ]
+  },
+  {
+   "id": 22,
+   "chunk": "B",
+   "section": "story",
+   "text": "And so, under a thin silver moon, the girl and the fox stepped into the Whispering Woods.",
+   "ar": "وهكذا، تحت قمر فضّيّ نحيل، دخلت الفتاة والثعلب إلى الغابة الهامسة.",
+   "shots": [
+    "S026"
+   ]
+  },
+  {
+   "id": 23,
+   "chunk": "C",
+   "section": "chapter",
+   "text": "Chapter two. The Riddle of the Elder Oak.",
+   "slide": "chapter-2"
+  },
+  {
+   "id": 24,
+   "chunk": "C",
+   "section": "story",
+   "text": "Inside the woods, the air smelled of moss and cold rain, and every shadow seemed to lean closer to listen.",
+   "ar": "داخل الغابة، كان الهواء يفوح برائحة الطحلب والمطر البارد، وكأنّ كل ظلّ يميل ليصغي.",
+   "shots": [
+    "S027",
+    "S028"
+   ]
+  },
+  {
+   "id": 25,
+   "chunk": "C",
+   "section": "story",
+   "text": "Ember was nimble and quick. He slipped under roots and over fallen logs as if he had wings instead of paws.",
+   "ar": "كان إمبر رشيقًا وسريعًا، ينساب تحت الجذور ويقفز فوق الجذوع الساقطة كأنّ له أجنحة لا أقدامًا.",
+   "shots": [
+    "S029"
+   ]
+  },
+  {
+   "id": 26,
+   "chunk": "C",
+   "section": "story",
+   "text": "Noor followed more slowly, as the last few mushrooms flickered weakly at her feet.",
+   "ar": "وتبعته نور بخطى أبطأ، بينما كان آخر الفطر يرتعش بضوء واهن عند قدميها.",
+   "shots": [
+    "S030"
+   ]
+  },
+  {
+   "id": 27,
+   "chunk": "C",
+   "section": "story",
+   "text": "Then the whispering began.",
+   "ar": "ثم بدأ الهمس.",
+   "shots": [
+    "S031"
+   ]
+  },
+  {
+   "id": 28,
+   "chunk": "C",
+   "section": "story",
+   "text": "It rose from every side, from the leaves, the bark and the roots deep under the earth.",
+   "ar": "تصاعد من كل ناحية: من الأوراق، ومن اللحاء، ومن الجذور العميقة تحت الأرض.",
+   "shots": [
+    "S032"
+   ]
+  },
+  {
+   "id": 29,
+   "chunk": "C",
+   "section": "story",
+   "text": "It was a soft, endless murmur, like the sea inside a shell.",
+   "ar": "كان همهمةً ناعمةً لا تنتهي، كصوت البحر داخل صَدَفة.",
+   "shots": [
+    "S033"
+   ]
+  },
+  {
+   "id": 30,
+   "chunk": "C",
+   "section": "story",
+   "text": "“Who goes there?” the trees seemed to say. “Who walks in the woods when the light is dying?”",
+   "ar": "بدا كأنّ الأشجار تقول: «من هناك؟ من يمشي في الغابة والضوء يحتضر؟»",
+   "shots": [
+    "S034"
+   ]
+  },
+  {
+   "id": 31,
+   "chunk": "C",
+   "section": "story",
+   "text": "The path ended suddenly at an enormous oak, so old that its silver bark had folded itself into a face.",
+   "ar": "انتهى الدرب فجأة عند شجرة بلوط هائلة، بلغت من القِدَم أنّ لحاءها الفضّيّ انطوى على هيئة وجه.",
+   "shots": [
+    "S035"
+   ]
+  },
+  {
+   "id": 32,
+   "chunk": "C",
+   "section": "story",
+   "text": "Two moss-green eyes opened slowly in the trunk, glowing like lamps behind green glass.",
+   "ar": "انفتحت في الجذع ببطء عينان بلون الطحلب، تتوهّجان كمصباحين خلف زجاج أخضر.",
+   "shots": [
+    "S036"
+   ]
+  },
+  {
+   "id": 33,
+   "chunk": "C",
+   "section": "story",
+   "text": "“Little ones,” rumbled the Elder Oak, in a voice as deep as thunder underground. “Why have you come?”",
+   "ar": "دمدمت شجرة البلوط العتيقة بصوت عميق كرعد تحت الأرض: «أيّها الصغيران، لماذا جئتما؟»",
+   "shots": [
+    "S037"
+   ]
+  },
+  {
+   "id": 34,
+   "chunk": "C",
+   "section": "story",
+   "text": "Noor swallowed hard and stood up straight. “We're looking for the Lantern. The forest is fading, and I want to help.”",
+   "ar": "ابتلعت نور ريقها ووقفت منتصبة: «نحن نبحث عن الفانوس. الغابة تخبو، وأريد أن أساعد.»",
+   "shots": [
+    "S038",
+    "S039"
+   ]
+  },
+  {
+   "id": 35,
+   "chunk": "D",
+   "section": "story",
+   "text": "The old tree was silent. Then its roots twisted across the path like sleeping snakes.",
+   "ar": "صمتت الشجرة العجوز، ثم التفّت جذورها عبر الدرب كأفاعٍ نائمة.",
+   "shots": [
+    "S040"
+   ]
+  },
+  {
+   "id": 36,
+   "chunk": "D",
+   "section": "story",
+   "text": "“Many have searched,” said the Oak. “The way is perilous, and I open it only to those who can answer my riddle.”",
+   "ar": "قالت الشجرة: «كثيرون بحثوا. الطريق محفوف بالمخاطر، ولا أفتحه إلا لمن يجيب عن لغزي.»",
+   "shots": [
+    "S041"
+   ]
+  },
+  {
+   "id": 37,
+   "chunk": "D",
+   "section": "story",
+   "text": "The leaves around them hushed, as if the whole forest were holding its breath.",
+   "ar": "سكنت الأوراق من حولهما، كأنّ الغابة كلّها تحبس أنفاسها.",
+   "shots": [
+    "S042"
+   ]
+  },
+  {
+   "id": 38,
+   "chunk": "D",
+   "section": "story",
+   "text": "“The more you take, the more you leave behind. What am I?”",
+   "ar": "«كلّما أخذتَ منّي أكثر، تركتَ خلفك أكثر. فمن أكون؟»",
+   "shots": [
+    "S043"
+   ]
+  },
+  {
+   "id": 39,
+   "chunk": "D",
+   "section": "story",
+   "text": "Noor thought hard. She looked at the dark path ahead, and then back at the soft earth behind her.",
+   "ar": "فكّرت نور مليًّا، ونظرت إلى الدرب المظلم أمامها، ثم إلى التراب الليّن خلفها.",
+   "shots": [
+    "S044"
+   ]
+  },
+  {
+   "id": 40,
+   "chunk": "D",
+   "section": "story",
+   "text": "There in the mud were her own small boot prints, and beside them, the tiny paw prints of a fox.",
+   "ar": "وهناك في الطين كانت آثار حذائها الصغير، وبجانبها آثار أقدام ثعلب دقيقة.",
+   "shots": [
+    "S045"
+   ]
+  },
+  {
+   "id": 41,
+   "chunk": "D",
+   "section": "story",
+   "text": "“Footsteps!” she cried. “The more steps you take, the more footsteps you leave behind!”",
+   "ar": "صاحت: «آثار الأقدام! كلّما خطوتَ أكثر، تركتَ خلفك آثارًا أكثر!»",
+   "shots": [
+    "S046"
+   ]
+  },
+  {
+   "id": 42,
+   "chunk": "D",
+   "section": "story",
+   "text": "The Elder Oak laughed, a warm, creaking sound, and its roots slid aside to open the path.",
+   "ar": "ضحكت شجرة البلوط العتيقة ضحكة دافئة صريرها كصرير الخشب، وانزاحت جذورها لتفتح الدرب.",
+   "shots": [
+    "S047"
+   ]
+  },
+  {
+   "id": 43,
+   "chunk": "D",
+   "section": "story",
+   "text": "“Clever child,” it said. “But remember this: no flint or flame can light the Lantern. You must kindle it another way.”",
+   "ar": "قالت: «يا لكِ من طفلة ذكية. لكن تذكّري: لا تُشعل الفانوسَ قدّاحةٌ ولا لهب، بل عليكِ أن توقديه بطريقة أخرى.»",
+   "shots": [
+    "S048"
+   ]
+  },
+  {
+   "id": 44,
+   "chunk": "D",
+   "section": "story",
+   "text": "“What way?” Noor asked. But the Oak's eyes had already closed, and only a gentle murmur answered her.",
+   "ar": "سألت نور: «أيّ طريقة؟» لكنّ عيني الشجرة كانتا قد انغلقتا، ولم يجبها إلا همس رقيق.",
+   "shots": [
+    "S049",
+    "S050"
+   ]
+  },
+  {
+   "id": 45,
+   "chunk": "E",
+   "section": "chapter",
+   "text": "Chapter three. Across the Misty River.",
+   "slide": "chapter-3"
+  },
+  {
+   "id": 46,
+   "chunk": "E",
+   "section": "story",
+   "text": "Soon they heard water, slow and heavy, somewhere in the dark.",
+   "ar": "وسرعان ما سمعا خرير ماء، بطيئًا ثقيلًا، في مكان ما في الظلام.",
+   "shots": [
+    "S051"
+   ]
+  },
+  {
+   "id": 47,
+   "chunk": "E",
+   "section": "story",
+   "text": "The Misty River lay across their path, wrapped in a mist so thick that Noor could barely see her own hands.",
+   "ar": "كان النهر الضبابي يعترض طريقهما، ملفوفًا بضباب كثيف حتى إنّ نور بالكاد ترى يديها.",
+   "shots": [
+    "S052"
+   ]
+  },
+  {
+   "id": 48,
+   "chunk": "E",
+   "section": "story",
+   "text": "Somewhere beneath that mist, she knew, were the old stepping stones. But where?",
+   "ar": "كانت تعلم أنّ الحجارة القديمة التي يُعبَر عليها تختبئ في مكان ما تحت ذلك الضباب. لكن أين؟",
+   "shots": [
+    "S053",
+    "S054"
+   ]
+  },
+  {
+   "id": 49,
+   "chunk": "E",
+   "section": "story",
+   "text": "One wrong step, and the cold current would carry her away. It was the most perilous crossing in the whole forest.",
+   "ar": "خطوة واحدة خاطئة، ويجرفها التيار البارد. كان ذلك أخطر معبر في الغابة كلّها.",
+   "shots": [
+    "S055"
+   ]
+  },
+  {
+   "id": 50,
+   "chunk": "E",
+   "section": "story",
+   "text": "Noor's knees began to tremble. “I can't do it,” she whispered. “I can't see a thing.”",
+   "ar": "بدأت ركبتا نور ترتجفان، وهمست: «لا أستطيع. لا أرى شيئًا.»",
+   "shots": [
+    "S056",
+    "S057"
+   ]
+  },
+  {
+   "id": 51,
+   "chunk": "E",
+   "section": "story",
+   "text": "Ember pressed his warm nose against her hand. Then, without a sound, he leapt into the mist.",
+   "ar": "ضغط إمبر أنفه الدافئ على يدها، ثم قفز في الضباب دون أن يُصدر صوتًا.",
+   "shots": [
+    "S058",
+    "S059"
+   ]
+  },
+  {
+   "id": 52,
+   "chunk": "E",
+   "section": "story",
+   "text": "He landed on a hidden stone, light and nimble as a falling leaf, and turned to look back at her.",
+   "ar": "حطّ على حجر خفيّ، خفيفًا رشيقًا كورقة تسقط، ثم التفت إليها.",
+   "shots": [
+    "S060"
+   ]
+  },
+  {
+   "id": 53,
+   "chunk": "E",
+   "section": "story",
+   "text": "And there, glowing faintly in the moonlight, was the white tip of his tail, bright as a little star.",
+   "ar": "وهناك، يلمع خافتًا في ضوء القمر، كان طرف ذيله الأبيض، ساطعًا كنجمة صغيرة.",
+   "shots": [
+    "S061"
+   ]
+  },
+  {
+   "id": 54,
+   "chunk": "E",
+   "section": "story",
+   "text": "“Of course!” Noor breathed. “I don't have to see the stones. I only have to follow you.”",
+   "ar": "همست نور: «بالطبع! لست مضطرّة إلى رؤية الحجارة. يكفي أن أتبعك.»",
+   "shots": [
+    "S062"
+   ]
+  },
+  {
+   "id": 55,
+   "chunk": "E",
+   "section": "story",
+   "text": "Stone by stone, the fox led the way, and stone by stone, the girl followed the small white light of his tail.",
+   "ar": "حجرًا بعد حجر، قاد الثعلب الطريق، وحجرًا بعد حجر، تبعت الفتاة الضوء الأبيض الصغير في ذيله.",
+   "shots": [
+    "S063",
+    "S064"
+   ]
+  },
+  {
+   "id": 56,
+   "chunk": "E",
+   "section": "story",
+   "text": "Halfway across, Noor saw something tiny struggling on a wet rock: a firefly, its wings soaked and heavy.",
+   "ar": "في منتصف الطريق، لمحت نور شيئًا صغيرًا يصارع على صخرة مبتلّة: يراعةً جناحاها مبلّلان ثقيلان.",
+   "shots": [
+    "S065",
+    "S066"
+   ]
+  },
+  {
+   "id": 57,
+   "chunk": "E",
+   "section": "story",
+   "text": "Its light was dwindling to almost nothing, like the last breath of a candle.",
+   "ar": "كان ضوؤها يتضاءل حتى كاد يتلاشى، كآخر نفَس لشمعة.",
+   "shots": [
+    "S067"
+   ]
+  },
+  {
+   "id": 58,
+   "chunk": "E",
+   "section": "story",
+   "text": "Noor cupped it carefully in her palm and blew on it softly until its wings were dry.",
+   "ar": "حملتها نور بحذر في راحة يدها، ونفخت عليها برفق حتى جفّ جناحاها.",
+   "shots": [
+    "S068"
+   ]
+  },
+  {
+   "id": 59,
+   "chunk": "E",
+   "section": "story",
+   "text": "The firefly shivered. Then it glowed, just once, warm and golden, before it flew away into the mist.",
+   "ar": "ارتعشت اليراعة، ثم توهّجت مرّة واحدة بضوء ذهبيّ دافئ، قبل أن تطير بعيدًا في الضباب.",
+   "shots": [
+    "S069"
+   ]
+  },
+  {
+   "id": 60,
+   "chunk": "E",
+   "section": "story",
+   "text": "“Goodbye, little friend,” Noor smiled. Then, with one last jump, she reached the far bank beside Ember.",
+   "ar": "ابتسمت نور: «وداعًا يا صديقتي الصغيرة.» ثم بقفزة أخيرة، بلغت الضفّة الأخرى بجانب إمبر.",
+   "shots": [
+    "S070",
+    "S071"
+   ]
+  },
+  {
+   "id": 61,
+   "chunk": "F",
+   "section": "chapter",
+   "text": "Chapter four. The Dark Hollow.",
+   "slide": "chapter-4"
+  },
+  {
+   "id": 62,
+   "chunk": "F",
+   "section": "story",
+   "text": "Beyond the river, the ground sloped down into a deep, shadowy hollow where no moonlight could reach.",
+   "ar": "خلف النهر، انحدرت الأرض نحو وادٍ عميق مظلم لا يبلغه ضوء القمر.",
+   "shots": [
+    "S072"
+   ]
+  },
+  {
+   "id": 63,
+   "chunk": "F",
+   "section": "story",
+   "text": "Here the trees did not whisper at all. The silence was so eerie that Noor could hear her own heartbeat.",
+   "ar": "هنا لم تكن الأشجار تهمس أبدًا. كان الصمت موحشًا حتى إنّ نور سمعت دقّات قلبها.",
+   "shots": [
+    "S073"
+   ]
+  },
+  {
+   "id": 64,
+   "chunk": "F",
+   "section": "story",
+   "text": "Black roots twisted overhead like the ribs of some enormous, sleeping creature.",
+   "ar": "التفّت الجذور السوداء فوق رأسيهما كأضلاع مخلوق هائل نائم.",
+   "shots": [
+    "S074"
+   ]
+  },
+  {
+   "id": 65,
+   "chunk": "F",
+   "section": "story",
+   "text": "At the bottom, the path split into three tunnels, each as black as the inside of a closed eye.",
+   "ar": "في القاع، انقسم الدرب إلى ثلاثة أنفاق، كلّ منها حالك كباطن عين مغمضة.",
+   "shots": [
+    "S075"
+   ]
+  },
+  {
+   "id": 66,
+   "chunk": "F",
+   "section": "story",
+   "text": "“Which way?” Noor whispered. Ember's ears flattened. For the first time, the brave little fox looked afraid.",
+   "ar": "همست نور: «أيّ طريق؟» فانبسطت أذنا إمبر، وللمرّة الأولى بدا الثعلب الصغير الشجاع خائفًا.",
+   "shots": [
+    "S076"
+   ]
+  },
+  {
+   "id": 67,
+   "chunk": "F",
+   "section": "story",
+   "text": "Noor knelt and gathered him into her cloak. She could feel him trembling against her.",
+   "ar": "جثت نور وضمّته داخل عباءتها، وشعرت به يرتجف ملتصقًا بها.",
+   "shots": [
+    "S077"
+   ]
+  },
+  {
+   "id": 68,
+   "chunk": "F",
+   "section": "story",
+   "text": "“It's all right,” she said softly, though her own voice shook. “We'll be steadfast together. We won't give up.”",
+   "ar": "قالت بهدوء، مع أنّ صوتها كان يرتجف: «لا بأس. سنبقى ثابتَين معًا، ولن نستسلم.»",
+   "shots": [
+    "S078"
+   ]
+  },
+  {
+   "id": 69,
+   "chunk": "F",
+   "section": "story",
+   "text": "Then she remembered an old trick of her grandmother's.",
+   "ar": "ثم تذكّرت حيلة قديمة علّمتها إيّاها جدّتها.",
+   "shots": [
+    "S079"
+   ]
+  },
+  {
+   "id": 70,
+   "chunk": "F",
+   "section": "story",
+   "text": "She licked one finger and held it up in the darkness, very still, and waited.",
+   "ar": "بلّلت إصبعها بلسانها، ورفعته في الظلام، وظلّت ساكنة تمامًا، تنتظر.",
+   "shots": [
+    "S080"
+   ]
+  },
+  {
+   "id": 71,
+   "chunk": "F",
+   "section": "story",
+   "text": "From the left tunnel came nothing. From the right came nothing. But from the middle came the faintest breath of cool, sweet air.",
+   "ar": "لم يأتِ شيء من النفق الأيسر، ولا من الأيمن. أمّا من الأوسط فجاءت أخفّ نسمة من هواء بارد عذب.",
+   "shots": [
+    "S081",
+    "S082"
+   ]
+  },
+  {
+   "id": 72,
+   "chunk": "F",
+   "section": "story",
+   "text": "“Air means an opening,” Noor said. “This way leads out!”",
+   "ar": "قالت نور: «الهواء يعني وجود فتحة. هذا الطريق يؤدّي إلى الخارج!»",
+   "shots": [
+    "S083"
+   ]
+  },
+  {
+   "id": 73,
+   "chunk": "F",
+   "section": "story",
+   "text": "The middle tunnel was darker than any night she had known, and the roots seemed to reach for her cloak.",
+   "ar": "كان النفق الأوسط أشدّ ظلمة من أيّ ليلة عرفتها، وبدت الجذور كأنها تمتدّ لتمسك بعباءتها.",
+   "shots": [
+    "S084"
+   ]
+  },
+  {
+   "id": 74,
+   "chunk": "F",
+   "section": "story",
+   "text": "Then, far ahead, a tiny golden light blinked.",
+   "ar": "ثم، في البعيد، ومض ضوء ذهبيّ صغير.",
+   "shots": [
+    "S085"
+   ]
+  },
+  {
+   "id": 75,
+   "chunk": "F",
+   "section": "story",
+   "text": "It was the firefly from the river. And behind it came another, and another, and then a hundred more.",
+   "ar": "كانت اليراعة نفسها التي أنقذتها عند النهر. وخلفها جاءت أخرى، ثم أخرى، ثم مئة غيرها.",
+   "shots": [
+    "S086"
+   ]
+  },
+  {
+   "id": 76,
+   "chunk": "F",
+   "section": "story",
+   "text": "They poured through the tunnel like a river of stars, lighting every root and stone with a soft, radiant glow.",
+   "ar": "تدفّقت في النفق كنهر من النجوم، تضيء كلّ جذر وحجر بوهج ناعم متألّق.",
+   "shots": [
+    "S087"
+   ]
+  },
+  {
+   "id": 77,
+   "chunk": "F",
+   "section": "story",
+   "text": "“You came back for us!” Noor laughed, tears shining in her eyes. Ember gave a happy yip and bounded ahead.",
+   "ar": "ضحكت نور والدموع تلمع في عينيها: «لقد عدتِ من أجلنا!» وأطلق إمبر نباحًا فرحًا وقفز إلى الأمام.",
+   "shots": [
+    "S088",
+    "S089"
+   ]
+  },
+  {
+   "id": 78,
+   "chunk": "F",
+   "section": "story",
+   "text": "Guided by the fireflies, they climbed up and out of the hollow, into a circle of moonlight.",
+   "ar": "وبهدي اليراعات، صعدا وخرجا من الوادي إلى دائرة من ضوء القمر.",
+   "shots": [
+    "S090"
+   ]
+  },
+  {
+   "id": 79,
+   "chunk": "G",
+   "section": "chapter",
+   "text": "Chapter five. The Lantern's Secret.",
+   "slide": "chapter-5"
+  },
+  {
+   "id": 80,
+   "chunk": "G",
+   "section": "story",
+   "text": "They stood at the edge of a round glade, ringed by ancient standing stones covered in silver moss.",
+   "ar": "وقفا على حافّة فسحة مستديرة، تحيط بها حجارة قائمة قديمة يكسوها طحلب فضّيّ.",
+   "shots": [
+    "S091"
+   ]
+  },
+  {
+   "id": 81,
+   "chunk": "G",
+   "section": "story",
+   "text": "In the very centre, on a pedestal of old grey stone, stood the Lantern.",
+   "ar": "وفي وسطها تمامًا، على قاعدة من حجر رماديّ قديم، كان الفانوس قائمًا.",
+   "shots": [
+    "S092"
+   ]
+  },
+  {
+   "id": 82,
+   "chunk": "G",
+   "section": "story",
+   "text": "It was taller than Ember and made of dark iron twisted like vines, with glass as clear as frozen water.",
+   "ar": "كان أطول من إمبر، مصنوعًا من حديد داكن ملتوٍ كالكروم، وزجاجه صافٍ كالماء المتجمّد.",
+   "shots": [
+    "S093",
+    "S094"
+   ]
+  },
+  {
+   "id": 83,
+   "chunk": "G",
+   "section": "story",
+   "text": "But it was empty. No wick, no oil, not even a trace of ash.",
+   "ar": "لكنه كان فارغًا: لا فتيل، ولا زيت، ولا حتى أثر رماد.",
+   "shots": [
+    "S095"
+   ]
+  },
+  {
+   "id": 84,
+   "chunk": "G",
+   "section": "story",
+   "text": "Noor's heart sank. She struck her flint again and again, but the sparks simply died against the glass.",
+   "ar": "انقبض قلب نور. قدحت حجر الصوّان مرّة بعد مرّة، لكنّ الشرر كان يموت على الزجاج.",
+   "shots": [
+    "S096"
+   ]
+  },
+  {
+   "id": 85,
+   "chunk": "G",
+   "section": "story",
+   "text": "“The Oak was right,” she said quietly. “No flint or flame can kindle it.”",
+   "ar": "قالت بهدوء: «كانت شجرة البلوط محقّة. لا قدّاحة ولا لهب يمكن أن يوقده.»",
+   "shots": [
+    "S097"
+   ]
+  },
+  {
+   "id": 86,
+   "chunk": "G",
+   "section": "story",
+   "text": "The woods grew darker. Even the fireflies' light began to dwindle, and the cold crept closer.",
+   "ar": "ازدادت الغابة ظلمة، وحتى ضوء اليراعات بدأ يتضاءل، والبرد يزحف نحوهما.",
+   "shots": [
+    "S098"
+   ]
+  },
+  {
+   "id": 87,
+   "chunk": "G",
+   "section": "story",
+   "text": "Ember was shivering, exhausted. So Noor sat down on the cold stone, wrapped her cloak around him, and held him close.",
+   "ar": "كان إمبر يرتجف منهكًا، فجلست نور على الحجر البارد، ولفّته بعباءتها، وضمّته إليها.",
+   "shots": [
+    "S099",
+    "S100"
+   ]
+  },
+  {
+   "id": 88,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Whatever happens,” she whispered into his soft ear, “I'm so glad you came with me. I could never have done this alone.”",
+   "ar": "همست في أذنه الناعمة: «مهما حدث، أنا سعيدة جدًا لأنك جئت معي. ما كنت لأقدر على هذا وحدي أبدًا.»",
+   "shots": [
+    "S101"
+   ]
+  },
+  {
+   "id": 89,
+   "chunk": "G",
+   "section": "story",
+   "text": "Ember looked up and gently licked her scratched fingers, the ones the brambles had torn when she set him free.",
+   "ar": "رفع إمبر عينيه، ولعق برفق أصابعها المخدوشة، تلك التي جرحتها الأشواك حين حرّرته.",
+   "shots": [
+    "S102"
+   ]
+  },
+  {
+   "id": 90,
+   "chunk": "G",
+   "section": "story",
+   "text": "And at that very moment, a tiny golden spark appeared inside the Lantern.",
+   "ar": "وفي تلك اللحظة بالذات، ظهرت شرارة ذهبيّة صغيرة داخل الفانوس.",
+   "shots": [
+    "S103"
+   ]
+  },
+  {
+   "id": 91,
+   "chunk": "G",
+   "section": "story",
+   "text": "Then another spark rose, drifting up from Noor's hands like warm pollen, and another floated from Ember's fur.",
+   "ar": "ثم ارتفعت شرارة أخرى من يدي نور كحبوب لقاح دافئة، وطفت ثالثة من فرو إمبر.",
+   "shots": [
+    "S104"
+   ]
+  },
+  {
+   "id": 92,
+   "chunk": "G",
+   "section": "story",
+   "text": "The thorns she had pulled from his fur. The firefly she had saved. The courage they had shared in the dark.",
+   "ar": "الأشواك التي نزعتها من فروه، واليراعة التي أنقذتها، والشجاعة التي تقاسماها في الظلام.",
+   "shots": [
+    "S105",
+    "S106",
+    "S107"
+   ]
+  },
+  {
+   "id": 93,
+   "chunk": "H",
+   "section": "story",
+   "text": "Far away, the Elder Oak's deep voice rolled through the woods.",
+   "ar": "ومن بعيد، تردّد صوت شجرة البلوط العتيقة العميق في أرجاء الغابة.",
+   "shots": [
+    "S108"
+   ]
+  },
+  {
+   "id": 94,
+   "chunk": "H",
+   "section": "story",
+   "text": "“The Lantern was never lit by fire, child,” it said. “It is lit by kindness given freely, and by courage shared.”",
+   "ar": "قالت: «لم يُشعَل الفانوس بالنار قطّ يا صغيرتي. إنه يُضاء بلطفٍ يُمنح بلا مقابل، وبشجاعة يتقاسمها الأصدقاء.»",
+   "shots": [
+    "S109"
+   ]
+  },
+  {
+   "id": 95,
+   "chunk": "H",
+   "section": "story",
+   "text": "“For a hundred years, no one came with a kind heart, and so its light slowly faded.”",
+   "ar": "«طوال مئة عام، لم يأتِ أحد بقلب طيّب، ولذلك خبا نوره رويدًا رويدًا.»",
+   "shots": [
+    "S110"
+   ]
+  },
+  {
+   "id": 96,
+   "chunk": "H",
+   "section": "story",
+   "text": "“But kindness is the only light that never truly goes out.”",
+   "ar": "«لكنّ اللطف هو النور الوحيد الذي لا ينطفئ أبدًا.»",
+   "shots": [
+    "S111"
+   ]
+  },
+  {
+   "id": 97,
+   "chunk": "H",
+   "section": "story",
+   "text": "The Lantern burst into light. Not the red of fire, but a warm, radiant gold, like sunrise poured into glass.",
+   "ar": "اشتعل الفانوس نورًا، لا بحُمرة النار، بل بذهبٍ دافئ متألّق، كأنّ شروق الشمس سُكب في الزجاج.",
+   "shots": [
+    "S112",
+    "S113"
+   ]
+  },
+  {
+   "id": 98,
+   "chunk": "H",
+   "section": "story",
+   "text": "The light rolled out across the glade in a great golden wave, and the whole forest woke.",
+   "ar": "تدحرج النور عبر الفسحة في موجة ذهبيّة عظيمة، فاستيقظت الغابة كلّها.",
+   "shots": [
+    "S114"
+   ]
+  },
+  {
+   "id": 99,
+   "chunk": "H",
+   "section": "story",
+   "text": "Mushrooms bloomed blue and violet beneath the roots. Thousands of fireflies rose from the grass like sparks from a joyful fire.",
+   "ar": "تفتّح الفطر أزرق وبنفسجيًا تحت الجذور، وارتفعت آلاف اليراعات من العشب كشرارات من نار فرِحة.",
+   "shots": [
+    "S115",
+    "S116"
+   ]
+  },
+  {
+   "id": 100,
+   "chunk": "H",
+   "section": "story",
+   "text": "And the trees began to sing again, a deep and happy murmur that seemed to fill the whole sky.",
+   "ar": "وعادت الأشجار تغنّي من جديد، بهمهمة عميقة سعيدة بدت كأنها تملأ السماء كلّها.",
+   "shots": [
+    "S117"
+   ]
+  },
+  {
+   "id": 101,
+   "chunk": "H",
+   "section": "story",
+   "text": "Noor and Ember walked home through a forest that glittered like a jewel box.",
+   "ar": "عادت نور وإمبر إلى البيت عبر غابة تتلألأ كصندوق مجوهرات.",
+   "shots": [
+    "S118"
+   ]
+  },
+  {
+   "id": 102,
+   "chunk": "H",
+   "section": "story",
+   "text": "The Elder Oak bowed its branches as they passed, and the river below them shone like liquid moonlight.",
+   "ar": "انحنت شجرة البلوط العتيقة بأغصانها وهما يمرّان، ولمع النهر تحتهما كضوء قمر سائل.",
+   "shots": [
+    "S119",
+    "S120"
+   ]
+  },
+  {
+   "id": 103,
+   "chunk": "H",
+   "section": "story",
+   "text": "From that night on, the Whispering Woods never went dark again.",
+   "ar": "ومنذ تلك الليلة، لم تُظلم الغابة الهامسة مرّة أخرى.",
+   "shots": [
+    "S121",
+    "S122"
+   ]
+  },
+  {
+   "id": 104,
+   "chunk": "H",
+   "section": "story",
+   "text": "Noor grew up brave and kind, and wherever she went, a small red fox walked steadfast at her side.",
+   "ar": "كبرت نور شجاعةً طيّبة، وحيثما ذهبت، كان ثعلب أحمر صغير يسير وفيًّا ثابتًا إلى جانبها.",
+   "shots": [
+    "S123"
+   ]
+  },
+  {
+   "id": 105,
+   "chunk": "H",
+   "section": "story",
+   "text": "And whenever anyone asked how she had lit the Lantern, Noor would smile and say,",
+   "ar": "وكلّما سألها أحد كيف أشعلت الفانوس القديم، كانت نور تبتسم وتقول:",
+   "shots": [
+    "S124"
+   ]
+  },
+  {
+   "id": 106,
+   "chunk": "H",
+   "section": "story",
+   "text": "“It's simple. Give a little of your light away, and somehow, there is always more.”",
+   "ar": "«الأمر بسيط: امنح شيئًا من نورك للآخرين، وستجد دائمًا، بطريقة ما، أنّ لديك المزيد.»",
+   "shots": [
+    "S125"
+   ]
+  },
+  {
+   "id": 107,
+   "chunk": "I",
+   "section": "words",
+   "text": "Now, let's look at eight beautiful words from the story. Listen, and say each one with me.",
+   "slide": "words-intro"
+  },
+  {
+   "id": 108,
+   "chunk": "I",
+   "section": "words",
+   "text": "Dwindle. To dwindle means to become smaller and weaker, little by little. Night by night, the glow began to dwindle.",
+   "slide": "word-dwindle"
+  },
+  {
+   "id": 109,
+   "chunk": "I",
+   "section": "words",
+   "text": "Eerie. Eerie means strange and a little frightening. The silence was so eerie that Noor could hear her own heartbeat.",
+   "slide": "word-eerie"
+  },
+  {
+   "id": 110,
+   "chunk": "I",
+   "section": "words",
+   "text": "Nimble. Nimble means able to move quickly and lightly. Ember was nimble and quick.",
+   "slide": "word-nimble"
+  },
+  {
+   "id": 111,
+   "chunk": "I",
+   "section": "words",
+   "text": "Kindle. To kindle means to make a fire or a light start to burn. No flint or flame can kindle it.",
+   "slide": "word-kindle"
+  },
+  {
+   "id": 112,
+   "chunk": "I",
+   "section": "words",
+   "text": "Perilous. Perilous means very dangerous. It was the most perilous crossing in the whole forest.",
+   "slide": "word-perilous"
+  },
+  {
+   "id": 113,
+   "chunk": "I",
+   "section": "words",
+   "text": "Murmur. A murmur is a soft, low sound that goes on and on. It was a soft, endless murmur, like the sea inside a shell.",
+   "slide": "word-murmur"
+  },
+  {
+   "id": 114,
+   "chunk": "I",
+   "section": "words",
+   "text": "Steadfast. Steadfast means loyal and firm, never giving up. We'll be steadfast together. We won't give up.",
+   "slide": "word-steadfast"
+  },
+  {
+   "id": 115,
+   "chunk": "I",
+   "section": "words",
+   "text": "Radiant. Radiant means shining with bright, warm light. Not the red of fire, but a warm, radiant gold.",
+   "slide": "word-radiant"
+  },
+  {
+   "id": 116,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question one. How did Noor cross the perilous river in the mist?",
+   "slide": "quiz-q1",
+   "pause": 4
+  },
+  {
+   "id": 117,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "She followed the white tip of Ember's tail. Well done!",
+   "slide": "quiz-q1-answer"
+  },
+  {
+   "id": 118,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question two. In the eerie hollow, how did Noor choose the right tunnel?",
+   "slide": "quiz-q2",
+   "pause": 4
+  },
+  {
+   "id": 119,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "She felt cool air on her wet finger. Moving air means a way out!",
+   "slide": "quiz-q2-answer"
+  },
+  {
+   "id": 120,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question three. What really kindled the ancient Lantern?",
+   "slide": "quiz-q3",
+   "pause": 4
+  },
+  {
+   "id": 121,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Not fire at all, but kindness given freely, and courage shared. Beautiful!",
+   "slide": "quiz-q3-answer"
+  },
+  {
+   "id": 122,
+   "chunk": "I",
+   "section": "outro",
+   "text": "Thank you for walking through the Whispering Woods with me. Tell me in the comments: who is the most steadfast friend in your life? See you in the next story.",
+   "slide": "outro"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "dwindle",
+   "ipa": "/ˈdwɪn.dəl/",
+   "pos": "verb",
+   "ar": "يتضاءل شيئًا فشيئًا",
+   "meaning": "to become smaller, weaker or fewer, little by little",
+   "example": "Night by night, the glow began to dwindle, the way a candle shrinks when no one remembers to tend it."
+  },
+  {
+   "word": "eerie",
+   "ipa": "/ˈɪə.ri/",
+   "pos": "adjective",
+   "ar": "موحش، غريب ومخيف",
+   "meaning": "strange and a little frightening",
+   "example": "The silence was so eerie that Noor could hear her own heartbeat."
+  },
+  {
+   "word": "nimble",
+   "ipa": "/ˈnɪm.bəl/",
+   "pos": "adjective",
+   "ar": "رشيق، خفيف الحركة",
+   "meaning": "able to move quickly and lightly",
+   "example": "Ember was nimble and quick."
+  },
+  {
+   "word": "kindle",
+   "ipa": "/ˈkɪn.dəl/",
+   "pos": "verb",
+   "ar": "يُوقِد، يُشعِل",
+   "meaning": "to make a fire or a light start to burn",
+   "example": "No flint or flame can kindle it."
+  },
+  {
+   "word": "perilous",
+   "ipa": "/ˈper.əl.əs/",
+   "pos": "adjective",
+   "ar": "محفوف بالمخاطر",
+   "meaning": "very dangerous",
+   "example": "It was the most perilous crossing in the whole forest."
+  },
+  {
+   "word": "murmur",
+   "ipa": "/ˈmɜː.mər/",
+   "pos": "noun / verb",
+   "ar": "همهمة؛ يهمس",
+   "meaning": "a soft, low sound that goes on and on; to speak very softly",
+   "example": "It was a soft, endless murmur, like the sea inside a shell."
+  },
+  {
+   "word": "steadfast",
+   "ipa": "/ˈsted.fɑːst/",
+   "pos": "adjective",
+   "ar": "ثابت، وفيّ لا يتزعزع",
+   "meaning": "loyal and firm; not giving up",
+   "example": "We'll be steadfast together. We won't give up."
+  },
+  {
+   "word": "radiant",
+   "ipa": "/ˈreɪ.di.ənt/",
+   "pos": "adjective",
+   "ar": "مُشعّ، متألّق",
+   "meaning": "shining with bright, warm light",
+   "example": "Not the red of fire, but a warm, radiant gold, like sunrise poured into glass."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "q1",
+   "q": "How did Noor cross the perilous river in the mist?",
+   "options": [
+    "She followed the white tip of Ember's tail",
+    "She carried a burning torch",
+    "The Elder Oak lifted her across"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "q2",
+   "q": "In the eerie hollow, how did Noor choose the right tunnel?",
+   "options": [
+    "Ember barked at it",
+    "She felt cool air on her wet finger",
+    "She saw moonlight inside"
+   ],
+   "answer": 1
+  },
+  {
+   "id": "q3",
+   "q": "What really kindled the ancient Lantern?",
+   "options": [
+    "A spark from her flint",
+    "Oil from the river",
+    "Kindness given freely and courage shared"
+   ],
+   "answer": 2
+  }
+ ],
+ "outro": {
+  "text": "Thank you for walking through the Whispering Woods with me. Tell me in the comments: who is the most steadfast friend in your life? See you in the next story."
+ }
+}

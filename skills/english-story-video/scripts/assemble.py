@@ -51,7 +51,9 @@ def match_files(ids, folder, exts, label):
     files = sorted(f for f in glob.glob(os.path.join(folder, "*")) if f.lower().endswith(exts))
     out, miss = {}, []
     for i in ids:
-        hit = [f for f in files if re.search(rf"(^|[^A-Za-z0-9]){re.escape(i)}([^0-9]|$)", os.path.basename(f), re.I)]
+        m = re.match(r"([A-Za-z]+)0*(\d+)$", i)
+        pat = rf"(^|[^A-Za-z0-9]){m.group(1)}0*{m.group(2)}([^0-9]|$)" if m else rf"(^|[^A-Za-z0-9]){re.escape(i)}([^0-9]|$)"
+        hit = [f for f in files if re.search(pat, os.path.basename(f), re.I)]
         if hit:
             out[i] = hit[0]
         else:

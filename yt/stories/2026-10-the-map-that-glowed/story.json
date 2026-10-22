@@ -1,0 +1,3480 @@
+{
+ "slug": "the-map-that-glowed",
+ "title": "The Map That Glowed",
+ "level": "B1–C1",
+ "voice": {
+  "name": "Lily",
+  "id": "3XD5qTvPWht0mpTnYXY0",
+  "speed": 0.85
+ },
+ "style": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere",
+ "negative": "no text, no letters, no subtitles, no watermark, consistent character design",
+ "characters": [
+  {
+   "id": "mia",
+   "name": "Mia",
+   "bible": "Mia, a 9-year-old girl with shoulder-length curly chestnut-brown hair, rosy freckled cheeks and determined, curious hazel eyes, wearing a mustard-yellow knitted cardigan over a white blouse, a rust-red pinafore dress, brown lace-up boots and a small brown leather satchel across her shoulder"
+  },
+  {
+   "id": "whiskers",
+   "name": "Whiskers",
+   "bible": "Whiskers, a sleek, slender cat with a solid jet-black coat and no markings, piercing emerald-green eyes, a thin red collar with a tiny brass bell, and a faint silvery arcane shimmer rippling along his jet-black fur"
+  },
+  {
+   "id": "nell",
+   "name": "Grandma Nell",
+   "bible": "Grandma Nell, a kind, softly plump woman of about seventy with silver hair in a loose bun, round gold-rimmed spectacles, rosy cheeks and twinkling grey eyes, wearing a lavender knitted shawl over a long sage-green dress and a white apron"
+  }
+ ],
+ "locations": [
+  {
+   "id": "cottage",
+   "bible": "Grandma Nell's cosy thatched cottage, with low dark oak beams, a stone hearth, copper pans, a scrubbed wooden table with a blue-and-white teapot, and a wooden ladder up to a dusty attic with a round window, old trunks and stacks of leather books"
+  },
+  {
+   "id": "village",
+   "bible": "a tranquil village of honey-coloured thatched cottages with round green doors and climbing pink roses, scattered across gently rolling green hills, with a winding dirt lane, an old stone well and low dry-stone walls"
+  },
+  {
+   "id": "hills",
+   "bible": "wide rolling green hills dotted with poppies and white clover, low dry-stone walls, grazing sheep and a lone crooked oak tree with twisted branches, the thatched village small in the distance"
+  },
+  {
+   "id": "stream",
+   "bible": "a deep rocky valley where a rushing white-and-silver stream foams between boulders, crossed by a line of mossy stepping stones beside the two broken planks of an old wooden bridge"
+  },
+  {
+   "id": "hilltop",
+   "bible": "the grassy summit of the highest hill, crowned by a ring of ancient mossy standing stones, with a small round stone door half hidden by ivy set into the hillside at its centre"
+  }
+ ],
+ "references": [
+  {
+   "id": "R1",
+   "kind": "character",
+   "of": "mia",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Mia, a 9-year-old girl with shoulder-length curly chestnut-brown hair, rosy freckled cheeks and determined, curious hazel eyes, wearing a mustard-yellow knitted cardigan over a white blouse, a rust-red pinafore dress, brown lace-up boots and a small brown leather satchel across her shoulder, standing, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R2",
+   "kind": "character",
+   "of": "whiskers",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Whiskers, a sleek, slender cat with a solid jet-black coat and no markings, piercing emerald-green eyes, a thin red collar with a tiny brass bell, and a faint silvery arcane shimmer rippling along his jet-black fur, standing, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R3",
+   "kind": "character",
+   "of": "nell",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Grandma Nell, a kind, softly plump woman of about seventy with silver hair in a loose bun, round gold-rimmed spectacles, rosy cheeks and twinkling grey eyes, wearing a lavender knitted shawl over a long sage-green dress and a white apron, standing, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R4",
+   "kind": "location",
+   "of": "cottage",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing location reference of Grandma Nell's cosy thatched cottage, with low dark oak beams, a stone hearth, copper pans, a scrubbed wooden table with a blue-and-white teapot, and a wooden ladder up to a dusty attic with a round window, old trunks and stacks of leather books, bathed in warm golden attic-window light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R5",
+   "kind": "location",
+   "of": "village",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing location reference of a tranquil village of honey-coloured thatched cottages with round green doors and climbing pink roses, scattered across gently rolling green hills, with a winding dirt lane, an old stone well and low dry-stone walls, bathed in golden hour light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R6",
+   "kind": "location",
+   "of": "hills",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing location reference of wide rolling green hills dotted with poppies and white clover, low dry-stone walls, grazing sheep and a lone crooked oak tree with twisted branches, the thatched village small in the distance, bathed in golden hour light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R7",
+   "kind": "location",
+   "of": "stream",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing location reference of a deep rocky valley where a rushing white-and-silver stream foams between boulders, crossed by a line of mossy stepping stones beside the two broken planks of an old wooden bridge, bathed in golden hour light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R8",
+   "kind": "location",
+   "of": "hilltop",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing location reference of the grassy summit of the highest hill, crowned by a ring of ancient mossy standing stones, with a small round stone door half hidden by ivy set into the hillside at its centre, bathed in pale silver moonlight, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Brittle Map",
+   "ar": "الخريطة الهشّة"
+  },
+  {
+   "n": 2,
+   "title": "Into the Whispering Hills",
+   "ar": "إلى التلال الهامسة"
+  },
+  {
+   "n": 3,
+   "title": "The Treacherous Stream",
+   "ar": "الجدول الغادر"
+  },
+  {
+   "n": 4,
+   "title": "Lost in the Mist",
+   "ar": "تائهان في الضباب"
+  },
+  {
+   "n": 5,
+   "title": "The Treasure Under the Stars",
+   "ar": "الكنز تحت النجوم"
+  }
+ ],
+ "thumb_shot": "S023",
+ "thumb_text": "THE MAP THAT GLOWED",
+ "thumb_ar": "خريطة سحرية تقودها إلى كنز!",
+ "shots": [
+  {
+   "id": "S001",
+   "type": "video",
+   "duration": 10,
+   "camera": "very wide establishing shot, slow drifting push-in over the rooftops",
+   "size": "wide",
+   "who": [],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "chimney smoke curls lazily from the thatched roofs while swallows glide over the hills",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S002",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "wide shot of Mia small on the winding dirt lane between the cottages, looking up at the hills",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S003",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "medium shot of Mia leaning on a garden gate, chin in her hands, gazing curiously at the sky",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S004",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "close-up portrait of Mia's freckled face and bright curious hazel eyes, a sunlit curl across her cheek",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S005",
+   "type": "video",
+   "duration": 5,
+   "camera": "low tracking shot moving alongside",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "Mia skips along a dry-stone wall while Whiskers walks silently on top of the wall beside her",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S006",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "close-up of Whiskers sitting on the wall, turning his head towards camera as a silvery shimmer ripples across his fur",
+   "refs": [
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S007",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "medium shot of Mia sitting on a cottage doorstep, hugging Whiskers to her cheek with her eyes closed",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S008",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia",
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "wide shot of the attic, Mia and Grandma Nell lifting old blankets out of a trunk among the beams",
+   "refs": [
+    "R1",
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S009",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in towards the round window",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "insert shot of dust motes swirling and sparkling like gold in a thick beam of sunlight",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S010",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "medium shot of Grandma Nell smiling warmly over her spectacles, holding a faded leather book",
+   "refs": [
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S011",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "medium shot of Grandma Nell climbing down the wooden attic ladder, humming, her shawl around her shoulders",
+   "refs": [
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S012",
+   "type": "video",
+   "duration": 5,
+   "camera": "static camera, slight tilt down",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "Mia lifts a heavy leather book from an open trunk and a folded yellowed paper slips out and flutters to the floor",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S013",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "insert close-up of Mia's small hands holding a folded, cracked, brittle yellow parchment with crumbling edges",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S014",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow overhead push-in",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "close-up from above of Mia's hands carefully unfolding the brittle parchment on the floorboards",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S015",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "top-down insert of an old hand-drawn parchment map with faded brown ink showing tiny hills, cottages and a winding path, purely pictorial with no writing",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S016",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "extreme close-up of the faded map showing a tiny drawn crooked oak, a wavy stream and a small ink star on a hilltop, no writing",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S017",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "medium shot of Mia kneeling over the map on the attic floor, turning to whisper to Whiskers who walks towards her",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S018",
+   "type": "video",
+   "duration": 5,
+   "camera": "low-angle static shot at floor level",
+   "size": "medium",
+   "who": [
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "Whiskers sniffs the edge of the old map and steps delicately onto its centre",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S019",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "insert",
+   "who": [
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "insert close-up of the black cat's shimmering paw resting on the parchment as a thin golden line of light ignites beneath it and spreads",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S020",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "close-up of Whiskers looking down at the paper, his emerald eyes reflecting a growing golden glow",
+   "refs": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S021",
+   "type": "video",
+   "duration": 5,
+   "camera": "static top-down shot",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "a glowing golden line travels across the faded parchment map like a living thread and stops, pulsing, beside a small drawn star",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S022",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in on her face",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "close-up of Mia's face lit from below by a golden glow, her eyes widening and her mouth opening in wonder",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S023",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "medium two-shot, Mia kneeling on the right half of the frame, face lit by the glowing map, Whiskers sitting attentively beside her on the left",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S024",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "over-the-shoulder medium shot of Mia at the round attic window, looking out at the low sun above distant hills",
+   "refs": [
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "S025",
+   "type": "video",
+   "duration": 5,
+   "camera": "very slow push-in",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "warm golden attic-window",
+   "action": "insert of the golden line on the map pulsing softly like a heartbeat, dust sparkling above it",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S026",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "soft amber late-evening",
+   "action": "medium shot of Mia climbing down the attic ladder, the folded map held gently against her chest, Whiskers waiting at the bottom",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S027",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "soft amber late-evening",
+   "action": "medium shot of Mia standing in the kitchen doorway asking politely, while Grandma Nell pours tea at the wooden table",
+   "refs": [
+    "R1",
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S028",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "soft amber late-evening",
+   "action": "close-up of Grandma Nell's face, a secret knowing twinkle in her grey eyes behind gold-rimmed spectacles",
+   "refs": [
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S029",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "nell"
+   ],
+   "where": "cottage",
+   "light": "soft amber late-evening",
+   "action": "medium shot of Grandma Nell holding her teacup, smiling gently and nodding",
+   "refs": [
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "S030",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, gentle pan following them",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "Mia and Whiskers walk away up the dirt lane past an old stone well towards the hills",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S031",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm golden hour",
+   "action": "low insert of Mia's brown lace-up boots and Whiskers' black paws side by side on the dusty golden lane",
+   "refs": [
+    "R1",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S032",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow sideways pan",
+   "size": "medium",
+   "who": [],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "long golden grass sways in waves in the breeze while swallows swoop low over the meadow",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S033",
+   "type": "video",
+   "duration": 5,
+   "camera": "tracking shot moving backwards in front of them",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "Mia strides uphill grinning with excitement while Whiskers trots beside her",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S034",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "insert close-up of the parchment map in Mia's hands, its golden line glowing softly",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S035",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "low-angle medium shot of Whiskers trotting through clover and poppies, his black tail raised high like a flag",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S036",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pan from the travellers to the valley",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "Mia and Whiskers stand on a hill crest looking back at the tiny thatched village far below",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S037",
+   "type": "image",
+   "size": "wide",
+   "who": [],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "wide shot of the lone crooked oak on a hilltop, its twisted branches silhouetted against a glowing golden sky",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S038",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "low-angle medium shot looking up past Mia and Whiskers at the enormous twisted branches of the crooked oak",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S039",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "medium shot of Mia sitting among the gnarled oak roots with the map spread across her knees, Whiskers curled beside her",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S040",
+   "type": "video",
+   "duration": 5,
+   "camera": "static shot",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "a sudden gust whips Mia's curls across her face and bends the grass flat around her",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S041",
+   "type": "video",
+   "duration": 5,
+   "camera": "quick tilt up following the paper",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "the parchment map is torn from Mia's fingers by the wind and tumbles away into the air as she reaches after it",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S042",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "insert shot of the fragile parchment map fluttering in mid-air just above a thicket of sharp thorny brambles",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S043",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow-motion side tracking shot",
+   "size": "medium",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "Whiskers sprints and leaps high into the air, body twisting, his black fur flashing with a silver shimmer",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S044",
+   "type": "video",
+   "duration": 5,
+   "camera": "static low-angle shot",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "close-up of Whiskers landing softly, his front paws gently pinning the parchment map to the grass right in front of the brambles",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S045",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "close-up of Whiskers sitting proudly with both paws on the unharmed map, looking up with bright emerald eyes",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S046",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "medium shot of Mia laughing with relief as she lifts Whiskers in a hug, the map safe in one hand",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S047",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "warm golden hour",
+   "action": "insert of Mia's hands sliding the folded parchment carefully into her brown leather satchel",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S048",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow tilt down into the valley",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "deep golden sunset",
+   "action": "Mia and Whiskers stand at the edge of the hill looking down into a deep shadowy valley with mist and a glint of water below",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S049",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow push-in",
+   "size": "wide",
+   "who": [],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "the white-and-silver stream rushes and foams between dark boulders, spray glittering in the low sun",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S050",
+   "type": "image",
+   "size": "medium",
+   "who": [],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of two broken wooden planks dangling from frayed ropes over the rushing water",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S051",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "insert close-up of mossy, wet stepping stones glistening as fast white water rushes around them",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S052",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia standing on the bank gripping her satchel strap, staring worriedly at the water, Whiskers at her feet",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S053",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "high-angle wide shot of a tiny girl and a black cat on the bank before the long line of stepping stones across the foaming stream",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S054",
+   "type": "video",
+   "duration": 5,
+   "camera": "static shot at cat height",
+   "size": "medium",
+   "who": [
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "Whiskers looks at the water, flattens his ears, sits down firmly and curls his tail around his paws",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S055",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia kneeling beside Whiskers on the bank, stroking his back gently",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S056",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia leaning out from the bank, poking the first stepping stone with a long stick",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S057",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "insert of a wooden stick pressing down on a broad flat stepping stone that stays steady in the rushing water",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S058",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "close-up of Mia concentrating, counting quietly on her fingers as she studies the stones",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S059",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "insert of three safe stepping stones in a row: a flat one, a round one, and a big grey boulder shaped like a crown",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S060",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia with Whiskers draped across her shoulders like a scarf, taking a deep breath at the water's edge",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S061",
+   "type": "video",
+   "duration": 5,
+   "camera": "side tracking shot",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "Mia, with Whiskers on her shoulders, steps from one mossy stone to the next as cold spray splashes up around her boots",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S062",
+   "type": "video",
+   "duration": 5,
+   "camera": "static shot",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "Mia's boot slips on a mossy stone, she sways with her arms whirling and drops onto one knee on the rock while Whiskers clings to her",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S063",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "insert close-up of Mia's hands gripping the wet mossy rock tightly, water rushing past her fingers",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S064",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "close-up of Mia's face, tears in her eyes, her jaw set with determination",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S065",
+   "type": "video",
+   "duration": 5,
+   "camera": "very slow push-in",
+   "size": "close-up",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "close-up of Whiskers on Mia's shoulder nuzzling his face against her cheek, eyes half closed, as she smiles through tears",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S066",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia rising to her feet on the stepping stone with Whiskers on her shoulders, wiping her eyes",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S067",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pan",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "Mia carefully crosses the last stepping stones and jumps onto the far bank with Whiskers on her shoulders",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S068",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "medium shot of Mia and Whiskers on the far bank, both gazing down at the glowing map, the stream behind them",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S069",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "stream",
+   "light": "deep golden sunset",
+   "action": "insert close-up of the map in Mia's hands glowing brighter than ever, Whiskers' black head peeking over the edge",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S070",
+   "type": "video",
+   "duration": 10,
+   "camera": "very wide shot, slow pan across the hills",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "two tiny figures, a girl and a black cat, climb a steep path towards the highest hill under a violet sky",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S071",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "medium shot of Mia pausing on the steep path to look up at the dark summit, Whiskers waiting a step ahead",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S072",
+   "type": "video",
+   "duration": 5,
+   "camera": "low static shot at grass level",
+   "size": "close-up",
+   "who": [],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "white mist creeps slowly up through the grass and curls around a mossy rock",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S073",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "medium shot of Mia standing in thick swirling white mist up to her waist, her outline soft and half hidden",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S074",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "insert of Mia's brown boots almost swallowed by drifting white mist on the grass",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S075",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "insert of the parchment map in Mia's hands, its golden line dim and blurred by drifting grey mist",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S076",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "wide shot of a small girl in the mist standing unknowingly near the edge of a steep rocky drop that fades into fog",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S077",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "close-up of Mia's anxious face surrounded by mist, calling out with her hands cupped around her mouth",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S078",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in through the mist",
+   "size": "insert",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "insert close-up of the tiny brass bell on Whiskers' red collar swinging and catching a glint of light in the mist",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S079",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "medium shot of Mia's face brightening with a sudden idea, the mist swirling around her",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S080",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "medium shot of Mia kneeling as Whiskers steps out of the mist towards her",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S081",
+   "type": "video",
+   "duration": 5,
+   "camera": "very slow push-in",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "close-up of Whiskers' face emerging from thick grey mist, his emerald-green eyes glowing softly like two lanterns",
+   "refs": [
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S082",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "insert of Mia's fingers tying a long yellow ribbon gently to the cat's red collar next to the brass bell",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S083",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "medium shot of Mia holding the end of the yellow ribbon, which stretches through the mist to Whiskers walking ahead",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S084",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow upward crane",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "silhouettes of a black cat and a girl climbing a misty slope, connected by a long yellow ribbon",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S085",
+   "type": "video",
+   "duration": 5,
+   "camera": "static shot",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "misty violet twilight",
+   "action": "Whiskers stops near a rocky edge, turns and tugs the yellow ribbon, and Mia steps away from the drop",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S086",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow push-in",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hills",
+   "light": "pale silver moon",
+   "action": "Mia and Whiskers climb up out of the mist onto a moonlit slope as the first stars appear",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S087",
+   "type": "image",
+   "size": "wide",
+   "who": [],
+   "where": "hills",
+   "light": "pale silver moon",
+   "action": "wide view of an enormous rising moon above a sea of silver mist filling the valleys, hilltops poking through like islands",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S088",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "low-angle medium shot from behind Mia and Whiskers looking up at the dark ring of standing stones against the moon",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S089",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "wide shot of the moonlit ring of standing stones, Mia and Whiskers small in the centre before a tiny round door",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S090",
+   "type": "image",
+   "size": "medium",
+   "who": [],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "medium shot of a small round stone door half covered in ivy, set into the grassy hillside between the standing stones",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S091",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "insert close-up of a weathered stone carving of a sitting cat with its tail curled around its paws, moonlight in the grooves",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S092",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "medium shot of Mia pushing hard against the round stone door with both hands, frowning",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S093",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "close-up of Mia looking thoughtfully from the map in her hand down to Whiskers beside her",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S094",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "medium shot of Mia crouching and pointing gently to the stone door, Whiskers looking up at her",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S095",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "close-up of Whiskers stretching up on his hind legs and pressing one shimmering black paw onto the carved stone cat",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S096",
+   "type": "video",
+   "duration": 5,
+   "camera": "static shot",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "the carving flashes silver and the round stone door swings slowly open, spilling soft blue light over Mia and Whiskers",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S097",
+   "type": "video",
+   "duration": 5,
+   "camera": "camera follows from behind",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "Mia ducks through the round doorway from behind, Whiskers at her heels, into a glow of silver-blue light",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S098",
+   "type": "video",
+   "duration": 10,
+   "camera": "slow rising crane reveal",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "a hidden grassy hollow inside the hilltop, open to a starry sky, carpeted with hundreds of glowing silver-blue flowers, Mia and Whiskers small at its edge",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S099",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "close-up",
+   "who": [],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of silver-blue flowers slowly unfurling their petals, each one releasing a soft glimmer of starlight",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S100",
+   "type": "video",
+   "duration": 5,
+   "camera": "gentle drift upwards",
+   "size": "insert",
+   "who": [],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "insert of tiny sparks of light drifting up from the glowing petals into the night air",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S101",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of Mia's awestruck face lit by soft silver-blue light, her eyes shining",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S102",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "insert of a small dented tin box with faded painted stars on its lid, resting among glowing flowers",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S103",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "medium shot of Mia kneeling among the glowing flowers and lifting the lid of the tin box, Whiskers peering in",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S104",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "top-down insert of the open tin box in Mia's hands: a small cloth pouch of silver seeds, a folded child's crayon drawing and a folded yellowed letter",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S105",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "insert of an old child's crayon drawing of a little girl with a long plait beside a black cat with bright green eyes, no writing",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S106",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "medium shot of Mia sitting cross-legged among the glowing flowers reading a letter, Whiskers pressed against her side",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S107",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of Mia reading the old letter, her lips moving silently, flower-light flickering on her face",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S108",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of Whiskers sitting beside Mia, listening, the glowing flowers reflected in his emerald eyes",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S109",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "insert of tiny shining silver seeds spilling from a cloth pouch into Mia's open palm",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S110",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of Mia pressing the letter to her chest, tears of joy in her eyes",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S111",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "close-up of Mia's face as realisation dawns, a wide smile spreading through her tears",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S112",
+   "type": "image",
+   "size": "wide",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "wide shot of Mia standing in the middle of the glowing hollow, looking back over her shoulder towards the round doorway",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S113",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "hilltop",
+   "light": "glowing silver-blue flower",
+   "action": "insert of Mia's hands laying a yellow ribbon inside the tin box beside the star-painted lid",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S114",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "insert",
+   "who": [],
+   "where": "hilltop",
+   "light": "pale silver moon",
+   "action": "insert of the parchment map as a fresh golden line of light draws itself from the hilltop star back to the village",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S115",
+   "type": "video",
+   "duration": 10,
+   "camera": "very wide shot, slow push-in towards the village",
+   "size": "wide",
+   "who": [],
+   "where": "village",
+   "light": "pale silver moon",
+   "action": "the moonlit village at night seen from the hills, one tiny warm lantern glowing at a cottage gate",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S116",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "nell"
+   ],
+   "where": "village",
+   "light": "warm lantern",
+   "action": "medium shot of Grandma Nell standing at her cottage gate holding up a glowing lantern, looking towards the hills",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S117",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "nell"
+   ],
+   "where": "village",
+   "light": "warm lantern",
+   "action": "close-up of Grandma Nell's face in lantern light, eyes twinkling with a knowing smile",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S118",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow orbit",
+   "size": "medium",
+   "who": [
+    "mia",
+    "nell",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm lantern",
+   "action": "Mia runs into Grandma Nell's arms at the cottage gate and they hug tightly, a lantern glowing on the gatepost, Whiskers sitting beside them",
+   "refs": [
+    "R1",
+    "R3",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S119",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "nell"
+   ],
+   "where": "village",
+   "light": "warm lantern",
+   "action": "medium shot of Grandma Nell bending down, gently touching Mia's scraped knee and smiling proudly by lantern light",
+   "refs": [
+    "R1",
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S120",
+   "type": "image",
+   "size": "close-up",
+   "who": [
+    "nell",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "warm lantern",
+   "action": "close-up of Grandma Nell's hand stroking Whiskers' head as he closes his emerald eyes and purrs",
+   "refs": [
+    "R3",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S121",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "nell",
+    "whiskers"
+   ],
+   "where": "village",
+   "light": "soft spring morning",
+   "action": "medium shot of Mia and Grandma Nell kneeling in a cottage garden bed beneath a window, Whiskers watching",
+   "refs": [
+    "R1",
+    "R3",
+    "R2",
+    "R5"
+   ]
+  },
+  {
+   "id": "S122",
+   "type": "image",
+   "size": "insert",
+   "who": [
+    "mia"
+   ],
+   "where": "village",
+   "light": "soft spring morning",
+   "action": "insert of Mia's small hands pressing a shining silver seed into dark garden soil",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S123",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "medium",
+   "who": [],
+   "where": "village",
+   "light": "pale silver moon",
+   "action": "silver-blue flowers bloom and glow beneath a thatched cottage's kitchen window at night, lighting the walls",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S124",
+   "type": "image",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "pale silver moon",
+   "action": "insert of a small wooden box on a bedside table holding the folded parchment map, moonlight from the window",
+   "refs": [
+    "R4"
+   ]
+  },
+  {
+   "id": "S125",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "pale silver moon",
+   "action": "medium shot of Mia asleep in a patchwork-quilt bed with Whiskers curled up on her pillow, silver flower-light on the wall",
+   "refs": [
+    "R1",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S126",
+   "type": "image",
+   "size": "medium",
+   "who": [
+    "mia",
+    "nell",
+    "whiskers"
+   ],
+   "where": "cottage",
+   "light": "pale silver moon",
+   "action": "medium shot from behind of Mia, Grandma Nell and Whiskers at the cottage window, watching the glowing flowers outside",
+   "refs": [
+    "R1",
+    "R3",
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "S127",
+   "type": "video",
+   "duration": 10,
+   "camera": "very wide shot, slow pull-out",
+   "size": "wide",
+   "who": [],
+   "where": "village",
+   "light": "pale silver moon",
+   "action": "the sleeping village under a huge moon, one cottage glowing softly silver, the highest hill with its standing stones on the horizon",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S128",
+   "type": "video",
+   "duration": 5,
+   "camera": "slow push-in",
+   "size": "insert",
+   "who": [],
+   "where": "cottage",
+   "light": "pale silver moon",
+   "action": "insert of an old leather book on a dusty attic shelf, a faint golden glimmer leaking from between its pages",
+   "refs": [
+    "R4"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "chunk": "A",
+   "section": "title",
+   "text": "Welcome to a new English story. Get cosy, listen carefully, and read along with the subtitles. This is The Map That Glowed.",
+   "slide": "title"
+  },
+  {
+   "id": 2,
+   "chunk": "A",
+   "section": "chapter",
+   "text": "Chapter one. The Brittle Map.",
+   "slide": "chapter-1"
+  },
+  {
+   "id": 3,
+   "chunk": "A",
+   "section": "story",
+   "text": "In a tranquil village of thatched cottages, where the hills rolled away like sleeping green giants, there lived a girl called Mia.",
+   "ar": "في قرية هادئة من الأكواخ ذات السقوف القشّية، حيث تمتدّ التلال كعمالقة خُضرٍ نائمين، عاشت فتاة اسمها ميا.",
+   "shots": [
+    "S001",
+    "S002"
+   ]
+  },
+  {
+   "id": 4,
+   "chunk": "A",
+   "section": "story",
+   "text": "She was nine years old, with curly chestnut hair, freckles like spilled cinnamon, and a head full of questions.",
+   "ar": "كانت في التاسعة من عمرها، بشعرٍ كستنائيّ مجعّد، ونمشٍ كالقرفة المنثورة، ورأسٍ مليء بالأسئلة.",
+   "shots": [
+    "S003",
+    "S004"
+   ]
+  },
+  {
+   "id": 5,
+   "chunk": "A",
+   "section": "story",
+   "text": "Wherever Mia went, her cat Whiskers followed, as quiet as a shadow.",
+   "ar": "وأينما ذهبت ميا، تبعها قطّها ويسكرز، هادئًا كالظلّ.",
+   "shots": [
+    "S005"
+   ]
+  },
+  {
+   "id": 6,
+   "chunk": "A",
+   "section": "story",
+   "text": "He was sleek and jet-black, with piercing emerald eyes, and his fur shimmered with a faint, silvery magic.",
+   "ar": "كان أملسَ أسودَ فاحمًا، بعينين زمرّديتين نافذتين، وكان فروه يتلألأ بسحرٍ فضّيّ خافت.",
+   "shots": [
+    "S006",
+    "S007"
+   ]
+  },
+  {
+   "id": 7,
+   "chunk": "A",
+   "section": "story",
+   "text": "One golden evening, Mia was helping Grandma Nell tidy her dusty attic.",
+   "ar": "في إحدى الأمسيات الذهبية، كانت ميا تساعد جدّتها نيل في ترتيب عِلّيتها المغبرّة.",
+   "shots": [
+    "S008"
+   ]
+  },
+  {
+   "id": 8,
+   "chunk": "A",
+   "section": "story",
+   "text": "Sunlight poured through the round window, turning every floating speck of dust into a tiny spark of gold.",
+   "ar": "تدفّق ضوء الشمس عبر النافذة المستديرة، فحوّل كلّ ذرّة غبار عائمة إلى شرارة ذهبية صغيرة.",
+   "shots": [
+    "S009"
+   ]
+  },
+  {
+   "id": 9,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Be careful with those old books,” Grandma said with a smile, before going down to make the tea.",
+   "ar": "قالت الجدّة مبتسمة: «انتبهي لتلك الكتب القديمة»، ثمّ نزلت لتُعِدّ الشاي.",
+   "shots": [
+    "S010",
+    "S011"
+   ]
+  },
+  {
+   "id": 10,
+   "chunk": "A",
+   "section": "story",
+   "text": "As Mia lifted a heavy old book, something slipped out from between its pages.",
+   "ar": "وبينما كانت ميا ترفع كتابًا قديمًا ثقيلًا، انزلق شيءٌ من بين صفحاته.",
+   "shots": [
+    "S012"
+   ]
+  },
+  {
+   "id": 11,
+   "chunk": "A",
+   "section": "story",
+   "text": "It was a folded sheet of parchment, yellow and brittle, so dry that it crackled at her touch.",
+   "ar": "كانت ورقةً من الرَّقّ مطويّة، صفراء هشّة، جافّة لدرجة أنها طقطقت حين لمستها.",
+   "shots": [
+    "S013"
+   ]
+  },
+  {
+   "id": 12,
+   "chunk": "A",
+   "section": "story",
+   "text": "Very gently, so it would not crumble, Mia unfolded it.",
+   "ar": "وبلطفٍ شديد، كي لا تتفتّت، فتحتها ميا.",
+   "shots": [
+    "S014"
+   ]
+  },
+  {
+   "id": 13,
+   "chunk": "B",
+   "section": "story",
+   "text": "It was a map, its ink faded to a soft, rusty brown.",
+   "ar": "كانت خريطة، وقد بهت حبرها إلى لونٍ بنّيّ صدئٍ خفيف.",
+   "shots": [
+    "S015"
+   ]
+  },
+  {
+   "id": 14,
+   "chunk": "B",
+   "section": "story",
+   "text": "There was the village, a crooked oak, a winding stream and, on top of the highest hill, a tiny star.",
+   "ar": "كانت هناك القرية، وشجرة بلّوط ملتوية، وجدول متعرّج، وعلى قمّة أعلى تلّ، نجمة صغيرة.",
+   "shots": [
+    "S016"
+   ]
+  },
+  {
+   "id": 15,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Whiskers, look,” Mia whispered. “Somebody drew our hills.”",
+   "ar": "همست ميا: «انظر يا ويسكرز، أحدهم رسم تلالنا».",
+   "shots": [
+    "S017"
+   ]
+  },
+  {
+   "id": 16,
+   "chunk": "B",
+   "section": "story",
+   "text": "Whiskers padded over, sniffed the paper, and stepped right onto the middle of it.",
+   "ar": "اقترب ويسكرز بخطواتٍ ناعمة، وتشمّم الورقة، ثمّ خطا إلى منتصفها تمامًا.",
+   "shots": [
+    "S018"
+   ]
+  },
+  {
+   "id": 17,
+   "chunk": "B",
+   "section": "story",
+   "text": "The moment his shimmering paw touched the parchment, a thin line of light began to glimmer across the faded ink.",
+   "ar": "وفي اللحظة التي لامست فيها قدمُه المتلألئة الرَّقّ، بدأ خيطٌ رفيع من الضوء يلمع فوق الحبر الباهت.",
+   "shots": [
+    "S019",
+    "S020"
+   ]
+  },
+  {
+   "id": 18,
+   "chunk": "B",
+   "section": "story",
+   "text": "It started at the village, curled past the crooked oak, and stopped, pulsing gently, beside the little star.",
+   "ar": "بدأ من القرية، والتفّ مارًّا بشجرة البلّوط الملتوية، ثمّ توقّف نابضًا برفق بجانب النجمة الصغيرة.",
+   "shots": [
+    "S021"
+   ]
+  },
+  {
+   "id": 19,
+   "chunk": "B",
+   "section": "story",
+   "text": "Mia was astonished. She rubbed her eyes, but the line was still there, glowing like a thread of sunshine.",
+   "ar": "ذُهلت ميا. فركت عينيها، لكنّ الخيط كان لا يزال هناك، يتوهّج كخيطٍ من أشعّة الشمس.",
+   "shots": [
+    "S022"
+   ]
+  },
+  {
+   "id": 20,
+   "chunk": "B",
+   "section": "story",
+   "text": "“It’s showing us the way,” she breathed. “Whiskers, it wants us to follow it.”",
+   "ar": "قالت بأنفاسٍ متقطّعة: «إنها تدلّنا على الطريق. يا ويسكرز، إنها تريدنا أن نتبعها».",
+   "shots": [
+    "S023"
+   ]
+  },
+  {
+   "id": 21,
+   "chunk": "B",
+   "section": "story",
+   "text": "Part of her felt reluctant. The sun was already low, and the hills could be lonely after dark.",
+   "ar": "شعر جزءٌ منها بالتردّد. فالشمس كانت قد مالت للغروب، والتلال قد تكون موحشة بعد حلول الظلام.",
+   "shots": [
+    "S024"
+   ]
+  },
+  {
+   "id": 22,
+   "chunk": "B",
+   "section": "story",
+   "text": "But the glowing line seemed to tug at her heart, like a friend calling her name.",
+   "ar": "لكنّ الخيط المتوهّج بدا وكأنه يشدّ قلبها، كصديقٍ يناديها باسمها.",
+   "shots": [
+    "S025"
+   ]
+  },
+  {
+   "id": 23,
+   "chunk": "B",
+   "section": "story",
+   "text": "She climbed down the ladder, holding the map as if it were made of butterfly wings.",
+   "ar": "نزلت السُّلَّم وهي تحمل الخريطة كأنها مصنوعة من أجنحة الفراشات.",
+   "shots": [
+    "S026"
+   ]
+  },
+  {
+   "id": 24,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Grandma, may Whiskers and I go for a walk on the hills?”",
+   "ar": "«جدّتي، هل يمكنني أنا وويسكرز أن نتمشّى في التلال؟»",
+   "shots": [
+    "S027"
+   ]
+  },
+  {
+   "id": 25,
+   "chunk": "B",
+   "section": "story",
+   "text": "Grandma Nell glanced at the map, and her eyes twinkled. “Be home before the moon is high,” was all she said.",
+   "ar": "رمقت الجدّة نيل الخريطة، ولمعت عيناها. ولم تقل سوى: «عودي إلى البيت قبل أن يعلو القمر».",
+   "shots": [
+    "S028",
+    "S029"
+   ]
+  },
+  {
+   "id": 26,
+   "chunk": "C",
+   "section": "chapter",
+   "text": "Chapter two. Into the Whispering Hills.",
+   "slide": "chapter-2"
+  },
+  {
+   "id": 27,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia and Whiskers set off along the dirt lane, past the last cottage and the old stone well.",
+   "ar": "انطلقت ميا وويسكرز على الدرب الترابي، مرورًا بآخر كوخ والبئر الحجرية القديمة.",
+   "shots": [
+    "S030",
+    "S031"
+   ]
+  },
+  {
+   "id": 28,
+   "chunk": "C",
+   "section": "story",
+   "text": "Swallows dipped over the meadows, and the long grass whispered as the warm breeze combed through it.",
+   "ar": "كانت السنونوات تنقضّ فوق المروج، والعشب الطويل يهمس كلّما مشّطه النسيم الدافئ.",
+   "shots": [
+    "S032"
+   ]
+  },
+  {
+   "id": 29,
+   "chunk": "C",
+   "section": "story",
+   "text": "“We’re venturing into the hills,” Mia said, “just like real explorers!”",
+   "ar": "قالت ميا: «إننا نغامر في التلال، تمامًا كالمستكشفين الحقيقيين!»",
+   "shots": [
+    "S033",
+    "S034"
+   ]
+  },
+  {
+   "id": 30,
+   "chunk": "C",
+   "section": "story",
+   "text": "Whiskers trotted ahead, his tail held high like a little black flag.",
+   "ar": "وكان ويسكرز يهرول أمامها، وذيله مرفوع كعَلَمٍ أسود صغير.",
+   "shots": [
+    "S035",
+    "S036"
+   ]
+  },
+  {
+   "id": 31,
+   "chunk": "C",
+   "section": "story",
+   "text": "At last they reached the crooked oak. Its twisted branches looked like an old man stretching after a long sleep.",
+   "ar": "وأخيرًا وصلا إلى شجرة البلّوط الملتوية. بدت أغصانها المتشابكة كعجوزٍ يتمطّى بعد نومٍ طويل.",
+   "shots": [
+    "S037",
+    "S038"
+   ]
+  },
+  {
+   "id": 32,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia sat among its roots and spread the map across her knees.",
+   "ar": "جلست ميا بين جذورها، وبسطت الخريطة على ركبتيها.",
+   "shots": [
+    "S039"
+   ]
+  },
+  {
+   "id": 33,
+   "chunk": "C",
+   "section": "story",
+   "text": "Suddenly, a gust of wind came rushing over the hilltop.",
+   "ar": "وفجأةً، هبّت عاصفة من الريح مندفعةً فوق قمّة التلّ.",
+   "shots": [
+    "S040"
+   ]
+  },
+  {
+   "id": 34,
+   "chunk": "C",
+   "section": "story",
+   "text": "It snatched the brittle map right out of her hands and sent it tumbling through the air.",
+   "ar": "فخطفت الخريطة الهشّة من بين يديها، وأرسلتها تتقلّب في الهواء.",
+   "shots": [
+    "S041"
+   ]
+  },
+  {
+   "id": 35,
+   "chunk": "C",
+   "section": "story",
+   "text": "“No!” Mia cried. The map was fluttering straight towards a thicket of thorny brambles.",
+   "ar": "صرخت ميا: «لا!». كانت الخريطة ترفرف مباشرةً نحو أجمةٍ من العُلّيق الشائك.",
+   "shots": [
+    "S042"
+   ]
+  },
+  {
+   "id": 36,
+   "chunk": "C",
+   "section": "story",
+   "text": "But Whiskers was already running. He leapt, twisting in mid-air, his fur flashing silver in the sun.",
+   "ar": "لكنّ ويسكرز كان قد انطلق راكضًا. قفز ملتويًا في الهواء، وفروه يومض فضّيًّا تحت الشمس.",
+   "shots": [
+    "S043"
+   ]
+  },
+  {
+   "id": 37,
+   "chunk": "C",
+   "section": "story",
+   "text": "With the softest touch, he trapped the map between his front paws and landed just before the thorns.",
+   "ar": "وبأرقّ لمسة، أمسك الخريطة بين قدميه الأماميتين، وهبط قُبيل الأشواك تمامًا.",
+   "shots": [
+    "S044"
+   ]
+  },
+  {
+   "id": 38,
+   "chunk": "C",
+   "section": "story",
+   "text": "He had not put a single claw through it, and he looked very pleased with himself.",
+   "ar": "لم يخدشها بمخلبٍ واحد، وبدا راضيًا جدًّا عن نفسه.",
+   "shots": [
+    "S045"
+   ]
+  },
+  {
+   "id": 39,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia scooped him up and laughed with relief. “You clever, clever cat!”",
+   "ar": "حملته ميا بين ذراعيها وضحكت بارتياح: «يا لك من قطٍّ ذكيّ، ذكيّ جدًّا!»",
+   "shots": [
+    "S046"
+   ]
+  },
+  {
+   "id": 40,
+   "chunk": "C",
+   "section": "story",
+   "text": "After that, she kept the map safely in her satchel.",
+   "ar": "ومنذ ذلك الحين، أبقت الخريطة في حقيبتها بأمان.",
+   "shots": [
+    "S047"
+   ]
+  },
+  {
+   "id": 41,
+   "chunk": "C",
+   "section": "story",
+   "text": "Now the glowing line pointed down into a shadowy valley, loud with the roar of water.",
+   "ar": "والآن أشار الخيط المتوهّج إلى وادٍ مظلّل، يضجّ بهدير الماء.",
+   "shots": [
+    "S048"
+   ]
+  },
+  {
+   "id": 42,
+   "chunk": "D",
+   "section": "chapter",
+   "text": "Chapter three. The Treacherous Stream.",
+   "slide": "chapter-3"
+  },
+  {
+   "id": 43,
+   "chunk": "D",
+   "section": "story",
+   "text": "At the bottom of the valley, a stream rushed between the rocks, foaming white and silver.",
+   "ar": "وفي قاع الوادي، كان جدولٌ يندفع بين الصخور، مُزبِدًا بالأبيض والفضّي.",
+   "shots": [
+    "S049"
+   ]
+  },
+  {
+   "id": 44,
+   "chunk": "D",
+   "section": "story",
+   "text": "The old bridge had broken long ago. Only two planks dangled over the water, creaking in the wind.",
+   "ar": "كان الجسر القديم قد تحطّم منذ زمنٍ بعيد، ولم يبقَ منه سوى لوحين يتدلّيان فوق الماء، يصرّان مع الريح.",
+   "shots": [
+    "S050"
+   ]
+  },
+  {
+   "id": 45,
+   "chunk": "D",
+   "section": "story",
+   "text": "A line of stepping stones crossed the stream, but they were green with moss and slick with spray.",
+   "ar": "كان صفٌّ من الحجارة يعبر الجدول، لكنّها كانت خضراء بالطحالب، زلقة من رذاذ الماء.",
+   "shots": [
+    "S051"
+   ]
+  },
+  {
+   "id": 46,
+   "chunk": "D",
+   "section": "story",
+   "text": "“This looks treacherous,” Mia said quietly. “One wrong step, and we’ll be swept away.”",
+   "ar": "قالت ميا بهدوء: «هذا يبدو غادرًا. خطوة خاطئة واحدة، وسيجرفنا التيّار».",
+   "shots": [
+    "S052",
+    "S053"
+   ]
+  },
+  {
+   "id": 47,
+   "chunk": "D",
+   "section": "story",
+   "text": "Whiskers took one look at the water and sat down firmly. He was a cat, and cats do not like getting wet.",
+   "ar": "ألقى ويسكرز نظرة واحدة على الماء وجلس بثبات. فهو قطّ، والقطط لا تحبّ البلل.",
+   "shots": [
+    "S054"
+   ]
+  },
+  {
+   "id": 48,
+   "chunk": "D",
+   "section": "story",
+   "text": "“I know you’re reluctant,” said Mia, kneeling beside him. “So am I. But the map says this way.”",
+   "ar": "قالت ميا وهي تجثو بجانبه: «أعرف أنك متردّد، وأنا كذلك. لكنّ الخريطة تقول إنّ الطريق من هنا».",
+   "shots": [
+    "S055"
+   ]
+  },
+  {
+   "id": 49,
+   "chunk": "D",
+   "section": "story",
+   "text": "She found a long stick and tested each stone before she trusted it.",
+   "ar": "وجدت عصًا طويلة، وراحت تختبر كلّ حجر قبل أن تثق به.",
+   "shots": [
+    "S056"
+   ]
+  },
+  {
+   "id": 50,
+   "chunk": "D",
+   "section": "story",
+   "text": "The first stone wobbled. The second rolled. But the third stood firm and steady, like a little island.",
+   "ar": "تمايل الحجر الأول، وتدحرج الثاني، لكنّ الثالث وقف راسخًا ثابتًا كجزيرة صغيرة.",
+   "shots": [
+    "S057"
+   ]
+  },
+  {
+   "id": 51,
+   "chunk": "D",
+   "section": "story",
+   "text": "One by one, Mia found the safe stones and remembered them with a little rhyme: “Flat, then round, then the big grey crown.”",
+   "ar": "وواحدًا تلو الآخر، وجدت ميا الحجارة الآمنة وحفظتها بأنشودة صغيرة: «مسطّح، ثمّ مستدير، ثمّ التاج الرماديّ الكبير».",
+   "shots": [
+    "S058",
+    "S059"
+   ]
+  },
+  {
+   "id": 52,
+   "chunk": "D",
+   "section": "story",
+   "text": "She lifted Whiskers onto her shoulders, where he clung like a furry scarf.",
+   "ar": "رفعت ويسكرز على كتفيها، فتشبّث بها كوشاحٍ من الفرو.",
+   "shots": [
+    "S060"
+   ]
+  },
+  {
+   "id": 53,
+   "chunk": "D",
+   "section": "story",
+   "text": "Step. Splash. Step. The cold spray stung her cheeks, and the roar of the water filled her ears.",
+   "ar": "خطوة. رشّة. خطوة. لسع الرذاذ البارد خدّيها، وملأ هديرُ الماء أذنيها.",
+   "shots": [
+    "S061"
+   ]
+  },
+  {
+   "id": 54,
+   "chunk": "D",
+   "section": "story",
+   "text": "Halfway across, her boot slipped on the moss. She swayed, her arms whirling, and her knee struck the hard stone.",
+   "ar": "وفي منتصف الطريق، انزلق حذاؤها على الطحالب. فترنّحت وذراعاها تدوران، وارتطمت ركبتها بالحجر الصلب.",
+   "shots": [
+    "S062",
+    "S063"
+   ]
+  },
+  {
+   "id": 55,
+   "chunk": "D",
+   "section": "story",
+   "text": "Her knee was scraped and stinging, and her eyes filled with tears. But she did not turn back.",
+   "ar": "كانت ركبتها مخدوشة تلسعها، وامتلأت عيناها بالدموع. لكنّها لم تتراجع.",
+   "shots": [
+    "S064"
+   ]
+  },
+  {
+   "id": 56,
+   "chunk": "D",
+   "section": "story",
+   "text": "Whiskers pressed his warm face to her cheek and purred, loud enough to hear above the water.",
+   "ar": "ضغط ويسكرز وجهه الدافئ على خدّها وخرخر بصوتٍ عالٍ، يُسمع فوق هدير الماء.",
+   "shots": [
+    "S065"
+   ]
+  },
+  {
+   "id": 57,
+   "chunk": "D",
+   "section": "story",
+   "text": "“All right,” Mia sniffed. “We’re resilient, you and I. We fall down, and we get back up.”",
+   "ar": "قالت ميا وهي تمسح أنفها: «حسنًا، نحن صامدان، أنا وأنت. نسقط، ثمّ ننهض من جديد».",
+   "shots": [
+    "S066"
+   ]
+  },
+  {
+   "id": 58,
+   "chunk": "D",
+   "section": "story",
+   "text": "Then, one careful stone at a time, she finished the crossing.",
+   "ar": "ثمّ أكملت العبور، حجرًا بعد حجر، بحذر.",
+   "shots": [
+    "S067"
+   ]
+  },
+  {
+   "id": 59,
+   "chunk": "D",
+   "section": "story",
+   "text": "On the far bank, she took out the map. The glowing line had grown brighter, as if it were proud of them.",
+   "ar": "وعلى الضفّة الأخرى، أخرجت الخريطة. كان الخيط المتوهّج قد ازداد سطوعًا، كأنّه فخورٌ بهما.",
+   "shots": [
+    "S068",
+    "S069"
+   ]
+  },
+  {
+   "id": 60,
+   "chunk": "E",
+   "section": "chapter",
+   "text": "Chapter four. Lost in the Mist.",
+   "slide": "chapter-4"
+  },
+  {
+   "id": 61,
+   "chunk": "E",
+   "section": "story",
+   "text": "The path now climbed steeply towards the highest hill of all. They had never ventured so far from home.",
+   "ar": "صار الدرب الآن يصعد بشدّة نحو أعلى التلال. لم يسبق لهما أن غامرا بهذا البعد عن البيت.",
+   "shots": [
+    "S070",
+    "S071"
+   ]
+  },
+  {
+   "id": 62,
+   "chunk": "E",
+   "section": "story",
+   "text": "As the sky turned violet, a white mist began to rise from the valleys below.",
+   "ar": "ومع تحوّل السماء إلى البنفسجيّ، بدأ ضبابٌ أبيض يتصاعد من الوديان.",
+   "shots": [
+    "S072"
+   ]
+  },
+  {
+   "id": 63,
+   "chunk": "E",
+   "section": "story",
+   "text": "Soon Mia could barely see her own boots.",
+   "ar": "وسرعان ما صارت ميا بالكاد ترى حذاءها.",
+   "shots": [
+    "S073",
+    "S074"
+   ]
+  },
+  {
+   "id": 64,
+   "chunk": "E",
+   "section": "story",
+   "text": "She took out the map, but in the thick grey mist its glimmer was faint and blurry, like a candle behind a curtain.",
+   "ar": "أخرجت الخريطة، لكنّ بريقها في الضباب الرماديّ الكثيف كان خافتًا ضبابيًّا، كشمعةٍ خلف ستارة.",
+   "shots": [
+    "S075"
+   ]
+  },
+  {
+   "id": 65,
+   "chunk": "E",
+   "section": "story",
+   "text": "Somewhere nearby, the hillside dropped away into steep rocks. This was even more treacherous than the stream.",
+   "ar": "وفي مكانٍ قريب، كان سفح التلّ ينحدر فجأة نحو صخورٍ شديدة الانحدار. كان هذا أشدّ غدرًا من الجدول.",
+   "shots": [
+    "S076"
+   ]
+  },
+  {
+   "id": 66,
+   "chunk": "E",
+   "section": "story",
+   "text": "“Whiskers?” she called. Her voice sounded small and thin. “Whiskers, where are you?”",
+   "ar": "نادت: «ويسكرز؟». بدا صوتها صغيرًا واهنًا. «ويسكرز، أين أنت؟»",
+   "shots": [
+    "S077"
+   ]
+  },
+  {
+   "id": 67,
+   "chunk": "E",
+   "section": "story",
+   "text": "Then, from somewhere ahead, came a tiny, silvery sound. Ting.",
+   "ar": "ثمّ جاء من مكانٍ ما أمامها صوتٌ فضّيّ صغير: تِنْغ.",
+   "shots": [
+    "S078"
+   ]
+  },
+  {
+   "id": 68,
+   "chunk": "E",
+   "section": "story",
+   "text": "It was the brass bell on Whiskers’ collar. Mia’s heart leapt. Of course!",
+   "ar": "كان ذلك الجرس النحاسيّ في طوق ويسكرز. قفز قلب ميا فرحًا. بالطبع!",
+   "shots": [
+    "S079"
+   ]
+  },
+  {
+   "id": 69,
+   "chunk": "E",
+   "section": "story",
+   "text": "“I can’t see in the dark,” she said slowly, “but you can. And I can’t see you, but I can hear you.”",
+   "ar": "قالت ببطء: «أنا لا أرى في الظلام، لكنّك تستطيع. ولا أستطيع رؤيتك، لكنّني أستطيع سماعك».",
+   "shots": [
+    "S080"
+   ]
+  },
+  {
+   "id": 70,
+   "chunk": "E",
+   "section": "story",
+   "text": "Whiskers’ emerald eyes glowed through the mist like two small green lanterns.",
+   "ar": "توهّجت عينا ويسكرز الزمرّديتان عبر الضباب كفانوسين أخضرين صغيرين.",
+   "shots": [
+    "S081"
+   ]
+  },
+  {
+   "id": 71,
+   "chunk": "E",
+   "section": "story",
+   "text": "Mia found a long yellow ribbon in her satchel and tied one end to his collar.",
+   "ar": "وجدت ميا شريطًا أصفر طويلًا في حقيبتها، وربطت أحد طرفيه بطوقه.",
+   "shots": [
+    "S082"
+   ]
+  },
+  {
+   "id": 72,
+   "chunk": "E",
+   "section": "story",
+   "text": "Holding the other end, she whispered, “Lead the way. I trust you.”",
+   "ar": "وأمسكت الطرف الآخر، وهمست: «قُدني، أنا أثق بك».",
+   "shots": [
+    "S083"
+   ]
+  },
+  {
+   "id": 73,
+   "chunk": "E",
+   "section": "story",
+   "text": "And so they climbed together, the cat in front and the girl behind, joined by a ribbon and a tiny ringing bell.",
+   "ar": "وهكذا صعدا معًا، القطّ في المقدّمة والفتاة خلفه، يربطهما شريطٌ وجرسٌ صغير يرنّ.",
+   "shots": [
+    "S084"
+   ]
+  },
+  {
+   "id": 74,
+   "chunk": "E",
+   "section": "story",
+   "text": "Whenever the edge came too close, Whiskers stopped and turned, guiding Mia safely away from the drop.",
+   "ar": "وكلّما اقتربت الحافّة أكثر من اللازم، توقّف ويسكرز واستدار، موجّهًا ميا بعيدًا عن الهاوية.",
+   "shots": [
+    "S085"
+   ]
+  },
+  {
+   "id": 75,
+   "chunk": "E",
+   "section": "story",
+   "text": "Ting, ting, ting. Step by step, they rose above the mist, and suddenly the night opened up around them.",
+   "ar": "تِنْغ، تِنْغ، تِنْغ. خطوةً بعد خطوة، ارتفعا فوق الضباب، وفجأةً انفتح الليل من حولهما.",
+   "shots": [
+    "S086"
+   ]
+  },
+  {
+   "id": 76,
+   "chunk": "E",
+   "section": "story",
+   "text": "A huge, pale moon was rising. Below them, the mist lay over the valleys like a silver sea.",
+   "ar": "كان قمرٌ شاحب ضخم يرتفع. ومن تحتهما، استلقى الضباب فوق الوديان كبحرٍ فضّيّ.",
+   "shots": [
+    "S087"
+   ]
+  },
+  {
+   "id": 77,
+   "chunk": "E",
+   "section": "story",
+   "text": "And on the very top of the hill stood a ring of ancient standing stones.",
+   "ar": "وعلى قمّة التلّ تمامًا، انتصبت دائرة من الحجارة القائمة العتيقة.",
+   "shots": [
+    "S088"
+   ]
+  },
+  {
+   "id": 78,
+   "chunk": "F",
+   "section": "chapter",
+   "text": "Chapter five. The Treasure Under the Stars.",
+   "slide": "chapter-5"
+  },
+  {
+   "id": 79,
+   "chunk": "F",
+   "section": "story",
+   "text": "In the middle of the stones, half hidden by ivy, was a small round door set into the grassy hillside.",
+   "ar": "وفي وسط الحجارة، نصف مختبئٍ تحت اللبلاب، كان بابٌ صغير مستدير في سفح التلّ المعشوشب.",
+   "shots": [
+    "S089",
+    "S090"
+   ]
+  },
+  {
+   "id": 80,
+   "chunk": "F",
+   "section": "story",
+   "text": "On it was carved a cat, sitting tall, its tail curled around its paws.",
+   "ar": "وكان منقوشًا عليه قطٌّ يجلس منتصبًا، وذيله ملتفّ حول قدميه.",
+   "shots": [
+    "S091"
+   ]
+  },
+  {
+   "id": 81,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia pushed the door and pulled it, but there was no handle and no keyhole.",
+   "ar": "دفعت ميا الباب وسحبته، لكن لم يكن له مقبضٌ ولا ثقب مفتاح.",
+   "shots": [
+    "S092"
+   ]
+  },
+  {
+   "id": 82,
+   "chunk": "F",
+   "section": "story",
+   "text": "Then she remembered how the light had first appeared on the map.",
+   "ar": "ثمّ تذكّرت كيف ظهر الضوء أوّل مرّة على الخريطة.",
+   "shots": [
+    "S093"
+   ]
+  },
+  {
+   "id": 83,
+   "chunk": "F",
+   "section": "story",
+   "text": "“Whiskers,” she said softly, “would you touch the door, just like you touched the map?”",
+   "ar": "قالت بلطف: «ويسكرز، هلّا لمست الباب، تمامًا كما لمست الخريطة؟»",
+   "shots": [
+    "S094"
+   ]
+  },
+  {
+   "id": 84,
+   "chunk": "F",
+   "section": "story",
+   "text": "Whiskers stretched up on his back legs and placed one shimmering paw on the carved cat.",
+   "ar": "تمطّى ويسكرز واقفًا على قائمتيه الخلفيتين، ووضع قدمه المتلألئة على القطّ المنقوش.",
+   "shots": [
+    "S095"
+   ]
+  },
+  {
+   "id": 85,
+   "chunk": "F",
+   "section": "story",
+   "text": "The carving flashed silver. With a deep, stony sigh, the little door swung open.",
+   "ar": "ومض النقش بلونٍ فضّيّ، ومع تنهيدةٍ حجرية عميقة، انفتح الباب الصغير.",
+   "shots": [
+    "S096"
+   ]
+  },
+  {
+   "id": 86,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia ducked through the doorway, and gasped.",
+   "ar": "انحنت ميا وعبرت الباب، ثمّ شهقت.",
+   "shots": [
+    "S097"
+   ]
+  },
+  {
+   "id": 87,
+   "chunk": "F",
+   "section": "story",
+   "text": "She was standing in a hidden hollow, open to the stars and filled with glowing flowers.",
+   "ar": "كانت تقف في تجويفٍ خفيّ مفتوح على النجوم، مليءٍ بأزهارٍ متوهّجة.",
+   "shots": [
+    "S098"
+   ]
+  },
+  {
+   "id": 88,
+   "chunk": "F",
+   "section": "story",
+   "text": "Hundreds of them, silver and blue, opened one by one in the moonlight, each one glimmering like a fallen star.",
+   "ar": "مئاتٌ منها، فضّية وزرقاء، تتفتّح واحدةً تلو الأخرى في ضوء القمر، وكلّ واحدة تلمع كنجمةٍ سقطت.",
+   "shots": [
+    "S099",
+    "S100"
+   ]
+  },
+  {
+   "id": 89,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia was so astonished that, for a long moment, she could not speak at all.",
+   "ar": "كانت ميا مذهولة إلى درجة أنها لم تستطع الكلام لوقتٍ طويل.",
+   "shots": [
+    "S101"
+   ]
+  },
+  {
+   "id": 90,
+   "chunk": "F",
+   "section": "story",
+   "text": "In the centre of the hollow sat an old tin box, its lid painted with tiny faded stars.",
+   "ar": "وفي وسط التجويف، كان هناك صندوقٌ قديم من الصفيح، غطاؤه مرسومٌ بنجومٍ صغيرة باهتة.",
+   "shots": [
+    "S102",
+    "S103"
+   ]
+  },
+  {
+   "id": 91,
+   "chunk": "F",
+   "section": "story",
+   "text": "Inside was a pouch of silver seeds, a child’s drawing, and a letter, folded small and just as brittle as the map.",
+   "ar": "وفي داخله كيسٌ من البذور الفضّية، ورسمةُ طفلة، ورسالةٌ مطويّة صغيرة، هشّة تمامًا كالخريطة.",
+   "shots": [
+    "S104"
+   ]
+  },
+  {
+   "id": 92,
+   "chunk": "F",
+   "section": "story",
+   "text": "The drawing showed a girl with a long plait and a black cat with bright green eyes.",
+   "ar": "كانت الرسمة تُظهر فتاةً بضفيرةٍ طويلة، وقطًّا أسود بعينين خضراوين لامعتين.",
+   "shots": [
+    "S105"
+   ]
+  },
+  {
+   "id": 93,
+   "chunk": "F",
+   "section": "story",
+   "text": "“To the next brave child who follows the light,” the letter began. “I was nine when I found this place, with my cat, Shadow.”",
+   "ar": "بدأت الرسالة هكذا: «إلى الطفل الشجاع التالي الذي يتبع الضوء. كنت في التاسعة حين وجدت هذا المكان، مع قطّي شادو».",
+   "shots": [
+    "S106",
+    "S107"
+   ]
+  },
+  {
+   "id": 94,
+   "chunk": "F",
+   "section": "story",
+   "text": "“I thought the treasure would be gold. But the real treasure was the journey, and the friend who never left my side.”",
+   "ar": "«ظننت أنّ الكنز سيكون ذهبًا. لكنّ الكنز الحقيقي كان الرحلة، والصديق الذي لم يفارقني قطّ».",
+   "shots": [
+    "S108"
+   ]
+  },
+  {
+   "id": 95,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Plant these seeds where you will see them every day, and cherish the people who wait for you at home. With love, Nell.”",
+   "ar": "«ازرع هذه البذور حيث تراها كلّ يوم، واعتزّ بالذين ينتظرونك في البيت. مع حبّي، نيل».",
+   "shots": [
+    "S109",
+    "S110"
+   ]
+  },
+  {
+   "id": 96,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Nell,” Mia whispered. “Grandma Nell!” Long ago, her grandmother had been a girl just like her.",
+   "ar": "همست ميا: «نيل... جدّتي نيل!». منذ زمنٍ بعيد، كانت جدّتها فتاةً مثلها تمامًا.",
+   "shots": [
+    "S111"
+   ]
+  },
+  {
+   "id": 97,
+   "chunk": "G",
+   "section": "story",
+   "text": "Mia was reluctant to leave such a magical place, but she knew someone was waiting.",
+   "ar": "كانت ميا متردّدة في مغادرة مكانٍ ساحرٍ كهذا، لكنّها كانت تعلم أنّ أحدًا ينتظرها.",
+   "shots": [
+    "S112"
+   ]
+  },
+  {
+   "id": 98,
+   "chunk": "G",
+   "section": "story",
+   "text": "She took the seeds and the letter, left her yellow ribbon in the box for the next child, and gently closed the lid.",
+   "ar": "أخذت البذور والرسالة، وتركت شريطها الأصفر في الصندوق للطفل التالي، ثمّ أغلقت الغطاء برفق.",
+   "shots": [
+    "S113"
+   ]
+  },
+  {
+   "id": 99,
+   "chunk": "G",
+   "section": "story",
+   "text": "On the map, a new line of light had begun to glow. It led straight home.",
+   "ar": "وعلى الخريطة، بدأ خيطٌ جديد من الضوء يتوهّج. كان يقود إلى البيت مباشرة.",
+   "shots": [
+    "S114"
+   ]
+  },
+  {
+   "id": 100,
+   "chunk": "G",
+   "section": "story",
+   "text": "Far below, at the cottage gate, a small lantern was shining. Grandma Nell was waiting.",
+   "ar": "وفي الأسفل بعيدًا، عند بوّابة الكوخ، كان فانوسٌ صغير يضيء. كانت الجدّة نيل تنتظر.",
+   "shots": [
+    "S115",
+    "S116"
+   ]
+  },
+  {
+   "id": 101,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Did you find it?” Grandma asked, her eyes twinkling. Mia ran into her arms. “I found it, Grandma. And I found you.”",
+   "ar": "سألت الجدّة وعيناها تلمعان: «هل وجدتِه؟». ركضت ميا إلى حضنها: «وجدته يا جدّتي، ووجدتكِ أنتِ».",
+   "shots": [
+    "S117",
+    "S118"
+   ]
+  },
+  {
+   "id": 102,
+   "chunk": "G",
+   "section": "story",
+   "text": "Grandma saw the scraped knee and smiled. “Brave and resilient,” she said. “That is how every true explorer comes home.”",
+   "ar": "رأت الجدّة الركبة المخدوشة فابتسمت وقالت: «شجاعة وصامدة. هكذا يعود كلّ مستكشفٍ حقيقيّ إلى بيته».",
+   "shots": [
+    "S119"
+   ]
+  },
+  {
+   "id": 103,
+   "chunk": "G",
+   "section": "story",
+   "text": "Then she stroked Whiskers’ silky head. “Shadow had emerald eyes, too,” she said softly. “Some magic runs in families.”",
+   "ar": "ثمّ مسحت على رأس ويسكرز الناعم، وقالت بلطف: «كانت لشادو عينان زمرّديتان أيضًا. بعض السحر يسري في العائلات».",
+   "shots": [
+    "S120"
+   ]
+  },
+  {
+   "id": 104,
+   "chunk": "G",
+   "section": "story",
+   "text": "That spring, Mia and Grandma planted the silver seeds beneath the kitchen window.",
+   "ar": "وفي ذلك الربيع، زرعت ميا وجدّتها البذور الفضّية تحت نافذة المطبخ.",
+   "shots": [
+    "S121",
+    "S122"
+   ]
+  },
+  {
+   "id": 105,
+   "chunk": "G",
+   "section": "story",
+   "text": "Now, whenever the moon rises, the flowers glow, filling the cottage with soft silver light.",
+   "ar": "والآن، كلّما طلع القمر، تتوهّج الأزهار، فتملأ الكوخ بضوءٍ فضّيّ ناعم.",
+   "shots": [
+    "S123"
+   ]
+  },
+  {
+   "id": 106,
+   "chunk": "G",
+   "section": "story",
+   "text": "Mia keeps the brittle old map in a box beside her bed. She will cherish it all her life.",
+   "ar": "تحتفظ ميا بالخريطة القديمة الهشّة في صندوقٍ بجانب سريرها، وستعتزّ بها طوال حياتها.",
+   "shots": [
+    "S124"
+   ]
+  },
+  {
+   "id": 107,
+   "chunk": "G",
+   "section": "story",
+   "text": "Because on that hill, she learned something. The greatest treasures are not buried in the ground.",
+   "ar": "لأنها تعلّمت على ذلك التلّ شيئًا: أعظم الكنوز ليست مدفونةً في الأرض.",
+   "shots": [
+    "S125"
+   ]
+  },
+  {
+   "id": 108,
+   "chunk": "G",
+   "section": "story",
+   "text": "They are the people we love, the friends who walk beside us, and the courage we find when we need it most.",
+   "ar": "بل هي الأشخاص الذين نحبّهم، والأصدقاء الذين يمشون بجانبنا، والشجاعة التي نجدها حين نحتاجها أكثر.",
+   "shots": [
+    "S126",
+    "S127"
+   ]
+  },
+  {
+   "id": 109,
+   "chunk": "G",
+   "section": "story",
+   "text": "And who knows? In some dusty attic near you, another map may be waiting to glow. The end.",
+   "ar": "ومن يدري؟ ربما في عِلّيةٍ مغبرّة قريبة منك، تنتظر خريطةٌ أخرى أن تتوهّج. النهاية.",
+   "shots": [
+    "S128"
+   ]
+  },
+  {
+   "id": 110,
+   "chunk": "H",
+   "section": "words",
+   "text": "Now, let’s look at eight wonderful words from the story. Listen, and say each word with me.",
+   "slide": "words-intro"
+  },
+  {
+   "id": 111,
+   "chunk": "H",
+   "section": "words",
+   "text": "Brittle. Something brittle is hard and dry, and it breaks very easily. It was a folded sheet of parchment, yellow and brittle.",
+   "slide": "word-brittle"
+  },
+  {
+   "id": 112,
+   "chunk": "H",
+   "section": "words",
+   "text": "Glimmer. To glimmer means to shine with a faint, gentle light. A thin line of light began to glimmer across the faded ink.",
+   "slide": "word-glimmer"
+  },
+  {
+   "id": 113,
+   "chunk": "H",
+   "section": "words",
+   "text": "Venture. To venture means to go somewhere new, or a little bit dangerous. They had never ventured so far from home.",
+   "slide": "word-venture"
+  },
+  {
+   "id": 114,
+   "chunk": "H",
+   "section": "words",
+   "text": "Reluctant. If you are reluctant, you do not really want to do something. Mia was reluctant to leave such a magical place.",
+   "slide": "word-reluctant"
+  },
+  {
+   "id": 115,
+   "chunk": "H",
+   "section": "words",
+   "text": "Astonished. Astonished means extremely surprised. Mia was so astonished that she could not speak at all.",
+   "slide": "word-astonished"
+  },
+  {
+   "id": 116,
+   "chunk": "H",
+   "section": "words",
+   "text": "Cherish. To cherish something is to love it and take great care of it. Mia keeps the old map, and she will cherish it all her life.",
+   "slide": "word-cherish"
+  },
+  {
+   "id": 117,
+   "chunk": "H",
+   "section": "words",
+   "text": "Treacherous. A treacherous place is full of hidden dangers. At the slippery stream, Mia said, “This looks treacherous.”",
+   "slide": "word-treacherous"
+  },
+  {
+   "id": 118,
+   "chunk": "H",
+   "section": "words",
+   "text": "Resilient. Resilient people recover quickly after something hard happens. Mia said, “We’re resilient, you and I. We fall down, and we get back up.”",
+   "slide": "word-resilient"
+  },
+  {
+   "id": 119,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question one. What made the map begin to glow? A, the setting sun. B, Whiskers’ paw. Or C, a magic word.",
+   "slide": "quiz-q1",
+   "pause": 4
+  },
+  {
+   "id": 120,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is B. The light began to glimmer when Whiskers’ shimmering paw touched the map.",
+   "slide": "quiz-q1-answer"
+  },
+  {
+   "id": 121,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question two. How did Mia find her way through the mist? A, she followed the stars. B, she carried a lantern. Or C, she listened for Whiskers’ bell.",
+   "slide": "quiz-q2",
+   "pause": 4
+  },
+  {
+   "id": 122,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is C. She tied a ribbon to his collar and followed the sound of his little bell.",
+   "slide": "quiz-q2-answer"
+  },
+  {
+   "id": 123,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question three. Who wrote the letter in the tin box? A, Grandma Nell. B, a famous explorer. Or C, Mia’s teacher.",
+   "slide": "quiz-q3",
+   "pause": 4
+  },
+  {
+   "id": 124,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is A. Grandma Nell wrote it when she was nine years old. Well done!",
+   "slide": "quiz-q3-answer"
+  },
+  {
+   "id": 125,
+   "chunk": "I",
+   "section": "outro",
+   "text": "Thank you for joining Mia and Whiskers on their journey. If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments, and I’ll see you in the next story.",
+   "slide": "outro"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "brittle",
+   "ipa": "/ˈbrɪt.əl/",
+   "pos": "adjective",
+   "ar": "هشّ، سريع الكسر",
+   "meaning": "hard and dry, so it breaks or cracks very easily",
+   "example": "It was a folded sheet of parchment, yellow and brittle, so dry that it crackled at her touch."
+  },
+  {
+   "word": "glimmer",
+   "ipa": "/ˈɡlɪm.ər/",
+   "pos": "verb / noun",
+   "ar": "يلمع بضوء خافت؛ بريق خافت",
+   "meaning": "to shine with a faint, gentle, wavering light",
+   "example": "A thin line of light began to glimmer across the faded ink."
+  },
+  {
+   "word": "venture",
+   "ipa": "/ˈven.tʃər/",
+   "pos": "verb",
+   "ar": "يغامر، يجرؤ على الذهاب",
+   "meaning": "to go somewhere new or a little dangerous",
+   "example": "They had never ventured so far from home."
+  },
+  {
+   "word": "reluctant",
+   "ipa": "/rɪˈlʌk.tənt/",
+   "pos": "adjective",
+   "ar": "متردّد، غير راغب",
+   "meaning": "not wanting to do something, so you hesitate",
+   "example": "Mia was reluctant to leave such a magical place."
+  },
+  {
+   "word": "astonished",
+   "ipa": "/əˈstɒn.ɪʃt/",
+   "pos": "adjective",
+   "ar": "مذهول، مندهش جدًّا",
+   "meaning": "extremely surprised",
+   "example": "Mia was so astonished that, for a long moment, she could not speak at all."
+  },
+  {
+   "word": "cherish",
+   "ipa": "/ˈtʃer.ɪʃ/",
+   "pos": "verb",
+   "ar": "يعتزّ بـ، يحرص على",
+   "meaning": "to love and care for something or someone very much",
+   "example": "She will cherish it all her life."
+  },
+  {
+   "word": "treacherous",
+   "ipa": "/ˈtretʃ.ər.əs/",
+   "pos": "adjective",
+   "ar": "غادر، محفوف بالمخاطر",
+   "meaning": "full of hidden dangers",
+   "example": "“This looks treacherous,” Mia said quietly."
+  },
+  {
+   "word": "resilient",
+   "ipa": "/rɪˈzɪl.i.ənt/",
+   "pos": "adjective",
+   "ar": "صامد، سريع التعافي",
+   "meaning": "able to recover quickly after something difficult",
+   "example": "“We’re resilient, you and I. We fall down, and we get back up.”"
+  }
+ ],
+ "quiz": [
+  {
+   "id": "q1",
+   "q": "What made the map begin to glow?",
+   "options": [
+    "The setting sun",
+    "Whiskers’ paw",
+    "A magic word"
+   ],
+   "answer": 1
+  },
+  {
+   "id": "q2",
+   "q": "How did Mia find her way through the mist?",
+   "options": [
+    "She followed the stars",
+    "She carried a lantern",
+    "She listened for Whiskers’ bell"
+   ],
+   "answer": 2
+  },
+  {
+   "id": "q3",
+   "q": "Who wrote the letter in the tin box?",
+   "options": [
+    "Grandma Nell",
+    "A famous explorer",
+    "Mia’s teacher"
+   ],
+   "answer": 0
+  }
+ ],
+ "outro": {
+  "text": "Thank you for joining Mia and Whiskers on their journey. If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments, and I’ll see you in the next story."
+ }
+}

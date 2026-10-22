@@ -1,0 +1,3229 @@
+{
+ "slug": "the-clockmakers-last-key",
+ "title": "The Clockmaker’s Last Key",
+ "level": "B1–C1",
+ "voice": {
+  "name": "Lily",
+  "id": "3XD5qTvPWht0mpTnYXY0",
+  "speed": 0.85
+ },
+ "style": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere",
+ "negative": "no text, no letters, no subtitles, no watermark, consistent character design",
+ "characters": [
+  {
+   "id": "elias",
+   "name": "Elias",
+   "bible": "Elias, a 10-year-old boy with untidy copper-red hair, a freckled face and bright grey-blue eyes, wearing a navy-blue wool coat with brass buttons, a long mustard-yellow knitted scarf, brown corduroy trousers and scuffed brown lace-up boots"
+  },
+  {
+   "id": "pip",
+   "name": "Pip",
+   "bible": "Pip, a small round grey owl with soft silver-grey feathers speckled with white, a pale cream heart-shaped face, short feathery ear tufts, huge amber-gold eyes, a tiny black beak and a thin copper ring on his left leg"
+  },
+  {
+   "id": "tobin",
+   "name": "Master Tobin",
+   "bible": "Master Tobin, a tall, thin, very old clockmaker with a neat white beard, kind hazel eyes behind round gold-rimmed spectacles, a plum-purple waistcoat over a white shirt, a brown leather apron, a gold watch chain and a crooked wooden walking stick"
+  },
+  {
+   "id": "mother",
+   "name": "Elias's mother",
+   "bible": "Elias's mother, a gentle young woman with a long dark-brown braid and warm brown eyes, wearing a dusty-rose wool shawl over a cream blouse and a long dove-grey skirt"
+  }
+ ],
+ "locations": [
+  {
+   "id": "town",
+   "bible": "a snowy old European-style town of tall crooked half-timbered houses with steep snow-covered roofs, narrow cobbled streets, warm iron street lanterns and a great grey stone clock tower with a glowing round clock face rising above the square"
+  },
+  {
+   "id": "shop",
+   "bible": "Master Tobin's tiny clock shop at the foot of the clock tower, its wooden walls crowded with ticking clocks and swinging pendulums, a cluttered oak workbench of brass gears under a green glass lamp, and a frosted bay window"
+  },
+  {
+   "id": "tower",
+   "bible": "the top chamber of the old stone clock tower, full of enormous turning brass gears, iron chains and dusty wooden beams, lit from behind by the huge translucent clock face glowing like a round amber moon"
+  },
+  {
+   "id": "secret",
+   "bible": "a small secret round room hidden behind the clock tower gears, its midnight-blue domed ceiling painted with gold stars, a tall silver hourglass full of glittering golden sand on a carved stone pedestal, and a tiny round wooden door"
+  },
+  {
+   "id": "home",
+   "bible": "Elias's cosy cottage kitchen with a low beamed ceiling, a crackling black iron stove, a scrubbed wooden table, blue-and-white plates on the shelves and a small frosted window looking out on the snowy square"
+  }
+ ],
+ "references": [
+  {
+   "id": "R1",
+   "kind": "character",
+   "of": "elias",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Elias, a 10-year-old boy with untidy copper-red hair, a freckled face and bright grey-blue eyes, wearing a navy-blue wool coat with brass buttons, a long mustard-yellow knitted scarf, brown corduroy trousers and scuffed brown lace-up boots, standing in a relaxed pose, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R2",
+   "kind": "character",
+   "of": "pip",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Pip, a small round grey owl with soft silver-grey feathers speckled with white, a pale cream heart-shaped face, short feathery ear tufts, huge amber-gold eyes, a tiny black beak and a thin copper ring on his left leg, standing in a relaxed pose, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R3",
+   "kind": "character",
+   "of": "tobin",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Master Tobin, a tall, thin, very old clockmaker with a neat white beard, kind hazel eyes behind round gold-rimmed spectacles, a plum-purple waistcoat over a white shirt, a brown leather apron, a gold watch chain and a crooked wooden walking stick, standing in a relaxed pose, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R4",
+   "kind": "character",
+   "of": "mother",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, full-body character reference of Elias's mother, a gentle young woman with a long dark-brown braid and warm brown eyes, wearing a dusty-rose wool shawl over a cream blouse and a long dove-grey skirt, standing in a relaxed pose, front view, plain warm painted background, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R5",
+   "kind": "location",
+   "of": "town",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of a snowy old European-style town of tall crooked half-timbered houses with steep snow-covered roofs, narrow cobbled streets, warm iron street lanterns and a great grey stone clock tower with a glowing round clock face rising above the square, bathed in cold blue winter twilight and warm amber lantern light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R6",
+   "kind": "location",
+   "of": "shop",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of Master Tobin's tiny clock shop at the foot of the clock tower, its wooden walls crowded with ticking clocks and swinging pendulums, a cluttered oak workbench of brass gears under a green glass lamp, and a frosted bay window, bathed in warm golden lamp and candle light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R7",
+   "kind": "location",
+   "of": "tower",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of the top chamber of the old stone clock tower, full of enormous turning brass gears, iron chains and dusty wooden beams, lit from behind by the huge translucent clock face glowing like a round amber moon, bathed in deep amber clock-face light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R8",
+   "kind": "location",
+   "of": "secret",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of a small secret round room hidden behind the clock tower gears, its midnight-blue domed ceiling painted with gold stars, a tall silver hourglass full of glittering golden sand on a carved stone pedestal, and a tiny round wooden door, bathed in silvery starlight and soft golden hourglass light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  },
+  {
+   "id": "R9",
+   "kind": "location",
+   "of": "home",
+   "prompt": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere, wide establishing view of Elias's cosy cottage kitchen with a low beamed ceiling, a crackling black iron stove, a scrubbed wooden table, blue-and-white plates on the shelves and a small frosted window looking out on the snowy square, bathed in soft flickering candle light, no people, no text, no letters, no subtitles, no watermark, consistent character design."
+  }
+ ],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Clockmaker’s Gift",
+   "ar": "هديّة صانع الساعات"
+  },
+  {
+   "n": 2,
+   "title": "The Door Behind the Gears",
+   "ar": "الباب خلف التروس"
+  },
+  {
+   "n": 3,
+   "title": "Small Mistakes",
+   "ar": "أخطاء صغيرة"
+  },
+  {
+   "n": 4,
+   "title": "The Hour He Did Not Turn",
+   "ar": "الساعة التي لم يُعِدها"
+  },
+  {
+   "n": 5,
+   "title": "The Last Key",
+   "ar": "المفتاح الأخير"
+  }
+ ],
+ "thumb_shot": "S46",
+ "thumb_text": "TURN BACK TIME?",
+ "thumb_ar": "ماذا لو استطعت إعادة الزمن ساعة؟",
+ "shots": [
+  {
+   "id": "S01",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow push-in over the rooftops",
+   "who": [],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "snow falls softly over the sleeping town as the street lanterns flicker on one by one",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S02",
+   "type": "video",
+   "duration": 5,
+   "camera": "low-angle medium shot of the top of the clock tower, slow tilt up",
+   "who": [],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "a great bronze bell swings in the open belfry and puffs of snow shake loose from the stone ledges",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S03",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "wide shot: the tiny clock shop glowing at the foot of the tower, snow heaped on its sill and its warm window shining into the blue dusk",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S04",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Master Tobin bends over his workbench, peering at a tiny clock through a jeweller's eyeglass",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S05",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, gentle pan following him",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "Elias pushes open the shop door with a grin as a swirl of snowflakes blows in behind him",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S06",
+   "type": "image",
+   "who": [
+    "elias",
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Elias sits on a wooden stool by the frosted window with his chin in his hands, watching Master Tobin work in the background",
+   "refs": [
+    "R1",
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S07",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "extreme close-up: Elias's bright grey-blue eyes shine with fascination, tiny golden gears reflected in them",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S08",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "extreme close-up insert: an open pocket-watch on the workbench reveals an intricate world of tiny brass wheels and coiled springs, some no bigger than a button",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S09",
+   "type": "video",
+   "duration": 5,
+   "camera": "macro close-up, slow push-in",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "dozens of tiny brass gears tick and turn together inside an open clock, glinting in the lamplight",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S10",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "Master Tobin's wrinkled fingers slowly polish a tiny gear with a soft cloth",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S11",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium two-shot: Master Tobin turns towards Elias, holding up a small finished clock with a warm, wise smile",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S12",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "close-up: Master Tobin's trembling hands try to hold a tiny screw with tweezers",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S13",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "close-up: Master Tobin squints behind his spectacles, his kind face tired and worried",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S14",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "medium shot: Master Tobin hangs a small blank wooden sign on the inside of the glass door while snow begins to fall outside",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S15",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "wide shot: Elias stands alone in the middle of the silent shop, the clocks on the walls all stopped and dust floating in the air",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S16",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "insert: a row of silent wall clocks with motionless pendulums, dust drifting through a beam of candlelight",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S17",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "medium two-shot: Master Tobin bends down and gently presses something small into Elias's open hand",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S18",
+   "type": "video",
+   "duration": 5,
+   "camera": "extreme close-up insert, slow orbit",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "a small brass key with a sun-shaped handle on a faded green ribbon lies in Elias's open palm and glints in the candlelight",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S19",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "close-up: Elias stares down at a small brass key with a sun-shaped handle on a faded green ribbon in his palm, wide-eyed",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S20",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "close-up: Master Tobin leans close and whispers to Elias, one finger pointing up towards the tower",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S21",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "medium shot: Master Tobin rests a gentle hand on Elias's shoulder, his eyes serious and kind",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S22",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "soft flickering candle",
+   "action": "close-up: Elias holds a small brass key with a sun-shaped handle on a faded green ribbon tightly against his chest, his eyes full of wonder",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S23",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow pull-back",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "Master Tobin, leaning on his stick, shuffles away across the snowy square while Elias watches from the shop doorway",
+   "refs": [
+    "R3",
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S24",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias sits alone by the glowing stove late at night, turning a small brass key with a sun-shaped handle on a faded green ribbon over in his fingers",
+   "refs": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S25",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow-motion, gentle pan",
+   "who": [
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "Elias rushes towards the window and his elbow knocks a cobalt-blue jug off the table, sending it tumbling through the air",
+   "refs": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S26",
+   "type": "image",
+   "who": [
+    "mother",
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias's mother kneels quietly gathering broken blue pieces of the jug from the floor while Elias stands guiltily behind her",
+   "refs": [
+    "R4",
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S27",
+   "type": "image",
+   "who": [
+    "mother"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "close-up: Elias's mother holds a broken piece of the blue jug in her palm, her eyes quietly downcast",
+   "refs": [
+    "R4",
+    "R9"
+   ]
+  },
+  {
+   "id": "S28",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "home",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "medium shot: Elias winds his scarf around his neck and quietly opens the cottage door onto the snowy night",
+   "refs": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S29",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "wide shot: a small figure of Elias crosses the empty square as snowflakes drift past the lanterns like slow golden moths",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S30",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "close-up: snowflakes swirl around a glowing iron street lantern like tiny golden moths",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S31",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "insert: the heavy old wooden door at the base of the clock tower creaks open, snow piled on its stone step",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S32",
+   "type": "video",
+   "duration": 5,
+   "camera": "low-angle medium shot, slow tilt up",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "soft flickering candle",
+   "action": "Elias climbs a narrow winding stone staircase holding a candle, his shadow stretching up the curved wall",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S33",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Elias steps into the vast gear chamber, tiny beneath the turning brass wheels and the glowing round clock face",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S34",
+   "type": "image",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "close-up: two huge round amber eyes shine out of the shadows on a dusty wooden beam",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S35",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow push-in",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip sits on the wooden beam and slowly tilts his head, gazing down with a solemn expression",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S36",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip opens his little beak to speak and his silver-grey feathers ruffle softly",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S37",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias stumbles back in astonishment, his candle flame wobbling wildly",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S38",
+   "type": "image",
+   "who": [
+    "pip",
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium two-shot: Pip and Elias face each other across the beam, Pip with one wing raised as if explaining",
+   "refs": [
+    "R2",
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S39",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, gentle pan",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip hops along the beam and taps his beak against the stone wall behind the turning gears",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S40",
+   "type": "image",
+   "who": [],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "extreme close-up insert: a tiny brass keyhole in the old stone wall, glowing faintly gold from within",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S41",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Elias turns a small brass key with a sun-shaped handle on a faded green ribbon in the keyhole and a little round wooden door swings open, spilling warm golden light",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S42",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow tilt down from the starry ceiling",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "Elias and Pip step through the little door into the secret room, gazing around in wonder",
+   "refs": [
+    "R1",
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S43",
+   "type": "image",
+   "who": [],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "low-angle insert: looking straight up at the midnight-blue domed ceiling painted with glittering gold stars",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S44",
+   "type": "image",
+   "who": [
+    "pip"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "medium shot: Pip perches on the edge of the stone pedestal beside the silver hourglass, one wing pointing at it",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S45",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "close-up: Elias's hands rest on the cool silver frame of the hourglass as he takes a deep breath",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S46",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, Elias on the right half of the frame, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "Elias turns the great silver hourglass over and the glittering sand begins to flow upwards in a stream of light",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S47",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pan",
+   "who": [],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "the enormous brass gears grind and spin backwards in a shimmer of golden dust",
+   "refs": [
+    "R7"
+   ]
+  },
+  {
+   "id": "S48",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow tilt up",
+   "who": [],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "above the snowy square, every snowflake floats upwards into the sky and the clock hands sweep backwards",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S49",
+   "type": "image",
+   "who": [],
+   "where": "secret",
+   "light": "soft flickering candle",
+   "action": "extreme close-up insert: a candle flame shrinking into a tiny bead of light with sparks of gold around it",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S50",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot, camera follows him",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "Elias races through the snowy cobbled street, his yellow scarf streaming behind him",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S51",
+   "type": "image",
+   "who": [],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "insert: a cobalt-blue jug stands whole and shining on the wooden kitchen table",
+   "refs": [
+    "R9"
+   ]
+  },
+  {
+   "id": "S52",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias tiptoes carefully past the table with the blue jug towards the frosted window",
+   "refs": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S53",
+   "type": "image",
+   "who": [
+    "mother",
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias's mother looks up from her sewing by the stove and smiles at Elias",
+   "refs": [
+    "R4",
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S54",
+   "type": "image",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "wide shot: Elias climbs up into the gear chamber with a candle while Pip waits on his beam and hoots a greeting",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S55",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "medium shot: Elias pulls a slice of burnt black toast from the stove as a curl of smoke rises around his face",
+   "refs": [
+    "R1",
+    "R9"
+   ]
+  },
+  {
+   "id": "S56",
+   "type": "image",
+   "who": [],
+   "where": "home",
+   "light": "soft flickering candle",
+   "action": "insert: two slices of perfectly golden toast on a blue-and-white plate",
+   "refs": [
+    "R9"
+   ]
+  },
+  {
+   "id": "S57",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "medium shot: Elias stands in a row of carol-singing children holding candles, his mouth open and lost, while the children beside him giggle",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S58",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium close-up, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "Elias sings confidently holding a candle, his breath steaming in the cold air",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S59",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pan",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "the crowd in the lantern-lit square claps and cheers as Elias takes a shy bow",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S60",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "close-up: Elias's proud smile slowly fades as he looks down at his candle",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S61",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "close-up: Elias stands alone under a lantern with one hand on his chest, thoughtful and troubled",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S62",
+   "type": "image",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium two-shot: Elias sits on a wooden beam beside Pip, looking down at his hands",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S63",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip ruffles his silver-grey feathers and turns his great amber eyes sideways towards Elias",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S64",
+   "type": "image",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "wide shot: seen from behind, Elias and Pip sit side by side at a small round window, looking out over the snowy rooftops",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S65",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "wide shot: the shuttered clock shop at the foot of the tower at night, a single warm window still glowing in the snow",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S66",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Master Tobin works alone late at night under the green glass lamp, bent over something round and gleaming",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S67",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "Master Tobin's trembling hands lower a tiny brass gear into the walnut base of a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S68",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "extreme close-up insert: inside a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears: the miniature tower, the little glowing lanterns and the tiny skaters on the mirror lake",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S69",
+   "type": "video",
+   "duration": 5,
+   "camera": "insert close-up, slow orbit",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears comes alive: snow swirls inside the glass and the tiny skaters spin on the mirror lake",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S70",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium two-shot: Master Tobin presents a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears across the workbench to Elias, whose eyes are wide with wonder",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S71",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "close-up: Elias's amazed face reflected and curved in the glass of the snow globe",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S72",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "close-up: Master Tobin smiles gently, both hands resting on the top of his walking stick",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S73",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Elias nods eagerly with his hand pressed to his heart, glowing with pride",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S74",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide establishing shot, slow crane down",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "the Midwinter Festival fills the snowy square with market stalls, chestnut braziers, candles and children skating on a frozen pond",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S75",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "insert: roasted chestnuts glowing in an iron brazier beside a row of little candles in the snow",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S76",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "medium shot: Elias walks slowly through the festival crowd, carrying a large glass snow globe wrapped in a sky-blue blanket in both arms",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S77",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up tracking shot, camera follows at ground level",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Elias's scuffed brown boots step carefully, one at a time, over the snowy cobbles",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S78",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "medium shot: a group of laughing children in bright woollen hats wave and shout from the frozen pond",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S79",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot, camera follows him",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Elias breaks into a run across the square, clutching the blanket-wrapped globe",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S80",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow motion",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Elias slips on black ice, his feet flying up as a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears tumbles out of his arms into the air",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S81",
+   "type": "video",
+   "duration": 5,
+   "camera": "low insert shot, slow motion",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears strikes the snowy cobbles and the glass bursts apart in a glittering spray",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S82",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: Elias lies sprawled in the snow, staring in horror, his face pale in the candlelight",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S83",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "top-down insert: shards of glass, tiny painted skaters, little lanterns and intricate brass wheels lie scattered across the snow",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S84",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "wide shot: the whole festival frozen in silence, every townsperson turning to stare at Elias in the snow",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S85",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: children on the frozen pond in bright woollen hats freeze with their mittens over their mouths",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S86",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium tracking shot, camera follows him",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Elias scrambles to his feet and runs past the market stalls towards the clock tower door",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S87",
+   "type": "video",
+   "duration": 5,
+   "camera": "low-angle medium shot, fast tilt up",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "soft flickering candle",
+   "action": "Elias races up the winding stone stairs two at a time, breathless",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S88",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "medium shot: Elias stands panting before the silver hourglass on its pedestal, snow still on his coat",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S89",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "close-up: Elias grips the silver frame of the hourglass with both hands, tears shining in his eyes",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S90",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow push-in",
+   "who": [
+    "pip",
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "Pip glides down on silent wings and lands on the pedestal beside Elias",
+   "refs": [
+    "R2",
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S91",
+   "type": "image",
+   "who": [
+    "pip"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "close-up: Pip turns his great amber eyes towards a little round window, gently urging",
+   "refs": [
+    "R2",
+    "R8"
+   ]
+  },
+  {
+   "id": "S92",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium shot from behind: Elias walks to the small round window in the stone wall and presses his hands to the frosty glass",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S93",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "high-angle wide shot: far below, Master Tobin kneels in the snow gathering broken pieces into a white handkerchief, surrounded by kneeling children",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S94",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: Master Tobin's old hands gently cradle a tiny painted skater in a white handkerchief",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S95",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pan",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "the townspeople stand together in the snowy square, candles raised, singing softly",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S96",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: a little girl in a red woollen hat holds a candle and sings softly, snow on her eyelashes",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S97",
+   "type": "image",
+   "who": [
+    "pip",
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium two-shot: Pip perches on the stone sill beside Elias at the round window, speaking softly to him",
+   "refs": [
+    "R2",
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S98",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip's solemn face fills the frame, his amber eyes glowing in the clock-face light",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S99",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium shot: Elias looks down at his open hands, thinking hard",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S100",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "Elias gazes at the hourglass as his frightened face slowly grows calm and steady",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S101",
+   "type": "image",
+   "who": [],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "insert: the silver hourglass stands untouched on its pedestal, its golden sand perfectly still",
+   "refs": [
+    "R8"
+   ]
+  },
+  {
+   "id": "S102",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium shot, slow pull-back",
+   "who": [
+    "elias"
+   ],
+   "where": "secret",
+   "light": "silvery starlight and soft golden hourglass",
+   "action": "Elias lifts his hands away from the hourglass, turns and walks out through the little round door",
+   "refs": [
+    "R1",
+    "R8"
+   ]
+  },
+  {
+   "id": "S103",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Elias steps out of the clock tower door into the hushed, candlelit square as the crowd turns towards him",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S104",
+   "type": "image",
+   "who": [
+    "elias",
+    "tobin"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "medium two-shot: Elias kneels in the snow beside Master Tobin, head bowed, speaking from his heart",
+   "refs": [
+    "R1",
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S105",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: Elias's face, cheeks red and eyes honest and wet, looking up",
+   "refs": [
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S106",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "Master Tobin looks over his spectacles with a long serious gaze, then his face breaks into a warm smile",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S107",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "medium two-shot: Master Tobin rests a gentle hand on Elias's shoulder as they kneel together in the snow",
+   "refs": [
+    "R3",
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S108",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "town",
+   "light": "warm festival candle and lantern",
+   "action": "close-up: Master Tobin leans close and whispers into Elias's ear, his eyes twinkling behind his spectacles",
+   "refs": [
+    "R3",
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S109",
+   "type": "image",
+   "who": [
+    "elias",
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "wide shot: Elias and Master Tobin sit side by side at the lamp-lit workbench, the broken globe and its tiny parts spread out before them",
+   "refs": [
+    "R1",
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S110",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "Elias's young fingers place a tiny brass gear with tweezers, steady and careful",
+   "refs": [
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S111",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Master Tobin watches with quiet pride, his chin resting on his hand",
+   "refs": [
+    "R3",
+    "R6"
+   ]
+  },
+  {
+   "id": "S112",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "extreme close-up insert: tweezers set a tiny new painted skater back onto the mirror lake inside the open globe",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S113",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "insert: a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears, whole again, with one thin silver crack running across its glass dome and catching the lamplight",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S114",
+   "type": "image",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium two-shot: Master Tobin gently taps the crack in the glass globe with one finger, smiling at Elias",
+   "refs": [
+    "R3",
+    "R1",
+    "R6"
+   ]
+  },
+  {
+   "id": "S115",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow push-in",
+   "who": [],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "a large glass snow globe holding a tiny clockwork town with a miniature clock tower, little lanterns and tiny skaters on a mirror lake, set on a carved walnut base trimmed with brass gears stands on a stone pedestal in the middle of the snowy square as townspeople gather around to listen",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S116",
+   "type": "image",
+   "who": [],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "medium shot: children press their noses close to the glass globe, watching the tiny skaters spin",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S117",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "close-up: Master Tobin's wrinkled hand rests proudly on the carved walnut base of the globe beside a small blank polished brass plate",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S118",
+   "type": "image",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "medium shot: Elias gently lays a small brass key with a sun-shaped handle on a faded green ribbon on the wooden beam in front of Pip",
+   "refs": [
+    "R1",
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S119",
+   "type": "image",
+   "who": [
+    "elias"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "close-up: Elias smiles softly as he speaks, the amber clock-face light warm on his freckled face",
+   "refs": [
+    "R1",
+    "R7"
+   ]
+  },
+  {
+   "id": "S120",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [
+    "pip"
+   ],
+   "where": "tower",
+   "light": "deep amber clock-face",
+   "action": "Pip blinks slowly and puffs out his speckled chest, looking proud and happy",
+   "refs": [
+    "R2",
+    "R7"
+   ]
+  },
+  {
+   "id": "S121",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "medium shot: Master Tobin waits in the glowing doorway of the clock shop, holding something in his closed hand",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S122",
+   "type": "image",
+   "who": [
+    "tobin"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "extreme close-up insert: a heavy black iron key with a tiny clock carved into its round handle lies in Master Tobin's open palm",
+   "refs": [
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S123",
+   "type": "video",
+   "duration": 5,
+   "camera": "medium two-shot, slow push-in",
+   "who": [
+    "tobin",
+    "elias"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "Master Tobin places the iron key in Elias's hands and Elias gazes at it in wonder",
+   "refs": [
+    "R3",
+    "R1",
+    "R5"
+   ]
+  },
+  {
+   "id": "S124",
+   "type": "video",
+   "duration": 5,
+   "camera": "wide shot, slow pull-back",
+   "who": [
+    "elias",
+    "tobin"
+   ],
+   "where": "town",
+   "light": "cold blue winter twilight and warm amber lantern",
+   "action": "the little clock shop glows warmly again, Elias and Master Tobin working inside as passers-by stop at the window",
+   "refs": [
+    "R1",
+    "R3",
+    "R5"
+   ]
+  },
+  {
+   "id": "S125",
+   "type": "image",
+   "who": [],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "insert: a wall of ticking clocks in the little shop, every pendulum swinging in time again",
+   "refs": [
+    "R6"
+   ]
+  },
+  {
+   "id": "S126",
+   "type": "image",
+   "who": [
+    "elias",
+    "pip"
+   ],
+   "where": "shop",
+   "light": "warm golden lamp and candle",
+   "action": "medium shot: Elias leans on the frosted bay window of the shop, smiling thoughtfully, while Pip perches on the snowy sill outside",
+   "refs": [
+    "R1",
+    "R2",
+    "R6"
+   ]
+  },
+  {
+   "id": "S127",
+   "type": "video",
+   "duration": 5,
+   "camera": "close-up, slow push-in",
+   "who": [],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "warm lantern light glows on fresh untouched snow as soft flakes drift down",
+   "refs": [
+    "R5"
+   ]
+  },
+  {
+   "id": "S128",
+   "type": "video",
+   "duration": 10,
+   "camera": "wide shot, slow pull-back",
+   "who": [
+    "pip"
+   ],
+   "where": "town",
+   "light": "deep blue moonlit snow and warm golden lantern",
+   "action": "the whole snowy town glows at night beneath the great clock tower as Pip flies across the shining clock face",
+   "refs": [
+    "R2",
+    "R5"
+   ]
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "chunk": "A",
+   "section": "title",
+   "text": "Welcome to a new English story. Tonight’s tale is called The Clockmaker’s Last Key. Find a warm place, listen closely, and read along.",
+   "slide": "title"
+  },
+  {
+   "id": 2,
+   "chunk": "A",
+   "section": "chapter",
+   "text": "Chapter one. The Clockmaker’s Gift.",
+   "slide": "chapter-1"
+  },
+  {
+   "id": 3,
+   "chunk": "A",
+   "section": "story",
+   "text": "In a snowy town where the streets were cobbled and the lanterns glowed like honey, there stood a great clock tower.",
+   "ar": "في بلدة مكسوّة بالثلج، شوارعها مرصوفة بالحجارة وفوانيسها تتوهّج كالعسل، كان يقف برجُ ساعةٍ عظيم.",
+   "shots": [
+    "S01"
+   ]
+  },
+  {
+   "id": 4,
+   "chunk": "A",
+   "section": "story",
+   "text": "Every hour, its bell rang out over the rooftops, slow and deep, as if the town itself had a heartbeat.",
+   "ar": "كلّ ساعة، كان جرسه يدوّي فوق الأسطح، بطيئًا وعميقًا، كأنّ للبلدة نفسها قلبًا ينبض.",
+   "shots": [
+    "S02"
+   ]
+  },
+  {
+   "id": 5,
+   "chunk": "A",
+   "section": "story",
+   "text": "At its foot was a tiny shop, and in it lived the oldest clockmaker anyone could remember: Master Tobin.",
+   "ar": "عند سفح البرج كان دكّان صغير، وفيه عاش أكبر صانع ساعات يتذكّره أحد: المعلّم توبِن.",
+   "shots": [
+    "S03",
+    "S04"
+   ]
+  },
+  {
+   "id": 6,
+   "chunk": "A",
+   "section": "story",
+   "text": "A ten-year-old boy called Elias visited him almost every afternoon.",
+   "ar": "وكان صبيّ في العاشرة اسمه إلياس يزوره كلّ عصر تقريبًا.",
+   "shots": [
+    "S05"
+   ]
+  },
+  {
+   "id": 7,
+   "chunk": "A",
+   "section": "story",
+   "text": "He would sit on a stool by the frosted window, chin in his hands, and watch.",
+   "ar": "كان يجلس على كرسيّ صغير قرب النافذة المغطّاة بالصقيع، ذقنه بين كفّيه، ويتأمّل.",
+   "shots": [
+    "S06",
+    "S07"
+   ]
+  },
+  {
+   "id": 8,
+   "chunk": "A",
+   "section": "story",
+   "text": "Master Tobin’s clocks were intricate little worlds of springs and wheels, some no bigger than a button.",
+   "ar": "كانت ساعات المعلّم توبِن عوالمَ صغيرةً معقّدة من النوابض والعجلات، بعضها ليس أكبر من زرّ.",
+   "shots": [
+    "S08",
+    "S09"
+   ]
+  },
+  {
+   "id": 9,
+   "chunk": "A",
+   "section": "story",
+   "text": "He was meticulous. He polished every gear twice, and he never, ever hurried.",
+   "ar": "كان دقيقًا إلى أبعد حدّ؛ يلمّع كلّ ترسٍ مرّتين، ولا يستعجل أبدًا.",
+   "shots": [
+    "S10"
+   ]
+  },
+  {
+   "id": 10,
+   "chunk": "A",
+   "section": "story",
+   "text": "“A clock is like a promise, Elias,” he liked to say. “Make it carefully, and it will keep its word.”",
+   "ar": "كان يحبّ أن يقول: «الساعة مثل الوعد يا إلياس. اصنعها بعناية، وستفي بكلمتها».",
+   "shots": [
+    "S11"
+   ]
+  },
+  {
+   "id": 11,
+   "chunk": "A",
+   "section": "story",
+   "text": "But that winter, the old man’s hands had begun to tremble, and his eyes could no longer see the smallest screws.",
+   "ar": "لكنّ يدَي العجوز بدأتا ترتجفان ذلك الشتاء، ولم تعد عيناه تريان أصغر البراغي.",
+   "shots": [
+    "S12",
+    "S13"
+   ]
+  },
+  {
+   "id": 12,
+   "chunk": "A",
+   "section": "story",
+   "text": "On the first night of snow, he hung a little sign on the door. The shop was closed.",
+   "ar": "وفي أوّل ليلة تساقط فيها الثلج، علّق لافتة صغيرة على الباب. لقد أُغلق الدكّان.",
+   "shots": [
+    "S14"
+   ]
+  },
+  {
+   "id": 13,
+   "chunk": "A",
+   "section": "story",
+   "text": "Elias stood in the empty room. The smell of oil and wood still lingered, but the ticking had stopped.",
+   "ar": "وقف إلياس في الغرفة الخالية. كانت رائحة الزيت والخشب ما تزال عالقة، لكنّ التكتكة توقّفت.",
+   "shots": [
+    "S15",
+    "S16"
+   ]
+  },
+  {
+   "id": 14,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Don’t look so sad,” said Master Tobin, and he pressed something cold into Elias’s hand.",
+   "ar": "قال المعلّم توبِن: «لا تبدُ حزينًا هكذا»، ووضع شيئًا باردًا في يد إلياس.",
+   "shots": [
+    "S17"
+   ]
+  },
+  {
+   "id": 15,
+   "chunk": "A",
+   "section": "story",
+   "text": "It was a small brass key on a faded green ribbon, its handle shaped like a tiny sun.",
+   "ar": "كان مفتاحًا نحاسيًّا صغيرًا على شريط أخضر باهت، مقبضه على شكل شمس صغيرة.",
+   "shots": [
+    "S18"
+   ]
+  },
+  {
+   "id": 16,
+   "chunk": "A",
+   "section": "story",
+   "text": "“This is my last key,” the old man whispered. “It opens a door at the top of the tower, behind the great gears.”",
+   "ar": "همس العجوز: «هذا آخر مفاتيحي. إنّه يفتح بابًا في أعلى البرج، خلف التروس الكبيرة».",
+   "shots": [
+    "S19",
+    "S20"
+   ]
+  },
+  {
+   "id": 17,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Use it only for small things. Time is fleeting, my boy. Don’t try to hold it too tightly.”",
+   "ar": "«لا تستعمله إلّا للأمور الصغيرة. الوقت عابر يا بنيّ، فلا تحاول أن تقبض عليه بقوّة».",
+   "shots": [
+    "S21",
+    "S22"
+   ]
+  },
+  {
+   "id": 18,
+   "chunk": "A",
+   "section": "story",
+   "text": "Then he took his walking stick and shuffled away through the snow.",
+   "ar": "ثمّ أخذ عصاه ومضى بخطوات بطيئة عبر الثلج.",
+   "shots": [
+    "S23"
+   ]
+  },
+  {
+   "id": 19,
+   "chunk": "B",
+   "section": "chapter",
+   "text": "Chapter two. The Door Behind the Gears.",
+   "slide": "chapter-2"
+  },
+  {
+   "id": 20,
+   "chunk": "B",
+   "section": "story",
+   "text": "That night, Elias could not sleep. He sat by the stove, turning the key over and over.",
+   "ar": "في تلك الليلة، لم يستطع إلياس أن ينام. جلس قرب الموقد يقلّب المفتاح مرّة بعد مرّة.",
+   "shots": [
+    "S24"
+   ]
+  },
+  {
+   "id": 21,
+   "chunk": "B",
+   "section": "story",
+   "text": "Earlier, rushing to watch the snow, he had knocked his mother’s favourite blue jug off the table.",
+   "ar": "قبل ذلك بقليل، وهو يركض ليشاهد الثلج، أوقع إبريق أمّه الأزرق المفضّل عن الطاولة.",
+   "shots": [
+    "S25"
+   ]
+  },
+  {
+   "id": 22,
+   "chunk": "B",
+   "section": "story",
+   "text": "She had not shouted. She had only gathered the pieces in silence, and that was worse.",
+   "ar": "لم تصرخ. اكتفت بجمع القطع في صمت، وكان ذلك أسوأ.",
+   "shots": [
+    "S26",
+    "S27"
+   ]
+  },
+  {
+   "id": 23,
+   "chunk": "B",
+   "section": "story",
+   "text": "So, when the house was asleep, Elias slipped out into the night.",
+   "ar": "وحين نام البيت، تسلّل إلياس إلى الليل.",
+   "shots": [
+    "S28"
+   ]
+  },
+  {
+   "id": 24,
+   "chunk": "B",
+   "section": "story",
+   "text": "The square was silent and blue. Snowflakes drifted past the lanterns like slow, golden moths.",
+   "ar": "كانت الساحة صامتة زرقاء، والثلج ينجرف أمام الفوانيس كفراشات ذهبية بطيئة.",
+   "shots": [
+    "S29",
+    "S30"
+   ]
+  },
+  {
+   "id": 25,
+   "chunk": "B",
+   "section": "story",
+   "text": "The tower door creaked open, and he climbed the winding stairs, round and round, into the dark.",
+   "ar": "انفتح باب البرج بصرير، فصعد الدرج اللولبيّ، يدور ويدور، نحو الظلام.",
+   "shots": [
+    "S31",
+    "S32"
+   ]
+  },
+  {
+   "id": 26,
+   "chunk": "B",
+   "section": "story",
+   "text": "At the top, huge brass gears turned in the shadows, and the great clock face glowed like a moon.",
+   "ar": "في الأعلى، كانت تروس نحاسيّة هائلة تدور في الظلال، ووجه الساعة الكبير يتوهّج كالقمر.",
+   "shots": [
+    "S33"
+   ]
+  },
+  {
+   "id": 27,
+   "chunk": "B",
+   "section": "story",
+   "text": "Something moved on a beam. Two round amber eyes blinked down at him.",
+   "ar": "تحرّك شيء على عارضة. عينان كهرمانيّتان مستديرتان رمشتا وهما تنظران إليه.",
+   "shots": [
+    "S34"
+   ]
+  },
+  {
+   "id": 28,
+   "chunk": "B",
+   "section": "story",
+   "text": "It was a small grey owl, speckled with white, and he looked at Elias with a very solemn face.",
+   "ar": "كانت بومة رماديّة صغيرة مرقّطة بالأبيض، نظرت إلى إلياس بوجه جادّ وقور.",
+   "shots": [
+    "S35"
+   ]
+  },
+  {
+   "id": 29,
+   "chunk": "B",
+   "section": "story",
+   "text": "“You must be the boy with Tobin’s key,” said the owl. “I’m Pip. I’ve been waiting for you.”",
+   "ar": "قال البوم الصغير: «لا بدّ أنّك الصبيّ الذي يحمل مفتاح توبِن. أنا پيپ، وقد كنت أنتظرك».",
+   "shots": [
+    "S36"
+   ]
+  },
+  {
+   "id": 30,
+   "chunk": "B",
+   "section": "story",
+   "text": "Elias nearly dropped his candle. “You can talk?”",
+   "ar": "كاد إلياس يُسقط شمعته: «أنت تتكلّم؟».",
+   "shots": [
+    "S37"
+   ]
+  },
+  {
+   "id": 31,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Only up here,” said Pip. “Time behaves strangely at the top of a tower.”",
+   "ar": "قال پيپ: «هنا في الأعلى فقط. فالوقت يتصرّف بغرابة في قمّة البرج».",
+   "shots": [
+    "S38"
+   ]
+  },
+  {
+   "id": 32,
+   "chunk": "B",
+   "section": "story",
+   "text": "The owl hopped along the beam and tapped the wall. Behind the gears was a tiny keyhole.",
+   "ar": "قفز پيپ على العارضة ونقر الجدار. وخلف التروس، كان هناك ثقب مفتاح صغير.",
+   "shots": [
+    "S39",
+    "S40"
+   ]
+  },
+  {
+   "id": 33,
+   "chunk": "B",
+   "section": "story",
+   "text": "Elias turned the key. With a sigh of warm air, a little round door swung open.",
+   "ar": "أدار إلياس المفتاح. ومع تنهيدة من الهواء الدافئ، انفتح باب صغير مستدير.",
+   "shots": [
+    "S41"
+   ]
+  },
+  {
+   "id": 34,
+   "chunk": "B",
+   "section": "story",
+   "text": "Inside was a secret room. Gold stars were painted on a midnight-blue ceiling, and a silver hourglass stood on a stone pedestal.",
+   "ar": "في الداخل غرفة سرّية؛ نجوم ذهبيّة مرسومة على سقف أزرق كمنتصف الليل، وساعة رمليّة فضّية على قاعدة حجريّة.",
+   "shots": [
+    "S42",
+    "S43"
+   ]
+  },
+  {
+   "id": 35,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Turn the hourglass,” said Pip, “and the whole town goes back one hour. But only once each night.”",
+   "ar": "قال پيپ: «اقلب الساعة الرمليّة، فتعود البلدة كلّها ساعة واحدة إلى الوراء. لكن مرّة واحدة فقط كلّ ليلة».",
+   "shots": [
+    "S44"
+   ]
+  },
+  {
+   "id": 36,
+   "chunk": "B",
+   "section": "story",
+   "text": "Elias took a breath, put both hands on the cool silver, and turned it over.",
+   "ar": "أخذ إلياس نفسًا، ووضع يديه على الفضّة الباردة، وقلبها.",
+   "shots": [
+    "S45",
+    "S46"
+   ]
+  },
+  {
+   "id": 37,
+   "chunk": "B",
+   "section": "story",
+   "text": "At once, the great gears groaned and spun backwards. Outside, the snow floated up into the sky.",
+   "ar": "في الحال، أنّت التروس الكبيرة ودارت إلى الوراء. وفي الخارج، طفا الثلج صاعدًا نحو السماء.",
+   "shots": [
+    "S47",
+    "S48"
+   ]
+  },
+  {
+   "id": 38,
+   "chunk": "B",
+   "section": "story",
+   "text": "The candle flame shrank, then grew. And the bell rang out an hour that had already passed.",
+   "ar": "صغُر لهب الشمعة ثمّ كبر، ودقّ الجرس ساعةً كانت قد مضت.",
+   "shots": [
+    "S49"
+   ]
+  },
+  {
+   "id": 39,
+   "chunk": "B",
+   "section": "story",
+   "text": "Elias raced home. There, on the kitchen table, stood his mother’s blue jug, whole and shining.",
+   "ar": "ركض إلياس إلى البيت. وهناك، على طاولة المطبخ، كان إبريق أمّه الأزرق سليمًا لامعًا.",
+   "shots": [
+    "S50",
+    "S51"
+   ]
+  },
+  {
+   "id": 40,
+   "chunk": "B",
+   "section": "story",
+   "text": "This time he walked slowly, and the jug stayed where it was.",
+   "ar": "هذه المرّة مشى ببطء، وبقي الإبريق في مكانه.",
+   "shots": [
+    "S52"
+   ]
+  },
+  {
+   "id": 41,
+   "chunk": "B",
+   "section": "story",
+   "text": "His mother smiled at him over her sewing, and she never knew.",
+   "ar": "ابتسمت له أمّه من فوق خياطتها، ولم تعرف قطّ.",
+   "shots": [
+    "S53"
+   ]
+  },
+  {
+   "id": 42,
+   "chunk": "C",
+   "section": "chapter",
+   "text": "Chapter three. Small Mistakes.",
+   "slide": "chapter-3"
+  },
+  {
+   "id": 43,
+   "chunk": "C",
+   "section": "story",
+   "text": "After that, Elias climbed the tower almost every night, and Pip was always waiting on his beam.",
+   "ar": "بعد ذلك، صار إلياس يصعد البرج كلّ ليلة تقريبًا، وكان پيپ ينتظره دائمًا على عارضته.",
+   "shots": [
+    "S54"
+   ]
+  },
+  {
+   "id": 44,
+   "chunk": "C",
+   "section": "story",
+   "text": "On Tuesday, he burned the toast for supper. So he turned the hourglass, and the toast came out golden.",
+   "ar": "يوم الثلاثاء، أحرق خبز العشاء المحمّص. فقلب الساعة الرمليّة، فخرج الخبز ذهبيًّا.",
+   "shots": [
+    "S55",
+    "S56"
+   ]
+  },
+  {
+   "id": 45,
+   "chunk": "C",
+   "section": "story",
+   "text": "On Wednesday, he forgot the words of his song at the carol concert, and the other children giggled.",
+   "ar": "يوم الأربعاء، نسي كلمات أغنيته في حفل التراتيل، فضحك الأطفال الآخرون.",
+   "shots": [
+    "S57"
+   ]
+  },
+  {
+   "id": 46,
+   "chunk": "C",
+   "section": "story",
+   "text": "So he turned back time, and this time he sang every word perfectly, his voice as clear as a bell.",
+   "ar": "فأعاد الوقت، وفي المرّة الثانية غنّى كلّ كلمة بإتقان، وصوته صافٍ كالجرس.",
+   "shots": [
+    "S58"
+   ]
+  },
+  {
+   "id": 47,
+   "chunk": "C",
+   "section": "story",
+   "text": "Everyone clapped. But the pride he felt was fleeting, like breath on a cold window.",
+   "ar": "صفّق الجميع، لكنّ الفخر الذي شعر به كان عابرًا، كأنفاسٍ على نافذة باردة.",
+   "shots": [
+    "S59",
+    "S60"
+   ]
+  },
+  {
+   "id": 48,
+   "chunk": "C",
+   "section": "story",
+   "text": "Somewhere deep inside, a quiet voice was whispering. It was his conscience, and it did not sound pleased.",
+   "ar": "في أعماقه، كان صوت هادئ يهمس. كان ذلك ضميره، ولم يبدُ راضيًا.",
+   "shots": [
+    "S61"
+   ]
+  },
+  {
+   "id": 49,
+   "chunk": "C",
+   "section": "story",
+   "text": "“They weren’t really clapping for me,” he told Pip that night. “They were clapping for a boy who had a second try.”",
+   "ar": "قال لپيپ تلك الليلة: «لم يكونوا يصفّقون لي حقًّا، بل لصبيّ حصل على محاولة ثانية».",
+   "shots": [
+    "S62"
+   ]
+  },
+  {
+   "id": 50,
+   "chunk": "C",
+   "section": "story",
+   "text": "Pip ruffled his silver feathers. “You are getting very good at erasing, Elias. But are you getting any better at mending?”",
+   "ar": "نفش پيپ ريشه الفضّي: «لقد صرت ماهرًا جدًّا في المحو يا إلياس، لكن هل صرت أفضل في الإصلاح؟».",
+   "shots": [
+    "S63"
+   ]
+  },
+  {
+   "id": 51,
+   "chunk": "C",
+   "section": "story",
+   "text": "Elias did not answer. He let the question linger in the cold air between them.",
+   "ar": "لم يُجب إلياس، بل ترك السؤال معلّقًا في الهواء البارد بينهما.",
+   "shots": [
+    "S64"
+   ]
+  },
+  {
+   "id": 52,
+   "chunk": "C",
+   "section": "story",
+   "text": "Meanwhile, in the shuttered shop, Master Tobin was working on one last creation.",
+   "ar": "في هذه الأثناء، في الدكّان المغلق، كان المعلّم توبِن يعمل على آخر إبداعاته.",
+   "shots": [
+    "S65",
+    "S66"
+   ]
+  },
+  {
+   "id": 53,
+   "chunk": "C",
+   "section": "story",
+   "text": "Even with trembling hands, he had spent the whole winter on it: a clockwork town inside a glass globe.",
+   "ar": "رغم ارتجاف يديه، أمضى الشتاء كلّه عليه: بلدة تعمل كالساعة داخل كرة زجاجيّة.",
+   "shots": [
+    "S67"
+   ]
+  },
+  {
+   "id": 54,
+   "chunk": "C",
+   "section": "story",
+   "text": "Inside the glass, there was a tiny clock tower, tiny lanterns, and tiny people skating on a mirror lake.",
+   "ar": "داخل الزجاج، كان هناك برج ساعة صغير، وفوانيس صغيرة، وأناس صغار يتزلّجون على بحيرة كالمرآة.",
+   "shots": [
+    "S68"
+   ]
+  },
+  {
+   "id": 55,
+   "chunk": "C",
+   "section": "story",
+   "text": "When you turned its key, snow swirled, the skaters spun, and a little bell played the town’s oldest song.",
+   "ar": "وحين يُدار مفتاحها، يدور الثلج، ويلفّ المتزلّجون، ويعزف جرس صغير أقدم أغاني البلدة.",
+   "shots": [
+    "S69"
+   ]
+  },
+  {
+   "id": 56,
+   "chunk": "C",
+   "section": "story",
+   "text": "“It’s for the Midwinter Festival,” Tobin told Elias. “A gift for the town, so they remember the old clockmaker.”",
+   "ar": "قال توبِن لإلياس: «إنّها لمهرجان منتصف الشتاء. هديّة للبلدة، كي يتذكّروا صانع الساعات العجوز».",
+   "shots": [
+    "S70",
+    "S71"
+   ]
+  },
+  {
+   "id": 57,
+   "chunk": "C",
+   "section": "story",
+   "text": "“Will you carry it to the square for me on Friday? My legs are not as brave as they used to be.”",
+   "ar": "«هل تحملها إلى الساحة بدلًا منّي يوم الجمعة؟ فساقاي لم تعودا شجاعتين كما كانتا».",
+   "shots": [
+    "S72"
+   ]
+  },
+  {
+   "id": 58,
+   "chunk": "C",
+   "section": "story",
+   "text": "Elias’s heart swelled with pride. “I’ll be so careful,” he promised. “I’ll walk the whole way.”",
+   "ar": "امتلأ قلب إلياس فخرًا، ووعد: «سأكون حذرًا جدًّا. سأمشي الطريق كلّه».",
+   "shots": [
+    "S73"
+   ]
+  },
+  {
+   "id": 59,
+   "chunk": "D",
+   "section": "chapter",
+   "text": "Chapter four. The Hour He Did Not Turn.",
+   "slide": "chapter-4"
+  },
+  {
+   "id": 60,
+   "chunk": "D",
+   "section": "story",
+   "text": "On Friday evening, the square was full of music, roasted chestnuts and the warm glow of a hundred candles.",
+   "ar": "مساء الجمعة، امتلأت الساحة بالموسيقى والكستناء المشويّة وبالوهج الدافئ لمئة شمعة.",
+   "shots": [
+    "S74",
+    "S75"
+   ]
+  },
+  {
+   "id": 61,
+   "chunk": "D",
+   "section": "story",
+   "text": "Elias carried the glass globe in both arms, wrapped in a blanket, one slow step at a time.",
+   "ar": "حمل إلياس الكرة الزجاجيّة بذراعيه، ملفوفة ببطانية، خطوةً بطيئة بعد خطوة.",
+   "shots": [
+    "S76",
+    "S77"
+   ]
+  },
+  {
+   "id": 62,
+   "chunk": "D",
+   "section": "story",
+   "text": "Then his friends shouted from the ice. “Elias! Come and race us!”",
+   "ar": "ثمّ صاح أصدقاؤه من على الجليد: «إلياس! تعالَ وسابقنا!».",
+   "shots": [
+    "S78"
+   ]
+  },
+  {
+   "id": 63,
+   "chunk": "D",
+   "section": "story",
+   "text": "Just for a moment, he forgot his promise. He began to run.",
+   "ar": "للحظة واحدة فقط، نسي وعده، وبدأ يركض.",
+   "shots": [
+    "S79"
+   ]
+  },
+  {
+   "id": 64,
+   "chunk": "D",
+   "section": "story",
+   "text": "His boot hit a patch of black ice. His feet flew up, and the globe flew out of his arms.",
+   "ar": "اصطدم حذاؤه برقعة من الجليد الأسود، فطارت قدماه إلى الأعلى، وطارت الكرة من بين ذراعيه.",
+   "shots": [
+    "S80"
+   ]
+  },
+  {
+   "id": 65,
+   "chunk": "D",
+   "section": "story",
+   "text": "It struck the cobbles with a sound like a hundred tiny bells breaking at once.",
+   "ar": "ارتطمت بالحجارة بصوتٍ كأنّه مئة جرس صغير ينكسر في آن واحد.",
+   "shots": [
+    "S81"
+   ]
+  },
+  {
+   "id": 66,
+   "chunk": "D",
+   "section": "story",
+   "text": "Elias stared in horror. A whole winter of the old man’s work, gone in one irreversible second.",
+   "ar": "حدّق إلياس مذعورًا. شتاءٌ كامل من عمل العجوز ضاع في ثانية لا رجعة فيها.",
+   "shots": [
+    "S82"
+   ]
+  },
+  {
+   "id": 67,
+   "chunk": "D",
+   "section": "story",
+   "text": "Tiny skaters, tiny lanterns and a hundred intricate wheels lay glittering in the snow.",
+   "ar": "متزلّجون صغار وفوانيس صغيرة ومئة عجلة معقّدة تناثرت متلألئة على الثلج.",
+   "shots": [
+    "S83"
+   ]
+  },
+  {
+   "id": 68,
+   "chunk": "D",
+   "section": "story",
+   "text": "The music stopped. Every face in the square turned towards him.",
+   "ar": "توقّفت الموسيقى، والتفت إليه كلّ وجه في الساحة.",
+   "shots": [
+    "S84",
+    "S85"
+   ]
+  },
+  {
+   "id": 69,
+   "chunk": "D",
+   "section": "story",
+   "text": "Elias did not wait. He scrambled up and ran, past the staring faces, straight into the tower.",
+   "ar": "لم ينتظر إلياس. نهض متعثّرًا وركض، متجاوزًا الوجوه المحدّقة، إلى البرج مباشرة.",
+   "shots": [
+    "S86"
+   ]
+  },
+  {
+   "id": 70,
+   "chunk": "D",
+   "section": "story",
+   "text": "He took the stairs two at a time until he stood before the silver hourglass.",
+   "ar": "صعد الدرج درجتين درجتين، حتى وقف أمام الساعة الرمليّة الفضّية.",
+   "shots": [
+    "S87",
+    "S88"
+   ]
+  },
+  {
+   "id": 71,
+   "chunk": "D",
+   "section": "story",
+   "text": "“I can fix it,” he gasped. “One hour. Nobody will ever know.”",
+   "ar": "قال لاهثًا: «أستطيع إصلاح ذلك. ساعة واحدة، ولن يعرف أحد أبدًا».",
+   "shots": [
+    "S89"
+   ]
+  },
+  {
+   "id": 72,
+   "chunk": "D",
+   "section": "story",
+   "text": "Pip landed beside him, quiet and solemn. “You can turn it,” he said. “Nobody can stop you.”",
+   "ar": "حطّ پيپ بجانبه هادئًا وقورًا، وقال: «تستطيع أن تقلبها. لا أحد يستطيع منعك».",
+   "shots": [
+    "S90"
+   ]
+  },
+  {
+   "id": 73,
+   "chunk": "D",
+   "section": "story",
+   "text": "“But look outside first,” Pip said softly. “Look at what this hour holds.”",
+   "ar": "قال پيپ بهدوء: «لكن انظر إلى الخارج أوّلًا. انظر إلى ما تحمله هذه الساعة».",
+   "shots": [
+    "S91"
+   ]
+  },
+  {
+   "id": 74,
+   "chunk": "D",
+   "section": "story",
+   "text": "Elias went to the little window and looked down.",
+   "ar": "ذهب إلياس إلى النافذة الصغيرة ونظر إلى الأسفل.",
+   "shots": [
+    "S92"
+   ]
+  },
+  {
+   "id": 75,
+   "chunk": "D",
+   "section": "story",
+   "text": "Master Tobin was kneeling in the snow, gathering the pieces into his handkerchief, and the children knelt with him.",
+   "ar": "كان المعلّم توبِن راكعًا في الثلج يجمع القطع في منديله، والأطفال راكعون معه.",
+   "shots": [
+    "S93",
+    "S94"
+   ]
+  },
+  {
+   "id": 76,
+   "chunk": "D",
+   "section": "story",
+   "text": "Someone had started the old song again, and the whole town was singing it softly, like a lullaby.",
+   "ar": "كان أحدهم قد بدأ الأغنية القديمة من جديد، وراحت البلدة كلّها تغنّيها بهدوء، كتهويدة.",
+   "shots": [
+    "S95",
+    "S96"
+   ]
+  },
+  {
+   "id": 77,
+   "chunk": "D",
+   "section": "story",
+   "text": "“If you turn the glass, the globe will be whole,” said Pip. “But you will still be a boy who ran away.”",
+   "ar": "قال پيپ: «إن قلبت الساعة، ستعود الكرة سليمة، لكنّك ستبقى صبيًّا هرب».",
+   "shots": [
+    "S97"
+   ]
+  },
+  {
+   "id": 78,
+   "chunk": "D",
+   "section": "story",
+   "text": "“Some things are irreversible, Elias. A broken promise cannot be turned back. It can only be mended.”",
+   "ar": "«بعض الأشياء لا رجعة فيها يا إلياس. الوعد المكسور لا يُعاد إلى الوراء، بل يُصلَح فقط».",
+   "shots": [
+    "S98"
+   ]
+  },
+  {
+   "id": 79,
+   "chunk": "D",
+   "section": "story",
+   "text": "“And you cannot redeem a mistake by hiding it. You redeem it by facing it.”",
+   "ar": "«ولا يمكنك أن تكفّر عن خطأ بإخفائه، بل تكفّر عنه بمواجهته».",
+   "shots": [
+    "S99"
+   ]
+  },
+  {
+   "id": 80,
+   "chunk": "D",
+   "section": "story",
+   "text": "Elias looked at the hourglass for a long time. His conscience was no longer whispering. It was clear and calm.",
+   "ar": "نظر إلياس إلى الساعة الرمليّة طويلًا. لم يعد ضميره يهمس؛ صار واضحًا وهادئًا.",
+   "shots": [
+    "S100",
+    "S101"
+   ]
+  },
+  {
+   "id": 81,
+   "chunk": "D",
+   "section": "story",
+   "text": "Slowly, he took his hands away from the silver, and he walked back down the stairs.",
+   "ar": "ببطء، أبعد يديه عن الفضّة، ونزل الدرج من جديد.",
+   "shots": [
+    "S102"
+   ]
+  },
+  {
+   "id": 82,
+   "chunk": "E",
+   "section": "chapter",
+   "text": "Chapter five. The Last Key.",
+   "slide": "chapter-5"
+  },
+  {
+   "id": 83,
+   "chunk": "E",
+   "section": "story",
+   "text": "The square fell quiet when Elias stepped out of the tower. His cheeks were burning, but his steps were steady.",
+   "ar": "ساد الصمت الساحة حين خرج إلياس من البرج. كانت وجنتاه تحترقان، لكنّ خطواته كانت ثابتة.",
+   "shots": [
+    "S103"
+   ]
+  },
+  {
+   "id": 84,
+   "chunk": "E",
+   "section": "story",
+   "text": "He knelt beside Master Tobin. “It was me,” he said. “You asked me to walk, and I ran. I’m so sorry.”",
+   "ar": "ركع بجانب المعلّم توبِن وقال: «أنا الفاعل. طلبت منّي أن أمشي، فركضت. أنا آسف جدًّا».",
+   "shots": [
+    "S104",
+    "S105"
+   ]
+  },
+  {
+   "id": 85,
+   "chunk": "E",
+   "section": "story",
+   "text": "The old man looked at him over his spectacles for a long, solemn moment. Then, to everyone’s surprise, he smiled.",
+   "ar": "نظر إليه العجوز من فوق نظّارته لحظةً طويلة جادّة. ثمّ، لدهشة الجميع، ابتسم.",
+   "shots": [
+    "S106"
+   ]
+  },
+  {
+   "id": 86,
+   "chunk": "E",
+   "section": "story",
+   "text": "“I know where you went,” he whispered. “I had that key too, once. It took me far longer to learn what you learned tonight.”",
+   "ar": "همس: «أعرف إلى أين ذهبت. كان ذلك المفتاح معي أيضًا ذات يوم، واستغرقني وقت أطول بكثير لأتعلّم ما تعلّمته الليلة».",
+   "shots": [
+    "S107",
+    "S108"
+   ]
+  },
+  {
+   "id": 87,
+   "chunk": "E",
+   "section": "story",
+   "text": "For the rest of that winter, Elias and Tobin mended the globe together, every single afternoon.",
+   "ar": "طوال ما تبقّى من ذلك الشتاء، أصلح إلياس وتوبِن الكرة معًا، عصرًا بعد عصر.",
+   "shots": [
+    "S109"
+   ]
+  },
+  {
+   "id": 88,
+   "chunk": "E",
+   "section": "story",
+   "text": "Tobin’s eyes guided, and Elias’s young fingers did the work. He was slow, patient and meticulous, just like his teacher.",
+   "ar": "كانت عينا توبِن ترشدان، وأصابع إلياس الصغيرة تعمل. كان بطيئًا، صبورًا، ودقيقًا جدًّا، تمامًا مثل معلّمه.",
+   "shots": [
+    "S110",
+    "S111"
+   ]
+  },
+  {
+   "id": 89,
+   "chunk": "E",
+   "section": "story",
+   "text": "They replaced every wheel and every tiny skater. Only the glass kept one thin crack that could never be hidden.",
+   "ar": "استبدلا كلّ عجلة وكلّ متزلّج صغير. ولم يبقَ إلّا شقّ رفيع في الزجاج لا يمكن إخفاؤه أبدًا.",
+   "shots": [
+    "S112",
+    "S113"
+   ]
+  },
+  {
+   "id": 90,
+   "chunk": "E",
+   "section": "story",
+   "text": "“Leave it,” said Tobin. “That crack is the most honest part of the clock. It is where you chose to redeem yourself.”",
+   "ar": "قال توبِن: «اتركه. هذا الشقّ أصدق جزء في الساعة كلّها. إنّه المكان الذي اخترت فيه أن تكفّر عن خطئك».",
+   "shots": [
+    "S114"
+   ]
+  },
+  {
+   "id": 91,
+   "chunk": "E",
+   "section": "story",
+   "text": "By the end of winter, the globe stood in the square, and whenever its bell played, people stopped to listen.",
+   "ar": "ومع نهاية الشتاء، وقفت الكرة في الساحة، وكلّما عزف جرسها، توقّف الناس ليصغوا.",
+   "shots": [
+    "S115",
+    "S116"
+   ]
+  },
+  {
+   "id": 92,
+   "chunk": "E",
+   "section": "story",
+   "text": "On its base, a small brass plate said: Made by Master Tobin, who taught this town to take its time.",
+   "ar": "وعلى قاعدتها لوحة نحاسيّة صغيرة كُتب عليها: صنعها المعلّم توبِن، الذي علّم هذه البلدة ألّا تستعجل.",
+   "shots": [
+    "S117"
+   ]
+  },
+  {
+   "id": 93,
+   "chunk": "F",
+   "section": "story",
+   "text": "That evening, Elias climbed the tower one last time and laid the brass key in front of Pip.",
+   "ar": "في ذلك المساء، صعد إلياس البرج للمرّة الأخيرة، ووضع المفتاح النحاسيّ برفق أمام پيپ.",
+   "shots": [
+    "S118"
+   ]
+  },
+  {
+   "id": 94,
+   "chunk": "F",
+   "section": "story",
+   "text": "“Keep it for the next child who needs it,” he said. “I don’t need to go back anymore. I’d rather go forward.”",
+   "ar": "قال: «احتفظ به للطفل القادم الذي يحتاجه. لم أعد بحاجة إلى العودة إلى الوراء. أفضّل أن أمضي إلى الأمام».",
+   "shots": [
+    "S119"
+   ]
+  },
+  {
+   "id": 95,
+   "chunk": "F",
+   "section": "story",
+   "text": "Pip blinked his great amber eyes, and for once he did not look solemn at all. He looked proud.",
+   "ar": "رمش پيپ بعينيه الكهرمانيّتين الكبيرتين، ولأوّل مرّة لم يبدُ جادًّا على الإطلاق، بل بدا فخورًا.",
+   "shots": [
+    "S120"
+   ]
+  },
+  {
+   "id": 96,
+   "chunk": "F",
+   "section": "story",
+   "text": "When Elias came down, Master Tobin was waiting at the shop door with something in his hand.",
+   "ar": "وحين نزل إلياس، كان المعلّم توبِن ينتظره عند باب الدكّان وفي يده شيء ما.",
+   "shots": [
+    "S121"
+   ]
+  },
+  {
+   "id": 97,
+   "chunk": "F",
+   "section": "story",
+   "text": "It was a heavy iron key with a tiny clock carved on its handle: the key to the shop.",
+   "ar": "كان مفتاحًا حديديًّا ثقيلًا نُقشت على مقبضه ساعة صغيرة: مفتاح الدكّان.",
+   "shots": [
+    "S122"
+   ]
+  },
+  {
+   "id": 98,
+   "chunk": "F",
+   "section": "story",
+   "text": "“My very last key,” said the old man, “for my apprentice. The clocks have been far too quiet without you.”",
+   "ar": "قال العجوز: «آخر مفتاح عندي، لتلميذي. لقد كانت الساعات صامتة جدًّا من دونك».",
+   "shots": [
+    "S123"
+   ]
+  },
+  {
+   "id": 99,
+   "chunk": "F",
+   "section": "story",
+   "text": "So the shop opened again, and every afternoon the ticking filled the street once more.",
+   "ar": "وهكذا فُتح الدكّان من جديد، وكلّ عصر عادت التكتكة تملأ الشارع.",
+   "shots": [
+    "S124",
+    "S125"
+   ]
+  },
+  {
+   "id": 100,
+   "chunk": "F",
+   "section": "story",
+   "text": "Elias still thinks about the hourglass sometimes. But now, when a good moment comes, he does not try to catch it.",
+   "ar": "ما زال إلياس يفكّر في الساعة الرمليّة أحيانًا. لكنّه الآن، حين تأتي لحظة جميلة، لا يحاول أن يمسك بها.",
+   "shots": [
+    "S126"
+   ]
+  },
+  {
+   "id": 101,
+   "chunk": "F",
+   "section": "story",
+   "text": "He simply lets it linger, warm and bright, like lantern light on fresh snow. Then he lets it go.",
+   "ar": "بل يتركها تبقى قليلًا، دافئة ومضيئة، كضوء الفانوس على ثلج جديد. ثمّ يدعها تمضي.",
+   "shots": [
+    "S127"
+   ]
+  },
+  {
+   "id": 102,
+   "chunk": "F",
+   "section": "story",
+   "text": "Because every hour is fleeting, and every hour is a gift. And the best ones are the ones we live only once.",
+   "ar": "لأنّ كلّ ساعة عابرة، وكلّ ساعة هديّة. وأجمل الساعات هي تلك التي نعيشها مرّة واحدة فقط.",
+   "shots": [
+    "S128"
+   ]
+  },
+  {
+   "id": 103,
+   "chunk": "G",
+   "section": "words",
+   "text": "Now, let’s look at eight beautiful words from the story. Listen carefully, and say each one with me.",
+   "slide": "words-intro"
+  },
+  {
+   "id": 104,
+   "chunk": "G",
+   "section": "words",
+   "text": "Intricate. Something intricate is made of many small parts that fit together in a detailed way. Master Tobin’s clocks were intricate little worlds of springs and wheels.",
+   "slide": "word-intricate"
+  },
+  {
+   "id": 105,
+   "chunk": "G",
+   "section": "words",
+   "text": "Meticulous. A meticulous person is very careful about every small detail. He was meticulous. He polished every gear twice.",
+   "slide": "word-meticulous"
+  },
+  {
+   "id": 106,
+   "chunk": "G",
+   "section": "words",
+   "text": "Fleeting. Something fleeting lasts only a very short time. But the pride he felt was fleeting, like breath on a cold window.",
+   "slide": "word-fleeting"
+  },
+  {
+   "id": 107,
+   "chunk": "G",
+   "section": "words",
+   "text": "Linger. To linger means to stay a little longer, slowly, before going. The smell of oil and wood still lingered.",
+   "slide": "word-linger"
+  },
+  {
+   "id": 108,
+   "chunk": "G",
+   "section": "words",
+   "text": "Irreversible. If something is irreversible, you cannot change it back. Some things are irreversible, Elias.",
+   "slide": "word-irreversible"
+  },
+  {
+   "id": 109,
+   "chunk": "G",
+   "section": "words",
+   "text": "Solemn. Solemn means very serious and quiet. The little owl looked at Elias with a very solemn face.",
+   "slide": "word-solemn"
+  },
+  {
+   "id": 110,
+   "chunk": "G",
+   "section": "words",
+   "text": "Redeem. To redeem yourself is to make up for something wrong you have done. You cannot redeem a mistake by hiding it. You redeem it by facing it.",
+   "slide": "word-redeem"
+  },
+  {
+   "id": 111,
+   "chunk": "G",
+   "section": "words",
+   "text": "Conscience. Your conscience is the voice inside you that tells you what is right and wrong. It was his conscience, and it did not sound pleased.",
+   "slide": "word-conscience"
+  },
+  {
+   "id": 112,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "Question one. What happens when Elias turns the silver hourglass? A: the whole town goes back one hour. B: the snow stops forever. Or C: Master Tobin becomes young again.",
+   "slide": "quiz-q1",
+   "pause": 4
+  },
+  {
+   "id": 113,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "The answer is A. The whole town goes back one hour, but only once each night.",
+   "slide": "quiz-q1-answer"
+  },
+  {
+   "id": 114,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "Question two. Why does Elias not turn back time after the globe breaks? A: Pip takes the key away. B: he chooses to face his mistake honestly. Or C: the hourglass is broken.",
+   "slide": "quiz-q2",
+   "pause": 4
+  },
+  {
+   "id": 115,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "The answer is B. He chooses to face his mistake, because hiding it would never redeem it.",
+   "slide": "quiz-q2-answer"
+  },
+  {
+   "id": 116,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "Question three. Which word means impossible to change back? A: fleeting. B: irreversible. Or C: meticulous.",
+   "slide": "quiz-q3",
+   "pause": 4
+  },
+  {
+   "id": 117,
+   "chunk": "H",
+   "section": "quiz",
+   "text": "The answer is B: irreversible. A broken promise is irreversible, but it can always be mended.",
+   "slide": "quiz-q3-answer"
+  },
+  {
+   "id": 118,
+   "chunk": "H",
+   "section": "outro",
+   "text": "Thank you for listening to The Clockmaker’s Last Key. If you could turn back time for just one hour, what would you do? Tell me in the comments, in English. See you in the next story!",
+   "slide": "outro"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "intricate",
+   "ipa": "/ˈɪn.trɪ.kət/",
+   "pos": "adjective",
+   "ar": "مُعقّد ودقيق التفاصيل",
+   "meaning": "made of many small parts that fit together in a detailed way",
+   "example": "Master Tobin’s clocks were intricate little worlds of springs and wheels."
+  },
+  {
+   "word": "meticulous",
+   "ipa": "/məˈtɪk.jə.ləs/",
+   "pos": "adjective",
+   "ar": "دقيق ومتأنٍّ جدًّا",
+   "meaning": "very careful about every small detail",
+   "example": "He was meticulous. He polished every gear twice."
+  },
+  {
+   "word": "fleeting",
+   "ipa": "/ˈfliː.tɪŋ/",
+   "pos": "adjective",
+   "ar": "عابر، سريع الزوال",
+   "meaning": "lasting only a very short time",
+   "example": "But the pride he felt was fleeting, like breath on a cold window."
+  },
+  {
+   "word": "linger",
+   "ipa": "/ˈlɪŋ.ɡə/",
+   "pos": "verb",
+   "ar": "يبقى ويتمهّل",
+   "meaning": "to stay somewhere a little longer, slowly, before going",
+   "example": "The smell of oil and wood still lingered."
+  },
+  {
+   "word": "irreversible",
+   "ipa": "/ˌɪr.ɪˈvɜː.sə.bəl/",
+   "pos": "adjective",
+   "ar": "لا رجعة فيه",
+   "meaning": "impossible to change back to how it was before",
+   "example": "Some things are irreversible, Elias."
+  },
+  {
+   "word": "solemn",
+   "ipa": "/ˈsɒl.əm/",
+   "pos": "adjective",
+   "ar": "جادّ ووقور",
+   "meaning": "very serious, quiet and grave",
+   "example": "He looked at Elias with a very solemn face."
+  },
+  {
+   "word": "redeem",
+   "ipa": "/rɪˈdiːm/",
+   "pos": "verb",
+   "ar": "يُكفّر عن خطئه، يُصلح ما أفسد",
+   "meaning": "to make up for something wrong that you have done",
+   "example": "You cannot redeem a mistake by hiding it. You redeem it by facing it."
+  },
+  {
+   "word": "conscience",
+   "ipa": "/ˈkɒn.ʃəns/",
+   "pos": "noun",
+   "ar": "الضمير",
+   "meaning": "the voice inside you that tells you what is right and wrong",
+   "example": "It was his conscience, and it did not sound pleased."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "q1",
+   "q": "What happens when Elias turns the silver hourglass?",
+   "options": [
+    "The whole town goes back one hour",
+    "The snow stops forever",
+    "Master Tobin becomes young again"
+   ],
+   "answer": 0
+  },
+  {
+   "id": "q2",
+   "q": "Why does Elias NOT turn back time after the globe breaks?",
+   "options": [
+    "Pip takes the key away",
+    "He chooses to face his mistake honestly",
+    "The hourglass is broken"
+   ],
+   "answer": 1
+  },
+  {
+   "id": "q3",
+   "q": "Which word means “impossible to change back”?",
+   "options": [
+    "fleeting",
+    "irreversible",
+    "meticulous"
+   ],
+   "answer": 1
+  }
+ ],
+ "outro": {
+  "text": "If you could turn back time for just one hour, what would you do? Tell me in the comments, in English!"
+ }
+}
