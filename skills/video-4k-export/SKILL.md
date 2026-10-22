@@ -18,7 +18,7 @@ python3 scripts/export_4k.py reel.mp4 reel-4k.mp4                     # vertical
 
 - Run it in the background (`nohup … > 4k.log 2>&1 &`) — it encodes at ~0.35× real time on this
   machine (a 14-minute video ≈ 40 minutes). Reels (30–60 s) take 2–3 minutes.
-- The script picks the bitrate so the file stays under **480 MiB**: files over 500 MiB cannot be
+- The script picks the bitrate so the file stays under **370 MiB**: the upload limit for files sent in the conversation was 500 MiB and later 400 MiB, so keep a margin; files over it cannot be
   sent in the conversation (that happened once with a 632 MiB file and cost a second 40-minute
   render — don't use plain `-crf` for long 4K exports).
 - Always keep and send the 1080p version first so he can publish immediately; 4K follows.

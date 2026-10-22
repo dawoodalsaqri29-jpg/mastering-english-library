@@ -4,7 +4,7 @@
 usage: export_4k.py IN.mp4 OUT.mp4 [--max-mib 480] [--vertical] [--preset veryfast]
 
 - Landscape → 3840x2160, vertical (Reels/Shorts) → 2160x3840; aspect kept, Lanczos upscale + light sharpening.
-- Picks the video bitrate so the file stays under --max-mib (default 480 MiB, under the 500 MiB
+- Picks the video bitrate so the file stays under --max-mib (default 370 MiB, under the 400 MiB
   limit for sending files in the conversation), capped at 16 Mbps (more is wasted on YouTube).
 - Audio is copied untouched. Prints progress; runs ~0.35x real time on 2 CPUs (14 min video ≈ 40 min),
   so start it in the background for long videos.
@@ -13,7 +13,7 @@ import argparse, json, subprocess, sys
 
 ap = argparse.ArgumentParser()
 ap.add_argument("inp"); ap.add_argument("out")
-ap.add_argument("--max-mib", type=float, default=480)
+ap.add_argument("--max-mib", type=float, default=370)
 ap.add_argument("--vertical", action="store_true")
 ap.add_argument("--preset", default="veryfast")
 a = ap.parse_args()
