@@ -1,0 +1,1651 @@
+{
+ "slug": "the-map-that-glowed-full",
+ "title": "The Map That Glowed",
+ "level": "B1–C1",
+ "voice": {
+  "name": "Lily",
+  "id": "3XD5qTvPWht0mpTnYXY0",
+  "speed": 0.85
+ },
+ "style": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere",
+ "negative": "no text, no letters, no subtitles, no watermark, consistent character design",
+ "characters": [
+  {
+   "id": "mia",
+   "name": "Mia",
+   "bible": "Mia, a 9-year-old girl with shoulder-length curly chestnut-brown hair, rosy freckled cheeks and determined, curious hazel eyes, wearing a mustard-yellow knitted cardigan over a white blouse, a rust-red pinafore dress, brown lace-up boots and a small brown leather satchel across her shoulder"
+  },
+  {
+   "id": "whiskers",
+   "name": "Whiskers",
+   "bible": "Whiskers, a sleek, slender cat with a solid jet-black coat and no markings, piercing emerald-green eyes, a thin red collar with a tiny brass bell, and a faint silvery arcane shimmer rippling along his jet-black fur"
+  },
+  {
+   "id": "nell",
+   "name": "Grandma Nell",
+   "bible": "Grandma Nell, a kind, softly plump woman of about seventy with silver hair in a loose bun, round gold-rimmed spectacles, rosy cheeks and twinkling grey eyes, wearing a lavender knitted shawl over a long sage-green dress and a white apron"
+  }
+ ],
+ "locations": [
+  {
+   "id": "cottage",
+   "bible": "Grandma Nell's cosy thatched cottage, with low dark oak beams, a stone hearth, copper pans, a scrubbed wooden table with a blue-and-white teapot, and a wooden ladder up to a dusty attic with a round window, old trunks and stacks of leather books"
+  },
+  {
+   "id": "village",
+   "bible": "a tranquil village of honey-coloured thatched cottages with round green doors and climbing pink roses, scattered across gently rolling green hills, with a winding dirt lane, an old stone well and low dry-stone walls"
+  },
+  {
+   "id": "hills",
+   "bible": "wide rolling green hills dotted with poppies and white clover, low dry-stone walls, grazing sheep and a lone crooked oak tree with twisted branches, the thatched village small in the distance"
+  },
+  {
+   "id": "stream",
+   "bible": "a deep rocky valley where a rushing white-and-silver stream foams between boulders, crossed by a line of mossy stepping stones beside the two broken planks of an old wooden bridge"
+  },
+  {
+   "id": "hilltop",
+   "bible": "the grassy summit of the highest hill, crowned by a ring of ancient mossy standing stones, with a small round stone door half hidden by ivy set into the hillside at its centre"
+  }
+ ],
+ "references": [],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Brittle Map",
+   "ar": "الخريطة الهشّة"
+  },
+  {
+   "n": 2,
+   "title": "Into the Whispering Hills",
+   "ar": "إلى التلال الهامسة"
+  },
+  {
+   "n": 3,
+   "title": "The Treacherous Stream",
+   "ar": "الجدول الغادر"
+  },
+  {
+   "n": 4,
+   "title": "Lost in the Mist",
+   "ar": "تائهان في الضباب"
+  },
+  {
+   "n": 5,
+   "title": "The Treasure Under the Stars",
+   "ar": "الكنز تحت النجوم"
+  }
+ ],
+ "thumb_shot": "g2_04",
+ "thumb_text": "THE MAP THAT GLOWED",
+ "thumb_ar": "خريطة سحرية تقودها إلى كنز!",
+ "shots": [
+  {
+   "id": "R5v"
+  },
+  {
+   "id": "g1_01"
+  },
+  {
+   "id": "R2v"
+  },
+  {
+   "id": "R4v"
+  },
+  {
+   "id": "g2_02"
+  },
+  {
+   "id": "g4_04r"
+  },
+  {
+   "id": "g4_02"
+  },
+  {
+   "id": "g3_02"
+  },
+  {
+   "id": "g3_04"
+  },
+  {
+   "id": "g2_03"
+  },
+  {
+   "id": "g3_03"
+  },
+  {
+   "id": "g2_04"
+  },
+  {
+   "id": "g4_03"
+  },
+  {
+   "id": "g1_02"
+  },
+  {
+   "id": "g4_04"
+  },
+  {
+   "id": "g3_06"
+  },
+  {
+   "id": "R6v"
+  },
+  {
+   "id": "g4_05"
+  },
+  {
+   "id": "g2_05"
+  },
+  {
+   "id": "g3_07"
+  },
+  {
+   "id": "g2_06"
+  },
+  {
+   "id": "g1_05"
+  },
+  {
+   "id": "g3_08"
+  },
+  {
+   "id": "g2_07"
+  },
+  {
+   "id": "g4_09"
+  },
+  {
+   "id": "g1_06"
+  },
+  {
+   "id": "g2_08"
+  },
+  {
+   "id": "g4_10"
+  },
+  {
+   "id": "g3_10"
+  },
+  {
+   "id": "g3_11"
+  },
+  {
+   "id": "g1_07"
+  },
+  {
+   "id": "g2_09"
+  },
+  {
+   "id": "g2_10"
+  },
+  {
+   "id": "g3_12"
+  },
+  {
+   "id": "g1_08"
+  },
+  {
+   "id": "g3_13"
+  },
+  {
+   "id": "g2_11"
+  },
+  {
+   "id": "g1_09"
+  },
+  {
+   "id": "g4_14"
+  },
+  {
+   "id": "g3_14"
+  },
+  {
+   "id": "g1_10"
+  },
+  {
+   "id": "g2_12"
+  },
+  {
+   "id": "g4_13"
+  },
+  {
+   "id": "g1_11"
+  },
+  {
+   "id": "g2_13"
+  },
+  {
+   "id": "g7_01"
+  },
+  {
+   "id": "g5_01"
+  },
+  {
+   "id": "g7_02"
+  },
+  {
+   "id": "g5_02"
+  },
+  {
+   "id": "g8_04"
+  },
+  {
+   "id": "g8_03"
+  },
+  {
+   "id": "g6_02"
+  },
+  {
+   "id": "g6_04"
+  },
+  {
+   "id": "g5_03"
+  },
+  {
+   "id": "g8_06"
+  },
+  {
+   "id": "g7_03"
+  },
+  {
+   "id": "g6_05"
+  },
+  {
+   "id": "g8_07"
+  },
+  {
+   "id": "g7_04"
+  },
+  {
+   "id": "g8_08"
+  },
+  {
+   "id": "g5_04"
+  },
+  {
+   "id": "g7_05"
+  },
+  {
+   "id": "g5_05"
+  },
+  {
+   "id": "g7_06"
+  },
+  {
+   "id": "g8_10"
+  },
+  {
+   "id": "g5_06"
+  },
+  {
+   "id": "g6_07"
+  },
+  {
+   "id": "g8_12"
+  },
+  {
+   "id": "g8_13"
+  },
+  {
+   "id": "g6_08"
+  },
+  {
+   "id": "g5_07"
+  },
+  {
+   "id": "g8_14"
+  },
+  {
+   "id": "g6_09"
+  },
+  {
+   "id": "g7_07"
+  },
+  {
+   "id": "g8_15"
+  },
+  {
+   "id": "g7_08"
+  },
+  {
+   "id": "g5_08"
+  },
+  {
+   "id": "g8_16"
+  },
+  {
+   "id": "g6_10"
+  },
+  {
+   "id": "g8_17"
+  },
+  {
+   "id": "g8_18"
+  },
+  {
+   "id": "g5_09"
+  },
+  {
+   "id": "g6_11"
+  },
+  {
+   "id": "g8_19"
+  },
+  {
+   "id": "g6_12"
+  },
+  {
+   "id": "g8_21"
+  },
+  {
+   "id": "g7_10"
+  },
+  {
+   "id": "g6_13"
+  },
+  {
+   "id": "g8_22"
+  },
+  {
+   "id": "g5_10"
+  },
+  {
+   "id": "g7_11"
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "chunk": "A",
+   "section": "title",
+   "text": "Welcome to a new English story. Get cosy, listen carefully, and read along with the subtitles. This is The Map That Glowed.",
+   "slide": "title"
+  },
+  {
+   "id": 2,
+   "chunk": "A",
+   "section": "chapter",
+   "text": "Chapter one. The Brittle Map.",
+   "slide": "chapter-1"
+  },
+  {
+   "id": 3,
+   "chunk": "A",
+   "section": "story",
+   "text": "In a tranquil village of thatched cottages, where the hills rolled away like sleeping green giants, there lived a girl called Mia.",
+   "ar": "في قرية هادئة من الأكواخ ذات السقوف القشّية، حيث تمتدّ التلال كعمالقة خُضرٍ نائمين، عاشت فتاة اسمها ميا.",
+   "shots": [
+    "R5v"
+   ]
+  },
+  {
+   "id": 4,
+   "chunk": "A",
+   "section": "story",
+   "text": "She was nine years old, with curly chestnut hair, freckles like spilled cinnamon, and a head full of questions.",
+   "ar": "كانت في التاسعة من عمرها، بشعرٍ كستنائيّ مجعّد، ونمشٍ كالقرفة المنثورة، ورأسٍ مليء بالأسئلة.",
+   "shots": [
+    "g1_01"
+   ]
+  },
+  {
+   "id": 5,
+   "chunk": "A",
+   "section": "story",
+   "text": "Wherever Mia went, her cat Whiskers followed, as quiet as a shadow.",
+   "ar": "وأينما ذهبت ميا، تبعها قطّها ويسكرز، هادئًا كالظلّ.",
+   "shots": [
+    "g1_01"
+   ]
+  },
+  {
+   "id": 6,
+   "chunk": "A",
+   "section": "story",
+   "text": "He was sleek and jet-black, with piercing emerald eyes, and his fur shimmered with a faint, silvery magic.",
+   "ar": "كان أملسَ أسودَ فاحمًا، بعينين زمرّديتين نافذتين، وكان فروه يتلألأ بسحرٍ فضّيّ خافت.",
+   "shots": [
+    "R2v"
+   ]
+  },
+  {
+   "id": 7,
+   "chunk": "A",
+   "section": "story",
+   "text": "One golden evening, Mia was helping Grandma Nell tidy her dusty attic.",
+   "ar": "في إحدى الأمسيات الذهبية، كانت ميا تساعد جدّتها نيل في ترتيب عِلّيتها المغبرّة.",
+   "shots": [
+    "R4v"
+   ]
+  },
+  {
+   "id": 8,
+   "chunk": "A",
+   "section": "story",
+   "text": "Sunlight poured through the round window, turning every floating speck of dust into a tiny spark of gold.",
+   "ar": "تدفّق ضوء الشمس عبر النافذة المستديرة، فحوّل كلّ ذرّة غبار عائمة إلى شرارة ذهبية صغيرة.",
+   "shots": [
+    "g2_02"
+   ]
+  },
+  {
+   "id": 9,
+   "chunk": "A",
+   "section": "story",
+   "text": "“Be careful with those old books,” Grandma said with a smile, before going down to make the tea.",
+   "ar": "قالت الجدّة مبتسمة: «انتبهي لتلك الكتب القديمة»، ثمّ نزلت لتُعِدّ الشاي.",
+   "shots": [
+    "g4_04r"
+   ]
+  },
+  {
+   "id": 10,
+   "chunk": "A",
+   "section": "story",
+   "text": "As Mia lifted a heavy old book, something slipped out from between its pages.",
+   "ar": "وبينما كانت ميا ترفع كتابًا قديمًا ثقيلًا، انزلق شيءٌ من بين صفحاته.",
+   "shots": [
+    "g4_02"
+   ]
+  },
+  {
+   "id": 11,
+   "chunk": "A",
+   "section": "story",
+   "text": "It was a folded sheet of parchment, yellow and brittle, so dry that it crackled at her touch.",
+   "ar": "كانت ورقةً من الرَّقّ مطويّة، صفراء هشّة، جافّة لدرجة أنها طقطقت حين لمستها.",
+   "shots": [
+    "g4_02"
+   ]
+  },
+  {
+   "id": 12,
+   "chunk": "A",
+   "section": "story",
+   "text": "Very gently, so it would not crumble, Mia unfolded it.",
+   "ar": "وبلطفٍ شديد، كي لا تتفتّت، فتحتها ميا.",
+   "shots": [
+    "g3_02"
+   ]
+  },
+  {
+   "id": 13,
+   "chunk": "B",
+   "section": "story",
+   "text": "It was a map, its ink faded to a soft, rusty brown.",
+   "ar": "كانت خريطة، وقد بهت حبرها إلى لونٍ بنّيّ صدئٍ خفيف.",
+   "shots": [
+    "g3_02"
+   ]
+  },
+  {
+   "id": 14,
+   "chunk": "B",
+   "section": "story",
+   "text": "There was the village, a crooked oak, a winding stream and, on top of the highest hill, a tiny star.",
+   "ar": "كانت هناك القرية، وشجرة بلّوط ملتوية، وجدول متعرّج، وعلى قمّة أعلى تلّ، نجمة صغيرة.",
+   "shots": [
+    "g3_02"
+   ]
+  },
+  {
+   "id": 15,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Whiskers, look,” Mia whispered. “Somebody drew our hills.”",
+   "ar": "همست ميا: «انظر يا ويسكرز، أحدهم رسم تلالنا».",
+   "shots": [
+    "g3_04"
+   ]
+  },
+  {
+   "id": 16,
+   "chunk": "B",
+   "section": "story",
+   "text": "Whiskers padded over, sniffed the paper, and stepped right onto the middle of it.",
+   "ar": "اقترب ويسكرز بخطواتٍ ناعمة، وتشمّم الورقة، ثمّ خطا إلى منتصفها تمامًا.",
+   "shots": [
+    "g2_03"
+   ]
+  },
+  {
+   "id": 17,
+   "chunk": "B",
+   "section": "story",
+   "text": "The moment his shimmering paw touched the parchment, a thin line of light began to glimmer across the faded ink.",
+   "ar": "وفي اللحظة التي لامست فيها قدمُه المتلألئة الرَّقّ، بدأ خيطٌ رفيع من الضوء يلمع فوق الحبر الباهت.",
+   "shots": [
+    "g3_03"
+   ]
+  },
+  {
+   "id": 18,
+   "chunk": "B",
+   "section": "story",
+   "text": "It started at the village, curled past the crooked oak, and stopped, pulsing gently, beside the little star.",
+   "ar": "بدأ من القرية، والتفّ مارًّا بشجرة البلّوط الملتوية، ثمّ توقّف نابضًا برفق بجانب النجمة الصغيرة.",
+   "shots": [
+    "g2_04"
+   ]
+  },
+  {
+   "id": 19,
+   "chunk": "B",
+   "section": "story",
+   "text": "Mia was astonished. She rubbed her eyes, but the line was still there, glowing like a thread of sunshine.",
+   "ar": "ذُهلت ميا. فركت عينيها، لكنّ الخيط كان لا يزال هناك، يتوهّج كخيطٍ من أشعّة الشمس.",
+   "shots": [
+    "g2_04"
+   ]
+  },
+  {
+   "id": 20,
+   "chunk": "B",
+   "section": "story",
+   "text": "“It’s showing us the way,” she breathed. “Whiskers, it wants us to follow it.”",
+   "ar": "قالت بأنفاسٍ متقطّعة: «إنها تدلّنا على الطريق. يا ويسكرز، إنها تريدنا أن نتبعها».",
+   "shots": [
+    "g4_03"
+   ]
+  },
+  {
+   "id": 21,
+   "chunk": "B",
+   "section": "story",
+   "text": "Part of her felt reluctant. The sun was already low, and the hills could be lonely after dark.",
+   "ar": "شعر جزءٌ منها بالتردّد. فالشمس كانت قد مالت للغروب، والتلال قد تكون موحشة بعد حلول الظلام.",
+   "shots": [
+    "g1_02"
+   ]
+  },
+  {
+   "id": 22,
+   "chunk": "B",
+   "section": "story",
+   "text": "But the glowing line seemed to tug at her heart, like a friend calling her name.",
+   "ar": "لكنّ الخيط المتوهّج بدا وكأنه يشدّ قلبها، كصديقٍ يناديها باسمها.",
+   "shots": [
+    "g1_02"
+   ]
+  },
+  {
+   "id": 23,
+   "chunk": "B",
+   "section": "story",
+   "text": "She climbed down the ladder, holding the map as if it were made of butterfly wings.",
+   "ar": "نزلت السُّلَّم وهي تحمل الخريطة كأنها مصنوعة من أجنحة الفراشات.",
+   "shots": [
+    "g1_02"
+   ]
+  },
+  {
+   "id": 24,
+   "chunk": "B",
+   "section": "story",
+   "text": "“Grandma, may Whiskers and I go for a walk on the hills?”",
+   "ar": "«جدّتي، هل يمكنني أنا وويسكرز أن نتمشّى في التلال؟»",
+   "shots": [
+    "g4_04"
+   ]
+  },
+  {
+   "id": 25,
+   "chunk": "B",
+   "section": "story",
+   "text": "Grandma Nell glanced at the map, and her eyes twinkled. “Be home before the moon is high,” was all she said.",
+   "ar": "رمقت الجدّة نيل الخريطة، ولمعت عيناها. ولم تقل سوى: «عودي إلى البيت قبل أن يعلو القمر».",
+   "shots": [
+    "g4_04"
+   ]
+  },
+  {
+   "id": 26,
+   "chunk": "C",
+   "section": "chapter",
+   "text": "Chapter two. Into the Whispering Hills.",
+   "slide": "chapter-2"
+  },
+  {
+   "id": 27,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia and Whiskers set off along the dirt lane, past the last cottage and the old stone well.",
+   "ar": "انطلقت ميا وويسكرز على الدرب الترابي، مرورًا بآخر كوخ والبئر الحجرية القديمة.",
+   "shots": [
+    "g3_06"
+   ]
+  },
+  {
+   "id": 28,
+   "chunk": "C",
+   "section": "story",
+   "text": "Swallows dipped over the meadows, and the long grass whispered as the warm breeze combed through it.",
+   "ar": "كانت السنونوات تنقضّ فوق المروج، والعشب الطويل يهمس كلّما مشّطه النسيم الدافئ.",
+   "shots": [
+    "R6v"
+   ]
+  },
+  {
+   "id": 29,
+   "chunk": "C",
+   "section": "story",
+   "text": "“We’re venturing into the hills,” Mia said, “just like real explorers!”",
+   "ar": "قالت ميا: «إننا نغامر في التلال، تمامًا كالمستكشفين الحقيقيين!»",
+   "shots": [
+    "g4_05"
+   ]
+  },
+  {
+   "id": 30,
+   "chunk": "C",
+   "section": "story",
+   "text": "Whiskers trotted ahead, his tail held high like a little black flag.",
+   "ar": "وكان ويسكرز يهرول أمامها، وذيله مرفوع كعَلَمٍ أسود صغير.",
+   "shots": [
+    "g2_05"
+   ]
+  },
+  {
+   "id": 31,
+   "chunk": "C",
+   "section": "story",
+   "text": "At last they reached the crooked oak. Its twisted branches looked like an old man stretching after a long sleep.",
+   "ar": "وأخيرًا وصلا إلى شجرة البلّوط الملتوية. بدت أغصانها المتشابكة كعجوزٍ يتمطّى بعد نومٍ طويل.",
+   "shots": [
+    "g3_07"
+   ]
+  },
+  {
+   "id": 32,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia sat among its roots and spread the map across her knees.",
+   "ar": "جلست ميا بين جذورها، وبسطت الخريطة على ركبتيها.",
+   "shots": [
+    "g2_06"
+   ]
+  },
+  {
+   "id": 33,
+   "chunk": "C",
+   "section": "story",
+   "text": "Suddenly, a gust of wind came rushing over the hilltop.",
+   "ar": "وفجأةً، هبّت عاصفة من الريح مندفعةً فوق قمّة التلّ.",
+   "shots": [
+    "g1_05"
+   ]
+  },
+  {
+   "id": 34,
+   "chunk": "C",
+   "section": "story",
+   "text": "It snatched the brittle map right out of her hands and sent it tumbling through the air.",
+   "ar": "فخطفت الخريطة الهشّة من بين يديها، وأرسلتها تتقلّب في الهواء.",
+   "shots": [
+    "g3_08"
+   ]
+  },
+  {
+   "id": 35,
+   "chunk": "C",
+   "section": "story",
+   "text": "“No!” Mia cried. The map was fluttering straight towards a thicket of thorny brambles.",
+   "ar": "صرخت ميا: «لا!». كانت الخريطة ترفرف مباشرةً نحو أجمةٍ من العُلّيق الشائك.",
+   "shots": [
+    "g2_07"
+   ]
+  },
+  {
+   "id": 36,
+   "chunk": "C",
+   "section": "story",
+   "text": "But Whiskers was already running. He leapt, twisting in mid-air, his fur flashing silver in the sun.",
+   "ar": "لكنّ ويسكرز كان قد انطلق راكضًا. قفز ملتويًا في الهواء، وفروه يومض فضّيًّا تحت الشمس.",
+   "shots": [
+    "g4_09"
+   ]
+  },
+  {
+   "id": 37,
+   "chunk": "C",
+   "section": "story",
+   "text": "With the softest touch, he trapped the map between his front paws and landed just before the thorns.",
+   "ar": "وبأرقّ لمسة، أمسك الخريطة بين قدميه الأماميتين، وهبط قُبيل الأشواك تمامًا.",
+   "shots": [
+    "g1_06"
+   ]
+  },
+  {
+   "id": 38,
+   "chunk": "C",
+   "section": "story",
+   "text": "He had not put a single claw through it, and he looked very pleased with himself.",
+   "ar": "لم يخدشها بمخلبٍ واحد، وبدا راضيًا جدًّا عن نفسه.",
+   "shots": [
+    "g1_06"
+   ]
+  },
+  {
+   "id": 39,
+   "chunk": "C",
+   "section": "story",
+   "text": "Mia scooped him up and laughed with relief. “You clever, clever cat!”",
+   "ar": "حملته ميا بين ذراعيها وضحكت بارتياح: «يا لك من قطٍّ ذكيّ، ذكيّ جدًّا!»",
+   "shots": [
+    "g2_08"
+   ]
+  },
+  {
+   "id": 40,
+   "chunk": "C",
+   "section": "story",
+   "text": "After that, she kept the map safely in her satchel.",
+   "ar": "ومنذ ذلك الحين، أبقت الخريطة في حقيبتها بأمان.",
+   "shots": [
+    "g4_10"
+   ]
+  },
+  {
+   "id": 41,
+   "chunk": "C",
+   "section": "story",
+   "text": "Now the glowing line pointed down into a shadowy valley, loud with the roar of water.",
+   "ar": "والآن أشار الخيط المتوهّج إلى وادٍ مظلّل، يضجّ بهدير الماء.",
+   "shots": [
+    "g3_10"
+   ]
+  },
+  {
+   "id": 42,
+   "chunk": "D",
+   "section": "chapter",
+   "text": "Chapter three. The Treacherous Stream.",
+   "slide": "chapter-3"
+  },
+  {
+   "id": 43,
+   "chunk": "D",
+   "section": "story",
+   "text": "At the bottom of the valley, a stream rushed between the rocks, foaming white and silver.",
+   "ar": "وفي قاع الوادي، كان جدولٌ يندفع بين الصخور، مُزبِدًا بالأبيض والفضّي.",
+   "shots": [
+    "g3_11"
+   ]
+  },
+  {
+   "id": 44,
+   "chunk": "D",
+   "section": "story",
+   "text": "The old bridge had broken long ago. Only two planks dangled over the water, creaking in the wind.",
+   "ar": "كان الجسر القديم قد تحطّم منذ زمنٍ بعيد، ولم يبقَ منه سوى لوحين يتدلّيان فوق الماء، يصرّان مع الريح.",
+   "shots": [
+    "g1_07"
+   ]
+  },
+  {
+   "id": 45,
+   "chunk": "D",
+   "section": "story",
+   "text": "A line of stepping stones crossed the stream, but they were green with moss and slick with spray.",
+   "ar": "كان صفٌّ من الحجارة يعبر الجدول، لكنّها كانت خضراء بالطحالب، زلقة من رذاذ الماء.",
+   "shots": [
+    "g2_09"
+   ]
+  },
+  {
+   "id": 46,
+   "chunk": "D",
+   "section": "story",
+   "text": "“This looks treacherous,” Mia said quietly. “One wrong step, and we’ll be swept away.”",
+   "ar": "قالت ميا بهدوء: «هذا يبدو غادرًا. خطوة خاطئة واحدة، وسيجرفنا التيّار».",
+   "shots": [
+    "g2_10"
+   ]
+  },
+  {
+   "id": 47,
+   "chunk": "D",
+   "section": "story",
+   "text": "Whiskers took one look at the water and sat down firmly. He was a cat, and cats do not like getting wet.",
+   "ar": "ألقى ويسكرز نظرة واحدة على الماء وجلس بثبات. فهو قطّ، والقطط لا تحبّ البلل.",
+   "shots": [
+    "g3_12"
+   ]
+  },
+  {
+   "id": 48,
+   "chunk": "D",
+   "section": "story",
+   "text": "“I know you’re reluctant,” said Mia, kneeling beside him. “So am I. But the map says this way.”",
+   "ar": "قالت ميا وهي تجثو بجانبه: «أعرف أنك متردّد، وأنا كذلك. لكنّ الخريطة تقول إنّ الطريق من هنا».",
+   "shots": [
+    "g3_12"
+   ]
+  },
+  {
+   "id": 49,
+   "chunk": "D",
+   "section": "story",
+   "text": "She found a long stick and tested each stone before she trusted it.",
+   "ar": "وجدت عصًا طويلة، وراحت تختبر كلّ حجر قبل أن تثق به.",
+   "shots": [
+    "g1_08"
+   ]
+  },
+  {
+   "id": 50,
+   "chunk": "D",
+   "section": "story",
+   "text": "The first stone wobbled. The second rolled. But the third stood firm and steady, like a little island.",
+   "ar": "تمايل الحجر الأول، وتدحرج الثاني، لكنّ الثالث وقف راسخًا ثابتًا كجزيرة صغيرة.",
+   "shots": [
+    "g1_08"
+   ]
+  },
+  {
+   "id": 51,
+   "chunk": "D",
+   "section": "story",
+   "text": "One by one, Mia found the safe stones and remembered them with a little rhyme: “Flat, then round, then the big grey crown.”",
+   "ar": "وواحدًا تلو الآخر، وجدت ميا الحجارة الآمنة وحفظتها بأنشودة صغيرة: «مسطّح، ثمّ مستدير، ثمّ التاج الرماديّ الكبير».",
+   "shots": [
+    "g3_13"
+   ]
+  },
+  {
+   "id": 52,
+   "chunk": "D",
+   "section": "story",
+   "text": "She lifted Whiskers onto her shoulders, where he clung like a furry scarf.",
+   "ar": "رفعت ويسكرز على كتفيها، فتشبّث بها كوشاحٍ من الفرو.",
+   "shots": [
+    "g2_11"
+   ]
+  },
+  {
+   "id": 53,
+   "chunk": "D",
+   "section": "story",
+   "text": "Step. Splash. Step. The cold spray stung her cheeks, and the roar of the water filled her ears.",
+   "ar": "خطوة. رشّة. خطوة. لسع الرذاذ البارد خدّيها، وملأ هديرُ الماء أذنيها.",
+   "shots": [
+    "g1_09"
+   ]
+  },
+  {
+   "id": 54,
+   "chunk": "D",
+   "section": "story",
+   "text": "Halfway across, her boot slipped on the moss. She swayed, her arms whirling, and her knee struck the hard stone.",
+   "ar": "وفي منتصف الطريق، انزلق حذاؤها على الطحالب. فترنّحت وذراعاها تدوران، وارتطمت ركبتها بالحجر الصلب.",
+   "shots": [
+    "g4_14"
+   ]
+  },
+  {
+   "id": 55,
+   "chunk": "D",
+   "section": "story",
+   "text": "Her knee was scraped and stinging, and her eyes filled with tears. But she did not turn back.",
+   "ar": "كانت ركبتها مخدوشة تلسعها، وامتلأت عيناها بالدموع. لكنّها لم تتراجع.",
+   "shots": [
+    "g3_14",
+    "g1_10"
+   ]
+  },
+  {
+   "id": 56,
+   "chunk": "D",
+   "section": "story",
+   "text": "Whiskers pressed his warm face to her cheek and purred, loud enough to hear above the water.",
+   "ar": "ضغط ويسكرز وجهه الدافئ على خدّها وخرخر بصوتٍ عالٍ، يُسمع فوق هدير الماء.",
+   "shots": [
+    "g2_12"
+   ]
+  },
+  {
+   "id": 57,
+   "chunk": "D",
+   "section": "story",
+   "text": "“All right,” Mia sniffed. “We’re resilient, you and I. We fall down, and we get back up.”",
+   "ar": "قالت ميا وهي تمسح أنفها: «حسنًا، نحن صامدان، أنا وأنت. نسقط، ثمّ ننهض من جديد».",
+   "shots": [
+    "g2_12"
+   ]
+  },
+  {
+   "id": 58,
+   "chunk": "D",
+   "section": "story",
+   "text": "Then, one careful stone at a time, she finished the crossing.",
+   "ar": "ثمّ أكملت العبور، حجرًا بعد حجر، بحذر.",
+   "shots": [
+    "g4_13"
+   ]
+  },
+  {
+   "id": 59,
+   "chunk": "D",
+   "section": "story",
+   "text": "On the far bank, she took out the map. The glowing line had grown brighter, as if it were proud of them.",
+   "ar": "وعلى الضفّة الأخرى، أخرجت الخريطة. كان الخيط المتوهّج قد ازداد سطوعًا، كأنّه فخورٌ بهما.",
+   "shots": [
+    "g1_11",
+    "g2_13"
+   ]
+  },
+  {
+   "id": 60,
+   "chunk": "E",
+   "section": "chapter",
+   "text": "Chapter four. Lost in the Mist.",
+   "slide": "chapter-4"
+  },
+  {
+   "id": 61,
+   "chunk": "E",
+   "section": "story",
+   "text": "The path now climbed steeply towards the highest hill of all. They had never ventured so far from home.",
+   "ar": "صار الدرب الآن يصعد بشدّة نحو أعلى التلال. لم يسبق لهما أن غامرا بهذا البعد عن البيت.",
+   "shots": [
+    "g7_01"
+   ]
+  },
+  {
+   "id": 62,
+   "chunk": "E",
+   "section": "story",
+   "text": "As the sky turned violet, a white mist began to rise from the valleys below.",
+   "ar": "ومع تحوّل السماء إلى البنفسجيّ، بدأ ضبابٌ أبيض يتصاعد من الوديان.",
+   "shots": [
+    "g5_01"
+   ]
+  },
+  {
+   "id": 63,
+   "chunk": "E",
+   "section": "story",
+   "text": "Soon Mia could barely see her own boots.",
+   "ar": "وسرعان ما صارت ميا بالكاد ترى حذاءها.",
+   "shots": [
+    "g7_02"
+   ]
+  },
+  {
+   "id": 64,
+   "chunk": "E",
+   "section": "story",
+   "text": "She took out the map, but in the thick grey mist its glimmer was faint and blurry, like a candle behind a curtain.",
+   "ar": "أخرجت الخريطة، لكنّ بريقها في الضباب الرماديّ الكثيف كان خافتًا ضبابيًّا، كشمعةٍ خلف ستارة.",
+   "shots": [
+    "g5_02"
+   ]
+  },
+  {
+   "id": 65,
+   "chunk": "E",
+   "section": "story",
+   "text": "Somewhere nearby, the hillside dropped away into steep rocks. This was even more treacherous than the stream.",
+   "ar": "وفي مكانٍ قريب، كان سفح التلّ ينحدر فجأة نحو صخورٍ شديدة الانحدار. كان هذا أشدّ غدرًا من الجدول.",
+   "shots": [
+    "g8_04"
+   ]
+  },
+  {
+   "id": 66,
+   "chunk": "E",
+   "section": "story",
+   "text": "“Whiskers?” she called. Her voice sounded small and thin. “Whiskers, where are you?”",
+   "ar": "نادت: «ويسكرز؟». بدا صوتها صغيرًا واهنًا. «ويسكرز، أين أنت؟»",
+   "shots": [
+    "g8_03"
+   ]
+  },
+  {
+   "id": 67,
+   "chunk": "E",
+   "section": "story",
+   "text": "Then, from somewhere ahead, came a tiny, silvery sound. Ting.",
+   "ar": "ثمّ جاء من مكانٍ ما أمامها صوتٌ فضّيّ صغير: تِنْغ.",
+   "shots": [
+    "g6_02"
+   ]
+  },
+  {
+   "id": 68,
+   "chunk": "E",
+   "section": "story",
+   "text": "It was the brass bell on Whiskers’ collar. Mia’s heart leapt. Of course!",
+   "ar": "كان ذلك الجرس النحاسيّ في طوق ويسكرز. قفز قلب ميا فرحًا. بالطبع!",
+   "shots": [
+    "g6_02"
+   ]
+  },
+  {
+   "id": 69,
+   "chunk": "E",
+   "section": "story",
+   "text": "“I can’t see in the dark,” she said slowly, “but you can. And I can’t see you, but I can hear you.”",
+   "ar": "قالت ببطء: «أنا لا أرى في الظلام، لكنّك تستطيع. ولا أستطيع رؤيتك، لكنّني أستطيع سماعك».",
+   "shots": [
+    "g6_04"
+   ]
+  },
+  {
+   "id": 70,
+   "chunk": "E",
+   "section": "story",
+   "text": "Whiskers’ emerald eyes glowed through the mist like two small green lanterns.",
+   "ar": "توهّجت عينا ويسكرز الزمرّديتان عبر الضباب كفانوسين أخضرين صغيرين.",
+   "shots": [
+    "g5_03"
+   ]
+  },
+  {
+   "id": 71,
+   "chunk": "E",
+   "section": "story",
+   "text": "Mia found a long yellow ribbon in her satchel and tied one end to his collar.",
+   "ar": "وجدت ميا شريطًا أصفر طويلًا في حقيبتها، وربطت أحد طرفيه بطوقه.",
+   "shots": [
+    "g8_06"
+   ]
+  },
+  {
+   "id": 72,
+   "chunk": "E",
+   "section": "story",
+   "text": "Holding the other end, she whispered, “Lead the way. I trust you.”",
+   "ar": "وأمسكت الطرف الآخر، وهمست: «قُدني، أنا أثق بك».",
+   "shots": [
+    "g7_03"
+   ]
+  },
+  {
+   "id": 73,
+   "chunk": "E",
+   "section": "story",
+   "text": "And so they climbed together, the cat in front and the girl behind, joined by a ribbon and a tiny ringing bell.",
+   "ar": "وهكذا صعدا معًا، القطّ في المقدّمة والفتاة خلفه، يربطهما شريطٌ وجرسٌ صغير يرنّ.",
+   "shots": [
+    "g6_05"
+   ]
+  },
+  {
+   "id": 74,
+   "chunk": "E",
+   "section": "story",
+   "text": "Whenever the edge came too close, Whiskers stopped and turned, guiding Mia safely away from the drop.",
+   "ar": "وكلّما اقتربت الحافّة أكثر من اللازم، توقّف ويسكرز واستدار، موجّهًا ميا بعيدًا عن الهاوية.",
+   "shots": [
+    "g8_07"
+   ]
+  },
+  {
+   "id": 75,
+   "chunk": "E",
+   "section": "story",
+   "text": "Ting, ting, ting. Step by step, they rose above the mist, and suddenly the night opened up around them.",
+   "ar": "تِنْغ، تِنْغ، تِنْغ. خطوةً بعد خطوة، ارتفعا فوق الضباب، وفجأةً انفتح الليل من حولهما.",
+   "shots": [
+    "g7_04"
+   ]
+  },
+  {
+   "id": 76,
+   "chunk": "E",
+   "section": "story",
+   "text": "A huge, pale moon was rising. Below them, the mist lay over the valleys like a silver sea.",
+   "ar": "كان قمرٌ شاحب ضخم يرتفع. ومن تحتهما، استلقى الضباب فوق الوديان كبحرٍ فضّيّ.",
+   "shots": [
+    "g8_08"
+   ]
+  },
+  {
+   "id": 77,
+   "chunk": "E",
+   "section": "story",
+   "text": "And on the very top of the hill stood a ring of ancient standing stones.",
+   "ar": "وعلى قمّة التلّ تمامًا، انتصبت دائرة من الحجارة القائمة العتيقة.",
+   "shots": [
+    "g5_04",
+    "g7_05"
+   ]
+  },
+  {
+   "id": 78,
+   "chunk": "F",
+   "section": "chapter",
+   "text": "Chapter five. The Treasure Under the Stars.",
+   "slide": "chapter-5"
+  },
+  {
+   "id": 79,
+   "chunk": "F",
+   "section": "story",
+   "text": "In the middle of the stones, half hidden by ivy, was a small round door set into the grassy hillside.",
+   "ar": "وفي وسط الحجارة، نصف مختبئٍ تحت اللبلاب، كان بابٌ صغير مستدير في سفح التلّ المعشوشب.",
+   "shots": [
+    "g5_05"
+   ]
+  },
+  {
+   "id": 80,
+   "chunk": "F",
+   "section": "story",
+   "text": "On it was carved a cat, sitting tall, its tail curled around its paws.",
+   "ar": "وكان منقوشًا عليه قطٌّ يجلس منتصبًا، وذيله ملتفّ حول قدميه.",
+   "shots": [
+    "g7_06"
+   ]
+  },
+  {
+   "id": 81,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia pushed the door and pulled it, but there was no handle and no keyhole.",
+   "ar": "دفعت ميا الباب وسحبته، لكن لم يكن له مقبضٌ ولا ثقب مفتاح.",
+   "shots": [
+    "g8_10"
+   ]
+  },
+  {
+   "id": 82,
+   "chunk": "F",
+   "section": "story",
+   "text": "Then she remembered how the light had first appeared on the map.",
+   "ar": "ثمّ تذكّرت كيف ظهر الضوء أوّل مرّة على الخريطة.",
+   "shots": [
+    "g2_03"
+   ]
+  },
+  {
+   "id": 83,
+   "chunk": "F",
+   "section": "story",
+   "text": "“Whiskers,” she said softly, “would you touch the door, just like you touched the map?”",
+   "ar": "قالت بلطف: «ويسكرز، هلّا لمست الباب، تمامًا كما لمست الخريطة؟»",
+   "shots": [
+    "g5_06"
+   ]
+  },
+  {
+   "id": 84,
+   "chunk": "F",
+   "section": "story",
+   "text": "Whiskers stretched up on his back legs and placed one shimmering paw on the carved cat.",
+   "ar": "تمطّى ويسكرز واقفًا على قائمتيه الخلفيتين، ووضع قدمه المتلألئة على القطّ المنقوش.",
+   "shots": [
+    "g6_07"
+   ]
+  },
+  {
+   "id": 85,
+   "chunk": "F",
+   "section": "story",
+   "text": "The carving flashed silver. With a deep, stony sigh, the little door swung open.",
+   "ar": "ومض النقش بلونٍ فضّيّ، ومع تنهيدةٍ حجرية عميقة، انفتح الباب الصغير.",
+   "shots": [
+    "g8_12"
+   ]
+  },
+  {
+   "id": 86,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia ducked through the doorway, and gasped.",
+   "ar": "انحنت ميا وعبرت الباب، ثمّ شهقت.",
+   "shots": [
+    "g8_12"
+   ]
+  },
+  {
+   "id": 87,
+   "chunk": "F",
+   "section": "story",
+   "text": "She was standing in a hidden hollow, open to the stars and filled with glowing flowers.",
+   "ar": "كانت تقف في تجويفٍ خفيّ مفتوح على النجوم، مليءٍ بأزهارٍ متوهّجة.",
+   "shots": [
+    "g8_13"
+   ]
+  },
+  {
+   "id": 88,
+   "chunk": "F",
+   "section": "story",
+   "text": "Hundreds of them, silver and blue, opened one by one in the moonlight, each one glimmering like a fallen star.",
+   "ar": "مئاتٌ منها، فضّية وزرقاء، تتفتّح واحدةً تلو الأخرى في ضوء القمر، وكلّ واحدة تلمع كنجمةٍ سقطت.",
+   "shots": [
+    "g6_08"
+   ]
+  },
+  {
+   "id": 89,
+   "chunk": "F",
+   "section": "story",
+   "text": "Mia was so astonished that, for a long moment, she could not speak at all.",
+   "ar": "كانت ميا مذهولة إلى درجة أنها لم تستطع الكلام لوقتٍ طويل.",
+   "shots": [
+    "g5_07"
+   ]
+  },
+  {
+   "id": 90,
+   "chunk": "F",
+   "section": "story",
+   "text": "In the centre of the hollow sat an old tin box, its lid painted with tiny faded stars.",
+   "ar": "وفي وسط التجويف، كان هناك صندوقٌ قديم من الصفيح، غطاؤه مرسومٌ بنجومٍ صغيرة باهتة.",
+   "shots": [
+    "g8_14"
+   ]
+  },
+  {
+   "id": 91,
+   "chunk": "F",
+   "section": "story",
+   "text": "Inside was a pouch of silver seeds, a child’s drawing, and a letter, folded small and just as brittle as the map.",
+   "ar": "وفي داخله كيسٌ من البذور الفضّية، ورسمةُ طفلة، ورسالةٌ مطويّة صغيرة، هشّة تمامًا كالخريطة.",
+   "shots": [
+    "g6_09"
+   ]
+  },
+  {
+   "id": 92,
+   "chunk": "F",
+   "section": "story",
+   "text": "The drawing showed a girl with a long plait and a black cat with bright green eyes.",
+   "ar": "كانت الرسمة تُظهر فتاةً بضفيرةٍ طويلة، وقطًّا أسود بعينين خضراوين لامعتين.",
+   "shots": [
+    "g7_07"
+   ]
+  },
+  {
+   "id": 93,
+   "chunk": "F",
+   "section": "story",
+   "text": "“To the next brave child who follows the light,” the letter began. “I was nine when I found this place, with my cat, Shadow.”",
+   "ar": "بدأت الرسالة هكذا: «إلى الطفل الشجاع التالي الذي يتبع الضوء. كنت في التاسعة حين وجدت هذا المكان، مع قطّي شادو».",
+   "shots": [
+    "g8_15"
+   ]
+  },
+  {
+   "id": 94,
+   "chunk": "F",
+   "section": "story",
+   "text": "“I thought the treasure would be gold. But the real treasure was the journey, and the friend who never left my side.”",
+   "ar": "«ظننت أنّ الكنز سيكون ذهبًا. لكنّ الكنز الحقيقي كان الرحلة، والصديق الذي لم يفارقني قطّ».",
+   "shots": [
+    "g7_08"
+   ]
+  },
+  {
+   "id": 95,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Plant these seeds where you will see them every day, and cherish the people who wait for you at home. With love, Nell.”",
+   "ar": "«ازرع هذه البذور حيث تراها كلّ يوم، واعتزّ بالذين ينتظرونك في البيت. مع حبّي، نيل».",
+   "shots": [
+    "g5_08"
+   ]
+  },
+  {
+   "id": 96,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Nell,” Mia whispered. “Grandma Nell!” Long ago, her grandmother had been a girl just like her.",
+   "ar": "همست ميا: «نيل... جدّتي نيل!». منذ زمنٍ بعيد، كانت جدّتها فتاةً مثلها تمامًا.",
+   "shots": [
+    "g8_16"
+   ]
+  },
+  {
+   "id": 97,
+   "chunk": "G",
+   "section": "story",
+   "text": "Mia was reluctant to leave such a magical place, but she knew someone was waiting.",
+   "ar": "كانت ميا متردّدة في مغادرة مكانٍ ساحرٍ كهذا، لكنّها كانت تعلم أنّ أحدًا ينتظرها.",
+   "shots": [
+    "g6_10"
+   ]
+  },
+  {
+   "id": 98,
+   "chunk": "G",
+   "section": "story",
+   "text": "She took the seeds and the letter, left her yellow ribbon in the box for the next child, and gently closed the lid.",
+   "ar": "أخذت البذور والرسالة، وتركت شريطها الأصفر في الصندوق للطفل التالي، ثمّ أغلقت الغطاء برفق.",
+   "shots": [
+    "g8_14"
+   ]
+  },
+  {
+   "id": 99,
+   "chunk": "G",
+   "section": "story",
+   "text": "On the map, a new line of light had begun to glow. It led straight home.",
+   "ar": "وعلى الخريطة، بدأ خيطٌ جديد من الضوء يتوهّج. كان يقود إلى البيت مباشرة.",
+   "shots": [
+    "g8_17"
+   ]
+  },
+  {
+   "id": 100,
+   "chunk": "G",
+   "section": "story",
+   "text": "Far below, at the cottage gate, a small lantern was shining. Grandma Nell was waiting.",
+   "ar": "وفي الأسفل بعيدًا، عند بوّابة الكوخ، كان فانوسٌ صغير يضيء. كانت الجدّة نيل تنتظر.",
+   "shots": [
+    "g8_18"
+   ]
+  },
+  {
+   "id": 101,
+   "chunk": "G",
+   "section": "story",
+   "text": "“Did you find it?” Grandma asked, her eyes twinkling. Mia ran into her arms. “I found it, Grandma. And I found you.”",
+   "ar": "سألت الجدّة وعيناها تلمعان: «هل وجدتِه؟». ركضت ميا إلى حضنها: «وجدته يا جدّتي، ووجدتكِ أنتِ».",
+   "shots": [
+    "g5_09"
+   ]
+  },
+  {
+   "id": 102,
+   "chunk": "G",
+   "section": "story",
+   "text": "Grandma saw the scraped knee and smiled. “Brave and resilient,” she said. “That is how every true explorer comes home.”",
+   "ar": "رأت الجدّة الركبة المخدوشة فابتسمت وقالت: «شجاعة وصامدة. هكذا يعود كلّ مستكشفٍ حقيقيّ إلى بيته».",
+   "shots": [
+    "g6_11"
+   ]
+  },
+  {
+   "id": 103,
+   "chunk": "G",
+   "section": "story",
+   "text": "Then she stroked Whiskers’ silky head. “Shadow had emerald eyes, too,” she said softly. “Some magic runs in families.”",
+   "ar": "ثمّ مسحت على رأس ويسكرز الناعم، وقالت بلطف: «كانت لشادو عينان زمرّديتان أيضًا. بعض السحر يسري في العائلات».",
+   "shots": [
+    "g8_19"
+   ]
+  },
+  {
+   "id": 104,
+   "chunk": "G",
+   "section": "story",
+   "text": "That spring, Mia and Grandma planted the silver seeds beneath the kitchen window.",
+   "ar": "وفي ذلك الربيع، زرعت ميا وجدّتها البذور الفضّية تحت نافذة المطبخ.",
+   "shots": [
+    "g6_12"
+   ]
+  },
+  {
+   "id": 105,
+   "chunk": "G",
+   "section": "story",
+   "text": "Now, whenever the moon rises, the flowers glow, filling the cottage with soft silver light.",
+   "ar": "والآن، كلّما طلع القمر، تتوهّج الأزهار، فتملأ الكوخ بضوءٍ فضّيّ ناعم.",
+   "shots": [
+    "g8_21",
+    "g7_10"
+   ]
+  },
+  {
+   "id": 106,
+   "chunk": "G",
+   "section": "story",
+   "text": "Mia keeps the brittle old map in a box beside her bed. She will cherish it all her life.",
+   "ar": "تحتفظ ميا بالخريطة القديمة الهشّة في صندوقٍ بجانب سريرها، وستعتزّ بها طوال حياتها.",
+   "shots": [
+    "g6_13"
+   ]
+  },
+  {
+   "id": 107,
+   "chunk": "G",
+   "section": "story",
+   "text": "Because on that hill, she learned something. The greatest treasures are not buried in the ground.",
+   "ar": "لأنها تعلّمت على ذلك التلّ شيئًا: أعظم الكنوز ليست مدفونةً في الأرض.",
+   "shots": [
+    "g8_22"
+   ]
+  },
+  {
+   "id": 108,
+   "chunk": "G",
+   "section": "story",
+   "text": "They are the people we love, the friends who walk beside us, and the courage we find when we need it most.",
+   "ar": "بل هي الأشخاص الذين نحبّهم، والأصدقاء الذين يمشون بجانبنا، والشجاعة التي نجدها حين نحتاجها أكثر.",
+   "shots": [
+    "g5_10"
+   ]
+  },
+  {
+   "id": 109,
+   "chunk": "G",
+   "section": "story",
+   "text": "And who knows? In some dusty attic near you, another map may be waiting to glow. The end.",
+   "ar": "ومن يدري؟ ربما في عِلّيةٍ مغبرّة قريبة منك، تنتظر خريطةٌ أخرى أن تتوهّج. النهاية.",
+   "shots": [
+    "g7_11"
+   ]
+  },
+  {
+   "id": 110,
+   "chunk": "H",
+   "section": "words",
+   "text": "Now, let’s look at eight wonderful words from the story. Listen, and say each word with me.",
+   "slide": "words-intro"
+  },
+  {
+   "id": 111,
+   "chunk": "H",
+   "section": "words",
+   "text": "Brittle. Something brittle is hard and dry, and it breaks very easily. It was a folded sheet of parchment, yellow and brittle.",
+   "slide": "word-brittle"
+  },
+  {
+   "id": 112,
+   "chunk": "H",
+   "section": "words",
+   "text": "Glimmer. To glimmer means to shine with a faint, gentle light. A thin line of light began to glimmer across the faded ink.",
+   "slide": "word-glimmer"
+  },
+  {
+   "id": 113,
+   "chunk": "H",
+   "section": "words",
+   "text": "Venture. To venture means to go somewhere new, or a little bit dangerous. They had never ventured so far from home.",
+   "slide": "word-venture"
+  },
+  {
+   "id": 114,
+   "chunk": "H",
+   "section": "words",
+   "text": "Reluctant. If you are reluctant, you do not really want to do something. Mia was reluctant to leave such a magical place.",
+   "slide": "word-reluctant"
+  },
+  {
+   "id": 115,
+   "chunk": "H",
+   "section": "words",
+   "text": "Astonished. Astonished means extremely surprised. Mia was so astonished that she could not speak at all.",
+   "slide": "word-astonished"
+  },
+  {
+   "id": 116,
+   "chunk": "H",
+   "section": "words",
+   "text": "Cherish. To cherish something is to love it and take great care of it. Mia keeps the old map, and she will cherish it all her life.",
+   "slide": "word-cherish"
+  },
+  {
+   "id": 117,
+   "chunk": "H",
+   "section": "words",
+   "text": "Treacherous. A treacherous place is full of hidden dangers. At the slippery stream, Mia said, “This looks treacherous.”",
+   "slide": "word-treacherous"
+  },
+  {
+   "id": 118,
+   "chunk": "H",
+   "section": "words",
+   "text": "Resilient. Resilient people recover quickly after something hard happens. Mia said, “We’re resilient, you and I. We fall down, and we get back up.”",
+   "slide": "word-resilient"
+  },
+  {
+   "id": 119,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question one. What made the map begin to glow? A, the setting sun. B, Whiskers’ paw. Or C, a magic word.",
+   "slide": "quiz-q1",
+   "pause": 4
+  },
+  {
+   "id": 120,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is B. The light began to glimmer when Whiskers’ shimmering paw touched the map.",
+   "slide": "quiz-q1-answer"
+  },
+  {
+   "id": 121,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question two. How did Mia find her way through the mist? A, she followed the stars. B, she carried a lantern. Or C, she listened for Whiskers’ bell.",
+   "slide": "quiz-q2",
+   "pause": 4
+  },
+  {
+   "id": 122,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is C. She tied a ribbon to his collar and followed the sound of his little bell.",
+   "slide": "quiz-q2-answer"
+  },
+  {
+   "id": 123,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "Question three. Who wrote the letter in the tin box? A, Grandma Nell. B, a famous explorer. Or C, Mia’s teacher.",
+   "slide": "quiz-q3",
+   "pause": 4
+  },
+  {
+   "id": 124,
+   "chunk": "I",
+   "section": "quiz",
+   "text": "The answer is A. Grandma Nell wrote it when she was nine years old. Well done!",
+   "slide": "quiz-q3-answer"
+  },
+  {
+   "id": 125,
+   "chunk": "I",
+   "section": "outro",
+   "text": "Thank you for joining Mia and Whiskers on their journey. If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments, and I’ll see you in the next story.",
+   "slide": "outro"
+  }
+ ],
+ "vocab": [
+  {
+   "word": "brittle",
+   "ipa": "/ˈbrɪt.əl/",
+   "pos": "adjective",
+   "ar": "هشّ، سريع الكسر",
+   "meaning": "hard and dry, so it breaks or cracks very easily",
+   "example": "It was a folded sheet of parchment, yellow and brittle, so dry that it crackled at her touch."
+  },
+  {
+   "word": "glimmer",
+   "ipa": "/ˈɡlɪm.ər/",
+   "pos": "verb / noun",
+   "ar": "يلمع بضوء خافت؛ بريق خافت",
+   "meaning": "to shine with a faint, gentle, wavering light",
+   "example": "A thin line of light began to glimmer across the faded ink."
+  },
+  {
+   "word": "venture",
+   "ipa": "/ˈven.tʃər/",
+   "pos": "verb",
+   "ar": "يغامر، يجرؤ على الذهاب",
+   "meaning": "to go somewhere new or a little dangerous",
+   "example": "They had never ventured so far from home."
+  },
+  {
+   "word": "reluctant",
+   "ipa": "/rɪˈlʌk.tənt/",
+   "pos": "adjective",
+   "ar": "متردّد، غير راغب",
+   "meaning": "not wanting to do something, so you hesitate",
+   "example": "Mia was reluctant to leave such a magical place."
+  },
+  {
+   "word": "astonished",
+   "ipa": "/əˈstɒn.ɪʃt/",
+   "pos": "adjective",
+   "ar": "مذهول، مندهش جدًّا",
+   "meaning": "extremely surprised",
+   "example": "Mia was so astonished that, for a long moment, she could not speak at all."
+  },
+  {
+   "word": "cherish",
+   "ipa": "/ˈtʃer.ɪʃ/",
+   "pos": "verb",
+   "ar": "يعتزّ بـ، يحرص على",
+   "meaning": "to love and care for something or someone very much",
+   "example": "She will cherish it all her life."
+  },
+  {
+   "word": "treacherous",
+   "ipa": "/ˈtretʃ.ər.əs/",
+   "pos": "adjective",
+   "ar": "غادر، محفوف بالمخاطر",
+   "meaning": "full of hidden dangers",
+   "example": "“This looks treacherous,” Mia said quietly."
+  },
+  {
+   "word": "resilient",
+   "ipa": "/rɪˈzɪl.i.ənt/",
+   "pos": "adjective",
+   "ar": "صامد، سريع التعافي",
+   "meaning": "able to recover quickly after something difficult",
+   "example": "“We’re resilient, you and I. We fall down, and we get back up.”"
+  }
+ ],
+ "quiz": [
+  {
+   "id": "q1",
+   "q": "What made the map begin to glow?",
+   "options": [
+    "The setting sun",
+    "Whiskers’ paw",
+    "A magic word"
+   ],
+   "answer": 1
+  },
+  {
+   "id": "q2",
+   "q": "How did Mia find her way through the mist?",
+   "options": [
+    "She followed the stars",
+    "She carried a lantern",
+    "She listened for Whiskers’ bell"
+   ],
+   "answer": 2
+  },
+  {
+   "id": "q3",
+   "q": "Who wrote the letter in the tin box?",
+   "options": [
+    "Grandma Nell",
+    "A famous explorer",
+    "Mia’s teacher"
+   ],
+   "answer": 0
+  }
+ ],
+ "outro": {
+  "text": "Thank you for joining Mia and Whiskers on their journey. If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments, and I’ll see you in the next story."
+ }
+}
