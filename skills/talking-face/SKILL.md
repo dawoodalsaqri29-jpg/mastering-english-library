@@ -37,8 +37,11 @@ exactly that; he approves and you retry once. Never bypass it.
 bash skills/talking-face/scripts/talk.sh portrait.png line.wav out_dir 256 crop   # face crop only (fastest)
 bash skills/talking-face/scripts/talk.sh portrait.png line.wav out_dir 256 full   # whole portrait, face pasted back
 ```
-`--still` keeps the head calm (story narration); drop it in talk.sh for livelier head motion.
-`--expression_scale 1.1–1.3` = stronger mouth/eyebrows. Run in the background with a long timeout and
+Defaults in talk.sh (v2, what Dawood liked better): **no `--still`** (real head motion, hair moves
+with it), `--expression_scale 1.4` (eyes, brows, cheeks and laughs move with the words),
+`--pose_style 12`. Override with env vars: `EXPR=1.2 POSE=5 STILL=--still bash talk.sh …`.
+`--still` only for `full` mode (calm head pasted into the whole portrait) or quiet narration.
+v1 with `--still` + 1.1 looked like "only the lips move" — don't ship that. Run in the background with a long timeout and
 poll the log (`Face Renderer:: n/N`). Output: `out_dir/<timestamp>.mp4` with the audio muxed in.
 
 ## 3. Upscale + compose (so it fits a 1080p/4K video)
