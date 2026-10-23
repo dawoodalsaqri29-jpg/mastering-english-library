@@ -1,0 +1,20 @@
+# Common talking-character defects: sign → cause → intervention → how to verify
+
+Use with every close-up. "Rig" = face_rig.py, "ST" = SadTalker.
+
+| Defect | Sign (what you see) | Likely cause | Intervention | Verify |
+|---|---|---|---|---|
+| Hair mixing with the background | hazy, smeared halo of sky/grass around the curls, moving with the head | ST warps the whole crop (background included) and is upscaled from 256 px | rig: matte the still ONCE (rembg isnet + darker-than-bg key + decontam), animate over a clean plate | 1:1 crop of the hair edge on the bright side, 6 consecutive frames: edge identical except rigid motion |
+| Hair changing between frames | curls appear/disappear, length/colour shifts | generator re-synthesises hair every frame | rig moves the painted hair; only the tips get a lagged warp | flip between frames 0/5/10 at 1:1: same curls |
+| Hair frozen / hair detached | hair doesn't react, or slides independently of the head | no secondary motion / tip weight too high near the roots | roots follow the head (w_head), tips follow the head 0.12–0.16 s later (`hair_lag`), small breeze ≤ 2 px | strip around a head gesture: tips arrive later, then settle |
+| Unstable head | jitter, continuous wobble, a nod on every word | audio-driven pose noise (ST pose_style), or gestures on each word | rig: one gesture per phrase on its stressed syllable, eased in and out; stillness between | consecutive-frame strip: smooth arcs, no frame-to-frame shake |
+| Mouth not in sync | mouth flaps to loudness, stays open in pauses, moves after the sound ends | envelope-driven mouth | phoneme timings (align_phonemes.py), visemes with a 35 ms lead and a 45 ms coarticulation spring; rest shape in silence | step through 2 s with the phone list: open vowels open, M/B/P closed, silence = rest mouth |
+| Rubbery nose / cheeks / jaw | nose bends, cheeks melt, jaw stretches | dense warping of the whole face | rig: nose and eyes are never warped; only the lower lip + chin region opens, cheeks lift ≤ 3 px for smiles | overlay frames: nose tip position moves only with the head transform |
+| Doubled lips / wrong teeth | old lip line still visible beside a drawn mouth; teeth count changes; stripes | mouth DRAWN over the painting; aliasing | open the PAINTED lips (lower lip + chin displaced), paint only the gap; teeth as one soft upper band, supersampled ×3 | 1:1 crops at A, E, O, M frames |
+| Neck/shoulders mechanical | head turns as a cut-out, seam at the collar, shoulders frozen or bobbing with each word | rigid head piece / shoulders driven by the mouth | smooth skinning blend across the neck (fade 578→655 px), shoulders answer the head 0.22 s later at 22 %, breathing 0.25 % scale, inhale before phrases | strip at the biggest tilt: neck continuous, collar still, shoulders lag |
+| Line / shading flicker | outlines wobble, shadows crawl | per-frame resynthesis | rig keeps the original pixels; only rigid/smooth warps | frame difference outside the moving parts ≈ 0 |
+| Eyes deform | iris size changes, eyes drift apart, blink looks like a patch | warping inside the eye; skin colour sampled from the brow | blink = skin lid from the lid area + lash line, 5-frame shape; gaze shifts the eye content ≤ 4 px inside an eroded eye mask | 1:1 crop of a blink: lash line clean, no dark patch |
+| Periodic robot blinks | blinks every N seconds exactly | timer | blinks in pauses and after the line, irregular | blink list vs phrase gaps |
+| Constant expression | same smile through every sentence | no performance plan | per-phrase plan: gaze toward the subject, brow lift on "!", cheek smile rising on the warm word, settle at the end | the plan JSON has one intention per phrase |
+| Character pasted on | flat, unlit cut-out | no light link to the scene | warm rim light from the sun side, slight grade, background defocus (σ 2.5) | compare the edge colour on the sun side vs the shadow side |
+| Background breathing | sky/trees wobble behind the head | warped background (ST extcrop) | static plate + one camera push for both layers | corner optical flow ≈ 0 except the push |
