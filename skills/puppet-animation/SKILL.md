@@ -12,7 +12,7 @@ a little outward, the skirt sways, the arm swings opposite to the legs, one smal
 the figure breathes, blinks, and opens its mouth to the loudness of a voice file. Actors are placed on one of the story's
 painted backgrounds with a slow camera move, a contact shadow and floating particles. It looks like
 a hand-made paper-cut / Live2D cartoon: lively, consistent with the reference art, free. It does NOT
-redraw the picture — legs don't step, heads don't turn in 3D, hands don't reach. For that, use a video
+redraw the picture — heads don't turn in 3D and hands don't reach. For that, use a video
 model (animate-story-picture Level 2/3: ElevenLabs Video, or vidIQ `vidiq_generate_video` after his
 credits renew; 8-second Veo clip ≈ his whole monthly allowance).
 
@@ -52,12 +52,13 @@ Cat: auto (tail found as the separate column group in the top half; mouth option
  "actors": [
   {"id": "mia", "image": "mia_cut.png", "kind": "human", "height": 0.78, "face": {...},
    "path": [{"t": 0, "x": 0.63, "scale": 0.70}, {"t": 6, "x": 0.56, "scale": 1.0}],
-   "walk": {"until": 6, "bob": 0.012, "sway": 2.5, "steps": 1.7},
+   "walk": {"until": 6, "bob": 0.005, "sway": 1.2, "steps": 1.9},
+   "arm": {"box": [0.68,0.29,0.98,0.60], "pivot": [0.80,0.31], "amp": 9},
    "lean": [{"t": 6.3, "a": 0}, {"t": 7.3, "a": 7}], "head": [{"t": 6.3, "a": 0}, {"t": 7.3, "a": 9}],
    "talk": {"audio": "line1.wav", "at": 7.0}, "blink": true},
   {"id": "whiskers", "image": "cat_cut.png", "kind": "cat", "height": 0.33,
    "path": [{"t": 0, "x": 0.46, "scale": 0.70}, {"t": 6, "x": 0.41, "scale": 1.0}],
-   "walk": {"until": 6, "bob": 0.01, "sway": 2, "steps": 2.4},
+   "walk": {"until": 6, "bob": 0.004, "sway": 1.0, "steps": 2.6},
    "wiggle": {"from": 6.5, "to": 9, "amp": 6, "hz": 0.7}, "tail": {"amp": 12, "hz": 0.8}}]}
 ```
 - `path`: keyed x (fraction of width, feet centre) and `scale` (1.0 = `height`×H). Walking **towards
@@ -68,8 +69,8 @@ Cat: auto (tail found as the separate column group in the top half; mouth option
   the gap between the legs); override with `"legs": {"hem": 0.71, "split": 0.52}` (fractions).
 - `arm`: `{"box": [x0,y0,x1,y1], "pivot": [x,y], "amp": 9}` (fractions) cuts the free arm out of the
   torso and swings it about the shoulder. Mia: `{"box": [0.68,0.29,0.98,0.60], "pivot": [0.80,0.31]}`.
-  Keep the box on the arm that hangs free, not the one holding a strap. `lean` rotates upper body + head about the waist; `head` adds
-  a tilt about the neck. **Positive angle = leans to the LEFT of the frame** (PIL rotates
+  Keep the box on the arm that hangs free, not the one holding a strap.
+- `lean` rotates upper body + head about the waist; `head` adds a tilt about the neck. **Positive angle = leans to the LEFT of the frame** (PIL rotates
   counter-clockwise), so lean towards a partner on the left with +, on the right with −.
 - `wiggle`/`tilt`: whole-body rotation about the feet (a cat rubbing against legs, a sway of joy).
 - `talk`: a voice file + start time; the mouth opens with its loudness. Make lines with Kokoro
