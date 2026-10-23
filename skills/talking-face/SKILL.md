@@ -1,86 +1,111 @@
 ---
 name: talking-face
-description: Make a story character's face really TALK from one picture — audio-driven lip-sync with natural mouth, teeth, head motion and blinking, generated here on CPU with SadTalker (free, no video credits). Use when Dawood wants a character to speak a line "زي الناس", a talking close-up for a story video or Reel, or a narrated portrait. Humans / human-like characters only (not the cat).
+description: Make a story character's face really TALK from one picture — audio-driven lip-sync with natural mouth, teeth, head motion, blinks and expressions, generated here on CPU with SadTalker (free, no video credits), kept inside the story scene with clean hair edges. Use when Dawood wants a character to speak a line "زي الناس", a talking close-up for a story video or Reel, or a narrated portrait. Humans / human-like characters only (not the cat).
 ---
 
-# Talking face (SadTalker on CPU)
+# Talking face (SadTalker on CPU) — v4
 
-Proven 23 Oct 2026 on Mia's painted portrait + a Kokoro `bf_lily` line: real lip-sync with teeth,
-smile, head motion and blinks, art style preserved. One 5-second line takes ~22 minutes at 256 px on
-this 2-CPU workspace (face renderer ≈ 12 s/frame at 25 fps); size 512 is ~4x slower. Plan the lines,
-start the render in the background, and tell Dawood the wait.
+Proven 23 Oct 2026 on Mia: real lip-sync with teeth, smile, head motion, blinks, child voice, inside the
+village scene with the painting's own hair edges. ~20 min per 4–5 s line at 256 px on this 2-CPU
+workspace; 512 px ≈ 4×. Plan the lines, render in the background one at a time, say the wait.
+
+What it can and cannot do (say this in one line when delivering): it animates the head region (mouth,
+jaw, cheeks, brows, eyes, head pose; hair and upper shoulders follow the head). The body below the
+crop is still; hands, cloth and walking need an AI video model (ElevenLabs Video / ManyMotions /
+vidIQ Veo). It keeps the drawn style; it does not make a photo.
 
 ## 0. Setup (once per session, ~10 min, ~6 GB)
-```bash
-bash skills/talking-face/scripts/setup_sadtalker.sh /home/claude/sadtalker
+`bash skills/talking-face/scripts/setup_sadtalker.sh /home/claude/sadtalker` — Python 3.11 venv,
+torch 2.1.2 / torchvision 0.16.2, numpy 1.23.4 stack, basicsr/gfpgan/facexlib, SadTalker clone and
+weights from GitHub releases (resumed + size-checked). No repo code is modified. If the permission
+classifier blocks running the cloned program, stop, tell Dawood, retry once after he says to continue.
+
+## 1. Pre-generation checks (do these before spending 20 minutes)
+**Picture**
+- One face, front or ≤ 3/4 view, mouth visible, eyes open. Face ≥ 35 % of the crop width.
+- Build the **scene first**: composite the hi-res character cutout (puppet-animation Step 1) on the
+  story background at 1920×1080 (`scene.png`), then cut a square **bust** (head + shoulders, hair not
+  touching the edge) → 768×768 (`bust.png`) and note its box in the scene (`x0,y0,side`).
+  Never animate a cutout and matte it afterwards: that is what produced the beige halo and chopped
+  curls. Animating the scene crop keeps the painting's own hair edge.
+- Check the bust on screen before rendering (Read it): hair complete, no second face, no text.
+
+**Audio**
+- 3–8 s, one or two sentences, a real pause inside (", " or "…") so the rest mouth can be checked.
+- Child (Mia): Kokoro `bf_lily` → `ffmpeg -af "rubberband=pitch=1.26:formant=shifted:pitchq=quality,highpass=f=90,loudnorm=I=-16:TP=-1.5"`
+  (formants shifted = a child's timbre, not a sped-up adult). Sad lines: speed 0.82, pitch 1.20.
+  Grandma Nell: `bf_emma` speed 0.82 → `pitch=0.90`. Grown woman: `bf_lily` as is.
+- Listen-check is not possible here; check the envelope instead (`qa_talk.py` plots it): voiced
+  bursts should be separated by clear dips, otherwise the mouth never rests.
+
+## 2. The scene template (fill it, then render)
 ```
-It makes a **Python 3.11** venv (3.13 breaks basicsr's setup.py), installs torch 2.1.2 / torchvision
-0.16.2 (keeps `functional_tensor` that basicsr imports), **numpy 1.23.4** (SadTalker uses `np.float`),
-scipy 1.10.1, numba 0.57.1, librosa 0.9.2, basicsr 1.4.2, gfpgan 1.3.8, facexlib 0.3.0, opencv 4.10,
-clones OpenTalker/SadTalker and downloads the weights from GitHub releases (allowed by the proxy; the
-script resumes and size-checks them because long downloads get reset). No code in the repo is modified.
-
-If the sandbox's permission classifier blocks running the cloned program, stop and tell Dawood
-exactly that; he approves and you retry once. Never bypass it.
-
-## 1. Inputs
-- **Portrait**: a square crop of head + shoulders, face roughly centred and ≥ 40 % of the width,
-  512x512 is enough (SadTalker renders the face at 256/512 anyway). From a full-body reference:
-  `Image.crop((cx-210, top-120, cx+210, top+300)).resize((512,512))`. Front or 3/4 view; mouth
-  visible; one face only (two faces confuse the detector).
-- **Voice line**: WAV from Kokoro (`bf_lily`, speed 0.9) or Dawood's ElevenLabs Lily MP3. 3–8 s.
-  One sentence or two; a long monologue = several renders.
-- Cats / animals: the face detector finds no face → not supported. Use puppet-animation for Whiskers.
-
-## 2. Render
-```bash
-bash skills/talking-face/scripts/talk.sh portrait.png line.wav out_dir 256 crop   # face crop only (fastest)
-bash skills/talking-face/scripts/talk.sh portrait.png line.wav out_dir 256 full   # whole portrait, face pasted back
+IDENTITY  : <locked character block from story.json>, same hair/clothes/colours as scene.png
+MOTION    : mood <happy|sad|neutral>; head: small, slow, one or two turns max; shoulders follow gently
+BACKGROUND: <scene.png>, camera static (+ slow push-in in paste-back only)
+SPEECH    : "<line>", voice <child-mia|nell|lily>, <speed>; pause at "<word>"
+RENDER    : extcrop, size 256 (512 for hero shots), expression E, pose P, still? (see table)
 ```
-Defaults in talk.sh (v2, what Dawood liked better): **no `--still`** (real head motion, hair moves
-with it), `--expression_scale 1.4` (eyes, brows, cheeks and laughs move with the words),
-`--pose_style 12`. Override with env vars: `EXPR=1.2 POSE=5 STILL=--still bash talk.sh …`.
-`--still` only for `full` mode (calm head pasted into the whole portrait) or quiet narration.
-v1 with `--still` + 1.1 looked like "only the lips move" — don't ship that. Run in the background with a long timeout and
-poll the log (`Face Renderer:: n/N`). Output: `out_dir/<timestamp>.mp4` with the audio muxed in.
+| Mood | expression_scale | pose_style | still | notes |
+|---|---|---|---|---|
+| happy / excited | 1.5 | 12 | no | big smile and brows; pose 12 = lively but not jittery |
+| neutral narration | 1.3 | 5 | no | |
+| sad / afraid | 1.25 | 3 | no | slower voice does most of the work |
+| calm, controlled turn | 1.3 | — | yes + `--input_yaw -6 0 5 0 --input_pitch 0 -3 0` | audio-driven pose off; a deliberate smooth turn with start and stop |
 
-## 3. Upscale + compose (so it fits a 1080p/4K video)
+## 3. Render
 ```bash
-python3 skills/talking-face/scripts/compose_talk.py out_dir/<ts>.mp4 portrait.png mia_talk_1080p.mp4
+EXPR=1.5 POSE=12 bash skills/talking-face/scripts/talk.sh bust.png line.wav out_dir 256 extcrop
 ```
-FSRCNN x4 + light sharpen, centred on a blurred/darkened copy of the portrait → 1920x1080 with the
-voice. For the story assembler put the clip in `clips/<shot-id>.mp4`; it mutes clip audio, so keep the
-same sentence in Lily's narration (subtitles stay right) or mix the clip audio back at that shot's
-start time. For 4K export see video-4k-export.
+Background job, poll `Face Renderer:: n/N`. Output `out_dir/<timestamp>.mp4` (256×256, audio muxed).
+One render at a time (two in parallel were OOM-killed on 7 GB).
 
-## 4. Check before sending
-Contact sheet at 2 fps (`ffmpeg -vf "fps=2,scale=256:-2,tile=5x2"`): mouth opens on the words, eyes
-blink once or twice, no melted hair/teeth artefacts. If the mouth barely moves, raise
-`--expression_scale`; if the face warps, use a tighter/cleaner portrait crop.
+## 4. Paste back into the scene (no matting)
+```bash
+python3 skills/talking-face/scripts/pasteback_talk.py out_dir/<ts>.mp4 bust.png scene.png x0,y0,side out_1080p.mp4 --mood happy
+```
+Finds the crop inside the bust by multi-scale template match, maps it to the scene, FSRCNN ×4, pastes
+with a 70 px feather, slow eased push-in, mood grade, audio kept. Then `video-4k-export` if needed.
+(`scene_talk.py` = the old matte-after approach; keep only for a plain-background portrait.)
 
-## 5. Emotions, child voice, and putting her in the scene (v3)
-- **Portrait for head + shoulders**: a 768x768 crop from the full-body reference that keeps hair and
-  shoulders (`Image.crop((cx-300, 0, cx+300, 600))`), rendered with `--preprocess extcrop` (the extended
-  crop warps hair and shoulders with the head; `crop` cuts the curls). Mia: `mia_bust.png`.
-- **Emotion** comes from three things, all free: the voice performance, SadTalker's settings, and the
-  grade. Happy: Kokoro speed 0.95, `--expression_scale 1.5 --pose_style 12`, warm grade + push-in.
-  Sad: speed 0.82, `--expression_scale 1.25 --pose_style 3`, cool desaturated grade, vignette, slow
-  drift down. Neutral narration: 1.3 / pose 5. Expressions are driven by the audio, so write the line
-  the way the character feels (short bursts for joy, pauses "I... I don't" for fear).
-- **Child voice** (Mia): Kokoro `bf_lily` then
-  `ffmpeg -af "rubberband=pitch=1.26:formant=shifted:pitchq=quality,highpass=f=90,loudnorm=I=-16:TP=-1.5"`.
-  Pitch 1.20-1.28 with formants shifted = a real child's timbre, not a sped-up woman. Sad lines a
-  little lower (1.20). Grown woman: `bf_lily`/`bf_emma` as is; Grandma Nell: `bf_emma` speed 0.82 +
-  `rubberband=pitch=0.90:formant=shifted`.
-- **Into the story scene**: `scripts/scene_talk.py talk.mp4 background.png out.mp4 --mood happy|sad`
-  — x4 upscale, rembg matte per frame (isnet-general-use), bust anchored at the bottom, contact
-  shadow, particles, mood grade, camera move, audio kept. ~2 min per 4 s clip.
-- **Memory**: two SadTalker renders at once get OOM-killed on the 7 GB workspace (one died silently).
-  Run them one after another, in the background, ~20 min each.
+## 5. QA with numbers (always, before sending)
+```bash
+/home/claude/sadtalker/venv311/bin/python skills/talking-face/scripts/qa_talk.py clip.mp4 --audio line.wav --out qa_name
+```
+| Metric | Good | Fix when bad |
+|---|---|---|
+| lipsync_corr / lipsync_lag_ms | > 0.5 / within ±80 ms | constant lag → shift audio at mux (`-itsoffset`); low corr → louder consonants in the line, expression 1.3+ |
+| mouth_rest_in_pause vs mouth_min | rest ≈ min | mouth stays open in silence → add a real pause in the line, lower expression |
+| head_jitter | < 0.6 (ok ≤ 1.2) | shaky → pose 3/5 or `--still` + input_yaw path |
+| head_range_pct_face | 3–10 % | > 15 % floats/slides → `--still` + small input_yaw; < 2 % = dead → pose 12 |
+| blinks_per_s | 0.1–0.8 | 0 → longer clip or `--ref_eyeblink` video; fluttering → lower expression |
+| identity_drift | < 0.012 | face proportions wander → tighter bust, face ≥ 40 % of crop, size 512 |
+| bg_motion (corners) | < 0.15 px/frame | background swims → paste-back (static scene) instead of raw crop |
+Also look: contact sheet at 2–3 fps, and a 6-frame strip around the biggest head turn for the seam
+and the hair line (forehead, ears, shoulders). Stills prove edges and identity, not smoothness: watch
+the strip for jumps between neighbouring frames. QA on CPU takes ~1 min per 10 frames; run it in the
+background and never alongside a render.
 
-## Use in the story videos
-- Close-up dialogue shots: "Whiskers… the map is alive!", "You clever, clever cat!", Grandma Nell's
-  letter lines. Keep each ≤ 8 s.
-- Reels: a talking Mia saying the day's powerful sentence, English caption + Arabic line.
-- Combine: puppet-animation for walking/body scenes, talking-face for the speaking close-ups, AI video
-  (ElevenLabs / ManyMotions / vidIQ) when credits allow for everything else.
+## 6. Diagnose by cause, change one thing
+| Symptom | Cause | Fix |
+|---|---|---|
+| Only the lips move | `--still` + low expression | drop `--still`, expression 1.4–1.5 |
+| Beige/white fringe on hair, curls chopped | matting after animation | composite scene first, paste-back |
+| Head floats over the body | `full` mode with head motion, or paste-back feather too small | `extcrop` + paste-back feather ≥ 70 px, or `--still` for full |
+| Background wobbles near the head | extcrop warps the crop | paste-back (only the head square moves, feathered) |
+| Teeth/mouth smeared | 256 px source | size 512 or GFPGAN `--enhancer gfpgan` (test on one line; may "photo-ify" painted faces) |
+| Chipmunk voice | pitch without formant shift | `rubberband=…:formant=shifted` |
+| Same gesture repeating | pose_style loop on long audio | split into ≤ 6 s lines, vary pose_style per line |
+
+## 7. Capability map
+| Need | Tool | Status |
+|---|---|---|
+| Lip-sync + head + expressions, one portrait | SadTalker here | works, CPU-slow |
+| Child / old voice | Kokoro + rubberband | works |
+| Clean hair in the scene | scene-first composite + paste-back | works |
+| Sharper face | size 512 (~80 min) / GFPGAN | available, untested on painted faces |
+| Hands, body, walking, cloth, hugging the cat | AI video model (ElevenLabs Video, ManyMotions `/mcp`, vidIQ Veo) | not available locally |
+| Animal faces | — | SadTalker finds no face; use puppet-animation |
+
+Example assets: `yt/stories/2026-10-the-map-that-glowed/talk/` (mia_bust.png, mia_village_bust.png,
+scene_village_mia.png, happy_child.wav, sad_child.wav, mia_hv_256.mp4, Mia_happy_village_v3.mp4).
