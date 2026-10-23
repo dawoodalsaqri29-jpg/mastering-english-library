@@ -269,5 +269,8 @@
  ],
  "chimes": [
   15.41
- ]
+ ],
+ "crickets": 0.012,
+ "cloth": 1.0,
+ "breaths": true
 }

@@ -82,6 +82,8 @@ Don't ship the per-shot audio. Rebuild the whole scene's soundtrack on the edit 
 - **Ambience:** ducks 55 % under the voice.
 - **Grass footsteps (v2 model):** a soft body thud (40–180 Hz), a heel cluster of 45–70 tiny resonant stem snaps (damped sines at 1.7–7.5 kHz, 1–4.5 ms each), a toe-roll cluster 75–120 ms later, a leaf rustle, and ground early reflections (9, 17, 31 ms). Every step is different. One at every heel strike, panned with the character; light brushes on the swing; `step_gain` 0.85. Get the step times from `sprite_walk.Walker` with the same scene JSON, offset by the shot's start in the edit.
 - **Animals:** sheep bleats are voice-based. Kokoro "Baaaaa." (`bf_emma` / `am_michael`) → rubberband to ~300 Hz with shifted formants → vibrato + tremolo at 16 Hz → nasal EQ → outdoor echo. Keep them at the voice's RMS or below (gain 0.12–0.28); a 0.8 gain was 7 dB louder than Mia.
+- **Life details:** a small inhale 0.3 s before each line (`breaths`); a dress rustle on each swing (`cloth`); evening crickets (`crickets` 0.012).
+- **Music (optional second version):** `"music": 0.32` adds a soft slice-of-life piano with a warm pad (F – C/E – Dm – B♭, 66 bpm) and reverb, about 15 dB under the voice and ducking further when she speaks. Deliver both versions; Dawood chooses.
 - **Bed:** breeze plus leaves; evening bird chirps every 2–4.5 s (birds ≤ 0.05, or they get shrill).
 - **Accents:** chimes on inserts; a ting on each word card.
 - **Master:** −14 LUFS, TP −1.

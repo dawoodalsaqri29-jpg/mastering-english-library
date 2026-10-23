@@ -3,7 +3,7 @@ name: anime-character-motion
 description: Make a story character WALK like a real person in side view (anime / studio cut-out rig) and talk while walking, from one side-view drawing: legs with hip-knee-ankle, heel strike, toe-off, legs passing, arm swing, body bob, blinks, profile mouth flaps, natural stop, walk left or right, camera follow, footsteps. Use for "خلها تمشي زي الناس / مثل الأنمي", walk across a scene, walk-in-and-stop-then-talk shots.
 ---
 
-# Anime character motion (side-view skeletal walk) v1.2
+# Anime character motion (side-view skeletal walk) v1.3
 
 Built and proven 23 Oct 2026 on Mia ("The Map That Glowed"). This replaced the front-view puppet walk that Dawood called "bad": a front view can't show legs passing each other, and the 12 AI walk frames he generated were all "legs apart" poses, so playing them in order only jitters. A real walk needs a skeleton.
 
@@ -128,7 +128,11 @@ Rig keys:
 - `"skirt": {"top": 640, "amp": 7, "drag": 4, "lag": 0.08}`: the dress below the waist (y = top) warps progressively to the hem. It trails backwards with walking speed and swings twice per cycle, a little behind the legs.
 - `"hair": {"box": [40, 40, 300, 350], "face_x": 255, "amp": 0.035, "drag": 3}`: the back curls lag the body's up-and-down bob (follow the hip velocity from 0.08–0.16 s earlier) and trail with speed. Keep `face_x` behind the ear so the ear and face never wobble.
 
-After a stop, both settle with a small damped bounce. The values are computed in `secondary()`; the arrays are remapped per frame (cheap).
+- `"bag": {"box": [70, 670, 300, 880], "strap_y": 680, "amp": 0.045}`: the shoulder bag bounces against the hip, lagging the bob. The strap end stays fixed.
+- Every step is slightly different: lift ±14 %, arm swing ±15 % and bob vary per cycle (deterministic noise), so the walk never looks like a loop.
+- The head dips about 1.4° at each heel strike and recovers.
+
+After a stop, all of them settle with a small damped bounce. The values are computed in `secondary()`; the arrays are remapped per frame (cheap).
 
 ## Walking IN the grass (v1.1)
 `"grass": {"spacing": 5, "rows": 3, "height": [34, 78], "flowers": 0.04, "window": 330, "kick": 7}`. Effects:

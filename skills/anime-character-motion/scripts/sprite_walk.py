@@ -70,6 +70,14 @@ class Rig:
             self.hair_w = cv2.GaussianBlur(self.hair_w, (0, 0), 12)
         else:
             self.hair_w = None
+        bg_ = R.get("bag", None)
+        if bg_:
+            m = np.zeros((H, W), np.float32); x0b, y0b, x1b, y1b = bg_["box"]
+            m[y0b:y1b, x0b:x1b] = 1.0
+            m *= np.clip((yy - bg_.get("strap_y", y0b)) / 60.0, 0, 1)            # strap end stays, bag body moves
+            self.bag_w = cv2.GaussianBlur(m, (0, 0), 14)
+        else:
+            self.bag_w = None
         self.gx, self.gy = np.meshgrid(np.arange(W, dtype=np.float32), np.arange(H, dtype=np.float32))
         # under-lap pixels (left of the cut) take the sleeve's own colours, mirrored across the cut
         cutx = np.clip(cut, 0, W - 1)[:, None]
@@ -170,6 +178,10 @@ class Walker:
         self.a_from_heel = np.array([b.ankle_b[0] - b.heel_b[0], b.ankle_b[1] - b.sole_y])   # ankle rel. heel (flat)
         self.a_from_ball = np.array([b.ankle_b[0] - b.ball_b[0], b.ankle_b[1] - b.sole_y])
 
+    @staticmethod
+    def rnd(k):
+        v = math.sin(k * 12.9898 + 78.233) * 43758.5453; return v - math.floor(v)          # deterministic 0..1
+
     def foot(self, phi, xplant):
         """phi in [0,1): 0 = heel strike. Returns ankle (x,y) and foot angle (rad, + = toe up)."""
         g = self.r.ground; st = self.st
@@ -189,7 +201,8 @@ class Walker:
         end_heel = np.array([xplant + self.S, g]); end = end_heel + rot(self.a_from_heel, a_end)
         k = ease(u)
         pos = start * (1 - k) + end * k
-        pos[1] -= self.lift * math.sin(math.pi * min(u * 1.15, 1)) ** 1.3 * (1 - 0.25 * u)
+        var = 0.86 + 0.28 * self.rnd(round(xplant / max(self.S, 1) * 7.0))           # every step lifts a bit differently
+        pos[1] -= self.lift * var * math.sin(math.pi * min(u * 1.15, 1)) ** 1.3 * (1 - 0.25 * u)
         a = a_start + (a_end - a_start) * ease(u * 1.1)
         return pos, a
 
@@ -227,7 +240,10 @@ class Walker:
         phiA = (t / self.T) % 1
         hip_y = self.r.hip[1] + self.bob * math.cos(4 * math.pi * (phiA - self.mid) + math.pi) * -1
         hip = np.array([self.v * t, hip_y])
-        arm = -self.arm_amp * math.cos(2 * math.pi * (phiA - 0.06))       # far arm forward when near leg forward
+        kc = math.floor(t / self.T)
+        arm = -self.arm_amp * (0.85 + 0.3 * self.rnd(kc + 3)) * math.cos(2 * math.pi * (phiA - 0.06))   # far arm forward when near leg forward
+        hip_y += self.bob * 0.25 * (self.rnd(math.floor(2 * t / self.T)) - 0.5) * math.sin(2 * math.pi * 2 * phiA) ** 2
+        hip = np.array([self.v * t, hip_y])
         sway = math.radians(1.2) * math.sin(4 * math.pi * (phiA - self.mid))
         return hip, res, self.lean + sway, arm
 
@@ -278,13 +294,14 @@ def draw_character(r, w, t, cw=1100, ch=1500, mouth_open=0.0, blink=0.0, far_tin
             mx = r.gx + r.hair_w * sec["hair_dx"]; my = r.gy + r.hair_w * sec["hair_dy"]
             head = cv2.remap(head, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
         neck_c = Mbody @ np.array([r.neck[0], r.neck[1], 1])
-        paste(can, head, rot_mat(th_body - math.radians(head_a), r.neck, neck_c))
+        paste(can, head, rot_mat(th_body - math.radians(head_a + sec["head_step"]), r.neck, neck_c))
         torso = r.torso
-        if r.skirt_top is not None and abs(sec["skirt_dx"]) > 0.05:
+        if r.skirt_top is not None and (abs(sec["skirt_dx"]) > 0.05 or (r.bag_w is not None and abs(sec["bag_dy"]) > 0.05)):
             top = r.skirt_top; span = max(r.hem_mid - top, 1)
             prof = np.clip((r.gy[:, :1] - top) / span, 0, 1.2) ** 1.6          # 0 at the waist -> 1 at the hem
             mx = r.gx + prof * sec["skirt_dx"]                                  # sample from behind = cloth trails
-            torso = cv2.remap(torso, mx, r.gy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+            my = r.gy + (r.bag_w * sec["bag_dy"] if r.bag_w is not None else 0)
+            torso = cv2.remap(torso, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
         paste(can, torso, Mbody)
     else:
         body = r.body
@@ -311,7 +328,11 @@ def secondary(r, w, t):
     hair_dx = sp * hr.get("drag", 3.0)
     if ts is not None and t > ts + w.close * 0.6:
         u = t - ts - w.close * 0.6; hair_dy += 3.5 * math.exp(-u * 3) * math.sin(u * 10)
-    return {"skirt_dx": skirt, "hair_dy": hair_dy, "hair_dx": hair_dx}
+    bag_dy = float(np.clip(vy * R.get("bag", {}).get("amp", 0.045), -7, 7))
+    if ts is not None and t > ts + w.close * 0.6:
+        u = t - ts - w.close * 0.6; bag_dy += 4 * math.exp(-u * 3.5) * math.sin(u * 11)
+    head_step = -1.4 * sp * math.cos(4 * math.pi * ((t - 0.05) / w.T))           # dips a little at each heel strike
+    return {"skirt_dx": skirt, "hair_dy": hair_dy, "hair_dx": hair_dx, "bag_dy": bag_dy, "head_step": head_step}
 
 def face_overlay(r, body, mo, bl):
     b = body.copy(); R = r.R
