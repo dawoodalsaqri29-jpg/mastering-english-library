@@ -96,8 +96,21 @@ Perf keys: `roll`, `nod`, `head_dx`, `gestures` [{t, d, nod, roll, brow}], `gaze
 
 Rate each criterion as passed / needs fixing / not verified. No made-up scores. Listening is not possible here, so say so.
 
-## E. Test results, 23 Oct 2026 (same voice line and scene)
-Fill in from `qa_*.json` (in `talk_rig/`) when comparing engines. Visual checks recorded:
+## E. Test results, 23 Oct 2026 (same voice line "It's going down... It's a sunset! So beautiful.", same scene)
+Measured with `qa_talk.py` (landmarks):
+
+| Metric | SadTalker | Face rig v3 | Reading |
+|---|---|---|---|
+| head_jitter (% face) | 1.31 (shaky) | 0.94 (ok) | rig motion is smooth by construction; part of the 0.94 is landmark noise |
+| lipsync corr vs loudness | 0.66, lag −40 ms | 0.67, lag +167 ms | the landmark lag on the thin painted mouth is unreliable: the rig's own mouth track vs the audio envelope = 0 ms lag (corr 0.70), and frame-by-frame the round mouth appears on "go-" at 0.72 s exactly. Phoneme sync is checked against phones.json; listening wasn't possible |
+| mouth_rest_in_pause | 0.015 | 0.006 | rig returns to the drawn rest mouth in pauses |
+| mouth_max | 0.17 | 0.08 | rig opens less (calm child); raise the viseme `open` values if a bigger mouth is wanted |
+| blinks | 3 (0.53/s) | 3 (0.5/s), in pauses | |
+| identity_drift | 0.006 | 0.011 | both under 0.012; the rig never changes features: its drift is landmark noise from jaw and blinks |
+| bg_motion (corners) | 0.46 px/f | 0.22 px/f | rig: only the deliberate push-in |
+| face width on screen | 260 px (from a 256 crop) | 357 px (×4 portrait) | sharpness |
+
+Visual checks recorded:
 
 | Criterion | SadTalker (before) | Face rig (after) |
 |---|---|---|

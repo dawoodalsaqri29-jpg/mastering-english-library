@@ -1,0 +1,56 @@
+{
+ "frames": 180,
+ "fps": 30.0,
+ "landmark_detection_rate": 1.0,
+ "lipsync_lag_ms": 166.7,
+ "lipsync_corr": 0.668,
+ "longest_pause_s": [
+  5.33,
+  6.0
+ ],
+ "mouth_rest_in_pause": 0.0062,
+ "mouth_min": 0.0,
+ "mouth_max": 0.0769,
+ "head_jitter": 0.941,
+ "head_range_px": [
+  15.7,
+  11.9
+ ],
+ "face_width_px": 357.4,
+ "head_range_pct_face": [
+  4.4,
+  3.3
+ ],
+ "blinks": 3,
+ "blink_mean_frames": 4.0,
+ "blinks_per_s": 0.5,
+ "identity_drift": 0.0109,
+ "bg_motion": 0.216,
+ "verdicts": [
+  [
+   "lip-sync",
+   "check",
+   "corr 0.668, lag 166.7 ms"
+  ],
+  [
+   "head motion",
+   "ok",
+   "jitter 0.941, range [4.4, 3.3] % of face"
+  ],
+  [
+   "blinks",
+   "ok",
+   "3 blinks, 0.5/s"
+  ],
+  [
+   "identity",
+   "stable",
+   "eye-distance std 0.0109"
+  ],
+  [
+   "background",
+   "moving",
+   "0.216 px/frame in corners"
+  ]
+ ]
+}
