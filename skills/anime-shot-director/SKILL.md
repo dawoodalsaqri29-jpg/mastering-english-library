@@ -76,6 +76,18 @@ Order that worked: render shots, `anime_fx.py` per shot, `edit_shots.py`, `word_
 
 Then run the finishing pass, if it wasn't already done per shot: `anime_fx.py scene.mp4 scene_fx.mp4 --motes 40 --bloom 0.35 --leak tr --grain 3`. Use `--speed-lines 4.0-4.6` on an impact beat. Match `--leak` to the painting's sun side.
 
+## 4b. Sound design (Dawood: "make every sound clear, like real life")
+Don't ship the per-shot audio. Rebuild the whole scene's soundtrack on the edit timeline with `sound_design.py sound.json scene_mix.wav`, then mux it over the edited video (`-map 0:v -map 1:a -c:v copy`), including the 4K and Reel files.
+- **Voices:** EQ (high-pass 90 Hz, −2.5 dB at 260 Hz, +3 dB at 3.4 kHz), compressor, −16 LUFS. Always on top.
+- **Ambience:** ducks 55 % under the voice.
+- **Grass footsteps:** heel crunch, toe roll, rustle and a soft thump at every heel strike, panned with the character; light brushes on the swing; `step_gain` 0.85. Get the step times from `sprite_walk.Walker` with the same scene JSON, offset by the shot's start in the edit.
+- **Animals:** sheep bleats are voice-based. Kokoro "Baaaaa." (`bf_emma` / `am_michael`) → rubberband to ~300 Hz with shifted formants → vibrato + tremolo at 16 Hz → nasal EQ → outdoor echo. Keep them at the voice's RMS or below (gain 0.12–0.28); a 0.8 gain was 7 dB louder than Mia.
+- **Bed:** breeze plus leaves; evening bird chirps every 2–4.5 s (birds ≤ 0.05, or they get shrill).
+- **Accents:** chimes on inserts; a ting on each word card.
+- **Master:** −14 LUFS, TP −1.
+- **Check by numbers:** RMS and peak of windows (ambience only, steps only, voice, bleat). Target: voice peaks about 8 dB above step peaks, bleat RMS ≤ voice RMS, ambience about 13 dB under the voice.
+- **Real recordings beat synthesis:** this workspace can't download sound libraries (only PyPI is reachable; the GitHub sound repos and freesound are blocked). When Dawood sends real recordings (for example ElevenLabs Sound Effects: "sheep bleating in a meadow", "child footsteps on grass"), put them in `sfx` with `"file"`.
+
 ## 5. Export and check
 - 4K: `ffmpeg -i scene_fx.mp4 -vf "scale=3840:2160:flags=lanczos,unsharp=5:5:0.4" -c:v libx264 -crf 19 -preset slow -c:a copy -movflags +faststart out_4K.mp4` (video-4k-export).
 - Reel: vertical with a blurred-cover background (story-hook).
