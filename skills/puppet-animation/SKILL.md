@@ -5,9 +5,11 @@ description: Make Dawood's story characters move, walk, lean, blink and TALK fro
 
 # Puppet animation (cut-out characters that walk and talk)
 
-What it does, honestly: a character cutout is split into head / upper body / lower body (cat:
-body + tail), the parts pivot a little, the whole figure bobs and sways while it travels, breathes,
-blinks, and opens its mouth to the loudness of a voice file. Actors are placed on one of the story's
+What it does, honestly: a character cutout is split into head / upper body / skirt-hips / LEFT LEG /
+RIGHT LEG (+ a free arm; cat: body + tail + left/right leg groups). While walking the two legs
+alternate like a real front-view walk cycle (each leg shortens about its hip so the foot lifts, swings
+a little outward, the skirt sways, the arm swings opposite to the legs, one small body bob per step),
+the figure breathes, blinks, and opens its mouth to the loudness of a voice file. Actors are placed on one of the story's
 painted backgrounds with a slow camera move, a contact shadow and floating particles. It looks like
 a hand-made paper-cut / Live2D cartoon: lively, consistent with the reference art, free. It does NOT
 redraw the picture — legs don't step, heads don't turn in 3D, hands don't reach. For that, use a video
@@ -60,7 +62,13 @@ Cat: auto (tail found as the separate column group in the top half; mouth option
 ```
 - `path`: keyed x (fraction of width, feet centre) and `scale` (1.0 = `height`×H). Walking **towards
   the camera** = scale growing (front-view cutouts read best this way); walking across = x changing.
-- `walk` adds bob + sway until `until`. `lean` rotates upper body + head about the waist; `head` adds
+- `walk` runs the two-leg cycle until `until`: `steps` = steps per second (1.7-2.0 child, 2.4-2.8
+  cat), `bob` 0.004-0.006 (one small bob per step; bigger looks like hopping), `sway` 1-1.5.
+  Legs are found automatically (hem = where the silhouette narrows below the widest skirt row, split =
+  the gap between the legs); override with `"legs": {"hem": 0.71, "split": 0.52}` (fractions).
+- `arm`: `{"box": [x0,y0,x1,y1], "pivot": [x,y], "amp": 9}` (fractions) cuts the free arm out of the
+  torso and swings it about the shoulder. Mia: `{"box": [0.68,0.29,0.98,0.60], "pivot": [0.80,0.31]}`.
+  Keep the box on the arm that hangs free, not the one holding a strap. `lean` rotates upper body + head about the waist; `head` adds
   a tilt about the neck. **Positive angle = leans to the LEFT of the frame** (PIL rotates
   counter-clockwise), so lean towards a partner on the left with +, on the right with −.
 - `wiggle`/`tilt`: whole-body rotation about the feet (a cat rubbing against legs, a sway of joy).
@@ -86,6 +94,8 @@ mix the spoken line back in after assembly, see animate-story-picture Level 3), 
 Vertical: blurred-cover background + centred crop (see story-hook skill).
 
 ## Limits to say out loud
-Cut-out motion only; a front-view figure can't turn or show a real step. Hands don't move, so
-"stroking the cat" is shown as the cat rubbing against her while she leans down. Painted eyes blink
+Cut-out motion only: legs lift and alternate, but a front-view figure can't turn, and the hand
+doesn't reach, so "stroking the cat" is shown as the cat rubbing against her while she leans down.
+Next level without a video model: ask Dawood for a SIDE-VIEW reference of the character in a
+walking pose, then rig legs that rotate about the hip (a true profile walk cycle). Painted eyes blink
 with a drawn lid (3 frames) — if it looks wrong on a character, set `"blink": false`.

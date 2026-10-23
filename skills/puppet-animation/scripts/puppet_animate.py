@@ -83,6 +83,30 @@ def rotate_about(layer, angle, pivot):
     return layer.rotate(angle, resample=Image.BICUBIC, center=pivot)
 
 
+def transform_about(layer, pivot, angle=0.0, sx=1.0, sy=1.0, dx=0.0, dy=0.0):
+    """Rotate (deg, CCW) + scale (sx, sy) a canvas-sized RGBA layer about pivot, then shift by (dx, dy)."""
+    if abs(angle) < 0.01 and abs(sx - 1) < 1e-4 and abs(sy - 1) < 1e-4 and abs(dx) < 0.01 and abs(dy) < 0.01:
+        return layer
+    th = math.radians(angle); c, s_ = math.cos(th), math.sin(th)
+    px, py = pivot[0] + dx, pivot[1] + dy
+    # output -> input: in = S^-1 R^-1 (out - p') + p0
+    a, b = c / sx, s_ / sx
+    d, e = -s_ / sy, c / sy
+    cx = pivot[0] - (a * px + b * py)
+    cy = pivot[1] - (d * px + e * py)
+    return layer.transform(layer.size, Image.AFFINE, (a, b, cx, d, e, cy), resample=Image.BICUBIC)
+
+
+def alpha_runs(mask):
+    """[(start, end)] of True runs in a 1-D bool mask."""
+    out, s0 = [], None
+    for i, v in enumerate(mask):
+        if v and s0 is None: s0 = i
+        if not v and s0 is not None: out.append((s0, i - 1)); s0 = None
+    if s0 is not None: out.append((s0, len(mask) - 1))
+    return out
+
+
 def alpha_bbox_rows(a, y0, y1):
     rows = a[y0:y1]
     cols = np.where(rows.max(0) > 40)[0]
@@ -169,6 +193,43 @@ class Actor:
             ys, xs = int(self.eyes[0][1] - h * 0.018), int((self.eyes[0][0] + self.eyes[1][0]) / 2)   # bridge of the nose / forehead
             patch = px[max(ys - 3, 0): ys + 3, max(xs - 5, 0): xs + 5].reshape(-1, 3)
             self.skin = tuple(int(v) for v in np.median(patch, 0))
+        # ---- legs: hem row (where the silhouette narrows below the widest skirt/torso row) and the gap between legs
+        if self.kind != "cat":
+            lg = self.s.get("legs", {})
+            h0, w0, px_, py_ = self.h0, self.w0, self.padx, self.pady
+            if "hem" in lg:
+                self.hem_y = int(lg["hem"] * h0 + py_)
+            else:
+                widths = []
+                for y in range(int(h0 * 0.45) + py_, int(h0 * 0.93) + py_):
+                    cols = np.where(a[y] > 40)[0]
+                    widths.append((cols.max() - cols.min()) if len(cols) else 0)
+                widths = np.array(widths); ymax = int(np.argmax(widths)); mx = widths[ymax]
+                below = np.where(widths[ymax:] < 0.62 * mx)[0]
+                self.hem_y = int(h0 * 0.45) + py_ + ymax + (int(below[0]) if len(below) else int(h0 * 0.25))
+            band = a[int(self.hem_y + (h - self.hem_y) * 0.35): int(self.hem_y + (h - self.hem_y) * 0.9)]
+            runs = [r for r in alpha_runs(band.max(0) > 40) if r[1] - r[0] > w0 * 0.04]
+            if "split" in lg:
+                self.leg_split = int(lg["split"] * w0 + px_)
+            elif len(runs) >= 2:
+                runs = sorted(runs, key=lambda r: r[1] - r[0])[-2:]; runs.sort()
+                self.leg_split = (runs[0][1] + runs[1][0]) // 2
+            else:
+                lx0, lx1 = alpha_bbox_rows(a, self.hem_y, h); self.leg_split = (lx0 + lx1) // 2
+            lx0, lx1 = alpha_bbox_rows(a, self.hem_y, h)
+            self.leg_l = (lx0 - 6, self.leg_split)       # image-left leg
+            self.leg_r = (self.leg_split, lx1 + 6)
+            self.hip_l = ((lx0 + self.leg_split) / 2, self.hem_y - 6)
+            self.hip_r = ((self.leg_split + lx1) / 2, self.hem_y - 6)
+            # optional free arm: box + shoulder pivot as fractions of the figure
+            arm = self.s.get("arm")
+            if arm:
+                P2 = lambda q: (q[0] * w0 + px_, q[1] * h0 + py_)
+                (ax0, ay0), (ax1, ay1) = P2(arm["box"][:2]), P2(arm["box"][2:])
+                self.arm_box = (int(ax0), int(ay0), int(ax1), int(ay1)); self.arm_pivot = P2(arm["pivot"])
+                self.arm_amp = arm.get("amp", 9)
+            else:
+                self.arm_box = None
         # neck pivot x = centre of alpha at neck row
         nx0, nx1 = alpha_bbox_rows(a, self.neck_y - 3, self.neck_y + 3)
         self.neck_pivot = (getattr(self, "neck_x", None) or (nx0 + nx1) / 2, self.neck_y)
@@ -213,7 +274,21 @@ class Actor:
                 tail = s.get("tail", {"amp": 8, "hz": 0.5})
                 ang = tail["amp"] * math.sin(2 * math.pi * tail["hz"] * t + 0.7)
                 tail_layer = rotate_about(tail_layer, ang, self.tail_pivot)
-            # mouth (cat talks rarely); gentle head bob via whole-body handled outside
+            # legs: split the lower 30% into left / right groups that alternate while walking
+            walk = s.get("walk")
+            if walk and t < walk.get("until", 1e9):
+                ph = 2 * math.pi * walk.get("steps", 2.4) * t
+                ly = int(self.pady + self.h0 * 0.70)
+                lx0, lx1 = alpha_bbox_rows(self.a, ly, self.h); mid = (lx0 + lx1) // 2
+                ba = np.asarray(body).astype(np.float32).copy()
+                legs = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
+                for side, (x0, x1) in (("l", (lx0 - 4, mid)), ("r", (mid, lx1 + 4))):
+                    leg = self.part(ly - 10, self.h, x0, x1, feather=3)
+                    lift = max(0.0, math.sin(ph + (0 if side == "l" else math.pi))) ** 1.3
+                    hip = ((x0 + x1) / 2, ly - 4)
+                    legs.alpha_composite(transform_about(leg, hip, sy=1 - 0.16 * lift, angle=(-1 if side == "l" else 1) * 4 * lift))
+                ba[ly + 8:, :, 3] *= 0.0           # body keeps everything above the legs
+                body = Image.alpha_composite(legs, Image.fromarray(ba.astype(np.uint8), "RGBA"))
             canvas = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
             if tail_layer is not None:
                 canvas.alpha_composite(tail_layer)
@@ -222,10 +297,36 @@ class Actor:
                 self.draw_mouth(canvas, mouth_open, dark=(25, 15, 15))
             return canvas
 
-        # human: lower / upper / head
-        lower = self.part(self.waist_y - 4, self.h)
+        # human: legs / skirt (waist..hem) / upper / head, with a two-leg walk cycle
+        walk = s.get("walk"); ph = None
+        if walk and t < walk.get("until", 1e9):
+            ph = 2 * math.pi * walk.get("steps", 1.7) * t
+        # each leg: lift = shorten about the hip (foot rises) + a little outward swing; legs alternate
+        legs = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
+        for side, (x0, x1), hip in (("l", self.leg_l, self.hip_l), ("r", self.leg_r, self.hip_r)):
+            leg = self.part(self.hem_y - 14, self.h, x0, x1, feather=3)
+            if ph is not None:
+                lift = max(0.0, math.sin(ph + (0 if side == "l" else math.pi)))
+                lift = lift ** 1.3
+                sgn = -1 if side == "l" else 1
+                leg = transform_about(leg, hip, angle=-sgn * 6 * lift, sy=1 - 0.20 * lift, sx=1 + 0.06 * lift, dx=sgn * 3 * lift)
+            legs.alpha_composite(leg)
+        lower = self.part(self.waist_y - 4, self.hem_y + 4)                      # skirt / hips
+        if ph is not None:
+            lower = transform_about(lower, self.waist_pivot, angle=2.2 * math.sin(ph + 0.6))   # skirt swing
+        lower = Image.alpha_composite(legs, lower)
         upper = self.part(self.neck_y - 4, self.waist_y + 4)
         head = self.part(0, self.neck_y + 4)
+        arm = None
+        if self.arm_box:
+            ax0, ay0, ax1, ay1 = self.arm_box
+            arm = self.part(ay0, ay1, ax0, ax1, feather=3)
+            # erase the arm from the torso so it doesn't appear twice
+            m = np.asarray(arm)[..., 3].astype(np.float32) / 255
+            ua = np.asarray(upper).astype(np.float32).copy(); ua[..., 3] *= (1 - m * 0.95)
+            upper = Image.fromarray(ua.astype(np.uint8), "RGBA")
+            swing = (self.arm_amp * math.sin(ph) if ph is not None else 0.0) + 1.5 * math.sin(2 * math.pi * 0.3 * t)
+            arm = transform_about(arm, self.arm_pivot, angle=swing)
         if blinking:
             lid = Image.new("RGBA", head.size, (0, 0, 0, 0)); d = ImageDraw.Draw(lid)
             for (ex, ey) in self.eyes:
@@ -239,6 +340,8 @@ class Actor:
         # upper body + head lean about the waist; head adds its own tilt about the neck
         head = rotate_about(head, head_a, self.neck_pivot)
         head_upper = Image.alpha_composite(upper, head)
+        if arm is not None:
+            head_upper = Image.alpha_composite(head_upper, arm)
         head_upper = rotate_about(head_upper, lean_a, self.waist_pivot)
         canvas = Image.alpha_composite(lower, head_upper)
         if abs(breath - 1) > 1e-4:
@@ -321,8 +424,8 @@ def main():
             wk = s.get("walk")
             if wk and t < wk.get("until", 1e9):
                 ph = 2 * math.pi * wk.get("steps", 1.8) * t
-                yoff = -wk.get("bob", 0.012) * H * abs(math.sin(ph / 2))
-                sway = wk.get("sway", 2.0) * math.sin(ph / 2)
+                yoff = -wk.get("bob", 0.005) * H * abs(math.sin(ph))      # one small bob per step
+                sway = wk.get("sway", 1.2) * math.sin(ph / 2)
             # whole-body tilt about the feet: keyed "tilt" + periodic "wiggle" (a cat rubbing, a sway of joy)
             sway += keyed(s.get("tilt", []), t)
             wg = s.get("wiggle")
@@ -343,7 +446,7 @@ def main():
             fr.alpha_composite(layer, (int(x - tw / 2), int(gy - th + yoff)))
             if a.debug_frame is not None:  # rig markers
                 d = ImageDraw.Draw(fr); k = scale / 1.05; ox, oy = x - tw / 2, gy - th + yoff
-                pts = [ac.mouth, ac.neck_pivot] + (list(ac.eyes) if ac.eyes else []) + ([ac.waist_pivot] if ac.waist_y else [])
+                pts = [ac.mouth, ac.neck_pivot] + (list(ac.eyes) if ac.eyes else []) + ([ac.waist_pivot, ac.hip_l, ac.hip_r] if ac.waist_y else [])
                 for (px_, py_) in pts:
                     d.ellipse((ox + px_ * k - 5, oy + py_ * k - 5, ox + px_ * k + 5, oy + py_ * k + 5), outline=(255, 0, 0), width=2)
         fr = fr.convert("RGB")

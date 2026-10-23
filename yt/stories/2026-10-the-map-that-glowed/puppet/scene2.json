@@ -89,7 +89,20 @@
     "audio": "line2.wav",
     "at": 3.3
    },
-   "blink": true
+   "blink": true,
+   "arm": {
+    "box": [
+     0.68,
+     0.29,
+     0.98,
+     0.6
+    ],
+    "pivot": [
+     0.8,
+     0.31
+    ],
+    "amp": 9
+   }
   },
   {
    "id": "whiskers",
@@ -110,9 +123,9 @@
    ],
    "walk": {
     "until": 2.4,
-    "bob": 0.01,
-    "sway": 2,
-    "steps": 2.4
+    "bob": 0.004,
+    "sway": 1.0,
+    "steps": 2.6
    },
    "wiggle": {
     "from": 2.6,
