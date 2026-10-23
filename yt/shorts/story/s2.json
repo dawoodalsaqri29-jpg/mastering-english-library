@@ -1,0 +1,288 @@
+{
+ "slug": "the-map-that-glowed-full",
+ "title": "NEVER UNDERESTIMATE A CAT",
+ "level": "B1–C1",
+ "voice": {
+  "name": "Lily",
+  "id": "3XD5qTvPWht0mpTnYXY0",
+  "speed": 0.85
+ },
+ "style": "A storybook illustration in a rich, impasto painterly style, reminiscent of classic fairy tale art, vibrant colors and a soft, diffused atmosphere",
+ "negative": "no text, no letters, no subtitles, no watermark, consistent character design",
+ "characters": [
+  {
+   "id": "mia",
+   "name": "Mia",
+   "bible": "Mia, a 9-year-old girl with shoulder-length curly chestnut-brown hair, rosy freckled cheeks and determined, curious hazel eyes, wearing a mustard-yellow knitted cardigan over a white blouse, a rust-red pinafore dress, brown lace-up boots and a small brown leather satchel across her shoulder"
+  },
+  {
+   "id": "whiskers",
+   "name": "Whiskers",
+   "bible": "Whiskers, a sleek, slender cat with a solid jet-black coat and no markings, piercing emerald-green eyes, a thin red collar with a tiny brass bell, and a faint silvery arcane shimmer rippling along his jet-black fur"
+  },
+  {
+   "id": "nell",
+   "name": "Grandma Nell",
+   "bible": "Grandma Nell, a kind, softly plump woman of about seventy with silver hair in a loose bun, round gold-rimmed spectacles, rosy cheeks and twinkling grey eyes, wearing a lavender knitted shawl over a long sage-green dress and a white apron"
+  }
+ ],
+ "locations": [
+  {
+   "id": "cottage",
+   "bible": "Grandma Nell's cosy thatched cottage, with low dark oak beams, a stone hearth, copper pans, a scrubbed wooden table with a blue-and-white teapot, and a wooden ladder up to a dusty attic with a round window, old trunks and stacks of leather books"
+  },
+  {
+   "id": "village",
+   "bible": "a tranquil village of honey-coloured thatched cottages with round green doors and climbing pink roses, scattered across gently rolling green hills, with a winding dirt lane, an old stone well and low dry-stone walls"
+  },
+  {
+   "id": "hills",
+   "bible": "wide rolling green hills dotted with poppies and white clover, low dry-stone walls, grazing sheep and a lone crooked oak tree with twisted branches, the thatched village small in the distance"
+  },
+  {
+   "id": "stream",
+   "bible": "a deep rocky valley where a rushing white-and-silver stream foams between boulders, crossed by a line of mossy stepping stones beside the two broken planks of an old wooden bridge"
+  },
+  {
+   "id": "hilltop",
+   "bible": "the grassy summit of the highest hill, crowned by a ring of ancient mossy standing stones, with a small round stone door half hidden by ivy set into the hillside at its centre"
+  }
+ ],
+ "references": [],
+ "chapters": [
+  {
+   "n": 1,
+   "title": "The Brittle Map",
+   "ar": "الخريطة الهشّة"
+  },
+  {
+   "n": 2,
+   "title": "Into the Whispering Hills",
+   "ar": "إلى التلال الهامسة"
+  },
+  {
+   "n": 3,
+   "title": "The Treacherous Stream",
+   "ar": "الجدول الغادر"
+  },
+  {
+   "n": 4,
+   "title": "Lost in the Mist",
+   "ar": "تائهان في الضباب"
+  },
+  {
+   "n": 5,
+   "title": "The Treasure Under the Stars",
+   "ar": "الكنز تحت النجوم"
+  }
+ ],
+ "thumb_shot": "g2_04",
+ "thumb_text": "THE MAP THAT GLOWED",
+ "thumb_ar": "خريطة سحرية تقودها إلى كنز!",
+ "shots": [
+  {
+   "id": "g1_06"
+  },
+  {
+   "id": "g1_05"
+  },
+  {
+   "id": "g3_08"
+  },
+  {
+   "id": "g2_07"
+  },
+  {
+   "id": "g4_09"
+  },
+  {
+   "id": "g2_08"
+  },
+  {
+   "id": "g4_10"
+  }
+ ],
+ "lines": [
+  {
+   "id": 1,
+   "chunk": "X",
+   "section": "hook",
+   "text": "Never underestimate a cat.",
+   "ar": "لا تستهِن أبدًا بقطّ.",
+   "shots": [
+    "g1_06"
+   ]
+  },
+  {
+   "id": 33,
+   "chunk": "X",
+   "section": "story",
+   "text": "Suddenly, a gust of wind came rushing over the hilltop.",
+   "ar": "وفجأةً، هبّت عاصفة من الريح مندفعةً فوق قمّة التلّ.",
+   "shots": [
+    "g1_05"
+   ]
+  },
+  {
+   "id": 34,
+   "chunk": "X",
+   "section": "story",
+   "text": "It snatched the brittle map right out of her hands and sent it tumbling through the air.",
+   "ar": "فخطفت الخريطة الهشّة من بين يديها، وأرسلتها تتقلّب في الهواء.",
+   "shots": [
+    "g3_08"
+   ]
+  },
+  {
+   "id": 35,
+   "chunk": "X",
+   "section": "story",
+   "text": "“No!” Mia cried. The map was fluttering straight towards a thicket of thorny brambles.",
+   "ar": "صرخت ميا: «لا!». كانت الخريطة ترفرف مباشرةً نحو أجمةٍ من العُلّيق الشائك.",
+   "shots": [
+    "g2_07"
+   ]
+  },
+  {
+   "id": 36,
+   "chunk": "X",
+   "section": "story",
+   "text": "But Whiskers was already running. He leapt, twisting in mid-air, his fur flashing silver in the sun.",
+   "ar": "لكنّ ويسكرز كان قد انطلق راكضًا. قفز ملتويًا في الهواء، وفروه يومض فضّيًّا تحت الشمس.",
+   "shots": [
+    "g4_09"
+   ]
+  },
+  {
+   "id": 37,
+   "chunk": "X",
+   "section": "story",
+   "text": "With the softest touch, he trapped the map between his front paws and landed just before the thorns.",
+   "ar": "وبأرقّ لمسة، أمسك الخريطة بين قدميه الأماميتين، وهبط قُبيل الأشواك تمامًا.",
+   "shots": [
+    "g1_06"
+   ]
+  },
+  {
+   "id": 39,
+   "chunk": "X",
+   "section": "story",
+   "text": "Mia scooped him up and laughed with relief. “You clever, clever cat!”",
+   "ar": "حملته ميا بين ذراعيها وضحكت بارتياح: «يا لك من قطٍّ ذكيّ، ذكيّ جدًّا!»",
+   "shots": [
+    "g2_08"
+   ]
+  },
+  {
+   "id": 2,
+   "chunk": "X",
+   "section": "story",
+   "text": "Find out what happens next in the full story on our channel.",
+   "ar": "اكتشف ماذا يحدث بعد ذلك في القصة كاملة على قناتنا.",
+   "shots": [
+    "g4_10"
+   ]
+  }
+ ],
+ "vocab": [
+  {
+   "word": "brittle",
+   "ipa": "/ˈbrɪt.əl/",
+   "pos": "adjective",
+   "ar": "هشّ، سريع الكسر",
+   "meaning": "hard and dry, so it breaks or cracks very easily",
+   "example": "It was a folded sheet of parchment, yellow and brittle, so dry that it crackled at her touch."
+  },
+  {
+   "word": "glimmer",
+   "ipa": "/ˈɡlɪm.ər/",
+   "pos": "verb / noun",
+   "ar": "يلمع بضوء خافت؛ بريق خافت",
+   "meaning": "to shine with a faint, gentle, wavering light",
+   "example": "A thin line of light began to glimmer across the faded ink."
+  },
+  {
+   "word": "venture",
+   "ipa": "/ˈven.tʃər/",
+   "pos": "verb",
+   "ar": "يغامر، يجرؤ على الذهاب",
+   "meaning": "to go somewhere new or a little dangerous",
+   "example": "They had never ventured so far from home."
+  },
+  {
+   "word": "reluctant",
+   "ipa": "/rɪˈlʌk.tənt/",
+   "pos": "adjective",
+   "ar": "متردّد، غير راغب",
+   "meaning": "not wanting to do something, so you hesitate",
+   "example": "Mia was reluctant to leave such a magical place."
+  },
+  {
+   "word": "astonished",
+   "ipa": "/əˈstɒn.ɪʃt/",
+   "pos": "adjective",
+   "ar": "مذهول، مندهش جدًّا",
+   "meaning": "extremely surprised",
+   "example": "Mia was so astonished that, for a long moment, she could not speak at all."
+  },
+  {
+   "word": "cherish",
+   "ipa": "/ˈtʃer.ɪʃ/",
+   "pos": "verb",
+   "ar": "يعتزّ بـ، يحرص على",
+   "meaning": "to love and care for something or someone very much",
+   "example": "She will cherish it all her life."
+  },
+  {
+   "word": "treacherous",
+   "ipa": "/ˈtretʃ.ər.əs/",
+   "pos": "adjective",
+   "ar": "غادر، محفوف بالمخاطر",
+   "meaning": "full of hidden dangers",
+   "example": "“This looks treacherous,” Mia said quietly."
+  },
+  {
+   "word": "resilient",
+   "ipa": "/rɪˈzɪl.i.ənt/",
+   "pos": "adjective",
+   "ar": "صامد، سريع التعافي",
+   "meaning": "able to recover quickly after something difficult",
+   "example": "“We’re resilient, you and I. We fall down, and we get back up.”"
+  }
+ ],
+ "quiz": [
+  {
+   "id": "q1",
+   "q": "What made the map begin to glow?",
+   "options": [
+    "The setting sun",
+    "Whiskers’ paw",
+    "A magic word"
+   ],
+   "answer": 1
+  },
+  {
+   "id": "q2",
+   "q": "How did Mia find her way through the mist?",
+   "options": [
+    "She followed the stars",
+    "She carried a lantern",
+    "She listened for Whiskers’ bell"
+   ],
+   "answer": 2
+  },
+  {
+   "id": "q3",
+   "q": "Who wrote the letter in the tin box?",
+   "options": [
+    "Grandma Nell",
+    "A famous explorer",
+    "Mia’s teacher"
+   ],
+   "answer": 0
+  }
+ ],
+ "outro": {
+  "text": "Thank you for joining Mia and Whiskers on their journey. If you could leave one treasure in a box for the next brave child, what would it be? Tell me in the comments, and I’ll see you in the next story."
+ }
+}
