@@ -65,12 +65,13 @@ while True:
     t = i / fps
     up = sr.upsample(fr); up = cv2.addWeighted(up, 1.25, cv2.GaussianBlur(up, (0, 0), 1.5), -0.25, 0)
     rgb = Image.fromarray(cv2.cvtColor(up, cv2.COLOR_BGR2RGB))
-    cut = remove(rgb, session=sess)                      # RGBA
+    cut = remove(rgb, session=sess)                      # RGBA (v1 matte: segmentation at x4, soft edge)
+    al0 = np.asarray(cut.split()[3]).astype(np.float32) / 255.0
+    al0 = cv2.GaussianBlur(al0, (0, 0), 1.2)
+    cut.putalpha(Image.fromarray((al0 * 255).astype(np.uint8)))
     bb = cut.getbbox(); cut = cut.crop(bb) if bb else cut
     th = int(H * a.height); tw = int(cut.width * th / cut.height)
     cut = cut.resize((tw, th), Image.LANCZOS)
-    # soften the matte edge a touch
-    al = cut.split()[3].filter(ImageFilter.GaussianBlur(1.2)); cut.putalpha(al)
     frame = bg.copy()
     # light "breathing" on the background
     frame = ImageEnhance.Brightness(frame).enhance(1 + 0.03 * math.sin(2 * math.pi * 0.2 * t))
