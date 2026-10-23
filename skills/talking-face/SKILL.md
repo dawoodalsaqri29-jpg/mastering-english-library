@@ -58,6 +58,26 @@ Contact sheet at 2 fps (`ffmpeg -vf "fps=2,scale=256:-2,tile=5x2"`): mouth opens
 blink once or twice, no melted hair/teeth artefacts. If the mouth barely moves, raise
 `--expression_scale`; if the face warps, use a tighter/cleaner portrait crop.
 
+## 5. Emotions, child voice, and putting her in the scene (v3)
+- **Portrait for head + shoulders**: a 768x768 crop from the full-body reference that keeps hair and
+  shoulders (`Image.crop((cx-300, 0, cx+300, 600))`), rendered with `--preprocess extcrop` (the extended
+  crop warps hair and shoulders with the head; `crop` cuts the curls). Mia: `mia_bust.png`.
+- **Emotion** comes from three things, all free: the voice performance, SadTalker's settings, and the
+  grade. Happy: Kokoro speed 0.95, `--expression_scale 1.5 --pose_style 12`, warm grade + push-in.
+  Sad: speed 0.82, `--expression_scale 1.25 --pose_style 3`, cool desaturated grade, vignette, slow
+  drift down. Neutral narration: 1.3 / pose 5. Expressions are driven by the audio, so write the line
+  the way the character feels (short bursts for joy, pauses "I... I don't" for fear).
+- **Child voice** (Mia): Kokoro `bf_lily` then
+  `ffmpeg -af "rubberband=pitch=1.26:formant=shifted:pitchq=quality,highpass=f=90,loudnorm=I=-16:TP=-1.5"`.
+  Pitch 1.20-1.28 with formants shifted = a real child's timbre, not a sped-up woman. Sad lines a
+  little lower (1.20). Grown woman: `bf_lily`/`bf_emma` as is; Grandma Nell: `bf_emma` speed 0.82 +
+  `rubberband=pitch=0.90:formant=shifted`.
+- **Into the story scene**: `scripts/scene_talk.py talk.mp4 background.png out.mp4 --mood happy|sad`
+  — x4 upscale, rembg matte per frame (isnet-general-use), bust anchored at the bottom, contact
+  shadow, particles, mood grade, camera move, audio kept. ~2 min per 4 s clip.
+- **Memory**: two SadTalker renders at once get OOM-killed on the 7 GB workspace (one died silently).
+  Run them one after another, in the background, ~20 min each.
+
 ## Use in the story videos
 - Close-up dialogue shots: "Whiskers… the map is alive!", "You clever, clever cat!", Grandma Nell's
   letter lines. Keep each ≤ 8 s.
