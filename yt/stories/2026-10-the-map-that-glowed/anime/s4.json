@@ -1,0 +1,112 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "background": "hills.png",
+ "bg_zoom": 1.35,
+ "bg_y": 0.75,
+ "char_height": 0.58,
+ "ground_y": 0.95,
+ "rim": {
+  "dx": 5,
+  "dy": -2,
+  "strength": 0.5
+ },
+ "grass": {
+  "spacing": 5,
+  "rows": 3,
+  "height": [
+   34,
+   78
+  ],
+  "flowers": 0.04,
+  "window": 330,
+  "kick": 7
+ },
+ "bg_anim": [
+  {
+   "pivot": [
+    318,
+    398
+   ],
+   "box": [
+    300,
+    392,
+    342,
+    430
+   ],
+   "amp": 4,
+   "period": 3.4,
+   "phase": 0
+  },
+  {
+   "pivot": [
+    600,
+    428
+   ],
+   "box": [
+    592,
+    424,
+    628,
+    460
+   ],
+   "amp": 5,
+   "period": 2.7,
+   "phase": 1.7
+  },
+  {
+   "pivot": [
+    670,
+    408
+   ],
+   "box": [
+    652,
+    400,
+    676,
+    420
+   ],
+   "amp": 4,
+   "period": 3.1,
+   "phase": 0.6
+  }
+ ],
+ "seconds": 7.0,
+ "start_x": 0.4,
+ "follow": 0.55,
+ "frame_x": 0.42,
+ "walk": {
+  "stride": 600,
+  "period": 0.95,
+  "bob": 16,
+  "lift": 72,
+  "lean": 3,
+  "arm": 22
+ },
+ "lines": [
+  {
+   "audio": "l5.wav",
+   "at": 0.5
+  }
+ ],
+ "head": [
+  [
+   0,
+   4
+  ],
+  [
+   1.0,
+   0
+  ]
+ ],
+ "nods": [],
+ "sfx": [
+  {
+   "t": 3.6,
+   "synth": "bleat",
+   "f0": 350,
+   "gain": 0.35
+  }
+ ]
+}

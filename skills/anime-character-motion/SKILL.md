@@ -111,6 +111,39 @@ Render: `python3 sprite_walk.py rig.json scene.json walk.mp4`, then `anime_fx.py
 
 Then say the limits in one line.
 
+## Acting: head, pointing, nods, camera tilt (v1.1)
+Add to the scene JSON (all keyed, eased; times in s):
+- `"head": [[t, deg], ...]`: + = look up (sun, sky), − = look down (sheep, grass). The head is its own piece. Rig needs:
+  - `head_cut`: polyline along the collar top / under the hair;
+  - `neck`: pivot.
+  The head rotates about the neck and tucks 30 px behind the torso. Keep it within ±18°.
+- `"nods": [t, ...]`: a 4° dip each (counting "one, two, three", agreeing). Speech adds tiny head accents automatically.
+- `"arm": [[t, deg, weight], ...]`: far arm override. Use 50° to point ahead or at animals, 95–100° to point up at the sun or sky. Weight 0 = walking swing.
+- `"cam_tilt": [[t, px], ...]`: the camera tilts up to show the sky or sun (the character and grass move down with the painting).
+- `"lines": [{"audio", "at"}, ...]`: several voice lines in one shot; the mouth follows all of them. Build counted lines from parts with real pauses (`mk_lines2.py` pattern) and keep the word timings for nods and word cards.
+- `"blinks": [t, ...]`: optional fixed blinks (otherwise random every 2.2–4 s).
+
+## Walking IN the grass (v1.1)
+`"grass": {"spacing": 4, "rows": 2, "height": [16, 44], "flowers": 0.06, "window": 330, "kick": 6}`. Effects:
+- Blades are fixed in the painting and drawn in front of the boots. They are coloured from the painting, sway with the wind, and bend away and flatten under each foot. They are drawn only near the walker, fading out at the edges, so they blend into the painted meadow.
+- At every toe-off, bits of grass and petals are kicked up and fall.
+
+Sound:
+- every heel strike: a grass footstep (crunchy swish + soft thump);
+- every swing: a light brush;
+- underneath: a wind bed.
+
+## Living background (v1.1)
+`"bg_anim": [{"pivot": [x, y], "box": [x0, y0, x1, y1], "amp": 4, "period": 3.4, "phase": 0, "lift": [[t, deg], ...]}]`. Coordinates are in the ORIGINAL painting's pixels.
+- A feathered patch (e.g. a grazing sheep's head) rocks about its pivot with a chewing jitter.
+- `lift` raises the head at a moment, e.g. when the character says "sheep".
+- `"sfx": [{"t": 10.85, "synth": "bleat", "f0": 390}]` adds a synthesized sheep "baa" (a buzzy source, a 21 Hz tremolo and vowel formants). It's an approximation: keep the gain at 0.8 or below, or pass a real recording with `"file"`.
+
+## Teaching layer: word cards
+`scripts/word_cards.py in.mp4 cards.json out.mp4` pops up the English word, IPA and Arabic meaning at the moment the word is spoken. It springs in with a sparkle burst and a soft "ting", then fades.
+- Use 1 card per key word, about 2.4 s, positioned near the thing (sheep card over the sheep, sunset card in the sky).
+- Fonts: Playfair Display (English), DejaVu Sans (IPA), Cairo 800 (Arabic, via raqm).
+
 ## Talking while walking vs close-up
 - **Wide shot, side view:** walking line with profile mouth flaps (this skill).
 - **Emotional or important lines:** cut to a front close-up with real lip-sync (talking-face skill, `pasteback_talk.py` into the same background). That's anime grammar: wide walk, stop, cut in, line.

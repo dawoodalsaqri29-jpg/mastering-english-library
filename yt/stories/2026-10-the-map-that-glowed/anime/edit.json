@@ -1,0 +1,33 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "ambience": 0.02,
+ "shots": [
+  {
+   "file": "s1_fx.mp4",
+   "in": 0,
+   "out": 15.4
+  },
+  {
+   "file": "sun_fx.mp4",
+   "in": 0,
+   "out": 2.4,
+   "trans": "cut"
+  },
+  {
+   "file": "close_fx.mp4",
+   "in": 0,
+   "out": 5.64,
+   "trans": "cut"
+  },
+  {
+   "file": "s4_fx.mp4",
+   "in": 0,
+   "out": 7.0,
+   "trans": "cut"
+  }
+ ]
+}

@@ -24,7 +24,8 @@ This skill plans those shots and assembles them. The motion itself comes from th
 | Talking close-up (3 to 6 s) | every important line, feelings | **talking-face** SadTalker + `pasteback_talk.py` into the same painting | 20 to 25 min per line |
 | Two-shot (6 to 10 s) | Mia with Whiskers or Nell | puppet-animation (front) or two rigs side by side | 2 to 6 min |
 | Reaction (1.5 to 3 s) | listener's face, cat's ears | talking-face with a silent or breath track (expression 1.2), or puppet blink + head tilt | 10 min / 1 min |
-| Insert (1.5 to 3 s) | the map glowing, a letter, a key | magic_motion on the object picture + `anime_fx.py` glow and motes | 1 min |
+| Insert (1.5 to 3 s) | the sun she points at, the map glowing, a letter | `insert_shot.py img cx cy width secs out.mp4 --rays --chime` (FSRCNN crop, slow push-in, god rays, chime) or magic_motion + `anime_fx.py` | 1 min |
+| Teaching layer | every key English word as it's spoken | `word_cards.py clip.mp4 cards.json out.mp4` (word + IPA + Arabic, pop-in, ting); run LAST, after anime_fx, so the cards stay crisp | 1 min |
 | Impact beat (0.5 to 1 s) | surprise, discovery | close-up freeze + `anime_fx.py --speed-lines` + white flash + hit SFX | 1 min |
 
 ## 2. Write the shot list first (before rendering anything)
@@ -45,6 +46,16 @@ SCENE 3: "The map begins to glow" (hills at sunset, happy, curious)
 - Hold one quiet beat (1 to 1.5 s, no voice) before a reveal.
 - Same painting for the wide shot and its close-up, so the place doesn't jump.
 - **Character consistency:** the side-view drawing and the front portrait must have the same hair, clothes and colours. Check side by side before rendering. If they differ, fix the drawing first; don't ship the mismatch.
+
+**Make the character DO things in every shot** (Dawood's standard, 23 Oct): walking through grass that reacts, going to the animals, pointing, counting with nods, looking up at the sun, and saying simple English words that pop up with their Arabic meaning. A shot where she only walks and talks reads as "empty".
+
+Reference scene ("The Map That Glowed", hills at sunset, 29 s):
+1. Wide (14.4 s): Mia walks in through the grass ("What a lovely evening! The grass is so soft."), stops near the grazing sheep, points and counts with a nod on each number ("Look! Sheep! One, two, three sheep!"). A sheep lifts its head and bleats. She looks up and points ("And look at the sun!") and the camera tilts up.
+2. Insert (2.4 s): the sun, with rays and a chime.
+3. Close-up (5.9 s): real lip-sync, "It's going down... It's a sunset! So beautiful."
+4. Wide (7 s): she walks away through the grass ("Come on, let's go home before dark!").
+
+Word cards: grass, sheep, sun, sunset.
 
 ## 3. Render (one at a time, long ones in the background)
 1. Start the SadTalker close-ups first (slowest; one at a time, they OOM in parallel).
