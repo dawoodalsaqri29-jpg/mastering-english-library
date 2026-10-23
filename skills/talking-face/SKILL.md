@@ -23,6 +23,8 @@ classifier blocks running the cloned program, stop, tell Dawood, retry once afte
 ## 1. Pre-generation checks (do these before spending 20 minutes)
 **Picture**
 - One face, front or ≤ 3/4 view, mouth visible, eyes open. Face ≥ 35 % of the crop width.
+- The drawn expression must already match the mood of the line (a closed, neutral mouth is the most
+  flexible base; a big painted smile cannot become sad). Keep one bust per mood per character.
 - Build the **scene first**: composite the hi-res character cutout (puppet-animation Step 1) on the
   story background at 1920×1080 (`scene.png`), then cut a square **bust** (head + shoulders, hair not
   touching the edge) → 768×768 (`bust.png`) and note its box in the scene (`x0,y0,side`).
@@ -50,7 +52,7 @@ RENDER    : extcrop, size 256 (512 for hero shots), expression E, pose P, still?
 |---|---|---|---|---|
 | happy / excited | 1.5 | 12 | no | big smile and brows; pose 12 = lively but not jittery |
 | neutral narration | 1.3 | 5 | no | |
-| sad / afraid | 1.25 | 3 | no | slower voice does most of the work |
+| sad / afraid | 1.25 | 3 | no | NEEDS a sad source portrait: SadTalker only modulates around the drawn expression — a smiling reference stays smiling (verified 23 Oct: "sad" line on the smiling Mia bust still read as happy). Ask Dawood for expression variants of each character (neutral / happy / sad / scared) with the locked block + "…expression, mouth closed, plain background" |
 | calm, controlled turn | 1.3 | — | yes + `--input_yaw -6 0 5 0 --input_pitch 0 -3 0` | audio-driven pose off; a deliberate smooth turn with start and stop |
 
 ## 3. Render
@@ -74,9 +76,9 @@ with a 70 px feather, slow eased push-in, mood grade, audio kept. Then `video-4k
 ```
 | Metric | Good | Fix when bad |
 |---|---|---|
-| lipsync_corr / lipsync_lag_ms | > 0.5 / within ±80 ms | constant lag → shift audio at mux (`-itsoffset`); low corr → louder consonants in the line, expression 1.3+ |
+| lipsync_corr / lipsync_lag_ms | > 0.5 / within ±80 ms | coarse: mouth-opening vs loudness disagrees on m/w/b (loud, lips closed), so 0.2–0.3 with aligned peaks in the plot is normal for SadTalker (v1: 0.19, v3: 0.25, lag 0). Judge the plot's peaks; a constant lag → shift audio at mux (`-itsoffset`). Real phoneme-level verification needs a listener. |
 | mouth_rest_in_pause vs mouth_min | rest ≈ min | mouth stays open in silence → add a real pause in the line, lower expression |
-| head_jitter | < 0.6 (ok ≤ 1.2) | shaky → pose 3/5 or `--still` + input_yaw path |
+| head_jitter | < 0.6 (ok ≤ 1.2) | measured: v1 (`--still`) 1.04, v3 (pose 12) 1.21 → the renderer itself adds ~1 % noise at 256 px; for calmer shots use pose 3/5, `--still` + input_yaw path, or size 512 |
 | head_range_pct_face | 3–10 % | > 15 % floats/slides → `--still` + small input_yaw; < 2 % = dead → pose 12 |
 | blinks_per_s | 0.1–0.8 | 0 → longer clip or `--ref_eyeblink` video; fluttering → lower expression |
 | identity_drift | < 0.012 | face proportions wander → tighter bust, face ≥ 40 % of crop, size 512 |
