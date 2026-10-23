@@ -1,0 +1,129 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "seconds": 9,
+ "background": "hills.png",
+ "camera": {
+  "move": "in",
+  "amount": 0.05
+ },
+ "fx": "sparkles",
+ "ground": 0.96,
+ "actors": [
+  {
+   "id": "mia",
+   "image": "mia_cut.png",
+   "kind": "human",
+   "height": 0.8,
+   "face": {
+    "eyes": [
+     [
+      0.447,
+      0.13
+     ],
+     [
+      0.585,
+      0.125
+     ]
+    ],
+    "mouth": [
+     0.523,
+     0.165
+    ],
+    "neck": [
+     0.52,
+     0.215
+    ],
+    "waist": [
+     0.52,
+     0.45
+    ]
+   },
+   "path": [
+    {
+     "t": 0,
+     "x": 0.58,
+     "scale": 1.0
+    }
+   ],
+   "lean": [
+    {
+     "t": 1.2,
+     "a": 0
+    },
+    {
+     "t": 2.6,
+     "a": 13
+    },
+    {
+     "t": 6.0,
+     "a": 13
+    },
+    {
+     "t": 7.4,
+     "a": 0
+    }
+   ],
+   "head": [
+    {
+     "t": 1.2,
+     "a": 0
+    },
+    {
+     "t": 2.6,
+     "a": 10
+    },
+    {
+     "t": 6.0,
+     "a": 10
+    },
+    {
+     "t": 7.4,
+     "a": 0
+    }
+   ],
+   "talk": {
+    "audio": "line2.wav",
+    "at": 3.3
+   },
+   "blink": true
+  },
+  {
+   "id": "whiskers",
+   "image": "cat_cut.png",
+   "kind": "cat",
+   "height": 0.34,
+   "path": [
+    {
+     "t": 0,
+     "x": 0.22,
+     "scale": 0.9
+    },
+    {
+     "t": 2.4,
+     "x": 0.44,
+     "scale": 1.0
+    }
+   ],
+   "walk": {
+    "until": 2.4,
+    "bob": 0.01,
+    "sway": 2,
+    "steps": 2.4
+   },
+   "wiggle": {
+    "from": 2.6,
+    "to": 7.0,
+    "amp": 6,
+    "hz": 0.7
+   },
+   "tail": {
+    "amp": 12,
+    "hz": 0.8
+   }
+  }
+ ]
+}
