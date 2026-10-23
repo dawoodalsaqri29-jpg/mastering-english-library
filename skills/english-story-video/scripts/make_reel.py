@@ -19,7 +19,7 @@ CSS = f"""
 .top{{position:absolute;top:270px;left:0;right:0;text-align:center;color:#fff}}
 .kick{{display:inline-block;font-size:30px;font-weight:700;letter-spacing:.12em;color:#f6d38a;background:rgba(8,12,26,.55);padding:10px 26px;border-radius:999px}}
 .title{{font-size:74px;font-weight:800;line-height:1.05;margin-top:18px;text-shadow:0 4px 20px rgba(0,0,0,.75)}}
-.sub{{position:absolute;left:60px;right:60px;top:1250px;background:rgba(8,12,26,.66);border-radius:26px;padding:24px 30px;text-align:center}}
+.sub{{position:absolute;left:60px;right:60px;bottom:440px;background:rgba(8,12,26,.66);border-radius:26px;padding:24px 30px;text-align:center}}
 .en{{color:#fff;font-size:46px;font-weight:600;line-height:1.3}}
 .ar{{font-family:Cairo;direction:rtl;color:#f6d38a;font-size:42px;font-weight:700;line-height:1.5;margin-top:8px}}
 .cta{{position:absolute;top:1520px;left:0;right:0;text-align:center}}
