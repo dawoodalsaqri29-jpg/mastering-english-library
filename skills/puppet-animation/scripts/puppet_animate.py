@@ -140,6 +140,10 @@ class Actor:
         if "talk" in spec:
             self.talk_env = envelope(os.path.join(base, spec["talk"]["audio"]), spec["_fps"])
             self.talk_at = spec["talk"].get("at", 0)
+        # ---- optional talking head video (SadTalker on a green-screen bust of the same cutout)
+        self.hv = None
+        if "head_video" in spec:
+            self.load_head_video(spec["head_video"], base, im.size)
         self.blinks = []
         if spec.get("blink", True) and self.kind == "human":
             rng = np.random.default_rng(int(sum(map(ord, spec["id"]))))
@@ -237,6 +241,104 @@ class Actor:
             wx0, wx1 = alpha_bbox_rows(a, self.waist_y - 3, self.waist_y + 3)
             self.waist_pivot = (getattr(self, "waist_x", None) or (wx0 + wx1) / 2, self.waist_y)
 
+    def load_head_video(self, hv, base, cut_size):
+        """hv = {"file": clip.mp4, "bust": green_bust.png, "bust_box": [x0, y0, side] (cutout coords),
+        "at": seconds, "key": [r,g,b]}. Locates the SadTalker crop inside the bust by multi-scale template
+        match and maps it to this actor's canvas; frames are read lazily, x4 upscaled and chroma-keyed."""
+        import cv2
+        self.cv2 = cv2
+        cap = cv2.VideoCapture(os.path.join(base, hv["file"]))
+        frames = []
+        while True:
+            ok, fr = cap.read()
+            if not ok: break
+            frames.append(fr)
+        bust = cv2.imread(os.path.join(base, hv["bust"])); B = bust.shape[0]
+        g_b = cv2.cvtColor(bust, cv2.COLOR_BGR2GRAY); g_f = cv2.cvtColor(frames[0], cv2.COLOR_BGR2GRAY)
+        best = None
+        for S in range(int(B * 0.35), B + 1, 6):
+            tpl = cv2.resize(g_f, (S, S), interpolation=cv2.INTER_AREA)
+            res = cv2.matchTemplate(g_b, tpl, cv2.TM_CCOEFF_NORMED); _, mx, _, loc = cv2.minMaxLoc(res)
+            if best is None or mx > best[0]: best = (mx, S, loc)
+        score, S, (cx0, cy0) = best
+        bx0, by0, bside = hv["bust_box"]; k = bside / B
+        X, Y, side = bx0 + cx0 * k, by0 + cy0 * k, S * k            # crop in cutout coords
+        r = self.h0 / cut_size[1]                                    # cutout -> canvas scale
+        self.hv = dict(frames=frames, at=hv.get("at", 0), key=tuple(hv.get("key", (0, 177, 64))),
+                       X=int(X * r + self.padx), Y=int(Y * r + self.pady), side=int(side * r), fade=hv.get("fade", 4))
+        # garbage matte: the clean cutout's alpha over the crop region (dilated for head motion) limits the key
+        ga = Image.fromarray(self.a).crop((self.hv["X"], self.hv["Y"], self.hv["X"] + self.hv["side"], self.hv["Y"] + self.hv["side"]))
+        ga = np.asarray(ga.resize((1024, 1024), Image.BILINEAR)).astype(np.float32) / 255
+        self.hv["static_alpha"] = cv2.GaussianBlur(cv2.erode((ga > 0.5).astype(np.float32), np.ones((13, 13), np.uint8)), (0, 0), 1.2)
+        ga = cv2.dilate((ga > 0.3).astype(np.uint8), np.ones((41, 41), np.uint8)).astype(np.float32)
+        self.hv["garbage"] = cv2.GaussianBlur(ga, (0, 0), 6)
+        self.hv["gray0"] = cv2.cvtColor(frames[0], cv2.COLOR_BGR2GRAY)
+        self.hv["warps"] = {}
+        MODEL = os.path.expanduser("~/srmodels/FSRCNN_x4.pb")
+        self.sr = None
+        if os.path.exists(MODEL):
+            self.sr = cv2.dnn_superres.DnnSuperResImpl_create(); self.sr.readModel(MODEL); self.sr.setModel("fsrcnn", 4)
+        print(f"  head video: {len(frames)} frames, crop match {score:.2f}, canvas box ({self.hv['X']},{self.hv['Y']}) side {self.hv['side']}")
+
+    def head_from_video(self, fi):
+        """Canvas-sized RGBA layer with the keyed talking head for frame fi, or None outside the clip."""
+        if self.hv is None: return None, 0.0
+        k = fi - int(self.hv["at"] * self.s["_fps"])
+        n = len(self.hv["frames"])
+        if k < 0 or k >= n: return None, 0.0
+        cv2 = self.cv2
+        fr = self.hv["frames"][k]
+        up = self.sr.upsample(fr) if self.sr else cv2.resize(fr, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC)
+        up = cv2.addWeighted(up, 1.2, cv2.GaussianBlur(up, (0, 0), 1.5), -0.2, 0)
+        rgb = cv2.cvtColor(up, cv2.COLOR_BGR2RGB).astype(np.float32)
+        R, G, Bc = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+        # chroma-distance key in YCrCb (robust to the yuv420 smear at hair edges)
+        kr, kg, kb = self.hv["key"]; kY = 0.299 * kr + 0.587 * kg + 0.114 * kb
+        kCr, kCb = (kr - kY) * 0.713 + 128, (kb - kY) * 0.564 + 128
+        Y = 0.299 * R + 0.587 * G + 0.114 * Bc
+        Cr, Cb = (R - Y) * 0.713 + 128, (Bc - Y) * 0.564 + 128
+        dist = np.sqrt((Cr - kCr) ** 2 + (Cb - kCb) ** 2)
+        alpha = np.clip((dist - 22) / (85 - 22), 0, 1)
+        alpha = cv2.erode(alpha, np.ones((7, 7), np.uint8))          # drop the smear/ringing ring left by yuv420 + x264 at the edge
+        # guided matte: the clean drawn silhouette, rigidly aligned to this frame's head (ECC), clips the smeared edge
+        if k not in self.hv["warps"]:
+            g1 = cv2.cvtColor(fr, cv2.COLOR_BGR2GRAY)
+            M = np.eye(2, 3, dtype=np.float32)
+            try:
+                cv2.findTransformECC(self.hv["gray0"], g1, M, cv2.MOTION_EUCLIDEAN,
+                                     (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 40, 1e-4), None, 5)
+            except cv2.error:
+                pass
+            self.hv["warps"][k] = M
+        M = self.hv["warps"][k].copy(); M[:, 2] *= 4                 # 256 -> 1024 translation
+        sa = cv2.warpAffine(self.hv["static_alpha"], M, (alpha.shape[1], alpha.shape[0]), flags=cv2.INTER_LINEAR, borderValue=0)
+        alpha = np.minimum(alpha, np.maximum(sa, 0)) if False else sa * np.clip(alpha * 1.5, 0, 1)
+        alpha = cv2.GaussianBlur(alpha, (0, 0), 0.8)
+        rgb[..., 1] = np.minimum(G, np.maximum(R, Bc))                # despill: no pixel stays greener than its R/B
+        # contamination = how green a pixel is relative to its red (hair, skin and cloth here are all R > G);
+        # contaminated pixels (yuv420 smear at the edge) take the colour of nearby clean pixels
+        sat = rgb.max(2) - rgb.min(2)
+        c = np.clip((rgb[..., 1] - (rgb[..., 0] - 28)) / 24, 0, 1) * (sat > 18)
+        clean = ((c < 0.05) & (alpha > 0.9)).astype(np.float32)
+        wsum = cv2.blur(clean, (21, 21))
+        fg = cv2.blur(rgb * clean[..., None], (21, 21)) / np.maximum(wsum[..., None], 1e-3)
+        cc = np.maximum(c, (alpha < 0.95).astype(np.float32)) * (wsum > 0.08)      # no clean neighbours -> keep the pixel
+        cc = cc[..., None]
+        rgb = cc * fg + (1 - cc) * rgb
+        layer = np.dstack([rgb, alpha * 255]).astype(np.uint8)
+        head = Image.fromarray(layer, "RGBA").resize((self.hv["side"], self.hv["side"]), Image.LANCZOS)
+        canvas = Image.new("RGBA", (self.w, self.h), (0, 0, 0, 0))
+        canvas.alpha_composite(head, (self.hv["X"], self.hv["Y"]))
+        # keep only head + neck from the video; shoulders/collar come from the puppet body
+        m = np.ones((self.h, self.w), np.float32)
+        cut_y = int(self.neck_y + self.h0 * 0.035)
+        m[cut_y:, :] = 0
+        m = cv2.GaussianBlur(m, (0, 0), 5)
+        arr = np.asarray(canvas).astype(np.float32); arr[..., 3] *= m
+        f = self.hv["fade"]
+        w = min(1.0, (k + 1) / f, (n - k) / f)                      # fade in/out against the static head
+        return Image.fromarray(arr.astype(np.uint8), "RGBA"), float(w)
+
     def part(self, y0, y1, x0=None, x1=None, feather=6):
         """RGBA layer (canvas-sized) holding only rows y0..y1 (and cols x0..x1), soft edges."""
         m = np.zeros((self.h, self.w), np.float32)
@@ -317,6 +419,11 @@ class Actor:
         lower = Image.alpha_composite(legs, lower)
         upper = self.part(self.neck_y - 4, self.waist_y + 4)
         head = self.part(0, self.neck_y + 4)
+        vid_head, vw = self.head_from_video(fi)
+        if vid_head is not None:
+            # talking head replaces the drawn head (crossfaded at the clip's ends); no drawn mouth/blink then
+            head = Image.alpha_composite(head, Image.fromarray((np.asarray(vid_head) * np.array([1, 1, 1, vw])).astype(np.uint8), "RGBA"))
+            blinking = False; mouth_open = 0.0
         arm = None
         if self.arm_box:
             ax0, ay0, ax1, ay1 = self.arm_box
@@ -471,6 +578,8 @@ def main():
     for ac in actors:
         if "talk" in ac.s:
             tracks.append({"file": ac.s["talk"]["audio"], "at": ac.s["talk"].get("at", 0)})
+        if getattr(ac, "hv", None):
+            tracks.append({"file": ac.s["head_video"]["file"], "at": ac.hv["at"]})   # the talking head's own voice
     for tr in tracks:
         raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(base, tr["file"]), "-ac", "1", "-ar", str(AR), "-f", "f32le", "-"],
                              capture_output=True, check=True).stdout

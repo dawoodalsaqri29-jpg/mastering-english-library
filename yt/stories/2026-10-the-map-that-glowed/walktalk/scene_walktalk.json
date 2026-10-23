@@ -1,0 +1,129 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "seconds": 10,
+ "background": "hills.png",
+ "camera": {
+  "move": "in",
+  "amount": 0.05
+ },
+ "fx": "dust",
+ "ground": 0.96,
+ "actors": [
+  {
+   "id": "mia",
+   "image": "mia_cut.png",
+   "kind": "human",
+   "height": 0.8,
+   "face": {
+    "eyes": [
+     [
+      0.447,
+      0.13
+     ],
+     [
+      0.585,
+      0.125
+     ]
+    ],
+    "mouth": [
+     0.523,
+     0.165
+    ],
+    "neck": [
+     0.52,
+     0.215
+    ],
+    "waist": [
+     0.52,
+     0.45
+    ]
+   },
+   "arm": {
+    "box": [
+     0.68,
+     0.29,
+     0.98,
+     0.6
+    ],
+    "pivot": [
+     0.8,
+     0.31
+    ],
+    "amp": 9
+   },
+   "path": [
+    {
+     "t": 0,
+     "x": 0.6,
+     "scale": 0.68
+    },
+    {
+     "t": 7.5,
+     "x": 0.54,
+     "scale": 1.0
+    }
+   ],
+   "walk": {
+    "until": 7.5,
+    "bob": 0.004,
+    "sway": 1.0,
+    "steps": 1.8
+   },
+   "head_video": {
+    "file": "/home/claude/work/talk/walk_talk_256.mp4",
+    "bust": "/home/claude/work/talk/mia_green_bust.png",
+    "bust_box": [
+     -53,
+     -22,
+     375
+    ],
+    "at": 1.2,
+    "key": [
+     0,
+     177,
+     64
+    ],
+    "fade": 5
+   },
+   "blink": true
+  },
+  {
+   "id": "whiskers",
+   "image": "cat_cut.png",
+   "kind": "cat",
+   "height": 0.33,
+   "path": [
+    {
+     "t": 0,
+     "x": 0.44,
+     "scale": 0.68
+    },
+    {
+     "t": 7.5,
+     "x": 0.4,
+     "scale": 1.0
+    }
+   ],
+   "walk": {
+    "until": 7.5,
+    "bob": 0.004,
+    "sway": 1.0,
+    "steps": 2.6
+   },
+   "wiggle": {
+    "from": 8.0,
+    "to": 10,
+    "amp": 5,
+    "hz": 0.7
+   },
+   "tail": {
+    "amp": 12,
+    "hz": 0.8
+   }
+  }
+ ]
+}

@@ -90,6 +90,25 @@ sway/lean — judge the drawn mouth, not the marker). Always look at a contact s
 Keep clips 6–12 s; use them in `clips/<shot-id>.mp4` for the story assembler (it mutes clip audio —
 mix the spoken line back in after assembly, see animate-story-picture Level 3), or as Reels.
 
+## Walk AND talk (v3): a real talking head on the walking body
+The puppet body walks; the head comes from a SadTalker clip (talking-face skill) and rides on the body
+frame by frame, following its bob, sway, lean and scale. Hair edge from a green screen + a guided matte.
+1. Green-screen bust of the SAME cutout: paste `mia_cut.png` on flat (0,177,64) in a square around head +
+   shoulders (`side = 1.45*w`, `cx = 0.52*w`, `y0 = -0.06*side`), resize 768 → `mia_green_bust.png`.
+   Keep the box you used (`bust_box = [x0, y0, side]` in cutout pixels, e.g. `[-53, -22, 375]`).
+2. SadTalker on it: `extcrop`, expression 1.45, pose 8, child voice line 5–6 s (~25 min).
+3. Actor spec: `"head_video": {"file": talk.mp4, "bust": green_bust.png, "bust_box": [x0,y0,side],
+   "at": 1.2, "key": [0,177,64], "fade": 5}`. The animator finds the SadTalker crop inside the bust
+   (template match), maps it onto the canvas, upscales ×4, keys the green (YCrCb chroma distance),
+   despills, recolours green-tinged edge pixels from clean neighbours, and clips with the drawn
+   silhouette aligned per frame by ECC (this is what removes the yuv420 smear ring). Below the neck
+   (+3.5 % of height) the puppet body shows; the clip's own voice is mixed in at `at`.
+   While the head video plays the drawn mouth/blink are off; 5-frame crossfade at both ends.
+4. Keep body motion modest under a talking head: `walk` bob 0.004, sway 1.0, no `lean`/`head` keys.
+Measured: 10 s scene renders in ~6 min; head crop match score 0.87 on a real SadTalker clip.
+Limits: the head follows the body rigidly (no neck lag); shoulders are the puppet's; long lines need
+several head clips. Example: `yt/stories/2026-10-the-map-that-glowed/walktalk/scene_walktalk.json`.
+
 ## Export
 4K for YouTube/Reels: `scale=3840:2160:flags=lanczos,unsharp=5:5:0.4`, `-crf 19`, `+faststart`.
 Vertical: blurred-cover background + centred crop (see story-hook skill).

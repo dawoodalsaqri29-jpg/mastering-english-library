@@ -36,6 +36,7 @@ one skill. Open only the skill for the step you are on; this file is the index a
 | Living still under narration (camera move, sparkle, light) | animate-story-picture Level 1 (`magic_motion.py`) | nothing moves in the picture itself |
 | Character walks across / toward camera, two characters together | puppet-animation | cut-out motion; no 3D turn, hands don't reach |
 | Character speaks a line with real mouth, teeth, smile, head motion, blinks | talking-face (SadTalker, `extcrop`, expr 1.4–1.5, pose 12; sad: 1.25, pose 3) | head/face region only; body static; 20 min per line |
+| Character WALKS and TALKS at once in a scene | puppet-animation `head_video` (green-screen SadTalker head on the walking puppet body) | cut-out walk + real talking head; ~30 min total per 10 s |
 | Hair edge vs background | put the character INTO the scene before SadTalker (clean hi-res cutout composite → bust crop → extcrop) instead of matting after | background near the head warps slightly with motion |
 | Human-like full-body walking, cloth and hair physics, hugging the cat | AI video model only: ElevenLabs Video (his account), ManyMotions (`/mcp` sign-in), vidIQ Veo (150 credits/month ≈ one 8 s clip) | no GPU here; cannot be done locally |
 
