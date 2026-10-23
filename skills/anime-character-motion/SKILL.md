@@ -3,7 +3,7 @@ name: anime-character-motion
 description: Make a story character WALK like a real person in side view (anime / studio cut-out rig) and talk while walking, from one side-view drawing: legs with hip-knee-ankle, heel strike, toe-off, legs passing, arm swing, body bob, blinks, profile mouth flaps, natural stop, walk left or right, camera follow, footsteps. Use for "خلها تمشي زي الناس / مثل الأنمي", walk across a scene, walk-in-and-stop-then-talk shots.
 ---
 
-# Anime character motion (side-view skeletal walk) v1.1
+# Anime character motion (side-view skeletal walk) v1.2
 
 Built and proven 23 Oct 2026 on Mia ("The Map That Glowed"). This replaced the front-view puppet walk that Dawood called "bad": a front view can't show legs passing each other, and the 12 AI walk frames he generated were all "legs apart" poses, so playing them in order only jitters. A real walk needs a skeleton.
 
@@ -122,6 +122,13 @@ Add to the scene JSON (all keyed, eased; times in s):
 - `"cam_tilt": [[t, px], ...]`: the camera tilts up to show the sky or sun (the character and grass move down with the painting).
 - `"lines": [{"audio", "at"}, ...]`: several voice lines in one shot; the mouth follows all of them. Build counted lines from parts with real pauses (`mk_lines2.py` pattern) and keep the word timings for nods and word cards.
 - `"blinks": [t, ...]`: optional fixed blinks (otherwise random every 2.2–4 s).
+
+## Follow-through: dress and hair (v1.2)
+Rig keys:
+- `"skirt": {"top": 640, "amp": 7, "drag": 4, "lag": 0.08}`: the dress below the waist (y = top) warps progressively to the hem. It trails backwards with walking speed and swings twice per cycle, a little behind the legs.
+- `"hair": {"box": [40, 40, 300, 350], "face_x": 255, "amp": 0.035, "drag": 3}`: the back curls lag the body's up-and-down bob (follow the hip velocity from 0.08–0.16 s earlier) and trail with speed. Keep `face_x` behind the ear so the ear and face never wobble.
+
+After a stop, both settle with a small damped bounce. The values are computed in `secondary()`; the arrays are remapped per frame (cheap).
 
 ## Walking IN the grass (v1.1)
 `"grass": {"spacing": 5, "rows": 3, "height": [34, 78], "flowers": 0.04, "window": 330, "kick": 7}`. Effects:

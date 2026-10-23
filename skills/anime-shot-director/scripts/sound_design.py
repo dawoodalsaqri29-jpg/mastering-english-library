@@ -26,19 +26,22 @@ def bp(x, lo, hi):
     X = np.fft.rfft(x); f = np.fft.rfftfreq(len(x), 1 / SR); X *= (f > lo) & (f < hi); return np.fft.irfft(X, len(x))
 
 def grass_step(seed, strength=1.0):
-    r = np.random.default_rng(seed); n = int(0.42 * SR); t = np.arange(n) / SR; out = np.zeros(n)
-    for c0, amp, dens in [(0.0, 1.0, 1.0), (r.uniform(0.07, 0.11), 0.65, 0.7)]:      # heel, then toe roll
-        k = int(c0 * SR); nimp = int(r.integers(55, 85) * dens)
-        times = k + (r.exponential(0.035, nimp) * SR).astype(int)
-        for ti in times:
-            if ti >= n - 300: continue
-            g = r.standard_normal(int(r.uniform(0.0015, 0.004) * SR))
-            g *= np.hanning(len(g)) * amp * r.uniform(0.3, 1.0) * math.exp(-(ti - k) / SR / 0.06)
-            out[ti:ti + len(g)] += g
-    crunch = bp(out, 1300, 9000)
-    rustle = bp(r.standard_normal(n), 2000, 7000) * np.exp(-t / 0.13) * 0.12
-    thump = bp(r.standard_normal(n), 50, 260) * np.exp(-t / 0.035) * 1.6
-    x = crunch * 0.9 + rustle + thump
+    """Child step on grass: soft body thud + crushed stems (many tiny resonant snaps: heel cluster, then toe roll)
+    + leaf rustle + ground/grass early reflections. Every step is different."""
+    r = np.random.default_rng(seed); n = int(0.45 * SR); t = np.arange(n) / SR; out = np.zeros(n)
+    tail = np.arange(int(0.008 * SR)) / SR
+    for c0, amp, cnt, spread in [(0.0, 1.0, r.integers(45, 70), 0.045), (r.uniform(0.075, 0.12), 0.7, r.integers(30, 50), 0.05)]:
+        k = int(c0 * SR)
+        for ti in k + (r.gamma(1.6, spread / 1.6, cnt) * SR).astype(int):
+            if ti >= n - len(tail): continue
+            f = r.uniform(1700, 7500); d = r.uniform(0.0012, 0.0045)
+            snap = np.sin(2 * np.pi * f * tail + r.uniform(0, 6.28)) * np.exp(-tail / d)
+            out[ti:ti + len(tail)] += snap * amp * r.uniform(0.2, 1.0) * math.exp(-(ti - k) / SR / 0.07)
+    rustle = bp(r.standard_normal(n), 1500, 6500) * np.exp(-t / 0.15) * 0.10
+    thud = bp(r.standard_normal(n), 40, 180) * np.exp(-t / 0.03) * 2.2 * (0.8 + 0.4 * r.random())
+    x = out * 0.8 + rustle + thud
+    for dl, g in [(0.009, 0.25), (0.017, 0.14), (0.031, 0.07)]:
+        k = int(dl * SR); x[k:] += x[:-k] * g
     return x / (np.abs(x).max() + 1e-9) * 0.5 * strength
 
 def brush(seed):
@@ -64,7 +67,7 @@ def bird_song(seed):
     x = np.concatenate(parts); return x / (np.abs(x).max() + 1e-9)
 
 # ---- voices (clear and present)
-VF = "highpass=f=90,equalizer=f=260:t=q:w=1:g=-2.5,equalizer=f=3400:t=q:w=1.2:g=3,equalizer=f=8000:t=h:w=1:g=1.5,acompressor=threshold=-22dB:ratio=3:attack=5:release=90:makeup=2,loudnorm=I=-16:TP=-1.5"
+VF = "highpass=f=90,equalizer=f=260:t=q:w=1:g=-2.5,equalizer=f=3400:t=q:w=1.2:g=3,equalizer=f=8000:t=h:w=1:g=1.5,acompressor=threshold=-22dB:ratio=3:attack=5:release=90:makeup=2,deesser=i=0.4,aecho=0.8:0.7:23|41:0.10|0.06,loudnorm=I=-16:TP=-1.5"
 for v in J.get("voices", []): add(load(v["file"], VF), v["t"], v.get("gain", 1.0), v.get("pan", 0.0), voice=True)
 # ---- footsteps / brushes
 for j, s in enumerate(J.get("steps", [])):

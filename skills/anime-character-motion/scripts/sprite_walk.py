@@ -57,6 +57,20 @@ class Rig:
             self.neck = np.array(R["neck"], float)
         else:
             self.head = None
+        # secondary motion: skirt rows and hair weight map
+        self.skirt_top = R.get("skirt", {}).get("top", None)
+        self.hem_mid = float(np.median(hem))
+        hb = R.get("hair", None)
+        if hb:
+            x0h, y0h, x1h, y1h = hb["box"]; fx = hb.get("face_x", x1h)
+            wx = np.clip((fx - xx) / 70.0, 0, 1)
+            wy = np.clip((yy - y0h) / max(y1h - y0h, 1), 0, 1) ** 1.3
+            inside = (xx >= x0h - 40) & (xx <= x1h) & (yy >= y0h) & (yy <= y1h + 40)
+            self.hair_w = (wx * wy * inside).astype(np.float32)
+            self.hair_w = cv2.GaussianBlur(self.hair_w, (0, 0), 12)
+        else:
+            self.hair_w = None
+        self.gx, self.gy = np.meshgrid(np.arange(W, dtype=np.float32), np.arange(H, dtype=np.float32))
         # under-lap pixels (left of the cut) take the sleeve's own colours, mirrored across the cut
         cutx = np.clip(cut, 0, W - 1)[:, None]
         mx = np.clip((2 * cutx - xx + 4).astype(int), 0, W - 1)
@@ -256,17 +270,48 @@ def draw_character(r, w, t, cw=1100, ch=1500, mouth_open=0.0, blink=0.0, far_tin
         paste(can, r.thigh, rot_mat(axis_theta(knee - hip_pt), r.thigh_pivot, hip_pt), tint)
         paste(can, r.shin, rot_mat(axis_theta(ankle_c2 - knee), r.shin_pivot, knee), tint)
         paste(can, r.boot, rot_mat(-fa, r.ankle_b, ankle_c2), tint)
+    sec = secondary(r, w, t)
     if r.head is not None:
         head = r.head
         if mouth_open > 0.02 or blink > 0.02: head = face_overlay(r, head, mouth_open, blink)
+        if r.hair_w is not None and (abs(sec["hair_dy"]) > 0.05 or abs(sec["hair_dx"]) > 0.05):
+            mx = r.gx + r.hair_w * sec["hair_dx"]; my = r.gy + r.hair_w * sec["hair_dy"]
+            head = cv2.remap(head, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
         neck_c = Mbody @ np.array([r.neck[0], r.neck[1], 1])
         paste(can, head, rot_mat(th_body - math.radians(head_a), r.neck, neck_c))
-        paste(can, r.torso, Mbody)
+        torso = r.torso
+        if r.skirt_top is not None and abs(sec["skirt_dx"]) > 0.05:
+            top = r.skirt_top; span = max(r.hem_mid - top, 1)
+            prof = np.clip((r.gy[:, :1] - top) / span, 0, 1.2) ** 1.6          # 0 at the waist -> 1 at the hem
+            mx = r.gx + prof * sec["skirt_dx"]                                  # sample from behind = cloth trails
+            torso = cv2.remap(torso, mx, r.gy, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+        paste(can, torso, Mbody)
     else:
         body = r.body
         if mouth_open > 0.02 or blink > 0.02: body = face_overlay(r, body, mouth_open, blink)
         paste(can, body, Mbody)
     return can, hip_c, hip_w, legs
+
+def secondary(r, w, t):
+    """Follow-through: skirt trails and swings with each step, hair lags the body bob; both settle after a stop."""
+    R = r.R; sk = R.get("skirt", {}); hr = R.get("hair", {})
+    def hip(tt): return w.pose(max(tt, 0.0))[0]
+    h0, h1 = hip(t - 0.10), hip(t)
+    sp = float(np.clip((h1[0] - h0[0]) / (w.v * 0.10), 0, 1))                  # 1 = full walking speed
+    ph = (t - sk.get("lag", 0.08)) / w.T
+    swing = sk.get("amp", 7) * math.sin(4 * math.pi * ph + 0.6)
+    skirt = sp * (sk.get("drag", 4) + swing)
+    ts = getattr(w, "t_stop", None)
+    if ts is not None and t > ts + w.close * 0.6:                               # settle after the stop
+        u = t - ts - w.close * 0.6; skirt += sk.get("amp", 7) * 0.8 * math.exp(-u * 2.6) * math.sin(u * 8.5)
+    # hair: lags the vertical bob (velocity of the hip a few frames ago), trails backwards with speed
+    a, b = hip(t - 0.16), hip(t - 0.08)
+    vy = (b[1] - a[1]) / 0.08                                                   # px/s, + = moving down
+    hair_dy = float(np.clip(vy * hr.get("amp", 0.035), -9, 9))
+    hair_dx = sp * hr.get("drag", 3.0)
+    if ts is not None and t > ts + w.close * 0.6:
+        u = t - ts - w.close * 0.6; hair_dy += 3.5 * math.exp(-u * 3) * math.sin(u * 10)
+    return {"skirt_dx": skirt, "hair_dy": hair_dy, "hair_dx": hair_dx}
 
 def face_overlay(r, body, mo, bl):
     b = body.copy(); R = r.R
