@@ -3,7 +3,7 @@ name: anime-character-motion
 description: Make a story character WALK like a real person in side view (anime / studio cut-out rig) and talk while walking, from one side-view drawing: legs with hip-knee-ankle, heel strike, toe-off, legs passing, arm swing, body bob, blinks, profile mouth flaps, natural stop, walk left or right, camera follow, footsteps. Use for "خلها تمشي زي الناس / مثل الأنمي", walk across a scene, walk-in-and-stop-then-talk shots.
 ---
 
-# Anime character motion (side-view skeletal walk) v1
+# Anime character motion (side-view skeletal walk) v1.1
 
 Built and proven 23 Oct 2026 on Mia ("The Map That Glowed"). This replaced the front-view puppet walk that Dawood called "bad": a front view can't show legs passing each other, and the 12 AI walk frames he generated were all "legs apart" poses, so playing them in order only jitters. A real walk needs a skeleton.
 
@@ -124,8 +124,8 @@ Add to the scene JSON (all keyed, eased; times in s):
 - `"blinks": [t, ...]`: optional fixed blinks (otherwise random every 2.2–4 s).
 
 ## Walking IN the grass (v1.1)
-`"grass": {"spacing": 4, "rows": 2, "height": [16, 44], "flowers": 0.06, "window": 330, "kick": 6}`. Effects:
-- Blades are fixed in the painting and drawn in front of the boots. They are coloured from the painting, sway with the wind, and bend away and flatten under each foot. They are drawn only near the walker, fading out at the edges, so they blend into the painted meadow.
+`"grass": {"spacing": 5, "rows": 3, "height": [34, 78], "flowers": 0.04, "window": 330, "kick": 7}`. Effects:
+- Blades are fixed in the painting and drawn in front of the boots. They take the painting's own grass greens (sampled from its bottom third, never a fixed bright green, which looked like a fake strip), cover the lower part of the boots, sway with the wind, and bend away and flatten under each foot. They are drawn only near the walker, fading out at the edges, so they blend into the painted meadow.
 - At every toe-off, bits of grass and petals are kicked up and fall.
 
 Sound:
