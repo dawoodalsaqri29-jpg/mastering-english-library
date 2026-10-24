@@ -49,7 +49,7 @@
   {
    "id": "overview",
    "type": "slide",
-   "layout": "compare",
+   "layout": "contrast",
    "chapter": "will or going to?",
    "data": {
     "heading": "will or going to?",
@@ -70,6 +70,10 @@
       "will = I think / I believe",
       "I think you'll love this film."
      ]
+    ],
+    "labels": [
+     "Use",
+     "Example"
     ]
    },
    "say": [
@@ -629,5 +633,7 @@
   "image": "/home/claude/work/clips/g2_04.png",
   "img_x": 0.5,
   "img_w": 900
- }
+ },
+ "yt_title": "Will or Going To? The Future in English | Full Animated Lesson with Mia (A2-B1)",
+ "yt_topic": "the future (will and going to)"
 }

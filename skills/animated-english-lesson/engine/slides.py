@@ -50,6 +50,10 @@ tr.new td {{ background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.08); }}
 .chip {{ font: 600 46px Inter; padding: 18px 34px; border-radius: 60px; background: #fff; border: 3px solid {T['accent2']}; color: {T['accent2']}; }}
 .chip.new {{ background: {T['accent2']}; color: #fff; }}
 .cmp {{ display: flex; gap: 30px; margin: 14px 0; }}
+.ctr {{ display: flex; gap: 30px; margin: 14px 0; }}
+.ctr div {{ flex: 1; font: 500 40px Inter; padding: 16px 26px; border-radius: 14px; background: rgba(255,255,255,.75); }}
+.ctr .l {{ border-left: 8px solid {T['accent']}; }} .ctr .r {{ border-left: 8px solid {T['accent2']}; }}
+.ctrh {{ display: flex; gap: 30px; margin: 0 0 6px; }} .h1c {{ color: {T['accent']}; }} .h2c {{ color: {T['accent2']}; }} .ctrh div {{ flex: 1; font: 700 30px Inter; letter-spacing: 1px; text-transform: uppercase; padding: 0 30px; }}
 .cmp div {{ flex: 1; font: 500 40px Inter; padding: 16px 26px; border-radius: 14px; }}
 .bad {{ background: rgba(192,57,43,.10); color: {T['bad']}; text-decoration: line-through; text-decoration-thickness: 3px; }}
 .bad::before {{ content: "✗  "; text-decoration: none; display: inline-block; }}
@@ -132,6 +136,11 @@ def build(layout, d, title, sub, n_on, cur=None, extra=None):
     if layout == "chips":
         ch = "".join(f'<span class="{cls(i,"chip")}">{html.escape(c)}</span>' for i, c in enumerate(d["chips"]))
         return f'<div class="frame">{head}<div class="chips">{ch}</div></div>', len(d["chips"])
+    if layout == "contrast":   # two CORRECT columns compared (no wrong/right styling)
+        lab = d.get("labels", ["", ""])
+        hd = f'<div class="ctrh"><div class="h1c">{html.escape(lab[0])}</div><div class="h2c">{html.escape(lab[1])}</div></div>' if any(lab) else ""
+        rows = "".join(f'<div class="{cls(i,"ctr")}"><div class="l">{v(r[0])}</div><div class="r">{v(r[1])}</div></div>' for i, r in enumerate(d["rows"]))
+        return f'<div class="frame">{head}{hd}{rows}</div>', len(d["rows"])
     if layout == "compare":
         rows = "".join(f'<div class="{cls(i,"cmp")}"><div class="bad">{html.escape(r[0])}</div><div class="good">{html.escape(r[1])}</div></div>' for i, r in enumerate(d["rows"]))
         return f'<div class="frame">{head}{rows}</div>', len(d["rows"])

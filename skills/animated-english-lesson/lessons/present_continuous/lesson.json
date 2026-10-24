@@ -274,7 +274,7 @@
   {
    "id": "vs",
    "type": "slide",
-   "layout": "compare",
+   "layout": "contrast",
    "chapter": "Present simple or continuous?",
    "data": {
     "heading": "Present simple or continuous?",
@@ -291,6 +291,10 @@
       "He works in a bank.",
       "He's working from home this week."
      ]
+    ],
+    "labels": [
+     "Present simple",
+     "Present continuous"
     ]
    },
    "say": [

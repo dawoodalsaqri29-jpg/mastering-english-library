@@ -168,9 +168,9 @@ for it in range(5):     # gain to target, true-peak limiter, re-measure, correct
     lim = f"alimiter=limit={10 ** (ceil / 20):.4f}:level=false:attack=2:release=80:asc=1"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", A.out + ".pre.wav", "-af", f"volume={gain:.2f}dB,{lim}", "-ar", str(SR), "-c:a", "pcm_s24le", A.out], check=True)
     I_, T_ = lufs_tp(A.out)
-    if abs(I_ - A.lufs) <= 0.3 and T_ <= A.tp - 0.3: break   # 0.3 dB margin for the AAC encode
+    if abs(I_ - A.lufs) <= 0.3 and T_ <= A.tp - 0.8: break   # 0.8 dB margin: AAC encoding adds overshoot
     gain += A.lufs - I_
-    if T_ > A.tp - 0.3: ceil -= (T_ - (A.tp - 0.3)) + 0.2
+    if T_ > A.tp - 0.8: ceil -= (T_ - (A.tp - 0.8)) + 0.2
 os.remove(A.out + ".pre.wav")
 eb = subprocess.run(["ffmpeg", "-nostats", "-i", A.out, "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
 I = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", eb)[-1]); TPk = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", eb)[-1])

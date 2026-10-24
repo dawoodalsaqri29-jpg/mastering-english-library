@@ -9,6 +9,12 @@ RIG = "/home/claude/work/rig2/mia_front.json"
 base_perf = json.load(open("/home/claude/work/rig2/perf_v4.json"))
 k = Kokoro("/home/claude/models/kokoro/kokoro-v1.0.onnx", "/home/claude/models/kokoro/voices-v1.0.bin")
 ch = L["child"]
+import shutil
+_bg = base_perf["background"]; _src = _bg if os.path.isabs(_bg) else os.path.join("/home/claude/work/rig2", _bg)
+os.makedirs(D, exist_ok=True)
+if not os.path.exists(os.path.join(D, os.path.basename(_bg))):
+    for cand in (_src, "/home/claude/work/anime/" + os.path.basename(_bg)):
+        if os.path.exists(cand): shutil.copy(cand, D); break
 for cid, c in L["clips"].items():
     if c["kind"] != "face": continue
     out = f"{D}/{cid}.mp4"

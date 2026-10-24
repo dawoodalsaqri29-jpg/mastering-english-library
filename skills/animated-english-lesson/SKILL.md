@@ -32,7 +32,8 @@ It uses the other skills:
     - `pron` (heading, cols [[sound, words]], tip);
     - `qa` (heading, rule, pairs);
     - `chips` (heading, chips; each chip appears when its word is spoken);
-    - `compare` (heading, rows [wrong, right]);
+    - `compare` (heading, rows [wrong, right]): ONLY for mistakes, because the left column is crossed out in red;
+    - `contrast` (heading, labels [left, right], rows): two CORRECT forms side by side (simple vs continuous, been vs gone, will vs going to);
     - `checklist` (heading, items);
     - `end` (heading, task, next);
     - `repeat` (heading, lines, plus `repeat` [{text, gap}]).

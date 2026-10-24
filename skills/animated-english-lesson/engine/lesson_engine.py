@@ -234,7 +234,8 @@ def build(lesson_path, out):
                 if 0 <= u <= 4.2:
                     k = min(u / 0.35, 1.0) * min((4.2 - u) / 0.35, 1.0); k = k * k * (3 - 2 * k)
                     shift = int((1 - k) * 700); a = pop[..., 3:4] / 255 * k
-                    sh = np.roll(pop[..., :3], shift, 1); sa = np.roll(a, shift, 1)
+                    sh = np.zeros_like(pop[..., :3]); sa = np.zeros_like(a)          # slide in from the right edge (no wrap-around)
+                    sh[:, shift:] = pop[:, :W - shift, :3]; sa[:, shift:] = a[:, :W - shift]
                     fr = fr * (1 - sa) + sh * sa
             enc.stdin.write(np.clip(fr, 0, 255).astype(np.uint8).tobytes()); fi += 1
         for sg in segs:
