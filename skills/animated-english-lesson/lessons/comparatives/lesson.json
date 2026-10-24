@@ -1,0 +1,658 @@
+{
+ "id": "comparatives-superlatives",
+ "title": "Comparatives & Superlatives",
+ "subtitle": "bigger, better, the most beautiful",
+ "level": "A2 - B1",
+ "theme": {
+  "bg": "#F0FAF9",
+  "bg2": "#D6F0EC",
+  "accent": "#0E7C73",
+  "accent2": "#B8481F",
+  "text": "#14302D",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bf_alice",
+  "speed": 0.93
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "music_seed": 58,
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "chapter": "Mia compares",
+   "caption": "Whiskers is <v>faster than</v> me!"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_best",
+   "caption": "This is <v>the most beautiful</v> sunset in the world!"
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "Faster than me. The most beautiful sunset in the world. Mia is comparing things. We do this every day, so let's learn comparatives and superlatives.",
+    "By the end, you'll know the rules, the irregular forms, and the mistakes to avoid."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Two or more?",
+   "data": {
+    "heading": "Comparative or superlative?",
+    "rows": [
+     [
+      "Comparative: 2 things",
+      "Whiskers is faster than Mia."
+     ],
+     [
+      "Superlative: 3 or more",
+      "Whiskers is the fastest cat in the village."
+     ]
+    ]
+   },
+   "say": [
+    "First, the idea.",
+    "We use the comparative to compare two things: Whiskers is faster than Mia.",
+    "We use the superlative for one thing in a group of three or more: Whiskers is the fastest cat in the village."
+   ]
+  },
+  {
+   "id": "pic1",
+   "type": "clip",
+   "clip": "p_jump",
+   "say": [
+    "Look at Whiskers jump! He's quicker than a bird, and braver than any other cat."
+   ],
+   "caption": "He's <v>quicker than</v> a bird!"
+  },
+  {
+   "id": "short",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Short adjectives: -er / -est",
+   "data": {
+    "heading": "Short adjectives (1 syllable)",
+    "cols": [
+     "Adjective",
+     "Comparative",
+     "Superlative"
+    ],
+    "rows": [
+     [
+      "tall",
+      "tall<v>er</v> than",
+      "the tall<v>est</v>"
+     ],
+     [
+      "nice",
+      "nice<v>r</v> than",
+      "the nice<v>st</v>"
+     ],
+     [
+      "big",
+      "bi<v>gger</v> than",
+      "the bi<v>ggest</v>"
+     ],
+     [
+      "hot",
+      "ho<v>tter</v> than",
+      "the ho<v>ttest</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Short adjectives, with one syllable, add e r and e s t.",
+    "Tall, taller than, the tallest.",
+    "If it ends in e, just add r or s t: nice, nicer, the nicest.",
+    "One vowel and one consonant? Double it: big, bigger, the biggest.",
+    "Hot, hotter, the hottest. Muscat is hotter than London."
+   ]
+  },
+  {
+   "id": "y",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Adjectives ending in -y",
+   "data": {
+    "heading": "Two syllables ending in -y",
+    "cols": [
+     "Adjective",
+     "Comparative",
+     "Superlative"
+    ],
+    "rows": [
+     [
+      "happy",
+      "happ<v>ier</v> than",
+      "the happ<v>iest</v>"
+     ],
+     [
+      "easy",
+      "eas<v>ier</v> than",
+      "the eas<v>iest</v>"
+     ],
+     [
+      "funny",
+      "funn<v>ier</v> than",
+      "the funn<v>iest</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Adjectives ending in y change the y to i.",
+    "Happy, happier, the happiest.",
+    "Easy, easier, the easiest.",
+    "Funny, funnier, the funniest."
+   ]
+  },
+  {
+   "id": "long",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Long adjectives: more / the most",
+   "data": {
+    "heading": "Long adjectives (2+ syllables)",
+    "cols": [
+     "Adjective",
+     "Comparative",
+     "Superlative"
+    ],
+    "rows": [
+     [
+      "beautiful",
+      "<v>more</v> beautiful than",
+      "<v>the most</v> beautiful"
+     ],
+     [
+      "expensive",
+      "<v>more</v> expensive than",
+      "<v>the most</v> expensive"
+     ],
+     [
+      "interesting",
+      "<v>more</v> interesting than",
+      "<v>the most</v> interesting"
+     ]
+    ]
+   },
+   "say": [
+    "Longer adjectives use more and the most. We don't change the adjective.",
+    "Beautiful, more beautiful than, the most beautiful.",
+    "Expensive, more expensive than, the most expensive.",
+    "Interesting, more interesting than, the most interesting."
+   ]
+  },
+  {
+   "id": "irregular",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Irregular: good, bad, far",
+   "data": {
+    "heading": "Irregular forms",
+    "cols": [
+     "Adjective",
+     "Comparative",
+     "Superlative"
+    ],
+    "rows": [
+     [
+      "good",
+      "<v>better</v> than",
+      "<v>the best</v>"
+     ],
+     [
+      "bad",
+      "<v>worse</v> than",
+      "<v>the worst</v>"
+     ],
+     [
+      "far",
+      "<v>farther / further</v>",
+      "<v>the farthest</v>"
+     ]
+    ]
+   },
+   "say": [
+    "And three irregular ones. You must learn them by heart.",
+    "Good, better, the best.",
+    "Bad, worse, the worst.",
+    "Far, farther or further, the farthest."
+   ]
+  },
+  {
+   "id": "bestclip",
+   "type": "clip",
+   "clip": "c_best",
+   "caption": "This is <v>the most beautiful</v> sunset in the world!"
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "pron",
+   "type": "slide",
+   "layout": "pron",
+   "chapter": "Saying than and the",
+   "data": {
+    "heading": "Saying it naturally",
+    "cols": [
+     [
+      "than /ðən/",
+      [
+       "taller than",
+       "better than"
+      ]
+     ],
+     [
+      "the /ðə/",
+      [
+       "the best",
+       "the biggest"
+      ]
+     ],
+     [
+      "-er /ə/",
+      [
+       "bigger",
+       "faster",
+       "older"
+      ]
+     ]
+    ],
+    "tip": "Put your tongue between your teeth for th"
+   },
+   "say": [
+    "A quick pronunciation tip.",
+    "Than is weak and short: taller than. Better than.",
+    "The is also weak: the best. The biggest.",
+    "And the e r ending is a soft sound: bigger, faster, older.",
+    "For the t h sound, put your tongue between your teeth. Than. The."
+   ]
+  },
+  {
+   "id": "asas",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "as ... as",
+   "data": {
+    "heading": "Equal: as ... as",
+    "rule": "as + adjective + as / not as ... as",
+    "examples": [
+     "Mia is <v>as tall as</v> her friend.",
+     "Whiskers is <v>not as big as</v> a dog.",
+     "Today is <v>not as hot as</v> yesterday."
+    ],
+    "note": "not as big as = smaller than"
+   },
+   "say": [
+    "When two things are the same, use as, adjective, as.",
+    "Mia is as tall as her friend.",
+    "For a difference, say not as, adjective, as: Whiskers is not as big as a dog.",
+    "Today is not as hot as yesterday.",
+    "So not as big as means smaller than."
+   ]
+  },
+  {
+   "id": "pic2",
+   "type": "clip",
+   "clip": "p_valley",
+   "say": [
+    "From the hill, Mia can see the whole valley. This is the highest place in the village, and the river looks smaller than a ribbon."
+   ],
+   "caption": "This is <v>the highest</v> place in the village."
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions",
+   "data": {
+    "heading": "Questions",
+    "rule": "Which is ...er? / What is the ...est?",
+    "pairs": [
+     [
+      "Which is <v>bigger</v>, the sun or the moon?",
+      "The sun is much bigger."
+     ],
+     [
+      "Who is <v>the oldest</v> in your family?",
+      "My grandma is the oldest."
+     ],
+     [
+      "What's <v>the best</v> film you've seen?",
+      "Toy Story!"
+     ]
+    ]
+   },
+   "say": [
+    "Some useful questions.",
+    "Which is bigger, the sun or the moon? The sun is much bigger. Notice much, it makes the difference stronger.",
+    "Who is the oldest in your family? My grandma is the oldest.",
+    "What's the best film you've ever seen?"
+   ]
+  },
+  {
+   "id": "qclip",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "Is the river <v>deeper than</v> the lake?"
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "He is more tall than me.",
+      "He is taller than me."
+     ],
+     [
+      "She is more better.",
+      "She is better."
+     ],
+     [
+      "It's the most big house.",
+      "It's the biggest house."
+     ],
+     [
+      "Muscat is hotter from Dubai.",
+      "Muscat is hotter than Dubai."
+     ],
+     [
+      "He is tallest in class.",
+      "He is the tallest in the class."
+     ]
+    ]
+   },
+   "say": [
+    "Now the common mistakes.",
+    "He is more tall than me. Tall is short, so: he is taller than me.",
+    "She is more better. Better is already a comparative: she is better.",
+    "It's the most big house. It's the biggest house.",
+    "Muscat is hotter from Dubai. We use than: Muscat is hotter than Dubai.",
+    "He is tallest in class. Don't forget the: he is the tallest in the class."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "My bag is heavier than yours.",
+     "This is the best day ever!",
+     "English is easier than I thought.",
+     "She's not as tall as her brother.",
+     "It's the most beautiful place."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "My bag is heavier than yours.",
+     "gap": 2.6
+    },
+    {
+     "text": "This is the best day ever!",
+     "gap": 2.4
+    },
+    {
+     "text": "English is easier than I thought.",
+     "gap": 2.7
+    },
+    {
+     "text": "She's not as tall as her brother.",
+     "gap": 2.7
+    },
+    {
+     "text": "It's the most beautiful place.",
+     "gap": 2.6
+    }
+   ],
+   "say": [
+    "Your turn. Listen, then say it out loud."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Story: the race",
+   "data": {
+    "heading": "The race home",
+    "sub": "Listen for -er, -est, more and most"
+   },
+   "say": [
+    "A short story. Listen for e r, e s t, more and most."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "p_race",
+   "say": [
+    "Mia and Whiskers race home along the path. Whiskers is faster, but Mia is cleverer. She knows the shortest way."
+   ],
+   "caption": "Mia knows <v>the shortest</v> way."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_hook",
+   "caption": "Whiskers is <v>faster than</v> me!"
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 7.5,
+   "say": [
+    "The grass is softer here, and the evening is warmer than yesterday. For Mia, it's the happiest walk of the year."
+   ],
+   "caption": "It's <v>the happiest</v> walk of the year."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Quiz time! Five questions, five seconds each."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "An elephant is ___ than a horse.",
+    "options": [
+     "big",
+     "bigger",
+     "more big"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Bigger, with double g."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "This is the ___ book in the library.",
+    "options": [
+     "most interesting",
+     "interestingest",
+     "more interesting"
+    ],
+    "answer": 0
+   },
+   "say_answer": "Most interesting. It's a long adjective."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "My cold is ___ today than yesterday.",
+    "options": [
+     "badder",
+     "worse",
+     "worst"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Worse. Bad, worse, the worst."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "Mia is as tall ___ her friend.",
+    "options": [
+     "than",
+     "as",
+     "like"
+    ],
+    "answer": 1
+   },
+   "say_answer": "As. As tall as."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "Sunday is the ___ day of the week.",
+    "options": [
+     "happyest",
+     "happiest",
+     "most happy"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Happiest. Y changes to i."
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "2 things: comparative + than",
+     "3 or more: the + superlative",
+     "short: -er / -est (bigger, the biggest)",
+     "-y: happier, the happiest",
+     "long: more / the most",
+     "good-better-best, bad-worse-worst"
+    ]
+   },
+   "say": [
+    "Let's remember. Comparatives compare two things, with than. Superlatives pick one from a group, with the.",
+    "Short adjectives add e r and e s t, y becomes i, and long adjectives use more and the most.",
+    "And learn the irregulars: good, better, best. Bad, worse, worst."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Compare 2 people in your family, and name the best place in your town.",
+    "next": "Next lesson: can, must & should"
+   },
+   "say": [
+    "Your homework: compare two people in your family, and write about the best place in your town. Share it in the comments.",
+    "Subscribe for more lessons. See you next time. Bye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "Whiskers is faster than me!",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 1
+  },
+  "c_best": {
+   "kind": "face",
+   "text": "Wow... This is the most beautiful sunset in the world!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -3
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "Is the river deeper than the lake?",
+   "mood": "happy",
+   "look_x": 0,
+   "look_y": 0
+  },
+  "p_jump": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g1_05.png",
+   "move": "pan"
+  },
+  "p_valley": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g3_10.png",
+   "move": "pan"
+  },
+  "p_race": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g2_05.png",
+   "move": "in"
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  }
+ },
+ "thumb": {
+  "t1": "Bigger",
+  "t2": "the Biggest",
+  "t2_size": 104,
+  "sub": "Comparatives & superlatives",
+  "pairs": [
+   [
+    "good",
+    "better · the best"
+   ],
+   [
+    "beautiful",
+    "the most beautiful"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g2_08.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
+}

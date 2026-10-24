@@ -53,6 +53,17 @@ SFX = {
     "whoosh": lambda: bp(np.random.default_rng(1).standard_normal(int(0.35 * SR)), 300, 5000) * np.sin(np.linspace(0, np.pi, int(0.35 * SR))) ** 2 * 0.035,
     "pop": lambda: tone([880, 1760], 0.12, 0.03, 0.12),
 }
+SFX_DIR = "/home/claude/work/sfx"   # real recordings override the synthetic ones: <name>.wav (tick, ding, ting, bell, whoosh, pop)
+SFX_PEAK = {"tick": 0.18, "ding": 0.16, "ting": 0.08, "bell": 0.16, "whoosh": 0.05, "pop": 0.12}
+SFX_MAXLEN = {"tick": 0.5, "ding": 1.6, "ting": 1.0, "bell": 2.2, "whoosh": 0.9, "pop": 0.4}
+def _real(name):
+    a = load_audio(os.path.join(SFX_DIR, name + ".wav"))
+    nz = np.where(np.abs(a) > np.abs(a).max() * 0.02)[0]; a = a[nz[0]: nz[0] + int(SFX_MAXLEN[name] * SR)]
+    fade = min(len(a), int(0.08 * SR)); a[-fade:] *= np.linspace(1, 0, fade)
+    return a / (np.abs(a).max() + 1e-9) * SFX_PEAK[name]
+for _n in list(SFX):
+    if os.path.exists(os.path.join(SFX_DIR, _n + ".wav")):
+        SFX[_n] = (lambda n=_n: _real(n))
 def _bell():
     out = np.zeros(int(1.9 * SR)); b = tone([2093, 2637, 3136, 4186], 1.6, 0.45, 0.12)
     for k in range(2):
@@ -110,6 +121,8 @@ def build(lesson_path, out):
     aud = []           # (array, start_time, kind)
     subs = []          # (t0, t1, text)
     popups = []
+    cues = []          # (time, kind, label): the sound-design cue list (sfx_layer.py reads it)
+    def cue(tt, kind, label=""): cues.append((round(tt, 3), kind, label))
     t = 0.0
     def add_say(text, t0, voice=None, speed=None, pitch=None):
         p, d = tts.say(text, voice or nar["voice"], speed or nar["speed"], pitch)
@@ -127,8 +140,9 @@ def build(lesson_path, out):
         typ = b["type"]
         if b.get("chapter"): chapters.append((round(t, 1), b["chapter"]))
         if typ == "popup":
-            popups.append(t + 0.5); continue
+            popups.append(t + 0.5); cue(t + 0.5, "popup", "subscribe"); continue
         aud.append((SFX["whoosh"](), max(t - 0.1, 0), "sfx"))
+        cue(t, {"slide": "slide_" + b.get("layout", ""), "quiz": "question", "clip": "clip_" + clips.get(b.get("clip"), {}).get("kind", "")}.get(typ, typ), b["id"] + ("|chapter:" + b["chapter"] if b.get("chapter") else ""))
         if typ == "slide":
             lay = b["layout"]; d = b.get("data", {}); says = b.get("say", [])
             _, n_items = S.build(lay, d, L["title"], L.get("subtitle", ""), 0)
@@ -139,6 +153,7 @@ def build(lesson_path, out):
                     c = re.sub(r"\b(19|20)(\d\d)\b", lambda m: ("nineteen " if m.group(1) == "19" else "twenty ") + NUM2.get(m.group(2), m.group(2)), c.split(" (")[0].lower())
                     ws = []
                     for w in c.split():
+                        w = w.strip("!?.,;:")
                         if not re.fullmatch(r"[a-z']+", w): break
                         ws.append(w)
                     return " ".join(ws)
@@ -153,7 +168,7 @@ def build(lesson_path, out):
                 body, _ = S.build(lay, d, L["title"], L.get("subtitle", ""), plan[ci], extra=img_title if lay == "title" else None)
                 png = shot(body, f"b{bi:02d}_{ci}.png", avatar=lay not in ("title", "title2", "end"))
                 dd = add_say(s_, t + 0.25)
-                if ci > 0 and plan[ci] != plan[ci - 1]: aud.append((SFX["pop"](), t + 0.05, "sfx"))
+                if ci > 0 and plan[ci] != plan[ci - 1]: aud.append((SFX["pop"](), t + 0.05, "sfx")); cue(t + 0.05, "reveal", f"{b['id']}:{plan[ci]}")
                 seg_d = dd + 0.25 + (0.35 if ci < len(says) - 1 else 0.7)
                 segs.append(("img", png, seg_d)); t += seg_d
             if not says:
@@ -164,7 +179,7 @@ def build(lesson_path, out):
                     png = shot(body, f"b{bi:02d}_r{ri}.png")
                     dd = add_say(r["text"], t + 0.2); segs.append(("img", png, dd + 0.4)); t += dd + 0.4
                     body, _ = S.build(lay, d, L["title"], "", 0, cur=ri, extra="turn")
-                    png = shot(body, f"b{bi:02d}_r{ri}t.png"); aud.append((SFX["ting"](), t, "sfx"))
+                    png = shot(body, f"b{bi:02d}_r{ri}t.png"); aud.append((SFX["ting"](), t, "sfx")); cue(t, "your_turn", b["id"])
                     segs.append(("img", png, r.get("gap", 2.6))); t += r.get("gap", 2.6)
         elif typ == "quiz":
             d = dict(b["data"]); d["heading"] = d.get("heading", f"Question {b['id'][1:]}")
@@ -173,9 +188,9 @@ def build(lesson_path, out):
             dd = add_say(qtext, t + 0.25); segs.append(("img", png, dd + 0.6)); t += dd + 0.6
             for k in range(5, 0, -1):
                 body, _ = S.build("quiz", d, "", "", 0, cur=k); png = shot(body, f"b{bi:02d}_c{k}.png")
-                aud.append((SFX["tick"](), t, "sfx")); segs.append(("img", png, 1.0)); t += 1.0
+                aud.append((SFX["tick"](), t, "sfx")); cue(t, "tick", f"{b['id']}:{k}"); segs.append(("img", png, 1.0)); t += 1.0
             body, _ = S.build("quiz", d, "", "", 0, extra="answer"); png = shot(body, f"b{bi:02d}_a.png")
-            aud.append((SFX["ding"](), t, "sfx")); dd = add_say(b["say_answer"], t + 0.45)
+            aud.append((SFX["ding"](), t, "sfx")); cue(t, "answer", b["id"]); dd = add_say(b["say_answer"], t + 0.45)
             segs.append(("img", png, dd + 1.1)); t += dd + 1.1
         elif typ == "clip":
             c = clips[b["clip"]]; cap = caption_png(b["caption"], f"cap_{bi:02d}.png") if b.get("caption") else None
@@ -203,79 +218,91 @@ def build(lesson_path, out):
     br.close(); pw.stop()
     total = t + 0.5
     # ---------------------------------------------------------------- video
-    enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                            "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", out + ".v.mp4"], stdin=subprocess.PIPE)
-    pop = np.asarray(Image.open(popup).convert("RGBA")).astype(np.float32)
-    prev = None; fi = 0; XF = int(0.25 * FPS)
-    def emit(fr):
-        nonlocal fi
-        tt = fi / FPS
-        for p0 in popups:
-            u = tt - p0
-            if 0 <= u <= 4.2:
-                k = min(u / 0.35, 1.0) * min((4.2 - u) / 0.35, 1.0); k = k * k * (3 - 2 * k)
-                shift = int((1 - k) * 700); a = pop[..., 3:4] / 255 * k
-                sh = np.roll(pop[..., :3], shift, 1); sa = np.roll(a, shift, 1)
-                fr = fr * (1 - sa) + sh * sa
-        enc.stdin.write(np.clip(fr, 0, 255).astype(np.uint8).tobytes()); fi += 1
-    for sg in segs:
-        if sg[0] == "img":
-            img = np.asarray(Image.open(sg[1]).convert("RGB")).astype(np.float32); n = int(round(sg[2] * FPS))
-            for k in range(n):
-                fr = img
-                if prev is not None and k < XF: a = (k + 1) / (XF + 1); fr = prev * (1 - a) + img * a
-                emit(fr)
-            prev = img
-        elif sg[0] == "kb":
-            _, f, move, d, cap = sg; n = int(round(d * FPS))
-            src = np.asarray(Image.open(f).convert("RGB")).astype(np.float32); sh, sw = src.shape[:2]
-            capi = np.asarray(Image.open(cap).convert("RGBA")).astype(np.float32) if cap else None
-            base_s = max(W / sw, H / sh)
-            for k in range(n):
-                u = k / max(n - 1, 1); e = u * u * (3 - 2 * u)
-                z = 1.0 + 0.10 * (e if move == "in" else 1 - e); px = (0.5 + (0.06 * (e - 0.5) if move == "pan" else 0))
-                sc_ = base_s * z; cw, chh = W / sc_, H / sc_
-                x0 = (sw - cw) * px; y0 = (sh - chh) * 0.45
-                M = np.float32([[sc_, 0, -x0 * sc_], [0, sc_, -y0 * sc_]])
-                fr = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-                if capi is not None:
-                    uu = k / FPS; a = capi[..., 3:4] / 255 * min(max((uu - 0.3) / 0.3, 0), 1) * min(max((d - uu) / 0.3, 0), 1)
-                    fr = fr * (1 - a) + capi[..., :3] * a
-                if prev is not None and k < XF: al = (k + 1) / (XF + 1); fr = prev * (1 - al) + fr * al
-                emit(fr)
-            prev = fr
-        else:
-            _, f, t_in, d, cap = sg; n = int(round(d * FPS))
-            dec = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-ss", str(t_in), "-i", f, "-t", str(d + 0.2), "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS}",
-                                    "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
-            capi = np.asarray(Image.open(cap).convert("RGBA")).astype(np.float32) if cap else None
-            last = None
-            for k in range(n):
-                buf = dec.stdout.read(W * H * 3)
-                fr = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32) if len(buf) == W * H * 3 else last
-                last = fr
-                if capi is not None:
-                    u = k / FPS; a = capi[..., 3:4] / 255 * min(max((u - 0.3) / 0.3, 0), 1) * min(max((d - u) / 0.3, 0), 1)
-                    fr = fr * (1 - a) + capi[..., :3] * a
-                if prev is not None and k < XF: al = (k + 1) / (XF + 1); fr = prev * (1 - al) + fr * al
-                emit(fr)
-            dec.stdout.close(); dec.wait(); prev = last
-    enc.stdin.close(); enc.wait()
+    AUDIO_ONLY = bool(os.environ.get("LESSON_AUDIO_ONLY"))   # re-mix sound only: stems + cue list, video untouched
+    if AUDIO_ONLY:
+        fi = sum(int(round((sg[2] if sg[0] == "img" else sg[3]) * FPS)) for sg in segs)
+    else:
+        enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+                                "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p", out + ".v.mp4"], stdin=subprocess.PIPE)
+        pop = np.asarray(Image.open(popup).convert("RGBA")).astype(np.float32)
+        prev = None; fi = 0; XF = int(0.25 * FPS)
+        def emit(fr):
+            nonlocal fi
+            tt = fi / FPS
+            for p0 in popups:
+                u = tt - p0
+                if 0 <= u <= 4.2:
+                    k = min(u / 0.35, 1.0) * min((4.2 - u) / 0.35, 1.0); k = k * k * (3 - 2 * k)
+                    shift = int((1 - k) * 700); a = pop[..., 3:4] / 255 * k
+                    sh = np.roll(pop[..., :3], shift, 1); sa = np.roll(a, shift, 1)
+                    fr = fr * (1 - sa) + sh * sa
+            enc.stdin.write(np.clip(fr, 0, 255).astype(np.uint8).tobytes()); fi += 1
+        for sg in segs:
+            if sg[0] == "img":
+                img = np.asarray(Image.open(sg[1]).convert("RGB")).astype(np.float32); n = int(round(sg[2] * FPS))
+                for k in range(n):
+                    fr = img
+                    if prev is not None and k < XF: a = (k + 1) / (XF + 1); fr = prev * (1 - a) + img * a
+                    emit(fr)
+                prev = img
+            elif sg[0] == "kb":
+                _, f, move, d, cap = sg; n = int(round(d * FPS))
+                src = np.asarray(Image.open(f).convert("RGB")).astype(np.float32); sh, sw = src.shape[:2]
+                capi = np.asarray(Image.open(cap).convert("RGBA")).astype(np.float32) if cap else None
+                base_s = max(W / sw, H / sh)
+                for k in range(n):
+                    u = k / max(n - 1, 1); e = u * u * (3 - 2 * u)
+                    z = 1.0 + 0.10 * (e if move == "in" else 1 - e); px = (0.5 + (0.06 * (e - 0.5) if move == "pan" else 0))
+                    sc_ = base_s * z; cw, chh = W / sc_, H / sc_
+                    x0 = (sw - cw) * px; y0 = (sh - chh) * 0.45
+                    M = np.float32([[sc_, 0, -x0 * sc_], [0, sc_, -y0 * sc_]])
+                    fr = cv2.warpAffine(src, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+                    if capi is not None:
+                        uu = k / FPS; a = capi[..., 3:4] / 255 * min(max((uu - 0.3) / 0.3, 0), 1) * min(max((d - uu) / 0.3, 0), 1)
+                        fr = fr * (1 - a) + capi[..., :3] * a
+                    if prev is not None and k < XF: al = (k + 1) / (XF + 1); fr = prev * (1 - al) + fr * al
+                    emit(fr)
+                prev = fr
+            else:
+                _, f, t_in, d, cap = sg; n = int(round(d * FPS))
+                dec = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-ss", str(t_in), "-i", f, "-t", str(d + 0.2), "-vf", f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS}",
+                                        "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
+                capi = np.asarray(Image.open(cap).convert("RGBA")).astype(np.float32) if cap else None
+                last = None
+                for k in range(n):
+                    buf = dec.stdout.read(W * H * 3)
+                    fr = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32) if len(buf) == W * H * 3 else last
+                    last = fr
+                    if capi is not None:
+                        u = k / FPS; a = capi[..., 3:4] / 255 * min(max((u - 0.3) / 0.3, 0), 1) * min(max((d - u) / 0.3, 0), 1)
+                        fr = fr * (1 - a) + capi[..., :3] * a
+                    if prev is not None and k < XF: al = (k + 1) / (XF + 1); fr = prev * (1 - al) + fr * al
+                    emit(fr)
+                dec.stdout.close(); dec.wait(); prev = last
+        enc.stdin.close(); enc.wait()
     total = fi / FPS
     # ---------------------------------------------------------------- audio
     N = int(total * SR) + SR; mix = np.zeros(N); voice_env = np.zeros(N)
+    stems = {k: np.zeros(N) for k in ("voice", "sfx", "music")}
     for a, t0, kind in aud:
         a0 = int(t0 * SR); n = min(len(a), N - a0)
         if n <= 0: continue
         g = {"voice": 1.0, "child": 1.0, "sfx": 1.0, "amb": 1.0}[kind]
         mix[a0:a0 + n] += a[:n] * g
+        stems["voice" if kind in ("voice", "child") else "sfx"][a0:a0 + n] += a[:n] * g
         if kind in ("voice", "child"): voice_env[a0:a0 + n] = 1.0
     for p0 in popups:
-        s = SFX["bell"](); a0 = int(p0 * SR); mix[a0:a0 + len(s)] += s[:N - a0]
+        s = SFX["bell"](); a0 = int(p0 * SR); mix[a0:a0 + len(s)] += s[:N - a0]; stems["sfx"][a0:a0 + len(s)] += s[:N - a0]
     k_ = int(0.3 * SR); env = np.convolve(voice_env, np.ones(k_) / k_, "same")
     mus = music_bed(N, seed=L.get("music_seed", 5)) * L.get("music", 0.055)
     fade = np.clip(np.arange(N) / SR / 2.0, 0, 1) * np.clip((total - np.arange(N) / SR) / 3.0, 0, 1)
     mix += mus * (1 - 0.55 * env) * fade
+    stems["music"] += mus * fade   # un-ducked bed; the mixer ducks it
+    sd = os.path.splitext(out)[0] + ".stems"; os.makedirs(sd, exist_ok=True)
+    for k, v_ in stems.items(): sf.write(f"{sd}/{k}.wav", v_[:int(total * SR)].astype(np.float32), SR)
+    json.dump({"duration": total, "cues": cues, "chapters": chapters}, open(f"{sd}/cues.json", "w"), ensure_ascii=False, indent=0)
+    if AUDIO_ONLY:
+        print("stems", sd, len(cues), "cues"); return
     mix = mix[:int(total * SR)]; mix /= max(1.0, np.abs(mix).max() / 0.95)
     sf.write(out + ".pre.wav", mix.astype(np.float32), SR)
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", out + ".pre.wav", "-af", "loudnorm=I=-14:TP=-1:LRA=9", "-ar", str(SR), out + ".wav"])

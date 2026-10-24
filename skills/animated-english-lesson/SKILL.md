@@ -60,5 +60,14 @@ Reveal rule: chunks = items → item i on chunk i; chunks = items+1 → chunk 0 
 7. Long runs: 2 CPUs, so render one thing at a time. `queue2.sh lessonA lessonB ...` runs clips → build → 4K for each, skipping finished files (resumable).
 8. Save the lesson folder to the repo (`yt/lessons/<id>/`), excluding the build cache.
 
+## Sound-effects layer (sfx_layer.py)
+1. `LESSON_AUDIO_ONLY=1 python3 engine/lesson_engine.py lesson.json Lesson_1080p.mp4` re-runs the plan without re-rendering video and writes `<name>.stems/` (voice.wav, music.wav, sfx.wav, cues.json: every transition, text reveal, tick, quiz answer, pop-up).
+2. `python3 engine/sfx_layer.py <stems> <library_folder> mix.wav --lufs -16 --tp -4 --video Lesson_1080p.mp4 Lesson_1080p_SFX.mp4`.
+   - Library first: files are sorted by filename into whoosh, riser, hit, pop, tick, bell and ambience. A designed sound is used only when a category is empty, and the report lists which categories were missing.
+   - Strong hits only on key moments (title, quiz start, quiz answers), each with a riser building into it. Elsewhere: soft whooshes on slide changes (at most one per 1.2 s), quiet pops when text appears, ticks on the countdown, a bell on the pop-up.
+   - Hierarchy: voice, then effects (ducked 4 dB under speech), then music (ducked 10 dB). Two-pass loudnorm plus a limiter.
+   - Outputs `_cuesheet.md` and `_report.json`.
+3. Give the user 5 timestamps to check on headphones: title hit, a slide with text pops, the pop-up bell, a quiz countdown into its answer, and a transition into a clip.
+
 ## Limits to say
 Mia only says the lines written for her (clips), with no live improvisation. The music bed is a soft synthetic piano. The face rig can't turn her head beyond about ±10°.
