@@ -3,7 +3,7 @@ name: anime-character-motion
 description: Make a story character WALK like a real person in side view (anime / studio cut-out rig) and talk while walking, from one side-view drawing: legs with hip-knee-ankle, heel strike, toe-off, legs passing, arm swing, body bob, blinks, profile mouth flaps, natural stop, walk left or right, camera follow, footsteps. Use for "خلها تمشي زي الناس / مثل الأنمي", walk across a scene, walk-in-and-stop-then-talk shots.
 ---
 
-# Anime character motion (side-view skeletal walk) v1.3
+# Anime character motion (side-view skeletal walk) v1.4
 
 Built and proven 23 Oct 2026 on Mia ("The Map That Glowed"). This replaced the front-view puppet walk that Dawood called "bad": a front view can't show legs passing each other, and the 12 AI walk frames he generated were all "legs apart" poses, so playing them in order only jitters. A real walk needs a skeleton.
 
@@ -44,6 +44,16 @@ Ask Dawood for, or generate (Figma `generate_image` / ElevenLabs Image), a sheet
 - **Hair and face must match the front reference** (the 23 Oct sheet gave Mia a shorter bob than her reference curls). Generate image-to-image with the front reference attached, and check the hair length before rigging.
 - **Downloading:** figma.com asset downloads are blocked by the proxy, so Dawood saves the image and attaches it.
 - **Picking the base frame:** best is legs apart with the front leg straight (heel strike), the far arm hanging free, and the near hand on the bag/strap.
+
+## Step 1b: make the side drawing match the front reference (when the hair differs)
+`scripts/hair_match.py` (run in the walk folder) did this for Mia on 24 Oct, when the side sheet had a smooth cool bob and the reference had warm, voluminous curls:
+1. A hair mask on the side frame (hue < 35°, sat > 0.35, val < 0.75, above the collar, largest component).
+2. A Lab colour transfer of the side hair to the reference hair's mean and std (80 %).
+3. Real curl patches cut from the reference hair edge (cut-out bust from talking-face §A), stamped along the side hair's silhouette behind the original hair (rotated to the outline normal, scale ~0.74, luminance matched a little darker), plus a front layer of curly ends along the bottom of the bob.
+4. The frame is padded 44 px at the top so the curls aren't clipped; all rig y-coordinates are shifted by +44 (`rig_mia_curly.json`).
+5. `hair_added_mask.png` is set as `"hair_extra"` in the rig, so added curls below the head cut ride on the head piece and are cut out of the torso.
+
+This is a patch, not a redraw: the curls are a little softer than the sprite's strokes. Best fix: generate the side sheet image-to-image from the front reference.
 
 ## Step 2: slice and clean
 `python3 slice_sheet.py sheet.png frames/`, then resize the chosen frame to 1300 px tall (`f00_1300.png`).

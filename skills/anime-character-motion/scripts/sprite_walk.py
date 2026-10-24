@@ -52,8 +52,13 @@ class Rig:
         self.body = np.dstack([img[..., :3], body_a * 255])
         if "head_cut" in R:   # head piece (with 30 px under-lap tucked behind the torso) + torso piece
             hc = interp_line(R["head_cut"], np.arange(W))
-            self.head = np.dstack([img[..., :3], body_a * (yy < hc[None, :] + 30) * 255])
-            self.torso = np.dstack([img[..., :3], body_a * (yy >= hc[None, :]) * 255])
+            extra = np.zeros((H, W), np.float32)
+            if R.get("hair_extra"):          # added hair below the head cut stays on the head piece, cut out of the torso
+                extra = np.asarray(Image.open(os.path.join(base, R["hair_extra"])).convert("L")).astype(np.float32) / 255
+                extra = np.clip(cv2.GaussianBlur(extra, (0, 0), 1.0) * 1.4, 0, 1)
+            head_m = np.maximum((yy < hc[None, :] + 30).astype(np.float32), extra)
+            self.head = np.dstack([img[..., :3], body_a * head_m * 255])
+            self.torso = np.dstack([img[..., :3], body_a * (yy >= hc[None, :]) * (1 - extra) * 255])
             self.neck = np.array(R["neck"], float)
         else:
             self.head = None

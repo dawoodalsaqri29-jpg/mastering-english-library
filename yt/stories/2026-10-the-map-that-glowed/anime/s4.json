@@ -7,7 +7,7 @@
  "background": "hills.png",
  "bg_zoom": 1.35,
  "bg_y": 0.75,
- "char_height": 0.58,
+ "char_height": 0.5996,
  "ground_y": 0.95,
  "rim": {
   "dx": 5,
