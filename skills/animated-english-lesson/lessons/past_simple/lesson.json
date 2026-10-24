@@ -1,0 +1,697 @@
+{
+ "id": "past-simple",
+ "title": "The Past Simple",
+ "subtitle": "Tell any story about yesterday - correctly",
+ "level": "A2 - B1",
+ "theme": {
+  "bg": "#FBF3E4",
+  "bg2": "#F3E2C7",
+  "accent": "#C8551E",
+  "accent2": "#2E6E8E",
+  "text": "#2B2118",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bm_george",
+  "speed": 0.92
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "caption": "Yesterday, I <v>walked</v> to the hills, and I <v>saw</v> three sheep!",
+   "chapter": "Mia's yesterday"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "I <v>didn't see</v> the moon... but I <v>saw</v> a beautiful sunset."
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "Walked. Saw. Didn't see. Mia is telling us about yesterday, and she is using the past simple.",
+    "By the end of this lesson, you will be able to tell any story about the past, clearly and correctly. Let's start."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "timeline",
+   "data": {
+    "heading": "When do we use the past simple?",
+    "points": [
+     "A finished action",
+     "At a finished time in the past",
+     "The time is clear (or we know it)"
+    ],
+    "mark": "yesterday"
+   },
+   "say": [
+    "We use the past simple for actions that started and finished in the past.",
+    "The action is finished, and the time is finished too. Yesterday is finished. Last week is finished.",
+    "Often we say the time: yesterday, last summer, in twenty twenty. And sometimes we don't say it, because the listener already knows it from the story."
+   ],
+   "chapter": "When we use the past simple"
+  },
+  {
+   "id": "form_pos",
+   "type": "slide",
+   "layout": "rule",
+   "data": {
+    "heading": "Positive sentences",
+    "rule": "Subject + verb in the past",
+    "examples": [
+     "I <v>walked</v> to the hills.",
+     "She <v>played</v> with her cat.",
+     "We <v>watched</v> the sunset.",
+     "They <v>visited</v> Grandma."
+    ],
+    "note": "Same form for I, you, he, she, it, we, they!"
+   },
+   "say": [
+    "Here is the good news. The past simple is the same for every person. I walked, you walked, she walked, they walked. No extra s, no changes.",
+    "For most verbs, we just add e d. Walk becomes walked.",
+    "Play becomes played.",
+    "Watch becomes watched.",
+    "Visit becomes visited.",
+    "Remember: the same form for I, you, he, she, it, we and they."
+   ],
+   "chapter": "Positive sentences"
+  },
+  {
+   "id": "spelling",
+   "type": "slide",
+   "layout": "table",
+   "data": {
+    "heading": "Spelling: adding -ed",
+    "cols": [
+     "Rule",
+     "Base",
+     "Past"
+    ],
+    "rows": [
+     [
+      "Most verbs: + ed",
+      "walk",
+      "walk<v>ed</v>"
+     ],
+     [
+      "Ends in -e: + d",
+      "live",
+      "live<v>d</v>"
+     ],
+     [
+      "Consonant + y: y to ied",
+      "study",
+      "stud<v>ied</v>"
+     ],
+     [
+      "Vowel + y: + ed",
+      "play",
+      "play<v>ed</v>"
+     ],
+     [
+      "Short verb, consonant-vowel-consonant: double",
+      "stop",
+      "stop<v>ped</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Now, spelling. Most verbs simply take e d: walk, walked.",
+    "If the verb ends in e, add only d: live, lived.",
+    "If the verb ends in a consonant and y, change the y to i e d: study, studied.",
+    "But if there is a vowel before the y, just add e d: play, played.",
+    "And for short verbs that end consonant, vowel, consonant, double the last letter: stop, stopped. Plan, planned."
+   ],
+   "chapter": "Spelling -ed"
+  },
+  {
+   "id": "pron",
+   "type": "slide",
+   "layout": "pron",
+   "data": {
+    "heading": "Saying -ed: three sounds",
+    "cols": [
+     [
+      "/t/",
+      [
+       "walked",
+       "watched",
+       "stopped",
+       "kissed"
+      ]
+     ],
+     [
+      "/d/",
+      [
+       "played",
+       "lived",
+       "cleaned",
+       "opened"
+      ]
+     ],
+     [
+      "/ɪd/",
+      [
+       "wanted",
+       "visited",
+       "needed",
+       "started"
+      ]
+     ]
+    ],
+    "tip": "/ɪd/ only after t or d"
+   },
+   "say": [
+    "The e d ending has three different sounds. Listen.",
+    "After sounds like p, k, s, sh and ch, we say t: walked, watched, stopped, kissed.",
+    "After voiced sounds and vowels, we say d: played, lived, cleaned, opened.",
+    "And only after t or d, we add a new syllable, id: wanted, visited, needed, started.",
+    "So we never say walk-ed. We say walked. One syllable."
+   ],
+   "chapter": "Saying -ed: /t/ /d/ /ɪd/"
+  },
+  {
+   "id": "mid_clip",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 7.0,
+   "say": [
+    "Let's watch Mia's evening again. Yesterday evening, Mia walked through the grass. She stopped near the sheep, and she counted them: one, two, three."
+   ],
+   "caption": "Mia <v>walked</v> through the grass. She <v>stopped</v> near the sheep."
+  },
+  {
+   "id": "irregular",
+   "type": "slide",
+   "layout": "table",
+   "data": {
+    "heading": "Irregular verbs: learn them!",
+    "cols": [
+     "Base",
+     "Past",
+     "Example"
+    ],
+    "rows": [
+     [
+      "go",
+      "<v>went</v>",
+      "I went to the hills."
+     ],
+     [
+      "see",
+      "<v>saw</v>",
+      "She saw three sheep."
+     ],
+     [
+      "have",
+      "<v>had</v>",
+      "We had dinner."
+     ],
+     [
+      "eat",
+      "<v>ate</v>",
+      "He ate an apple."
+     ],
+     [
+      "come",
+      "<v>came</v>",
+      "They came home late."
+     ],
+     [
+      "take",
+      "<v>took</v>",
+      "I took a photo."
+     ],
+     [
+      "make",
+      "<v>made</v>",
+      "Grandma made soup."
+     ],
+     [
+      "buy",
+      "<v>bought</v>",
+      "Dad bought a map."
+     ]
+    ]
+   },
+   "say": [
+    "Many common verbs are irregular. They don't take e d. You need to learn them.",
+    "Go, went. I went to the hills.",
+    "See, saw. She saw three sheep.",
+    "Have, had. We had dinner.",
+    "Eat, ate. He ate an apple.",
+    "Come, came. They came home late.",
+    "Take, took. I took a photo.",
+    "Make, made. Grandma made soup.",
+    "Buy, bought. Dad bought a map.",
+    "Here's a tip: learn them in small groups of five, and say each one in a real sentence about your own day."
+   ],
+   "chapter": "Irregular verbs"
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "was",
+   "type": "slide",
+   "layout": "table",
+   "data": {
+    "heading": "The verb BE: was / were",
+    "cols": [
+     "Subject",
+     "Past of be",
+     "Example"
+    ],
+    "rows": [
+     [
+      "I / he / she / it",
+      "<v>was</v>",
+      "I was happy. It was cold."
+     ],
+     [
+      "you / we / they",
+      "<v>were</v>",
+      "We were at home."
+     ],
+     [
+      "Negative",
+      "<v>wasn't / weren't</v>",
+      "She wasn't tired."
+     ],
+     [
+      "Question",
+      "<v>Was / Were</v> ... ?",
+      "Were you in the park?"
+     ]
+    ]
+   },
+   "say": [
+    "Before negatives, one special verb: be. In the past, be has two forms: was and were.",
+    "I, he, she and it take was. I was happy. It was cold.",
+    "You, we and they take were. We were at home.",
+    "The negative is wasn't or weren't. She wasn't tired. We don't use didn't with be.",
+    "And questions start with was or were. Were you in the park?"
+   ],
+   "chapter": "was / were"
+  },
+  {
+   "id": "negative",
+   "type": "slide",
+   "layout": "rule",
+   "data": {
+    "heading": "Negative sentences",
+    "rule": "Subject + didn't + BASE verb",
+    "examples": [
+     "I <v>didn't see</v> the moon.",
+     "She <v>didn't walk</v> to school.",
+     "We <v>didn't eat</v> breakfast.",
+     "They <v>didn't go</v> home."
+    ],
+    "note": "didn't = did not. After didn't, use the BASE verb: didn't go (not didn't went)."
+   },
+   "say": [
+    "To make a negative, we use didn't, and then the base verb.",
+    "I didn't see the moon.",
+    "She didn't walk to school.",
+    "We didn't eat breakfast.",
+    "They didn't go home.",
+    "Very important: didn't already shows the past. So the main verb goes back to its base form. We say didn't go, never didn't went."
+   ],
+   "chapter": "Negatives: didn't"
+  },
+  {
+   "id": "neg_clip",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "I <v>didn't see</v> the moon... but I <v>saw</v> a beautiful sunset."
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Did + subject + BASE verb ...?",
+    "pairs": [
+     [
+      "<v>Did</v> you <v>see</v> the sunset?",
+      "Yes, I did. / No, I didn't."
+     ],
+     [
+      "<v>Did</v> Mia <v>walk</v> home?",
+      "Yes, she did."
+     ],
+     [
+      "Where <v>did</v> she <v>go</v>?",
+      "She went to the hills."
+     ],
+     [
+      "What <v>did</v> you <v>eat</v>?",
+      "I ate soup."
+     ]
+    ]
+   },
+   "say": [
+    "For questions, put did before the subject, and again, use the base verb.",
+    "Did you see the sunset? Yes, I did. Or: no, I didn't.",
+    "Did Mia walk home? Yes, she did.",
+    "With question words, did comes after them. Where did she go? She went to the hills.",
+    "What did you eat? I ate soup."
+   ],
+   "chapter": "Questions: Did ...?"
+  },
+  {
+   "id": "q_clip",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "<v>Did</v> you <v>see</v> the sunset yesterday?"
+  },
+  {
+   "id": "time",
+   "type": "slide",
+   "layout": "chips",
+   "data": {
+    "heading": "Past time words",
+    "chips": [
+     "yesterday",
+     "last night",
+     "last week",
+     "last summer",
+     "two days ago",
+     "a year ago",
+     "in 2020",
+     "when I was a child",
+     "this morning (now finished)"
+    ]
+   },
+   "say": [
+    "These words tell us the time is finished, so they love the past simple.",
+    "Yesterday. Last night. Last week. Last summer.",
+    "Two days ago. A year ago. Ago always comes after the time.",
+    "In twenty twenty. When I was a child.",
+    "And this morning, but only when the morning is already finished."
+   ],
+   "chapter": "Past time words"
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "He didn't went home.",
+      "He didn't go home."
+     ],
+     [
+      "Did you saw the sunset?",
+      "Did you see the sunset?"
+     ],
+     [
+      "I was go to school yesterday.",
+      "I went to school yesterday."
+     ],
+     [
+      "She goed to the park.",
+      "She went to the park."
+     ],
+     [
+      "I visit my grandma last week.",
+      "I visited my grandma last week."
+     ]
+    ]
+   },
+   "say": [
+    "Let's fix some very common mistakes.",
+    "He didn't went home. No. After didn't, use the base verb: he didn't go home.",
+    "Did you saw the sunset? No. Did you see the sunset?",
+    "I was go to school yesterday. In Arabic we can think was plus a verb, but in English we just say: I went to school yesterday.",
+    "She goed to the park. Go is irregular: she went.",
+    "I visit my grandma last week. Last week is finished, so: I visited my grandma last week."
+   ],
+   "chapter": "Common mistakes"
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I walked to the hills.",
+     "She saw three sheep.",
+     "We didn't see the moon.",
+     "Did you have dinner?",
+     "They were very happy."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I walked to the hills.",
+     "gap": 2.6
+    },
+    {
+     "text": "She saw three sheep.",
+     "gap": 2.6
+    },
+    {
+     "text": "We didn't see the moon.",
+     "gap": 2.8
+    },
+    {
+     "text": "Did you have dinner?",
+     "gap": 2.6
+    },
+    {
+     "text": "They were very happy.",
+     "gap": 2.6
+    }
+   ],
+   "say": [
+    "Now, let's practise your speaking. Listen, and repeat after me. Say it out loud!"
+   ],
+   "chapter": "Repeat after me"
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "data": {
+    "heading": "Mia's evening",
+    "sub": "Listen and notice the past simple"
+   },
+   "say": [
+    "Now, let's hear the whole story of Mia's evening. Listen, and notice every past simple verb."
+   ],
+   "chapter": "Mia's story"
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 9.5,
+   "say": [
+    "Yesterday evening, Mia walked through the soft grass. She saw some sheep near the old wall, and she stopped to count them."
+   ],
+   "caption": "Mia <v>walked</v> through the grass. She <v>saw</v> some sheep and <v>stopped</v> to count them."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_story",
+   "caption": "Then I <v>walked</v> home, and I <v>had</v> dinner with Grandma."
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "s4_walk",
+   "mute": true,
+   "seconds": 6.5,
+   "say": [
+    "The sun went down. Mia didn't stay in the field. She walked home before dark."
+   ],
+   "caption": "The sun <v>went</v> down. Mia <v>didn't stay</v>. She <v>walked</v> home."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Now it's your turn. Choose the correct answer. You have five seconds for each question."
+   ],
+   "chapter": "Quiz"
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "Yesterday I ___ to the market.",
+    "options": [
+     "go",
+     "went",
+     "goed"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Went. Go is irregular: go, went."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "She didn't ___ the film.",
+    "options": [
+     "watched",
+     "watch",
+     "watches"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Watch. After didn't, we use the base verb."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "___ you see Mia last night?",
+    "options": [
+     "Did",
+     "Do",
+     "Were"
+    ],
+    "answer": 0
+   },
+   "say_answer": "Did. Did you see Mia last night?"
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "We ___ in London in 2020.",
+    "options": [
+     "live",
+     "lived",
+     "liveed"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Lived. The verb ends in e, so we add only d."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "\"Stopped\" ends with the sound...",
+    "options": [
+     "/t/",
+     "/d/",
+     "/ɪd/"
+    ],
+    "answer": 0
+   },
+   "say_answer": "T. Stopped. One syllable."
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "Finished action + finished time",
+     "Same form for every person",
+     "Regular: + ed (watch the spelling)",
+     "Three sounds: /t/ /d/ /ɪd/",
+     "Irregular verbs: learn them in groups",
+     "didn't + base verb / Did ... + base verb?"
+    ]
+   },
+   "say": [
+    "Let's remember. The past simple is for finished actions at a finished time.",
+    "It's the same for every person. Regular verbs take e d, with a few spelling rules, and the ending has three sounds.",
+    "Irregular verbs need to be learned. And in negatives and questions, we use did, with the base verb."
+   ],
+   "chapter": "Summary & homework"
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Write five sentences about YESTERDAY in the comments.",
+    "next": "Next lesson: The Past Continuous"
+   },
+   "say": [
+    "Here is your homework. Write five sentences about what you did yesterday in the comments. I will read them.",
+    "If this lesson helped you, subscribe, and I'll see you in the next lesson: the past continuous. Goodbye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "Yesterday, I walked to the hills, and I saw three sheep!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_neg": {
+   "kind": "face",
+   "text": "I didn't see the moon... but I saw a beautiful sunset.",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -3
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "Did you see the sunset yesterday?",
+   "mood": "happy",
+   "look_x": 0,
+   "look_y": 0
+  },
+  "c_story": {
+   "kind": "face",
+   "text": "Then I walked home, and I had dinner with Grandma.",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 0
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  },
+  "s4_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s4_fx.mp4",
+   "in": 0.0,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 23.32
+  }
+ }
+}

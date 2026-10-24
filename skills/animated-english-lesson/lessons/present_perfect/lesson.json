@@ -1,0 +1,642 @@
+{
+ "id": "present-perfect",
+ "title": "The Present Perfect",
+ "subtitle": "Have you ever...? Experiences, news and results",
+ "level": "A2 - B1",
+ "theme": {
+  "bg": "#FBF6EF",
+  "bg2": "#F1E4D2",
+  "accent": "#9A5B2E",
+  "accent2": "#2E6E9A",
+  "text": "#2B2119",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bf_isabella",
+  "speed": 0.92
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "music_seed": 21,
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "chapter": "Mia's news",
+   "caption": "I <v>have found</v> a secret map!"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_ever",
+   "caption": "<v>Have</v> you ever <v>seen</v> a glowing map?"
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "I have found a secret map. Have you ever seen a glowing map? Mia is sharing news and asking about experiences. This is the present perfect.",
+    "It connects the past with now. Let's learn when to use it, how to make it, and how it is different from the past simple."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "timeline",
+   "chapter": "Past + now",
+   "data": {
+    "heading": "Past action, present result",
+    "points": [
+     "some time in the past",
+     "the result is here now"
+    ],
+    "mark": "I have lost my key. (I can't open the door now.)"
+   },
+   "say": [
+    "The present perfect is a bridge between the past and now.",
+    "Something happened in the past, and we don't say exactly when.",
+    "What matters is the result now. I have lost my key. So I can't open the door now."
+   ]
+  },
+  {
+   "id": "uses",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Three main uses",
+   "data": {
+    "heading": "Three main uses",
+    "rule": "Experience · News / result · Unfinished time",
+    "examples": [
+     "I <v>have been</v> to Muscat three times.",
+     "Whiskers <v>has broken</v> the cup!",
+     "We <v>have lived</v> here for six years."
+    ],
+    "note": "No finished time words like yesterday or in 2020."
+   },
+   "say": [
+    "There are three main uses.",
+    "Life experience: I have been to Muscat three times.",
+    "News, or a result you can see now: Whiskers has broken the cup!",
+    "And situations that started in the past and are still true: we have lived here for six years.",
+    "Remember: no finished time words like yesterday, or in twenty twenty."
+   ]
+  },
+  {
+   "id": "pic1",
+   "type": "clip",
+   "clip": "p_cat",
+   "say": [
+    "Look! Whiskers has found the hidden path on the map. The line has started to glow."
+   ],
+   "caption": "Whiskers <v>has found</v> the hidden path."
+  },
+  {
+   "id": "form",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: have / has + past participle",
+   "data": {
+    "heading": "Form: have / has + past participle",
+    "cols": [
+     "Subject",
+     "have / has",
+     "Past participle"
+    ],
+    "rows": [
+     [
+      "I / you / we / they",
+      "have ('ve)",
+      "finished"
+     ],
+     [
+      "he / she / it",
+      "has ('s)",
+      "finished"
+     ],
+     [
+      "I",
+      "'ve",
+      "seen it."
+     ],
+     [
+      "Mia",
+      "'s",
+      "found a map."
+     ]
+    ]
+   },
+   "say": [
+    "The form: have or has, plus the past participle.",
+    "With I, you, we and they, use have, or the short form, apostrophe v e.",
+    "With he, she and it, use has, or apostrophe s.",
+    "I've seen it.",
+    "Mia's found a map."
+   ]
+  },
+  {
+   "id": "pp",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Past participles",
+   "data": {
+    "heading": "Past participles",
+    "cols": [
+     "Base",
+     "Past simple",
+     "Past participle"
+    ],
+    "rows": [
+     [
+      "play",
+      "played",
+      "<v>played</v>"
+     ],
+     [
+      "go",
+      "went",
+      "<v>gone / been</v>"
+     ],
+     [
+      "see",
+      "saw",
+      "<v>seen</v>"
+     ],
+     [
+      "eat",
+      "ate",
+      "<v>eaten</v>"
+     ],
+     [
+      "write",
+      "wrote",
+      "<v>written</v>"
+     ],
+     [
+      "find",
+      "found",
+      "<v>found</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Regular verbs end in e d, the same as the past simple: play, played, played.",
+    "But irregular verbs have their own form. Go, went, gone, or been.",
+    "See, saw, seen.",
+    "Eat, ate, eaten.",
+    "Write, wrote, written.",
+    "Find, found, found.",
+    "This third column is the one you need. Learn it with the verb."
+   ]
+  },
+  {
+   "id": "goneb",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "been vs gone",
+   "data": {
+    "heading": "been or gone?",
+    "rows": [
+     [
+      "She has gone to Salalah.",
+      "She is there now."
+     ],
+     [
+      "She has been to Salalah.",
+      "She went and came back."
+     ]
+    ]
+   },
+   "say": [
+    "A little trap: been or gone?",
+    "She has gone to Salalah means she is there now.",
+    "She has been to Salalah means she went there and came back. It's an experience."
+   ]
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "ever",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions: Have you ever...?",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Have / Has + subject + past participle ...?",
+    "pairs": [
+     [
+      "<v>Have</v> you ever <v>ridden</v> a camel?",
+      "Yes, I have. / No, I haven't."
+     ],
+     [
+      "<v>Has</v> Mia <v>finished</v> her homework?",
+      "Yes, she has."
+     ],
+     [
+      "How many times <v>have</v> you <v>been</v> there?",
+      "Twice."
+     ],
+     [
+      "What <v>have</v> you <v>done</v>?",
+      "I've broken the cup!"
+     ]
+    ]
+   },
+   "say": [
+    "For questions, put have or has first.",
+    "Have you ever ridden a camel? Yes, I have. Or, no, I haven't.",
+    "Has Mia finished her homework? Yes, she has.",
+    "How many times have you been there? Twice.",
+    "What have you done? I've broken the cup!"
+   ]
+  },
+  {
+   "id": "everclip",
+   "type": "clip",
+   "clip": "c_ever",
+   "caption": "<v>Have</v> you ever <v>seen</v> a glowing map?"
+  },
+  {
+   "id": "negative",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Negatives: haven't / hasn't",
+   "data": {
+    "heading": "Negative sentences",
+    "rule": "haven't / hasn't + past participle",
+    "examples": [
+     "I <v>haven't seen</v> that film.",
+     "She <v>hasn't called</v> me.",
+     "We've <v>never been</v> to Paris."
+    ],
+    "note": "never = not ever: I've never seen snow."
+   },
+   "say": [
+    "For negatives, use haven't or hasn't.",
+    "I haven't seen that film.",
+    "She hasn't called me.",
+    "We can also use never: we've never been to Paris.",
+    "Never already means not, so don't say I haven't never."
+   ]
+  },
+  {
+   "id": "negclip",
+   "type": "clip",
+   "clip": "c_never",
+   "caption": "I've <v>never seen</v> anything like this!"
+  },
+  {
+   "id": "words",
+   "type": "slide",
+   "layout": "chips",
+   "chapter": "just, already, yet, for, since",
+   "data": {
+    "heading": "Time words with the present perfect",
+    "chips": [
+     "just",
+     "already",
+     "yet ?/-",
+     "ever ?",
+     "never",
+     "for + period",
+     "since + start"
+    ]
+   },
+   "say": [
+    "Some words love the present perfect.",
+    "Just means a moment ago: I've just eaten. Already means sooner than expected: she's already finished.",
+    "Yet goes at the end of questions and negatives: have you finished yet? I haven't finished yet. Ever is used in questions about life, and never in negatives.",
+    "For is a period: for three years. Since is the starting point: since twenty twenty, since Monday, since I was six."
+   ]
+  },
+  {
+   "id": "vsps",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Present perfect vs past simple",
+   "data": {
+    "heading": "Present perfect or past simple?",
+    "rows": [
+     [
+      "I've visited Nizwa.",
+      "I visited Nizwa last year."
+     ],
+     [
+      "Have you seen my bag?",
+      "Did you see it yesterday?"
+     ],
+     [
+      "She's lost her phone.",
+      "She lost it at school on Monday."
+     ]
+    ]
+   },
+   "say": [
+    "When do we use the past simple instead? When we say, or know, the finished time.",
+    "I've visited Nizwa, an experience. But: I visited Nizwa last year.",
+    "Have you seen my bag? But: did you see it yesterday?",
+    "She's lost her phone. But: she lost it at school on Monday."
+   ]
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "I have seen him yesterday.",
+      "I saw him yesterday."
+     ],
+     [
+      "I live here since 2019.",
+      "I have lived here since 2019."
+     ],
+     [
+      "She has went home.",
+      "She has gone home."
+     ],
+     [
+      "Did you ever eat sushi?",
+      "Have you ever eaten sushi?"
+     ],
+     [
+      "I am here for two years.",
+      "I have been here for two years."
+     ]
+    ]
+   },
+   "say": [
+    "Now the common mistakes.",
+    "I have seen him yesterday. Yesterday is finished, so: I saw him yesterday.",
+    "I live here since twenty nineteen. With since, use the present perfect: I have lived here since twenty nineteen.",
+    "She has went home. Use the participle: she has gone home.",
+    "Did you ever eat sushi? For life experience: have you ever eaten sushi?",
+    "I am here for two years. Say: I have been here for two years."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I've just finished my homework.",
+     "Have you ever been to Salalah?",
+     "She hasn't called me yet.",
+     "We've lived here for six years.",
+     "I've never seen snow."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I've just finished my homework.",
+     "gap": 2.8
+    },
+    {
+     "text": "Have you ever been to Salalah?",
+     "gap": 2.7
+    },
+    {
+     "text": "She hasn't called me yet.",
+     "gap": 2.6
+    },
+    {
+     "text": "We've lived here for six years.",
+     "gap": 2.7
+    },
+    {
+     "text": "I've never seen snow.",
+     "gap": 2.4
+    }
+   ],
+   "say": [
+    "Your turn to speak. Listen, then repeat."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Story: the box",
+   "data": {
+    "heading": "The secret box",
+    "sub": "Listen for have, has, just and never"
+   },
+   "say": [
+    "A short story. Listen for have, has, just and never."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "p_box",
+   "say": [
+    "Mia has opened Grandma's old box. Someone has drawn a picture of a girl and a black cat. Mia has never seen it before."
+   ],
+   "caption": "Someone <v>has drawn</v> a girl and a cat."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_never",
+   "caption": "I've <v>never seen</v> anything like this!"
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "p_sleep",
+   "say": [
+    "And Whiskers? Whiskers has just fallen asleep, next to the glowing map. It has been a long day."
+   ],
+   "caption": "Whiskers <v>has just fallen</v> asleep."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Quiz time. Five questions. You have five seconds each."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "She ___ her keys. She can't get in.",
+    "options": [
+     "has lost",
+     "have lost",
+     "lost yesterday"
+    ],
+    "answer": 0
+   },
+   "say_answer": "Has lost. She is he, she, it, so has."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "I ___ him last week.",
+    "options": [
+     "have seen",
+     "saw",
+     "have saw"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Saw. Last week is finished time, so past simple."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "We've lived here ___ 2019.",
+    "options": [
+     "for",
+     "since",
+     "ago"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Since. Twenty nineteen is the starting point."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "Have you finished ___?",
+    "options": [
+     "already",
+     "yet",
+     "just"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Yet. In questions and negatives, yet goes at the end."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "He has ___ to Salalah. He's there now.",
+    "options": [
+     "been",
+     "gone",
+     "went"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Gone. He is still there now."
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "Past action, result or experience now",
+     "have / has + past participle",
+     "Learn the third form: seen, gone, eaten",
+     "been = went and came back; gone = still there",
+     "just, already, yet, ever, never, for, since",
+     "Finished time (yesterday, in 2020) = past simple"
+    ]
+   },
+   "say": [
+    "Let's remember. The present perfect connects the past with now: experiences, news and results.",
+    "Have or has, plus the past participle. And learn the third form of irregular verbs.",
+    "Use it with just, already, yet, ever, never, for and since. But with a finished time, like yesterday, use the past simple."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Write 3 things you have done and 2 things you have never done.",
+    "next": "Next lesson: The Future (will / going to)"
+   },
+   "say": [
+    "Your homework: write three things you have done in your life, and two things you have never done, in the comments.",
+    "Subscribe for more lessons, and see you next time, when we talk about the future. Bye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "I have found a secret map!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_ever": {
+   "kind": "face",
+   "text": "Have you ever seen a glowing map?",
+   "mood": "happy",
+   "look_x": 0,
+   "look_y": 0
+  },
+  "c_never": {
+   "kind": "face",
+   "text": "Wow... I've never seen anything like this!",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 1
+  },
+  "p_cat": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g3_03.png",
+   "move": "in"
+  },
+  "p_box": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g8_14.png",
+   "move": "in"
+  },
+  "p_sleep": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g7_11.png",
+   "move": "pan"
+  }
+ },
+ "thumb": {
+  "t1": "Present",
+  "t2": "Perfect",
+  "sub": "Have you EVER...?",
+  "pairs": [
+   [
+    "see",
+    "have seen"
+   ],
+   [
+    "go",
+    "has gone / been"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g2_02.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
+}

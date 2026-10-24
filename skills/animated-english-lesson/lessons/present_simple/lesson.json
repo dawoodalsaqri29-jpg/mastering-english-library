@@ -1,0 +1,637 @@
+{
+ "id": "present-simple",
+ "title": "The Present Simple",
+ "subtitle": "Talk about your habits, routines and facts",
+ "level": "A1 - A2",
+ "theme": {
+  "bg": "#F4FAF6",
+  "bg2": "#E1F1E7",
+  "accent": "#1E8A5A",
+  "accent2": "#8A4FB3",
+  "text": "#1D2A22",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bm_lewis",
+  "speed": 0.93
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "music_seed": 13,
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "chapter": "Mia's routine",
+   "caption": "Every morning, I <v>walk</v> to the hills with my cat."
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "My cat <v>doesn't like</v> the rain!"
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "I walk. My cat doesn't like. Mia is talking about her habits and about facts. This is the present simple, the most common tense in English.",
+    "Let's learn how to use it, and how to avoid the mistakes almost everyone makes."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "When we use it",
+   "data": {
+    "heading": "When do we use the present simple?",
+    "rule": "Habits · Routines · Facts · Timetables",
+    "examples": [
+     "I <v>walk</v> to school every day.",
+     "Grandma <v>makes</v> soup on Sundays.",
+     "Water <v>boils</v> at 100 degrees.",
+     "The bus <v>leaves</v> at 7:30."
+    ],
+    "note": "It's about what is generally true, not only now."
+   },
+   "say": [
+    "We use the present simple for things that are generally true.",
+    "Habits: I walk to school every day.",
+    "Routines: Grandma makes soup on Sundays.",
+    "Facts: water boils at a hundred degrees.",
+    "And timetables: the bus leaves at seven thirty.",
+    "So it's not about this moment. It's about what usually happens, or what is always true."
+   ]
+  },
+  {
+   "id": "pic1",
+   "type": "clip",
+   "clip": "p_village",
+   "say": [
+    "Mia lives in a small village. She has a black cat called Whiskers, and they go everywhere together."
+   ],
+   "caption": "Mia <v>lives</v> in a small village. She <v>has</v> a black cat."
+  },
+  {
+   "id": "form",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: he / she / it + s",
+   "data": {
+    "heading": "Form: add -s for he, she, it",
+    "cols": [
+     "Subject",
+     "Verb",
+     "Example"
+    ],
+    "rows": [
+     [
+      "I / you / we / they",
+      "walk",
+      "I walk home."
+     ],
+     [
+      "he / she / it",
+      "walk<v>s</v>",
+      "She walks home."
+     ],
+     [
+      "I / you / we / they",
+      "have",
+      "They have a cat."
+     ],
+     [
+      "he / she / it",
+      "<v>has</v>",
+      "Mia has a cat."
+     ]
+    ]
+   },
+   "say": [
+    "The form is easy, with one important rule.",
+    "With I, you, we and they, use the base verb: I walk home.",
+    "With he, she and it, add s: she walks home. This little s is very important.",
+    "Have is special.",
+    "With he, she and it, it becomes has: Mia has a cat."
+   ]
+  },
+  {
+   "id": "spelling",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Spelling -s / -es / -ies",
+   "data": {
+    "heading": "Spelling: -s, -es, -ies",
+    "cols": [
+     "Rule",
+     "Base",
+     "he / she / it"
+    ],
+    "rows": [
+     [
+      "Most verbs: + s",
+      "read",
+      "read<v>s</v>"
+     ],
+     [
+      "-s, -sh, -ch, -x, -o: + es",
+      "watch",
+      "watch<v>es</v>"
+     ],
+     [
+      "Consonant + y: y to ies",
+      "study",
+      "stud<v>ies</v>"
+     ],
+     [
+      "Vowel + y: + s",
+      "play",
+      "play<v>s</v>"
+     ],
+     [
+      "Special",
+      "go / do",
+      "<v>goes / does</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Spelling. Most verbs add s: read, reads.",
+    "Verbs ending in s, s h, c h, x or o add e s: watch, watches. Go, goes.",
+    "Consonant plus y changes to i e s: study, studies.",
+    "Vowel plus y just adds s: play, plays.",
+    "And remember: go, goes, and do, does."
+   ]
+  },
+  {
+   "id": "pron",
+   "type": "slide",
+   "layout": "pron",
+   "chapter": "Saying -s: /s/ /z/ /ɪz/",
+   "data": {
+    "heading": "Saying -s: three sounds",
+    "cols": [
+     [
+      "/s/",
+      [
+       "walks",
+       "eats",
+       "likes",
+       "stops"
+      ]
+     ],
+     [
+      "/z/",
+      [
+       "plays",
+       "reads",
+       "lives",
+       "goes"
+      ]
+     ],
+     [
+      "/ɪz/",
+      [
+       "watches",
+       "washes",
+       "kisses",
+       "fixes"
+      ]
+     ]
+    ],
+    "tip": "/ɪz/ after s, z, sh, ch, x"
+   },
+   "say": [
+    "The s ending has three sounds, too.",
+    "After p, t, k and f, it sounds like s: walks, eats, likes, stops.",
+    "After voiced sounds, it sounds like z: plays, reads, lives, goes.",
+    "And after s, z, s h, c h and x, we add a syllable: watches, washes, kisses, fixes.",
+    "So: she watches, two syllables. But she walks, one syllable."
+   ]
+  },
+  {
+   "id": "pic2",
+   "type": "clip",
+   "clip": "p_attic",
+   "say": [
+    "Every evening, Mia reads old maps in the attic. She loves stories about hidden places."
+   ],
+   "caption": "Every evening, Mia <v>reads</v> old maps. She <v>loves</v> stories."
+  },
+  {
+   "id": "freq",
+   "type": "slide",
+   "layout": "chips",
+   "chapter": "How often? always, usually, never",
+   "data": {
+    "heading": "How often? (before the main verb)",
+    "chips": [
+     "always 100%",
+     "usually",
+     "often",
+     "sometimes",
+     "rarely",
+     "never 0%"
+    ]
+   },
+   "say": [
+    "Some words tell us how frequently something happens. They come before the main verb.",
+    "Always. Usually. Often.",
+    "Sometimes. Rarely. Never.",
+    "Whiskers always sits on the map. Mia never forgets her bag. But with be, they come after: she is always happy."
+   ]
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "negative",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Negatives: don't / doesn't",
+   "data": {
+    "heading": "Negative sentences",
+    "rule": "don't / doesn't + BASE verb",
+    "examples": [
+     "I <v>don't like</v> rain.",
+     "We <v>don't watch</v> TV.",
+     "She <v>doesn't eat</v> meat.",
+     "My cat <v>doesn't like</v> the rain."
+    ],
+    "note": "doesn't already has the -s: doesn't like (NOT doesn't likes)"
+   },
+   "say": [
+    "For negatives, use don't with I, you, we and they, and doesn't with he, she and it. Then the base verb.",
+    "I don't like rain.",
+    "We don't watch TV.",
+    "She doesn't eat meat.",
+    "My cat doesn't like the rain.",
+    "Careful: doesn't already carries the s. So we say doesn't like, never doesn't likes."
+   ]
+  },
+  {
+   "id": "negclip",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "My cat <v>doesn't like</v> the rain!"
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions: Do / Does ...?",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Do / Does + subject + BASE verb ...?",
+    "pairs": [
+     [
+      "<v>Do</v> you <v>walk</v> to school?",
+      "Yes, I do. / No, I don't."
+     ],
+     [
+      "<v>Does</v> Mia <v>have</v> a cat?",
+      "Yes, she does."
+     ],
+     [
+      "Where <v>do</v> they <v>live</v>?",
+      "They live in a village."
+     ],
+     [
+      "What <v>does</v> she <v>read</v>?",
+      "She reads maps."
+     ]
+    ]
+   },
+   "say": [
+    "For questions, use do or does before the subject, and the base verb.",
+    "Do you walk to school? Yes, I do. No, I don't.",
+    "Does Mia have a cat? Yes, she does.",
+    "Where do they live? They live in a village.",
+    "What does she read? She reads maps."
+   ]
+  },
+  {
+   "id": "qclip",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "<v>Do</v> you <v>walk</v> to school every day?"
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "She go to school.",
+      "She goes to school."
+     ],
+     [
+      "He don't like tea.",
+      "He doesn't like tea."
+     ],
+     [
+      "Does she likes cats?",
+      "Does she like cats?"
+     ],
+     [
+      "I am go to work every day.",
+      "I go to work every day."
+     ],
+     [
+      "She always is late.",
+      "She is always late."
+     ]
+    ]
+   },
+   "say": [
+    "Let's fix the most common mistakes.",
+    "She go to school. We need the s: she goes to school.",
+    "He don't like tea. With he, use doesn't: he doesn't like tea.",
+    "Does she likes cats? After does, the base verb: does she like cats?",
+    "I am go to work every day. We don't need am: I go to work every day.",
+    "She always is late. With be, always comes after: she is always late."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I walk to school every day.",
+     "She watches TV at night.",
+     "He doesn't like coffee.",
+     "Do you live near here?",
+     "We always eat together."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I walk to school every day.",
+     "gap": 2.8
+    },
+    {
+     "text": "She watches TV at night.",
+     "gap": 2.6
+    },
+    {
+     "text": "He doesn't like coffee.",
+     "gap": 2.6
+    },
+    {
+     "text": "Do you live near here?",
+     "gap": 2.6
+    },
+    {
+     "text": "We always eat together.",
+     "gap": 2.6
+    }
+   ],
+   "say": [
+    "Now say it with me. Listen, then repeat out loud."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Mia's week",
+   "data": {
+    "heading": "Mia's week",
+    "sub": "Listen for -s, don't and doesn't"
+   },
+   "say": [
+    "Let's hear about Mia's week. Listen for the s, and for don't and doesn't."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "p_grandma",
+   "say": [
+    "Mia lives with her grandma. Every Sunday, Grandma makes soup and tells old stories."
+   ],
+   "caption": "Grandma <v>makes</v> soup and <v>tells</v> old stories."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_story",
+   "caption": "Grandma always <v>makes</v> soup on Sundays."
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 8.0,
+   "say": [
+    "After school, Mia often walks to the hills. She counts the sheep, and she doesn't go home before sunset."
+   ],
+   "caption": "Mia often <v>walks</v> to the hills. She <v>doesn't go</v> home before sunset."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Quiz time. Five questions, five seconds each."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "Mia ___ in a small village.",
+    "options": [
+     "live",
+     "lives",
+     "living"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Lives. Mia is she, so we add s."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "He ___ like coffee.",
+    "options": [
+     "don't",
+     "doesn't",
+     "isn't"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Doesn't. He doesn't like coffee."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "___ your cat sleep a lot?",
+    "options": [
+     "Do",
+     "Does",
+     "Is"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Does. Your cat is it, so we use does."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "She ___ TV every evening.",
+    "options": [
+     "watchs",
+     "watches",
+     "watch"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Watches. After c h we add e s."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "Which is correct?",
+    "options": [
+     "I always am happy",
+     "I am always happy",
+     "Always I am happy"
+    ],
+    "answer": 1
+   },
+   "say_answer": "I am always happy. With be, always comes after."
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "Habits, routines, facts, timetables",
+     "he / she / it + s (has, goes, does)",
+     "Three sounds: /s/ /z/ /ɪz/",
+     "don't / doesn't + base verb",
+     "Do / Does ... + base verb?",
+     "always, never: before the verb (after be)"
+    ]
+   },
+   "say": [
+    "Let's remember. The present simple is for habits, routines, facts and timetables. Don't forget the s with he, she and it.",
+    "Use don't and doesn't for negatives, do and does for questions, always with the base verb.",
+    "And put frequency words before the main verb, but after be."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Write your daily routine in 5 sentences in the comments.",
+    "next": "Next lesson: The Present Continuous"
+   },
+   "say": [
+    "Your homework: write your daily routine in five sentences, in the comments.",
+    "Subscribe for more lessons, and see you next time, in the present continuous. Bye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "Every morning, I walk to the hills with my cat.",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_neg": {
+   "kind": "face",
+   "text": "My cat doesn't like the rain!",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 0
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "Do you walk to school every day?",
+   "mood": "happy",
+   "look_x": 0,
+   "look_y": 0
+  },
+  "c_story": {
+   "kind": "face",
+   "text": "Grandma always makes soup on Sundays.",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": -1
+  },
+  "p_village": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g1_01.png",
+   "move": "in"
+  },
+  "p_attic": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g2_02.png",
+   "move": "pan"
+  },
+  "p_grandma": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g4_04.png",
+   "move": "in"
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  }
+ },
+ "thumb": {
+  "t1": "Present",
+  "t2": "Simple",
+  "sub": "Your daily routine in English",
+  "pairs": [
+   [
+    "I walk",
+    "she walk<b style='color:#FFD45C'>s</b>"
+   ],
+   [
+    "don't / doesn't",
+    "+ base verb"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g1_01.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
+}

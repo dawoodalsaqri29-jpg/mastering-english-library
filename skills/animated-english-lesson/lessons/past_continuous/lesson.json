@@ -1,0 +1,598 @@
+{
+ "id": "past-continuous",
+ "title": "The Past Continuous",
+ "subtitle": "What were you doing at six o'clock yesterday?",
+ "level": "A2 - B1",
+ "theme": {
+  "bg": "#EEF4FA",
+  "bg2": "#DCE8F4",
+  "accent": "#2D63B5",
+  "accent2": "#C2571A",
+  "text": "#1C2533",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bf_emma",
+  "speed": 0.93
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "music_seed": 9,
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "caption": "I <v>was walking</v> through the grass when I <v>saw</v> three sheep!",
+   "chapter": "Mia's evening"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "What <v>were</v> you <v>doing</v> at six o'clock yesterday?"
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "Was walking. Were doing. Mia is talking about an action that was in progress in the past. This is the past continuous.",
+    "In this lesson you'll learn when to use it, how to make it, and how to use it together with the past simple. Let's go."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "timeline",
+   "chapter": "When we use it",
+   "data": {
+    "heading": "When do we use the past continuous?",
+    "points": [
+     "An action in progress at a moment in the past",
+     "The background of a story",
+     "Two actions happening at the same time"
+    ],
+    "mark": "6 pm yesterday"
+   },
+   "say": [
+    "We use the past continuous for an action that was in progress at a moment in the past. At six o'clock yesterday, Mia was walking. She started before six, and she continued after six.",
+    "We also use it for the background of a story: the sun was shining, the birds were singing.",
+    "And for two long actions at the same time: Mia was walking, and the sheep were eating."
+   ]
+  },
+  {
+   "id": "form",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: was / were + -ing",
+   "data": {
+    "heading": "Form: was / were + verb-ing",
+    "cols": [
+     "Subject",
+     "be (past)",
+     "verb + ing"
+    ],
+    "rows": [
+     [
+      "I / he / she / it",
+      "<v>was</v>",
+      "walk<v>ing</v>"
+     ],
+     [
+      "you / we / they",
+      "<v>were</v>",
+      "eat<v>ing</v>"
+     ],
+     [
+      "Mia",
+      "<v>was</v>",
+      "smil<v>ing</v>"
+     ],
+     [
+      "The sheep",
+      "<v>were</v>",
+      "sleep<v>ing</v>"
+     ]
+    ]
+   },
+   "say": [
+    "The form is simple: was or were, plus the verb with i n g.",
+    "I, he, she and it take was. I was walking.",
+    "You, we and they take were. They were eating.",
+    "Mia was smiling.",
+    "The sheep were sleeping."
+   ]
+  },
+  {
+   "id": "spelling",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Spelling -ing",
+   "data": {
+    "heading": "Spelling: adding -ing",
+    "cols": [
+     "Rule",
+     "Base",
+     "-ing"
+    ],
+    "rows": [
+     [
+      "Most verbs: + ing",
+      "walk",
+      "walk<v>ing</v>"
+     ],
+     [
+      "Ends in -e: drop e",
+      "make",
+      "mak<v>ing</v>"
+     ],
+     [
+      "Short C-V-C: double",
+      "run",
+      "run<v>ning</v>"
+     ],
+     [
+      "Ends in -ie: ie to y",
+      "lie",
+      "l<v>ying</v>"
+     ],
+     [
+      "Ends in -y: keep y",
+      "study",
+      "study<v>ing</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Most verbs just add i n g: walk, walking.",
+    "If the verb ends in e, drop the e: make, making.",
+    "Short verbs that end consonant, vowel, consonant double the last letter: run, running. Sit, sitting.",
+    "Verbs that end in i e change it to y: lie, lying. Die, dying.",
+    "And verbs ending in y keep the y: study, studying. Play, playing."
+   ]
+  },
+  {
+   "id": "walkclip",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 8.0,
+   "say": [
+    "Look at Mia. At six o'clock yesterday, she was walking through the grass. The sun was going down, and the sheep were eating quietly."
+   ],
+   "caption": "At six o'clock, Mia <v>was walking</v>. The sheep <v>were eating</v>."
+  },
+  {
+   "id": "when",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Past continuous + past simple",
+   "data": {
+    "heading": "Long action + short action",
+    "rule": "was / were + -ing  ...  when + past simple",
+    "pairs": [
+     [
+      "I <v>was walking</v> ...",
+      "... <v>when</v> I <v>saw</v> the sheep."
+     ],
+     [
+      "She <v>was reading</v> ...",
+      "... <v>when</v> the phone <v>rang</v>."
+     ],
+     [
+      "<v>While</v> I <v>was walking</v>, ...",
+      "... the birds <v>were singing</v>."
+     ],
+     [
+      "<v>While</v> we <v>were eating</v>, ...",
+      "... it <v>started</v> to rain."
+     ]
+    ]
+   },
+   "say": [
+    "The past continuous often works together with the past simple. The past continuous is the long action. The past simple is the short action that interrupts it.",
+    "I was walking, when I saw the sheep.",
+    "She was reading, when the phone rang.",
+    "While usually goes with the long action: while I was walking, the birds were singing.",
+    "While we were eating, it started to rain."
+   ]
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "negative",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Negatives",
+   "data": {
+    "heading": "Negative sentences",
+    "rule": "wasn't / weren't + verb-ing",
+    "examples": [
+     "I <v>wasn't sleeping</v>.",
+     "She <v>wasn't listening</v>.",
+     "We <v>weren't playing</v>.",
+     "They <v>weren't working</v>."
+    ],
+    "note": "wasn't = was not · weren't = were not"
+   },
+   "say": [
+    "For negatives, use wasn't or weren't, plus i n g.",
+    "I wasn't sleeping.",
+    "She wasn't listening.",
+    "We weren't playing.",
+    "They weren't working.",
+    "Wasn't means was not, and weren't means were not."
+   ]
+  },
+  {
+   "id": "negclip",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "I <v>wasn't sleeping</v>. I <v>was watching</v> the sunset!"
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Was / Were + subject + verb-ing ...?",
+    "pairs": [
+     [
+      "<v>Were</v> you <v>sleeping</v>?",
+      "No, I wasn't."
+     ],
+     [
+      "<v>Was</v> Mia <v>walking</v> home?",
+      "Yes, she was."
+     ],
+     [
+      "What <v>were</v> you <v>doing</v>?",
+      "I was watching TV."
+     ],
+     [
+      "Where <v>was</v> she <v>going</v>?",
+      "She was going home."
+     ]
+    ]
+   },
+   "say": [
+    "For questions, put was or were before the subject.",
+    "Were you sleeping? No, I wasn't.",
+    "Was Mia walking home? Yes, she was.",
+    "What were you doing? I was watching TV.",
+    "Where was she going? She was going home."
+   ]
+  },
+  {
+   "id": "stative",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Verbs we don't use in -ing",
+   "data": {
+    "heading": "State verbs: no -ing!",
+    "rows": [
+     [
+      "I was knowing the answer.",
+      "I knew the answer."
+     ],
+     [
+      "She was wanting a cat.",
+      "She wanted a cat."
+     ],
+     [
+      "We were liking the film.",
+      "We liked the film."
+     ],
+     [
+      "He was believing her.",
+      "He believed her."
+     ]
+    ]
+   },
+   "say": [
+    "Some verbs describe states, not actions. We don't usually use them with i n g.",
+    "Know: I knew the answer, not I was knowing.",
+    "Want: she wanted a cat.",
+    "Like: we liked the film.",
+    "Believe: he believed her."
+   ]
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "I was walk to school.",
+      "I was walking to school."
+     ],
+     [
+      "I walking yesterday.",
+      "I was walking yesterday."
+     ],
+     [
+      "While I saw the sheep...",
+      "When I saw the sheep..."
+     ],
+     [
+      "They was playing.",
+      "They were playing."
+     ]
+    ]
+   },
+   "say": [
+    "Now some common mistakes.",
+    "I was walk to school. We need i n g: I was walking to school.",
+    "I walking yesterday. We need was: I was walking yesterday.",
+    "While I saw the sheep. Saw is a short action, so use when: when I saw the sheep.",
+    "They was playing. They takes were: they were playing."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I was walking home.",
+     "The birds were singing.",
+     "She wasn't sleeping.",
+     "What were you doing?",
+     "It was raining when I left."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I was walking home.",
+     "gap": 2.6
+    },
+    {
+     "text": "The birds were singing.",
+     "gap": 2.6
+    },
+    {
+     "text": "She wasn't sleeping.",
+     "gap": 2.6
+    },
+    {
+     "text": "What were you doing?",
+     "gap": 2.6
+    },
+    {
+     "text": "It was raining when I left.",
+     "gap": 3.0
+    }
+   ],
+   "say": [
+    "Let's practise. Listen and repeat after me, out loud."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Mia's story",
+   "data": {
+    "heading": "Mia's evening",
+    "sub": "Notice the long and the short actions"
+   },
+   "say": [
+    "Now listen to Mia's evening, and notice the long actions and the short actions."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 9.0,
+   "say": [
+    "Yesterday evening, Mia was walking through the field. The sun was shining and the sheep were eating. Suddenly, she stopped and counted them."
+   ],
+   "caption": "Mia <v>was walking</v>. The sheep <v>were eating</v>. She <v>stopped</v>."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_story",
+   "caption": "<v>While</v> I <v>was walking</v> home, the stars <v>were coming</v> out."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Your turn. Choose the right answer. Five seconds for each question."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "At 8 pm yesterday, I ___ TV.",
+    "options": [
+     "watched",
+     "was watching",
+     "were watching"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Was watching. An action in progress at eight p m."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "They ___ football when it started to rain.",
+    "options": [
+     "was playing",
+     "were playing",
+     "played"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Were playing. They takes were."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "I was walking home ___ I saw Mia.",
+    "options": [
+     "while",
+     "when",
+     "during"
+    ],
+    "answer": 1
+   },
+   "say_answer": "When. Saw is the short action."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "She ___ the answer.",
+    "options": [
+     "was knowing",
+     "knew",
+     "is knowing"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Knew. Know is a state verb, no i n g."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "___ you sleeping at midnight?",
+    "options": [
+     "Was",
+     "Were",
+     "Did"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Were. Were you sleeping at midnight?"
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "Action in progress at a past moment",
+     "was / were + verb-ing",
+     "Long action + when + short action",
+     "While + long action",
+     "No -ing with know, want, like",
+     "wasn't / weren't · Was / Were ... ?"
+    ]
+   },
+   "say": [
+    "Let's remember. The past continuous is for an action in progress at a moment in the past, made with was or were plus i n g.",
+    "Use it for the long action, and the past simple for the short action that interrupts it.",
+    "Don't use it with state verbs like know, want and like."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "What were you doing at 8 pm yesterday? Answer in the comments.",
+    "next": "Next lesson: The Present Simple"
+   },
+   "say": [
+    "Your homework: what were you doing at eight p m yesterday? Write your answer in the comments.",
+    "Subscribe if this helped you, and see you in the next lesson, the present simple. Bye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "I was walking through the grass, when I saw three sheep!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "What were you doing at six o'clock yesterday?",
+   "mood": "happy",
+   "look_x": 0,
+   "look_y": 0
+  },
+  "c_neg": {
+   "kind": "face",
+   "text": "I wasn't sleeping. I was watching the sunset!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -3
+  },
+  "c_story": {
+   "kind": "face",
+   "text": "While I was walking home, the stars were coming out.",
+   "mood": "calm",
+   "look_x": -3,
+   "look_y": -2
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  },
+  "s4_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s4_fx.mp4",
+   "in": 0.0,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 23.32
+  }
+ },
+ "thumb": {
+  "t1": "Past",
+  "t2": "Continuous",
+  "t2_size": 104,
+  "sub": "What were you DOING?",
+  "pairs": [
+   [
+    "I walked",
+    "I was walking"
+   ],
+   [
+    "while I was walking...",
+    "I saw!"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g3_07.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
+}

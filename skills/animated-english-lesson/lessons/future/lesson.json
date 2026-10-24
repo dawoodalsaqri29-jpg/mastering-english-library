@@ -1,0 +1,633 @@
+{
+ "id": "future-will-going-to",
+ "title": "The Future: will & going to",
+ "subtitle": "Plans, predictions, promises and quick decisions",
+ "level": "A2 - B1",
+ "theme": {
+  "bg": "#F7F4FC",
+  "bg2": "#E8E0F6",
+  "accent": "#5B3FA8",
+  "accent2": "#C2662D",
+  "text": "#221B33",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bm_daniel",
+  "speed": 0.93
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": 1.26
+ },
+ "music_seed": 34,
+ "beats": [
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "chapter": "Mia's plan",
+   "caption": "Tomorrow, I'm <v>going to follow</v> the map!"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_will",
+   "caption": "Don't worry, Grandma. I <v>will be</v> careful."
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "I'm going to follow the map. I will be careful. Two different ways to talk about the future, in two sentences.",
+    "Today you'll learn when to use will, when to use going to, and the mistakes to avoid."
+   ]
+  },
+  {
+   "id": "overview",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "will or going to?",
+   "data": {
+    "heading": "will or going to?",
+    "rows": [
+     [
+      "going to = a plan (decided before)",
+      "I'm going to visit Grandma on Friday."
+     ],
+     [
+      "will = a decision now",
+      "The phone's ringing. I'll answer it!"
+     ],
+     [
+      "going to = I can see it coming",
+      "Look at those clouds. It's going to rain."
+     ],
+     [
+      "will = I think / I believe",
+      "I think you'll love this film."
+     ]
+    ]
+   },
+   "say": [
+    "Here's the big picture.",
+    "Going to is for plans you made before: I'm going to visit Grandma on Friday.",
+    "Will is for decisions you make at the moment of speaking: the phone's ringing. I'll answer it!",
+    "Going to is also for predictions with evidence, things you can see coming: look at those clouds. It's going to rain.",
+    "And will is for opinions about the future: I think you'll love this film."
+   ]
+  },
+  {
+   "id": "goingform",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: be going to",
+   "data": {
+    "heading": "Form: am / is / are + going to + base verb",
+    "cols": [
+     "Subject",
+     "be",
+     "going to + verb"
+    ],
+    "rows": [
+     [
+      "I",
+      "am ('m)",
+      "going to <v>travel</v>"
+     ],
+     [
+      "he / she / it",
+      "is ('s)",
+      "going to <v>travel</v>"
+     ],
+     [
+      "you / we / they",
+      "are ('re)",
+      "going to <v>travel</v>"
+     ],
+     [
+      "Negative",
+      "isn't / aren't / 'm not",
+      "going to <v>travel</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Going to has three parts: am, is or are, then going to, then the base verb.",
+    "I'm going to travel.",
+    "She's going to travel.",
+    "They're going to travel.",
+    "For the negative, add not: she isn't going to travel. I'm not going to travel."
+   ]
+  },
+  {
+   "id": "pic1",
+   "type": "clip",
+   "clip": "p_sunset",
+   "say": [
+    "The sun is setting. Mia and Whiskers are going to walk home before it gets dark."
+   ],
+   "caption": "They<v>'re going to walk</v> home before dark."
+  },
+  {
+   "id": "willform",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: will",
+   "data": {
+    "heading": "Form: will + base verb (all subjects)",
+    "cols": [
+     "Subject",
+     "will",
+     "Example"
+    ],
+    "rows": [
+     [
+      "I / you / we / they",
+      "will ('ll)",
+      "We'll <v>help</v> you."
+     ],
+     [
+      "he / she / it",
+      "will ('ll)",
+      "It'll <v>be</v> fine."
+     ],
+     [
+      "Negative",
+      "won't",
+      "I <v>won't tell</v> anyone."
+     ],
+     [
+      "Question",
+      "Will ...?",
+      "<v>Will</v> you <v>come</v>?"
+     ]
+    ]
+   },
+   "say": [
+    "Will is even easier. It's the same for every subject, and it's followed by the base verb.",
+    "We'll help you.",
+    "It'll be fine. No s, no ing.",
+    "The negative is won't: I won't tell anyone.",
+    "And for questions, start with will: will you come?"
+   ]
+  },
+  {
+   "id": "willuses",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Uses of will",
+   "data": {
+    "heading": "More uses of will",
+    "rule": "Promises · Offers · Requests · Quick decisions",
+    "examples": [
+     "I <v>will</v> always <v>remember</v> you.",
+     "That bag looks heavy. I'll <v>carry</v> it.",
+     "<v>Will</v> you <v>open</v> the window, please?",
+     "I'll <v>have</v> the chicken, please."
+    ],
+    "note": "In speaking, we usually say 'll."
+   },
+   "say": [
+    "Will has some other jobs, too.",
+    "Promises: I will always remember you.",
+    "Offers: that bag looks heavy. I'll carry it.",
+    "Requests: will you open the window, please?",
+    "And quick decisions, like in a restaurant: I'll have the chicken, please.",
+    "In everyday speaking, we usually say the short form: I'll, you'll, she'll."
+   ]
+  },
+  {
+   "id": "willclip",
+   "type": "clip",
+   "clip": "c_will",
+   "caption": "Don't worry, Grandma. I <v>will be</v> careful."
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "pron",
+   "type": "slide",
+   "layout": "pron",
+   "chapter": "Saying it naturally",
+   "data": {
+    "heading": "Saying it naturally",
+    "cols": [
+     [
+      "'ll",
+      [
+       "I'll",
+       "you'll",
+       "she'll",
+       "we'll"
+      ]
+     ],
+     [
+      "gonna",
+      [
+       "I'm gonna",
+       "it's gonna",
+       "we're gonna"
+      ]
+     ],
+     [
+      "won't",
+      [
+       "won't /wəʊnt/",
+       "want /wɒnt/"
+      ]
+     ]
+    ],
+    "tip": "gonna: speaking only, never in writing"
+   },
+   "say": [
+    "How do native speakers really say these?",
+    "Will becomes a short l sound: I'll, you'll, she'll, we'll.",
+    "Going to often sounds like gonna: I'm gonna, it's gonna, we're gonna. You can say it, but don't write it in exams.",
+    "And be careful with won't and want. Won't has an o sound. Want has an a sound. I won't go. I want to go.",
+    "Gonna is for speaking only. In writing, always use going to."
+   ]
+  },
+  {
+   "id": "pic2",
+   "type": "clip",
+   "clip": "p_river",
+   "say": [
+    "Look at the river! The stones are wet. Mia is going to slip! Whiskers, I'll help you!"
+   ],
+   "caption": "Careful! She<v>'s going to slip</v>!"
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Are you going to ...? / Will you ...?",
+    "pairs": [
+     [
+      "<v>Are</v> you <v>going to study</v> tonight?",
+      "Yes, I am. / No, I'm not."
+     ],
+     [
+      "<v>Is</v> it <v>going to rain</v>?",
+      "Yes, it is."
+     ],
+     [
+      "<v>Will</v> you <v>help</v> me?",
+      "Yes, I will. / No, I won't."
+     ],
+     [
+      "What <v>are</v> you <v>going to do</v>?",
+      "I'm going to call Grandma."
+     ]
+    ]
+   },
+   "say": [
+    "Questions. With going to, move am, is or are to the front.",
+    "Are you going to study tonight? Yes, I am. Or, no, I'm not.",
+    "Is it going to rain? Yes, it is.",
+    "With will, start with will: will you help me? Yes, I will. Or, no, I won't.",
+    "What are you going to do? I'm going to call Grandma."
+   ]
+  },
+  {
+   "id": "qclip",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "<v>Will</v> you <v>come</v> with me, Whiskers?"
+  },
+  {
+   "id": "time",
+   "type": "slide",
+   "layout": "chips",
+   "chapter": "Future time words",
+   "data": {
+    "heading": "Future time words",
+    "chips": [
+     "tomorrow",
+     "tonight",
+     "next week",
+     "next year",
+     "soon",
+     "in two days",
+     "one day"
+    ]
+   },
+   "say": [
+    "These words tell us we're talking about the future.",
+    "Tomorrow. Tonight. Next week. Next year.",
+    "Soon. In two days. That means two days from now.",
+    "And one day, which means some time in the future: one day, I'll be a pilot."
+   ]
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "I will to go tomorrow.",
+      "I will go tomorrow."
+     ],
+     [
+      "She wills come.",
+      "She will come."
+     ],
+     [
+      "I going to study.",
+      "I'm going to study."
+     ],
+     [
+      "Tomorrow I go to the doctor.",
+      "Tomorrow I'm going to the doctor."
+     ],
+     [
+      "I will call you when I will arrive.",
+      "I'll call you when I arrive."
+     ]
+    ]
+   },
+   "say": [
+    "Let's fix the common mistakes.",
+    "I will to go tomorrow. No to after will: I will go tomorrow.",
+    "She wills come. Will never takes s: she will come.",
+    "I going to study. Don't forget am: I'm going to study.",
+    "Tomorrow I go to the doctor. For a plan, say: tomorrow I'm going to the doctor, or I'm going to go to the doctor.",
+    "I will call you when I will arrive. After when, use the present: I'll call you when I arrive."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I'm going to visit my grandma.",
+     "It's going to rain.",
+     "I'll help you.",
+     "I won't forget.",
+     "Will you come with me?"
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I'm going to visit my grandma.",
+     "gap": 2.8
+    },
+    {
+     "text": "It's going to rain.",
+     "gap": 2.4
+    },
+    {
+     "text": "I'll help you.",
+     "gap": 2.3
+    },
+    {
+     "text": "I won't forget.",
+     "gap": 2.3
+    },
+    {
+     "text": "Will you come with me?",
+     "gap": 2.5
+    }
+   ],
+   "say": [
+    "Now you. Listen, then say it out loud."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Story: the big day",
+   "data": {
+    "heading": "The big day",
+    "sub": "Listen for will and going to"
+   },
+   "say": [
+    "One more story. Listen for will, and going to."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "p_grandma",
+   "say": [
+    "Mia shows Grandma the map. Grandma smiles. I think it will be a great adventure, she says. But you're going to need a warm jacket."
+   ],
+   "caption": "You<v>'re going to need</v> a warm jacket."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "c_hook",
+   "caption": "Tomorrow, I'm <v>going to follow</v> the map!"
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 8.0,
+   "say": [
+    "The next morning, Mia walks to the hills with a big smile. It's going to be a beautiful day, she thinks. And it will be."
+   ],
+   "caption": "It<v>'s going to be</v> a beautiful day."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Quiz time. Five questions, five seconds each."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "Look at those black clouds! It ___ rain.",
+    "options": [
+     "will",
+     "is going to",
+     "goes to"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Is going to. We can see the evidence: the clouds."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "The phone is ringing. I ___ answer it!",
+    "options": [
+     "'ll",
+     "'m going to",
+     "answer"
+    ],
+    "answer": 0
+   },
+   "say_answer": "I'll. A quick decision, now."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "She will ___ us tomorrow.",
+    "options": [
+     "visits",
+     "to visit",
+     "visit"
+    ],
+    "answer": 2
+   },
+   "say_answer": "Visit. After will, the base verb."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "I ___ going to study tonight.",
+    "options": [
+     "am",
+     "will",
+     "do"
+    ],
+    "answer": 0
+   },
+   "say_answer": "Am. I am going to study tonight."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "I'll call you when I ___ home.",
+    "options": [
+     "will get",
+     "get",
+     "am going to get"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Get. After when, use the present simple."
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "going to: plans + predictions you can see",
+     "will: quick decisions, promises, offers, opinions",
+     "am / is / are + going to + base verb",
+     "will + base verb (no to, no s)",
+     "won't = will not",
+     "when / after + present: when I arrive"
+    ]
+   },
+   "say": [
+    "Let's remember. Going to is for plans and for predictions you can see. Will is for quick decisions, promises, offers and opinions.",
+    "Going to needs am, is or are. Will is followed by the base verb, with no to and no s. And won't means will not.",
+    "Finally, after when, use the present: I'll call you when I arrive."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Write 3 plans for next weekend and 2 predictions about your future.",
+    "next": "Next lesson: Comparatives & superlatives"
+   },
+   "say": [
+    "Your homework: write three plans for next weekend, with going to, and two predictions about your future, with will. Post them in the comments.",
+    "Subscribe, and I'll see you in the next lesson. Bye!"
+   ]
+  }
+ ],
+ "clips": {
+  "c_hook": {
+   "kind": "face",
+   "text": "Tomorrow, I'm going to follow the map!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_will": {
+   "kind": "face",
+   "text": "Don't worry, Grandma. I will be careful.",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 0
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "Will you come with me, Whiskers?",
+   "mood": "happy",
+   "look_x": 2,
+   "look_y": 1
+  },
+  "p_sunset": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g4_05.png",
+   "move": "in"
+  },
+  "p_river": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g2_09.png",
+   "move": "pan"
+  },
+  "p_grandma": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g4_04r.png",
+   "move": "in"
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  }
+ },
+ "thumb": {
+  "t1": "will or",
+  "t2": "going to?",
+  "t2_size": 112,
+  "sub": "Talk about the FUTURE",
+  "pairs": [
+   [
+    "plan",
+    "I'm going to travel"
+   ],
+   [
+    "decision now",
+    "I'll help you!"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g2_04.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
+}
