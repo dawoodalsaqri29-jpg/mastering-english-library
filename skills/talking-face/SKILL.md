@@ -143,7 +143,13 @@ Checked at 1:1 and in consecutive frames:
 - the neck stays continuous, with a slight shear;
 - the shadow under the chin sits on the neck and collar.
 
-Comparison video: `talk_rig/compare_v3_v4.mp4`. Numbers: `talk_rig/qa_rig_close_v4.json`.
+Comparison video: `talk_rig/compare_v3_v4.mp4`. Numbers (`qa_talk.py`), v3 → v4:
+- head_jitter 0.94 → 0.88;
+- head_range_x 4.4 % → 24.7 % of the face width (that's the deliberate 9° turn, not drift);
+- identity_drift 0.0109 → 0.0111 (stable, < 0.012);
+- lipsync corr 0.67 → 0.66 (same; the landmark lag of 167 ms is the known artefact on this mouth);
+- mouth rest in pauses 0.006 for both;
+- 3 blinks for both.
 
 ## 9. SadTalker path (photo-like portraits, or when a 3/4 turn is needed)
 Setup: `bash scripts/setup_sadtalker.sh /home/claude/sadtalker` (Python 3.11 venv, torch 2.1.2 from PyPI, weights from GitHub releases). Render: `EXPR=1.5 POSE=12 bash scripts/talk.sh bust.png line.wav out 256 extcrop`. One render at a time. Then `pasteback_talk.py` into the scene. About 20–35 min per 5 s line.
