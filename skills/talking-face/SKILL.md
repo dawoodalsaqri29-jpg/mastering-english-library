@@ -3,7 +3,7 @@ name: talking-face
 description: Make a story character's face really TALK in a close-up: phoneme-synced mouth that opens the painted lips, blinks that close the painted lids, deliberate head/neck/shoulder performance, stable hair edges and identity. Default engine = face rig (Live2D-style, sharp, no distortion) for drawn/anime characters; SadTalker for photo-like portraits. Use for talking close-ups, "تتكلم زي الناس", anime dialogue shots, narrated portraits.
 ---
 
-# Talking face v5: face rig first, SadTalker second
+# Talking face v5.1: face rig first, SadTalker second
 
 Built and tested 23 Oct 2026 on Mia (sunset line). Default for illustrated or anime characters is the **face rig** (`scripts/face_rig.py`). It moves the original painting and never re-draws it, so identity, nose, eyes, line work and hair stay exactly as drawn. SadTalker (section 9) is the fallback for photo-real portraits; it is also the only way here to get a 3/4 head turn.
 
@@ -15,7 +15,7 @@ What I saw in the SadTalker close-up before this change (seen directly at 1:1):
 The face rig removes all three by construction. See the before/after in `yt/stories/2026-10-the-map-that-glowed/talk_rig/`.
 
 Limits to say out loud:
-- 2D only: head tilt and nod plus a small parallax, no turning toward or away from the camera.
+- Head turn up to about ±10° (cylinder warp: near side widens, far side narrows, the nose leads). No profile turns: beyond about 12° the far cheek and ear would need drawing that doesn't exist.
 - Mouth shapes are visemes (13 shapes), not a full 3D mouth.
 - Expression range is limited to the drawn base (a big painted smile can't become sad); keep one portrait per mood.
 
@@ -81,9 +81,18 @@ Find them with a 25/50 px grid on a 2× crop of the face. Mia example:
 - **Gaze.** The eye content shifts ≤ 4 px inside an eroded eye mask (for example, toward the sun at the start).
 - **Brows and cheeks.** Brows lift (local lift weight) on "!" stresses; cheeks rise ≤ 3 px on smiling vowels.
 - **Head.** One gesture per phrase on its stressed syllable (nod for statements, brow lift for "!", tilt for "?"), a slow tilt change between phrases, then stillness at the end.
+- **Head turn (yaw, v5.1).** The head is mapped onto a cylinder around its axis (`head_radius` 380). Destination x → arcsin → minus the turn angle → source, so the near side widens and the far side narrows. The nose (and less, the mouth and eyes) is pushed further by a depth map (`nose` point). The head also drifts 0.9 px per degree toward the turn. The neck and shoulders turn a quarter as much, 0.22 s later (cylinder `body_radius` 560), and the hair tips use the lagged pose. Keep turns ≤ 10° and ease them over ≥ 0.5 s, starting slightly before the line.
+- **Light (v5.1).** One key light from the scene's light side (`light.dir_x`: +1 = from the right) and a cool fill, computed on cylinder normals in destination space. So when she turns, her features move under a fixed light (the side facing the sun warms and brightens about 10 %). A contact shadow of the face and hair falls on the neck, collar and shoulders, offset away from the light (`shadow_dx/dy`) and blurred (`shadow_blur`); it moves with every head motion. Keep `key` ≤ 0.12 so the painting's own shading stays dominant.
+- **Expression by intent (v5.1).** Mouth corners lift (`smile` keys, a corner warp) and cheeks rise on warm or excited units. Brows lift with a slight left/right asymmetry (`brow_asym`, ±0.6). Expressions start 0.1–0.2 s before the stressed word and outlast it a little.
 - **Scene.** Clean background plate (FSRCNN, defocus σ 2.5), one push-in for both layers, warm rim light from the sun side, slight grade.
 
-Perf keys: `roll`, `nod`, `head_dx`, `gestures` [{t, d, nod, roll, brow}], `gaze_x/y`, `brow`, `cheek`, `blinks`, `inhales`, `hair_lag`, `breath_period`, `push`, `rim`, `bg_crop`, `bg_blur`, `char_scale`, `char_pos`, `voice_at`.
+Performance by meaning units (from `plan_performance.py`, then adjust):
+1. Name each unit's intention: notice, excitement, warmth, question.
+2. Pick ONE leading motion per unit: a turn toward the subject, a nod on the stress, a brow lift, a tilt. Everything else answers it smaller and later.
+3. Blink and re-aim the gaze in the pauses.
+4. Hold still at the end.
+
+Perf keys: `yaw`, `roll`, `nod`, `head_dx`, `gestures` [{t, d, nod, roll, brow, yaw, smile}], `smile`, `brow_asym`, `light` {dir_x, key, fill_cool, shadow, shadow_dx, shadow_dy, shadow_blur}, `gaze_x/y`, `brow`, `cheek`, `blinks`, `inhales`, `hair_lag`, `breath_period`, `push`, `rim`, `bg_crop`, `bg_blur`, `char_scale`, `char_pos`, `voice_at`.
 
 ## D. Review (before sending)
 - **Normal speed with sound:** overall feel.
@@ -122,6 +131,19 @@ Visual checks recorded:
 | Blink | generator blink | painted lid closes, irregular |
 | Background | breathes near the head | static plate + push-in |
 | Sharpness | 256 px upscaled | portrait ×4, face ~380 px on a 1080p screen |
+
+### v5.1 test (24 Oct, same portrait, same voice line, v3 vs v4)
+Added: a 9° turn toward the sun on "It's going down", back to camera in the pause; a brow lift leading "sunset!"; a warm tilt with a counter-turn and a growing smile on "So beautiful"; directional light and the chin/hair contact shadow.
+
+Checked at 1:1 and in consecutive frames:
+- the turn is smooth, with no frame jumps;
+- the far cheek narrows and the near cheek widens;
+- the nose leads the turn;
+- the hair stays attached;
+- the neck stays continuous, with a slight shear;
+- the shadow under the chin sits on the neck and collar.
+
+Comparison video: `talk_rig/compare_v3_v4.mp4`. Numbers: `talk_rig/qa_rig_close_v4.json`.
 
 ## 9. SadTalker path (photo-like portraits, or when a 3/4 turn is needed)
 Setup: `bash scripts/setup_sadtalker.sh /home/claude/sadtalker` (Python 3.11 venv, torch 2.1.2 from PyPI, weights from GitHub releases). Render: `EXPR=1.5 POSE=12 bash scripts/talk.sh bust.png line.wav out 256 extcrop`. One render at a time. Then `pasteback_talk.py` into the scene. About 20–35 min per 5 s line.

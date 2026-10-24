@@ -97,6 +97,13 @@ class FaceRig:
         self.w_jaw = gauss(J["c"], J["rx"], J["ry"]) * below
         self.w_cheek = sum(gauss(c, 55, 40) for c in R["cheeks"])
         self.w_brow = sum(gauss(c, 75, 32) for c in R["brows"])
+        self.w_brow_l, self.w_brow_r = gauss(R["brows"][0], 75, 32), gauss(R["brows"][1], 75, 32)
+        mc, mw, ma = m["c"], m["w"], math.radians(m["angle"])
+        c1 = (mc[0] - mw / 2 * math.cos(ma), mc[1] - mw / 2 * math.sin(ma)); c2 = (mc[0] + mw / 2 * math.cos(ma), mc[1] + mw / 2 * math.sin(ma))
+        self.w_corner = gauss(c1, 20, 16) + gauss(c2, 20, 16)                  # mouth corners (smile lift)
+        nose = R.get("nose", [875, 440])                                        # protrusion for the head turn
+        self.depth = 1.0 * gauss(nose, 45, 55) + 0.35 * gauss(mc, 60, 40) + 0.15 * sum(gauss(e["c"], 55, 40) for e in R["eyes"])
+        self.head_axis = R["head_center"][0]; self.Rh = R.get("head_radius", 380); self.Rb = R.get("body_radius", 560)
         # colours sampled from the drawing
         def sample(x0, y0, x1, y1): return np.median(im[y0:y1, x0:x1, :3].reshape(-1, 3), 0)
         self.skin = []
@@ -200,18 +207,58 @@ class FaceRig:
         src[y0:y1, x0:x1] = cv2.resize(out, (x1 - x0, y1 - y0), interpolation=cv2.INTER_AREA)
 
     # ---- skinning warp (inverse map)
-    def warp(self, src, head, head_lag, body, jaw, cheek, brow):
-        def inv(T):          # T = (angle_deg, dx, dy, pivot, sy) -> source coords for every destination pixel
-            ang, dx, dy, (px, py), sy = T
-            c, s = math.cos(math.radians(-ang)), math.sin(math.radians(-ang))
+    def warp(self, src, head, head_lag, body, jaw, cheek, brow, corner=0.0, brow_lr=(1.0, 1.0)):
+        """Inverse map: destination -> source. Each transform T = (roll_deg, dx, dy, pivot, sy, yaw_deg).
+        Yaw = turn on a cylinder around the head axis (near side widens, far side narrows) + nose/mouth protrusion."""
+        def inv(T, radius, axis, protrude):
+            ang, dx, dy, (px, py), sy, yaw = T
+            c, s_ = math.cos(math.radians(-ang)), math.sin(math.radians(-ang))
             X = self.xx - px - dx; Y = (self.yy - py - dy) / sy
-            return c * X - s * Y + px, s * X + c * Y + py
-        hx, hy = inv(head); lx, ly = inv(head_lag); bx, by = inv(body)
+            xl = c * X - s_ * Y; yl = s_ * X + c * Y
+            if abs(yaw) > 0.05:
+                th = math.radians(yaw); ax = axis - px
+                u = np.clip((xl - ax) / radius, -0.999, 0.999)
+                us = np.sin(np.arcsin(u) - th)
+                xs = ax + radius * us + (xl - ax - radius * u)                      # (residual beyond the cylinder)
+                if protrude:
+                    d = cv2.remap(self.depth, (xl + px).astype(np.float32), (yl + py).astype(np.float32), cv2.INTER_LINEAR)
+                    xs = xs - d * radius * 0.20 * math.sin(th)
+                xl = xs
+            return xl + px, yl + py
+        hx, hy = inv(head, self.Rh, self.head_axis, True); lx, ly = inv(head_lag, self.Rh, self.head_axis, False)
+        bx, by = inv(body, self.Rb, self.head_axis, False)
         wt = self.w_tip; wh = self.w_head
         Hx = hx * (1 - wt) + lx * wt; Hy = hy * (1 - wt) + ly * wt
         mx = Hx * wh + bx * (1 - wh); my = Hy * wh + by * (1 - wh)
-        my = my - jaw * self.w_jaw + cheek * self.w_cheek + brow * self.w_brow
-        return cv2.remap(src, mx.astype(np.float32), my.astype(np.float32), cv2.INTER_CUBIC, borderMode=cv2.BORDER_CONSTANT)
+        my = my - jaw * self.w_jaw + cheek * self.w_cheek + brow * (brow_lr[0] * self.w_brow_l + brow_lr[1] * self.w_brow_r) + corner * self.w_corner
+        mx, my = mx.astype(np.float32), my.astype(np.float32)
+        out = cv2.remap(src, mx, my, cv2.INTER_CUBIC, borderMode=cv2.BORDER_CONSTANT)
+        whd = cv2.remap(self.w_head, mx, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+        return out, whd
+
+    def light(self, img, whd, head, body, L):
+        """Directional key light (sun side) + cool fill, on cylinder normals in DESTINATION space (so shading stays
+        with the light while the features move under it), + contact shadow of head/hair onto neck, collar, shoulders."""
+        if not L: return img
+        lx = L.get("dir_x", 1.0); k = L.get("key", 0.10); f = L.get("fill_cool", 0.04)
+        ang, dx, dy, (px, py), sy, yaw = head
+        hcx = self.head_axis + dx; hcy = self.R["head_center"][1] + dy
+        nh = np.clip((self.xx - hcx) / self.Rh, -1, 1)
+        nv = np.clip((self.yy - hcy) / (self.Rh * 1.1), -1, 1)
+        nb = np.clip((self.xx - (self.head_axis + body[1])) / self.Rb, -1, 1)
+        n = nh * whd + nb * (1 - whd)
+        lam = np.clip(n * lx * 0.8 - nv * 0.25 * whd, -1, 1)                   # light from the side and a little above
+        warm = np.array(L.get("warm", [1.05, 1.0, 0.93]), np.float32); cool = np.array(L.get("cool", [0.95, 0.97, 1.03]), np.float32)
+        gain = 1 + k * lam
+        tint = np.where(lam[..., None] > 0, 1 + (warm - 1) * lam[..., None], 1 + (cool - 1) * (-lam[..., None]) * (f / 0.04))
+        a = img[..., 3:4] / 255
+        out = img.copy(); out[..., :3] = img[..., :3] * (gain[..., None] * tint * a + (1 - a))
+        # contact shadow: the head (face + hair) shadow falls away from the light onto the body
+        caster = (whd > 0.85).astype(np.float32) * a[..., 0]
+        sh = np.roll(np.roll(caster, int(L.get("shadow_dy", 16)), 0), int(-lx * L.get("shadow_dx", 10)), 1)
+        sh = cv2.GaussianBlur(sh, (0, 0), L.get("shadow_blur", 9)) * np.clip(1 - whd / 0.7, 0, 1) * a[..., 0]
+        out[..., :3] *= (1 - L.get("shadow", 0.32) * sh)[..., None]
+        return out
 
 # ---------------------------------------------------------------- render
 def render(rig_path, perf_path, out, debug_t=None):
@@ -239,16 +286,18 @@ def render(rig_path, perf_path, out, debug_t=None):
         roll = keyed(P.get("roll", []), t) + sum(bump(t, g["t"], g.get("d", 0.45), g.get("roll", 0)) for g in P.get("gestures", []))
         nod = keyed(P.get("nod", []), t) + sum(bump(t, g["t"], g.get("d", 0.45), g.get("nod", 0)) for g in P.get("gestures", []))
         dxh = keyed(P.get("head_dx", []), t)
-        return (roll, dxh, nod, pivot, 1.0 - 0.0015 * nod)
+        yaw = keyed(P.get("yaw", []), t) + sum(bump(t, g["t"], g.get("d", 0.45), g.get("yaw", 0)) for g in P.get("gestures", []))
+        return (roll, dxh + 0.9 * yaw, nod, pivot, 1.0 - 0.0015 * nod, yaw)
     for i in frames:
         t = i / fps
         hT = head_T(t); lag = head_T(t - P.get("hair_lag", 0.14))
         sway = 1.6 * math.sin(2 * math.pi * t * 0.37)                           # breeze on the curls
-        lagT = (lag[0], lag[1] + sway, lag[2], lag[3], lag[4])
+        lagT = (lag[0], lag[1] + sway, lag[2], lag[3], lag[4], lag[5])
         breath = 0.5 + 0.5 * math.sin(2 * math.pi * t / P.get("breath_period", 3.4))
         inhale = sum(bump(t, b, 0.5, 1.0) for b in P.get("inhales", []))
-        sh_roll = 0.22 * head_T(t - 0.22)[0]                                    # shoulders answer the head, later and smaller
-        bT = (sh_roll, 0.0, -1.2 * breath - 2.5 * inhale, body_pivot, 1.0 + 0.0025 * breath + 0.004 * inhale)
+        hd = head_T(t - 0.22)
+        sh_roll = 0.22 * hd[0]                                                  # shoulders answer the head, later and smaller
+        bT = (sh_roll, 0.25 * hd[1], -1.2 * breath - 2.5 * inhale, body_pivot, 1.0 + 0.0025 * breath + 0.004 * inhale, 0.25 * hd[5])
         mp = track[min(i, len(track) - 1)]
         bl = 0.0
         for b in P.get("blinks", []):
@@ -260,7 +309,11 @@ def render(rig_path, perf_path, out, debug_t=None):
         src = rig.img.copy()
         rig.draw_eyes(src, bl, gaze)
         rig.draw_mouth(src, mp)
-        warped = rig.warp(src, hT, lagT, bT, jaw=0.0, cheek=cheek, brow=brow)
+        corner = keyed(P.get("smile", []), t) + sum(bump(t, g["t"], g.get("d", 0.6), g.get("smile", 0)) for g in P.get("gestures", []))
+        asym = keyed(P.get("brow_asym", []), t, 0.0)                            # + = left brow higher
+        warped, whd = rig.warp(src, hT, lagT, bT, jaw=0.0, cheek=cheek, brow=brow, corner=corner,
+                               brow_lr=(1.0 + 0.25 * asym, 1.0 - 0.25 * asym))
+        warped = rig.light(warped, whd, hT, bT, P.get("light"))
         # composite: camera push-in on the plate and character together
         zoom = 1.0 + P.get("push", 0.03) * ease(t / dur)
         small = cv2.resize(warped, (int(rig.W * sc * zoom), int(rig.H * sc * zoom)), interpolation=cv2.INTER_AREA)
