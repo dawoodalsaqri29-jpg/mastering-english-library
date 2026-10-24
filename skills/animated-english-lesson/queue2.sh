@@ -7,6 +7,9 @@ for L in "$@"; do
   echo "$L clips $(date)"
   [ -f $L/${name}_lesson_1080p.mp4 ] || python3 engine/lesson_engine.py $L/lesson.json $L/${name}_lesson_1080p.mp4 > $L/full_build.log 2>&1
   echo "$L built $(date)"
-  [ -f $L/${name}_lesson_4K.mp4 ] || ffmpeg -y -loglevel error -i $L/${name}_lesson_1080p.mp4 -vf "scale=3840:2160:flags=lanczos,unsharp=5:5:0.4" -c:v libx264 -crf 19 -preset medium -c:a copy -movflags +faststart $L/${name}_lesson_4K.mp4
+  [ -f $L/${name}_lesson_1080p_SFX.mp4 ] || python3 engine/sfx_layer.py $L/${name}_lesson_1080p.stems /home/claude/work/sfx $L/${name}_sfx_mix.wav --lufs -16 --tp -4 --video $L/${name}_lesson_1080p.mp4 $L/${name}_lesson_1080p_SFX.mp4 > $L/sfx.log 2>&1
+  python3 engine/yt_meta.py $L/lesson.json $L/${name}_lesson_1080p.mp4 > /dev/null 2>&1
+  echo "$L sfx $(date)"
+  [ -f $L/${name}_lesson_4K.mp4 ] || ffmpeg -y -loglevel error -i $L/${name}_lesson_1080p_SFX.mp4 -vf "scale=3840:2160:flags=lanczos,unsharp=5:5:0.4" -c:v libx264 -crf 19 -preset medium -c:a copy -movflags +faststart $L/${name}_lesson_4K.mp4
   echo "$L 4K $(date)"
 done

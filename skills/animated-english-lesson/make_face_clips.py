@@ -23,7 +23,7 @@ for cid, c in L["clips"].items():
         audio += [a, np.zeros(int((0.38 if p.endswith((".", "!", "?")) else 0.22) * sr))]
     sf.write(f"{D}/{cid}_base.wav", np.concatenate(audio), sr)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{D}/{cid}_base.wav", "-af",
-                    f"rubberband=pitch={ch['pitch']}:formant=shifted:pitchq=quality,highpass=f=90,loudnorm=I=-16:TP=-1.5", "-ar", "24000", f"{D}/{cid}.wav"], check=True)
+                    (f"rubberband=pitch={ch['pitch']}:formant=shifted:pitchq=quality," if ch.get("pitch") not in (None, 1, 1.0) else "") + "highpass=f=90,loudnorm=I=-16:TP=-1.5", "-ar", "24000", f"{D}/{cid}.wav"], check=True)
     subprocess.run(["python3", f"{TF}/align_phonemes.py", f"{D}/{cid}_base.wav", c["text"], f"{D}/{cid}_phones.json"], check=True)
     subprocess.run(["python3", f"{TF}/plan_performance.py", f"{D}/{cid}_phones.json", c["text"], f"{cid}.wav", f"{D}/{cid}_perf.json",
                     "--mood", c.get("mood", "happy"), "--look-x", str(c.get("look_x", 0)), "--look-y", str(c.get("look_y", 0))], check=True, cwd=D)

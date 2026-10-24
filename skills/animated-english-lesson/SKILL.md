@@ -14,7 +14,7 @@ It uses the other skills:
 - video-4k-export.
 
 ## Standing preferences (Dawood)
-- English throughout. Narrator voices vary between lessons (male/female: `bm_george`, `bf_emma`, `bm_lewis`, `bf_isabella`, ...). Mia keeps the child voice (`bf_lily` + rubberband pitch 1.26, shifted formants).
+- English throughout. Narrator voices vary between lessons (male/female: `bm_george`, `bf_emma`, `bm_lewis`, `bf_isabella`, ...). Mia speaks in Lily's ORIGINAL voice (`bf_lily`, speed 0.92, `child.pitch: null`, no pitch shift; Dawood asked for this on 24 Oct). `reaudio_clips.py <lesson_dir>` swaps the voice of already-rendered face clips with no re-render, since the timing is identical.
 - A different background or theme colour per lesson (vanilla, white, blue, brown, ...).
 - A mid-video subscribe/comment pop-up with a bell, NOT spoken. A spoken subscribe line only at the end.
 - A strong hook first (Mia using the grammar in the scene), then the title.
@@ -68,6 +68,11 @@ Reveal rule: chunks = items → item i on chunk i; chunks = items+1 → chunk 0 
    - Hierarchy: voice, then effects (ducked 4 dB under speech), then music (ducked 10 dB). Two-pass loudnorm plus a limiter.
    - Outputs `_cuesheet.md` and `_report.json`.
 3. Give the user 5 timestamps to check on headphones: title hit, a slide with text pops, the pop-up bell, a quiz countdown into its answer, and a transition into a clip.
+
+## Gotchas
+- 8 GB RAM, 2 CPUs: run one engine at a time. An OOM-killed audio-only pass leaves the OLD stems, and sfx_layer will then happily mix them. Delete `<name>.stems/` before re-running, and check that `voice.wav` is newer than the clips.
+- The quiz timer sits below the options, and the options wrap, so long answers never collide with it.
+- Background jobs stop after 2 h; queue scripts are resumable (they skip finished files), so restart them.
 
 ## Limits to say
 Mia only says the lines written for her (clips), with no live improvisation. The music bed is a soft synthetic piano. The face rig can't turn her head beyond about ±10°.

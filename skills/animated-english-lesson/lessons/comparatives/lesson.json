@@ -19,7 +19,7 @@
  "child": {
   "voice": "bf_lily",
   "speed": 0.92,
-  "pitch": 1.26
+  "pitch": null
  },
  "music_seed": 58,
  "beats": [

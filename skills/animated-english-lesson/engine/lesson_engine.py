@@ -18,7 +18,7 @@ def run(cmd): subprocess.run(cmd, check=True)
 def load_audio(path, filt=None):
     af = ["-af", filt] if filt else []
     raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", path, *af, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True).stdout
-    return np.frombuffer(raw, np.float32).astype(np.float64)
+    return np.frombuffer(raw, np.float32).copy()
 
 def dur_of(path):
     return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path], capture_output=True, text=True).stdout)
@@ -282,8 +282,8 @@ def build(lesson_path, out):
         enc.stdin.close(); enc.wait()
     total = fi / FPS
     # ---------------------------------------------------------------- audio
-    N = int(total * SR) + SR; mix = np.zeros(N); voice_env = np.zeros(N)
-    stems = {k: np.zeros(N) for k in ("voice", "sfx", "music")}
+    N = int(total * SR) + SR; mix = np.zeros(N, np.float32); voice_env = np.zeros(N, np.float32)
+    stems = {k: np.zeros(N, np.float32) for k in ("voice", "sfx", "music")}
     for a, t0, kind in aud:
         a0 = int(t0 * SR); n = min(len(a), N - a0)
         if n <= 0: continue
@@ -293,9 +293,10 @@ def build(lesson_path, out):
         if kind in ("voice", "child"): voice_env[a0:a0 + n] = 1.0
     for p0 in popups:
         s = SFX["bell"](); a0 = int(p0 * SR); mix[a0:a0 + len(s)] += s[:N - a0]; stems["sfx"][a0:a0 + len(s)] += s[:N - a0]
-    k_ = int(0.3 * SR); env = np.convolve(voice_env, np.ones(k_) / k_, "same")
-    mus = music_bed(N, seed=L.get("music_seed", 5)) * L.get("music", 0.055)
-    fade = np.clip(np.arange(N) / SR / 2.0, 0, 1) * np.clip((total - np.arange(N) / SR) / 3.0, 0, 1)
+    k_ = int(0.3 * SR); cs = np.concatenate([[0.0], np.cumsum(voice_env, dtype=np.float64)]); idx = np.arange(N); lo = np.clip(idx - k_ // 2, 0, N); hi = np.clip(idx + k_ // 2, 0, N)
+    env = ((cs[hi] - cs[lo]) / k_).astype(np.float32); del cs, idx, lo, hi
+    mus = (music_bed(N, seed=L.get("music_seed", 5)) * L.get("music", 0.055)).astype(np.float32)
+    tt_ = np.arange(N, dtype=np.float32) / SR; fade = np.clip(tt_ / 2.0, 0, 1) * np.clip((total - tt_) / 3.0, 0, 1); del tt_
     mix += mus * (1 - 0.55 * env) * fade
     stems["music"] += mus * fade   # un-ducked bed; the mixer ducks it
     sd = os.path.splitext(out)[0] + ".stems"; os.makedirs(sd, exist_ok=True)

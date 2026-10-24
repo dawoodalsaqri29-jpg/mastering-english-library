@@ -159,13 +159,18 @@ mix = voice + fx_bus + mus_bus
 sf.write(A.out + ".pre.wav", (mix / max(1, np.abs(mix).max() / 0.98)).astype(np.float32), SR)
 
 # ------------------------------------------------------------------ loudness: two-pass loudnorm + true-peak limit
-def measure(path, extra=""):
-    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", path, "-af", f"{extra}loudnorm=I={A.lufs}:TP={A.tp - 0.5}:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
-    return json.loads(r[r.rindex("{"): r.rindex("}") + 1])
-m = measure(A.out + ".pre.wav")
-filt = (f"loudnorm=I={A.lufs}:TP={A.tp - 0.5}:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
-        f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true,alimiter=limit={10 ** ((A.tp - 0.6) / 20):.4f}:level=false:attack=3:release=60")
-subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", A.out + ".pre.wav", "-af", filt, "-ar", str(SR), "-c:a", "pcm_s24le", A.out], check=True)
+def lufs_tp(path):
+    eb = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+    return float(re.findall(r"I:\s+(-?[\d.]+) LUFS", eb)[-1]), float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", eb)[-1])
+ceil = A.tp - 0.7
+gain = A.lufs - lufs_tp(A.out + ".pre.wav")[0]
+for it in range(5):     # gain to target, true-peak limiter, re-measure, correct (the limiter eats a little loudness)
+    lim = f"alimiter=limit={10 ** (ceil / 20):.4f}:level=false:attack=2:release=80:asc=1"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", A.out + ".pre.wav", "-af", f"volume={gain:.2f}dB,{lim}", "-ar", str(SR), "-c:a", "pcm_s24le", A.out], check=True)
+    I_, T_ = lufs_tp(A.out)
+    if abs(I_ - A.lufs) <= 0.3 and T_ <= A.tp - 0.3: break   # 0.3 dB margin for the AAC encode
+    gain += A.lufs - I_
+    if T_ > A.tp - 0.3: ceil -= (T_ - (A.tp - 0.3)) + 0.2
 os.remove(A.out + ".pre.wav")
 eb = subprocess.run(["ffmpeg", "-nostats", "-i", A.out, "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
 I = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", eb)[-1]); TPk = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", eb)[-1])

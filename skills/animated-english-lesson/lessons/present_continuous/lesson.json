@@ -1,87 +1,636 @@
 {
- "id": "present-continuous", "title": "The Present Continuous", "subtitle": "What is happening right now?", "level": "A1 - A2",
- "theme": {"bg": "#FFF8EE", "bg2": "#FCE7C8", "accent": "#C2571A", "accent2": "#1F7A8C", "text": "#2A2118", "good": "#2F8F4E", "bad": "#C0392B"},
- "narrator": {"voice": "bm_fable", "speed": 0.93},
- "child": {"voice": "bf_lily", "speed": 0.92, "pitch": 1.26},
+ "id": "present-continuous",
+ "title": "The Present Continuous",
+ "subtitle": "What is happening right now?",
+ "level": "A1 - A2",
+ "theme": {
+  "bg": "#FFF8EE",
+  "bg2": "#FCE7C8",
+  "accent": "#C2571A",
+  "accent2": "#1F7A8C",
+  "text": "#2A2118",
+  "good": "#2F8F4E",
+  "bad": "#C0392B"
+ },
+ "narrator": {
+  "voice": "bm_fable",
+  "speed": 0.93
+ },
+ "child": {
+  "voice": "bf_lily",
+  "speed": 0.92,
+  "pitch": null
+ },
  "music_seed": 47,
  "beats": [
-  {"id": "hook", "type": "clip", "clip": "c_hook", "chapter": "Right now!", "caption": "Look! I<v>'m walking</v> with the sheep!"},
-  {"id": "hook2", "type": "clip", "clip": "c_sun", "caption": "The sun <v>is going</v> down..."},
-  {"id": "title", "type": "slide", "layout": "title", "data": {},
-   "say": ["I'm walking with the sheep. The sun is going down. Mia is describing what is happening right now. This is the present continuous.",
-           "In this lesson, you'll learn how to make it, when to use it, and when not to use it."]},
-  {"id": "meaning", "type": "slide", "layout": "rule", "chapter": "When we use it",
-   "data": {"heading": "When do we use it?", "rule": "Now · Around now · Temporary · Future plans", "examples": ["She<v>'s reading</v> a map right now.", "I<v>'m learning</v> English this year.", "He<v>'s staying</v> with his grandma this week.", "We<v>'re meeting</v> Ali tomorrow at five."], "note": "Something in progress, not finished."},
-   "say": ["We use the present continuous for actions in progress.", "Right now, at this moment: she's reading a map right now.", "Around now, these days: I'm learning English this year.",
-           "Temporary situations: he's staying with his grandma this week.", "And fixed future plans, with a time: we're meeting Ali tomorrow at five.", "In all of them, the action is not finished. It's in progress."]},
-  {"id": "walk1", "type": "clip", "clip": "s1_walk", "mute": true, "seconds": 7.0, "say": ["Look at Mia. She's walking through the grass. The wind is blowing, and the sheep are eating."], "caption": "She<v>'s walking</v>. The sheep <v>are eating</v>."},
-  {"id": "form", "type": "slide", "layout": "table", "chapter": "Form: am / is / are + -ing",
-   "data": {"heading": "Form: am / is / are + verb-ing", "cols": ["Subject", "be", "verb + ing"],
-            "rows": [["I", "am ('m)", "walk<v>ing</v>"], ["he / she / it", "is ('s)", "walk<v>ing</v>"], ["you / we / they", "are ('re)", "walk<v>ing</v>"]]},
-   "say": ["The form has two parts: am, is or are, plus the verb with i n g.", "I am walking. In speaking: I'm walking.", "She is walking. She's walking.", "They are walking. They're walking.",
-           "Both parts are important. Don't forget am, is or are!"]},
-  {"id": "spelling", "type": "slide", "layout": "table", "chapter": "Spelling -ing",
-   "data": {"heading": "Spelling: adding -ing", "cols": ["Rule", "Base", "-ing"],
-            "rows": [["Most verbs: + ing", "read", "read<v>ing</v>"], ["Silent -e: drop e", "make", "mak<v>ing</v>"], ["Short vowel + consonant: double", "run", "ru<v>nning</v>"], ["-ie: to y", "lie", "l<v>ying</v>"]]},
-   "say": ["Spelling. Most verbs just add i n g: read, reading.", "If the verb ends in a silent e, drop the e: make, making. Write, writing.",
-           "One short vowel and one consonant at the end? Double the consonant: run, running. Sit, sitting. Swim, swimming.", "And i e becomes y: lie, lying. Die, dying.",
-           "But be careful: see, seeing. Play, playing. These just add i n g."]},
-  {"id": "pic1", "type": "clip", "clip": "p_jump", "say": ["Oh no! Whiskers is jumping across the river. Mia is reaching out her hand. Is he going to make it?"], "caption": "Whiskers <v>is jumping</v>! Mia <v>is reaching</v> out."},
-  {"id": "subscribe", "type": "popup"},
-  {"id": "negative", "type": "slide", "layout": "rule", "chapter": "Negatives",
-   "data": {"heading": "Negative sentences", "rule": "am not / isn't / aren't + verb-ing", "examples": ["I<v>'m not sleeping</v>.", "She <v>isn't listening</v>.", "They <v>aren't playing</v> now."], "note": "I'm not (NOT I amn't)"},
-   "say": ["For the negative, add not after am, is or are.", "I'm not sleeping.", "She isn't listening.", "They aren't playing now.", "Remember: we say I'm not. There is no amn't in English."]},
-  {"id": "negclip", "type": "clip", "clip": "c_neg", "caption": "I<v>'m not sleeping</v>. I<v>'m watching</v> the sunset!"},
-  {"id": "question", "type": "slide", "layout": "qa", "chapter": "Questions",
-   "data": {"heading": "Questions and short answers", "rule": "Am / Is / Are + subject + verb-ing ...?", "pairs": [["<v>Are</v> you <v>listening</v>?", "Yes, I am. / No, I'm not."], ["<v>Is</v> it <v>raining</v>?", "No, it isn't."], ["What <v>are</v> you <v>doing</v>?", "I'm reading a map."], ["Where <v>is</v> she <v>going</v>?", "She's going home."]]},
-   "say": ["For questions, put am, is or are first.", "Are you listening? Yes, I am. Or, no, I'm not.", "Is it raining? No, it isn't.", "What are you doing? I'm reading a map.", "Where is she going? She's going home."]},
-  {"id": "qclip", "type": "clip", "clip": "c_q", "caption": "What <v>are</v> you <v>doing</v>, Whiskers?"},
-  {"id": "time", "type": "slide", "layout": "chips", "chapter": "Time words",
-   "data": {"heading": "Time words", "chips": ["now", "right now", "at the moment", "today", "this week", "these days", "Look!", "Listen!"]},
-   "say": ["Some words often go with the present continuous.", "Now. Right now. At the moment.", "Today. This week. These days.", "And look and listen, when we point at something happening: look! It's snowing. Listen! The baby is crying."]},
-  {"id": "vs", "type": "slide", "layout": "compare", "chapter": "Present simple or continuous?",
-   "data": {"heading": "Present simple or continuous?", "rows": [["She walks to school every day.", "She's walking to school now."], ["I usually drink tea.", "Today I'm drinking coffee."], ["He works in a bank.", "He's working from home this week."]]},
-   "say": ["How is it different from the present simple?", "The present simple is for habits: she walks to school every day. The continuous is for now: she's walking to school now.",
-           "I usually drink tea. But today, I'm drinking coffee.", "He works in a bank, that's permanent. But he's working from home this week, that's temporary."]},
-  {"id": "stative", "type": "slide", "layout": "chips", "chapter": "Verbs we don't use with -ing",
-   "data": {"heading": "State verbs: no -ing!", "chips": ["like", "love", "want", "need", "know", "understand", "believe", "have (own)"]},
-   "say": ["Some verbs describe states, not actions. We don't usually use them with i n g.", "Like, love, want, need.", "Know, understand, believe.", "And have, when it means own. So: I understand, not I'm understanding. I want ice cream, not I'm wanting ice cream."]},
-  {"id": "mistakes", "type": "slide", "layout": "compare", "chapter": "Common mistakes",
-   "data": {"heading": "Common mistakes (Arabic speakers)", "rows": [["I reading now.", "I'm reading now."], ["She is play football.", "She is playing football."], ["I am understanding you.", "I understand you."], ["Are you go home?", "Are you going home?"], ["He is siting there.", "He is sitting there."]]},
-   "say": ["The most common mistakes.", "I reading now. We need am: I'm reading now.", "She is play football. Add i n g: she is playing football.", "I am understanding you. Understand is a state verb: I understand you.",
-           "Are you go home? Are you going home?", "He is siting there. Double the t: he is sitting there."]},
-  {"id": "repeat", "type": "slide", "layout": "repeat", "chapter": "Repeat after me",
-   "data": {"heading": "Repeat after me", "lines": ["I'm learning English.", "She's reading a book right now.", "They aren't playing.", "What are you doing?", "Look! It's raining."]},
-   "repeat": [{"text": "I'm learning English.", "gap": 2.3}, {"text": "She's reading a book right now.", "gap": 2.7}, {"text": "They aren't playing.", "gap": 2.3}, {"text": "What are you doing?", "gap": 2.3}, {"text": "Look! It's raining.", "gap": 2.3}],
-   "say": ["Now say them with me. Listen, then repeat."]},
-  {"id": "story_intro", "type": "slide", "layout": "title2", "chapter": "Story: at the river", "data": {"heading": "At the river", "sub": "What is happening? Listen for -ing"},
-   "say": ["Let's watch a little story. What's happening? Listen for i n g."]},
-  {"id": "story1", "type": "clip", "clip": "p_river", "say": ["Mia is crossing the river. The water is rushing over the stones. She's holding a long stick, and she's walking very slowly."], "caption": "Mia <v>is crossing</v> the river. She<v>'s holding</v> a stick."},
-  {"id": "story2", "type": "clip", "clip": "p_hug", "say": ["Now she's on the other side. Whiskers is purring, and Mia is smiling. They're hugging each other."], "caption": "They<v>'re hugging</v>. Whiskers <v>is purring</v>."},
-  {"id": "story3", "type": "clip", "clip": "c_sun", "caption": "The sun <v>is going</v> down..."},
-  {"id": "quiz_intro", "type": "slide", "layout": "title2", "chapter": "Quiz", "data": {"heading": "Your turn!", "sub": "Pause the video if you need more time"},
-   "say": ["Quiz time! Five questions, five seconds each."]},
-  {"id": "q1", "type": "quiz", "data": {"q": "Shh! The baby ___.", "options": ["sleeps", "is sleeping", "sleeping"], "answer": 1}, "say_answer": "Is sleeping. It's happening right now."},
-  {"id": "q2", "type": "quiz", "data": {"q": "They ___ football at the moment.", "options": ["is playing", "are playing", "playing"], "answer": 1}, "say_answer": "Are playing. They are."},
-  {"id": "q3", "type": "quiz", "data": {"q": "Look! He's ___ in the sea.", "options": ["swiming", "swimming", "swimmming"], "answer": 1}, "say_answer": "Swimming, with double m."},
-  {"id": "q4", "type": "quiz", "data": {"q": "I ___ the answer.", "options": ["know", "am knowing", "knowing"], "answer": 0}, "say_answer": "Know. Know is a state verb, so no i n g."},
-  {"id": "q5", "type": "quiz", "data": {"q": "___ you listening to me?", "options": ["Do", "Is", "Are"], "answer": 2}, "say_answer": "Are. Are you listening to me?"},
-  {"id": "recap", "type": "slide", "layout": "checklist", "chapter": "Summary & homework",
-   "data": {"heading": "Remember", "items": ["Actions in progress: now, around now", "Temporary situations + fixed plans", "am / is / are + verb-ing", "Spelling: making, running, lying", "isn't / aren't; Are you ...?", "State verbs: know, like, want (no -ing)"]},
-   "say": ["Let's remember. The present continuous is for actions in progress, now or around now, for temporary situations, and for fixed plans.",
-           "It's am, is or are, plus verb i n g, with careful spelling. Negatives with not, and questions with am, is or are first.", "And no i n g with state verbs like know, like and want."]},
-  {"id": "end", "type": "slide", "layout": "end", "data": {"heading": "Your homework", "task": "Look around you. Write 5 things that are happening right now.", "next": "Next lesson: Comparatives & superlatives"},
-   "say": ["Your homework: look around you, and write five things that are happening right now, in the comments.", "Subscribe for more lessons. See you in the next one. Bye!"]}
+  {
+   "id": "hook",
+   "type": "clip",
+   "clip": "c_hook",
+   "chapter": "Right now!",
+   "caption": "Look! I<v>'m walking</v> with the sheep!"
+  },
+  {
+   "id": "hook2",
+   "type": "clip",
+   "clip": "c_sun",
+   "caption": "The sun <v>is going</v> down..."
+  },
+  {
+   "id": "title",
+   "type": "slide",
+   "layout": "title",
+   "data": {},
+   "say": [
+    "I'm walking with the sheep. The sun is going down. Mia is describing what is happening right now. This is the present continuous.",
+    "In this lesson, you'll learn how to make it, when to use it, and when not to use it."
+   ]
+  },
+  {
+   "id": "meaning",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "When we use it",
+   "data": {
+    "heading": "When do we use it?",
+    "rule": "Now · Around now · Temporary · Future plans",
+    "examples": [
+     "She<v>'s reading</v> a map right now.",
+     "I<v>'m learning</v> English this year.",
+     "He<v>'s staying</v> with his grandma this week.",
+     "We<v>'re meeting</v> Ali tomorrow at five."
+    ],
+    "note": "Something in progress, not finished."
+   },
+   "say": [
+    "We use the present continuous for actions in progress.",
+    "Right now, at this moment: she's reading a map right now.",
+    "Around now, these days: I'm learning English this year.",
+    "Temporary situations: he's staying with his grandma this week.",
+    "And fixed future plans, with a time: we're meeting Ali tomorrow at five.",
+    "In all of them, the action is not finished. It's in progress."
+   ]
+  },
+  {
+   "id": "walk1",
+   "type": "clip",
+   "clip": "s1_walk",
+   "mute": true,
+   "seconds": 7.0,
+   "say": [
+    "Look at Mia. She's walking through the grass. The wind is blowing, and the sheep are eating."
+   ],
+   "caption": "She<v>'s walking</v>. The sheep <v>are eating</v>."
+  },
+  {
+   "id": "form",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Form: am / is / are + -ing",
+   "data": {
+    "heading": "Form: am / is / are + verb-ing",
+    "cols": [
+     "Subject",
+     "be",
+     "verb + ing"
+    ],
+    "rows": [
+     [
+      "I",
+      "am ('m)",
+      "walk<v>ing</v>"
+     ],
+     [
+      "he / she / it",
+      "is ('s)",
+      "walk<v>ing</v>"
+     ],
+     [
+      "you / we / they",
+      "are ('re)",
+      "walk<v>ing</v>"
+     ]
+    ]
+   },
+   "say": [
+    "The form has two parts: am, is or are, plus the verb with i n g.",
+    "I am walking. In speaking: I'm walking.",
+    "She is walking. She's walking.",
+    "They are walking. They're walking.",
+    "Both parts are important. Don't forget am, is or are!"
+   ]
+  },
+  {
+   "id": "spelling",
+   "type": "slide",
+   "layout": "table",
+   "chapter": "Spelling -ing",
+   "data": {
+    "heading": "Spelling: adding -ing",
+    "cols": [
+     "Rule",
+     "Base",
+     "-ing"
+    ],
+    "rows": [
+     [
+      "Most verbs: + ing",
+      "read",
+      "read<v>ing</v>"
+     ],
+     [
+      "Silent -e: drop e",
+      "make",
+      "mak<v>ing</v>"
+     ],
+     [
+      "Short vowel + consonant: double",
+      "run",
+      "ru<v>nning</v>"
+     ],
+     [
+      "-ie: to y",
+      "lie",
+      "l<v>ying</v>"
+     ]
+    ]
+   },
+   "say": [
+    "Spelling. Most verbs just add i n g: read, reading.",
+    "If the verb ends in a silent e, drop the e: make, making. Write, writing.",
+    "One short vowel and one consonant at the end? Double the consonant: run, running. Sit, sitting. Swim, swimming.",
+    "And i e becomes y: lie, lying. Die, dying.",
+    "But be careful: see, seeing. Play, playing. These just add i n g."
+   ]
+  },
+  {
+   "id": "pic1",
+   "type": "clip",
+   "clip": "p_jump",
+   "say": [
+    "Oh no! Whiskers is jumping across the river. Mia is reaching out her hand. Is he going to make it?"
+   ],
+   "caption": "Whiskers <v>is jumping</v>! Mia <v>is reaching</v> out."
+  },
+  {
+   "id": "subscribe",
+   "type": "popup"
+  },
+  {
+   "id": "negative",
+   "type": "slide",
+   "layout": "rule",
+   "chapter": "Negatives",
+   "data": {
+    "heading": "Negative sentences",
+    "rule": "am not / isn't / aren't + verb-ing",
+    "examples": [
+     "I<v>'m not sleeping</v>.",
+     "She <v>isn't listening</v>.",
+     "They <v>aren't playing</v> now."
+    ],
+    "note": "I'm not (NOT I amn't)"
+   },
+   "say": [
+    "For the negative, add not after am, is or are.",
+    "I'm not sleeping.",
+    "She isn't listening.",
+    "They aren't playing now.",
+    "Remember: we say I'm not. There is no amn't in English."
+   ]
+  },
+  {
+   "id": "negclip",
+   "type": "clip",
+   "clip": "c_neg",
+   "caption": "I<v>'m not sleeping</v>. I<v>'m watching</v> the sunset!"
+  },
+  {
+   "id": "question",
+   "type": "slide",
+   "layout": "qa",
+   "chapter": "Questions",
+   "data": {
+    "heading": "Questions and short answers",
+    "rule": "Am / Is / Are + subject + verb-ing ...?",
+    "pairs": [
+     [
+      "<v>Are</v> you <v>listening</v>?",
+      "Yes, I am. / No, I'm not."
+     ],
+     [
+      "<v>Is</v> it <v>raining</v>?",
+      "No, it isn't."
+     ],
+     [
+      "What <v>are</v> you <v>doing</v>?",
+      "I'm reading a map."
+     ],
+     [
+      "Where <v>is</v> she <v>going</v>?",
+      "She's going home."
+     ]
+    ]
+   },
+   "say": [
+    "For questions, put am, is or are first.",
+    "Are you listening? Yes, I am. Or, no, I'm not.",
+    "Is it raining? No, it isn't.",
+    "What are you doing? I'm reading a map.",
+    "Where is she going? She's going home."
+   ]
+  },
+  {
+   "id": "qclip",
+   "type": "clip",
+   "clip": "c_q",
+   "caption": "What <v>are</v> you <v>doing</v>, Whiskers?"
+  },
+  {
+   "id": "time",
+   "type": "slide",
+   "layout": "chips",
+   "chapter": "Time words",
+   "data": {
+    "heading": "Time words",
+    "chips": [
+     "now",
+     "right now",
+     "at the moment",
+     "today",
+     "this week",
+     "these days",
+     "Look!",
+     "Listen!"
+    ]
+   },
+   "say": [
+    "Some words often go with the present continuous.",
+    "Now. Right now. At the moment.",
+    "Today. This week. These days.",
+    "And look and listen, when we point at something happening: look! It's snowing. Listen! The baby is crying."
+   ]
+  },
+  {
+   "id": "vs",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Present simple or continuous?",
+   "data": {
+    "heading": "Present simple or continuous?",
+    "rows": [
+     [
+      "She walks to school every day.",
+      "She's walking to school now."
+     ],
+     [
+      "I usually drink tea.",
+      "Today I'm drinking coffee."
+     ],
+     [
+      "He works in a bank.",
+      "He's working from home this week."
+     ]
+    ]
+   },
+   "say": [
+    "How is it different from the present simple?",
+    "The present simple is for habits: she walks to school every day. The continuous is for now: she's walking to school now.",
+    "I usually drink tea. But today, I'm drinking coffee.",
+    "He works in a bank, that's permanent. But he's working from home this week, that's temporary."
+   ]
+  },
+  {
+   "id": "stative",
+   "type": "slide",
+   "layout": "chips",
+   "chapter": "Verbs we don't use with -ing",
+   "data": {
+    "heading": "State verbs: no -ing!",
+    "chips": [
+     "like",
+     "love",
+     "want",
+     "need",
+     "know",
+     "understand",
+     "believe",
+     "have (own)"
+    ]
+   },
+   "say": [
+    "Some verbs describe states, not actions. We don't usually use them with i n g.",
+    "Like, love, want, need.",
+    "Know, understand, believe.",
+    "And have, when it means own. So: I understand, not I'm understanding. I want ice cream, not I'm wanting ice cream."
+   ]
+  },
+  {
+   "id": "mistakes",
+   "type": "slide",
+   "layout": "compare",
+   "chapter": "Common mistakes",
+   "data": {
+    "heading": "Common mistakes (Arabic speakers)",
+    "rows": [
+     [
+      "I reading now.",
+      "I'm reading now."
+     ],
+     [
+      "She is play football.",
+      "She is playing football."
+     ],
+     [
+      "I am understanding you.",
+      "I understand you."
+     ],
+     [
+      "Are you go home?",
+      "Are you going home?"
+     ],
+     [
+      "He is siting there.",
+      "He is sitting there."
+     ]
+    ]
+   },
+   "say": [
+    "The most common mistakes.",
+    "I reading now. We need am: I'm reading now.",
+    "She is play football. Add i n g: she is playing football.",
+    "I am understanding you. Understand is a state verb: I understand you.",
+    "Are you go home? Are you going home?",
+    "He is siting there. Double the t: he is sitting there."
+   ]
+  },
+  {
+   "id": "repeat",
+   "type": "slide",
+   "layout": "repeat",
+   "chapter": "Repeat after me",
+   "data": {
+    "heading": "Repeat after me",
+    "lines": [
+     "I'm learning English.",
+     "She's reading a book right now.",
+     "They aren't playing.",
+     "What are you doing?",
+     "Look! It's raining."
+    ]
+   },
+   "repeat": [
+    {
+     "text": "I'm learning English.",
+     "gap": 2.3
+    },
+    {
+     "text": "She's reading a book right now.",
+     "gap": 2.7
+    },
+    {
+     "text": "They aren't playing.",
+     "gap": 2.3
+    },
+    {
+     "text": "What are you doing?",
+     "gap": 2.3
+    },
+    {
+     "text": "Look! It's raining.",
+     "gap": 2.3
+    }
+   ],
+   "say": [
+    "Now say them with me. Listen, then repeat."
+   ]
+  },
+  {
+   "id": "story_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Story: at the river",
+   "data": {
+    "heading": "At the river",
+    "sub": "What is happening? Listen for -ing"
+   },
+   "say": [
+    "Let's watch a little story. What's happening? Listen for i n g."
+   ]
+  },
+  {
+   "id": "story1",
+   "type": "clip",
+   "clip": "p_river",
+   "say": [
+    "Mia is crossing the river. The water is rushing over the stones. She's holding a long stick, and she's walking very slowly."
+   ],
+   "caption": "Mia <v>is crossing</v> the river. She<v>'s holding</v> a stick."
+  },
+  {
+   "id": "story2",
+   "type": "clip",
+   "clip": "p_hug",
+   "say": [
+    "Now she's on the other side. Whiskers is purring, and Mia is smiling. They're hugging each other."
+   ],
+   "caption": "They<v>'re hugging</v>. Whiskers <v>is purring</v>."
+  },
+  {
+   "id": "story3",
+   "type": "clip",
+   "clip": "c_sun",
+   "caption": "The sun <v>is going</v> down..."
+  },
+  {
+   "id": "quiz_intro",
+   "type": "slide",
+   "layout": "title2",
+   "chapter": "Quiz",
+   "data": {
+    "heading": "Your turn!",
+    "sub": "Pause the video if you need more time"
+   },
+   "say": [
+    "Quiz time! Five questions, five seconds each."
+   ]
+  },
+  {
+   "id": "q1",
+   "type": "quiz",
+   "data": {
+    "q": "Shh! The baby ___.",
+    "options": [
+     "sleeps",
+     "is sleeping",
+     "sleeping"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Is sleeping. It's happening right now."
+  },
+  {
+   "id": "q2",
+   "type": "quiz",
+   "data": {
+    "q": "They ___ football at the moment.",
+    "options": [
+     "is playing",
+     "are playing",
+     "playing"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Are playing. They are."
+  },
+  {
+   "id": "q3",
+   "type": "quiz",
+   "data": {
+    "q": "Look! He's ___ in the sea.",
+    "options": [
+     "swiming",
+     "swimming",
+     "swimmming"
+    ],
+    "answer": 1
+   },
+   "say_answer": "Swimming, with double m."
+  },
+  {
+   "id": "q4",
+   "type": "quiz",
+   "data": {
+    "q": "I ___ the answer.",
+    "options": [
+     "know",
+     "am knowing",
+     "knowing"
+    ],
+    "answer": 0
+   },
+   "say_answer": "Know. Know is a state verb, so no i n g."
+  },
+  {
+   "id": "q5",
+   "type": "quiz",
+   "data": {
+    "q": "___ you listening to me?",
+    "options": [
+     "Do",
+     "Is",
+     "Are"
+    ],
+    "answer": 2
+   },
+   "say_answer": "Are. Are you listening to me?"
+  },
+  {
+   "id": "recap",
+   "type": "slide",
+   "layout": "checklist",
+   "chapter": "Summary & homework",
+   "data": {
+    "heading": "Remember",
+    "items": [
+     "Actions in progress: now, around now",
+     "Temporary situations + fixed plans",
+     "am / is / are + verb-ing",
+     "Spelling: making, running, lying",
+     "isn't / aren't; Are you ...?",
+     "State verbs: know, like, want (no -ing)"
+    ]
+   },
+   "say": [
+    "Let's remember. The present continuous is for actions in progress, now or around now, for temporary situations, and for fixed plans.",
+    "It's am, is or are, plus verb i n g, with careful spelling. Negatives with not, and questions with am, is or are first.",
+    "And no i n g with state verbs like know, like and want."
+   ]
+  },
+  {
+   "id": "end",
+   "type": "slide",
+   "layout": "end",
+   "data": {
+    "heading": "Your homework",
+    "task": "Look around you. Write 5 things that are happening right now.",
+    "next": "Next lesson: Comparatives & superlatives"
+   },
+   "say": [
+    "Your homework: look around you, and write five things that are happening right now, in the comments.",
+    "Subscribe for more lessons. See you in the next one. Bye!"
+   ]
+  }
  ],
  "clips": {
-  "c_hook": {"kind": "face", "text": "Look! I'm walking with the sheep!", "mood": "happy", "look_x": 4, "look_y": -2},
-  "c_sun":  {"kind": "face", "text": "The sun is going down... It's so beautiful!", "mood": "happy", "look_x": 4, "look_y": -3},
-  "c_neg":  {"kind": "face", "text": "I'm not sleeping. I'm watching the sunset!", "mood": "happy", "look_x": -3, "look_y": 0},
-  "c_q":    {"kind": "face", "text": "What are you doing, Whiskers?", "mood": "happy", "look_x": -4, "look_y": 2},
-  "p_jump":  {"kind": "image", "file": "/home/claude/work/clips/g3_08.png", "move": "pan"},
-  "p_river": {"kind": "image", "file": "/home/claude/work/clips/g3_13.png", "move": "in"},
-  "p_hug":   {"kind": "image", "file": "/home/claude/work/clips/g2_12.png", "move": "in"},
-  "s1_walk": {"kind": "video", "file": "/home/claude/work/anime/s1_fx.mp4", "in": 0.4, "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav", "amb_in": 0.4}
+  "c_hook": {
+   "kind": "face",
+   "text": "Look! I'm walking with the sheep!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -2
+  },
+  "c_sun": {
+   "kind": "face",
+   "text": "The sun is going down... It's so beautiful!",
+   "mood": "happy",
+   "look_x": 4,
+   "look_y": -3
+  },
+  "c_neg": {
+   "kind": "face",
+   "text": "I'm not sleeping. I'm watching the sunset!",
+   "mood": "happy",
+   "look_x": -3,
+   "look_y": 0
+  },
+  "c_q": {
+   "kind": "face",
+   "text": "What are you doing, Whiskers?",
+   "mood": "happy",
+   "look_x": -4,
+   "look_y": 2
+  },
+  "p_jump": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g3_08.png",
+   "move": "pan"
+  },
+  "p_river": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g3_13.png",
+   "move": "in"
+  },
+  "p_hug": {
+   "kind": "image",
+   "file": "/home/claude/work/clips/g2_12.png",
+   "move": "in"
+  },
+  "s1_walk": {
+   "kind": "video",
+   "file": "/home/claude/work/anime/s1_fx.mp4",
+   "in": 0.4,
+   "amb_audio": "/home/claude/work/anime/scene_amb_stem.wav",
+   "amb_in": 0.4
+  }
  },
- "thumb": {"t1": "Present", "t2": "Continuous", "t2_size": 104, "sub": "What is happening NOW?", "pairs": [["I walk", "I'm walking"], ["run", "running"]], "image": "/home/claude/work/clips/g4_03.png", "img_x": 0.5, "img_w": 900}
+ "thumb": {
+  "t1": "Present",
+  "t2": "Continuous",
+  "t2_size": 104,
+  "sub": "What is happening NOW?",
+  "pairs": [
+   [
+    "I walk",
+    "I'm walking"
+   ],
+   [
+    "run",
+    "running"
+   ]
+  ],
+  "image": "/home/claude/work/clips/g4_03.png",
+  "img_x": 0.5,
+  "img_w": 900
+ }
 }

@@ -59,11 +59,11 @@ tr.new td {{ background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,.08); }}
 .center {{ position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }}
 .sub {{ font: 500 44px Inter; margin-top: 26px; color: {T['accent2']}; }}
 .quizq {{ font: 700 64px Inter; margin: 30px 0 50px; }}
-.opts {{ display: flex; gap: 40px; }}
+.opts {{ display: flex; flex-wrap: wrap; gap: 30px 40px; max-width: 1500px; }}
 .opt {{ font: 700 54px Inter; padding: 26px 60px; border-radius: 22px; background: #fff; border: 4px solid rgba(0,0,0,.08); }}
 .opt.right {{ background: {T['good']}; color: #fff; border-color: {T['good']}; }}
 .opt.dim {{ opacity: .35; }}
-.timer {{ position: absolute; right: 120px; top: 300px; width: 170px; height: 170px; border-radius: 50%; border: 10px solid {T['accent']};
+.timer {{ position: absolute; left: 0; top: 640px; width: 170px; height: 170px; border-radius: 50%; border: 10px solid {T['accent']};
   display: flex; align-items: center; justify-content: center; font: 800 86px Inter; color: {T['accent']}; background: #fff; }}
 .tl {{ position: relative; height: 240px; margin: 10px 0 30px; }}
 .tl .line {{ position: absolute; top: 120px; left: 0; right: 0; height: 8px; background: {T['text']}; opacity: .7; border-radius: 4px; }}
