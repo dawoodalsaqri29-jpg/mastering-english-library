@@ -2,7 +2,7 @@
   const books = window.BOOKS || [];
   const site = window.SITE || {};
   const LEVELS = ["B1", "B2", "C1", "C2"];
-  const ORDER = ["B1", "B2", "C1", "C2"];
+  const ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
   const palettes = [
     ["#1f1f5c", "#3b3b98"], ["#0b5d5f", "#0f8b8d"], ["#3a2a6e", "#6a4cc0"],
     ["#5a2a1f", "#a0522d"], ["#1d3b5c", "#2f6fa3"], ["#2b4a2b", "#4c8c4a"],
