@@ -216,3 +216,46 @@ I'm good at English. ✅
 
 #تعلم_الانجليزي #انجليزي #englishvocabulary #learnenglish
 
+
+## 06-very-fast  ·  2026-11-07 8:00 PM
+
+### Instagram
+
+لا تقول «very fast» على كل شي 🛑
+خمس كلمات أقوى، من الأضعف للأقوى 👇
+
+1️⃣ brisk
+سريع ونشيط
+
+2️⃣ quick
+سريع
+
+3️⃣ rapid
+سريع واجد
+
+4️⃣ swift
+خاطف
+
+5️⃣ lightning-fast
+سريع مثل البرق
+
+⚠️ الغلط اللي يطيح فيه واجد:
+He drives fastly. ❌
+He drives fast. ✅
+
+💬 كم كلمة كنت تعرف؟ اكتب الرقم في التعليقات
+📩 أرسله لصاحبك اللي يقول fastly 😂
+🔔 تابعني، كل يوم كلمات جديدة
+
+#تعلم_الانجليزي #مفردات_انجليزية #EnglishVocabulary
+
+### TikTok
+
+نتّك أي رقم؟ 😂📶
+5 words stronger than "very fast" 👇
+
+اكتب جملة بكلمة منهم في التعليقات ✍️
+وأرسل الفيديو لصاحبك اللي يحتاجه 😅
+
+#تعلم_الانجليزي #انجليزي #englishvocabulary #learnenglish
+
