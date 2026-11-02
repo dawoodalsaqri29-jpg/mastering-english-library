@@ -1,5 +1,5 @@
 {
- "note": "Week 45 posting plan. Buffer org 6ac96782a23ecf0487b2f9a8, schedulingType automatic, mode customScheduled. Free plan holds 10 scheduled posts; top up daily in this order.",
+ "note": "Week 45 posting plan. Buffer org 6ac96782a23ecf0487b2f9a8, schedulingType automatic, mode customScheduled. Free plan holds 10 scheduled posts; top up daily in this order. firstComment needs a paid Buffer plan, so it is not sent. Reels use assets[].video.metadata.thumbnailOffset.",
  "posts": [
   {
    "key": "01-ig-reel",
@@ -11,8 +11,7 @@
    "metadata": {
     "instagram": {
      "type": "reel",
-     "shouldShareToFeed": true,
-     "firstComment": "أنا الحين رقم 4 بصراحة 😅\nfamished\nوإنت أي رقم؟"
+     "shouldShareToFeed": true
     }
    }
   },
@@ -65,8 +64,7 @@
    "metadata": {
     "instagram": {
      "type": "reel",
-     "shouldShareToFeed": true,
-     "firstComment": "اعترفوا، منو كان يقولها غلط؟ 🙋‍♂️\nI'm boring ❌"
+     "shouldShareToFeed": true
     }
    }
   },
@@ -119,8 +117,7 @@
    "metadata": {
     "instagram": {
      "type": "reel",
-     "shouldShareToFeed": true,
-     "firstComment": "أصعب مادة مرت عليكم، كانت أي رقم؟ 📚"
+     "shouldShareToFeed": true
     }
    }
   },
@@ -173,8 +170,7 @@
    "metadata": {
     "instagram": {
      "type": "reel",
-     "shouldShareToFeed": true,
-     "firstComment": "أنا رقم 5 لما أشوف صرصور طاير 🪳😂\npetrified"
+     "shouldShareToFeed": true
     }
    }
   },
@@ -227,8 +223,7 @@
    "metadata": {
     "instagram": {
      "type": "reel",
-     "shouldShareToFeed": true,
-     "firstComment": "بصراحة، إنجليزيك أي رقم؟ ما في حكم هني 😄"
+     "shouldShareToFeed": true
     }
    }
   },
