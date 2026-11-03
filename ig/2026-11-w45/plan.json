@@ -1,5 +1,5 @@
 {
- "note": "Week 45 posting plan. Buffer org 6ac96782a23ecf0487b2f9a8, schedulingType automatic, mode customScheduled. Free plan holds 10 scheduled posts; top up daily in this order. firstComment needs a paid Buffer plan, so it is not sent. Reels use assets[].video.metadata.thumbnailOffset. Reel 05 (very good) was posted early on 2 Nov; Saturday now carries reel 06 (very fast).",
+ "note": "Week 45 posting plan. Buffer org 6ac96782a23ecf0487b2f9a8, schedulingType automatic, mode customScheduled. Free plan holds 10 scheduled posts; top up daily in this order. firstComment needs a paid Buffer plan, so it is not sent. Reels use assets[].video.metadata.thumbnailOffset. Reel 05 (very good) was posted early on 2 Nov; Saturday now carries reel 06 (very fast). Stories now use Mia (his storybook character) as host; files stories/mia-story-*.mp4.",
  "posts": [
   {
    "key": "01-ig-reel",
@@ -32,7 +32,7 @@
    "key": "01-ig-story-quiz",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-03T20:30:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-01q.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-01q.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -45,7 +45,7 @@
    "key": "01-ig-story-answer",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-04T12:00:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-01a.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-01a.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -85,7 +85,7 @@
    "key": "02-ig-story-quiz",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-04T20:30:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-02q.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-02q.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -98,7 +98,7 @@
    "key": "02-ig-story-answer",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-05T12:00:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-02a.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-02a.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -138,7 +138,7 @@
    "key": "03-ig-story-quiz",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-05T20:30:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-03q.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-03q.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -151,7 +151,7 @@
    "key": "03-ig-story-answer",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-06T12:00:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-03a.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-03a.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -191,7 +191,7 @@
    "key": "04-ig-story-quiz",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-06T20:30:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-04q.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-04q.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -204,7 +204,7 @@
    "key": "04-ig-story-answer",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-07T12:00:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-04a.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-04a.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -244,7 +244,7 @@
    "key": "05-ig-story-quiz",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-07T20:30:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-05q.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-05q.mp4",
    "text": "",
    "metadata": {
     "instagram": {
@@ -257,7 +257,7 @@
    "key": "05-ig-story-answer",
    "channelId": "6ac96c3b6a5c39ccb668ecb3",
    "dueAt": "2026-11-08T12:00:00+04:00",
-   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/story-05a.mp4",
+   "video": "https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/instagram-assets/ig/2026-11-w45/stories/mia-story-05a.mp4",
    "text": "",
    "metadata": {
     "instagram": {
