@@ -1,0 +1,794 @@
+{
+ "n": 20,
+ "slug": "sword-in-stone",
+ "title": "The Sword in the Stone",
+ "series_tag": "Legends",
+ "subtitle_ar": "أساطير: السيف في الحجر",
+ "genre": "Fantasy",
+ "based_on": "Arthurian legend (public domain)",
+ "blurb_en": "England has no king, and the strongest knights cannot pull a magic sword from a stone. Then a quiet boy runs an errand for his brother — and changes history.",
+ "blurb_ar": "إنجلترا بلا ملك، وأقوى الفرسان عاجزون عن سحب سيف سحريّ من حجر. ثم يخرج فتى هادئ في مهمّة صغيرة لأخيه… فيغيّر التاريخ.",
+ "palette": "gold",
+ "cast": [
+  {
+   "id": "arthur",
+   "name": "Arthur",
+   "body": "boy",
+   "outfit": "tunic",
+   "head": "short_hair",
+   "item": "none"
+  },
+  {
+   "id": "merlin",
+   "name": "Merlin",
+   "body": "old_man",
+   "outfit": "robe",
+   "head": "wizard_hat",
+   "item": "staff",
+   "height": 1.05
+  },
+  {
+   "id": "kay",
+   "name": "Sir Kay",
+   "body": "man",
+   "outfit": "armour",
+   "head": "helmet",
+   "item": "shield"
+  },
+  {
+   "id": "ector",
+   "name": "Sir Ector",
+   "body": "old_man",
+   "outfit": "cloak",
+   "head": "beard",
+   "item": "none"
+  }
+ ],
+ "cover_scene": {
+  "sky": "mist",
+  "land": "village",
+  "landmark": {
+   "type": "sword_in_stone",
+   "side": "center"
+  },
+  "sky_items": [
+   "sun",
+   "birds"
+  ],
+  "chars": [
+   {
+    "id": "arthur",
+    "pose": "raise",
+    "face": "right",
+    "pos": "center",
+    "item": "sword"
+   },
+   {
+    "id": "merlin",
+    "pose": "stand",
+    "face": "left",
+    "pos": "right",
+    "scale": 0.9,
+    "far": true
+   }
+  ],
+  "creatures": [],
+  "props": [
+   "rocks",
+   "flowers"
+  ],
+  "light": "magic",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "The old king is dead. Now England has no king.\nThe lords fight, and the people are afraid. But the wizard Merlin has a plan.",
+   "ar": "مات الملك العجوز. والآن ليس لإنجلترا ملك.\nالأمراء يتقاتلون، والناس خائفون. لكنّ الساحر ميرلين لديه خطّة.",
+   "scene": {
+    "sky": "storm",
+    "land": "hills",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "center"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "merlin",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "boulder",
+     "grass"
+    ],
+    "light": "magic",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "One morning, there is a big stone in the town square.\nThere is a sword in it! The words say: “Pull out this sword, and you are king.”",
+   "ar": "في صباح أحد الأيام، يظهر حجر كبير في ساحة المدينة.\nوفيه سيف! والكلمات تقول: «من يسحب هذا السيف، فهو الملك.»",
+   "scene": {
+    "sky": "dawn",
+    "land": "village",
+    "landmark": {
+     "type": "sword_in_stone",
+     "side": "center"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "merlin",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "fountain",
+     "flowers"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Strong knights come from everywhere. They pull and pull.\nBut nobody can move the sword.",
+   "ar": "يأتي فرسان أقوياء من كلّ مكان. يسحبون ويسحبون.\nلكن لا أحد يستطيع أن يحرّك السيف.",
+   "scene": {
+    "sky": "day",
+    "land": "village",
+    "landmark": {
+     "type": "sword_in_stone",
+     "side": "center"
+    },
+    "sky_items": [
+     "sun",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "kay",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "ector",
+      "pose": "think",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "horse",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "flag",
+     "rope",
+     "barrel"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Arthur is a quiet boy. He helps his big brother, Sir Kay.\nToday, Kay is fighting in a big tournament.",
+   "ar": "آرثر فتى هادئ. يساعد أخاه الكبير، السير كاي.\nاليوم، سيقاتل كاي في بطولة كبيرة للفرسان.",
+   "scene": {
+    "sky": "day",
+    "land": "field",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "kay",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "arthur",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left",
+      "item": "shield"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "horse",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "tent",
+     "flag",
+     "fence"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "Oh no! Kay forgets his sword at the inn.\n“Arthur, go and get it! Be quick!”",
+   "ar": "يا إلهي! نسي كاي سيفه في النُّزُل.\n«آرثر، اذهب وأحضره! بسرعة!»",
+   "scene": {
+    "sky": "day",
+    "land": "road",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "kay",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "arthur",
+      "pose": "run",
+      "face": "left",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "signpost",
+     "flag"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Arthur runs to the inn, but the door is locked.\nEveryone is at the tournament. What can he do?",
+   "ar": "يركض آرثر إلى النُّزُل، لكنّ الباب مقفل.\nالجميع في البطولة. ماذا يستطيع أن يفعل؟",
+   "scene": {
+    "sky": "day",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "arthur",
+      "pose": "think",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "cat",
+      "pos": "left",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "door",
+     "barrel",
+     "cart"
+    ],
+    "light": "none",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Then he sees the sword in the stone.\nArthur pulls it. The sword comes out easily!",
+   "ar": "ثم يرى السيف في الحجر.\nيسحبه آرثر، فيخرج السيف بسهولة!",
+   "scene": {
+    "sky": "magic",
+    "land": "village",
+    "landmark": {
+     "type": "sword_in_stone",
+     "side": "center"
+    },
+    "sky_items": [
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "arthur",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "item": "sword"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "flowers",
+     "rocks"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Kay sees the sword. “I am the king!” he says.\nHis father asks, “Is that true?” Kay looks down. “No. Arthur did it.”",
+   "ar": "يرى كاي السيف ويقول: «أنا الملك!»\nيسأله أبوه: «هل هذا صحيح؟» ينظر كاي إلى الأرض. «لا. آرثر هو من فعلها.»",
+   "scene": {
+    "sky": "sunset",
+    "land": "field",
+    "landmark": {
+     "type": "castle",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "kay",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left",
+      "item": "sword"
+     },
+     {
+      "id": "ector",
+      "pose": "point",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "arthur",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "tent",
+     "flag"
+    ],
+    "light": "sunrise",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Arthur puts the sword back. The knights try again.\nThey cannot move it. Only Arthur can pull it out!",
+   "ar": "يُعيد آرثر السيف إلى مكانه. ويحاول الفرسان من جديد.\nلا يستطيعون تحريكه. آرثر وحده يستطيع أن يسحبه!",
+   "scene": {
+    "sky": "dusk",
+    "land": "village",
+    "landmark": {
+     "type": "sword_in_stone",
+     "side": "center"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "arthur",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "kay",
+      "pose": "look_up",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "fountain",
+     "torch_on_wall"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Merlin says, “Arthur is the son of the old king!”\nEveryone kneels. The boy is now King Arthur. The end.",
+   "ar": "يقول ميرلين: «آرثر هو ابن الملك العجوز!»\nيركع الجميع. وصار الفتى الآن الملك آرثر. النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "hills",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "ector",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "arthur",
+      "pose": "raise",
+      "face": "left",
+      "pos": "center",
+      "item": "sword"
+     },
+     {
+      "id": "merlin",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag",
+     "flowers"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "king",
+   "ملك"
+  ],
+  [
+   "wizard",
+   "ساحر"
+  ],
+  [
+   "stone",
+   "حجر"
+  ],
+  [
+   "sword",
+   "سيف"
+  ],
+  [
+   "square",
+   "ساحة"
+  ],
+  [
+   "knight",
+   "فارس"
+  ],
+  [
+   "pull",
+   "يسحب"
+  ],
+  [
+   "brother",
+   "أخ"
+  ],
+  [
+   "tournament",
+   "بطولة"
+  ],
+  [
+   "inn",
+   "نُزُل / فندق صغير"
+  ],
+  [
+   "locked",
+   "مقفل"
+  ],
+  [
+   "kneel",
+   "يركع"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "England has no king at the start of the story.",
+   true
+  ],
+  [
+   "The strong knights pull the sword out easily.",
+   false
+  ],
+  [
+   "Kay forgets his sword at the inn.",
+   true
+  ],
+  [
+   "The inn door is open.",
+   false
+  ],
+  [
+   "Arthur is the son of the old king.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: A Land Without a King",
+   "title_ar": "الفصل الأول: أرض بلا ملك",
+   "en": [
+    "When the great King Uther died, England fell into darkness. He had no son that anyone knew of, so the powerful lords began to fight over his crown. Armies marched across the fields, farms were ruined, and ordinary people lived in fear. Only one man seemed to understand what was really happening. He was Merlin, an old wizard with a long white beard, who had served King Uther for many years. Merlin knew a secret that nobody else knew, and he had kept it hidden for fifteen long years, waiting for the right moment.",
+    "One winter night, Merlin climbed to a circle of ancient standing stones and raised his staff towards the stormy sky. In the morning, the people of London found something astonishing in the town square. Nobody had seen anyone bring it there. A huge block of white stone had appeared there during the night, with an iron anvil sitting on top of it. Stuck deep into the anvil and the stone was a beautiful sword. Golden letters shone along its blade: “Whoever pulls this sword out of this stone is the true king of England.”"
+   ],
+   "ar": [
+    "عندما مات الملك العظيم أوثر، غرقت إنجلترا في الظلام. لم يكن له ابن يعرفه أحد، فبدأ الأمراء الأقوياء يتصارعون على تاجه. زحفت الجيوش عبر الحقول، وخُرّبت المزارع، وعاش الناس العاديّون في خوف. ولم يكن هناك إلا رجل واحد يبدو أنه يفهم ما يجري حقًّا. كان ميرلين، الساحر العجوز ذو اللحية البيضاء الطويلة، الذي خدم الملك أوثر سنوات طويلة. كان ميرلين يعرف سرًّا لا يعرفه أحد غيره، وقد أخفاه خمس عشرة سنة طويلة، منتظرًا اللحظة المناسبة.",
+    "وفي إحدى ليالي الشتاء، صعد ميرلين إلى دائرة من الحجارة القائمة القديمة، ورفع عصاه نحو السماء العاصفة. وفي الصباح، وجد أهل لندن شيئًا مدهشًا في ساحة المدينة، ولم يرَ أحدٌ من جاء به إلى هناك. لقد ظهرت هناك أثناء الليل كتلة ضخمة من الحجر الأبيض، وفوقها سندان من الحديد. وكان مغروسًا في عمق السندان والحجر سيف جميل، تلمع على نصله حروف ذهبية: «من يسحب هذا السيف من هذا الحجر فهو ملك إنجلترا الحقيقي.»"
+   ],
+   "pics": [
+    0,
+    1
+   ],
+   "words": [
+    [
+     "lord",
+     "أمير / سيّد إقطاعي"
+    ],
+    [
+     "ordinary",
+     "عاديّ"
+    ],
+    [
+     "wizard",
+     "ساحر"
+    ],
+    [
+     "astonishing",
+     "مدهش جدًّا"
+    ],
+    [
+     "anvil",
+     "سندان"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Nobody Can Move It",
+   "title_ar": "الفصل الثاني: لا أحد يستطيع تحريكه",
+   "en": [
+    "News of the sword spread quickly. Knights and lords rode to London from every corner of the country, each one certain that he would be the next king. They lined up in the square, rolled up their sleeves and pulled with all their might. Some pulled until their faces turned purple. One huge knight even tied a rope to the handle and asked his horse to help. But the sword did not move even a little. It was as if it had grown into the stone like the root of an old tree.",
+    "Far from the city, in a quiet castle, lived a kind old knight named Sir Ector, with his son Kay and a younger boy called Arthur. Arthur had grown up in Sir Ector’s house, and he believed that Kay was his brother. He was not a knight; he was Kay’s squire, which meant that he cleaned his armour, looked after his horse and carried his weapons. That New Year, Sir Ector took both boys to a great tournament in London. Kay had just been made a knight, and he was hoping to win."
+   ],
+   "ar": [
+    "انتشر خبر السيف بسرعة. فجاء الفرسان والأمراء إلى لندن من كلّ أنحاء البلاد، وكلّ واحد منهم واثق أنه سيكون الملك القادم. اصطفّوا في الساحة، وشمّروا عن سواعدهم، وسحبوا بكلّ قوّتهم. بعضهم سحب حتى صار وجهه بنفسجيًّا. بل إنّ فارسًا ضخمًا ربط حبلًا بالمقبض وطلب من حصانه أن يساعده. لكنّ السيف لم يتحرّك ولو قليلًا. كان كأنه قد نبت في الحجر مثل جذر شجرة قديمة.",
+    "وبعيدًا عن المدينة، في قلعة هادئة، عاش فارس عجوز طيّب اسمه السير إكتور، مع ابنه كاي وفتى أصغر اسمه آرثر. نشأ آرثر في بيت السير إكتور، وكان يظنّ أنّ كاي أخوه. لم يكن فارسًا، بل كان مرافقًا لكاي، أي إنه كان ينظّف درعه، ويعتني بحصانه، ويحمل أسلحته. وفي ذلك العام الجديد، أخذ السير إكتور الفتيين إلى بطولة كبيرة للفرسان في لندن. كان كاي قد صار فارسًا للتوّ، وكان يأمل أن يفوز."
+   ],
+   "pics": [
+    2,
+    3
+   ],
+   "words": [
+    [
+     "spread",
+     "ينتشر"
+    ],
+    [
+     "certain",
+     "متأكّد / واثق"
+    ],
+    [
+     "might",
+     "قوّة"
+    ],
+    [
+     "squire",
+     "مرافق الفارس"
+    ],
+    [
+     "tournament",
+     "بطولة (مبارزات الفرسان)"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Forgotten Sword",
+   "title_ar": "الفصل الثالث: السيف المنسيّ",
+   "en": [
+    "On the morning of the tournament, the streets were packed with horses, banners and cheering crowds. As Kay rode towards the field, he reached for his sword and turned white. “My sword!” he cried. “I left it at the inn!” Without a sword, he could not fight, and everyone would laugh at him. He turned to Arthur angrily. “This is your job! Go back and get it, and be quick!” Arthur did not argue. He jumped off his pony and ran back through the crowded streets as fast as he could.",
+    "But when he reached the inn, the door was locked and the windows were shut. The innkeeper and everyone else had gone to watch the tournament. Arthur knocked and shouted, but nobody answered. He tried the back door too, but it was also locked. He sat down on the step, out of breath. What could he do? Kay would be furious, and he would be shamed in front of all the knights of England. Arthur looked around the empty streets. Then he remembered something that he had seen on the way: a sword, standing alone in a quiet square."
+   ],
+   "ar": [
+    "في صباح البطولة، كانت الشوارع مكتظّة بالخيول والرايات والحشود الهاتفة. وبينما كان كاي يتّجه بحصانه نحو الميدان، مدّ يده إلى سيفه فشحب وجهه. صرخ: «سيفي! تركته في النُّزُل!» فمن دون سيف لا يستطيع أن يقاتل، وسيضحك منه الجميع. التفت إلى آرثر غاضبًا وقال: «هذا عملك! ارجع وأحضره، وبسرعة!» لم يجادل آرثر. قفز عن مُهره، وركض عائدًا عبر الشوارع المزدحمة بأقصى سرعته.",
+    "لكنه عندما وصل إلى النُّزُل، وجد الباب مقفلًا والنوافذ مغلقة. فصاحب النُّزُل وكلّ من فيه ذهبوا ليشاهدوا البطولة. طرق آرثر الباب ونادى، لكنّ أحدًا لم يُجب. وجرّب الباب الخلفي أيضًا، لكنه كان مقفلًا كذلك. فجلس على العتبة يلهث. ماذا يستطيع أن يفعل؟ سيغضب كاي غضبًا شديدًا، وسيُهان أمام فرسان إنجلترا كلّهم. نظر آرثر حوله في الشوارع الفارغة. ثم تذكّر شيئًا رآه في الطريق: سيفًا، قائمًا وحده في ساحة هادئة."
+   ],
+   "pics": [
+    4,
+    5
+   ],
+   "words": [
+    [
+     "packed",
+     "مكتظّ / مزدحم جدًّا"
+    ],
+    [
+     "banner",
+     "راية"
+    ],
+    [
+     "argue",
+     "يجادل"
+    ],
+    [
+     "furious",
+     "غاضب جدًّا"
+    ],
+    [
+     "shame",
+     "يُهين / يُخجل"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Boy and the Stone",
+   "title_ar": "الفصل الرابع: الفتى والحجر",
+   "en": [
+    "The square was empty, because the guards had gone to the tournament too. Arthur did not stop to read the golden letters. He knew nothing about the stone or its magic. He only knew that his brother needed a sword. “I’ll borrow this one,” he thought, “and bring it back later.” He took hold of the handle and pulled. The sword slid out of the stone as easily as a spoon out of honey. For a moment, a soft light seemed to shine around him, and the wind went completely still.",
+    "Arthur ran back to the field and handed the sword to Kay. Kay looked at it, and his eyes grew wide, because he recognised the sword from the stone. He rushed to his father. “Father, look! I have the sword from the stone. That means I must be king!” Sir Ector looked at his son for a long time. “Kay,” he said quietly, “tell me the truth. How did you get this sword?” Kay’s face went red. After a long silence, he looked at the ground. “Arthur brought it to me,” he admitted."
+   ],
+   "ar": [
+    "كانت الساحة خالية، لأنّ الحرّاس أيضًا ذهبوا إلى البطولة. لم يتوقّف آرثر ليقرأ الحروف الذهبية، فهو لا يعرف شيئًا عن الحجر ولا عن سحره. كلّ ما يعرفه أنّ أخاه يحتاج إلى سيف. فكّر: «سأستعير هذا، وأُعيده فيما بعد.» أمسك المقبض وسحب. فانزلق السيف من الحجر بسهولة، كما تخرج الملعقة من العسل. ولوهلة، بدا كأنّ ضوءًا ناعمًا يلمع حوله، وسكنت الريح تمامًا.",
+    "ركض آرثر عائدًا إلى الميدان وناول السيف لكاي. نظر كاي إليه واتّسعت عيناه، لأنه عرف أنه سيف الحجر. فأسرع إلى أبيه وقال: «انظر يا أبي! معي سيف الحجر. هذا يعني أنني الملك!» نظر السير إكتور إلى ابنه طويلًا، ثم قال بهدوء: «يا كاي، قل لي الحقيقة. كيف حصلت على هذا السيف؟» احمرّ وجه كاي. وبعد صمت طويل، نظر إلى الأرض واعترف: «آرثر هو الذي أحضره لي.»"
+   ],
+   "pics": [
+    6,
+    7
+   ],
+   "words": [
+    [
+     "borrow",
+     "يستعير"
+    ],
+    [
+     "slide",
+     "ينزلق"
+    ],
+    [
+     "recognise",
+     "يتعرّف على"
+    ],
+    [
+     "rush",
+     "يُسرع / يندفع"
+    ],
+    [
+     "admit",
+     "يعترف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The True King",
+   "title_ar": "الفصل الخامس: الملك الحقيقي",
+   "en": [
+    "Sir Ector took the boys back to the square, where a crowd soon gathered. Arthur put the sword back into the stone, and the strongest knights tried again. They pulled and pulled, but it would not move. Then Arthur stepped forward, nervous and confused. He took the handle and lifted the sword out again, as easily as before. The crowd gasped. Some of the lords shouted that it was a trick. “He is just a boy!” they complained. But every time the sword was put back, only Arthur could pull it free.",
+    "At that moment, Merlin walked out of the crowd. “This is no trick,” he said in a voice that everyone could hear. “Fifteen years ago, King Uther gave me his baby son to keep safe. I took him to Sir Ector. That boy is Arthur.” Sir Ector fell to his knees in front of Arthur, with tears in his eyes. Arthur quickly helped him up. “Please don’t kneel to me,” he said. “You raised me, and you will always be my father.” And so the boy who had only wanted to help his brother became King Arthur."
+   ],
+   "ar": [
+    "أعاد السير إكتور الفتيين إلى الساحة، وسرعان ما تجمّع حشد من الناس. أعاد آرثر السيف إلى الحجر، وحاول أقوى الفرسان من جديد. سحبوا وسحبوا، لكنه لم يتحرّك. ثم تقدّم آرثر متوتّرًا ومرتبكًا، وأمسك المقبض ورفع السيف مرّة أخرى بسهولة كما في المرّة الأولى. شهق الناس. وصاح بعض الأمراء بأنها خدعة، وتذمّروا قائلين: «إنه مجرّد فتى!» لكن في كلّ مرّة كان السيف يُعاد إلى مكانه، لم يكن يستطيع أحد أن يحرّره إلا آرثر.",
+    "وفي تلك اللحظة، خرج ميرلين من بين الحشد، وقال بصوت سمعه الجميع: «هذه ليست خدعة. قبل خمس عشرة سنة، أعطاني الملك أوثر ابنه الرضيع لأحميه، فأخذته إلى السير إكتور. وذلك الطفل هو آرثر.» فركع السير إكتور أمام آرثر والدموع في عينيه. لكنّ آرثر أسرع وساعده على النهوض، وقال: «أرجوك لا تركع لي. أنت ربّيتني، وستبقى أبي دائمًا.» وهكذا صار الفتى الذي لم يُرد إلا أن يساعد أخاه الملكَ آرثر."
+   ],
+   "pics": [
+    8,
+    9
+   ],
+   "words": [
+    [
+     "gather",
+     "يتجمّع"
+    ],
+    [
+     "nervous",
+     "متوتّر"
+    ],
+    [
+     "gasp",
+     "يشهق"
+    ],
+    [
+     "complain",
+     "يتذمّر / يشتكي"
+    ],
+    [
+     "raise",
+     "يربّي"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why was England in trouble at the start of the story?",
+   [
+    "The lords were fighting over the crown",
+    "A dragon was attacking London",
+    "There was no food in the city"
+   ],
+   0
+  ],
+  [
+   "Why did Arthur go back to the inn?",
+   [
+    "To eat his breakfast",
+    "To get Kay’s sword",
+    "To find Merlin"
+   ],
+   1
+  ],
+  [
+   "Why did Arthur take the sword from the stone?",
+   [
+    "He wanted to be king",
+    "Merlin told him to take it",
+    "His brother needed a sword"
+   ],
+   2
+  ],
+  [
+   "What did Kay do when his father asked for the truth?",
+   [
+    "He admitted that Arthur brought it",
+    "He ran away",
+    "He broke the sword"
+   ],
+   0
+  ],
+  [
+   "Who was Arthur’s real father?",
+   [
+    "Sir Ector",
+    "Merlin",
+    "King Uther"
+   ],
+   2
+  ]
+ ],
+ "talk_en": "Arthur pulled the sword because he wanted to help, not because he wanted power. What makes a good leader? Write three qualities and give an example for each.",
+ "talk_ar": "آرثر سحب السيف لأنه يبا يساعد، مو لأنه يبا السلطة. شو اللي يخلّي الواحد قائد زين؟ اكتب ثلاث صفات، وعطِ مثال على كل وحدة."
+}

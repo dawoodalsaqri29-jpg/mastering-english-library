@@ -1,0 +1,783 @@
+{
+ "n": 4,
+ "slug": "silver-tower",
+ "title": "The Silver Tower",
+ "series_tag": "",
+ "subtitle_ar": "البرج الفضّي",
+ "genre": "Fantasy",
+ "based_on": "Original story",
+ "blurb_en": "One wrong word, and a young apprentice turns his wizard master into an owl. To undo the spell before the full moon, Idris must face a proud rival magician — and discover where magic really comes from.",
+ "blurb_ar": "كلمة واحدة خطأ، فيحوّل تلميذ صغير معلّمه الساحر إلى بومة! وليُصلح التعويذة قبل اكتمال القمر، على إدريس أن يواجه ساحرة منافسة متكبّرة… ويكتشف من أين يأتي السحر حقًّا.",
+ "palette": "violet",
+ "cast": [
+  {
+   "id": "idris",
+   "name": "Idris",
+   "body": "boy",
+   "outfit": "robe",
+   "head": "short_hair",
+   "item": "book",
+   "height": 0.92
+  },
+  {
+   "id": "halvard",
+   "name": "Halvard the wizard",
+   "body": "old_man",
+   "outfit": "robe",
+   "head": "wizard_hat",
+   "item": "staff",
+   "height": 1.05
+  },
+  {
+   "id": "vesper",
+   "name": "Vesper",
+   "body": "woman",
+   "outfit": "cloak",
+   "head": "hood",
+   "item": "staff",
+   "height": 1.1
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "hills",
+  "landmark": {
+   "type": "tower",
+   "side": "center"
+  },
+  "sky_items": [
+   "moon",
+   "stars"
+  ],
+  "chars": [
+   {
+    "id": "idris",
+    "pose": "raise",
+    "face": "right",
+    "pos": "left",
+    "item": "staff"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "owl",
+    "pos": "sky",
+    "size": "m",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "rocks"
+  ],
+  "light": "magic",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Idris is the young helper of a great wizard. They live in the Silver Tower.\nTonight, Idris tries a spell alone. Bang! His master is now an owl!",
+   "ar": "إدريس هو المساعد الصغير لساحر عظيم. يعيشان في البرج الفضّي.\nالليلة، يجرّب إدريس تعويذة وحده. بُمْ! صار معلّمه بومة!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left",
+      "item": "staff"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "center",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "cauldron",
+     "candle",
+     "chair"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Idris looks at the book. He does not understand the old words.\n“I must fix this before the full moon,” he says.\n“Or my master is an owl forever!”",
+   "ar": "ينظر إدريس إلى الكتاب. إنه لا يفهم الكلمات القديمة.\nيقول: «يجب أن أُصلح هذا قبل اكتمال القمر.»\n«وإلّا سيبقى معلّمي بومة إلى الأبد!»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "read",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "right",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "table",
+     "candle",
+     "scroll"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The last page of the spell is not in the book!\nThe owl looks at a black tower across the valley.\nA proud magician, Vesper, lives there.",
+   "ar": "الصفحة الأخيرة من التعويذة ليست في الكتاب!\nتنظر البومة إلى برج أسود عبر الوادي.\nهناك تعيش ساحرة متكبّرة اسمها فِسبر.",
+   "scene": {
+    "sky": "dusk",
+    "land": "hills",
+    "landmark": {
+     "type": "dark_tower",
+     "side": "right"
+    },
+    "sky_items": [
+     "crescent",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "sky",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "grass",
+     "rocks"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Idris walks to the black tower with the owl.\nVesper has the page. She smiles. “Give me your Moon Crystal, and it is yours.”",
+   "ar": "يمشي إدريس إلى البرج الأسود مع البومة.\nالصفحة مع فِسبر. تبتسم وتقول: «أعطني بلّورة القمر، وتكون الصفحة لك.»",
+   "scene": {
+    "sky": "night",
+    "land": "ruins",
+    "landmark": {
+     "type": "dark_tower",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon",
+     "bats"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "vesper",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "right",
+      "item": "letter"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "sky",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "rocks",
+     "gravestone"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Idris loves his master, so he gives her the crystal.\nBut the page is in a strange, old language. Idris cannot read it!\nVesper laughs and flies away.",
+   "ar": "إدريس يحبّ معلّمه، لذلك يعطيها البلّورة.\nلكنّ الصفحة مكتوبة بلغة قديمة غريبة. إدريس لا يستطيع قراءتها!\nتضحك فِسبر وتطير بعيدًا.",
+   "scene": {
+    "sky": "storm",
+    "land": "hills",
+    "landmark": {
+     "type": "dark_tower",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "center",
+      "item": "letter"
+     },
+     {
+      "id": "vesper",
+      "pose": "raise",
+      "face": "right",
+      "pos": "right",
+      "far": true
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks"
+    ],
+    "light": "lightning",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Idris does not give up. He opens his old word book.\nAll night, he learns the words on the page, one by one.",
+   "ar": "إدريس لا يستسلم. يفتح كتاب الكلمات القديم.\nوطوال الليل، يتعلّم كلمات الصفحة، كلمةً كلمة.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "read",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "right",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "candle",
+     "table",
+     "jar"
+    ],
+    "light": "candle",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Now he understands every word. He says the spell slowly and clearly.\nThe owl shakes its feathers… and it is his master again!",
+   "ar": "الآن يفهم كلّ كلمة. يقول التعويذة ببطء ووضوح.\nتنفض البومة ريشها… فإذا هي معلّمه من جديد!",
+   "scene": {
+    "sky": "magic",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "halvard",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "candle",
+     "table"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Vesper comes back on a dark storm. She holds up the crystal.\nShe shouts a spell, but nothing happens!\nThe wizard laughs. “That crystal is only glass!”",
+   "ar": "تعود فِسبر على عاصفة مظلمة. وترفع البلّورة عاليًا.\nتصرخ بتعويذة، لكن لا يحدث شيء!\nيضحك الساحر. «تلك البلّورة مجرّد زجاج!»",
+   "scene": {
+    "sky": "storm",
+    "land": "hills",
+    "landmark": {
+     "type": "tower",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "halvard",
+      "pose": "point",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "vesper",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks"
+    ],
+    "light": "lightning",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Vesper reads a dark spell, but she says one word wrong.\nThe lightning turns back to her! Idris shouts the right word.\nThe lightning becomes soft rain.",
+   "ar": "تقرأ فِسبر تعويذة مظلمة، لكنها تنطق كلمة واحدة خطأ.\nيرتدّ البرق نحوها! فيصرخ إدريس بالكلمة الصحيحة.\nفيتحوّل البرق إلى مطر ناعم.",
+   "scene": {
+    "sky": "storm",
+    "land": "field",
+    "landmark": {
+     "type": "tower",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left",
+      "item": "staff"
+     },
+     {
+      "id": "vesper",
+      "pose": "fall",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "grass",
+     "flowers"
+    ],
+    "light": "lightning",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "“Why did you help me?” asks Vesper.\n“Magic is not in crystals. It is in words you understand,” says Idris.\nNow Vesper and Idris study words together. The end.",
+   "ar": "تسأل فِسبر: «لماذا ساعدتني؟»\nيقول إدريس: «السحر ليس في البلّورات. إنه في الكلمات التي تفهمها.»\nوالآن يدرس إدريس وفِسبر الكلمات معًا. النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "hills",
+    "landmark": {
+     "type": "tower",
+     "side": "center"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "idris",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "halvard",
+      "pose": "wave",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "vesper",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right",
+      "item": "book"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flowers",
+     "grass"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "helper",
+   "مساعد"
+  ],
+  [
+   "wizard",
+   "ساحر"
+  ],
+  [
+   "spell",
+   "تعويذة"
+  ],
+  [
+   "owl",
+   "بومة"
+  ],
+  [
+   "page",
+   "صفحة"
+  ],
+  [
+   "magician",
+   "ساحر / ساحرة"
+  ],
+  [
+   "crystal",
+   "بلّورة"
+  ],
+  [
+   "language",
+   "لغة"
+  ],
+  [
+   "storm",
+   "عاصفة"
+  ],
+  [
+   "lightning",
+   "برق"
+  ],
+  [
+   "rain",
+   "مطر"
+  ],
+  [
+   "words",
+   "كلمات"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Idris turns his master into an owl by mistake.",
+   true
+  ],
+  [
+   "The last page of the spell is in the book.",
+   false
+  ],
+  [
+   "Idris gives Vesper the Moon Crystal.",
+   true
+  ],
+  [
+   "Vesper’s spell with the crystal works very well.",
+   false
+  ],
+  [
+   "At the end, Vesper and Idris study words together.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Wrong Word",
+   "title_ar": "الفصل الأول: الكلمة الخطأ",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "On a hill above the river stood the Silver Tower, the home of the old wizard Halvard. At the very top of the tower, a huge white crystal caught the moonlight, and people for miles around believed it was the source of all Halvard’s power. Idris, his thirteen-year-old apprentice, swept the floors, fed the cats and copied old books. He dreamed of doing real magic, but Halvard always said, “Not yet. First, learn the words.” One night, while the wizard was dozing in his chair, Idris secretly opened the great spell book. He wanted to make the reading lamp brighter, just to show his master that he was ready.",
+    "The spell was written in the Old Tongue, which Idris could only half read. He found a word that looked like “bright” and read it out loud, quickly and proudly. There was a flash of silver light and a loud bang. When the smoke cleared, Halvard’s chair was empty. On the cushion sat a small grey owl, staring at him with the wizard’s angry blue eyes. Idris had mixed up two words: “lumara”, which means bright, and “lumora”, which means feathered. He grabbed the book in panic. A note in the margin said: “Undo before the full moon, or the change will last forever.”"
+   ],
+   "ar": [
+    "على تلّ فوق النهر، كان يقف البرج الفضّي، بيت الساحر العجوز هالفارد. وفي أعلى قمّة البرج، كانت بلّورة بيضاء ضخمة تلتقط ضوء القمر، وكان الناس على بُعد أميال يعتقدون أنها مصدر كلّ قوّة هالفارد. أمّا إدريس، تلميذه ذو الثلاثة عشر عامًا، فكان يكنس الأرض، ويُطعم القطط، وينسخ الكتب القديمة. كان يحلم بأن يصنع سحرًا حقيقيًّا، لكنّ هالفارد كان يقول دائمًا: «ليس بعد. تعلّم الكلمات أوّلًا.» وفي إحدى الليالي، بينما كان الساحر يغفو في كرسيّه، فتح إدريس كتاب التعاويذ الكبير سرًّا. أراد أن يجعل مصباح القراءة أكثر سطوعًا، فقط ليُثبت لمعلّمه أنه مستعدّ.",
+    "كانت التعويذة مكتوبة باللغة القديمة، التي لا يستطيع إدريس أن يقرأ منها إلا النصف. وجد كلمة تشبه «ساطع»، فقرأها بصوت عالٍ، بسرعة وفخر. فحدث وميض فضّي ودويّ عالٍ. وحين انقشع الدخان، كان كرسيّ هالفارد فارغًا. وعلى الوسادة جلست بومة رماديّة صغيرة، تحدّق فيه بعيني الساحر الزرقاوين الغاضبتين. لقد خلط إدريس بين كلمتين: «لومارا» ومعناها ساطع، و«لومورا» ومعناها مكسوّ بالريش. أمسك الكتاب مذعورًا. وكانت ملاحظة في الهامش تقول: «اعكس التعويذة قبل اكتمال القمر، وإلّا سيدوم التحوّل إلى الأبد.»"
+   ],
+   "words": [
+    [
+     "apprentice",
+     "تلميذ / متدرّب"
+    ],
+    [
+     "source",
+     "مصدر"
+    ],
+    [
+     "secretly",
+     "سرًّا"
+    ],
+    [
+     "cushion",
+     "وسادة"
+    ],
+    [
+     "panic",
+     "ذعر"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Missing Page",
+   "title_ar": "الفصل الثاني: الصفحة المفقودة",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "The full moon was only two nights away. Idris turned the pages with shaking fingers until he found the spell that could undo the change. But the last page had been torn out. Only a few ragged pieces of paper were left in the book. The owl hopped onto the windowsill and hooted angrily at something in the distance. Across the valley stood a tall black tower. Idris knew who lived there: Vesper, a brilliant and proud magician who had once been Halvard’s student. For years, she had wanted the Moon Crystal for herself. She must have stolen the page during her last visit.",
+    "The next evening, Idris walked to the Black Tower with the owl on his shoulder. Vesper met him at the door. She was tall and elegant, and her smile was as cold as the winter wind. “Lost something, little apprentice?” she asked, holding up the missing page. “Poor Halvard. Of course I can give you this, but I want something in return. Bring me the Moon Crystal from the top of your tower.” The owl hooted and shook its head wildly. Everyone said that without the crystal, the Silver Tower would lose all its magic. But without the page, Halvard would stay an owl forever."
+   ],
+   "ar": [
+    "لم يبقَ على اكتمال القمر إلا ليلتان. قلّب إدريس الصفحات بأصابع ترتجف حتى وجد التعويذة التي تعكس التحوّل. لكنّ الصفحة الأخيرة كانت ممزّقة ومنزوعة. لم يبقَ في الكتاب إلا بضع قصاصات من الورق. قفزت البومة إلى حافّة النافذة، وصاحت بغضب نحو شيء في البعيد. فعبر الوادي كان يقف برج أسود طويل. وكان إدريس يعرف من يعيش هناك: فِسبر، ساحرة بارعة ومتكبّرة كانت يومًا تلميذة لهالفارد. ومنذ سنوات وهي تريد بلّورة القمر لنفسها. لا بدّ أنها سرقت الصفحة في زيارتها الأخيرة.",
+    "في المساء التالي، مشى إدريس إلى البرج الأسود والبومة على كتفه. استقبلته فِسبر عند الباب. كانت طويلة وأنيقة، وابتسامتها باردة كريح الشتاء. سألته وهي ترفع الصفحة المفقودة: «هل أضعتَ شيئًا أيّها التلميذ الصغير؟ مسكين هالفارد. طبعًا أستطيع أن أعطيك هذه، لكنني أريد شيئًا في المقابل. أحضِر لي بلّورة القمر من أعلى برجك.» صاحت البومة وهزّت رأسها بقوّة. فالجميع يقول إنّ البرج الفضّي سيفقد كلّ سحره من دون البلّورة. لكن من دون الصفحة، سيبقى هالفارد بومة إلى الأبد."
+   ],
+   "words": [
+    [
+     "torn",
+     "ممزّق"
+    ],
+    [
+     "distance",
+     "البُعد / المسافة"
+    ],
+    [
+     "brilliant",
+     "بارع / لامع"
+    ],
+    [
+     "elegant",
+     "أنيق"
+    ],
+    [
+     "in return",
+     "في المقابل"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: A Hard Choice",
+   "title_ar": "الفصل الثالث: اختيار صعب",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "Idris did not sleep that night. If he gave away the crystal, he would destroy the tower that he loved. If he did not, he would lose his master. At last, he climbed to the roof, lifted the heavy crystal and carried it across the valley. “A tower is only stones,” he told the owl. “You are my teacher.” Vesper took the crystal with shining eyes and gave him the page. Then she laughed, jumped onto a dark cloud and flew away into the storm. Idris looked down at the page in his hands, and his heart sank. It was written in the most difficult kind of Old Tongue.",
+    "He tried to read the first line, but he understood only one word in five. If he made another mistake, who knew what might happen to Halvard? Maybe he would become a frog, or a stone, or nothing at all. Idris sat in the rain and almost gave up. Then the owl landed on his knee and pecked at his bag, where he kept his small, worn word book. Idris remembered his master’s words: “First, learn the words.” He wiped his eyes. There was one night left before the full moon. It would have to be enough."
+   ],
+   "ar": [
+    "لم ينم إدريس تلك الليلة. إذا أعطى البلّورة، فسيدمّر البرج الذي يحبّه. وإذا لم يعطها، فسيخسر معلّمه. وأخيرًا، صعد إلى السطح، ورفع البلّورة الثقيلة، وحملها عبر الوادي. قال للبومة: «البرج مجرّد حجارة. أمّا أنت فمعلّمي.» أخذت فِسبر البلّورة بعينين لامعتين، وأعطته الصفحة. ثم ضحكت، وقفزت على غيمة سوداء، وطارت بعيدًا في العاصفة. نظر إدريس إلى الصفحة في يديه، فانقبض قلبه. كانت مكتوبة بأصعب أنواع اللغة القديمة.",
+    "حاول أن يقرأ السطر الأوّل، لكنه لم يفهم إلا كلمة واحدة من كلّ خمس. ولو ارتكب خطأً آخر، فمن يدري ماذا قد يحدث لهالفارد؟ ربما يصير ضفدعًا، أو حجرًا، أو لا شيء أبدًا. جلس إدريس تحت المطر وكاد يستسلم. ثم حطّت البومة على ركبته، ونقرت حقيبته، حيث يحتفظ بكتاب كلماته الصغير المهترئ. فتذكّر إدريس كلمات معلّمه: «تعلّم الكلمات أوّلًا.» ومسح عينيه. لم تبقَ إلا ليلة واحدة قبل اكتمال القمر. ويجب أن تكفي."
+   ],
+   "words": [
+    [
+     "destroy",
+     "يدمّر"
+    ],
+    [
+     "difficult",
+     "صعب"
+    ],
+    [
+     "mistake",
+     "خطأ"
+    ],
+    [
+     "worn",
+     "مهترئ / قديم"
+    ],
+    [
+     "wipe",
+     "يمسح"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: One Word at a Time",
+   "title_ar": "الفصل الرابع: كلمة بعد كلمة",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Back in the tower, Idris lit a candle and opened his word book. He did not try to read the spell all at once. Instead, he looked up every single word, wrote its meaning in the margin and said it aloud until he could pronounce it perfectly. Some words had three meanings, so he read the sentences around them to find the right one. Hours passed. The candle burned down, and he lit another. By the time the full moon rose over the hills, Idris understood the spell completely, not just its sound but its meaning. He knew exactly what he was asking the magic to do.",
+    "He stood in front of the owl and spoke slowly and clearly. As he said each word, he felt its meaning in his chest, warm and strong. Silver light filled the room. The owl’s feathers began to shine, then stretch, then turn into the folds of a long blue robe. A moment later, old Halvard was standing there, rubbing his neck. “Well,” he said with a crooked smile, “that took you long enough.” Idris ran to hug him. Then he remembered the crystal, and his face fell. “Master, I gave the Moon Crystal to Vesper. Our tower has lost all its magic.” But Halvard only laughed."
+   ],
+   "ar": [
+    "في البرج، أشعل إدريس شمعة وفتح كتاب كلماته. لم يحاول قراءة التعويذة دفعة واحدة. بل بحث عن كلّ كلمة، وكتب معناها في الهامش، وقالها بصوت عالٍ حتى صار ينطقها بإتقان. بعض الكلمات كان لها ثلاثة معانٍ، فكان يقرأ الجمل التي حولها ليجد المعنى الصحيح. ومرّت الساعات. احترقت الشمعة حتى آخرها، فأشعل غيرها. وحين ارتفع البدر فوق التلال، كان إدريس يفهم التعويذة تمامًا، لا صوتها فقط بل معناها أيضًا. كان يعرف بالضبط ما الذي يطلبه من السحر.",
+    "وقف أمام البومة وتكلّم ببطء ووضوح. ومع كلّ كلمة، كان يشعر بمعناها في صدره، دافئًا وقويًّا. امتلأت الغرفة بضوء فضّي. وبدأ ريش البومة يلمع، ثم يتمدّد، ثم يتحوّل إلى ثنيات عباءة زرقاء طويلة. وبعد لحظة، كان هالفارد العجوز واقفًا هناك يفرك رقبته. قال بابتسامة ملتوية: «حسنًا، لقد أخذ ذلك منك وقتًا طويلًا.» ركض إدريس ليعانقه. ثم تذكّر البلّورة فتجهّم وجهه: «يا معلّمي، أعطيتُ بلّورة القمر لفِسبر. لقد فقد برجنا كلّ سحره.» لكنّ هالفارد ضحك فقط."
+   ],
+   "words": [
+    [
+     "aloud",
+     "بصوت عالٍ"
+    ],
+    [
+     "meaning",
+     "معنى"
+    ],
+    [
+     "pronounce",
+     "ينطق"
+    ],
+    [
+     "margin",
+     "هامش"
+    ],
+    [
+     "stretch",
+     "يتمدّد"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The True Source of Magic",
+   "title_ar": "الفصل الخامس: المصدر الحقيقي للسحر",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Just then, thunder shook the windows. Vesper was riding a black storm towards the Silver Tower, holding the Moon Crystal high above her head. She shouted the most powerful spell she knew, but nothing happened. She shouted it again. Nothing. Halvard opened the window. “That crystal is ordinary glass, Vesper!” he called. “I put it on the roof forty years ago, so that greedy people would look for magic in the wrong place. Magic doesn’t live in crystals. It lives in words that you truly understand.” Furious, Vesper pulled out an old scroll and began to read a dark lightning spell instead.",
+    "But Vesper had always copied spells without studying them, and Idris heard her say one word wrong. The lightning twisted in the sky and turned back towards her. Without thinking, Idris shouted the correct word, the one he had learned the night before. The lightning broke into a thousand drops of warm, gentle rain, and Vesper fell safely onto the wet grass. She stared up at him. “Why did you help me?” she asked. “Because everybody makes mistakes with words,” said Idris. “I made one too.” The next morning, Vesper knocked at the door of the Silver Tower, holding a notebook. She had come to learn."
+   ],
+   "ar": [
+    "وفي تلك اللحظة، هزّ الرعد النوافذ. كانت فِسبر تركب عاصفة سوداء نحو البرج الفضّي، رافعةً بلّورة القمر فوق رأسها. صرخت بأقوى تعويذة تعرفها، لكن لم يحدث شيء. صرخت بها مرّة أخرى. لا شيء. فتح هالفارد النافذة ونادى: «تلك البلّورة زجاج عاديّ يا فِسبر! وضعتها على السطح منذ أربعين سنة، حتى يبحث الطمّاعون عن السحر في المكان الخطأ. السحر لا يسكن في البلّورات. إنه يسكن في الكلمات التي تفهمها حقًّا.» فأخرجت فِسبر، وهي غاضبة جدًّا، لفافة قديمة، وبدأت تقرأ بدلًا من ذلك تعويذة برق مظلمة.",
+    "لكنّ فِسبر كانت دائمًا تنسخ التعاويذ دون أن تدرسها، فسمعها إدريس تنطق كلمة واحدة خطأ. فالتوى البرق في السماء وارتدّ نحوها. ومن غير تفكير، صرخ إدريس بالكلمة الصحيحة، تلك التي تعلّمها في الليلة السابقة. فتفتّت البرق إلى ألف قطرة من مطر دافئ ناعم، وسقطت فِسبر بسلام على العشب المبلّل. حدّقت فيه وسألته: «لماذا ساعدتني؟» قال إدريس: «لأنّ الجميع يخطئون في الكلمات. وأنا أخطأت أيضًا.» وفي صباح اليوم التالي، طرقت فِسبر باب البرج الفضّي وفي يدها دفتر. لقد جاءت لتتعلّم."
+   ],
+   "words": [
+    [
+     "thunder",
+     "رعد"
+    ],
+    [
+     "ordinary",
+     "عاديّ"
+    ],
+    [
+     "greedy",
+     "طمّاع"
+    ],
+    [
+     "furious",
+     "غاضب جدًّا"
+    ],
+    [
+     "correct",
+     "صحيح"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why did Halvard turn into an owl?",
+   [
+    "Vesper put a spell on him",
+    "Idris mixed up two old words",
+    "He drank a magic drink"
+   ],
+   1
+  ],
+  [
+   "What did Vesper want for the missing page?",
+   [
+    "The Moon Crystal",
+    "Halvard’s spell book",
+    "A bag of gold"
+   ],
+   0
+  ],
+  [
+   "How did Idris finally read the spell?",
+   [
+    "Vesper read it for him",
+    "He guessed the words",
+    "He learned every word with his word book"
+   ],
+   2
+  ],
+  [
+   "What was the true source of magic?",
+   [
+    "The Moon Crystal",
+    "Words that you truly understand",
+    "The full moon"
+   ],
+   1
+  ],
+  [
+   "What did Idris do when the lightning turned towards Vesper?",
+   [
+    "He ran away",
+    "He shouted the correct word and saved her",
+    "He took back the crystal"
+   ],
+   1
+  ]
+ ],
+ "talk_en": "In this story, understanding words is real magic. Which English word was difficult for you at first, but now you understand it well? How did you learn it?",
+ "talk_ar": "في هالقصة، فهم الكلمات هو السحر الحقيقي. أيّ كلمة إنجليزية كانت صعبة عليك في البداية، والحين تفهمها زين؟ كيف تعلّمتها؟"
+}

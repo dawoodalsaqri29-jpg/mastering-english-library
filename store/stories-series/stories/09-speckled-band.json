@@ -1,0 +1,792 @@
+{
+ "n": 9,
+ "slug": "speckled-band",
+ "title": "The Speckled Band",
+ "series_tag": "Sherlock Holmes",
+ "subtitle_ar": "شيرلوك هولمز: الشريط المرقّط",
+ "genre": "Mystery",
+ "based_on": "Arthur Conan Doyle (public domain)",
+ "blurb_en": "A frightened young woman, a locked room and a dying sister’s last words: “The speckled band!” Can Sherlock Holmes solve the mystery before the low whistle comes again?",
+ "blurb_ar": "شابّة خائفة، وغرفة مقفلة، وكلمات أخت تحتضر: «الشريط المرقّط!» فهل يحلّ شيرلوك هولمز اللغز قبل أن يعود الصفير الخافت في الليل؟",
+ "palette": "indigo",
+ "cast": [
+  {
+   "id": "holmes",
+   "name": "Sherlock Holmes",
+   "body": "man",
+   "outfit": "coat",
+   "head": "deerstalker",
+   "item": "magnifier",
+   "height": 1.08
+  },
+  {
+   "id": "watson",
+   "name": "Dr Watson",
+   "body": "stout_man",
+   "outfit": "coat",
+   "head": "top_hat",
+   "item": "cane"
+  },
+  {
+   "id": "helen",
+   "name": "Helen Stoner",
+   "body": "woman",
+   "outfit": "dress",
+   "head": "bonnet",
+   "item": "none"
+  },
+  {
+   "id": "julia",
+   "name": "Julia Stoner",
+   "body": "woman",
+   "outfit": "gown",
+   "head": "long_hair",
+   "item": "none"
+  },
+  {
+   "id": "roylott",
+   "name": "Dr Grimesby Roylott",
+   "body": "man",
+   "outfit": "coat",
+   "head": "beard",
+   "item": "staff",
+   "height": 1.18
+  }
+ ],
+ "cover_scene": {
+  "sky": "storm",
+  "land": "field",
+  "landmark": {
+   "type": "mansion",
+   "side": "center"
+  },
+  "sky_items": [
+   "moon",
+   "lightning"
+  ],
+  "chars": [
+   {
+    "id": "holmes",
+    "pose": "point",
+    "face": "right",
+    "pos": "left",
+    "item": "lantern"
+   },
+   {
+    "id": "watson",
+    "pose": "stand",
+    "face": "right",
+    "pos": "center"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "snake",
+    "pos": "right",
+    "size": "m",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "fence",
+   "grass"
+  ],
+  "light": "lightning",
+  "mood": "scary"
+ },
+ "a1": [
+  {
+   "en": "Very early one morning, a woman comes to Baker Street.\nHer name is Helen. She is shaking. “Mr Holmes, please help me!”",
+   "ar": "في صباح باكر جدًّا، تأتي امرأة إلى شارع بيكر.\nاسمها هيلين. وهي ترتجف. «سيّد هولمز، أرجوك ساعدني!»",
+   "scene": {
+    "sky": "dawn",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "helen",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "holmes",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "watson",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chair",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Two years ago, Helen’s sister Julia died in the night.\nHer last words were strange: “The band! The speckled band!”",
+   "ar": "قبل سنتين، ماتت جوليا، أخت هيلين، في الليل.\nوكانت كلماتها الأخيرة غريبة: «الشريط! الشريط المرقّط!»",
+   "scene": {
+    "sky": "storm",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning"
+    ],
+    "chars": [
+     {
+      "id": "julia",
+      "pose": "fall",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "helen",
+      "pose": "kneel",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "bed",
+     "candle"
+    ],
+    "light": "lightning",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Now Helen sleeps in Julia’s old room.\nLast night, she heard a low whistle in the dark. Julia heard it too!",
+   "ar": "الآن تنام هيلين في غرفة جوليا القديمة.\nفي الليلة الماضية، سمعت صفيرًا خافتًا في الظلام. وجوليا سمعته أيضًا!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "helen",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "bed",
+     "bell_rope",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Then a big, angry man comes in. It is Dr Roylott, Helen’s stepfather.\nHe bends the iron poker. Holmes smiles and makes it straight again.",
+   "ar": "ثم يدخل رجل ضخم غاضب. إنه الدكتور رويلوت، زوج أمّ هيلين.\nيثني قضيب المدفأة الحديدي. فيبتسم هولمز ويعيده مستقيمًا من جديد.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "fireplace",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "roylott",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "holmes",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chair"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Holmes and Watson visit Helen’s house in the country.\nIt is old and dark. Wild animals from India walk in the garden.",
+   "ar": "يزور هولمز وواطسون بيت هيلين في الريف.\nإنه بيت قديم ومظلم. وفي الحديقة تتجوّل حيوانات برّية من الهند.",
+   "scene": {
+    "sky": "sunset",
+    "land": "field",
+    "landmark": {
+     "type": "mansion",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "monkey",
+      "pos": "right",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "fence",
+     "grass"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Holmes looks at Julia’s room with his magnifier.\nThe bell rope is not real. The bed cannot move. There is a small hole above it.",
+   "ar": "يفحص هولمز غرفة جوليا بعدسته المكبّرة.\nحبل الجرس ليس حقيقيًّا. والسرير لا يتحرّك. وفوقه فتحة صغيرة في الجدار.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "look_up",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "watson",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "bell_rope",
+     "bed",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Next door is Dr Roylott’s room. There is a big iron safe.\nOn the safe, there is a small dish of milk. Who drinks it?",
+   "ar": "وفي الغرفة المجاورة غرفة الدكتور رويلوت. فيها خزنة حديدية كبيرة.\nوفوق الخزنة صحن صغير من الحليب. من يشربه؟",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "think",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "safe",
+     "jar",
+     "chair",
+     "rope"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At night, Holmes and Watson wait in Helen’s dark room.\nThey do not move. They do not speak. Then… a low whistle!",
+   "ar": "في الليل، ينتظر هولمز وواطسون في غرفة هيلين المظلمة.\nلا يتحرّكان. ولا يتكلّمان. ثم… صفير خافت!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "bed",
+     "bell_rope"
+    ],
+    "light": "moonbeam",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "A snake comes down the bell rope! It has yellow and brown spots.\nIt is the speckled band! Holmes hits it with his stick.",
+   "ar": "ثعبان ينزل على حبل الجرس! عليه بقع صفراء وبنّية.\nإنه الشريط المرقّط! يضربه هولمز بعصاه.",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "fight",
+      "face": "right",
+      "pos": "left",
+      "item": "cane"
+     },
+     {
+      "id": "watson",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "item": "lantern"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "snake",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "bell_rope",
+     "bed",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Dr Roylott sent the snake through the hole. He wanted Helen’s money.\nBut the angry snake goes back and bites him. Helen is safe now. The end.",
+   "ar": "كان الدكتور رويلوت يرسل الثعبان عبر الفتحة. أراد مال هيلين.\nلكنّ الثعبان الغاضب يرجع ويلدغه. هيلين في أمان الآن. النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "garden",
+    "landmark": {
+     "type": "mansion",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "helen",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "holmes",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flowers",
+     "hedge"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "woman",
+   "امرأة"
+  ],
+  [
+   "sister",
+   "أخت"
+  ],
+  [
+   "night",
+   "ليل"
+  ],
+  [
+   "whistle",
+   "صفير"
+  ],
+  [
+   "angry",
+   "غاضب"
+  ],
+  [
+   "animal",
+   "حيوان"
+  ],
+  [
+   "rope",
+   "حبل"
+  ],
+  [
+   "bed",
+   "سرير"
+  ],
+  [
+   "hole",
+   "فتحة / ثقب"
+  ],
+  [
+   "milk",
+   "حليب"
+  ],
+  [
+   "snake",
+   "ثعبان"
+  ],
+  [
+   "safe",
+   "خزنة / في أمان"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Helen comes to Baker Street at night.",
+   false
+  ],
+  [
+   "Julia’s last words were “The speckled band!”",
+   true
+  ],
+  [
+   "Dr Roylott bends the iron poker.",
+   true
+  ],
+  [
+   "The bell rope in Julia’s room is real.",
+   false
+  ],
+  [
+   "The snake comes down the bell rope.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: A Visitor at Dawn",
+   "title_ar": "الفصل الأول: زائرة عند الفجر",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "It was a cold April morning when Sherlock Holmes woke me up. It was only seven o’clock. “Sorry, Watson,” he said, “but a young lady is waiting downstairs, and she is terribly frightened.” The woman was dressed in black, and she was shaking like a leaf. Her face was pale and tired, although she was not old. Holmes put her in a chair near the fire and looked at her carefully. “You came by train this morning,” he said, “and you rode in a small cart on a muddy road first.” She stared at him in surprise. “How did you know?” Holmes pointed at the fresh mud on her sleeve and smiled.",
+    "Her name was Helen Stoner. She lived with her stepfather, Dr Grimesby Roylott, in an old house called Stoke Moran. “Two years ago,” she began, “my twin sister Julia was going to get married. One stormy night, I heard a terrible scream. I ran to her room. Julia came out, holding the door, and she fell to the floor. With her last breath she cried, ‘Helen! It was the band! The speckled band!’ Then she pointed at the doctor’s room, and she never spoke again.” The police found no wound and no poison. Julia’s door and window had been locked from the inside. Nobody understood how she had died."
+   ],
+   "ar": [
+    "كان صباحًا باردًا من أيام أبريل عندما أيقظني شيرلوك هولمز. كانت الساعة السابعة فقط. قال: «آسف يا واطسون، لكنّ سيّدة شابّة تنتظر في الأسفل، وهي خائفة جدًّا.» كانت المرأة ترتدي ملابس سوداء، وترتجف كورقة شجر. كان وجهها شاحبًا ومتعبًا، مع أنها لم تكن كبيرة في السنّ. أجلسها هولمز على كرسيّ قرب النار ونظر إليها بتمعّن. قال: «جئتِ بالقطار هذا الصباح، وقبل ذلك ركبتِ عربة صغيرة على طريق موحل.» حدّقت فيه بدهشة: «كيف عرفت؟» فأشار هولمز إلى الطين الطريّ على كمّها وابتسم.",
+    "كان اسمها هيلين ستونر. وكانت تعيش مع زوج أمّها، الدكتور غرايمزبي رويلوت، في بيت قديم اسمه ستوك موران. بدأت تقول: «قبل سنتين، كانت أختي التوأم جوليا ستتزوّج. وفي ليلة عاصفة، سمعت صرخة مرعبة. ركضت إلى غرفتها. خرجت جوليا متمسّكة بالباب، ثم سقطت على الأرض. وبآخر أنفاسها صاحت: يا هيلين! إنه الشريط! الشريط المرقّط! ثم أشارت إلى غرفة الدكتور، ولم تتكلّم بعدها أبدًا.» لم تجد الشرطة أيّ جرح أو سمّ. وكان باب جوليا ونافذتها مقفلين من الداخل. ولم يفهم أحد كيف ماتت."
+   ],
+   "words": [
+    [
+     "frightened",
+     "خائف / مذعور"
+    ],
+    [
+     "pale",
+     "شاحب"
+    ],
+    [
+     "stare",
+     "يحدّق"
+    ],
+    [
+     "scream",
+     "صرخة"
+    ],
+    [
+     "breath",
+     "نَفَس"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Whistle in the Dark",
+   "title_ar": "الفصل الثاني: الصفير في الظلام",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "“There is more,” Helen said quietly. “Before she died, Julia asked me a strange question. ‘Helen, do you ever hear a low whistle in the middle of the night?’ I said no. Now I am going to be married too, and two days ago some workmen started repairing the wall of my bedroom. So my stepfather moved me into Julia’s old room. Last night I was lying awake, and suddenly I heard it — the same low, soft whistle. I lit my candle, but I saw nothing. I was too frightened to sleep, so I got up and came straight to you.” Holmes listened with his eyes closed and his fingers together.",
+    "Helen explained that her stepfather had a violent temper. He had lived in India for many years, and he still kept animals from there — a cheetah and a baboon that wandered freely around the garden. Some travellers were also camping in his fields. When Helen left, Holmes was deep in thought. Suddenly the door crashed open. A huge man filled the doorway. “I am Dr Roylott!” he shouted. “I know my stepdaughter was here. Stay out of my business, Holmes!” He picked up the iron poker and bent it with his bare hands. After he had gone, Holmes laughed, took the poker and calmly bent it straight again."
+   ],
+   "ar": [
+    "قالت هيلين بهدوء: «وهناك المزيد. قبل أن تموت، سألتني جوليا سؤالًا غريبًا: يا هيلين، هل تسمعين أحيانًا صفيرًا خافتًا في منتصف الليل؟ فقلت لا. والآن أنا أيضًا سأتزوّج، وقبل يومين بدأ عمّال يصلحون جدار غرفة نومي. فنقلني زوج أمّي إلى غرفة جوليا القديمة. وفي الليلة الماضية كنت مستلقية مستيقظة، وفجأة سمعته: الصفير نفسه، خافتًا ناعمًا. أشعلت شمعتي، لكنني لم أرَ شيئًا. كنت خائفة جدًّا فلم أستطع النوم، فنهضت وجئت إليك مباشرة.» كان هولمز يستمع مغمض العينين، وأصابعه متلاصقة.",
+    "أوضحت هيلين أن زوج أمّها سريع الغضب وعنيف. فقد عاش في الهند سنوات طويلة، وما زال يحتفظ بحيوانات من هناك: فهد وقرد بابون يتجوّلان بحرّية في الحديقة. وكان بعض الرحّالة يخيّمون أيضًا في حقوله. وعندما غادرت هيلين، غرق هولمز في التفكير. وفجأة انفتح الباب بقوّة، ووقف عند المدخل رجل ضخم يملؤه. صاح: «أنا الدكتور رويلوت! أعرف أن ابنة زوجتي كانت هنا. لا تتدخّل في شؤوني يا هولمز!» ثم أمسك قضيب المدفأة الحديدي وثناه بيديه العاريتين. وبعد أن خرج، ضحك هولمز، وأخذ القضيب، وأعاده مستقيمًا بكلّ هدوء."
+   ],
+   "words": [
+    [
+     "repair",
+     "يصلح"
+    ],
+    [
+     "awake",
+     "مستيقظ"
+    ],
+    [
+     "temper",
+     "طبع / مزاج حادّ"
+    ],
+    [
+     "wander",
+     "يتجوّل"
+    ],
+    [
+     "bare hands",
+     "اليدان العاريتان"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The House at Stoke Moran",
+   "title_ar": "الفصل الثالث: البيت في ستوك موران",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "That afternoon, Holmes and I took the train into the countryside. The house at Stoke Moran stood among old trees, grey and half in ruins. Only one wing was still lived in. Helen met us at the gate. Her stepfather had gone to London for the day, so we could look around in peace. As we crossed the garden, something moved in the long grass. It was the baboon, watching us with its small, bright eyes. “Those travellers in the field wear spotted scarves,” I whispered. “Could the speckled band be one of them?” Holmes shook his head. “Perhaps, Watson. But let us look at the rooms before we guess.”",
+    "The three bedrooms were side by side: first Dr Roylott’s, then Julia’s, then Helen’s. Holmes went into Julia’s room and examined every corner with his magnifier. He noticed a thick bell rope hanging beside the bed. He pulled it hard, but no bell rang anywhere. “It is not even joined to a wire,” he said. “It is just tied to a hook above a small air vent.” The vent was odd too, because it did not open to the fresh air outside. It opened into Dr Roylott’s room. Finally, Holmes tried to move the bed. It would not move at all. Someone had fixed it firmly to the floor."
+   ],
+   "ar": [
+    "في عصر ذلك اليوم، ركبنا أنا وهولمز القطار إلى الريف. كان بيت ستوك موران قائمًا بين أشجار قديمة، رماديًّا ونصفه خرِب. ولم يكن مسكونًا منه إلا جناح واحد. استقبلتنا هيلين عند البوّابة. كان زوج أمّها قد ذهب إلى لندن ذلك اليوم، فاستطعنا أن نتجوّل بهدوء. وبينما كنّا نعبر الحديقة، تحرّك شيء في العشب الطويل. كان قرد البابون يراقبنا بعينيه الصغيرتين اللامعتين. همست: «الرحّالة في الحقل يلبسون أوشحة مرقّطة. هل يمكن أن يكون الشريط المرقّط واحدًا منهم؟» فهزّ هولمز رأسه: «ربما يا واطسون. لكن لننظر إلى الغرف قبل أن نخمّن.»",
+    "كانت غرف النوم الثلاث متجاورة: غرفة الدكتور رويلوت أولًا، ثم غرفة جوليا، ثم غرفة هيلين. دخل هولمز غرفة جوليا وفحص كلّ زاوية بعدسته المكبّرة. ولاحظ حبل جرس سميكًا معلّقًا بجانب السرير. شدّه بقوّة، لكن لم يرنّ أيّ جرس في أيّ مكان. قال: «إنه ليس موصولًا حتى بسلك. إنه مربوط فقط بخطّاف فوق فتحة تهوية صغيرة.» وكانت فتحة التهوية غريبة أيضًا، لأنها لا تُفتح على الهواء الطلق في الخارج، بل على غرفة الدكتور رويلوت. وأخيرًا، حاول هولمز أن يحرّك السرير. لم يتحرّك أبدًا. فقد ثبّته أحدهم في الأرض بإحكام."
+   ],
+   "words": [
+    [
+     "countryside",
+     "الريف"
+    ],
+    [
+     "in ruins",
+     "خَرِب / مهدّم"
+    ],
+    [
+     "examine",
+     "يفحص"
+    ],
+    [
+     "vent",
+     "فتحة تهوية"
+    ],
+    [
+     "firmly",
+     "بإحكام"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: A Dish of Milk",
+   "title_ar": "الفصل الرابع: صحن الحليب",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Next, we went into Dr Roylott’s room. It was plain and dusty, with a wooden chair, a shelf of books and a large iron safe. “What does he keep in there?” Holmes asked. “Only business papers, I think,” Helen replied. Holmes tapped the safe with his finger. Then he pointed at a small dish of milk on top of it. “Do you have a cat?” he asked. “No,” said Helen. “There is the cheetah, but a dish this small would never be enough for it.” Holmes also found a dog lead hanging on the bed, tied at the end into a small loop. His face became very serious.",
+    "“Miss Stoner,” he said, “your life is in danger, and you must do exactly what I say. Tonight, go to your room early. When your stepfather is in bed, put a lamp in your window as a signal, and then move quietly into your own old room.” We took a room at the village inn, where we could see the house. At eleven o’clock, a single light shone out. We crept across the dark garden and climbed in through Julia’s window. Holmes blew out the lamp. Then we sat in total darkness, without a sound, hour after hour. Far away, a church clock struck midnight, then one, then two."
+   ],
+   "ar": [
+    "بعد ذلك دخلنا غرفة الدكتور رويلوت. كانت بسيطة مغبرّة، فيها كرسيّ خشبيّ ورفّ كتب وخزنة حديدية كبيرة. سأل هولمز: «ماذا يحفظ فيها؟» فأجابت هيلين: «أوراق عمل فقط، على ما أظنّ.» نقر هولمز على الخزنة بإصبعه. ثم أشار إلى صحن صغير من الحليب فوقها. وسأل: «هل عندكم قطّ؟» قالت هيلين: «لا. هناك الفهد، لكنّ صحنًا صغيرًا كهذا لا يكفيه أبدًا.» ووجد هولمز أيضًا مقودًا لكلب معلّقًا على السرير، وطرفه مربوط على شكل أنشوطة صغيرة. فصار وجهه جادًّا جدًّا.",
+    "قال: «يا آنسة ستونر، حياتك في خطر، ويجب أن تفعلي ما أقوله تمامًا. الليلة، اذهبي إلى غرفتك مبكّرًا. وعندما ينام زوج أمّك، ضعي مصباحًا في نافذتك علامةً لنا، ثم انتقلي بهدوء إلى غرفتك القديمة.» استأجرنا غرفة في نُزُل القرية، نستطيع أن نرى منها البيت. وفي الساعة الحادية عشرة، لمع ضوء واحد. تسلّلنا عبر الحديقة المظلمة ودخلنا من نافذة جوليا. أطفأ هولمز المصباح. ثم جلسنا في ظلام تامّ، بلا صوت، ساعة بعد ساعة. ومن بعيد، دقّت ساعة الكنيسة منتصف الليل، ثم الواحدة، ثم الثانية."
+   ],
+   "words": [
+    [
+     "plain",
+     "بسيط"
+    ],
+    [
+     "tap",
+     "ينقر / يطرق بخفّة"
+    ],
+    [
+     "serious",
+     "جادّ"
+    ],
+    [
+     "signal",
+     "إشارة / علامة"
+    ],
+    [
+     "darkness",
+     "ظلام"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Speckled Band",
+   "title_ar": "الفصل الخامس: الشريط المرقّط",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Suddenly, a tiny light appeared in the vent above the bed. Someone in the next room had lit a lantern. There was a smell of hot metal, and then we heard it: a soft, low whistle. At that moment Holmes jumped up, struck a match and hit the bell rope again and again with his cane. “Do you see it, Watson?” he cried. I saw only a thin, spotted shape moving quickly back up the rope and into the vent. A second later, a terrible cry came from Dr Roylott’s room. Then there was silence. Holding the lamp, we hurried next door. The safe was open.",
+    "Dr Roylott was sitting in his chair, and he was dead. Around his head lay a strange yellow band with brown spots. “The speckled band!” Holmes said. “It is a swamp adder, the most dangerous snake in all of India.” Calmly, he caught it with the dog lead and locked it in the safe. Later, he explained everything. Roylott did not want to lose the money that would go to each daughter when she married. He trained the snake to answer his whistle and to drink milk. At night, he sent it through the vent and down the false rope to the bed that could not move. “When I hit it,” Holmes said, “I drove it back, and it turned on its master.” Helen was free at last."
+   ],
+   "ar": [
+    "وفجأة ظهر ضوء صغير في فتحة التهوية فوق السرير. كان أحدهم في الغرفة المجاورة قد أشعل فانوسًا. انتشرت رائحة معدن ساخن، ثم سمعناه: صفيرًا خافتًا ناعمًا. وفي تلك اللحظة قفز هولمز، وأشعل عود ثقاب، وراح يضرب حبل الجرس بعصاه مرّة بعد مرّة. وصاح: «هل تراه يا واطسون؟» لم أرَ إلا شكلًا رفيعًا مرقّطًا يصعد بسرعة على الحبل ويدخل الفتحة. وبعد ثانية، جاءت صرخة رهيبة من غرفة الدكتور رويلوت. ثم ساد الصمت. حملنا المصباح وأسرعنا إلى الغرفة المجاورة. كانت الخزنة مفتوحة.",
+    "كان الدكتور رويلوت جالسًا على كرسيّه، وقد فارق الحياة. وحول رأسه شريط أصفر غريب عليه بقع بنّية. قال هولمز: «الشريط المرقّط! إنها أفعى المستنقعات، أخطر ثعبان في الهند كلّها.» وبهدوء أمسكها بمقود الكلب وأقفل عليها الخزنة. وفيما بعد شرح كلّ شيء. لم يكن رويلوت يريد أن يخسر المال الذي ستأخذه كلّ واحدة من البنتين عند زواجها. فدرّب الثعبان على أن يستجيب لصفيره وأن يشرب الحليب. وفي الليل كان يرسله عبر فتحة التهوية، فينزل على الحبل المزيّف إلى السرير الذي لا يتحرّك. قال هولمز: «عندما ضربته، رددته إلى الخلف، فانقلب على صاحبه.» وأخيرًا صارت هيلين حرّة."
+   ],
+   "words": [
+    [
+     "match",
+     "عود ثقاب"
+    ],
+    [
+     "silence",
+     "صمت"
+    ],
+    [
+     "explain",
+     "يشرح"
+    ],
+    [
+     "train",
+     "يدرّب"
+    ],
+    [
+     "false",
+     "مزيّف"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "How did Holmes know that Helen had ridden in a cart?",
+   [
+    "She told him",
+    "He saw mud on her sleeve",
+    "Watson saw the cart"
+   ],
+   1
+  ],
+  [
+   "Why did Helen move into Julia’s old room?",
+   [
+    "Workmen were repairing her wall",
+    "She was afraid of the baboon",
+    "Julia asked her to"
+   ],
+   0
+  ],
+  [
+   "What was strange about the bell rope?",
+   [
+    "It was very old",
+    "It rang too loudly",
+    "It was not joined to any bell"
+   ],
+   2
+  ],
+  [
+   "What did Holmes find on top of the safe?",
+   [
+    "A dish of milk",
+    "A lantern",
+    "A spotted scarf"
+   ],
+   0
+  ],
+  [
+   "What was the “speckled band”?",
+   [
+    "A group of travellers",
+    "A spotted scarf",
+    "A swamp adder"
+   ],
+   2
+  ]
+ ],
+ "talk_en": "Holmes found the answer in small things: a rope, a hole and a dish of milk. Which clue do you think was the most important, and why?",
+ "talk_ar": "هولمز لقى الحلّ في أشياء صغيرة: حبل، وفتحة، وصحن حليب. في رأيك أيّ دليل كان الأهمّ؟ وليش؟"
+}

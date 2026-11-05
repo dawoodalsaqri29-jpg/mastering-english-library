@@ -1,0 +1,812 @@
+{
+ "n": 6,
+ "slug": "white-wolf",
+ "title": "The White Wolf",
+ "series_tag": "",
+ "subtitle_ar": "الذئب الأبيض",
+ "genre": "Adventure",
+ "based_on": "Original story",
+ "blurb_en": "A girl frees a great white wolf from a hunter’s trap. Now an army of ice trolls is marching on a sleeping kingdom, and only the girl and her wolf can warn it. But the wolf is hiding a secret…",
+ "blurb_ar": "تحرّر فتاة ذئبًا أبيض عظيمًا من فخّ صيّاد. والآن يزحف جيش من غيلان الجليد نحو مملكة نائمة، ولا أحد يستطيع تحذيرها إلا الفتاة وذئبها. لكنّ الذئب يُخفي سرًّا…",
+ "palette": "ice",
+ "cast": [
+  {
+   "id": "elin",
+   "name": "Elin",
+   "body": "girl",
+   "outfit": "cloak",
+   "head": "braid",
+   "item": "lantern",
+   "height": 0.92
+  },
+  {
+   "id": "aren",
+   "name": "Prince Aren",
+   "body": "boy",
+   "outfit": "cloak",
+   "head": "crown",
+   "item": "none",
+   "height": 0.98
+  },
+  {
+   "id": "bjorn",
+   "name": "Bjorn the hunter",
+   "body": "man",
+   "outfit": "cloak",
+   "head": "beard",
+   "item": "spear",
+   "height": 1.12
+  },
+  {
+   "id": "guard",
+   "name": "The gate guard",
+   "body": "man",
+   "outfit": "armour",
+   "head": "helmet",
+   "item": "spear",
+   "height": 1.1
+  },
+  {
+   "id": "queen",
+   "name": "The Queen",
+   "body": "woman",
+   "outfit": "gown",
+   "head": "crown",
+   "item": "none"
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "snow",
+  "landmark": {
+   "type": "castle",
+   "side": "right"
+  },
+  "sky_items": [
+   "aurora",
+   "moon"
+  ],
+  "chars": [
+   {
+    "id": "elin",
+    "pose": "stand",
+    "face": "right",
+    "pos": "left"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "wolf",
+    "pos": "center",
+    "size": "l",
+    "face": "right"
+   }
+  ],
+  "props": [
+   "rocks"
+  ],
+  "light": "lantern",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Elin lives in a cold land in the far north.\nOne day, in the snowy forest, she finds a great white wolf.\nIts leg is in a trap.",
+   "ar": "تعيش إيلين في أرض باردة في أقصى الشمال.\nفي أحد الأيام، تجد في الغابة المثلجة ذئبًا أبيض عظيمًا.\nساقه عالقة في فخّ.",
+   "scene": {
+    "sky": "snow",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "boulder"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Elin opens the trap. The wolf does not bite her.\nIt follows her home.\nOn its neck, there is a silver chain with a snowflake.",
+   "ar": "تفتح إيلين الفخّ. الذئب لا يعضّها.\nبل يتبعها إلى البيت.\nوفي عنقه سلسلة فضّية عليها ندفة ثلج.",
+   "scene": {
+    "sky": "dusk",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "fence",
+     "barrel"
+    ],
+    "light": "lantern",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "From the hill, Elin sees many fires in the mountains.\nIt is an army of ice trolls!\nThey are going to the king’s castle.",
+   "ar": "من فوق التلّ، ترى إيلين نيرانًا كثيرة في الجبال.\nإنه جيش من غيلان الجليد!\nوهم في طريقهم إلى قلعة الملك.",
+   "scene": {
+    "sky": "night",
+    "land": "mountains",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "aurora",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "center",
+      "size": "m",
+      "face": "right"
+     },
+     {
+      "type": "troll",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "campfire"
+    ],
+    "light": "fire",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "The village men see the wolf. They run at it with spears!\nElin and the wolf escape into the snow.\nShe must warn the castle alone.",
+   "ar": "يرى رجال القرية الذئب. فيركضون نحوه بالرماح!\nتهرب إيلين والذئب في الثلج.\nعليها أن تحذّر القلعة وحدها.",
+   "scene": {
+    "sky": "dusk",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "bjorn",
+      "pose": "fight",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "elin",
+      "pose": "run",
+      "face": "right",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "right",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "fence",
+     "cart"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Elin and the wolf walk over a frozen lake.\nCrack! The ice breaks.\nThe wolf pulls her out of the cold water.",
+   "ar": "تمشي إيلين والذئب فوق بحيرة متجمّدة.\nطَقّ! ينكسر الجليد.\nيسحبها الذئب من الماء البارد.",
+   "scene": {
+    "sky": "mist",
+    "land": "snow",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "fall",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "rocks"
+    ],
+    "light": "none",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "In the mountains, there is a big snowstorm. Elin is very cold and tired.\nThe wolf lies next to her all night.\nIts fur is warm.",
+   "ar": "في الجبال، تهبّ عاصفة ثلجية كبيرة. إيلين متعبة وتشعر ببرد شديد.\nيستلقي الذئب بجانبها طوال الليل.\nفروه دافئ.",
+   "scene": {
+    "sky": "snow",
+    "land": "mountains",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "sit",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "center",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "boulder"
+    ],
+    "light": "moonbeam",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "At last, Elin sees the castle. But the guard closes the gate.\n“Go home, girl!” he says.\n“No wolves can come in here!”",
+   "ar": "أخيرًا، ترى إيلين القلعة. لكنّ الحارس يغلق البوابة.\n«ارجعي إلى بيتك يا فتاة!» يقول.\n«لا يدخل أيّ ذئب إلى هنا!»",
+   "scene": {
+    "sky": "dusk",
+    "land": "road",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "guard",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "center",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "flag",
+     "fence"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Elin looks at the silver snowflake. She remembers: the king’s son is lost!\n“Prince Aren!” she shouts.\nThe wolf glows. Now a boy stands there!",
+   "ar": "تنظر إيلين إلى ندفة الثلج الفضّية. وتتذكّر: ابن الملك مفقود!\n«الأمير آرِن!» تصرخ.\nيتوهّج الذئب. والآن يقف هناك فتى!",
+   "scene": {
+    "sky": "magic",
+    "land": "snow",
+    "landmark": {
+     "type": "castle",
+     "side": "left"
+    },
+    "sky_items": [
+     "aurora",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "aren",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The trolls are coming over the frozen river. Elin has an idea: “Break the ice!”\nThe soldiers throw fire on the ice. Crack!\nThe trolls fall into the water.",
+   "ar": "الغيلان تعبر النهر المتجمّد. لدى إيلين فكرة: «اكسروا الجليد!»\nيرمي الجنود النار على الجليد. طَقّ!\nوتسقط الغيلان في الماء.",
+   "scene": {
+    "sky": "night",
+    "land": "snow",
+    "landmark": {
+     "type": "bridge",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "aren",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "item": "sword"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "troll",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     },
+     {
+      "type": "troll",
+      "pos": "far",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "barrel",
+     "flag"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The wet trolls run back to the mountains. The kingdom is safe!\nThe queen hugs her son.\nPrince Aren gives Elin the silver snowflake. The end.",
+   "ar": "تهرب الغيلان المبلّلة إلى الجبال. المملكة في أمان!\nتحضن الملكة ابنها.\nويعطي الأمير آرِن إيلين ندفة الثلج الفضّية. النهاية.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "castle_hall",
+    "landmark": {
+     "type": "throne",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "queen",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "aren",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "elin",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "shield_on_wall",
+     "torch_on_wall",
+     "flag"
+    ],
+    "light": "fire",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "north",
+   "الشمال"
+  ],
+  [
+   "snow",
+   "ثلج"
+  ],
+  [
+   "wolf",
+   "ذئب"
+  ],
+  [
+   "trap",
+   "فخّ"
+  ],
+  [
+   "chain",
+   "سلسلة"
+  ],
+  [
+   "snowflake",
+   "ندفة ثلج"
+  ],
+  [
+   "army",
+   "جيش"
+  ],
+  [
+   "ice",
+   "جليد"
+  ],
+  [
+   "lake",
+   "بحيرة"
+  ],
+  [
+   "fur",
+   "فرو"
+  ],
+  [
+   "gate",
+   "بوابة"
+  ],
+  [
+   "prince",
+   "أمير"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Elin finds a white wolf in a trap.",
+   true
+  ],
+  [
+   "The wolf bites Elin.",
+   false
+  ],
+  [
+   "The ice on the lake breaks.",
+   true
+  ],
+  [
+   "The guard lets the wolf into the castle.",
+   false
+  ],
+  [
+   "The wolf is really Prince Aren.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Wolf in the Trap",
+   "title_ar": "الفصل الأول: الذئب في الفخّ",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Elin was twelve and lived with her father, a woodcutter, in a small village at the edge of the frozen north. On long winter evenings, the old people told stories by the fire. Elin’s favourite was the sad story of Prince Aren, the king’s only son, who had disappeared in the snowy forest three winters ago and had never been found. One grey afternoon, while Elin was collecting wood, she heard a low cry between the pine trees. Lying in the snow was the biggest wolf she had ever seen. It was as white as the snow, and its back leg was caught in a hunter’s iron trap.",
+    "Elin knew that she should run, but the wolf’s ice-blue eyes looked almost human, and they were full of pain. Slowly, she knelt down and pulled the trap open with all her strength. The wolf did not bite her. Instead, it licked her hand and limped after her all the way home. That night, while she was cleaning its leg, she found something hidden under the thick fur: a thin silver chain with a tiny snowflake on it. “Who do you belong to?” she whispered. The wolf only looked at her with its strange, sad eyes and said nothing."
+   ],
+   "ar": [
+    "كانت إيلين في الثانية عشرة من عمرها، وتعيش مع أبيها الحطّاب في قرية صغيرة على أطراف الشمال المتجمّد. وفي أمسيات الشتاء الطويلة، كان كبار السنّ يروون الحكايات حول النار. وكانت أحبّ حكاية إلى إيلين قصة الأمير آرِن الحزينة، ابن الملك الوحيد، الذي اختفى في الغابة المثلجة قبل ثلاثة شتاءات ولم يُعثر عليه أبدًا. وفي عصر يوم رماديّ، بينما كانت إيلين تجمع الحطب، سمعت أنينًا خافتًا بين أشجار الصنوبر. وفي الثلج كان يرقد أكبر ذئب رأته في حياتها. كان أبيض كالثلج، وساقه الخلفية عالقة في فخّ حديديّ لصيّاد.",
+    "عرفت إيلين أنّ عليها أن تهرب، لكنّ عينَي الذئب الزرقاوين كالجليد بدتا كعينَي إنسان تقريبًا، وكانتا مليئتين بالألم. ركعت ببطء، وفتحت الفخّ بكلّ ما لديها من قوة. لم يعضّها الذئب، بل لعق يدها، وتبعها وهو يعرج طوال الطريق إلى البيت. وفي تلك الليلة، بينما كانت تنظّف ساقه، وجدت شيئًا مخفيًّا تحت فروه الكثيف: سلسلة فضّية رفيعة عليها ندفة ثلج صغيرة. همست: «لمن أنت؟» لكنّ الذئب اكتفى بالنظر إليها بعينيه الغريبتين الحزينتين، ولم يقل شيئًا."
+   ],
+   "words": [
+    [
+     "disappear",
+     "يختفي"
+    ],
+    [
+     "iron",
+     "حديديّ"
+    ],
+    [
+     "limp",
+     "يعرج"
+    ],
+    [
+     "hidden",
+     "مخفيّ"
+    ],
+    [
+     "belong",
+     "ينتمي / يكون مُلكًا لـ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Fires in the Mountains",
+   "title_ar": "الفصل الثاني: نيران في الجبال",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "Two nights later, the wolf woke Elin by pulling at her blanket. It led her up the hill behind the village, where the green lights of the aurora were dancing in the sky. Far away in the Frost Peaks, hundreds of small fires were burning. Elin’s heart went cold. Only one army lit fires like that: the ice trolls, who hated the warm lands of the south. They were marching towards Vinterholm, the king’s castle. In three days it would be the Longest Night, when the whole kingdom slept after the great winter feast, and nobody would be watching the walls.",
+    "Elin ran back to wake the village, but the first person she met was Bjorn the hunter. When he saw the wolf at her side, his face turned red with anger. “That beast escaped from my trap!” he shouted, and he called the other men. Soon a crowd with spears and torches was running towards her, and nobody wanted to hear a word about trolls. “Run!” Elin cried to the wolf, and together they escaped into the dark forest. She could not go home now. There was no one left to warn the castle except a girl and a wolf."
+   ],
+   "ar": [
+    "وبعد ليلتين، أيقظ الذئب إيلين وهو يشدّ غطاءها. وقادها إلى أعلى التلّ خلف القرية، حيث كانت أضواء الشفق القطبيّ الخضراء ترقص في السماء. وبعيدًا في قمم الصقيع، كانت مئات النيران الصغيرة مشتعلة. برد قلب إيلين، فجيش واحد فقط يشعل نيرانًا كهذه: غيلان الجليد التي تكره أراضي الجنوب الدافئة. كانوا يزحفون نحو فينترهولم، قلعة الملك. وبعد ثلاثة أيام تأتي أطول ليلة في السنة، حين تنام المملكة كلّها بعد وليمة الشتاء الكبرى، ولا يحرس الأسوار أحد.",
+    "ركضت إيلين عائدة لتوقظ القرية، لكنّ أوّل من قابلته كان بيورن الصيّاد. وحين رأى الذئب بجانبها، احمرّ وجهه غضبًا وصاح: «هذا الوحش هرب من فخّي!» ثم نادى الرجال الآخرين. وسرعان ما كان حشد يحمل الرماح والمشاعل يركض نحوها، ولم يرد أحد أن يسمع كلمة واحدة عن الغيلان. صرخت إيلين في الذئب: «اهرب!» وهربا معًا إلى الغابة المظلمة. لم تعد تستطيع الرجوع إلى البيت الآن. ولم يبقَ أحد ليحذّر القلعة سوى فتاة وذئب."
+   ],
+   "words": [
+    [
+     "aurora",
+     "الشفق القطبيّ"
+    ],
+    [
+     "march",
+     "يزحف / يسير كالجيش"
+    ],
+    [
+     "feast",
+     "وليمة"
+    ],
+    [
+     "crowd",
+     "حشد"
+    ],
+    [
+     "escape",
+     "يهرب"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Frozen Road",
+   "title_ar": "الفصل الثالث: الطريق المتجمّد",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "The quickest way south was across Silver Lake, which was frozen solid every winter. Elin and the wolf had walked halfway across when she heard a terrible sound under her boots. Crack! The ice broke, and she fell into the freezing water. For a moment everything went black and silent. Then she felt strong teeth pulling at her cloak. The wolf was lying flat on the ice and dragging her out, little by little. On the shore, shaking and wet, Elin learned something she would never forget: even the thickest ice is only strong until it breaks.",
+    "On the second day, they climbed into the mountains, and a wild snowstorm caught them in a narrow pass. The wind was so strong that Elin couldn’t see her own hands. Her legs grew heavy, and she sat down in the snow. “I just need to rest,” she said, although she knew that resting in a storm was dangerous. The wolf pushed her into a small cave and lay down beside her. All night long, its thick fur kept her warm. When she woke up, the storm had passed, and the castle towers were shining in the distance."
+   ],
+   "ar": [
+    "كان أسرع طريق إلى الجنوب يمرّ عبر البحيرة الفضّية، التي تتجمّد تمامًا كلّ شتاء. وكانت إيلين والذئب قد قطعا نصفها حين سمعت صوتًا مخيفًا تحت حذائها. طَقّ! انكسر الجليد، وسقطت في الماء المتجمّد. وللحظة صار كلّ شيء أسود وصامتًا. ثم شعرت بأسنان قوية تشدّ عباءتها. كان الذئب مستلقيًا على بطنه فوق الجليد، يسحبها إلى الخارج شيئًا فشيئًا. وعلى الضفّة، وهي ترتجف ومبتلّة، تعلّمت إيلين درسًا لن تنساه أبدًا: حتى أسمك جليد لا يبقى قويًّا إلا حتى ينكسر.",
+    "وفي اليوم الثاني، صعدا إلى الجبال، فحاصرتهما عاصفة ثلجية عنيفة في ممرّ ضيّق. كانت الريح قوية لدرجة أنّ إيلين لم تعد ترى يديها. ثقلت ساقاها، فجلست في الثلج وقالت: «أحتاج إلى قليل من الراحة فقط»، مع أنها كانت تعرف أنّ الراحة في العاصفة خطيرة. دفعها الذئب إلى كهف صغير، واستلقى بجانبها. وطوال الليل، أبقاها فروه الكثيف دافئة. وحين استيقظت، كانت العاصفة قد مرّت، وأبراج القلعة تلمع من بعيد."
+   ],
+   "words": [
+    [
+     "frozen",
+     "متجمّد"
+    ],
+    [
+     "drag",
+     "يسحب / يجرّ"
+    ],
+    [
+     "narrow",
+     "ضيّق"
+    ],
+    [
+     "pass",
+     "ممرّ جبليّ"
+    ],
+    [
+     "in the distance",
+     "من بعيد"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Closed Gate",
+   "title_ar": "الفصل الرابع: البوابة المغلقة",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "They reached Vinterholm as the sun was setting on the Longest Night. Music and laughter came from inside the walls, where the feast was nearly over. Snow was falling softly on the empty towers. Only one sleepy guard stood at the iron gate. “Please,” Elin said, “an army of ice trolls is coming! You must wake the king!” The guard looked at her torn cloak and then at the huge white wolf, and he laughed. “A village girl and a wild wolf? Go home, child. No wolves come into this castle.” Then he pulled the gate shut with a loud bang.",
+    "Elin sat down in the snow, tired and hopeless. Beside her, the wolf was staring up at the royal flag, which showed a silver snowflake on a blue sky. Elin looked at the flag, then at the snowflake on the wolf’s chain, and then at the flag again. The lost prince. The ice-blue eyes that seemed so human. The way the wolf had known every road to the castle. Her heart was racing. She stood up and called out as loudly as she could, “Prince Aren!” The wolf began to glow, and when the light faded, a tall boy was standing in the snow."
+   ],
+   "ar": [
+    "وصلا إلى فينترهولم والشمس تغرب في أطول ليلة. كانت الموسيقى والضحكات تأتي من داخل الأسوار، حيث كانت الوليمة توشك على الانتهاء. وكان الثلج يتساقط بهدوء على الأبراج الخالية. ولم يكن عند البوابة الحديدية سوى حارس واحد نعسان. قالت إيلين: «أرجوك، جيش من غيلان الجليد قادم! يجب أن توقظ الملك!» نظر الحارس إلى عباءتها الممزّقة، ثم إلى الذئب الأبيض الضخم، وضحك: «فتاة قروية وذئب برّيّ؟ ارجعي إلى بيتك يا صغيرة. لا يدخل الذئاب هذه القلعة.» ثم أغلق البوابة بقوة فدوّى صوتها.",
+    "جلست إيلين في الثلج متعبة يائسة. وبجانبها كان الذئب يحدّق في العلم الملكيّ، الذي يحمل ندفة ثلج فضّية على سماء زرقاء. نظرت إيلين إلى العلم، ثم إلى ندفة الثلج في سلسلة الذئب، ثم إلى العلم مرة أخرى. الأمير المفقود. العينان الزرقاوان اللتان تشبهان عينَي إنسان. والذئب الذي كان يعرف كلّ طريق إلى القلعة. كان قلبها يخفق بسرعة. وقفت ونادت بأعلى صوتها: «الأمير آرِن!» فبدأ الذئب يتوهّج، وحين خفت الضوء، كان فتى طويل يقف في الثلج."
+   ],
+   "words": [
+    [
+     "sleepy",
+     "نعسان"
+    ],
+    [
+     "torn",
+     "ممزّق"
+    ],
+    [
+     "hopeless",
+     "يائس"
+    ],
+    [
+     "royal",
+     "ملكيّ"
+    ],
+    [
+     "glow",
+     "يتوهّج"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Longest Night",
+   "title_ar": "الفصل الخامس: أطول ليلة",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "“Three years ago, the Troll King put a spell on me,” Prince Aren explained quickly. “Only my true name, called by a friend, could break it.” This time the guard opened the gate at once, and soon bells were ringing all over the castle. But the trolls were already crossing the frozen river below the walls. Elin remembered the lake. “The ice!” she cried. “Break the ice!” The soldiers rolled barrels of burning oil down onto the river. The ice hissed, cracked and broke, and the huge trolls fell into the black water. Elin’s idea had worked.",
+    "Cold, wet and furious, the trolls climbed out on the far bank and ran back to their mountains, and they never returned. In the morning, the queen held her son for a long time, crying with happiness. Then she turned to Elin. “You saved my son and my kingdom. What can I give you?” Elin only asked to go home to her father. Before she left, Prince Aren put the silver snowflake chain around her neck. “So you never forget your friend,” he said. And every winter after that, a royal sledge stopped outside a small house in the village."
+   ],
+   "ar": [
+    "شرح الأمير آرِن بسرعة: «قبل ثلاث سنوات، ألقى ملك الغيلان عليّ تعويذة. ولم يكن يكسرها إلا اسمي الحقيقيّ حين يناديني به صديق.» وفي هذه المرة فتح الحارس البوابة فورًا، وسرعان ما دقّت الأجراس في أرجاء القلعة. لكنّ الغيلان كانت قد بدأت تعبر النهر المتجمّد تحت الأسوار. تذكّرت إيلين البحيرة، فصرخت: «الجليد! اكسروا الجليد!» دحرج الجنود براميل من الزيت المشتعل إلى النهر. فطقطق الجليد وتشقّق وانكسر، وسقطت الغيلان الضخمة في الماء الأسود. لقد نجحت فكرة إيلين.",
+    "خرجت الغيلان على الضفّة البعيدة باردة مبلّلة غاضبة، وهربت إلى جبالها، ولم تعد أبدًا. وفي الصباح، احتضنت الملكة ابنها طويلًا وهي تبكي من الفرح. ثم التفتت إلى إيلين وقالت: «لقد أنقذتِ ابني ومملكتي. ماذا أستطيع أن أعطيك؟» لم تطلب إيلين إلا أن تعود إلى أبيها. وقبل أن ترحل، وضع الأمير آرِن سلسلة ندفة الثلج الفضّية حول عنقها وقال: «كي لا تنسي صديقك أبدًا.» ومنذ ذلك الحين، في كلّ شتاء، كانت مزلجة ملكية تتوقّف أمام بيت صغير في القرية."
+   ],
+   "words": [
+    [
+     "spell",
+     "تعويذة"
+    ],
+    [
+     "hiss",
+     "يُصدر فحيحًا / يطقطق"
+    ],
+    [
+     "furious",
+     "غاضب جدًّا"
+    ],
+    [
+     "bank",
+     "ضفّة النهر"
+    ],
+    [
+     "sledge",
+     "مزلجة"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What did Elin find under the wolf’s fur?",
+   [
+    "A gold key",
+    "A silver chain with a snowflake",
+    "A letter from the king"
+   ],
+   1
+  ],
+  [
+   "Why did the village men chase Elin?",
+   [
+    "They were angry about the wolf",
+    "She took their food",
+    "They thought she was a troll"
+   ],
+   0
+  ],
+  [
+   "What happened on Silver Lake?",
+   [
+    "Elin saw the trolls",
+    "The ice broke, and the wolf saved her",
+    "The wolf ran away"
+   ],
+   1
+  ],
+  [
+   "Which clue helped Elin understand the wolf’s secret?",
+   [
+    "The music from the feast",
+    "The guard’s laugh",
+    "The snowflake on the royal flag"
+   ],
+   2
+  ],
+  [
+   "How did they stop the trolls?",
+   [
+    "They broke the ice on the river",
+    "They closed all the windows",
+    "The queen gave them gold"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Elin learned something on the frozen lake and used it later to save the kingdom. Write about a time when a difficult moment taught you something useful.",
+ "talk_ar": "إيلين تعلّمت شي على البحيرة المتجمّدة، وبعدين استفادت منه عشان تنقذ المملكة. اكتب عن موقف صعب صار لك وعلّمك شي مفيد."
+}

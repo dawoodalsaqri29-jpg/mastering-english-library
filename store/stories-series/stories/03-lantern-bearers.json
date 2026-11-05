@@ -1,0 +1,817 @@
+{
+ "n": 3,
+ "slug": "lantern-bearers",
+ "title": "Keepers of the Star-Stone",
+ "series_tag": "",
+ "subtitle_ar": "حُرّاس حجر النجمة",
+ "genre": "Fantasy",
+ "based_on": "Original story",
+ "blurb_en": "The star that keeps the night away is dying. A shepherd boy, a blind old woman, a gentle giant and a sharp-eyed archer must carry it to the top of the world before the last moon — but only one of them knows what it will really cost.",
+ "blurb_ar": "النجمة التي تُبعد الليل تحتضر. راعٍ صغير، وعجوز عمياء، وعملاق طيّب، ورامية سهام حادّة البصر، عليهم أن يحملوها إلى قمّة العالم قبل القمر الأخير… لكنّ واحدة منهم فقط تعرف الثمن الحقيقي.",
+ "palette": "indigo",
+ "cast": [
+  {
+   "id": "kai",
+   "name": "Kai",
+   "body": "boy",
+   "outfit": "cloak",
+   "head": "hood",
+   "item": "lantern",
+   "height": 0.9
+  },
+  {
+   "id": "ysolde",
+   "name": "Old Ysolde",
+   "body": "old_woman",
+   "outfit": "robe",
+   "head": "long_hair",
+   "item": "staff"
+  },
+  {
+   "id": "bram",
+   "name": "Bram",
+   "body": "stout_man",
+   "outfit": "tunic",
+   "head": "beard",
+   "item": "shield",
+   "height": 1.2
+  },
+  {
+   "id": "sela",
+   "name": "Sela",
+   "body": "girl",
+   "outfit": "cloak",
+   "head": "ponytail",
+   "item": "bow",
+   "height": 1.02
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "mountains",
+  "landmark": {
+   "type": "mountain_peak",
+   "side": "center"
+  },
+  "sky_items": [
+   "stars",
+   "comet"
+  ],
+  "chars": [
+   {
+    "id": "bram",
+    "pose": "walk",
+    "face": "right",
+    "pos": "left"
+   },
+   {
+    "id": "kai",
+    "pose": "hold_out",
+    "face": "right",
+    "pos": "center"
+   },
+   {
+    "id": "sela",
+    "pose": "walk",
+    "face": "right",
+    "pos": "right"
+   }
+  ],
+  "creatures": [],
+  "props": [
+   "rocks"
+  ],
+  "light": "magic",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "In Kai’s village, a star-stone shines in an old lantern.\nIt keeps the dark away. But now its light is very weak.\nWhen it dies, the night will never end.",
+   "ar": "في قرية كاي، يلمع حجر نجميّ داخل فانوس قديم.\nإنه يُبعد الظلام. لكنّ ضوءه الآن ضعيف جدًّا.\nوحين يموت، لن ينتهي الليل أبدًا.",
+   "scene": {
+    "sky": "dusk",
+    "land": "village",
+    "landmark": {
+     "type": "windmill",
+     "side": "left"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "fence",
+     "flowers"
+    ],
+    "light": "magic",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Old Ysolde cannot see the sun, but she can see the stars.\n“Take the stone to the top of Star Mountain,” she says.\n“Light it again before the last moon.”",
+   "ar": "العجوز إيزولد لا ترى الشمس، لكنها ترى النجوم.\nتقول: «خذ الحجر إلى قمّة جبل النجوم.»\n«أشعِله من جديد قبل القمر الأخير.»",
+   "scene": {
+    "sky": "night",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "right"
+    },
+    "sky_items": [
+     "stars",
+     "crescent"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "ysolde",
+      "pose": "point",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "campfire",
+     "fence"
+    ],
+    "light": "lantern",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Four travellers go: Kai, Ysolde, big Bram and Sela with her bow.\nThey are very different, and they do not always agree.\nWhen they help each other, the stone shines.",
+   "ar": "يذهب أربعة مسافرين: كاي، وإيزولد، وبرام الضخم، وسيلا مع قوسها.\nإنهم مختلفون جدًّا، ولا يتّفقون دائمًا.\nوحين يساعد بعضهم بعضًا، يلمع الحجر.",
+   "scene": {
+    "sky": "dawn",
+    "land": "road",
+    "landmark": {
+     "type": "stone_arch",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "bram",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "kai",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "sela",
+      "pose": "walk",
+      "face": "right",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "signpost",
+     "grass"
+    ],
+    "light": "sunrise",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "In the Grey Swamp, ghosts whisper, “Go home. You are too small.”\nKai is afraid. But Sela says, “Don’t listen. Look at the stone!”",
+   "ar": "في المستنقع الرمادي، تهمس الأشباح: «ارجع إلى بيتك. أنت صغير جدًّا.»\nكاي خائف. لكنّ سيلا تقول: «لا تستمع. انظر إلى الحجر!»",
+   "scene": {
+    "sky": "mist",
+    "land": "swamp",
+    "landmark": {
+     "type": "ruins",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sela",
+      "pose": "point",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "ghost",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     },
+     {
+      "type": "ghost",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "mushrooms",
+     "rocks"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Night comes. Shadow wolves run out of the dark forest!\nThey want to eat the light of the stone.\nKai holds the lantern close.",
+   "ar": "يأتي الليل. وتخرج ذئاب الظلّ من الغابة المظلمة!\nإنها تريد أن تأكل ضوء الحجر.\nيضمّ كاي الفانوس إلى صدره.",
+   "scene": {
+    "sky": "night",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "run",
+      "face": "left",
+      "pos": "left"
+     },
+     {
+      "id": "sela",
+      "pose": "fight",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     },
+     {
+      "type": "wolf",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks"
+    ],
+    "light": "lantern",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Bram takes a burning stick from the fire.\n“Shadows follow light. Let them follow me!”\nHe runs into the forest, and the wolves follow him.",
+   "ar": "يأخذ برام عصًا مشتعلة من النار.\n«الظلال تلحق بالضوء. فلْتلحق بي!»\nيركض داخل الغابة، فتلحقه الذئاب.",
+   "scene": {
+    "sky": "night",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "bram",
+      "pose": "run",
+      "face": "right",
+      "pos": "center",
+      "item": "torch"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     },
+     {
+      "type": "wolf",
+      "pos": "far",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "campfire"
+    ],
+    "light": "fire",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Kai, Sela and Ysolde climb Star Mountain in the snow.\nAt the top, the stone goes dark. It is cold and black.",
+   "ar": "يتسلّق كاي وسيلا وإيزولد جبل النجوم في الثلج.\nوعند القمّة، ينطفئ الحجر. صار باردًا وأسود.",
+   "scene": {
+    "sky": "snow",
+    "land": "mountains",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "ysolde",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sela",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "kai",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "boulder"
+    ],
+    "light": "none",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Kai cries. “We are too late!”\nThen Ysolde holds the stone in her old hands.\n“Don’t cry, Kai. Long ago, I was a star too.”",
+   "ar": "يبكي كاي. «لقد تأخّرنا!»\nثم تمسك إيزولد الحجر بيديها العجوزين.\n«لا تبكِ يا كاي. منذ زمن بعيد، كنتُ أنا أيضًا نجمة.»",
+   "scene": {
+    "sky": "night",
+    "land": "mountains",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "center"
+    },
+    "sky_items": [
+     "stars",
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "ysolde",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "right",
+      "item": "lantern"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks"
+    ],
+    "light": "moonbeam",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Ysolde smiles and becomes a bright, white light.\nThe stone shines like the sun again! The dark runs away.\nSela holds Kai’s hand.",
+   "ar": "تبتسم إيزولد وتتحوّل إلى ضوء أبيض ساطع.\nيلمع الحجر مثل الشمس من جديد! ويهرب الظلام.\nتمسك سيلا يد كاي.",
+   "scene": {
+    "sky": "magic",
+    "land": "mountains",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "center"
+    },
+    "sky_items": [
+     "aurora",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sela",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "ysolde",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Kai and Sela go home. Bram is there! He is tired but happy.\nAt night, there is a new star over the village. Kai waves to it. The end.",
+   "ar": "يعود كاي وسيلا إلى البيت. وبرام هناك! إنه متعب لكنه سعيد.\nوفي الليل، تظهر نجمة جديدة فوق القرية. يلوّح لها كاي. النهاية.",
+   "scene": {
+    "sky": "night",
+    "land": "village",
+    "landmark": {
+     "type": "windmill",
+     "side": "right"
+    },
+    "sky_items": [
+     "stars",
+     "crescent"
+    ],
+    "chars": [
+     {
+      "id": "kai",
+      "pose": "wave",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "bram",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center",
+      "item": "none"
+     },
+     {
+      "id": "sela",
+      "pose": "look_up",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "campfire",
+     "fence"
+    ],
+    "light": "lantern",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "lantern",
+   "فانوس"
+  ],
+  [
+   "light",
+   "ضوء"
+  ],
+  [
+   "dark",
+   "ظلام / مظلم"
+  ],
+  [
+   "stars",
+   "نجوم"
+  ],
+  [
+   "top",
+   "قمّة"
+  ],
+  [
+   "travellers",
+   "مسافرون"
+  ],
+  [
+   "bow",
+   "قوس"
+  ],
+  [
+   "swamp",
+   "مستنقع"
+  ],
+  [
+   "ghosts",
+   "أشباح"
+  ],
+  [
+   "wolves",
+   "ذئاب"
+  ],
+  [
+   "forest",
+   "غابة"
+  ],
+  [
+   "snow",
+   "ثلج"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "The star-stone is in an old lantern.",
+   true
+  ],
+  [
+   "Ysolde can see the sun very well.",
+   false
+  ],
+  [
+   "Sela has a bow.",
+   true
+  ],
+  [
+   "The wolves follow Kai into the forest.",
+   false
+  ],
+  [
+   "At the end, there is a new star over the village.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Fading Star",
+   "title_ar": "الفصل الأول: النجمة التي تخبو",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Long ago, a star fell from the sky onto Star Mountain, far in the north, and a traveller carried a piece of it to the little village of Wennick. The people put the glowing stone inside an old glass lantern and kept it in the middle of the village square. For a thousand years, its silver light kept the darkness away, and the nights in Wennick were soft and safe. Kai, a twelve-year-old shepherd boy, loved to sit next to it and listen. He was sure that it hummed quietly, like a song. But that autumn, the song grew weaker every night. The light turned grey, and long shadows began to creep in from the forest.",
+    "One evening, Old Ysolde came to the square, tapping the ground with her stick. She was blind, and nobody in the village remembered her being young. Yet she always walked straight to the lantern without help. “I cannot see the sun,” she used to say, “but I can see the stars.” Now she put her hand on the glass and sighed. “The star-stone is dying. If its light goes out, the night will never end. It must go back to the top of Star Mountain, where it fell. There, it can be lit again, but only before the last moon of the year.”"
+   ],
+   "ar": [
+    "منذ زمن بعيد، سقطت نجمة من السماء على جبل النجوم في أقصى الشمال، وحمل مسافر قطعة منها إلى قرية وِنِك الصغيرة. وضع أهل القرية الحجر المضيء داخل فانوس زجاجيّ قديم، وأبقوه في وسط ساحة القرية. وطوال ألف عام، ظلّ ضوءه الفضّي يُبعد الظلام، وكانت ليالي وِنِك هادئة وآمنة. وكان كاي، راعي الغنم ذو الاثني عشر عامًا، يحبّ أن يجلس بجانبه ويستمع. كان متأكّدًا أنّ الحجر يدندن بهدوء، كأنه أغنية. لكن في ذلك الخريف، صارت الأغنية أضعف كلّ ليلة. وتحوّل الضوء إلى رماديّ، وبدأت ظلال طويلة تزحف من الغابة.",
+    "وفي إحدى الأمسيات، جاءت العجوز إيزولد إلى الساحة، تنقر الأرض بعصاها. كانت عمياء، ولا أحد في القرية يتذكّر أنها كانت شابّة يومًا. ومع ذلك، كانت دائمًا تمشي مباشرة إلى الفانوس دون مساعدة. وكانت تقول: «لا أستطيع أن أرى الشمس، لكنني أرى النجوم.» والآن وضعت يدها على الزجاج وتنهّدت: «الحجر النجميّ يموت. وإذا انطفأ ضوءه، فلن ينتهي الليل أبدًا. يجب أن يعود إلى قمّة جبل النجوم، حيث سقط. هناك يمكن أن يُشعَل من جديد، لكن قبل القمر الأخير من السنة فقط.»"
+   ],
+   "words": [
+    [
+     "square",
+     "ساحة"
+    ],
+    [
+     "hum",
+     "يدندن"
+    ],
+    [
+     "creep",
+     "يزحف"
+    ],
+    [
+     "blind",
+     "أعمى"
+    ],
+    [
+     "sigh",
+     "يتنهّد"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Four Travellers",
+   "title_ar": "الفصل الثاني: أربعة مسافرين",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "Because the stone hummed louder in Kai’s hands than in anyone else’s, the village chose him to carry it. Three others went with him. Ysolde led the way, although she was blind. Bram, the blacksmith, was as big as a door and as gentle as a sheep, and he was afraid of nothing except high places. The last was Sela, a sharp-eyed archer from the hills, who joined only for the gold that the village promised her. Sela and Bram argued from the first hour. Kai noticed something strange: when they argued, the stone grew darker. When they helped each other, it shone a little brighter.",
+    "On the fourth day, the road went into the Grey Swamp. A cold mist rose from the water, and pale, ghostly shapes floated between the dead trees. They did not attack. Instead, they whispered, and each whisper found the fear in your heart. “Go home, little shepherd,” they said to Kai. “You are too small for this. You will fail, and everyone will be in the dark because of you.” Kai fell to his knees. Then Sela was beside him. “Don’t listen to them,” she said firmly. “Ghosts made of fear can’t stand real light. Look at the stone, not at them.”"
+   ],
+   "ar": [
+    "ولأنّ الحجر كان يدندن في يدي كاي بصوت أعلى من أيّ يدين أخريين، اختارته القرية ليحمله. وذهب معه ثلاثة آخرون. كانت إيزولد تقود الطريق رغم أنها عمياء. وبرام الحدّاد كان ضخمًا كالباب ولطيفًا كالخروف، ولا يخاف من شيء إلا الأماكن العالية. والأخيرة كانت سيلا، رامية سهام حادّة البصر من التلال، انضمّت فقط من أجل الذهب الذي وعدتها به القرية. تجادلت سيلا وبرام منذ الساعة الأولى. ولاحظ كاي شيئًا غريبًا: حين يتجادلان، يخفت الحجر. وحين يساعد بعضهم بعضًا، يلمع أكثر قليلًا.",
+    "في اليوم الرابع، دخل الطريق إلى المستنقع الرمادي. ارتفع ضباب بارد من الماء، وطفت أشكال شاحبة كالأشباح بين الأشجار الميّتة. لم تهاجم. بل كانت تهمس، وكلّ همسة تجد الخوف في القلب. قالت لكاي: «ارجع إلى بيتك أيّها الراعي الصغير. أنت أصغر من هذا. ستفشل، وسيبقى الجميع في الظلام بسببك.» سقط كاي على ركبتيه. ثم صارت سيلا بجانبه، وقالت بحزم: «لا تستمع إليها. الأشباح المصنوعة من الخوف لا تحتمل الضوء الحقيقي. انظر إلى الحجر، لا إليها.»"
+   ],
+   "words": [
+    [
+     "gentle",
+     "لطيف / رقيق"
+    ],
+    [
+     "archer",
+     "رامي سهام"
+    ],
+    [
+     "argue",
+     "يتجادل"
+    ],
+    [
+     "float",
+     "يطفو"
+    ],
+    [
+     "firmly",
+     "بحزم"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Shadow Wolves",
+   "title_ar": "الفصل الثالث: ذئاب الظلّ",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "Kai lifted the lantern, and as the travellers held hands, the stone glowed. The ghosts melted into the mist. Sela did not say anything, but after that night she always walked next to Kai. A week later, they were crossing the Black Forest when the last of the daylight disappeared. Out of the trees came wolves made of shadow, with eyes like cold coals. They were not hungry for meat. They were hungry for light, and they could smell the dying star. The travellers ran, but the wolves were faster, and the lantern was getting weaker with every step.",
+    "They stopped by a small campfire, with their backs against a huge old tree. Bram looked at the wolves, then at the fire. “Shadows follow light,” he said slowly. “Let them follow a different light.” He pulled a burning branch from the fire and lifted it high. “Bram, no!” cried Kai. But the big man only smiled. “Take the stone to the mountain, little shepherd. I’ll find you later.” Then he ran off between the trees, waving the burning branch and shouting. Every single wolf turned and raced after him. Soon the forest was silent, and Bram was gone."
+   ],
+   "ar": [
+    "رفع كاي الفانوس، وحين أمسك المسافرون بأيدي بعضهم، توهّج الحجر. فذابت الأشباح في الضباب. لم تقل سيلا شيئًا، لكنها بعد تلك الليلة صارت تمشي دائمًا بجانب كاي. وبعد أسبوع، كانوا يعبرون الغابة السوداء حين اختفى آخر ضوء للنهار. ومن بين الأشجار خرجت ذئاب مصنوعة من الظلّ، عيونها كالجمر البارد. لم تكن جائعة إلى اللحم. كانت جائعة إلى الضوء، وكانت تشمّ رائحة النجمة المحتضرة. ركض المسافرون، لكنّ الذئاب كانت أسرع، والفانوس يضعف مع كلّ خطوة.",
+    "توقّفوا عند نار مخيّم صغيرة، وظهورهم إلى شجرة قديمة ضخمة. نظر برام إلى الذئاب، ثم إلى النار، وقال ببطء: «الظلال تلحق بالضوء. فلْتلحق بضوء آخر.» وسحب غصنًا مشتعلًا من النار ورفعه عاليًا. صرخ كاي: «لا يا برام!» لكنّ الرجل الضخم ابتسم فقط: «خذ الحجر إلى الجبل أيّها الراعي الصغير. سأجدك لاحقًا.» ثم ركض بين الأشجار، يلوّح بالغصن المشتعل ويصيح. فاستدار كلّ ذئب وانطلق خلفه. وسرعان ما صارت الغابة صامتة، واختفى برام."
+   ],
+   "words": [
+    [
+     "melt",
+     "يذوب"
+    ],
+    [
+     "smell",
+     "يشمّ"
+    ],
+    [
+     "branch",
+     "غصن"
+    ],
+    [
+     "race",
+     "يندفع مسرعًا"
+    ],
+    [
+     "silent",
+     "صامت"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Top of the World",
+   "title_ar": "الفصل الرابع: قمّة العالم",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Without Bram, the journey felt colder. For three days, Kai, Sela and Ysolde climbed Star Mountain through deep snow and freezing wind. Sela carried Ysolde on her back over the steepest parts, and she no longer talked about the gold. On the night of the last moon, they finally reached the top. A ring of tall, ancient stones stood there, covered in ice. Kai opened the lantern with shaking hands. But at that very moment, the stone gave one last tiny flash and went completely dark. It was only a cold black rock now. They were too late.",
+    "Kai fell to his knees and cried. All that way, and Bram lost for nothing. Then he felt a soft hand on his shoulder. Ysolde knelt beside him, and in the darkness her blind eyes were shining silver. “Don’t cry, Kai,” she said gently. “I always knew this moment would come. Do you remember what I told you? I cannot see the sun, but I can see the stars. That is because, long ago, I was one of them. I fell with this stone, and I stayed on the earth to look after it. Now it needs my light.”"
+   ],
+   "ar": [
+    "من دون برام، صارت الرحلة أبرد. وطوال ثلاثة أيّام، تسلّق كاي وسيلا وإيزولد جبل النجوم وسط الثلج العميق والريح القارسة. حملت سيلا إيزولد على ظهرها في أشدّ الأجزاء انحدارًا، ولم تعد تتحدّث عن الذهب. وفي ليلة القمر الأخير، وصلوا أخيرًا إلى القمّة. كانت هناك دائرة من الحجارة الطويلة القديمة، يغطّيها الجليد. فتح كاي الفانوس بيدين ترتجفان. لكن في تلك اللحظة بالذات، أطلق الحجر وميضًا صغيرًا أخيرًا، ثم انطفأ تمامًا. صار مجرّد صخرة سوداء باردة. لقد تأخّروا.",
+    "سقط كاي على ركبتيه وبكى. كلّ هذا الطريق، وضاع برام من أجل لا شيء. ثم شعر بيد ناعمة على كتفه. ركعت إيزولد بجانبه، وفي الظلام كانت عيناها العمياوان تلمعان بلون الفضّة. قالت بلطف: «لا تبكِ يا كاي. كنت أعرف دائمًا أنّ هذه اللحظة ستأتي. أتذكر ما قلته لك؟ لا أستطيع أن أرى الشمس، لكنني أرى النجوم. ذلك لأنني، منذ زمن بعيد، كنت واحدة منها. سقطت مع هذا الحجر، وبقيت على الأرض لأعتني به. والآن هو يحتاج إلى ضوئي.»"
+   ],
+   "words": [
+    [
+     "freezing",
+     "قارس / شديد البرودة"
+    ],
+    [
+     "steep",
+     "شديد الانحدار"
+    ],
+    [
+     "ancient",
+     "قديم جدًّا"
+    ],
+    [
+     "completely",
+     "تمامًا"
+    ],
+    [
+     "shoulder",
+     "كتف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: A New Star",
+   "title_ar": "الفصل الخامس: نجمة جديدة",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Sela understood first. “You don’t have to do this,” she whispered. Ysolde smiled. “Every light is given by someone. That is how light works.” She held the black stone against her heart. Slowly, she began to glow, first like a candle, then like the moon, and then like the morning sun. Her body became pure white light, and the light poured into the stone. The star-stone blazed so brightly that the whole mountain shone. The shadows that had covered the land for weeks ran away like water. Kai and Sela held hands and watched the first sunrise in a month.",
+    "The way home was easy, because the land was full of light again. When they reached Wennick, a huge, tired figure was sitting in the square, eating soup. It was Bram! The wolves had chased him for two days, but when the star blazed, they had vanished like smoke. Kai laughed and cried at the same time, and even Sela hugged the big blacksmith. The star-stone went back into its lantern, singing louder than ever. And that night, Kai noticed a new star above the village, small and silver and very bright. He waved to it, and he was sure that it winked back."
+   ],
+   "ar": [
+    "فهمت سيلا أوّلًا، فهمست: «لستِ مضطرّة لفعل هذا.» ابتسمت إيزولد: «كلّ ضوء يمنحه أحدٌ ما. هكذا يعمل الضوء.» ثم ضمّت الحجر الأسود إلى قلبها. وببطء بدأت تتوهّج، أوّلًا كشمعة، ثم كالقمر، ثم كشمس الصباح. صار جسدها ضوءًا أبيض خالصًا، وتدفّق الضوء إلى داخل الحجر. فاشتعل الحجر النجميّ بنور قويّ حتى أضاء الجبل كلّه. وهربت الظلال التي غطّت الأرض أسابيع، كما يهرب الماء. وأمسك كاي وسيلا بأيدي بعضهما، وشاهدا أوّل شروق للشمس منذ شهر.",
+    "كان طريق العودة سهلًا، لأنّ الأرض امتلأت بالضوء من جديد. وحين وصلا إلى وِنِك، كان شخص ضخم متعب يجلس في الساحة ويأكل الحساء. إنه برام! لقد طاردته الذئاب يومين، لكن حين اشتعلت النجمة، تلاشت كالدخان. ضحك كاي وبكى في الوقت نفسه، وحتى سيلا عانقت الحدّاد الضخم. وعاد الحجر النجميّ إلى فانوسه، يغنّي بصوت أعلى من أيّ وقت مضى. وفي تلك الليلة، لاحظ كاي نجمة جديدة فوق القرية، صغيرة وفضّية وساطعة جدًّا. لوّح لها، وكان متأكّدًا أنها غمزت له."
+   ],
+   "words": [
+    [
+     "pour",
+     "يتدفّق / يصبّ"
+    ],
+    [
+     "blaze",
+     "يشتعل بقوّة"
+    ],
+    [
+     "chase",
+     "يطارد"
+    ],
+    [
+     "vanish",
+     "يتلاشى / يختفي"
+    ],
+    [
+     "wink",
+     "يغمز"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why did the village choose Kai to carry the stone?",
+   [
+    "He was the strongest boy",
+    "The stone hummed louder in his hands",
+    "Ysolde was his grandmother"
+   ],
+   1
+  ],
+  [
+   "What made the stone shine brighter on the journey?",
+   [
+    "When the travellers helped each other",
+    "When they walked fast",
+    "When it rained"
+   ],
+   0
+  ],
+  [
+   "How did Bram save his friends from the shadow wolves?",
+   [
+    "He fought them with his shield",
+    "He climbed a tree",
+    "He ran away with a burning branch, so the wolves followed him"
+   ],
+   2
+  ],
+  [
+   "What was Ysolde’s secret?",
+   [
+    "She was a queen",
+    "Long ago, she was a star",
+    "She could talk to wolves"
+   ],
+   1
+  ],
+  [
+   "What did Kai see above the village at the end?",
+   [
+    "A new star",
+    "A dragon",
+    "A storm"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Every traveller helped in a different way. Which one would you like to be: Kai, Ysolde, Bram or Sela? Why?",
+ "talk_ar": "كل مسافر ساعد بطريقته. أيّ واحد تحبّ تكون: كاي، إيزولد، برام، ولّا سيلا؟ وليش؟"
+}

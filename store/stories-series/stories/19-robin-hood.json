@@ -1,0 +1,821 @@
+{
+ "n": 19,
+ "slug": "robin-hood",
+ "title": "Robin Hood and the Golden Arrow",
+ "series_tag": "Legends",
+ "subtitle_ar": "أساطير: روبن هود والسهم الذهبي",
+ "genre": "Adventure",
+ "based_on": "English folk legend (public domain)",
+ "blurb_en": "The Sheriff of Nottingham offers a golden arrow to the best archer in England — but the contest is a trap to catch Robin Hood. Can the outlaw win the prize and still escape?",
+ "blurb_ar": "يعرض شريف نوتنغهام سهمًا ذهبيًّا لأمهر رامٍ في إنجلترا، لكنّ المسابقة فخّ للإيقاع بروبن هود. فهل يفوز الخارج عن القانون بالجائزة وينجو؟",
+ "palette": "emerald",
+ "cast": [
+  {
+   "id": "robin",
+   "name": "Robin Hood",
+   "body": "man",
+   "outfit": "tunic",
+   "head": "feather_cap",
+   "item": "bow",
+   "height": 1.02
+  },
+  {
+   "id": "beggar",
+   "name": "The Old Beggar",
+   "body": "old_man",
+   "outfit": "rags",
+   "head": "hood",
+   "item": "bow"
+  },
+  {
+   "id": "john",
+   "name": "Little John",
+   "body": "man",
+   "outfit": "tunic",
+   "head": "beard",
+   "item": "staff",
+   "height": 1.2
+  },
+  {
+   "id": "marian",
+   "name": "Maid Marian",
+   "body": "woman",
+   "outfit": "cloak",
+   "head": "long_hair",
+   "item": "none"
+  },
+  {
+   "id": "sheriff",
+   "name": "The Sheriff of Nottingham",
+   "body": "stout_man",
+   "outfit": "robe",
+   "head": "cap",
+   "item": "none"
+  }
+ ],
+ "cover_scene": {
+  "sky": "sunset",
+  "land": "forest",
+  "landmark": {
+   "type": "big_tree",
+   "side": "left"
+  },
+  "sky_items": [
+   "sun",
+   "birds"
+  ],
+  "chars": [
+   {
+    "id": "robin",
+    "pose": "fight",
+    "face": "right",
+    "pos": "center"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "deer",
+    "pos": "far",
+    "size": "s",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "grass",
+   "mushrooms"
+  ],
+  "light": "sunrise",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Robin Hood lives in Sherwood Forest with his friends.\nHe takes from the rich and gives to the poor.",
+   "ar": "يعيش روبن هود في غابة شيروود مع أصدقائه.\nيأخذ من الأغنياء ويعطي الفقراء.",
+   "scene": {
+    "sky": "day",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "robin",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "john",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "deer",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "tent",
+     "campfire",
+     "coins"
+    ],
+    "light": "none",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "The Sheriff of Nottingham hates Robin. He has a clever plan.\n“A contest! The best archer wins a golden arrow!”",
+   "ar": "شريف نوتنغهام يكره روبن، ولديه خطّة ماكرة.\n«مسابقة! أمهر رامٍ يفوز بسهم ذهبي!»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "castle_hall",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "sheriff",
+      "pose": "raise",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "hound",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "torch_on_wall",
+     "shield_on_wall",
+     "table",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "“It is a trap,” says Little John. “Don’t go!”\nBut Robin smiles. “I want that golden arrow.”",
+   "ar": "يقول جون الصغير: «إنه فخّ. لا تذهب!»\nلكنّ روبن يبتسم: «أريد ذلك السهم الذهبي.»",
+   "scene": {
+    "sky": "night",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "john",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "robin",
+      "pose": "sit",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "marian",
+      "pose": "think",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "campfire",
+     "tent"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Maid Marian has an idea. Robin dresses as an old beggar.\nNow nobody knows him!",
+   "ar": "لدى الآنسة ماريان فكرة. يلبس روبن ثياب متسوّل عجوز.\nالآن لا أحد يعرفه!",
+   "scene": {
+    "sky": "dawn",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "marian",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "beggar",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "john",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "campfire",
+     "mushrooms"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "In Nottingham, many archers come. The Sheriff watches.\nHis guards look for Robin Hood everywhere.",
+   "ar": "في نوتنغهام، يأتي رماة كثيرون. والشريف يراقب.\nوحرّاسه يبحثون عن روبن هود في كلّ مكان.",
+   "scene": {
+    "sky": "day",
+    "land": "field",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "beggar",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sheriff",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "horse",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "flag",
+     "tent",
+     "fence"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The old beggar shoots. His arrow hits the center!\nThen he shoots again. He splits the first arrow in two!",
+   "ar": "يرمي المتسوّل العجوز. يصيب سهمه وسط الهدف!\nثم يرمي مرّة أخرى، فيشقّ السهم الأوّل نصفين!",
+   "scene": {
+    "sky": "day",
+    "land": "field",
+    "landmark": {
+     "type": "castle",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "beggar",
+      "pose": "fight",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag",
+     "fence",
+     "crates"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "The Sheriff gives him the golden arrow.\nThen the wind blows back his hood. It is Robin Hood!",
+   "ar": "يعطيه الشريف السهم الذهبي.\nثم تُرجِع الريحُ قلنسوته إلى الخلف. إنه روبن هود!",
+   "scene": {
+    "sky": "sunset",
+    "land": "village",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "robin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sheriff",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag",
+     "fence"
+    ],
+    "light": "sunrise",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "“Catch him! Close the gates!” shouts the Sheriff.\nGuards run at Robin from every side.",
+   "ar": "يصرخ الشريف: «أمسكوه! أغلقوا البوّابات!»\nويركض الحرّاس نحو روبن من كلّ جهة.",
+   "scene": {
+    "sky": "dusk",
+    "land": "village",
+    "landmark": {
+     "type": "iron_gate",
+     "side": "center"
+    },
+    "sky_items": [
+     "crescent"
+    ],
+    "chars": [
+     {
+      "id": "robin",
+      "pose": "run",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "sheriff",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "scale": 0.85,
+      "far": true
+     }
+    ],
+    "creatures": [
+     {
+      "type": "hound",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "barrel",
+     "cart",
+     "torch_on_wall"
+    ],
+    "light": "fire",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Little John cuts the gate rope. Marian brings the horses.\nThey jump on and ride away to the forest!",
+   "ar": "يقطع جون الصغير حبل البوّابة. وتُحضر ماريان الخيول.\nيقفزون عليها وينطلقون نحو الغابة!",
+   "scene": {
+    "sky": "dusk",
+    "land": "road",
+    "landmark": {
+     "type": "bridge",
+     "side": "left"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "robin",
+      "pose": "run",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "marian",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "john",
+      "pose": "run",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "horse",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rope",
+     "signpost"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "That night, an arrow flies into the Sheriff’s window.\nIt has a note: “Thank you for the golden arrow! — Robin Hood.” The end.",
+   "ar": "في تلك الليلة، يطير سهم من نافذة الشريف.\nوعليه رسالة: «شكرًا لك على السهم الذهبي! — روبن هود.» النهاية.",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "castle_hall",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "sheriff",
+      "pose": "read",
+      "face": "left",
+      "pos": "center",
+      "item": "letter"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "candle",
+     "chair"
+    ],
+    "light": "candle",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "forest",
+   "غابة"
+  ],
+  [
+   "poor",
+   "فقير"
+  ],
+  [
+   "contest",
+   "مسابقة"
+  ],
+  [
+   "archer",
+   "رامي السهام"
+  ],
+  [
+   "arrow",
+   "سهم"
+  ],
+  [
+   "trap",
+   "فخّ"
+  ],
+  [
+   "beggar",
+   "متسوّل"
+  ],
+  [
+   "hood",
+   "قلنسوة / غطاء الرأس"
+  ],
+  [
+   "guard",
+   "حارس"
+  ],
+  [
+   "gate",
+   "بوّابة"
+  ],
+  [
+   "horse",
+   "حصان"
+  ],
+  [
+   "note",
+   "رسالة قصيرة"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Robin Hood lives in Sherwood Forest.",
+   true
+  ],
+  [
+   "The prize is a silver cup.",
+   false
+  ],
+  [
+   "Robin goes to the contest as an old beggar.",
+   true
+  ],
+  [
+   "Robin’s arrow misses the target.",
+   false
+  ],
+  [
+   "Little John and Marian help Robin escape.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Outlaw of Sherwood",
+   "title_ar": "الفصل الأول: الخارج عن القانون في شيروود",
+   "en": [
+    "Deep in Sherwood Forest, under a giant oak tree, lived a band of outlaws in green clothes. Their leader was Robin Hood, the finest archer in all of England. Robin had once been a rich young man, but he had lost his lands to the greedy Sheriff of Nottingham. Now he and his friends stopped rich travellers on the forest roads and took their heavy bags of gold. Then they shared the money with poor families, who were struggling to pay the Sheriff’s unfair taxes. To the people, Robin was a hero.",
+    "To the Sheriff, however, Robin was a constant problem. His soldiers had searched the forest a hundred times, but the outlaws always disappeared among the trees like shadows. He had tried everything: spies, rewards and even traps in the woods. Nothing worked. One night, sitting in his castle hall, the Sheriff had an idea. “Robin Hood is proud,” he said with a thin smile. “He cannot resist a challenge.” The next morning, messengers rode through every town and village. There would be a great archery contest in Nottingham, and the prize would be an arrow made of pure gold."
+   ],
+   "ar": [
+    "في أعماق غابة شيروود، تحت شجرة بلّوط عملاقة، عاشت جماعة من الخارجين عن القانون يلبسون ثيابًا خضراء. وكان قائدهم روبن هود، أمهر رامٍ للسهام في إنجلترا كلّها. كان روبن في الماضي شابًّا غنيًّا، لكنه خسر أراضيه بسبب شريف نوتنغهام الطمّاع. والآن صار هو وأصدقاؤه يوقفون المسافرين الأغنياء على طرق الغابة، ويأخذون أكياس الذهب الثقيلة. ثم يقسمون المال على العائلات الفقيرة التي كانت تكافح لتدفع ضرائب الشريف الظالمة. وفي نظر الناس، كان روبن بطلًا.",
+    "أمّا في نظر الشريف، فكان روبن مشكلة لا تنتهي. لقد فتّش جنوده الغابة مئة مرّة، لكنّ الخارجين عن القانون كانوا يختفون دائمًا بين الأشجار كالظلال. وقد جرّب كلّ شيء: الجواسيس، والمكافآت، وحتى الفخاخ في الغابة، لكنّ شيئًا لم ينجح. وفي إحدى الليالي، بينما كان الشريف جالسًا في قاعة قلعته، خطرت له فكرة. قال بابتسامة خبيثة: «روبن هود مغرور، ولا يستطيع أن يقاوم التحدّي.» وفي الصباح التالي، انطلق الرسل على خيولهم إلى كلّ مدينة وقرية: ستُقام مسابقة كبيرة للرماية في نوتنغهام، وستكون الجائزة سهمًا من الذهب الخالص."
+   ],
+   "pics": [
+    0,
+    1
+   ],
+   "words": [
+    [
+     "outlaw",
+     "خارج عن القانون"
+    ],
+    [
+     "struggle",
+     "يكافح"
+    ],
+    [
+     "unfair",
+     "ظالم / غير عادل"
+    ],
+    [
+     "resist",
+     "يقاوم"
+    ],
+    [
+     "challenge",
+     "تحدٍّ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: A Trap and a Disguise",
+   "title_ar": "الفصل الثاني: فخّ وتنكّر",
+   "en": [
+    "That evening, the news reached Sherwood. The outlaws were sitting around the campfire when Robin jumped up, his eyes shining. “A golden arrow! I must win it!” Little John, a giant of a man who was as gentle as he was strong, shook his head. “Can’t you see? It’s a trap,” he said. “The Sheriff knows you can’t say no to a contest. The moment you step into the town, his guards will be waiting for you.” The other outlaws nodded, and even Marian looked worried. Robin was brave, but this time he was being foolish.",
+    "It was Maid Marian, Robin’s oldest and cleverest friend, who found the answer. “The Sheriff is looking for Robin Hood,” she said, “a young man in green with a feather in his cap. So we will give him somebody else to look at.” By morning, Robin was unrecognisable. He wore a torn brown cloak with a hood, he walked with a bent back, and his face was grey with ash. He looked twenty years older. Marian even taught him to speak in a shaky old voice. Little John laughed. “Even your own mother wouldn’t know you!”"
+   ],
+   "ar": [
+    "في ذلك المساء، وصل الخبر إلى شيروود. كان الرجال جالسين حول النار عندما قفز روبن واقفًا وعيناه تلمعان: «سهم ذهبي! لا بدّ أن أفوز به!» لكنّ جون الصغير، وهو رجل عملاق لطيف بقدر ما هو قويّ، هزّ رأسه وقال: «ألا ترى؟ إنه فخّ. الشريف يعرف أنك لا تستطيع أن ترفض مسابقة. وفي اللحظة التي تدخل فيها المدينة، سيكون حرّاسه في انتظارك.» وهزّ الآخرون رؤوسهم موافقين، وحتى ماريان بدت قلقة. كان روبن شجاعًا، لكنه هذه المرّة كان يتصرّف بحماقة.",
+    "وكانت الآنسة ماريان، أقدم صديقة لروبن وأذكاهم، هي التي وجدت الحلّ. قالت: «الشريف يبحث عن روبن هود، شابّ يلبس الأخضر وفي قبّعته ريشة. إذن سنعطيه شخصًا آخر لينظر إليه.» ومع الصباح، صار من المستحيل التعرّف على روبن. لبس عباءة بنّية ممزّقة لها قلنسوة، ومشى بظهر منحنٍ، ووجهه رماديّ من الرماد، فبدا أكبر بعشرين سنة. حتى إنّ ماريان علّمته أن يتكلّم بصوت عجوز مرتجف. ضحك جون الصغير وقال: «حتى أمّك لن تعرفك!»"
+   ],
+   "pics": [
+    2,
+    3
+   ],
+   "words": [
+    [
+     "gentle",
+     "لطيف / رقيق"
+    ],
+    [
+     "foolish",
+     "أحمق / طائش"
+    ],
+    [
+     "unrecognisable",
+     "لا يمكن التعرّف عليه"
+    ],
+    [
+     "torn",
+     "ممزّق"
+    ],
+    [
+     "bent",
+     "منحنٍ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Contest",
+   "title_ar": "الفصل الثالث: المسابقة",
+   "en": [
+    "Nottingham was full of colour and noise on the day of the contest. Flags flew from the castle walls, and crowds pushed along the edge of the field to watch. The Sheriff sat on a high seat under a red tent, and his eyes moved slowly over every face. Dozens of guards were hidden among the crowd, waiting for his signal. Archers had come from all over the country, but none of them wore green. Nobody paid any attention to the old beggar who limped to the line, leaning on his bow.",
+    "One by one, the archers shot, and the weaker ones were sent home. By late afternoon, only two remained: a famous archer from the king’s army and the old beggar. The soldier shot first, and his arrow hit the very centre of the target. The crowd cheered wildly. Surely nobody could beat that. The beggar lifted his bow slowly, as if it were too heavy for him. Then, in one smooth movement, he shot. His arrow struck the soldier’s arrow and split it neatly in two. For a moment, there was complete silence."
+   ],
+   "ar": [
+    "كانت نوتنغهام في يوم المسابقة مليئة بالألوان والضجيج. رفرفت الأعلام على أسوار القلعة، وتزاحمت الحشود على طرف الميدان لتتفرّج. وجلس الشريف على مقعد عالٍ تحت خيمة حمراء، وعيناه تتنقّلان ببطء بين الوجوه. وكان عشرات الحرّاس مختبئين بين الناس، ينتظرون إشارته. جاء الرماة من كلّ أنحاء البلاد، لكنّ أحدًا منهم لم يكن يلبس الأخضر. ولم ينتبه أحد إلى المتسوّل العجوز الذي وصل إلى خطّ الرمي وهو يعرج، متّكئًا على قوسه.",
+    "رمى الرماة واحدًا بعد واحد، وأُرسل الأضعف منهم إلى بيوتهم. وفي آخر العصر، لم يبقَ إلا اثنان: رامٍ مشهور من جيش الملك، والمتسوّل العجوز. رمى الجنديّ أوّلًا، فأصاب سهمه وسط الهدف تمامًا. هتف الجمهور بحماس. لا يمكن لأحد أن يتفوّق على ذلك! رفع المتسوّل قوسه ببطء، كأنه أثقل من أن يحمله. ثم رمى بحركة واحدة سلسة. فأصاب سهمُه سهمَ الجنديّ وشقّه نصفين بدقّة. وللحظة، ساد صمت تامّ."
+   ],
+   "pics": [
+    4,
+    5
+   ],
+   "words": [
+    [
+     "crowd",
+     "حشد / جمهور"
+    ],
+    [
+     "signal",
+     "إشارة"
+    ],
+    [
+     "limp",
+     "يعرج"
+    ],
+    [
+     "remain",
+     "يبقى"
+    ],
+    [
+     "split",
+     "يشقّ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Golden Arrow",
+   "title_ar": "الفصل الرابع: السهم الذهبي",
+   "en": [
+    "Then the crowd exploded with cheers. Even the Sheriff had to clap. “Come forward, old man,” he called, holding up the golden arrow so that it flashed in the sunlight. As the beggar bowed to take it, a sudden wind blew across the field and threw back his hood. For one second, the Sheriff saw a young face, two sharp eyes and a smile that he knew very well. All around the field, people gasped and stepped back. He jumped to his feet, his face red with anger. “It’s Robin Hood!” he shouted. “Seize him! Close the gates!”",
+    "Robin threw off the old cloak, and underneath it he was dressed in green. Guards poured out of the crowd from every direction, and the great gates of the town began to close with a loud groan. Robin ran, holding the golden arrow, jumping over benches and ducking under spears. But the guards were everywhere, and the gate was almost shut. For the first time that day, Robin felt afraid, and his heart was pounding. He had been too proud, just as Little John had warned him. Now there seemed to be no way out."
+   ],
+   "ar": [
+    "ثم انفجر الجمهور بالهتاف، حتى إنّ الشريف اضطرّ إلى التصفيق. نادى: «تقدّم أيّها العجوز»، ورفع السهم الذهبي فلمع في ضوء الشمس. وبينما انحنى المتسوّل ليأخذه، هبّت ريح مفاجئة على الميدان وأرجعت قلنسوته إلى الخلف. ولثانية واحدة، رأى الشريف وجهًا شابًّا، وعينين حادّتين، وابتسامة يعرفها جيّدًا. وفي أرجاء الميدان، شهق الناس وتراجعوا إلى الخلف. قفز الشريف واقفًا ووجهه أحمر من الغضب، وصرخ: «إنه روبن هود! أمسكوه! أغلقوا البوّابات!»",
+    "رمى روبن العباءة القديمة، فإذا تحتها ثياب خضراء. وتدفّق الحرّاس من بين الحشود من كلّ اتّجاه، وبدأت بوّابات المدينة الكبيرة تُغلَق بصرير عالٍ. ركض روبن والسهم الذهبي في يده، يقفز فوق المقاعد ويخفض رأسه تحت الرماح. لكنّ الحرّاس كانوا في كلّ مكان، والبوّابة كادت تُغلَق. ولأوّل مرّة في ذلك اليوم، شعر روبن بالخوف، وكان قلبه يخفق بقوّة. لقد كان مغرورًا أكثر من اللازم، تمامًا كما حذّره جون الصغير. والآن بدا أنه لا مفرّ."
+   ],
+   "pics": [
+    6,
+    7
+   ],
+   "words": [
+    [
+     "flash",
+     "يلمع / يبرق"
+    ],
+    [
+     "seize",
+     "يقبض على"
+    ],
+    [
+     "pour",
+     "يتدفّق"
+    ],
+    [
+     "groan",
+     "صرير / أنين"
+    ],
+    [
+     "duck",
+     "يخفض رأسه بسرعة"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: Back to Sherwood",
+   "title_ar": "الفصل الخامس: العودة إلى شيروود",
+   "en": [
+    "Suddenly, an enormous figure appeared on the wall above the gate. It was Little John, who had come to the contest disguised as a farmer. With one stroke of his knife, he cut the rope that held the gate, and the heavy wooden doors crashed open again. At the same moment, Marian galloped out of a side street, leading two more horses. “Did you think we would let you come alone?” she laughed. Robin leaped into the saddle, and the three friends raced across the bridge and out into the open country.",
+    "That night, the Sheriff sat alone in his hall, still shaking with anger. Suddenly, an arrow flew through the open window and stuck in the table in front of him. Tied to it was a note: “Thank you for the golden arrow. It will feed many hungry families this winter. — Robin Hood.” Far away in Sherwood, the outlaws were celebrating around the fire. Someone was playing a flute, and the smell of roast meat filled the air. Robin raised his cup to Little John and Marian. “The arrow was not the real prize,” he said quietly. “The real prize is having friends like you.”"
+   ],
+   "ar": [
+    "وفجأة، ظهر شخص ضخم على السور فوق البوّابة. كان جون الصغير، الذي جاء إلى المسابقة متنكّرًا في زيّ فلّاح. وبضربة واحدة من سكّينه، قطع الحبل الذي يمسك البوّابة، فانفتحت الأبواب الخشبية الثقيلة من جديد بقوّة. وفي اللحظة نفسها، خرجت ماريان من شارع جانبي تعدو بحصانها، وتقود حصانين آخرين. قالت ضاحكة: «هل ظننت أننا سنتركك تأتي وحدك؟» قفز روبن إلى السرج، وانطلق الأصدقاء الثلاثة مسرعين عبر الجسر إلى الريف المفتوح.",
+    "في تلك الليلة، جلس الشريف وحده في قاعته، وما زال يرتجف من الغضب. وفجأة، طار سهم من النافذة المفتوحة وانغرس في الطاولة أمامه. وكانت مربوطة به رسالة: «شكرًا لك على السهم الذهبي. سيُطعم عائلات جائعة كثيرة هذا الشتاء. — روبن هود.» وبعيدًا في شيروود، كان الرجال يحتفلون حول النار؛ أحدهم يعزف على الناي، ورائحة اللحم المشويّ تملأ المكان. رفع روبن كأسه نحو جون الصغير وماريان، وقال بهدوء: «لم يكن السهم هو الجائزة الحقيقية. الجائزة الحقيقية هي أن يكون لي أصدقاء مثلكم.»"
+   ],
+   "pics": [
+    8,
+    9
+   ],
+   "words": [
+    [
+     "enormous",
+     "ضخم جدًّا"
+    ],
+    [
+     "gallop",
+     "يعدو (الحصان) بسرعة"
+    ],
+    [
+     "saddle",
+     "سرج"
+    ],
+    [
+     "celebrate",
+     "يحتفل"
+    ],
+    [
+     "prize",
+     "جائزة"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why did the Sheriff organise the archery contest?",
+   [
+    "To find a soldier for his army",
+    "To catch Robin Hood",
+    "To raise money for the poor"
+   ],
+   1
+  ],
+  [
+   "Whose idea was the beggar disguise?",
+   [
+    "Maid Marian’s",
+    "Little John’s",
+    "The Sheriff’s"
+   ],
+   0
+  ],
+  [
+   "What amazing shot won the contest?",
+   [
+    "He hit a bird in the sky",
+    "He shot with his eyes closed",
+    "He split the other arrow in two"
+   ],
+   2
+  ],
+  [
+   "How did the Sheriff discover who the beggar was?",
+   [
+    "A guard recognised his bow",
+    "The wind blew back his hood",
+    "Robin told him"
+   ],
+   1
+  ],
+  [
+   "What did Robin plan to do with the golden arrow?",
+   [
+    "Give it back to the Sheriff",
+    "Hang it on the oak tree",
+    "Use it to feed hungry families"
+   ],
+   2
+  ]
+ ],
+ "talk_en": "Robin was too proud, and his friends saved him. When should we listen to our friends’ advice? Talk or write about a time a friend helped you.",
+ "talk_ar": "روبن كان مغرور شوي، وأصحابه هم اللي أنقذوه. متى لازم نسمع نصيحة أصحابنا؟ تكلّم أو اكتب عن موقف ساعدك فيه صديق."
+}

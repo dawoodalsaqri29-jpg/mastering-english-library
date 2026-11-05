@@ -1,0 +1,758 @@
+{
+ "n": 1,
+ "slug": "last-ember",
+ "title": "The Last Ember",
+ "series_tag": "",
+ "subtitle_ar": "الجمرة الأخيرة",
+ "genre": "Fantasy",
+ "based_on": "Original story",
+ "blurb_en": "When every fire in the valley goes cold, a shy young baker must carry the last ember to a dragon’s mountain. But the dragon is not what anyone thinks…",
+ "blurb_ar": "حين تنطفئ كلّ النيران في الوادي، يحمل خبّاز صغير خجول آخر جمرة إلى جبل التنّين. لكنّ التنّين ليس كما يظنّ الجميع…",
+ "palette": "amber",
+ "cast": [
+  {
+   "id": "tobin",
+   "name": "Tobin",
+   "body": "boy",
+   "outfit": "tunic",
+   "head": "curly_hair",
+   "item": "lantern",
+   "height": 0.9
+  },
+  {
+   "id": "brask",
+   "name": "Captain Brask",
+   "body": "man",
+   "outfit": "armour",
+   "head": "helmet",
+   "item": "sword",
+   "height": 1.15
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "mountains",
+  "landmark": {
+   "type": "mountain_peak",
+   "side": "right"
+  },
+  "sky_items": [
+   "moon",
+   "stars"
+  ],
+  "chars": [
+   {
+    "id": "tobin",
+    "pose": "hold_out",
+    "face": "right",
+    "pos": "left"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "dragon",
+    "pos": "sky",
+    "size": "xl",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "rocks"
+  ],
+  "light": "lantern",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Tobin is a young baker. He loves his warm oven.\nOne night, every fire in the village goes out!\nOnly one small ember still glows in his oven.",
+   "ar": "توبين خبّاز صغير. يحبّ فرنه الدافئ.\nفي إحدى الليالي، تنطفئ كلّ النيران في القرية!\nجمرة صغيرة واحدة فقط ما زالت تتوهّج في فرنه.",
+   "scene": {
+    "sky": "night",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "barrel",
+     "fence"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "A soldier comes to the bakery. His name is Captain Brask.\n“The dragon on the mountain took our fire,” he says.\n“Bring your ember and come with me!”",
+   "ar": "يأتي جنديّ إلى المخبز. اسمه القائد براسك.\nيقول: «التنّين الذي في الجبل أخذ نارنا.»\n«أحضِر جمرتك وتعالَ معي!»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "fireplace",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "brask",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "crates"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Tobin does not want to go. He loves his home.\nBut the children are cold, and snow falls in summer.\nSo he takes his lantern and a bag of bread.",
+   "ar": "توبين لا يريد أن يذهب. إنه يحبّ بيته.\nلكنّ الأطفال يشعرون بالبرد، والثلج يتساقط في الصيف.\nلذلك يأخذ فانوسه وكيسًا من الخبز.",
+   "scene": {
+    "sky": "snow",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "brask",
+      "pose": "walk",
+      "face": "left",
+      "pos": "left"
+     },
+     {
+      "id": "tobin",
+      "pose": "walk",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "fence",
+     "signpost"
+    ],
+    "light": "lantern",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "They walk through a dark forest. Wolves come!\nBrask holds up his sword. But Tobin throws bread to the wolves.\nThe hungry wolves eat and run away.",
+   "ar": "يمشيان في غابة مظلمة. تأتي الذئاب!\nيرفع براسك سيفه. لكنّ توبين يرمي الخبز إلى الذئاب.\nتأكل الذئاب الجائعة ثم تهرب.",
+   "scene": {
+    "sky": "night",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "center",
+      "item": "bag"
+     },
+     {
+      "id": "brask",
+      "pose": "fight",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "wolf",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "rocks"
+    ],
+    "light": "lantern",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "On a high bridge, a big storm comes.\nThe wind is very strong. The ember is almost dead!\nTobin puts it under his coat to keep it warm.",
+   "ar": "على جسر عالٍ، تهبّ عاصفة كبيرة.\nالريح قوية جدًّا. الجمرة تكاد تنطفئ!\nيضعها توبين تحت معطفه ليحافظ على دفئها.",
+   "scene": {
+    "sky": "storm",
+    "land": "cliff",
+    "landmark": {
+     "type": "bridge",
+     "side": "center"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rope",
+     "rocks"
+    ],
+    "light": "lightning",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At last, they find the dragon in the mountain.\nIt sleeps on a hill of gold. But it is shaking.\nThere is ice on its big wings.",
+   "ar": "وأخيرًا، يجدان التنّين داخل الجبل.\nإنه نائم فوق تلّ من الذهب. لكنه يرتجف.\nوهناك جليد على جناحيه الكبيرين.",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "brask",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "tobin",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "dragon",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "chest",
+     "bones"
+    ],
+    "light": "lantern",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Brask lifts his sword. “It is sleeping. Now is our chance!”\nTobin looks at the ice and thinks.\n“Stop! The dragon did not take our fire. Its fire is dying!”",
+   "ar": "يرفع براسك سيفه. «إنه نائم. هذه فرصتنا!»\nينظر توبين إلى الجليد ويفكّر.\n«توقّف! التنّين لم يأخذ نارنا. ناره هو تموت!»",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "brask",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "tobin",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "dragon",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "chest"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Tobin opens his lantern. He throws flour on the little ember.\nWhoosh! A big, bright flame jumps up.\nThe dragon opens its eyes and breathes in the fire.",
+   "ar": "يفتح توبين فانوسه. ويرمي الطحين على الجمرة الصغيرة.\nفوووش! يقفز لهب كبير ساطع.\nيفتح التنّين عينيه ويستنشق النار.",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "dragon",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "chest",
+     "bones"
+    ],
+    "light": "fire",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The dragon’s fire is hot and strong again.\nIt flies over the valley, and every fire comes back!\nBrask puts down his sword and smiles.",
+   "ar": "عادت نار التنّين حارّة وقوية من جديد.\nيطير فوق الوادي، فتعود كلّ النيران!\nيضع براسك سيفه جانبًا ويبتسم.",
+   "scene": {
+    "sky": "sunset",
+    "land": "hills",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "wave",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "brask",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center",
+      "item": "none"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "dragon",
+      "pos": "sky",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "grass"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "Tobin is home again, next to his warm oven.\nEvery spring, he bakes a giant loaf for the dragon.\nNow they are good friends. The end.",
+   "ar": "عاد توبين إلى بيته، بجانب فرنه الدافئ.\nوفي كلّ ربيع، يخبز رغيفًا عملاقًا للتنّين.\nوالآن هما صديقان حميمان. النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "village",
+    "landmark": {
+     "type": "cottage",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "tobin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center",
+      "item": "basket"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "dragon",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "flowers",
+     "fence",
+     "table"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "baker",
+   "خبّاز"
+  ],
+  [
+   "oven",
+   "فرن"
+  ],
+  [
+   "ember",
+   "جمرة"
+  ],
+  [
+   "soldier",
+   "جنديّ"
+  ],
+  [
+   "dragon",
+   "تنّين"
+  ],
+  [
+   "mountain",
+   "جبل"
+  ],
+  [
+   "bread",
+   "خبز"
+  ],
+  [
+   "wolves",
+   "ذئاب"
+  ],
+  [
+   "storm",
+   "عاصفة"
+  ],
+  [
+   "bridge",
+   "جسر"
+  ],
+  [
+   "gold",
+   "ذهب"
+  ],
+  [
+   "flour",
+   "طحين"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Tobin is a young baker.",
+   true
+  ],
+  [
+   "Brask kills the wolves with his sword.",
+   false
+  ],
+  [
+   "The dragon sleeps on a hill of gold.",
+   true
+  ],
+  [
+   "Tobin throws water on the ember.",
+   false
+  ],
+  [
+   "The dragon flies over the valley, and the fires come back.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Night the Fires Died",
+   "title_ar": "الفصل الأول: ليلة انطفأت النيران",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Tobin was the youngest baker in Barleyford, a sleepy village at the foot of the Grey Mountain. He was not brave, and he had never travelled further than the market in the next valley. He loved his warm oven, his soft chair and the smell of fresh bread in the morning. But one summer night, something strange happened. While he was sleeping, every fire in the village went out at the same moment. Candles, lamps and cooking fires all turned cold. When Tobin ran to his oven, he found only one tiny red ember still glowing in the ashes. His grandmother’s old words came back to him: “Feed a fire, and it will feed you.”",
+    "By morning, snow was falling on the summer flowers, and frost covered every window. Nobody could light a new fire. Then heavy boots stopped outside the bakery, and a tall soldier in armour stepped in. “I am Captain Brask,” he said. “The dragon on the mountain has stolen our fire, and I am going to take it back with my sword.” He looked at the glowing ember. “They say you have the last fire in the valley. A dragon’s cave is dark, and I will need light. Only a baker knows how to keep an ember alive on a long journey. You are coming with me.”"
+   ],
+   "ar": [
+    "كان توبين أصغر خبّاز في قرية بارليفورد، وهي قرية هادئة عند سفح الجبل الرمادي. لم يكن شجاعًا، ولم يسافر يومًا أبعد من سوق الوادي المجاور. كان يحبّ فرنه الدافئ، وكرسيّه الناعم، ورائحة الخبز الطازج في الصباح. لكن في إحدى ليالي الصيف، حدث شيء غريب. بينما كان نائمًا، انطفأت كلّ نار في القرية في اللحظة نفسها. الشموع والمصابيح ونيران الطبخ كلّها صارت باردة. وعندما ركض توبين إلى فرنه، لم يجد إلا جمرة حمراء صغيرة واحدة ما زالت تتوهّج في الرماد. وتذكّر كلمات جدّته القديمة: «أطعِمِ النار، تُطعِمْك.»",
+    "وفي الصباح، كان الثلج يتساقط على أزهار الصيف، والصقيع يغطّي كلّ النوافذ. لم يستطع أحد أن يشعل نارًا جديدة. ثم توقّفت أحذية ثقيلة أمام المخبز، ودخل جنديّ طويل يلبس درعًا. قال: «أنا القائد براسك. التنّين الذي في الجبل سرق نارنا، وسأستعيدها بسيفي.» ثم نظر إلى الجمرة المتوهّجة وقال: «يقولون إنّ عندك آخر نار في الوادي. كهف التنّين مظلم، وسأحتاج إلى ضوء. ولا أحد يعرف كيف يُبقي جمرة حيّة في رحلة طويلة إلا الخبّاز. ستأتي معي.»"
+   ],
+   "words": [
+    [
+     "ember",
+     "جمرة"
+    ],
+    [
+     "glow",
+     "يتوهّج"
+    ],
+    [
+     "frost",
+     "صقيع"
+    ],
+    [
+     "armour",
+     "درع"
+    ],
+    [
+     "journey",
+     "رحلة"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Bread for the Wolves",
+   "title_ar": "الفصل الثاني: خبز للذئاب",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "Tobin did not want to go. His legs were shaking at the thought of a dragon. But when he looked out of the window, he saw the village children shivering in their blankets, with no warm food and no light. So he put the ember into a small iron lantern and packed a bag of bread, a jar of honey and a sack of flour. Every hour, he fed the ember a tiny piece of wood, just as he did at home on cold nights. Brask laughed at the flour. “Are you going to bake the dragon a cake?” Tobin did not answer. A baker never travels without flour.",
+    "On the second night, they were walking through a dark pine forest when grey shapes appeared between the trees. Wolves! Their eyes were shining in the lantern light, and they were growling. Brask pulled out his sword and stepped forward. “Stay behind me!” But Tobin noticed something. The wolves were thin, and he could see their ribs. “They are not wicked,” he said quietly. “They are hungry, like everyone in this cold.” He took out three loaves and threw them onto the snow. The wolves sniffed the bread, grabbed it and disappeared into the darkness. Brask stared at him and slowly put his sword away."
+   ],
+   "ar": [
+    "لم يكن توبين يريد الذهاب. كانت ساقاه ترتجفان كلّما فكّر في التنّين. لكنه نظر من النافذة فرأى أطفال القرية يرتجفون تحت بطانياتهم، بلا طعام دافئ ولا ضوء. فوضع الجمرة في فانوس حديديّ صغير، وحزم كيسًا من الخبز، وجرّة عسل، وكيسًا من الطحين. وفي كلّ ساعة كان يُطعم الجمرة قطعة خشب صغيرة، كما يفعل في بيته في الليالي الباردة. ضحك براسك من الطحين وقال: «هل ستخبز للتنّين كعكة؟» لم يُجب توبين. فالخبّاز لا يسافر أبدًا بلا طحين.",
+    "في الليلة الثانية، بينما كانا يمشيان في غابة صنوبر مظلمة، ظهرت أشكال رمادية بين الأشجار. ذئاب! كانت عيونها تلمع في ضوء الفانوس، وكانت تزمجر. سحب براسك سيفه وتقدّم قائلًا: «ابقَ خلفي!» لكنّ توبين لاحظ شيئًا. كانت الذئاب نحيلة، وضلوعها ظاهرة. قال بهدوء: «ليست شرّيرة. إنها جائعة، مثل الجميع في هذا البرد.» وأخرج ثلاثة أرغفة ورماها على الثلج. شمّت الذئاب الخبز، وخطفته، ثم اختفت في الظلام. حدّق براسك فيه، وأعاد سيفه إلى مكانه ببطء."
+   ],
+   "words": [
+    [
+     "shiver",
+     "يرتجف من البرد"
+    ],
+    [
+     "pack",
+     "يحزم (الأمتعة)"
+    ],
+    [
+     "growl",
+     "يزمجر"
+    ],
+    [
+     "notice",
+     "يلاحظ"
+    ],
+    [
+     "disappear",
+     "يختفي"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Storm on the Bridge",
+   "title_ar": "الفصل الثالث: العاصفة فوق الجسر",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "The path to the mountain crossed a narrow rope bridge high above a deep valley. Halfway across, a terrible storm broke over them. Lightning lit up the sky, and the wind swung the bridge from side to side. Tobin held on to the rope with one hand and the lantern with the other. Suddenly, a cold wind blew straight into the lantern, and the ember almost went out. It was only a tiny orange dot now. Without thinking, Tobin knelt down, opened his coat and held the lantern against his chest. His fingers turned blue with cold, but he whispered to the ember and fed it gently until it glowed again.",
+    "At last they reached the mountain and climbed into a huge cave. Inside, the air was colder than the snow outside. In the middle of the cave lay the dragon, sleeping on a hill of gold coins. It was bigger than a house, but it did not look frightening. Its scales were grey, not red, and they were covered in thin white ice. Every few seconds, its great body shook. Tobin had seen that kind of shaking before, on winter mornings, in old people who could not get warm. “Brask,” he whispered, “I don’t think this dragon is well.”"
+   ],
+   "ar": [
+    "كان الطريق إلى الجبل يعبر جسرًا ضيّقًا من الحبال، عاليًا فوق وادٍ عميق. وفي منتصف الطريق، هبّت عليهما عاصفة رهيبة. أضاء البرق السماء، وأخذت الريح تهزّ الجسر يمينًا ويسارًا. تمسّك توبين بالحبل بيد، وبالفانوس باليد الأخرى. وفجأة، اندفعت ريح باردة إلى داخل الفانوس، فكادت الجمرة تنطفئ. صارت مجرّد نقطة برتقالية صغيرة. ومن غير تفكير، ركع توبين، وفتح معطفه، وضمّ الفانوس إلى صدره. صارت أصابعه زرقاء من البرد، لكنه ظلّ يهمس للجمرة ويُطعمها بلطف حتى توهّجت من جديد.",
+    "وأخيرًا وصلا إلى الجبل ودخلا كهفًا ضخمًا. كان الهواء في الداخل أبرد من الثلج في الخارج. وفي وسط الكهف كان التنّين نائمًا فوق تلّ من العملات الذهبية. كان أكبر من بيت، لكنه لم يكن يبدو مخيفًا. كانت حراشفه رمادية لا حمراء، وتغطّيها طبقة رقيقة من الجليد الأبيض. وكلّ بضع ثوانٍ كان جسمه الضخم يرتجف. لقد رأى توبين هذا الارتجاف من قبل، في صباحات الشتاء، عند كبار السنّ الذين لا يستطيعون أن يشعروا بالدفء. همس: «براسك، لا أظنّ أنّ هذا التنّين بخير.»"
+   ],
+   "words": [
+    [
+     "narrow",
+     "ضيّق"
+    ],
+    [
+     "halfway",
+     "في منتصف الطريق"
+    ],
+    [
+     "whisper",
+     "يهمس"
+    ],
+    [
+     "scales",
+     "حراشف"
+    ],
+    [
+     "frightening",
+     "مخيف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Truth in the Ice",
+   "title_ar": "الفصل الرابع: الحقيقة في الجليد",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "But Brask was not listening. He lifted his sword high above his head. “It is sleeping,” he said. “Now is our chance.” Tobin was thinking hard. The frost had started on the mountain and then moved down to the village. The dragon was shaking, and ice covered its wings. Then he remembered the old song that grandmothers sang in Barleyford: “The first fire came from the mountain.” Suddenly, he understood. “Stop!” he cried, and he jumped between the sword and the dragon. “It didn’t steal our fire! All our fires came from its fire, long ago. Its fire is dying, and ours are dying with it!”",
+    "Brask hesitated. “Then what can we do? We can’t light a dragon!” Tobin looked at his lantern, and then at the sack on his back. Every baker knows a secret: flour in the air burns with a sudden, bright flash. He opened the lantern, held it close to the dragon’s nose and threw a big handful of flour over the ember. Whoosh! A great ball of golden flame jumped up and lit the whole cave. Slowly, the dragon opened its eyes. They were the colour of honey. It took a long, deep breath and pulled the flame into its chest."
+   ],
+   "ar": [
+    "لكنّ براسك لم يكن يستمع. رفع سيفه عاليًا فوق رأسه وقال: «إنه نائم. هذه فرصتنا.» أمّا توبين فكان يفكّر بعمق. لقد بدأ الصقيع من الجبل ثم نزل إلى القرية. والتنّين يرتجف، والجليد يغطّي جناحيه. ثم تذكّر الأغنية القديمة التي كانت الجدّات يغنّينها في بارليفورد: «النار الأولى جاءت من الجبل.» وفجأة فهم كلّ شيء. صرخ: «توقّف!» وقفز بين السيف والتنّين. «إنه لم يسرق نارنا! كلّ نيراننا جاءت من ناره منذ زمن بعيد. ناره تموت، ونيراننا تموت معها!»",
+    "تردّد براسك وقال: «إذن ماذا نفعل؟ لا نستطيع أن نشعل تنّينًا!» نظر توبين إلى فانوسه، ثم إلى الكيس على ظهره. فكلّ خبّاز يعرف سرًّا: الطحين حين ينتشر في الهواء يشتعل بوميض مفاجئ وساطع. ففتح الفانوس، وقرّبه من أنف التنّين، ورمى حفنة كبيرة من الطحين فوق الجمرة. فوووش! قفزت كرة عظيمة من اللهب الذهبي وأضاءت الكهف كلّه. وببطء، فتح التنّين عينيه. كانتا بلون العسل. ثم أخذ نَفَسًا طويلًا عميقًا، وسحب اللهب إلى صدره."
+   ],
+   "words": [
+    [
+     "hesitate",
+     "يتردّد"
+    ],
+    [
+     "remember",
+     "يتذكّر"
+    ],
+    [
+     "steal",
+     "يسرق"
+    ],
+    [
+     "sudden",
+     "مفاجئ"
+    ],
+    [
+     "breath",
+     "نَفَس"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: Fire Comes Home",
+   "title_ar": "الفصل الخامس: النار تعود إلى البيت",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "For a moment, nothing happened. Then a soft red light began to glow inside the dragon, like coals in an oven. The ice on its wings cracked and fell to the ground, and steam rose from its scales. The dragon stood up, shook the gold off its back and spoke in a deep voice. “For a hundred years, nobody has visited me except thieves. You came with bread and fire instead.” It carried Tobin and Brask out of the cave and flew over the valley. Everywhere it passed, chimneys began to smoke and windows began to glow. Brask laid his sword on the snow and smiled for the first time.",
+    "When Tobin got home, the snow was melting and the children were dancing in the street. That night, he slept in his own soft chair beside his own warm oven, and he did not dream of adventures at all. But he never forgot his new friend. Every spring, the people of Barleyford watched a little baker climb the Grey Mountain with a giant loaf of honey bread on his back. And every spring, a happy dragon was waiting for him at the top. Tobin had learned something on his journey: you do not always need a sword. Sometimes you only need a warm heart and a handful of flour."
+   ],
+   "ar": [
+    "للحظة، لم يحدث شيء. ثم بدأ ضوء أحمر هادئ يتوهّج داخل التنّين، مثل الجمر في الفرن. تشقّق الجليد على جناحيه وسقط على الأرض، وتصاعد البخار من حراشفه. نهض التنّين، ونفض الذهب عن ظهره، وتكلّم بصوت عميق: «منذ مئة سنة لم يزرني أحد إلا اللصوص. أمّا أنتما فجئتما بالخبز والنار.» ثم حمل توبين وبراسك خارج الكهف وطار فوق الوادي. وأينما مرّ، بدأ الدخان يتصاعد من المداخن، وبدأت النوافذ تتوهّج. ووضع براسك سيفه على الثلج، وابتسم لأوّل مرّة.",
+    "وحين وصل توبين إلى بيته، كان الثلج يذوب، والأطفال يرقصون في الشارع. وفي تلك الليلة، نام في كرسيّه الناعم بجانب فرنه الدافئ، ولم يحلم بالمغامرات أبدًا. لكنه لم ينسَ صديقه الجديد. ففي كلّ ربيع، كان أهل بارليفورد يرون خبّازًا صغيرًا يصعد الجبل الرمادي وعلى ظهره رغيف عملاق من خبز العسل. وفي كلّ ربيع، كان تنّين سعيد ينتظره في القمّة. لقد تعلّم توبين شيئًا في رحلته: لا تحتاج دائمًا إلى سيف. أحيانًا يكفيك قلب دافئ وحفنة من الطحين."
+   ],
+   "words": [
+    [
+     "crack",
+     "يتشقّق"
+    ],
+    [
+     "steam",
+     "بخار"
+    ],
+    [
+     "chimney",
+     "مدخنة"
+    ],
+    [
+     "melt",
+     "يذوب"
+    ],
+    [
+     "thieves",
+     "لصوص"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why did Captain Brask need Tobin?",
+   [
+    "To bake bread for the soldiers",
+    "To keep the last ember alive",
+    "To fight the dragon"
+   ],
+   1
+  ],
+  [
+   "What did Tobin do when the wolves came?",
+   [
+    "He fought them with a sword",
+    "He ran back home",
+    "He threw bread to them"
+   ],
+   2
+  ],
+  [
+   "What happened to the ember on the bridge?",
+   [
+    "It almost went out",
+    "It fell into the valley",
+    "It set the bridge on fire"
+   ],
+   0
+  ],
+  [
+   "Why was the dragon shaking?",
+   [
+    "It was angry with the village",
+    "Its fire was dying",
+    "It was afraid of Brask"
+   ],
+   1
+  ],
+  [
+   "How did Tobin make a big flame?",
+   [
+    "He threw flour on the ember",
+    "He used the dragon’s gold",
+    "He hit two stones together"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Tobin won without a sword. Think of a problem that you solved with kindness or a clever idea, and tell the story in five sentences.",
+ "talk_ar": "توبين فاز من غير سيف. فكّر في مشكلة حلّيتها بطيبة أو بفكرة ذكية، واحكِ القصة في خمس جمل."
+}

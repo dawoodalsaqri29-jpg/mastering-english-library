@@ -1,0 +1,781 @@
+{
+ "n": 7,
+ "slug": "djinn-riddles",
+ "title": "The Djinn’s Three Riddles",
+ "series_tag": "",
+ "subtitle_ar": "ألغاز الجنّيّ الثلاثة",
+ "genre": "Fantasy",
+ "based_on": "Original story",
+ "blurb_en": "When her little brother drinks from a djinn’s well, Nour must answer three riddles to set him free. But the third riddle has no answer, and the djinn never loses… unless a clever girl listens to every word.",
+ "blurb_ar": "حين يشرب أخوها الصغير من بئر جنّيّ، يجب على نور أن تحلّ ثلاثة ألغاز لتحرّره. لكنّ اللغز الثالث بلا جواب، والجنّيّ لا يخسر أبدًا… إلا إذا أصغت فتاة ذكية إلى كلّ كلمة.",
+ "palette": "amber",
+ "cast": [
+  {
+   "id": "nour",
+   "name": "Nour",
+   "body": "girl",
+   "outfit": "abaya",
+   "head": "hood",
+   "item": "lantern",
+   "height": 0.94
+  },
+  {
+   "id": "zaid",
+   "name": "Zaid",
+   "body": "child",
+   "outfit": "tunic",
+   "head": "short_hair",
+   "item": "none",
+   "height": 0.8
+  },
+  {
+   "id": "moza",
+   "name": "Grandma Moza",
+   "body": "old_woman",
+   "outfit": "abaya",
+   "head": "hood",
+   "item": "staff"
+  }
+ ],
+ "cover_scene": {
+  "sky": "desert_night",
+  "land": "desert",
+  "landmark": {
+   "type": "palm_oasis",
+   "side": "left"
+  },
+  "sky_items": [
+   "crescent",
+   "stars"
+  ],
+  "chars": [
+   {
+    "id": "nour",
+    "pose": "stand",
+    "face": "right",
+    "pos": "left"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "djinn",
+    "pos": "right",
+    "size": "xl",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "jar"
+  ],
+  "light": "magic",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Nour and her little brother, Zaid, travel with a camel caravan.\nThe desert is very hot.\nThere is no more water.",
+   "ar": "تسافر نور وأخوها الصغير زيد مع قافلة من الجِمال.\nالصحراء حارّة جدًّا.\nولم يبقَ ماء.",
+   "scene": {
+    "sky": "desert_day",
+    "land": "desert",
+    "landmark": {
+     "type": "ruins",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun"
+    ],
+    "chars": [
+     {
+      "id": "zaid",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "nour",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "camel",
+      "pos": "right",
+      "size": "l",
+      "face": "right"
+     },
+     {
+      "type": "camel",
+      "pos": "far",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "rocks"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Grandma Moza points to an oasis. “Be careful. A djinn lives there.\nA djinn must keep his words.\nListen to every word.”",
+   "ar": "تشير الجدّة موزة إلى واحة. «احذروا. هناك يعيش جنّيّ.\nالجنّيّ يجب أن يلتزم بكلماته.\nفأصغوا إلى كلّ كلمة.»",
+   "scene": {
+    "sky": "sunset",
+    "land": "desert",
+    "landmark": {
+     "type": "palm_oasis",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "moza",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "nour",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "tent",
+     "campfire"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At night, Zaid is very thirsty. He runs to the well and drinks.\nWhoosh!\nA giant djinn comes out of the well!",
+   "ar": "في الليل، يشعر زيد بعطش شديد. يركض إلى البئر ويشرب.\nفُووش!\nيخرج جنّيّ عملاق من البئر!",
+   "scene": {
+    "sky": "desert_night",
+    "land": "desert",
+    "landmark": {
+     "type": "well",
+     "side": "center"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "zaid",
+      "pose": "fall",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "center",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "“You are stealing my water!” the djinn shouts.\nHe puts Zaid in a glass jar.\nNour runs to the well, but she is too late.",
+   "ar": "«أنت تسرق مائي!» يصرخ الجنّيّ.\nويضع زيدًا في جرّة زجاجية.\nتركض نور إلى البئر، لكنها تصل متأخّرة.",
+   "scene": {
+    "sky": "desert_night",
+    "land": "desert",
+    "landmark": {
+     "type": "palm_oasis",
+     "side": "left"
+    },
+    "sky_items": [
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "run",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "jar"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "The djinn takes Nour to his cave of gold.\n“Answer my three riddles,” he says, “and your brother is free.\nIf you cannot answer, you stay here forever.”",
+   "ar": "يأخذ الجنّيّ نور إلى كهفه المليء بالذهب.\n«أجيبي عن ألغازي الثلاثة»، يقول، «وأخوك حرّ.\nوإن لم تستطيعي أن تجيبي، تبقين هنا إلى الأبد.»",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "chest",
+     "jar",
+     "torch_on_wall"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Riddle one: “I have no legs, but I walk across the desert.”\n“The wind!” says Nour.\nRiddle two: “I am long in the morning and short at noon.” “Your shadow!”",
+   "ar": "اللغز الأول: «ليس لي أرجل، لكنني أمشي عبر الصحراء.»\n«الريح!» تقول نور.\nاللغز الثاني: «أنا طويل في الصباح وقصير عند الظهر.» «ظلّك!»",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "jar",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Riddle three: “What am I thinking now?”\nNour says, “You think I will fail.”\n“Wrong!” laughs the djinn. “Now you stay here forever!”",
+   "ar": "اللغز الثالث: «بماذا أفكّر الآن؟»\nتقول نور: «تظنّ أنني سأفشل.»\n«خطأ!» يضحك الجنّيّ. «الآن ستبقين هنا إلى الأبد!»",
+   "scene": {
+    "sky": "magic",
+    "land": "cave",
+    "landmark": {
+     "type": "throne",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "jar",
+     "coins"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "But Nour remembers Grandma’s words. She smiles.\n“You say, ‘Answer my riddles.’ You don’t say ‘answer them right.’\nI answer all three. So Zaid is free!”",
+   "ar": "لكنّ نور تتذكّر كلمات جدّتها. فتبتسم.\n«أنت تقول: ‹أجيبي عن ألغازي.› ولا تقول: ‹أجيبي إجابة صحيحة.›\nوأنا أجبت عن الثلاثة. إذن زيد حرّ!»",
+   "scene": {
+    "sky": "magic",
+    "land": "cave",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "jar",
+     "coins"
+    ],
+    "light": "magic",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The djinn is very angry. The cave shakes, and the gold falls.\nBut a djinn must keep his words.\nThe glass jar breaks, and Zaid runs to Nour.",
+   "ar": "يغضب الجنّيّ غضبًا شديدًا. يهتزّ الكهف، ويتساقط الذهب.\nلكنّ الجنّيّ يجب أن يلتزم بكلماته.\nفتنكسر الجرّة الزجاجية، ويركض زيد إلى نور.",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "nour",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "zaid",
+      "pose": "run",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "djinn",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "coins",
+     "rocks",
+     "chest"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The djinn laughs. “Clever girl! Take water for your caravan.”\nThe well is full again.\nAt the camp, everyone listens to Nour’s story. The end.",
+   "ar": "يضحك الجنّيّ. «يا لكِ من فتاة ذكية! خذي ماءً لقافلتك.»\nتمتلئ البئر من جديد.\nوفي المخيّم، يستمع الجميع إلى حكاية نور. النهاية.",
+   "scene": {
+    "sky": "desert_night",
+    "land": "desert",
+    "landmark": {
+     "type": "palm_oasis",
+     "side": "right"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "moza",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "nour",
+      "pose": "raise",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "zaid",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "camel",
+      "pos": "far",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "campfire",
+     "tent"
+    ],
+    "light": "fire",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "caravan",
+   "قافلة"
+  ],
+  [
+   "camel",
+   "جمل"
+  ],
+  [
+   "desert",
+   "صحراء"
+  ],
+  [
+   "water",
+   "ماء"
+  ],
+  [
+   "oasis",
+   "واحة"
+  ],
+  [
+   "djinn",
+   "جنّيّ"
+  ],
+  [
+   "well",
+   "بئر"
+  ],
+  [
+   "thirsty",
+   "عطشان"
+  ],
+  [
+   "jar",
+   "جرّة"
+  ],
+  [
+   "riddle",
+   "لغز"
+  ],
+  [
+   "wind",
+   "ريح"
+  ],
+  [
+   "shadow",
+   "ظلّ"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Nour and Zaid travel with a camel caravan.",
+   true
+  ],
+  [
+   "The djinn lives in a big city.",
+   false
+  ],
+  [
+   "Zaid drinks water from the well.",
+   true
+  ],
+  [
+   "Nour cannot answer the first riddle.",
+   false
+  ],
+  [
+   "At the end, the well is full again.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Caravan Without Water",
+   "title_ar": "الفصل الأول: قافلة بلا ماء",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Nour was fourteen, and she had crossed the great desert with her family’s caravan many times. This year, however, everything had gone wrong. A sandstorm had buried the road, two water bags had burst, and now the camels were walking slowly with their heads down. Nour’s little brother, Zaid, was only seven. He kept asking for water, and every time, Nour gave him a little from her own cup and pretended she wasn’t thirsty. At night, the travellers sat close together around the fire, but nobody sang, because everyone was too tired and too worried.",
+    "On the fifth evening, old Grandma Moza, who had travelled these sands for sixty years, pointed towards a dark line of palm trees on the horizon. “That is the Oasis of the Seven Palms,” she said, “but no caravan stops there. It belongs to a djinn.” Nour asked if djinn were really so dangerous. Grandma held her hand tightly. “They are strong and proud,” she answered, “but a djinn must always keep his exact words. If you ever speak to one, listen to every word he says, and remember it.” Nour did not know then how important those words would be."
+   ],
+   "ar": [
+    "كانت نور في الرابعة عشرة، وقد عبرت الصحراء الكبرى مع قافلة عائلتها مرات كثيرة. لكنّ كلّ شيء سار على نحو سيّئ هذا العام. فقد دفنت عاصفة رملية الطريق، وانفجرت قربتان من قِرَب الماء، وصارت الجِمال تمشي ببطء ورؤوسها منخفضة. وكان أخوها الصغير زيد في السابعة فقط. ظلّ يطلب الماء، وفي كلّ مرة كانت نور تعطيه قليلًا من كوبها، وتتظاهر بأنها ليست عطشى. وفي الليل، كان المسافرون يجلسون متقاربين حول النار، لكنّ أحدًا لم يغنِّ، لأنّ الجميع كانوا متعبين وقلقين.",
+    "وفي المساء الخامس، أشارت الجدّة موزة، التي جابت هذه الرمال ستّين عامًا، إلى خطّ داكن من النخيل في الأفق، وقالت: «تلك واحة النخلات السبع، لكنّ أيّ قافلة لا تتوقّف هناك. إنها مُلك لجنّيّ.» سألت نور إن كان الجنّ خطرين حقًّا. فأمسكت الجدّة يدها بقوة وأجابت: «إنهم أقوياء ومتكبّرون، لكنّ الجنّيّ يجب أن يلتزم دائمًا بكلماته بالضبط. فإذا كلّمتِ جنّيًّا يومًا، فأصغي إلى كلّ كلمة يقولها، واحفظيها.» ولم تكن نور تعرف حينها كم ستكون تلك الكلمات مهمّة."
+   ],
+   "words": [
+    [
+     "buried",
+     "مدفون / دفن"
+    ],
+    [
+     "burst",
+     "ينفجر / يتمزّق"
+    ],
+    [
+     "pretend",
+     "يتظاهر"
+    ],
+    [
+     "horizon",
+     "الأفق"
+    ],
+    [
+     "exact",
+     "دقيق / بالضبط"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Djinn in the Well",
+   "title_ar": "الفصل الثاني: الجنّيّ في البئر",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "That night, Nour woke up and saw that Zaid’s blanket was empty. Under the bright stars, a line of small footprints led away from the tents towards the palm trees. Nour grabbed a lantern and followed them as fast as she could. When she reached the oasis, she saw her brother kneeling beside an old stone well, drinking water from his hands. “Zaid, stop!” she cried. But it was too late. The ground began to shake, and a column of blue smoke rose out of the well, growing taller and taller until it hid the moon.",
+    "The smoke turned into a giant with burning eyes and a voice like thunder. “Who is stealing my water?” the djinn roared. Before Nour could reach him, Zaid was lifted into the air, and in a flash he was shut inside a glass jar no bigger than a melon. He was banging on the glass with his tiny fists. “Let him go!” Nour shouted. “He’s only a child, and he was thirsty!” The djinn looked down at her and smiled a slow, cruel smile. “Then come with me, little girl, and we shall see how brave you are.”"
+   ],
+   "ar": [
+    "في تلك الليلة، استيقظت نور فرأت أنّ فراش زيد فارغ. وتحت النجوم اللامعة، كان خطّ من آثار أقدام صغيرة يمتدّ من الخيام نحو النخيل. أمسكت نور فانوسًا بسرعة، وتبعت الآثار بأقصى ما تستطيع. وحين وصلت إلى الواحة، رأت أخاها راكعًا بجانب بئر حجرية قديمة يشرب الماء بيديه. صرخت: «زيد، توقّف!» لكنّ الأوان كان قد فات. بدأت الأرض تهتزّ، وارتفع من البئر عمود من الدخان الأزرق، وظلّ يعلو ويعلو حتى حجب القمر.",
+    "تحوّل الدخان إلى عملاق بعينين ملتهبتين وصوت كالرعد. زأر الجنّيّ: «من يسرق مائي؟» وقبل أن تصل نور إلى أخيها، ارتفع زيد في الهواء، وفي لمح البصر صار محبوسًا داخل جرّة زجاجية لا تزيد عن حجم البطّيخة. كان يطرق الزجاج بقبضتيه الصغيرتين. صاحت نور: «أطلِقه! إنه مجرّد طفل، وكان عطشان!» نظر الجنّيّ إليها من الأعلى، وابتسم ابتسامة بطيئة قاسية: «إذن تعالي معي يا صغيرة، ولنرَ كم أنتِ شجاعة.»"
+   ],
+   "words": [
+    [
+     "footprints",
+     "آثار أقدام"
+    ],
+    [
+     "grab",
+     "يمسك بسرعة"
+    ],
+    [
+     "column",
+     "عمود"
+    ],
+    [
+     "roar",
+     "يزأر"
+    ],
+    [
+     "cruel",
+     "قاسٍ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Cave of Gold",
+   "title_ar": "الفصل الثالث: كهف الذهب",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "In the blink of an eye, Nour found herself in a huge cave under the sand. Its walls were covered in gold coins, jewels and silver lamps, and in the middle stood a throne made of black glass. Thousands of candles were burning, but the air was cold. The djinn sat down and placed the jar with Zaid beside him. “I am Hazzar, lord of this oasis,” he said. “Answer my three riddles, and your brother is free. But if you cannot answer, you will stay here as my servant forever.” Nour remembered Grandma’s advice and quietly repeated every word to herself.",
+    "“First riddle,” said Hazzar. “I have no legs, but I walk across the whole desert. I have no hands, but I build hills of sand every night.” Nour thought about the sandstorm that had buried their road. “The wind,” she answered. The djinn frowned. “Second riddle. I follow you all day. I am long in the morning, short at noon, and long again in the evening.” Nour looked down at the dark shape that the lantern made beside her feet. “Your shadow,” she said. The djinn’s eyes burned brighter, and the gold on the walls began to tremble."
+   ],
+   "ar": [
+    "وفي طرفة عين، وجدت نور نفسها في كهف هائل تحت الرمال. كانت جدرانه مغطّاة بالقطع الذهبية والجواهر والمصابيح الفضّية، وفي وسطه عرش من الزجاج الأسود. كانت آلاف الشموع مشتعلة، لكنّ الهواء كان باردًا. جلس الجنّيّ ووضع الجرّة التي فيها زيد بجانبه، وقال: «أنا هزّار، سيّد هذه الواحة. أجيبي عن ألغازي الثلاثة، وأخوك حرّ. لكن إن لم تستطيعي أن تجيبي، فستبقين هنا خادمة لي إلى الأبد.» تذكّرت نور نصيحة جدّتها، وأخذت تكرّر كلّ كلمة لنفسها بهدوء.",
+    "قال هزّار: «اللغز الأول: ليس لي أرجل، لكنني أمشي عبر الصحراء كلّها. وليس لي أيدٍ، لكنني أبني تلالًا من الرمل كلّ ليلة.» فكّرت نور في العاصفة الرملية التي دفنت طريقهم، وأجابت: «الريح.» عبس الجنّيّ وقال: «اللغز الثاني: أتبعك طوال النهار. أكون طويلًا في الصباح، وقصيرًا عند الظهر، وطويلًا من جديد في المساء.» نظرت نور إلى الشكل الداكن الذي صنعه الفانوس بجانب قدميها، وقالت: «ظلّك.» فاشتعلت عينا الجنّيّ أكثر، وبدأ الذهب على الجدران يرتجف."
+   ],
+   "words": [
+    [
+     "jewels",
+     "جواهر"
+    ],
+    [
+     "throne",
+     "عرش"
+    ],
+    [
+     "servant",
+     "خادم"
+    ],
+    [
+     "advice",
+     "نصيحة"
+    ],
+    [
+     "frown",
+     "يعبس"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Impossible Riddle",
+   "title_ar": "الفصل الرابع: اللغز المستحيل",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Hazzar leaned forward until his face was close to hers. “Third riddle,” he whispered. “What am I thinking right now?” Nour’s heart sank. Nobody could know what a djinn was thinking. It wasn’t a real riddle at all; it was a trap. She took a breath and answered, “You are thinking that I will fail.” The djinn threw back his head and laughed so loudly that coins rained down from the ceiling. “Wrong! You lose, girl. From tonight, you and your brother will serve me forever.” Inside the jar, Zaid pressed his face against the glass and began to cry.",
+    "Nour closed her eyes. Grandma’s voice came back to her: listen to every word. Slowly, she repeated the djinn’s promise in her head, and suddenly she smiled. “Wait,” she said, standing up straight. “You said, ‘Answer my three riddles, and your brother is free.’ You never said I had to answer correctly. And you said I would stay only if I cannot answer. Well, I can answer, and I did. I gave you three answers.” Inside the jar, Zaid stopped crying. For the first time in a thousand years, the great djinn had nothing to say."
+   ],
+   "ar": [
+    "انحنى هزّار إلى الأمام حتى صار وجهه قريبًا من وجهها، وهمس: «اللغز الثالث: بماذا أفكّر الآن؟» غاص قلب نور. فلا أحد يستطيع أن يعرف بماذا يفكّر الجنّيّ. لم يكن هذا لغزًا حقيقيًّا على الإطلاق، بل كان فخًّا. أخذت نفسًا وأجابت: «أنت تفكّر في أنني سأفشل.» رمى الجنّيّ رأسه إلى الخلف وضحك بصوت عالٍ حتى تساقطت القطع الذهبية من السقف كالمطر: «خطأ! لقد خسرتِ يا فتاة. ومن الليلة، ستخدمينني أنتِ وأخوك إلى الأبد.» وفي داخل الجرّة، ألصق زيد وجهه بالزجاج وبدأ يبكي.",
+    "أغمضت نور عينيها. وعاد إليها صوت جدّتها: أصغي إلى كلّ كلمة. وببطء، كرّرت وعد الجنّيّ في رأسها، وفجأة ابتسمت. وقفت مستقيمة وقالت: «انتظر. لقد قلتَ: ‹أجيبي عن ألغازي الثلاثة، وأخوك حرّ.› ولم تقل أبدًا إنّ عليّ أن أجيب إجابة صحيحة. وقلتَ إنني سأبقى فقط إن لم أستطع أن أجيب. وأنا أستطيع أن أجيب، وقد أجبت. أعطيتك ثلاث إجابات.» وفي داخل الجرّة، توقّف زيد عن البكاء. ولأوّل مرة منذ ألف عام، لم يجد الجنّيّ العظيم ما يقوله."
+   ],
+   "words": [
+    [
+     "lean",
+     "ينحني / يميل"
+    ],
+    [
+     "trap",
+     "فخّ"
+    ],
+    [
+     "ceiling",
+     "سقف"
+    ],
+    [
+     "promise",
+     "وعد"
+    ],
+    [
+     "correctly",
+     "بشكل صحيح"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: A Djinn Keeps His Word",
+   "title_ar": "الفصل الخامس: الجنّيّ يفي بكلمته",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Hazzar jumped up from his throne, and his anger shook the whole cave. Sand poured from the roof, and piles of gold crashed to the floor. “Tricks!” he roared. “Children’s tricks!” But no djinn can break his own words, not even the most powerful one, and Hazzar knew it. For a long moment, the cave was silent. With a sound like breaking ice, the glass jar cracked open. Zaid tumbled out and ran straight into his sister’s arms. Nour held him so tightly that he laughed. Above them, the djinn slowly sat down again, and to her surprise, he was smiling.",
+    "“In a thousand years, nobody has beaten me with words,” Hazzar said. “You have earned more than your brother, clever one. Take water for your caravan, as much as you need.” At once they were standing beside the well again, under a pink morning sky, and the water was rising to the very top. That day the camels drank until they were full, and the caravan finally found its road home. And at every campfire after that, the children of the desert begged Nour to tell the story of the djinn and his three riddles."
+   ],
+   "ar": [
+    "قفز هزّار من فوق عرشه، فهزّ غضبه الكهف كلّه. انهمر الرمل من السقف، وتساقطت أكوام الذهب على الأرض. زأر: «حِيَل! حِيَل أطفال!» لكنّ أيّ جنّيّ لا يستطيع أن ينقض كلماته، حتى أقواهم، وكان هزّار يعرف ذلك. وساد الكهفَ صمتٌ طويل. وبصوت يشبه انكسار الجليد، تشقّقت الجرّة الزجاجية وانفتحت. تدحرج زيد خارجها، وركض مباشرة إلى ذراعَي أخته. ضمّته نور بقوة حتى ضحك. وفوقهما، جلس الجنّيّ على عرشه ببطء من جديد، ولدهشتها كان يبتسم.",
+    "قال هزّار: «منذ ألف عام، لم يهزمني أحد بالكلمات. لقد استحققتِ أكثر من أخيك أيتها الذكية. خذي ماءً لقافلتك، بقدر ما تحتاجين.» وفي الحال، وجدا نفسيهما واقفين بجانب البئر من جديد، تحت سماء صباح وردية، والماء يرتفع حتى حافّتها. وفي ذلك اليوم، شربت الجِمال حتى ارتوت، ووجدت القافلة أخيرًا طريق العودة إلى الديار. ومنذ ذلك الحين، وعند كلّ نار في المخيّم، كان أطفال الصحراء يتوسّلون إلى نور أن تحكي لهم قصة الجنّيّ وألغازه الثلاثة."
+   ],
+   "words": [
+    [
+     "pour",
+     "ينهمر / يصبّ"
+    ],
+    [
+     "tumble",
+     "يتدحرج"
+    ],
+    [
+     "surprise",
+     "دهشة / مفاجأة"
+    ],
+    [
+     "earn",
+     "يستحقّ / يكسب"
+    ],
+    [
+     "beg",
+     "يتوسّل"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What advice did Grandma Moza give Nour?",
+   [
+    "Never travel at night",
+    "Listen to every word a djinn says",
+    "Always carry gold"
+   ],
+   1
+  ],
+  [
+   "Why did the djinn catch Zaid?",
+   [
+    "Zaid drank water from his well",
+    "Zaid broke his lamp",
+    "Zaid laughed at him"
+   ],
+   0
+  ],
+  [
+   "What was the answer to the second riddle?",
+   [
+    "The moon",
+    "The wind",
+    "A shadow"
+   ],
+   2
+  ],
+  [
+   "Why was the third riddle unfair?",
+   [
+    "It was in another language",
+    "Nobody could know what the djinn was thinking",
+    "It had no words"
+   ],
+   1
+  ],
+  [
+   "How did Nour win?",
+   [
+    "She used the djinn’s exact words",
+    "She broke the jar with a stone",
+    "She gave the djinn gold"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Nour won because she listened carefully to the djinn’s exact words. Write your own riddle about the desert or the sea, and ask a friend to answer it.",
+ "talk_ar": "نور فازت لأنها سمعت كلام الجنّي كلمة كلمة. اكتب لغز من عندك عن الصحراء أو البحر، وخلّ صديقك يحاول يحلّه."
+}

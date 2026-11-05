@@ -1,0 +1,786 @@
+{
+ "n": 8,
+ "slug": "midnight-library",
+ "title": "Midnight at the Old Library",
+ "series_tag": "",
+ "subtitle_ar": "منتصف الليل في المكتبة القديمة",
+ "genre": "Mystery",
+ "based_on": "Original story",
+ "blurb_en": "At midnight, the lights go out in an old Muscat library, and a three-hundred-year-old sea map disappears. Everyone blames the foreign visitor, but young detective Maryam notices the clues that everyone else has missed.",
+ "blurb_ar": "عند منتصف الليل، تنطفئ الأضواء في مكتبة قديمة في مسقط، وتختفي خريطة بحرية عمرها ثلاثمئة عام. الجميع يتّهمون الزائر الأجنبيّ، لكنّ المحقّقة الصغيرة مريم تلاحظ أدلّة لم ينتبه إليها أحد.",
+ "palette": "midnight",
+ "cast": [
+  {
+   "id": "maryam",
+   "name": "Maryam",
+   "body": "girl",
+   "outfit": "abaya",
+   "head": "hood",
+   "item": "magnifier",
+   "height": 0.95
+  },
+  {
+   "id": "hilal",
+   "name": "Hilal",
+   "body": "boy",
+   "outfit": "dishdasha",
+   "head": "kumma",
+   "item": "book",
+   "height": 0.96
+  },
+  {
+   "id": "khalfan",
+   "name": "Mr Khalfan",
+   "body": "old_man",
+   "outfit": "dishdasha",
+   "head": "turban",
+   "item": "key"
+  },
+  {
+   "id": "grant",
+   "name": "Mr Grant",
+   "body": "stout_man",
+   "outfit": "coat",
+   "head": "short_hair",
+   "item": "bag"
+  },
+  {
+   "id": "rashid",
+   "name": "Uncle Rashid",
+   "body": "man",
+   "outfit": "dishdasha",
+   "head": "kumma",
+   "item": "lantern",
+   "height": 1.08
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "arabian_city",
+  "landmark": {
+   "type": "omani_fort",
+   "side": "right"
+  },
+  "sky_items": [
+   "crescent",
+   "stars"
+  ],
+  "chars": [
+   {
+    "id": "maryam",
+    "pose": "stand",
+    "face": "right",
+    "pos": "left"
+   },
+   {
+    "id": "hilal",
+    "pose": "stand",
+    "face": "right",
+    "pos": "center",
+    "item": "lantern"
+   }
+  ],
+  "creatures": [],
+  "props": [
+   "lamp_post",
+   "door"
+  ],
+  "light": "lantern",
+  "mood": "tense"
+ },
+ "a1": [
+  {
+   "en": "Maryam and Hilal are at the old library in Muscat.\nTonight, it is open until morning!\nThe library has a very old sea map. It is in a glass box.",
+   "ar": "مريم وهلال في المكتبة القديمة في مسقط.\nالليلة، تبقى المكتبة مفتوحة حتى الصباح!\nفي المكتبة خريطة بحرية قديمة جدًّا. وهي في صندوق زجاجيّ.",
+   "scene": {
+    "sky": "night",
+    "land": "arabian_city",
+    "landmark": {
+     "type": "omani_fort",
+     "side": "left"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "hilal",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "maryam",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "lamp_post",
+     "door"
+    ],
+    "light": "lantern",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "At midnight, the lights go out.\nCrash! Glass breaks.\nWhen the lights come back, the map is gone!",
+   "ar": "عند منتصف الليل، تنطفئ الأضواء.\nطَراخ! ينكسر زجاج.\nوحين تعود الأضواء، تكون الخريطة قد اختفت!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "maryam",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "hilal",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "chair"
+    ],
+    "light": "none",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "A window is broken. Uncle Rashid, the guard, says, “The thief comes from the street!”\nBut Maryam looks outside.\nThe glass is on the street, not inside.",
+   "ar": "هناك نافذة مكسورة. يقول العمّ راشد، الحارس: «اللصّ يأتي من الشارع!»\nلكنّ مريم تنظر إلى الخارج.\nالزجاج في الشارع، وليس في الداخل.",
+   "scene": {
+    "sky": "night",
+    "land": "arabian_city",
+    "landmark": {
+     "type": "window",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "rashid",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "maryam",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "lamp_post"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "There is a white glove near the glass box. It is Mr Grant’s glove!\nMr Grant wants to buy the map.\nThe police take him away.",
+   "ar": "هناك قفّاز أبيض قرب الصندوق الزجاجيّ. إنه قفّاز السيّد غرانت!\nالسيّد غرانت يريد أن يشتري الخريطة.\nفتأخذه الشرطة.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "khalfan",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "grant",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "maryam",
+      "pose": "think",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "chair"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Maryam remembers: Mr Grant leaves his gloves on a table at eleven.\nAnyone can take one.\nThe thief is still in the library!",
+   "ar": "تتذكّر مريم: السيّد غرانت يترك قفّازيه على طاولة في الساعة الحادية عشرة.\nأيّ شخص يستطيع أن يأخذ واحدًا.\nاللصّ ما زال في المكتبة!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "maryam",
+      "pose": "think",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "hilal",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "chair",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Mr Khalfan, the librarian, says he is upstairs at midnight.\nBut his old wooden stairs always creak: eek, eek!\nTonight, nobody hears them.",
+   "ar": "يقول السيّد خلفان، أمين المكتبة، إنه في الطابق العلويّ عند منتصف الليل.\nلكنّ درجه الخشبيّ القديم يصرّ دائمًا: إيييك، إيييك!\nوالليلة، لا يسمعه أحد.",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "window",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "khalfan",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "maryam",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "hilal",
+      "pose": "think",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "door",
+     "candle"
+    ],
+    "light": "lantern",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Maryam looks at the shelves. All the books are dusty, but one big book is clean.\nShe opens it.\nThe map is inside!",
+   "ar": "تنظر مريم إلى الرفوف. كلّ الكتب مغبرّة، لكنّ كتابًا كبيرًا واحدًا نظيف.\nتفتحه.\nفتجد الخريطة في داخله!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "maryam",
+      "pose": "read",
+      "face": "right",
+      "pos": "left",
+      "item": "book"
+     },
+     {
+      "id": "hilal",
+      "pose": "look_up",
+      "face": "left",
+      "pos": "right",
+      "item": "lantern"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "candle",
+     "scroll"
+    ],
+    "light": "candle",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Mr Khalfan comes in. He looks at the map.\n“Yes,” he says. “I am the thief.”\nHilal cannot believe it. The kind old librarian!",
+   "ar": "يدخل السيّد خلفان. وينظر إلى الخريطة.\n«نعم»، يقول. «أنا اللصّ.»\nلا يصدّق هلال ذلك. أمين المكتبة الطيّب العجوز!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "maryam",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "map"
+     },
+     {
+      "id": "hilal",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "khalfan",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "candle",
+     "table"
+    ],
+    "light": "lantern",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "“A big museum far away wants our map,” he says sadly.\n“I want it to stay in Muscat.”\nMaryam has an idea. She talks to Mr Grant.",
+   "ar": "«متحف كبير بعيد يريد خريطتنا»، يقول بحزن.\n«وأنا أريدها أن تبقى في مسقط.»\nلدى مريم فكرة. فتتحدّث إلى السيّد غرانت.",
+   "scene": {
+    "sky": "dawn",
+    "land": "arabian_city",
+    "landmark": {
+     "type": "omani_fort",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "khalfan",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "maryam",
+      "pose": "point",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "grant",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "lamp_post"
+    ],
+    "light": "sunrise",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Mr Grant is free, and his museum gets a copy. The real map stays in Muscat.\nMr Khalfan says sorry.\nMaryam smiles. “Case closed!” The end.",
+   "ar": "يُطلَق سراح السيّد غرانت، ويحصل متحفه على نسخة. والخريطة الحقيقية تبقى في مسقط.\nيعتذر السيّد خلفان.\nتبتسم مريم. «أُغلقت القضية!» النهاية.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "library",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "hilal",
+      "pose": "wave",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "maryam",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "khalfan",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "scroll",
+     "flowers"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "library",
+   "مكتبة"
+  ],
+  [
+   "map",
+   "خريطة"
+  ],
+  [
+   "glass",
+   "زجاج"
+  ],
+  [
+   "midnight",
+   "منتصف الليل"
+  ],
+  [
+   "window",
+   "نافذة"
+  ],
+  [
+   "thief",
+   "لصّ"
+  ],
+  [
+   "guard",
+   "حارس"
+  ],
+  [
+   "glove",
+   "قفّاز"
+  ],
+  [
+   "stairs",
+   "درج"
+  ],
+  [
+   "shelves",
+   "رفوف"
+  ],
+  [
+   "dusty",
+   "مغبرّ"
+  ],
+  [
+   "museum",
+   "متحف"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "The library has a very old sea map.",
+   true
+  ],
+  [
+   "The glass from the window is inside the library.",
+   false
+  ],
+  [
+   "The police take Mr Grant away.",
+   true
+  ],
+  [
+   "Mr Khalfan’s stairs are very quiet.",
+   false
+  ],
+  [
+   "The map is inside a big book.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: Reading Until Morning",
+   "title_ar": "الفصل الأول: القراءة حتى الصباح",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Maryam was fifteen, and she had read every detective story in her school library twice. So when Bait Al-Waraq, the old library next to the fort in old Muscat, announced its first Midnight Reading Night, she and her best friend Hilal were the first to sign up. The library was a beautiful old house with wooden balconies and narrow stairs. Its greatest treasure was the Pearl Map, a sea map drawn three hundred years ago by an Omani navigator. It lay in a glass case in the main hall, and visitors came from all over the world to see it.",
+    "That evening, the head librarian, Mr Khalfan, welcomed everyone with dates and coffee. He warned them never to touch the huge Book of Ships on the top shelf, because it was very fragile. A visitor from a foreign museum, Mr Grant, looked at the map for a long time, then took off his white gloves and left them on a table. At half past eleven, Mr Khalfan went up to his office, and every wooden step creaked loudly. Then, at exactly midnight, the lights went out. Something crashed, glass broke, and when the lights came back, the Pearl Map was gone."
+   ],
+   "ar": [
+    "كانت مريم في الخامسة عشرة، وقد قرأت كلّ قصة بوليسية في مكتبة مدرستها مرّتين. لذلك حين أعلنت مكتبة «بيت الورق» القديمة، المجاورة للقلعة في مسقط القديمة، عن أوّل «ليلة قراءة حتى منتصف الليل»، كانت هي وصديقها المقرّب هلال أوّل من سجّلا. كانت المكتبة بيتًا قديمًا جميلًا بشرفات خشبية ودرج ضيّق. وكان أثمن كنوزها «خريطة اللؤلؤ»، وهي خريطة بحرية رسمها ملّاح عُمانيّ قبل ثلاثمئة عام. وكانت موضوعة في صندوق زجاجيّ في القاعة الرئيسية، ويأتي الزوّار من كلّ أنحاء العالم لرؤيتها.",
+    "في ذلك المساء، رحّب أمين المكتبة السيّد خلفان بالجميع بالتمر والقهوة. وحذّرهم من لمس «كتاب السفن» الضخم على الرفّ العلويّ، لأنه هشّ جدًّا. وكان هناك زائر من متحف أجنبيّ، هو السيّد غرانت، ظلّ ينظر إلى الخريطة طويلًا، ثم خلع قفّازيه الأبيضين وتركهما على طاولة. وفي الحادية عشرة والنصف، صعد السيّد خلفان إلى مكتبه، وكانت كلّ درجة خشبية تصرّ بصوت عالٍ. ثم، عند منتصف الليل تمامًا، انطفأت الأضواء. سقط شيء بقوة، وانكسر زجاج، وحين عادت الأضواء، كانت خريطة اللؤلؤ قد اختفت."
+   ],
+   "words": [
+    [
+     "announce",
+     "يُعلن"
+    ],
+    [
+     "navigator",
+     "ملّاح"
+    ],
+    [
+     "fragile",
+     "هشّ / سهل الكسر"
+    ],
+    [
+     "creak",
+     "يصرّ / يُصدر صريرًا"
+    ],
+    [
+     "exactly",
+     "تمامًا / بالضبط"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Wrong Thief",
+   "title_ar": "الفصل الثاني: اللصّ الخطأ",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "Everyone ran into the hall. One of the tall windows was smashed, and cold night air was blowing in from the street. Uncle Rashid, the night guard, who had been chatting with Hilal at the front door, shook his head. “A thief climbed in from the street and escaped the same way,” he said. Mr Khalfan came hurrying from the bottom of the stairs, looking pale. His hands were dusty, and he was out of breath. But Maryam leaned out of the broken window with her magnifying glass. The pieces of glass were lying on the street outside, not on the library floor.",
+    "“That’s strange,” she whispered to Hilal. “If someone broke the window from outside, the glass would fall inside.” Before she could say more, Mr Khalfan held up a white glove that he had found beside the empty case. “Mr Grant! This is yours!” he cried. Everyone turned. Mr Grant went red. He admitted that his museum wanted to buy the Pearl Map, and that the library had refused. Ten minutes later, two police officers arrived and took him away for questions. “I am not a thief!” he kept saying. Hilal sighed. “Well, that was easy.” But Maryam was not so sure."
+   ],
+   "ar": [
+    "ركض الجميع إلى القاعة. كانت إحدى النوافذ الطويلة محطّمة، وهواء الليل البارد يهبّ من الشارع. هزّ العمّ راشد، حارس الليل، رأسه، وكان يتحدّث مع هلال عند الباب الأماميّ طوال الوقت، وقال: «تسلّق لصّ من الشارع، وهرب من الطريق نفسه.» وجاء السيّد خلفان مسرعًا من أسفل الدرج، ووجهه شاحب. وكانت يداه مغبرّتين، وأنفاسه متقطّعة. لكنّ مريم انحنت من النافذة المكسورة وفي يدها عدستها المكبّرة. كانت قطع الزجاج ملقاة في الشارع في الخارج، لا على أرض المكتبة.",
+    "همست لهلال: «هذا غريب. لو كسر أحد النافذة من الخارج، لسقط الزجاج إلى الداخل.» وقبل أن تكمل، رفع السيّد خلفان قفّازًا أبيض وجده بجانب الصندوق الفارغ، وصاح: «سيّد غرانت! هذا قفّازك!» التفت الجميع. واحمرّ وجه السيّد غرانت. واعترف بأنّ متحفه يريد شراء خريطة اللؤلؤ، وبأنّ المكتبة رفضت. وبعد عشر دقائق، وصل شرطيّان وأخذاه للتحقيق، وهو يردّد: «أنا لست لصًّا!» تنهّد هلال: «حسنًا، كان ذلك سهلًا.» لكنّ مريم لم تكن متأكّدة."
+   ],
+   "words": [
+    [
+     "smash",
+     "يحطّم"
+    ],
+    [
+     "pale",
+     "شاحب"
+    ],
+    [
+     "admit",
+     "يعترف"
+    ],
+    [
+     "refuse",
+     "يرفض"
+    ],
+    [
+     "sigh",
+     "يتنهّد"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Creaking Stairs",
+   "title_ar": "الفصل الثالث: الدرج الذي يصرّ",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "Maryam sat down at the reading table and closed her eyes. “Think,” she told herself. “The glass is outside, so the window was broken from inside. Uncle Rashid was at the front door with Hilal the whole time, so nobody came in that way. And Mr Grant left his gloves on this table at eleven. Anyone could have picked one up. And the glass case wasn’t broken either, so someone opened it with a key.” She opened her eyes. “Hilal, the thief never left. The thief is still in the library, and the map is probably still here too.”",
+    "Hilal swallowed. “Then who is it?” Maryam asked everyone where they had been at midnight. The other young readers had been together in the reading room with their teacher. Mr Khalfan said that he had been working in his office upstairs and had rushed down when he heard the crash. Hilal suddenly grabbed Maryam’s arm. “Those stairs creak like an old door,” he whispered. “I heard him go up at half past eleven. But after the crash, I didn’t hear a single creak.” Maryam’s eyes went wide. Mr Khalfan hadn’t come down the stairs at all. He had been downstairs all along."
+   ],
+   "ar": [
+    "جلست مريم إلى طاولة القراءة وأغمضت عينيها، وقالت لنفسها: «فكّري. الزجاج في الخارج، إذن كُسرت النافذة من الداخل. والعمّ راشد كان عند الباب الأماميّ مع هلال طوال الوقت، إذن لم يدخل أحد من هناك. والسيّد غرانت ترك قفّازيه على هذه الطاولة في الحادية عشرة، وكان بإمكان أيّ شخص أن يأخذ واحدًا. والصندوق الزجاجيّ لم يُكسر أيضًا، إذن فتحه أحدهم بمفتاح.» ثم فتحت عينيها: «هلال، اللصّ لم يخرج قطّ. اللصّ ما زال في المكتبة، والخريطة على الأرجح ما زالت هنا أيضًا.»",
+    "بلع هلال ريقه وسأل: «إذن من هو؟» سألت مريم كلّ واحد أين كان عند منتصف الليل. كان القرّاء الصغار الآخرون معًا في غرفة القراءة مع معلّمتهم. وقال السيّد خلفان إنه كان يعمل في مكتبه في الطابق العلويّ، ونزل مسرعًا حين سمع صوت الارتطام. فجأة أمسك هلال بذراع مريم وهمس: «ذلك الدرج يصرّ كباب قديم. سمعته يصعد في الحادية عشرة والنصف. لكن بعد الارتطام، لم أسمع صريرًا واحدًا.» اتّسعت عينا مريم. السيّد خلفان لم ينزل الدرج أصلًا. لقد كان في الطابق السفليّ طوال الوقت."
+   ],
+   "words": [
+    [
+     "probably",
+     "على الأرجح"
+    ],
+    [
+     "swallow",
+     "يبلع (ريقه)"
+    ],
+    [
+     "rush",
+     "يُسرع / يندفع"
+    ],
+    [
+     "single",
+     "واحد / مفرد"
+    ],
+    [
+     "all along",
+     "طوال الوقت"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Book of Ships",
+   "title_ar": "الفصل الرابع: كتاب السفن",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Maryam walked slowly along the tall bookshelves, shining her phone light on the old books. Everything was covered in a thin grey layer of dust, except one huge book on the top shelf: the Book of Ships, the book nobody was allowed to touch. There were fresh fingerprints on its cover. Hilal brought a ladder, and Maryam carefully lifted the book down. It felt far too light. When she opened it, she saw that the middle of the pages had been cut away to make a secret box. Inside, folded neatly, lay the Pearl Map.",
+    "Behind them, someone coughed. Mr Khalfan was standing in the doorway, holding his heavy ring of keys. For a moment he looked as if he wanted to run, but then his shoulders dropped, and he suddenly looked very old and very tired. “Yes,” he said quietly. “I switched off the lights, opened the case with my key and broke the window from inside. Then I put Mr Grant’s glove by the case.” Hilal couldn’t believe it. The kind librarian who had welcomed them with dates and coffee was the thief. “But why?” Maryam asked gently. The old man looked at the map for a long moment before he answered."
+   ],
+   "ar": [
+    "مشت مريم ببطء بجانب رفوف الكتب العالية، وهي تسلّط ضوء هاتفها على الكتب القديمة. كان كلّ شيء مغطّى بطبقة رقيقة رمادية من الغبار، إلا كتابًا ضخمًا واحدًا على الرفّ العلويّ: «كتاب السفن»، الكتاب الذي لا يُسمح لأحد بلمسه. وكانت على غلافه بصمات أصابع حديثة. أحضر هلال سُلّمًا، وأنزلت مريم الكتاب بحذر. كان خفيفًا أكثر من اللازم. وحين فتحته، رأت أنّ وسط الصفحات قد قُصّ ليصنع صندوقًا سرّيًّا. وفي داخله، مطويّة بعناية، كانت خريطة اللؤلؤ.",
+    "وخلفهما، سعل أحدهم. كان السيّد خلفان واقفًا عند الباب، ممسكًا بحلقة مفاتيحه الثقيلة. وللحظة بدا كأنه يريد الهرب، لكنّ كتفيه انخفضتا، وبدا فجأة عجوزًا جدًّا ومتعبًا جدًّا. قال بهدوء: «نعم. أنا أطفأت الأضواء، وفتحت الصندوق بمفتاحي، وكسرت النافذة من الداخل. ثم وضعت قفّاز السيّد غرانت بجانب الصندوق.» لم يصدّق هلال ما يسمع. فأمين المكتبة الطيّب الذي استقبلهم بالتمر والقهوة هو اللصّ. سألته مريم بلطف: «لكن لماذا؟» فنظر العجوز إلى الخريطة طويلًا قبل أن يجيب."
+   ],
+   "words": [
+    [
+     "layer",
+     "طبقة"
+    ],
+    [
+     "dust",
+     "غبار"
+    ],
+    [
+     "fingerprints",
+     "بصمات الأصابع"
+    ],
+    [
+     "ladder",
+     "سُلّم"
+    ],
+    [
+     "neatly",
+     "بعناية / بترتيب"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: Case Closed",
+   "title_ar": "الفصل الخامس: أُغلقت القضية",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Mr Khalfan sat down on the steps. “Last month, the library board agreed to sell the Pearl Map to Mr Grant’s museum far away,” he explained. “It was drawn here, by one of our own sailors. I have looked after it for forty years. I couldn’t let Muscat lose it, so I hid it and made Mr Grant look guilty.” Maryam thought for a long time. Then she had an idea. “Mr Grant’s museum wants people to see the map,” she said. “Maybe there’s another way.” In the morning, she asked the police to bring Mr Grant back.",
+    "Mr Grant listened to the whole story. He was angry at first, but he was also grateful to the girl who had proved he was innocent. In the end, he agreed to ask his museum for a perfect copy instead, and the board decided that the real map would stay in Muscat. Mr Khalfan apologised to everyone and gave back his keys, but he still came every afternoon to tell visitors the story of the map. The next week, the Pearl Map was back in its case with a new lock. Under it, a small card said: “Found by Maryam and Hilal.” Hilal grinned. “Case closed.”"
+   ],
+   "ar": [
+    "جلس السيّد خلفان على الدرجات وشرح: «في الشهر الماضي، وافق مجلس إدارة المكتبة على بيع خريطة اللؤلؤ لمتحف السيّد غرانت البعيد. لقد رُسمت هنا، على يد واحد من بحّارتنا. وأنا أعتني بها منذ أربعين عامًا. لم أستطع أن أترك مسقط تخسرها، فخبّأتها وجعلت السيّد غرانت يبدو مذنبًا.» فكّرت مريم طويلًا. ثم خطرت لها فكرة، فقالت: «متحف السيّد غرانت يريد أن يرى الناس الخريطة. ربما هناك طريقة أخرى.» وفي الصباح، طلبت من الشرطة أن يعيدوا السيّد غرانت.",
+    "استمع السيّد غرانت إلى القصة كلّها. غضب في البداية، لكنه كان ممتنًّا أيضًا للفتاة التي أثبتت براءته. وفي النهاية، وافق على أن يطلب من متحفه نسخة دقيقة بدلًا من الخريطة، وقرّر مجلس الإدارة أن تبقى الخريطة الحقيقية في مسقط. اعتذر السيّد خلفان من الجميع وأعاد مفاتيحه، لكنه ظلّ يأتي كلّ عصر ليحكي للزوّار قصة الخريطة. وفي الأسبوع التالي، عادت خريطة اللؤلؤ إلى صندوقها بقفل جديد. وتحتها بطاقة صغيرة كُتب عليها: «عثر عليها مريم وهلال.» ابتسم هلال ابتسامة عريضة: «أُغلقت القضية.»"
+   ],
+   "words": [
+    [
+     "board",
+     "مجلس الإدارة"
+    ],
+    [
+     "guilty",
+     "مذنب"
+    ],
+    [
+     "grateful",
+     "ممتنّ"
+    ],
+    [
+     "innocent",
+     "بريء"
+    ],
+    [
+     "apologise",
+     "يعتذر"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What was special about the Pearl Map?",
+   [
+    "It showed a hidden treasure",
+    "An Omani navigator drew it three hundred years ago",
+    "It was made of gold"
+   ],
+   1
+  ],
+  [
+   "Why did Maryam think the window was broken from inside?",
+   [
+    "The glass was on the street",
+    "The window was open",
+    "There was a ladder outside"
+   ],
+   0
+  ],
+  [
+   "Why could anyone have taken Mr Grant’s glove?",
+   [
+    "He dropped it in the street",
+    "He gave it to the guard",
+    "He left his gloves on a table"
+   ],
+   2
+  ],
+  [
+   "What did Hilal notice about the stairs?",
+   [
+    "They were broken",
+    "Nobody heard them creak after the crash",
+    "They were painted blue"
+   ],
+   1
+  ],
+  [
+   "Why did Mr Khalfan hide the map?",
+   [
+    "He wanted to sell it",
+    "He wanted to read it at home",
+    "He didn’t want Muscat to lose it"
+   ],
+   2
+  ]
+ ],
+ "talk_en": "Was Mr Khalfan right or wrong to hide the map? Give two reasons for your answer, and say what you would do in his place.",
+ "talk_ar": "برأيك، السيّد خلفان كان صح ولا غلط لما خبّى الخريطة؟ اعطِ سببين، وقول وش كنت بتسوي لو كنت مكانه."
+}

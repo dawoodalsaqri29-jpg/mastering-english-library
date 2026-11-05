@@ -1,0 +1,764 @@
+{
+ "n": 5,
+ "slug": "heard-the-sea",
+ "title": "The Boy Who Heard the Sea",
+ "series_tag": "",
+ "subtitle_ar": "الفتى الذي سمع البحر",
+ "genre": "Myth",
+ "based_on": "Original story",
+ "blurb_en": "In the old sea town of Sur, thirteen-year-old Salim hears a voice in the waves, and nobody believes him. When a storm traps twelve dhows far out at sea, he must learn his family’s secret and face a giant sea serpent alone.",
+ "blurb_ar": "في مدينة صور البحرية القديمة، يسمع سالم ذو الثلاثة عشر عامًا صوتًا في الأمواج، ولا أحد يصدّقه. وحين تحاصر العاصفة اثنتي عشرة سفينة في عرض البحر، عليه أن يكتشف سرّ عائلته ويواجه ثعبانًا بحريًّا عملاقًا وحده.",
+ "palette": "teal",
+ "cast": [
+  {
+   "id": "salim",
+   "name": "Salim",
+   "body": "boy",
+   "outfit": "dishdasha",
+   "head": "kumma",
+   "item": "none",
+   "height": 0.92
+  },
+  {
+   "id": "hamad",
+   "name": "Grandpa Hamad",
+   "body": "old_man",
+   "outfit": "dishdasha",
+   "head": "turban",
+   "item": "cane"
+  },
+  {
+   "id": "nasser",
+   "name": "Captain Nasser",
+   "body": "man",
+   "outfit": "dishdasha",
+   "head": "ghutra",
+   "item": "telescope",
+   "height": 1.1
+  }
+ ],
+ "cover_scene": {
+  "sky": "storm",
+  "land": "sea",
+  "landmark": {
+   "type": "lighthouse",
+   "side": "left"
+  },
+  "sky_items": [
+   "lightning",
+   "clouds"
+  ],
+  "chars": [
+   {
+    "id": "salim",
+    "pose": "raise",
+    "face": "right",
+    "pos": "left",
+    "item": "trident"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "sea_serpent",
+    "pos": "right",
+    "size": "xl",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "small_boat"
+  ],
+  "light": "lightning",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Salim lives in Sur, a town by the sea.\nOne night, he hears a voice in the waves.\n“Help me,” says the sea.",
+   "ar": "يعيش سالم في صور، وهي مدينة على البحر.\nفي إحدى الليالي، يسمع صوتًا في الأمواج.\n«ساعدني»، يقول البحر.",
+   "scene": {
+    "sky": "night",
+    "land": "shore",
+    "landmark": {
+     "type": "lighthouse",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "small_boat"
+    ],
+    "light": "moonbeam",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Salim’s grandpa, Hamad, builds dhows. Dhows are big wooden boats.\nSalim tells him about the voice.\nGrandpa is quiet. He looks afraid.",
+   "ar": "جدّ سالم، حمد، يبني السفن الشراعية. وهي قوارب خشبية كبيرة.\nيخبره سالم عن الصوت.\nيسكت الجدّ. ويبدو خائفًا.",
+   "scene": {
+    "sky": "sunset",
+    "land": "shore",
+    "landmark": {
+     "type": "galleon",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "hamad",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rope",
+     "barrel",
+     "crates"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Tomorrow, all the dhows go far out to sea.\nSalim’s father is the captain.\nBut the sea says, “The serpent is waking. Stop the boats!”",
+   "ar": "غدًا، تُبحر كلّ السفن بعيدًا في البحر.\nووالد سالم هو القبطان.\nلكنّ البحر يقول: «الثعبان يستيقظ. أوقِفوا السفن!»",
+   "scene": {
+    "sky": "dawn",
+    "land": "shore",
+    "landmark": {
+     "type": "galleon",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "run",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "nasser",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "anchor",
+     "rope",
+     "small_boat"
+    ],
+    "light": "sunrise",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Salim runs to the men. “Please don’t go! A storm is coming!”\nThe men laugh.\nHis father says, “The sky is blue, son.”",
+   "ar": "يركض سالم نحو الرجال. «أرجوكم لا تذهبوا! عاصفة قادمة!»\nيضحك الرجال.\nويقول والده: «السماء زرقاء يا بُنيّ.»",
+   "scene": {
+    "sky": "day",
+    "land": "shore",
+    "landmark": {
+     "type": "omani_fort",
+     "side": "left"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "nasser",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "barrel",
+     "crates",
+     "rope"
+    ],
+    "light": "none",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "That night, Grandpa opens an old chest. In it, there is a silver trident.\n“Our family guards the sea,” he says.\n“Now the sea is calling you.”",
+   "ar": "في تلك الليلة، يفتح الجدّ صندوقًا قديمًا. في داخله رمح فضّيّ ذو ثلاث شُعَب.\n«عائلتنا تحرس البحر»، يقول الجدّ.\n«والآن البحر يناديك أنت.»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "hamad",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "trident"
+     },
+     {
+      "id": "salim",
+      "pose": "kneel",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chest",
+     "candle"
+    ],
+    "light": "candle",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The dhows sail away. Then the sky goes black, and the wind screams.\nSalim takes a small boat and the trident.\nHe goes out to sea alone.",
+   "ar": "تُبحر السفن بعيدًا. ثم تسودّ السماء، وتصرخ الريح.\nيأخذ سالم قاربًا صغيرًا والرمح.\nويخرج إلى البحر وحده.",
+   "scene": {
+    "sky": "storm",
+    "land": "sea",
+    "landmark": {
+     "type": "lighthouse",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center",
+      "item": "trident"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "small_boat"
+    ],
+    "light": "lightning",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "A huge sea serpent rises from the waves. Its eyes are like fire.\nSalim holds up the trident.\nHis hands are shaking.",
+   "ar": "يخرج ثعبان بحريّ ضخم من الأمواج. عيناه مثل النار.\nيرفع سالم الرمح.\nيداه ترتجفان.",
+   "scene": {
+    "sky": "storm",
+    "land": "sea",
+    "landmark": {
+     "type": "galleon",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left",
+      "item": "trident"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "sea_serpent",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "small_boat"
+    ],
+    "light": "lightning",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Then Salim hears the voice again. “Help me,” it says.\nIt is the serpent, not the sea!\nAn old anchor is stuck in its tail. It is in pain.",
+   "ar": "ثم يسمع سالم الصوت من جديد. «ساعدني»، يقول.\nإنه الثعبان، وليس البحر!\nمرساة قديمة عالقة في ذيله. إنه يتألّم.",
+   "scene": {
+    "sky": "storm",
+    "land": "sea",
+    "landmark": {
+     "type": "galleon",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds",
+     "lightning"
+    ],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "think",
+      "face": "right",
+      "pos": "left",
+      "item": "trident"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "sea_serpent",
+      "pos": "right",
+      "size": "l",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "small_boat",
+     "anchor"
+    ],
+    "light": "moonbeam",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Salim does not fight. He dives into the dark water.\nWith the trident, he cuts the old rope.\nThe anchor falls away.",
+   "ar": "سالم لا يقاتل. يغوص في الماء المظلم.\nبالرمح، يقطع الحبل القديم.\nفتسقط المرساة بعيدًا.",
+   "scene": {
+    "sky": "underwater",
+    "land": "sea",
+    "landmark": {
+     "type": "ruins",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "salim",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "trident"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "sea_serpent",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "anchor",
+     "rope",
+     "rocks"
+    ],
+    "light": "magic",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The storm stops. The serpent guides the dhows home.\nFather hugs Salim, and Grandpa smiles.\n“Now you are the Keeper of the Sea.” The end.",
+   "ar": "تتوقّف العاصفة. ويقود الثعبان السفن إلى الميناء.\nيحضن الأب سالمًا، ويبتسم الجدّ.\n«الآن أنت حارس البحر.» النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "shore",
+    "landmark": {
+     "type": "galleon",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "hamad",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "salim",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center",
+      "item": "trident"
+     },
+     {
+      "id": "nasser",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "sea_serpent",
+      "pos": "far",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "small_boat",
+     "rope"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "sea",
+   "البحر"
+  ],
+  [
+   "voice",
+   "صوت"
+  ],
+  [
+   "wave",
+   "موجة"
+  ],
+  [
+   "dhow",
+   "سفينة شراعية خشبية"
+  ],
+  [
+   "captain",
+   "قبطان"
+  ],
+  [
+   "storm",
+   "عاصفة"
+  ],
+  [
+   "serpent",
+   "ثعبان"
+  ],
+  [
+   "chest",
+   "صندوق"
+  ],
+  [
+   "trident",
+   "رمح ثلاثيّ الشُّعَب"
+  ],
+  [
+   "wind",
+   "ريح"
+  ],
+  [
+   "anchor",
+   "مرساة"
+  ],
+  [
+   "tail",
+   "ذيل"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Salim lives in a town by the sea.",
+   true
+  ],
+  [
+   "Salim’s father builds dhows.",
+   false
+  ],
+  [
+   "There is a silver trident in the old chest.",
+   true
+  ],
+  [
+   "Salim hurts the serpent with the trident.",
+   false
+  ],
+  [
+   "An old anchor is stuck in the serpent’s tail.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: A Voice in the Waves",
+   "title_ar": "الفصل الأول: صوت في الأمواج",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "Salim was thirteen years old and lived in Sur, an old town where the desert meets the sea. Every evening, he sat on the rocks near the lighthouse and watched the fishing boats come home. One night in late summer, while the moon was shining on the water, he heard something strange. It wasn’t the wind, and it wasn’t a sailor singing. It was a deep, sad voice, and it seemed to come from the waves themselves. “Help me,” it said. Salim jumped up and looked around, but the beach was empty. The voice came once more, softer this time, and then the sea was silent.",
+    "The next morning, Salim ran to the beach where his grandfather, Hamad, was building a new dhow. For fifty years, Grandpa Hamad had built the big wooden boats that sailed from Sur to India and Africa. Salim told him everything about the voice. He expected Grandpa to laugh at him, but the old man put down his tools and stared at the sea for a long time. “Did it say anything else?” he asked quietly. Salim shook his head. Grandpa’s hands were shaking. Salim had never seen him afraid before. “Tell no one,” he said. “Not yet.”"
+   ],
+   "ar": [
+    "كان سالم في الثالثة عشرة من عمره، ويعيش في صور، المدينة القديمة التي تلتقي فيها الصحراء بالبحر. وكان يجلس كلّ مساء على الصخور قرب المنارة، ويراقب قوارب الصيد وهي تعود إلى الشاطئ. وفي إحدى ليالي آخر الصيف، بينما كان القمر يلمع على الماء، سمع شيئًا غريبًا. لم يكن صوت الريح، ولم يكن بحّارًا يغنّي. كان صوتًا عميقًا حزينًا، وبدا كأنه يخرج من الأمواج نفسها. قال الصوت: «ساعدني.» قفز سالم ونظر حوله، لكنّ الشاطئ كان خاليًا. وجاء الصوت مرة أخرى، أضعف هذه المرة، ثم سكت البحر.",
+    "وفي الصباح التالي، ركض سالم إلى الشاطئ حيث كان جدّه حمد يبني سفينة شراعية جديدة. فمنذ خمسين عامًا، والجدّ حمد يبني السفن الخشبية الكبيرة التي تُبحر من صور إلى الهند وأفريقيا. أخبره سالم بكلّ شيء عن الصوت. وتوقّع أن يضحك جدّه منه، لكنّ الرجل العجوز وضع أدواته جانبًا، وحدّق في البحر طويلًا. ثم سأله بهدوء: «هل قال شيئًا آخر؟» هزّ سالم رأسه. كانت يدا الجدّ ترتجفان. لم يرَ سالم جدّه خائفًا من قبل. قال: «لا تُخبر أحدًا. ليس الآن.»"
+   ],
+   "words": [
+    [
+     "lighthouse",
+     "منارة"
+    ],
+    [
+     "deep",
+     "عميق"
+    ],
+    [
+     "expect",
+     "يتوقّع"
+    ],
+    [
+     "tools",
+     "أدوات"
+    ],
+    [
+     "stare",
+     "يحدّق"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Nobody Believes Salim",
+   "title_ar": "الفصل الثاني: لا أحد يصدّق سالم",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "That week, the whole town was getting ready for the biggest fishing trip of the year. Twelve dhows were going to sail far out to sea, and Salim’s father, Nasser, was the captain of the largest one. Along the beach, families were waving goodbye and children were running between the boats. On the morning they were leaving, Salim was carrying ropes to the harbour when the voice spoke again, louder than ever. “The serpent is waking,” it said. “Stop the boats, or they will never come home.” Salim dropped the ropes. The sky was clear and blue, and the sea was as flat as glass.",
+    "Salim ran along the harbour, shouting at the sailors. “Please don’t go! A terrible storm is coming!” Some of the men laughed, and an old fisherman shook his head. “Look at the sky, boy. There isn’t a single cloud.” Salim turned to his father, but Captain Nasser only put a hand on his shoulder. “You’re worried because I’m going far away,” he said kindly. “I’ll be back in ten days, I promise.” Salim felt his face burn. Nobody believed him, and he couldn’t explain how he knew. That afternoon, he watched from the rocks as the twelve white sails disappeared over the horizon."
+   ],
+   "ar": [
+    "في ذلك الأسبوع، كانت المدينة كلّها تستعدّ لأكبر رحلة صيد في السنة. كانت اثنتا عشرة سفينة ستُبحر بعيدًا في عرض البحر، وكان ناصر، والد سالم، قبطان أكبرها. وعلى الشاطئ، كانت العائلات تلوّح مودّعة، والأطفال يركضون بين السفن. وفي صباح يوم الرحيل، بينما كان سالم يحمل الحبال إلى الميناء، تكلّم الصوت من جديد، وكان أعلى من أيّ وقت مضى: «الثعبان يستيقظ. أوقِفوا السفن، وإلّا فلن تعود أبدًا.» أسقط سالم الحبال من يديه. كانت السماء صافية زرقاء، والبحر مستويًا كالزجاج.",
+    "ركض سالم على طول الميناء وهو يصرخ في البحّارة: «أرجوكم لا تذهبوا! عاصفة رهيبة قادمة!» ضحك بعض الرجال، وهزّ صيّاد عجوز رأسه قائلًا: «انظر إلى السماء يا ولد. لا توجد غيمة واحدة.» التفت سالم إلى والده، لكنّ القبطان ناصر وضع يده على كتفه فقط، وقال بلطف: «أنت قلق لأنني مسافر بعيدًا. سأعود بعد عشرة أيام، أعدك.» شعر سالم بوجهه يحترق. لم يصدّقه أحد، ولم يستطع أن يشرح كيف عرف. وفي ذلك العصر، راقب من فوق الصخور الأشرعة البيضاء الاثني عشر وهي تختفي خلف الأفق."
+   ],
+   "words": [
+    [
+     "harbour",
+     "ميناء"
+    ],
+    [
+     "flat",
+     "مستوٍ / هادئ"
+    ],
+    [
+     "shout",
+     "يصرخ"
+    ],
+    [
+     "worried",
+     "قلِق"
+    ],
+    [
+     "promise",
+     "يَعِد"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Keeper’s Trident",
+   "title_ar": "الفصل الثالث: رمح الحارس",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "That night, Grandpa Hamad called Salim into his room. He knelt down, opened an old wooden chest and lifted out something wrapped in cloth. It was a silver trident, covered in tiny pictures of fish and stars. “Long ago,” Grandpa explained, “a woman named Mayya lived in Sur. The sea spoke to her, and she promised to protect it. She was the first Keeper of the Sea, and she was our grandmother’s grandmother. In every generation, one child in our family hears the sea. When I was young, it was me. Now it is you.”",
+    "Before Salim could ask any questions, the window began to shake. Outside, the stars had disappeared, and black clouds were rolling in from the ocean. The wind was screaming between the houses, and huge waves were crashing against the harbour wall. Somewhere out there, twelve dhows were caught in the storm. “My legs are too old for the sea,” Grandpa said. “I will light the lighthouse so the boats can find their way. You must go.” With the trident in his hand, Salim pushed a small boat into the angry water and rowed out alone."
+   ],
+   "ar": [
+    "في تلك الليلة، نادى الجدّ حمد سالمًا إلى غرفته. ركع وفتح صندوقًا خشبيًّا قديمًا، وأخرج منه شيئًا ملفوفًا بقطعة قماش. كان رمحًا فضّيًّا ذا ثلاث شُعَب، مغطّى برسوم صغيرة لأسماك ونجوم. شرح الجدّ: «قبل زمن بعيد، عاشت في صور امرأة اسمها ميّا. كان البحر يكلّمها، فوعدته أن تحميه. كانت أوّل حارسة للبحر، وهي جدّة جدّتنا. وفي كلّ جيل، يسمع طفل واحد من عائلتنا صوت البحر. حين كنت صغيرًا، كنت أنا. والآن جاء دورك.»",
+    "وقبل أن يسأل سالم أيّ سؤال، بدأت النافذة تهتزّ. في الخارج كانت النجوم قد اختفت، وغيوم سوداء تتدحرج من المحيط. كانت الريح تصرخ بين البيوت، وأمواج هائلة ترتطم بجدار الميناء. وفي مكان ما هناك، كانت اثنتا عشرة سفينة عالقة في العاصفة. قال الجدّ: «ساقاي أكبر من أن تحملاني إلى البحر. سأشعل المنارة كي تجد السفن طريقها. أمّا أنت فعليك أن تذهب.» وأمسك سالم الرمح بيده، ودفع قاربًا صغيرًا إلى الماء الهائج، وجدّف وحده."
+   ],
+   "words": [
+    [
+     "wrapped",
+     "ملفوف"
+    ],
+    [
+     "protect",
+     "يحمي"
+    ],
+    [
+     "generation",
+     "جيل"
+    ],
+    [
+     "crash",
+     "يرتطم"
+    ],
+    [
+     "row",
+     "يجدّف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Serpent Rises",
+   "title_ar": "الفصل الرابع: الثعبان يصعد",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Lightning lit up the sky, and Salim saw the dhows far away, like toys on the giant waves. Suddenly, the sea in front of him began to boil. A huge head rose out of the water, followed by a long, shining body. It was a sea serpent, bigger than ten dhows, and its eyes glowed like hot coals. Every time it moved, the waves grew higher, and the little boat rose and fell like a leaf. Salim lifted the trident with both hands, although his arms were trembling. “Go back to the deep!” he shouted, but the wind carried his voice away.",
+    "The serpent lowered its enormous head until it was right next to the boat. Salim was ready to strike, but then he heard the voice again, very close now. “Help me.” His heart almost stopped. The voice he had been hearing all week did not come from the sea. It came from the serpent! In a flash of lightning, he saw the truth. A rusty old anchor was stuck deep in the serpent’s tail, tied to a thick old rope. Every time the creature twisted in pain, it created another storm. Slowly, Salim lowered the trident."
+   ],
+   "ar": [
+    "أضاء البرق السماء، فرأى سالم السفن بعيدًا كأنها ألعاب فوق الأمواج العملاقة. وفجأة، بدأ البحر أمامه يغلي. ارتفع رأس ضخم من الماء، يتبعه جسد طويل لامع. كان ثعبانًا بحريًّا أكبر من عشر سفن، وعيناه تتوهّجان كالجمر. وكلّما تحرّك، ازدادت الأمواج ارتفاعًا، وصار القارب الصغير يعلو ويهبط كورقة شجر. رفع سالم الرمح بكلتا يديه، مع أنّ ذراعيه كانتا ترتجفان، وصاح: «عُد إلى الأعماق!» لكنّ الريح حملت صوته بعيدًا.",
+    "أنزل الثعبان رأسه الهائل حتى صار بجانب القارب تمامًا. كان سالم مستعدًّا ليضرب، لكنه سمع الصوت مرة أخرى، قريبًا جدًّا هذه المرة: «ساعدني.» كاد قلبه يتوقّف. فالصوت الذي كان يسمعه طوال الأسبوع لم يكن صوت البحر، بل كان صوت الثعبان! وفي ومضة برق، رأى الحقيقة: مرساة قديمة صدئة مغروسة في ذيل الثعبان، ومربوطة بحبل قديم غليظ. وكلّما التوى المخلوق من الألم، صنع عاصفة جديدة. فأنزل سالم الرمح ببطء."
+   ],
+   "words": [
+    [
+     "boil",
+     "يغلي"
+    ],
+    [
+     "trembling",
+     "يرتجف"
+    ],
+    [
+     "strike",
+     "يضرب"
+    ],
+    [
+     "rusty",
+     "صدئ"
+    ],
+    [
+     "twist",
+     "يلتوي"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Keeper of the Sea",
+   "title_ar": "الفصل الخامس: حارس البحر",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Salim understood that fighting would only make the storm worse. He took a deep breath, held the trident tightly and dived into the dark water. Under the waves, everything was strangely calm. The serpent’s tail glowed softly, and he swam towards the anchor. The rope was thick and covered in shells, but the silver trident cut through it like a knife through bread. The anchor sank slowly to the sea floor. The serpent shivered, and for a moment Salim was afraid. Then it gently lifted him back to his boat on its head. Its eyes were no longer red, but calm and golden.",
+    "At once, the wind dropped and the clouds broke apart. The serpent swam out to the lost dhows and guided them, one by one, towards the light of Grandpa’s lighthouse. When the sun came up, all twelve boats were safe in the harbour, and the whole town came running to the beach. Captain Nasser jumped onto the beach and held his son for a long time. “You were right,” he whispered. Grandpa Hamad smiled with tears in his eyes. “Now you are the Keeper of the Sea.” From that day on, whenever Salim sat on the rocks, the waves whispered, “Thank you.”"
+   ],
+   "ar": [
+    "فهم سالم أنّ القتال لن يزيد العاصفة إلا سوءًا. أخذ نفسًا عميقًا، وأمسك الرمح بقوة، وغاص في الماء المظلم. وتحت الأمواج، كان كلّ شيء هادئًا على نحو غريب. كان ذيل الثعبان يضيء بنور خافت، فسبح سالم نحو المرساة. كان الحبل غليظًا ومغطّى بالأصداف، لكنّ الرمح الفضّيّ قطعه كما تقطع السكّين الخبز. وغاصت المرساة ببطء إلى قاع البحر. ارتعش الثعبان، فخاف سالم للحظة. ثم رفعه المخلوق برفق على رأسه وأعاده إلى قاربه. ولم تعد عيناه حمراوين، بل صارتا ذهبيّتين هادئتين.",
+    "وفي الحال، هدأت الريح وتفرّقت الغيوم. سبح الثعبان إلى السفن التائهة وأرشدها، واحدة تلو الأخرى، نحو ضوء منارة الجدّ. وحين أشرقت الشمس، كانت السفن الاثنتا عشرة كلّها آمنة في الميناء، وجاءت المدينة كلّها تركض إلى الشاطئ. قفز القبطان ناصر إلى الشاطئ وضمّ ابنه طويلًا، وهمس: «كنتَ على حقّ.» وابتسم الجدّ حمد والدموع في عينيه: «الآن أنت حارس البحر.» ومنذ ذلك اليوم، كلّما جلس سالم على الصخور، همست الأمواج: «شكرًا لك.»"
+   ],
+   "words": [
+    [
+     "dive",
+     "يغوص"
+    ],
+    [
+     "calm",
+     "هادئ"
+    ],
+    [
+     "shiver",
+     "يرتعش"
+    ],
+    [
+     "guide",
+     "يُرشد"
+    ],
+    [
+     "whisper",
+     "يهمس"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Where did Salim first hear the voice?",
+   [
+    "In his grandfather’s room",
+    "On the rocks near the lighthouse",
+    "On his father’s dhow"
+   ],
+   1
+  ],
+  [
+   "Why did the sailors laugh at Salim?",
+   [
+    "The sky was clear and blue",
+    "He was wearing strange clothes",
+    "He was too young to sail"
+   ],
+   0
+  ],
+  [
+   "Who was Mayya?",
+   [
+    "Salim’s mother",
+    "A famous captain",
+    "The first Keeper of the Sea"
+   ],
+   2
+  ],
+  [
+   "What was really causing the storms?",
+   [
+    "The serpent’s pain from an old anchor",
+    "An angry sea king",
+    "The light from the lighthouse"
+   ],
+   0
+  ],
+  [
+   "How did Salim stop the storm?",
+   [
+    "He hit the serpent with the trident",
+    "He cut the rope and freed the serpent",
+    "He sang a song to the waves"
+   ],
+   1
+  ]
+ ],
+ "talk_en": "Salim chose to help the serpent instead of fighting it. When is it better to listen than to fight? Write three sentences.",
+ "talk_ar": "سالم اختار يساعد الثعبان بدل ما يقاتله. متى برأيك الأحسن نسمع بدل ما نتقاتل؟ اكتب ثلاث جمل."
+}

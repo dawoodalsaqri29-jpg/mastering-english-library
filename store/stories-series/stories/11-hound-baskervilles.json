@@ -1,0 +1,808 @@
+{
+ "n": 11,
+ "slug": "hound-baskervilles",
+ "title": "The Hound of the Baskervilles",
+ "series_tag": "Sherlock Holmes",
+ "subtitle_ar": "شيرلوك هولمز: كلب آل باسكرفيل",
+ "genre": "Mystery",
+ "based_on": "Arthur Conan Doyle (public domain)",
+ "blurb_en": "An old family curse, a lonely moor, and the footprints of a gigantic hound. Is the monster real, or is someone hiding in the fog?",
+ "blurb_ar": "لعنة عائلية قديمة، وأرض برّية موحشة، وآثار أقدام كلب صيد عملاق. هل الوحش حقيقيّ، أم أن أحدًا يختبئ في الضباب؟",
+ "palette": "midnight",
+ "cast": [
+  {
+   "id": "holmes",
+   "name": "Sherlock Holmes",
+   "body": "man",
+   "outfit": "coat",
+   "head": "deerstalker",
+   "item": "magnifier",
+   "height": 1.08
+  },
+  {
+   "id": "watson",
+   "name": "Dr Watson",
+   "body": "stout_man",
+   "outfit": "coat",
+   "head": "top_hat",
+   "item": "cane"
+  },
+  {
+   "id": "henry",
+   "name": "Sir Henry Baskerville",
+   "body": "man",
+   "outfit": "coat",
+   "head": "short_hair",
+   "item": "none"
+  },
+  {
+   "id": "stapleton",
+   "name": "Jack Stapleton",
+   "body": "man",
+   "outfit": "coat",
+   "head": "cap",
+   "item": "staff",
+   "height": 0.97
+  },
+  {
+   "id": "beryl",
+   "name": "Beryl Stapleton",
+   "body": "woman",
+   "outfit": "dress",
+   "head": "long_hair",
+   "item": "none"
+  },
+  {
+   "id": "barrymore",
+   "name": "Barrymore the butler",
+   "body": "old_man",
+   "outfit": "coat",
+   "head": "bald",
+   "item": "lantern"
+  }
+ ],
+ "cover_scene": {
+  "sky": "mist",
+  "land": "swamp",
+  "landmark": {
+   "type": "mansion",
+   "side": "left"
+  },
+  "sky_items": [
+   "moon",
+   "clouds"
+  ],
+  "chars": [
+   {
+    "id": "holmes",
+    "pose": "point",
+    "face": "right",
+    "pos": "left",
+    "item": "lantern"
+   },
+   {
+    "id": "watson",
+    "pose": "stand",
+    "face": "right",
+    "pos": "center"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "hound",
+    "pos": "right",
+    "size": "xl",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "rocks",
+   "grass"
+  ],
+  "light": "moonbeam",
+  "mood": "scary"
+ },
+ "a1": [
+  {
+   "en": "On a dark moor, people tell an old story.\nA giant black dog walks there at night. Its eyes burn like fire.",
+   "ar": "في أرض برّية مظلمة، يحكي الناس قصّة قديمة.\nكلب أسود عملاق يمشي هناك في الليل. وعيناه تشتعلان كالنار.",
+   "scene": {
+    "sky": "night",
+    "land": "swamp",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon",
+     "clouds"
+    ],
+    "chars": [],
+    "creatures": [
+     {
+      "type": "hound",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     },
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "grass"
+    ],
+    "light": "moonbeam",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "In London, a doctor tells Holmes a sad story.\nSir Charles Baskerville died near his house. Next to him were huge footprints!",
+   "ar": "في لندن، يحكي طبيب لهولمز قصّة حزينة.\nمات السير تشارلز باسكرفيل قرب بيته. وبجانبه آثار أقدام ضخمة!",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "fireplace",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "read",
+      "face": "right",
+      "pos": "left",
+      "item": "letter"
+     },
+     {
+      "id": "watson",
+      "pose": "sit",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chair",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Sir Henry is the new owner of Baskerville Hall.\nIn his hotel, somebody steals one of his old boots. Why?",
+   "ar": "السير هنري هو المالك الجديد لقصر باسكرفيل.\nوفي فندقه، يسرق أحدهم حذاءً قديمًا من أحذيته. لماذا؟",
+   "scene": {
+    "sky": "day",
+    "land": "london_street",
+    "landmark": {
+     "type": "street_lamps",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "henry",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "holmes",
+      "pose": "think",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "lamp_post",
+     "cart"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Watson goes with Sir Henry to the moor.\nThe old house is big and dark. Near it, there is a dangerous swamp.",
+   "ar": "يذهب واطسون مع السير هنري إلى الأرض البرّية.\nالبيت القديم كبير ومظلم. وبالقرب منه مستنقع خطير.",
+   "scene": {
+    "sky": "dusk",
+    "land": "swamp",
+    "landmark": {
+     "type": "mansion",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "henry",
+      "pose": "walk",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "grass"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "A neighbour, Mr Stapleton, catches butterflies on the moor.\nHis sister whispers to Watson: “Go back to London! Quickly!”",
+   "ar": "جارٌ اسمه السيّد ستابلتون يصطاد الفراشات في الأرض البرّية.\nوتهمس أخته لواطسون: «ارجع إلى لندن! بسرعة!»",
+   "scene": {
+    "sky": "day",
+    "land": "hills",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "stapleton",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "beryl",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "flowers"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At night, Watson sees a candle in a window.\nFar away, on a hill, a tall man stands under the moon. Who is he?",
+   "ar": "في الليل، يرى واطسون شمعة في نافذة.\nومن بعيد، فوق تلّ، يقف رجل طويل تحت القمر. من هو؟",
+   "scene": {
+    "sky": "night",
+    "land": "hills",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "watson",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "holmes",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right",
+      "far": true,
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "candle"
+    ],
+    "light": "moonbeam",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Watson finds the man in an old stone hut.\nIt is Holmes! “I am here in secret, my friend,” he says.",
+   "ar": "يجد واطسون الرجل في كوخ حجريّ قديم.\nإنه هولمز! يقول: «أنا هنا سرًّا يا صديقي.»",
+   "scene": {
+    "sky": "sunset",
+    "land": "hills",
+    "landmark": {
+     "type": "ruins",
+     "side": "left"
+    },
+    "sky_items": [
+     "birds",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "watson",
+      "pose": "run",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "campfire",
+     "rocks"
+    ],
+    "light": "fire",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "In the house, Holmes looks at an old picture of Hugo Baskerville.\nThe face is like Stapleton’s face! Stapleton is a Baskerville too.",
+   "ar": "في البيت، ينظر هولمز إلى صورة قديمة لهوغو باسكرفيل.\nالوجه يشبه وجه ستابلتون! ستابلتون أيضًا من عائلة باسكرفيل.",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "castle_hall",
+    "landmark": {
+     "type": "fireplace",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "point",
+      "face": "left",
+      "pos": "right",
+      "item": "lantern"
+     },
+     {
+      "id": "watson",
+      "pose": "look_up",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "shield_on_wall",
+     "torch_on_wall",
+     "chair"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "White fog comes. Sir Henry walks home alone across the moor.\nSuddenly, a giant hound jumps out. Its mouth glows with blue fire!",
+   "ar": "يأتي ضباب أبيض. ويمشي السير هنري وحده عائدًا عبر الأرض البرّية.\nفجأة، يقفز كلب صيد عملاق. وفمه يلمع بنار زرقاء!",
+   "scene": {
+    "sky": "mist",
+    "land": "swamp",
+    "landmark": {
+     "type": "standing_stones",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "henry",
+      "pose": "run",
+      "face": "left",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "hound",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "grass"
+    ],
+    "light": "magic",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Holmes and Watson stop the hound. Its fire is only shiny paint!\nStapleton wanted the Baskerville money. He runs into the swamp and disappears.",
+   "ar": "يوقف هولمز وواطسون الكلب. وناره ليست إلا طلاءً لامعًا!\nكان ستابلتون يريد مال عائلة باسكرفيل. يهرب إلى المستنقع ويختفي.",
+   "scene": {
+    "sky": "dawn",
+    "land": "swamp",
+    "landmark": {
+     "type": "mansion",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "point",
+      "face": "left",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "stapleton",
+      "pose": "run",
+      "face": "left",
+      "pos": "right",
+      "far": true
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "grass"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "moor",
+   "أرض برّية مفتوحة"
+  ],
+  [
+   "giant",
+   "عملاق"
+  ],
+  [
+   "footprints",
+   "آثار أقدام"
+  ],
+  [
+   "boot",
+   "حذاء طويل / جزمة"
+  ],
+  [
+   "swamp",
+   "مستنقع"
+  ],
+  [
+   "neighbour",
+   "جار"
+  ],
+  [
+   "butterflies",
+   "فراشات"
+  ],
+  [
+   "candle",
+   "شمعة"
+  ],
+  [
+   "hut",
+   "كوخ"
+  ],
+  [
+   "picture",
+   "صورة"
+  ],
+  [
+   "fog",
+   "ضباب"
+  ],
+  [
+   "hound",
+   "كلب صيد"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Sir Charles died in London.",
+   false
+  ],
+  [
+   "Somebody steals one of Sir Henry’s boots.",
+   true
+  ],
+  [
+   "Stapleton’s sister tells Watson to go back to London.",
+   true
+  ],
+  [
+   "The man on the hill is Holmes.",
+   true
+  ],
+  [
+   "The hound’s fire is real fire.",
+   false
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Curse of the Baskervilles",
+   "title_ar": "الفصل الأول: لعنة آل باسكرفيل",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "One morning, a tall young doctor called James Mortimer came to Baker Street. He took an old piece of paper from his pocket and read us a strange legend. Two hundred years earlier, a cruel man named Hugo Baskerville had lived at Baskerville Hall, on the wild moors of Devon. One night, he had chased a frightened girl across the moor with his hunting dogs. His friends followed, and they found a terrible sight. A huge black hound, bigger than any dog on earth, was standing over Hugo. “Since that night,” the paper said, “the hound has hunted our family. Never cross the moor in the dark hours.”",
+    "“A fairy tale,” said Holmes, yawning. “Perhaps,” replied Dr Mortimer. “But three months ago, my friend Sir Charles Baskerville was found dead at the end of the long path behind the Hall. His heart had simply stopped, as if he had seen something horrible. The police said nothing more. But I saw something which I did not tell them.” He lowered his voice. “On the ground, a few metres away, there were footprints.” “A man’s or a woman’s?” Holmes asked. Dr Mortimer looked at us both, and his voice became a whisper. “Mr Holmes, they were the footprints of a gigantic hound!”"
+   ],
+   "ar": [
+    "في صباح أحد الأيام، جاء إلى شارع بيكر طبيب شابّ طويل اسمه جيمس مورتيمر. أخرج من جيبه ورقة قديمة وقرأ علينا أسطورة غريبة. قبل مئتي سنة، عاش رجل قاسٍ اسمه هوغو باسكرفيل في قصر باسكرفيل، وسط الأراضي البرّية الموحشة في مقاطعة ديفون. وفي إحدى الليالي، طارد فتاة خائفة عبر تلك الأرض مع كلاب صيده. فتبعه أصدقاؤه، فرأوا منظرًا مرعبًا: كلب صيد أسود ضخم، أكبر من أيّ كلب على وجه الأرض، يقف فوق هوغو. وكانت الورقة تقول: «منذ تلك الليلة، والكلب يطارد عائلتنا. فلا تعبروا الأرض البرّية في ساعات الظلام أبدًا.»",
+    "قال هولمز وهو يتثاءب: «حكاية خرافية.» فأجاب الدكتور مورتيمر: «ربما. لكن قبل ثلاثة أشهر، وُجد صديقي السير تشارلز باسكرفيل ميّتًا في آخر الممرّ الطويل خلف القصر. لقد توقّف قلبه فجأة، كأنه رأى شيئًا فظيعًا. ولم تقل الشرطة أكثر من ذلك. لكنني رأيت شيئًا لم أخبرهم به.» ثم خفض صوته: «على الأرض، على بعد أمتار قليلة، كانت هناك آثار أقدام.» سأل هولمز: «لرجل أم لامرأة؟» نظر الدكتور مورتيمر إلينا نحن الاثنين، وصار صوته همسًا: «يا سيّد هولمز، كانت آثار أقدام كلب صيد عملاق!»"
+   ],
+   "words": [
+    [
+     "legend",
+     "أسطورة"
+    ],
+    [
+     "cruel",
+     "قاسٍ"
+    ],
+    [
+     "chase",
+     "يطارد"
+    ],
+    [
+     "sight",
+     "منظر / مشهد"
+    ],
+    [
+     "gigantic",
+     "عملاق / هائل"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Missing Boot",
+   "title_ar": "الفصل الثاني: الحذاء المفقود",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "The new owner of Baskerville Hall was Sir Charles’s nephew, Sir Henry, a strong, cheerful young man who had just arrived from Canada. He came to see us the next day, and he was holding a letter. Someone had cut words out of a newspaper and stuck them onto the paper: “If you value your life, keep away from the moor.” Then he told us something else. “Somebody has stolen one of my boots from outside my hotel room. It was a new brown one. And this morning, one of my old black boots disappeared too!” Holmes became very interested. “An old boot,” he said slowly. “That is most important.”",
+    "Holmes could not leave London because of other cases, so he asked me to travel with Sir Henry to Devon. “Write to me every day, Watson,” he said. “Tell me every fact, however small. And never let Sir Henry walk on the moor alone at night.” The journey was long. At last, we saw the moor: miles of empty brown hills, grey rocks and strange stone circles left by ancient people. Baskerville Hall stood among dark trees. Its butler, Barrymore, met us at the door with a lantern. Not far from the house lay the Grimpen Mire, a huge green swamp. One wrong step there, and a man could sink and never be seen again."
+   ],
+   "ar": [
+    "كان المالك الجديد لقصر باسكرفيل هو ابن أخ السير تشارلز، السير هنري، شابًّا قويًّا مرحًا وصل لتوّه من كندا. جاء لزيارتنا في اليوم التالي وفي يده رسالة. كان أحدهم قد قصّ كلمات من جريدة ولصقها على الورقة: «إن كنت تقدّر حياتك، فابتعد عن الأرض البرّية.» ثم أخبرنا بشيء آخر: «سرق أحدهم حذاءً من أحذيتي من أمام غرفتي في الفندق. كان حذاءً بنّيًّا جديدًا. وهذا الصباح اختفى أيضًا حذاء من أحذيتي السوداء القديمة!» اهتمّ هولمز اهتمامًا كبيرًا، وقال ببطء: «حذاء قديم. هذا أمر مهمّ جدًّا.»",
+    "لم يستطع هولمز مغادرة لندن بسبب قضايا أخرى، فطلب منّي أن أسافر مع السير هنري إلى ديفون. قال: «اكتب لي كلّ يوم يا واطسون. أخبرني بكلّ حقيقة مهما كانت صغيرة. ولا تدع السير هنري يمشي في الأرض البرّية وحده في الليل أبدًا.» كانت الرحلة طويلة. وأخيرًا رأينا الأرض البرّية: أميالًا من التلال البنّية الخالية، والصخور الرمادية، ودوائر حجرية غريبة تركها أناس قدماء. وكان قصر باسكرفيل قائمًا بين أشجار داكنة. استقبلنا عند الباب كبير خدمه، باريمور، ومعه فانوس. وغير بعيد عن البيت يقع مستنقع غريمبن، وهو مستنقع أخضر هائل. خطوة واحدة خاطئة فيه، وقد يغرق الإنسان ولا يُرى أبدًا."
+   ],
+   "words": [
+    [
+     "nephew",
+     "ابن الأخ / ابن الأخت"
+    ],
+    [
+     "cheerful",
+     "مرح"
+    ],
+    [
+     "value",
+     "يقدّر / يُثمّن"
+    ],
+    [
+     "butler",
+     "كبير الخدم"
+    ],
+    [
+     "sink",
+     "يغرق"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: Strangers on the Moor",
+   "title_ar": "الفصل الثالث: غرباء في الأرض البرّية",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "On my first day, I went for a walk on the moor. A small, thin man with a butterfly net came running towards me. “I am Jack Stapleton,” he said. “I study insects and plants. My sister and I live at Merripit House, not far away.” While he was chasing a butterfly, a beautiful dark-haired woman hurried up to me. “Go back!” she whispered. “Go straight back to London! Don’t ask why.” Then her brother returned, and she suddenly smiled and talked about flowers. I was puzzled. Why was Miss Stapleton so afraid? And why did she want us to leave?",
+    "There were other mysteries too. Late one night, I saw Barrymore walking along the dark corridor with a candle. He stood at a window and moved the candle slowly up and down. Far out on the moor, a tiny light answered him. Sir Henry and I followed the light, and we discovered the truth: an escaped prisoner was hiding on the moor, and he was Mrs Barrymore’s brother. The kind couple had been secretly giving him food. But as we walked back, I saw something which made my blood run cold. On top of a rocky hill, against the moon, stood the dark shape of a tall, thin man."
+   ],
+   "ar": [
+    "في يومي الأوّل، خرجت في نزهة في الأرض البرّية. فجاء نحوي راكضًا رجل صغير نحيل يحمل شبكة فراشات. قال: «أنا جاك ستابلتون. أدرس الحشرات والنباتات. وأعيش أنا وأختي في بيت ميريبيت، غير بعيد من هنا.» وبينما كان يطارد فراشة، أسرعت نحوي امرأة جميلة ذات شعر داكن. همست: «ارجع! ارجع إلى لندن فورًا! ولا تسأل عن السبب.» ثم عاد أخوها، فابتسمت فجأة وأخذت تتحدّث عن الزهور. حرت في أمري. لماذا كانت الآنسة ستابلتون خائفة إلى هذا الحدّ؟ ولماذا أرادتنا أن نرحل؟",
+    "وكانت هناك ألغاز أخرى أيضًا. في وقت متأخّر من إحدى الليالي، رأيت باريمور يمشي في الممرّ المظلم ومعه شمعة. وقف عند نافذة، وأخذ يحرّك الشمعة ببطء إلى أعلى وإلى أسفل. ومن بعيد في الأرض البرّية، أجابه ضوء صغير. تبعنا أنا والسير هنري ذلك الضوء، فاكتشفنا الحقيقة: سجين هارب كان يختبئ في الأرض البرّية، وهو أخو السيّدة باريمور. وكان الزوجان الطيّبان يعطيانه الطعام سرًّا. لكن بينما كنّا عائدين، رأيت شيئًا جمّد الدم في عروقي. فوق تلّ صخريّ، وفي ضوء القمر، كان يقف ظلّ رجل طويل نحيل."
+   ],
+   "words": [
+    [
+     "insect",
+     "حشرة"
+    ],
+    [
+     "whisper",
+     "يهمس"
+    ],
+    [
+     "puzzled",
+     "حائر"
+    ],
+    [
+     "corridor",
+     "ممرّ"
+    ],
+    [
+     "escaped prisoner",
+     "سجين هارب"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Man in the Stone Hut",
+   "title_ar": "الفصل الرابع: الرجل في الكوخ الحجريّ",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "I decided to find the mysterious man. I searched the old stone huts on the hillside until I found one with fresh food, a blanket and a cooking pot inside. I sat in the shadows with my revolver and waited. At sunset, I heard footsteps outside. Then a familiar voice said, “It is a lovely evening, my dear Watson. Why don’t you come out?” I could not believe it. It was Sherlock Holmes! He had been living secretly on the moor for days. “If I had come with you,” he explained, “our enemy would have been careful. Alone, I could watch everyone.”",
+    "That night, we heard a horrible scream on the moor. We found the escaped prisoner at the bottom of some rocks. He had fallen while running from something. He was wearing Sir Henry’s old clothes, which Barrymore had given him. “The hound followed the smell of the clothes,” Holmes said quietly. Back at the Hall, Holmes stopped in front of an old painting of wicked Hugo Baskerville. He covered the hat and the long hair with his hand. Suddenly, I saw a face I knew. It was Stapleton! “He is a Baskerville too,” said Holmes. “If Sir Henry dies, he will be next in line for the house and the money.”"
+   ],
+   "ar": [
+    "قرّرت أن أعثر على الرجل الغامض. فتّشت الأكواخ الحجرية القديمة على سفح التلّ، حتى وجدت كوخًا فيه طعام طازج، وبطّانية، وقِدر طبخ. جلست في الظلّ ومعي مسدّسي، وانتظرت. وعند الغروب، سمعت خطوات في الخارج. ثم قال صوت أعرفه: «إنها أمسية جميلة يا عزيزي واطسون. لماذا لا تخرج؟» لم أصدّق أذنيّ. كان شيرلوك هولمز! كان يعيش سرًّا في الأرض البرّية منذ أيام. وشرح قائلًا: «لو جئت معك، لكان عدوّنا حذرًا. أمّا وأنا وحدي، فأستطيع أن أراقب الجميع.»",
+    "في تلك الليلة، سمعنا صرخة مرعبة في الأرض البرّية. ووجدنا السجين الهارب أسفل بعض الصخور. كان قد سقط وهو يهرب من شيء ما. وكان يلبس ثياب السير هنري القديمة، التي أعطاه إيّاها باريمور. قال هولمز بهدوء: «تبع الكلب رائحة الثياب.» وعندما عدنا إلى القصر، وقف هولمز أمام لوحة قديمة لهوغو باسكرفيل الشرّير. غطّى القبّعة والشعر الطويل بيده. وفجأة رأيت وجهًا أعرفه. إنه ستابلتون! قال هولمز: «إنه من آل باسكرفيل أيضًا. وإذا مات السير هنري، فهو التالي في وراثة البيت والمال.»"
+   ],
+   "words": [
+    [
+     "mysterious",
+     "غامض"
+    ],
+    [
+     "familiar",
+     "مألوف"
+    ],
+    [
+     "enemy",
+     "عدوّ"
+    ],
+    [
+     "smell",
+     "رائحة"
+    ],
+    [
+     "wicked",
+     "شرّير"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Hound in the Fog",
+   "title_ar": "الفصل الخامس: الكلب في الضباب",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Holmes made a bold plan. Sir Henry would have dinner at Merripit House and then walk home alone across the moor, while we hid behind the rocks with Inspector Lestrade. Everything went well until a thick white fog began to roll in from the swamp. “If the fog covers the path, we cannot see him,” Holmes whispered. Soon we heard quick footsteps. Sir Henry was walking fast, looking behind him. Then there came a sound of heavy paws. Out of the fog jumped an enormous black hound. Fire seemed to shine from its open mouth, and its eyes glowed. It raced after Sir Henry with great leaps.",
+    "Holmes and I fired our revolvers together. The hound howled, but it did not stop. It knocked Sir Henry to the ground. Holmes ran faster than I had ever seen any man run, and he fired again and again until the great beast lay still. Sir Henry was badly frightened, but he was not seriously hurt. I touched the hound’s head, and my fingers glowed in the dark. “Phosphorus,” said Holmes. “A shiny paint, to make it look like a ghost. And the stolen boot gave it Sir Henry’s smell.” We found Miss Stapleton tied up in the house. Stapleton had run into the swamp in the fog, and he was never seen again."
+   ],
+   "ar": [
+    "وضع هولمز خطّة جريئة. سيتناول السير هنري العشاء في بيت ميريبيت، ثم يمشي إلى بيته وحده عبر الأرض البرّية، بينما نختبئ نحن خلف الصخور مع المفتّش ليستريد. سار كلّ شيء على ما يرام، حتى بدأ ضباب أبيض كثيف يزحف من المستنقع. همس هولمز: «إذا غطّى الضباب الطريق، فلن نستطيع أن نراه.» وسرعان ما سمعنا خطوات سريعة. كان السير هنري يمشي مسرعًا وينظر خلفه. ثم جاء صوت أقدام ثقيلة. ومن الضباب قفز كلب صيد أسود هائل. بدا كأن النار تلمع من فمه المفتوح، وعيناه تتوهّجان. وانطلق خلف السير هنري بقفزات واسعة.",
+    "أطلقت أنا وهولمز مسدّسينا معًا. عوى الكلب، لكنه لم يتوقّف، وأوقع السير هنري على الأرض. ركض هولمز أسرع ممّا رأيت أيّ رجل يركض في حياتي، وأطلق النار مرّة بعد مرّة حتى سكن ذلك الوحش الكبير ولم يعد يتحرّك. كان السير هنري مذعورًا جدًّا، لكنه لم يُصب بأذى خطير. لمست رأس الكلب، فتوهّجت أصابعي في الظلام. قال هولمز: «فوسفور. طلاء لامع ليجعله يبدو كالشبح. والحذاء المسروق أعطاه رائحة السير هنري.» ووجدنا الآنسة ستابلتون مقيّدة في البيت. أمّا ستابلتون فقد هرب إلى المستنقع وسط الضباب، ولم يره أحد بعد ذلك أبدًا."
+   ],
+   "words": [
+    [
+     "bold",
+     "جريء"
+    ],
+    [
+     "enormous",
+     "هائل / ضخم جدًّا"
+    ],
+    [
+     "leap",
+     "قفزة"
+    ],
+    [
+     "howl",
+     "يعوي"
+    ],
+    [
+     "ghost",
+     "شبح"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What did Dr Mortimer see near Sir Charles’s body?",
+   [
+    "A broken lantern",
+    "The footprints of a gigantic hound",
+    "A letter from Stapleton"
+   ],
+   1
+  ],
+  [
+   "Why was the stolen old boot important?",
+   [
+    "It gave the hound Sir Henry’s smell",
+    "It was very expensive",
+    "It had a secret map inside"
+   ],
+   0
+  ],
+  [
+   "Why did Barrymore move a candle at the window?",
+   [
+    "He was calling the police",
+    "He was looking for Holmes",
+    "He was signalling to his wife’s brother"
+   ],
+   2
+  ],
+  [
+   "How did Holmes discover that Stapleton was a Baskerville?",
+   [
+    "Beryl told him",
+    "He saw the face in an old painting",
+    "He found a letter in the hut"
+   ],
+   1
+  ],
+  [
+   "Why did the hound’s mouth seem to burn?",
+   [
+    "It was a ghost",
+    "It had eaten fire",
+    "It was covered in shiny phosphorus paint"
+   ],
+   2
+  ]
+ ],
+ "talk_en": "At first, many people believed the hound was a ghost. Why do people sometimes believe old legends? Do you know a scary legend from your own country?",
+ "talk_ar": "في البداية، ناس وايد صدّقوا إن الكلب شبح. ليش الناس أحيانًا يصدّقون الأساطير القديمة؟ تعرف أسطورة مخيفة من بلدك؟"
+}

@@ -1,0 +1,870 @@
+{
+ "n": 17,
+ "slug": "perseus-gorgon",
+ "title": "Perseus and the Gorgon",
+ "series_tag": "Greek Myths",
+ "subtitle_ar": "أساطير يونانية: بيرسيوس وميدوسا",
+ "genre": "Myth",
+ "based_on": "Greek mythology (public domain)",
+ "blurb_en": "A cruel king sends young Perseus on an impossible mission: bring back the head of Medusa, whose eyes turn people to stone. With a mirror shield, winged sandals and a clever trick, can he come home alive?",
+ "blurb_ar": "يرسل ملكٌ قاسٍ الشابَّ بيرسيوس في مهمّة مستحيلة: أن يُحضر رأس ميدوسا، التي تحوّل عيناها الناسَ إلى حجر. فهل ينجو بدرعٍ كالمرآة وصندلٍ مجنّح وحيلةٍ ذكية؟",
+ "palette": "teal",
+ "cast": [
+  {
+   "id": "perseus",
+   "name": "Perseus",
+   "body": "man",
+   "outfit": "tunic",
+   "head": "short_hair",
+   "item": "sword",
+   "height": 1.0
+  },
+  {
+   "id": "danae",
+   "name": "Danae",
+   "body": "woman",
+   "outfit": "dress",
+   "head": "long_hair",
+   "item": "none"
+  },
+  {
+   "id": "polydectes",
+   "name": "King Polydectes",
+   "body": "stout_man",
+   "outfit": "robe",
+   "head": "crown",
+   "item": "none"
+  },
+  {
+   "id": "medusa",
+   "name": "Medusa",
+   "body": "woman",
+   "outfit": "robe",
+   "head": "curly_hair",
+   "item": "none",
+   "height": 1.1
+  },
+  {
+   "id": "athena",
+   "name": "Athena",
+   "body": "woman",
+   "outfit": "robe",
+   "head": "helmet",
+   "item": "spear",
+   "height": 1.12
+  },
+  {
+   "id": "grey1",
+   "name": "Grey Sister",
+   "body": "old_woman",
+   "outfit": "rags",
+   "head": "hood",
+   "item": "none"
+  },
+  {
+   "id": "grey2",
+   "name": "Grey Sister",
+   "body": "old_woman",
+   "outfit": "rags",
+   "head": "hood",
+   "item": "none"
+  },
+  {
+   "id": "grey3",
+   "name": "Grey Sister",
+   "body": "old_woman",
+   "outfit": "rags",
+   "head": "hood",
+   "item": "none"
+  },
+  {
+   "id": "andromeda",
+   "name": "Andromeda",
+   "body": "woman",
+   "outfit": "dress",
+   "head": "braid",
+   "item": "none"
+  }
+ ],
+ "cover_scene": {
+  "sky": "storm",
+  "land": "island",
+  "landmark": {
+   "type": "ruins",
+   "side": "right"
+  },
+  "sky_items": [
+   "lightning",
+   "clouds"
+  ],
+  "chars": [
+   {
+    "id": "perseus",
+    "pose": "hold_out",
+    "face": "left",
+    "pos": "left",
+    "item": "mirror_shield"
+   },
+   {
+    "id": "medusa",
+    "pose": "raise",
+    "face": "left",
+    "pos": "right"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "snake",
+    "pos": "right",
+    "size": "m",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "statue",
+   "rocks"
+  ],
+  "light": "lightning",
+  "mood": "scary"
+ },
+ "a1": [
+  {
+   "en": "Perseus lives on an island with his mother, Danae.\nThe cruel king says, “Bring me the head of Medusa!”",
+   "ar": "يعيش بيرسيوس على جزيرة مع أمّه داناي.\nيقول الملك القاسي: «أحضِر لي رأس ميدوسا!»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "palace_hall",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "polydectes",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "perseus",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "danae",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left",
+      "scale": 0.9,
+      "far": true
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "torch_on_wall",
+     "table",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Medusa is a monster with snakes for hair.\nPeople who look at her eyes turn to stone!",
+   "ar": "ميدوسا وحشٌ شعرُه من الأفاعي.\nومن ينظر إلى عينيها يتحوّل إلى حجر!",
+   "scene": {
+    "sky": "storm",
+    "land": "ruins",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "right"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "medusa",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "snake",
+      "pos": "center",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "statue",
+     "rocks",
+     "bones"
+    ],
+    "light": "lightning",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Perseus goes to a temple. The goddess Athena comes to help.\nShe gives him a shiny shield. It is like a mirror.",
+   "ar": "يذهب بيرسيوس إلى معبد. وتأتي الإلهة أثينا لتساعده.\nتعطيه درعًا لامعًا، يشبه المرآة.",
+   "scene": {
+    "sky": "dawn",
+    "land": "hills",
+    "landmark": {
+     "type": "greek_temple",
+     "side": "center"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "athena",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "right",
+      "item": "mirror_shield"
+     },
+     {
+      "id": "perseus",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "owl",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "statue",
+     "flowers"
+    ],
+    "light": "sunrise",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The god Hermes gives him sandals with wings.\nNow Perseus can fly! He flies high over the sea.",
+   "ar": "ويعطيه الإله هيرميس صندلًا له أجنحة.\nالآن يستطيع بيرسيوس أن يطير! يطير عاليًا فوق البحر.",
+   "scene": {
+    "sky": "day",
+    "land": "sea",
+    "landmark": {
+     "type": "mountain_peak",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "clouds",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "perseus",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "scale": 0.85,
+      "item": "mirror_shield"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "eagle",
+      "pos": "sky",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "small_boat"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "Three old sisters live in a cold cave.\nThey have only one eye! They pass it from hand to hand.",
+   "ar": "تعيش ثلاث أخوات عجائز في كهف بارد.\nليس لهنّ إلا عين واحدة! يمرّرنها من يدٍ إلى يد.",
+   "scene": {
+    "sky": "mist",
+    "land": "mountains",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "center"
+    },
+    "sky_items": [
+     "crescent"
+    ],
+    "chars": [
+     {
+      "id": "grey1",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "grey2",
+      "pose": "sit",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "grey3",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "campfire",
+     "rocks"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Perseus catches the eye. “Where does Medusa live?”\n“Give it back!” they cry. “She lives on a far, dark island!”",
+   "ar": "يمسك بيرسيوس بالعين. «أين تعيش ميدوسا؟»\n«أعِدها إلينا!» يصرخن. «إنها تعيش على جزيرة مظلمة بعيدة!»",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "perseus",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "grey1",
+      "pose": "raise",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "grey2",
+      "pose": "kneel",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "bat",
+      "pos": "sky",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "campfire",
+     "spider_web"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "On Medusa’s island, there are stone statues everywhere.\nPerseus walks backwards. He looks only at his shield.",
+   "ar": "على جزيرة ميدوسا، توجد تماثيل حجرية في كلّ مكان.\nيمشي بيرسيوس إلى الخلف، ولا ينظر إلا إلى درعه.",
+   "scene": {
+    "sky": "cave",
+    "land": "cave",
+    "landmark": {
+     "type": "ruins",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "perseus",
+      "pose": "hold_out",
+      "face": "left",
+      "pos": "left",
+      "item": "mirror_shield"
+     },
+     {
+      "id": "medusa",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "snake",
+      "pos": "right",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "statue",
+     "torch_on_wall",
+     "rocks"
+    ],
+    "light": "fire",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "With one swing of his sword, Perseus wins!\nHe puts Medusa’s head in a bag. He does not look inside.",
+   "ar": "بضربة واحدة من سيفه، ينتصر بيرسيوس!\nيضع رأس ميدوسا في كيس، ولا ينظر إلى داخله.",
+   "scene": {
+    "sky": "night",
+    "land": "island",
+    "landmark": {
+     "type": "cave_mouth",
+     "side": "left"
+    },
+    "sky_items": [
+     "moon",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "perseus",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "item": "sack"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "statue",
+     "rocks",
+     "boulder"
+    ],
+    "light": "moonbeam",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "On the way home, he sees a princess on a rock. It is Andromeda.\nA huge sea monster is coming!",
+   "ar": "في طريق العودة، يرى أميرة فوق صخرة. إنها أندروميدا.\nووحشٌ بحريّ ضخم يقترب منها!",
+   "scene": {
+    "sky": "storm",
+    "land": "shore",
+    "landmark": {
+     "type": "palace_dome",
+     "side": "left"
+    },
+    "sky_items": [
+     "lightning",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "andromeda",
+      "pose": "stand",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "perseus",
+      "pose": "run",
+      "face": "right",
+      "pos": "left",
+      "scale": 0.8,
+      "item": "sack"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "sea_serpent",
+      "pos": "right",
+      "size": "xl",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "rocks",
+     "rope"
+    ],
+    "light": "lightning",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Perseus opens the bag. The monster sees Medusa and turns to stone!\nHe takes Andromeda home. Now his mother is safe too. The end.",
+   "ar": "يفتح بيرسيوس الكيس. يرى الوحشُ ميدوسا فيتحوّل إلى حجر!\nيُعيد أندروميدا إلى أهلها. والآن أمّه في أمانٍ أيضًا. النهاية.",
+   "scene": {
+    "sky": "sunset",
+    "land": "shore",
+    "landmark": {
+     "type": "greek_temple",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "perseus",
+      "pose": "raise",
+      "face": "left",
+      "pos": "center",
+      "item": "sack"
+     },
+     {
+      "id": "andromeda",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "boulder",
+     "rocks",
+     "small_boat"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "island",
+   "جزيرة"
+  ],
+  [
+   "king",
+   "ملك"
+  ],
+  [
+   "snake",
+   "أفعى"
+  ],
+  [
+   "stone",
+   "حجر"
+  ],
+  [
+   "temple",
+   "معبد"
+  ],
+  [
+   "goddess",
+   "إلهة"
+  ],
+  [
+   "shield",
+   "درع"
+  ],
+  [
+   "mirror",
+   "مرآة"
+  ],
+  [
+   "wings",
+   "أجنحة"
+  ],
+  [
+   "eye",
+   "عين"
+  ],
+  [
+   "bag",
+   "كيس"
+  ],
+  [
+   "monster",
+   "وحش"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Medusa has snakes for hair.",
+   true
+  ],
+  [
+   "Athena gives Perseus a shiny shield.",
+   true
+  ],
+  [
+   "The three old sisters have two eyes.",
+   false
+  ],
+  [
+   "Perseus looks straight at Medusa.",
+   false
+  ],
+  [
+   "The sea monster turns to stone.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The King’s Cruel Trick",
+   "title_ar": "الفصل الأول: خدعة الملك القاسية",
+   "en": [
+    "Long ago, on a small Greek island, a young man named Perseus lived with his mother, Danae. They had arrived there when Perseus was a baby, and a kind fisherman had taken care of them. They were not rich, but they were happy. However, the island was ruled by King Polydectes, a greedy and cruel man. The king wanted to marry Danae, but she refused him again and again, and Perseus always stood beside her. Polydectes knew that while the young man was there, he could never get what he wanted. So he began to plan a way to get rid of Perseus forever.",
+    "One evening, the king held a great feast and asked every guest to bring him a horse as a gift. Perseus had no horse and no money. When the other guests laughed at him, he stood up proudly. “I can bring you anything you want,” he said. “Even the head of Medusa!” The hall went silent. Everyone knew about Medusa, the monster with living snakes instead of hair. Anyone who looked into her eyes turned to stone at once. Polydectes smiled a cold smile. That was exactly what he had hoped for. “Then go,” he said. “And don’t come back without it.”"
+   ],
+   "ar": [
+    "منذ زمن بعيد، على جزيرة يونانية صغيرة، عاش شابّ اسمه بيرسيوس مع أمّه داناي. كانا قد وصلا إلى الجزيرة عندما كان بيرسيوس رضيعًا، فاعتنى بهما صيّاد طيّب. لم يكونا غنيّين، لكنهما كانا سعيدين. غير أنّ الجزيرة كان يحكمها الملك بوليديكتيس، وهو رجل طمّاع وقاسٍ. أراد الملك أن يتزوّج داناي، لكنها رفضته مرّة بعد مرّة، وكان بيرسيوس يقف دائمًا إلى جانبها. وعرف بوليديكتيس أنه لن ينال ما يريد ما دام هذا الشابّ موجودًا. فبدأ يدبّر خطّة للتخلّص من بيرسيوس إلى الأبد.",
+    "وفي إحدى الأمسيات، أقام الملك وليمة كبيرة، وطلب من كلّ ضيف أن يُهديه حصانًا. لم يكن عند بيرسيوس حصان ولا مال. وعندما ضحك منه الضيوف، وقف بفخر وقال: «أستطيع أن أُحضر لك أيّ شيء تريده، حتى رأس ميدوسا!» فساد الصمت في القاعة. كان الجميع يعرفون ميدوسا، الوحش الذي يحمل أفاعي حيّة بدل الشعر. ومن ينظر في عينيها يتحوّل إلى حجر في الحال. ابتسم بوليديكتيس ابتسامة باردة، فهذا بالضبط ما كان يتمنّاه. وقال: «اذهب إذن، ولا ترجع من دونه.»"
+   ],
+   "pics": [
+    0,
+    1
+   ],
+   "words": [
+    [
+     "greedy",
+     "طمّاع"
+    ],
+    [
+     "refuse",
+     "يرفض"
+    ],
+    [
+     "get rid of",
+     "يتخلّص من"
+    ],
+    [
+     "feast",
+     "وليمة"
+    ],
+    [
+     "proudly",
+     "بفخر"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Gifts from the Gods",
+   "title_ar": "الفصل الثاني: هدايا من الآلهة",
+   "en": [
+    "Perseus left the palace with a heavy heart. He had no idea where Medusa lived, and he had no weapon that could defeat her. That night he climbed up to an old temple on the hill and prayed for help. As the sun was rising, a tall woman in a shining helmet appeared between the white columns. It was Athena, the goddess of wisdom. “Your courage is great,” she said, “but courage alone is not enough. Take this.” She handed him a bronze shield. It was polished so brightly that it worked like a mirror.",
+    "“Never look at Medusa directly,” Athena warned. “Look only at her reflection.” Then a second god arrived, as quick as the wind. It was Hermes, the messenger of the gods. He gave Perseus a curved sword that could cut through anything, a strong magic bag, and a pair of sandals with little wings at the heels. When Perseus put them on, his feet lifted off the ground. He laughed in surprise as he rose above the trees. Soon he was flying over the shining sea, but he still did not know which way to go."
+   ],
+   "ar": [
+    "غادر بيرسيوس القصر بقلب مثقل. لم يكن يعرف أين تعيش ميدوسا، ولم يكن يملك سلاحًا يستطيع أن يهزمها. وفي تلك الليلة صعد إلى معبد قديم فوق التلّ، ودعا طالبًا العون. ومع شروق الشمس، ظهرت بين الأعمدة البيضاء امرأة طويلة تلبس خوذة لامعة. كانت أثينا، إلهة الحكمة. قالت: «شجاعتك عظيمة، لكن الشجاعة وحدها لا تكفي. خذ هذا.» وناولته درعًا من البرونز، مصقولًا بلمعان شديد حتى صار يعمل كالمرآة.",
+    "وحذّرته أثينا: «لا تنظر إلى ميدوسا مباشرة أبدًا. انظر إلى صورتها المنعكسة فقط.» ثم وصل إله ثانٍ، سريعٌ كالريح. كان هيرميس، رسول الآلهة. أعطى بيرسيوس سيفًا معقوفًا يقطع كلّ شيء، وكيسًا سحريًّا متينًا، وصندلًا في كعبيه جناحان صغيران. وعندما لبسه بيرسيوس، ارتفعت قدماه عن الأرض. ضحك متفاجئًا وهو يعلو فوق الأشجار. وسرعان ما صار يطير فوق البحر اللامع، لكنه لم يكن يعرف بعدُ أيّ طريق يسلك."
+   ],
+   "pics": [
+    2,
+    3
+   ],
+   "words": [
+    [
+     "weapon",
+     "سلاح"
+    ],
+    [
+     "wisdom",
+     "حكمة"
+    ],
+    [
+     "courage",
+     "شجاعة"
+    ],
+    [
+     "warn",
+     "يحذّر"
+    ],
+    [
+     "reflection",
+     "انعكاس / صورة منعكسة"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: The Sisters with One Eye",
+   "title_ar": "الفصل الثالث: الأخوات صاحبات العين الواحدة",
+   "en": [
+    "Athena had told him that only the Grey Sisters knew the way to Medusa’s island. These three ancient women lived in a cold cave at the edge of the world. Their hair had been grey since the day they were born, and between them they shared just one eye and one tooth. When Perseus landed quietly outside the cave, he could hear them arguing. “Give me the eye! It’s my turn!” “No, you had it this morning!” They passed the eye from hand to hand, and for a moment none of them could see anything at all.",
+    "That was the moment Perseus had been waiting for. He stepped forward silently and caught the eye as it went from one sister to the next. The sisters screamed and felt around in the dark. “Who is there? Give it back!” “I will,” said Perseus calmly, “as soon as you tell me where Medusa lives.” The sisters argued, threatened and begged, but in the end they gave in. “Fly west, to the island where nothing grows,” they said. Perseus kept his word. He put the eye gently into an old hand and flew off into the night."
+   ],
+   "ar": [
+    "كانت أثينا قد أخبرته أنّ الأخوات الرماديات وحدهنّ يعرفن الطريق إلى جزيرة ميدوسا. كانت هؤلاء النساء الثلاث المسنّات جدًّا يعشن في كهف بارد عند طرف العالم. كان شعرهنّ رماديًّا منذ يوم ولادتهنّ، ولم يكن لهنّ جميعًا إلا عين واحدة وسنّ واحدة يتقاسمنها. وعندما هبط بيرسيوس بهدوء خارج الكهف، سمعهنّ يتشاجرن: «أعطيني العين! جاء دوري!» «لا، كانت معكِ هذا الصباح!» كنّ يمرّرن العين من يد إلى يد، وفي تلك اللحظة لم تكن أيّ واحدة منهنّ ترى شيئًا على الإطلاق.",
+    "كانت تلك هي اللحظة التي ينتظرها بيرسيوس. تقدّم بصمت، وأمسك العين وهي تنتقل من أخت إلى أخرى. صرخت الأخوات وأخذن يتحسّسن في الظلام: «من هناك؟ أعِدها!» قال بيرسيوس بهدوء: «سأعيدها، حالما تخبرنني أين تعيش ميدوسا.» تجادلت الأخوات، وهدّدن، وتوسّلن، لكنهنّ استسلمن في النهاية وقلن: «طِر نحو الغرب، إلى الجزيرة التي لا ينبت فيها شيء.» ووفى بيرسيوس بوعده؛ وضع العين برفق في يدٍ عجوز، وطار مبتعدًا في الليل."
+   ],
+   "pics": [
+    4,
+    5
+   ],
+   "words": [
+    [
+     "ancient",
+     "قديم جدًّا / مسنّ"
+    ],
+    [
+     "share",
+     "يتقاسم"
+    ],
+    [
+     "argue",
+     "يتجادل / يتشاجر"
+    ],
+    [
+     "threaten",
+     "يهدّد"
+    ],
+    [
+     "give in",
+     "يستسلم / يرضخ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: The Mirror Shield",
+   "title_ar": "الفصل الرابع: الدرع المرآة",
+   "en": [
+    "Perseus flew for many days until he saw a grey island in a dark sea. Nothing grew there, and no birds sang. As he landed, he noticed strange shapes among the rocks: a soldier with his sword raised, a shepherd with his dog, a man who had been running away. They were all made of stone. They had looked at Medusa, and now they would stand there forever. Perseus felt his knees shaking, and his mouth went dry. From a cave nearby came a soft hissing sound, like a hundred snakes whispering at once.",
+    "He remembered Athena’s warning. Turning his back to the cave, he raised the shield and walked in backwards, step by step, watching the polished bronze. Then he saw her in the reflection. Medusa was sleeping on the floor, and the snakes on her head were moving slowly in the firelight. Perseus held his breath. One snake opened its eyes and hissed, and Medusa began to wake up. Without turning around, Perseus swung the sword of Hermes, and the danger was over. Still looking away, he dropped Medusa’s head into the magic bag and tied it tightly."
+   ],
+   "ar": [
+    "طار بيرسيوس أيّامًا كثيرة حتى رأى جزيرة رمادية في بحر مظلم. لم يكن ينبت فيها شيء، ولا تغرّد فيها الطيور. وعندما هبط، لاحظ أشكالًا غريبة بين الصخور: جنديًّا يرفع سيفه، وراعيًا مع كلبه، ورجلًا كان يحاول الهرب. كانوا جميعًا من حجر. لقد نظروا إلى ميدوسا، وسيبقون واقفين هناك إلى الأبد. شعر بيرسيوس بركبتيه ترتجفان، وجفّ حلقه. ومن كهف قريب جاء صوت فحيح خافت، كأنّ مئة أفعى تهمس في وقت واحد.",
+    "تذكّر تحذير أثينا. أدار ظهره للكهف، ورفع الدرع، ودخل إلى الخلف خطوة خطوة، وعيناه على البرونز المصقول. ثم رآها في الصورة المنعكسة. كانت ميدوسا نائمة على الأرض، والأفاعي فوق رأسها تتحرّك ببطء في ضوء النار. حبس بيرسيوس أنفاسه. فتحت إحدى الأفاعي عينيها وفحّت، وبدأت ميدوسا تستيقظ. ومن دون أن يلتفت، ضرب بيرسيوس بسيف هيرميس، فانتهى الخطر. وما زال يُشيح بنظره، أسقط رأس ميدوسا في الكيس السحري وربطه بإحكام."
+   ],
+   "pics": [
+    6,
+    7
+   ],
+   "words": [
+    [
+     "notice",
+     "يلاحظ"
+    ],
+    [
+     "shepherd",
+     "راعي غنم"
+    ],
+    [
+     "hiss",
+     "يفحّ (صوت الأفعى)"
+    ],
+    [
+     "backwards",
+     "إلى الخلف"
+    ],
+    [
+     "held his breath",
+     "حبس أنفاسه"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Monster from the Sea",
+   "title_ar": "الفصل الخامس: الوحش القادم من البحر",
+   "en": [
+    "On the long journey home, a storm pushed Perseus towards the coast of a distant kingdom. There he saw a terrible sight. A young woman was chained to a rock at the edge of the sea, and the waves were crashing around her. She was Princess Andromeda. Her mother had boasted that her daughter was more beautiful than the sea spirits, and as a punishment, the angry sea god had sent a monster. To save their people, the king and queen had been forced to leave her there. Just then, the water began to bubble and boil.",
+    "A huge sea monster rose out of the waves, with teeth like swords. Andromeda closed her eyes. Perseus flew down and landed on the rock in front of her. “Don’t look!” he shouted. He opened the bag and held up Medusa’s head. The monster stared at it, and in a second it became a great grey rock in the sea. Perseus freed Andromeda and took her back to her grateful parents. Then he flew home, just in time to save his mother. When Polydectes laughed and asked for proof, Perseus showed him the bag. From that day on, the cruel king was only a statue."
+   ],
+   "ar": [
+    "وفي رحلة العودة الطويلة، دفعت عاصفةٌ بيرسيوس نحو ساحل مملكة بعيدة. وهناك رأى منظرًا مروّعًا: فتاة مقيّدة بالسلاسل إلى صخرة عند حافّة البحر، والأمواج تتكسّر حولها. كانت الأميرة أندروميدا. لقد تباهت أمّها بأنّ ابنتها أجمل من حوريّات البحر، فعاقبهم إله البحر الغاضب بإرسال وحش. ولكي يُنقذ الملك والملكة شعبهما، اضطرّا إلى تركها هناك. وفي تلك اللحظة، بدأ الماء يفور ويغلي.",
+    "خرج من بين الأمواج وحش بحريّ ضخم، أسنانه كالسيوف. أغمضت أندروميدا عينيها. نزل بيرسيوس طائرًا ووقف على الصخرة أمامها، وصاح: «لا تنظري!» ثم فتح الكيس ورفع رأس ميدوسا. حدّق الوحش فيه، وفي ثانية واحدة صار صخرة رمادية كبيرة في البحر. حرّر بيرسيوس أندروميدا وأعادها إلى والديها الممتنّين. ثم طار إلى بيته، ووصل في الوقت المناسب لينقذ أمّه. وعندما ضحك بوليديكتيس وطلب دليلًا، أراه بيرسيوس ما في الكيس. ومنذ ذلك اليوم، لم يعد الملك القاسي إلا تمثالًا."
+   ],
+   "pics": [
+    8,
+    9
+   ],
+   "words": [
+    [
+     "distant",
+     "بعيد"
+    ],
+    [
+     "boast",
+     "يتباهى"
+    ],
+    [
+     "punishment",
+     "عقاب"
+    ],
+    [
+     "grateful",
+     "ممتنّ"
+    ],
+    [
+     "proof",
+     "دليل"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "Why did Polydectes send Perseus to find Medusa?",
+   [
+    "He wanted to get rid of Perseus",
+    "He needed a new shield",
+    "Medusa had stolen his horse"
+   ],
+   0
+  ],
+  [
+   "Why was Athena’s shield so useful?",
+   [
+    "It was made of gold",
+    "It could stop any arrow",
+    "It worked like a mirror"
+   ],
+   2
+  ],
+  [
+   "How did Perseus make the Grey Sisters help him?",
+   [
+    "He gave them gold",
+    "He caught their only eye",
+    "He asked Athena to speak to them"
+   ],
+   1
+  ],
+  [
+   "How did Perseus see Medusa without turning to stone?",
+   [
+    "He looked at her reflection",
+    "He closed his eyes",
+    "He waited until it was dark"
+   ],
+   0
+  ],
+  [
+   "What happened to the sea monster?",
+   [
+    "It swam away",
+    "It became a rock",
+    "It took Andromeda"
+   ],
+   1
+  ]
+ ],
+ "talk_en": "Perseus wins with clever ideas, not only with strength. Write about a time when a clever idea helped you solve a problem.",
+ "talk_ar": "بيرسيوس فاز بأفكار ذكية، مو بس بالقوة. اكتب عن موقف ساعدتك فيه فكرة ذكية تحلّ مشكلة."
+}

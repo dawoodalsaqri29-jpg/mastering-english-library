@@ -1,0 +1,786 @@
+{
+ "n": 2,
+ "slug": "seven-crowns",
+ "title": "Seven Crowns",
+ "series_tag": "",
+ "subtitle_ar": "التيجان السبعة",
+ "genre": "Fantasy",
+ "based_on": "Original story",
+ "blurb_en": "A wounded raven brings a secret letter: someone will open the castle gate to the enemy on the first snowy night. Everyone blames the proud boy from the rival house — but young Elin follows the raven, and the truth is much closer to home.",
+ "blurb_ar": "غراب جريح يحمل رسالة سرّية: أحدهم سيفتح بوابة القلعة للعدوّ في أوّل ليلة ثلج. الجميع يتّهم الفتى المتكبّر من البيت المنافس، لكنّ إيلين تتبع الغراب… والحقيقة أقرب ممّا تتخيّل.",
+ "palette": "crimson",
+ "cast": [
+  {
+   "id": "elin",
+   "name": "Elin Ashford",
+   "body": "girl",
+   "outfit": "gown",
+   "head": "braid",
+   "item": "letter"
+  },
+  {
+   "id": "rodric",
+   "name": "Lord Rodric",
+   "body": "man",
+   "outfit": "cloak",
+   "head": "beard",
+   "item": "key",
+   "height": 1.12
+  },
+  {
+   "id": "cassian",
+   "name": "Cassian Morrow",
+   "body": "boy",
+   "outfit": "cloak",
+   "head": "short_hair",
+   "item": "sword",
+   "height": 1.05
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "snow",
+  "landmark": {
+   "type": "castle",
+   "side": "right"
+  },
+  "sky_items": [
+   "moon",
+   "clouds"
+  ],
+  "chars": [
+   {
+    "id": "elin",
+    "pose": "hold_out",
+    "face": "right",
+    "pos": "left"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "raven",
+    "pos": "sky",
+    "size": "m",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "flag",
+   "torch_on_wall"
+  ],
+  "light": "moonbeam",
+  "mood": "tense"
+ },
+ "a1": [
+  {
+   "en": "Elin is fourteen. She is the heir of House Ashford.\nOne night, a raven comes to her window.\nThere is a secret letter on its leg!",
+   "ar": "إيلين عمرها أربعة عشر عامًا. وهي وريثة بيت آشفورد.\nفي إحدى الليالي، يأتي غراب إلى نافذتها.\nوعلى ساقه رسالة سرّية!",
+   "scene": {
+    "sky": "night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "right"
+    },
+    "sky_items": [
+     "moon",
+     "lightning"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center",
+      "item": "none"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "right",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "candle",
+     "bed"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The letter says, “Fox, open the gate on the first snowy night.”\nAn enemy army is waiting across the river.\nSomeone in the castle is a traitor!",
+   "ar": "تقول الرسالة: «أيّها الثعلب، افتح البوابة في أوّل ليلة يتساقط فيها الثلج.»\nجيش عدوّ ينتظر عبر النهر.\nهناك خائن في القلعة!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "read",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "left",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "table",
+     "candle",
+     "scroll"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The fox is the sign of House Morrow.\nUncle Rodric shows a fox ring. “I found it near the gate!”\n“Young Cassian Morrow is the traitor!”",
+   "ar": "الثعلب هو شعار بيت مورو.\nيُري العمُّ رودريك الجميعَ خاتمًا عليه ثعلب. «وجدته قرب البوابة!»\n«الشابّ كاسيان مورو هو الخائن!»",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "palace_hall",
+    "landmark": {
+     "type": "throne",
+     "side": "center"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "rodric",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "elin",
+      "pose": "think",
+      "face": "right",
+      "pos": "center",
+      "item": "none"
+     },
+     {
+      "id": "cassian",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag",
+     "shield_on_wall",
+     "torch_on_wall"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Cassian is proud and rude, but he says, “Someone stole my ring!”\nNobody believes him. The guards take him to the tower.",
+   "ar": "كاسيان متكبّر وفظّ، لكنه يقول: «أحدهم سرق خاتمي!»\nلا أحد يصدّقه. يأخذه الحرّاس إلى البرج.",
+   "scene": {
+    "sky": "dusk",
+    "land": "field",
+    "landmark": {
+     "type": "dark_tower",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds",
+     "crescent"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "stand",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "cassian",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "fence",
+     "grass"
+    ],
+    "light": "none",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "Elin is not sure. She remembers, “A raven always flies home.”\nShe ties a new letter to its leg and lets it fly.",
+   "ar": "إيلين ليست متأكّدة. تتذكّر: «الغراب يطير دائمًا إلى بيته.»\nتربط رسالة جديدة في ساق الغراب وتتركه يطير.",
+   "scene": {
+    "sky": "dawn",
+    "land": "hills",
+    "landmark": {
+     "type": "castle",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds",
+     "sun"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "raise",
+      "face": "right",
+      "pos": "center",
+      "item": "none"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "flag"
+    ],
+    "light": "sunrise",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Elin runs after the raven. It does not fly to House Morrow.\nIt flies to her own family’s tower! Her heart goes cold.",
+   "ar": "تركض إيلين خلف الغراب. إنه لا يطير إلى بيت مورو.\nبل يطير إلى برج عائلتها هي! ويتجمّد قلبها خوفًا.",
+   "scene": {
+    "sky": "sunset",
+    "land": "garden",
+    "landmark": {
+     "type": "tower",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "run",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "sky",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "hedge",
+     "fountain"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "In the tower, there are letters from the enemy.\nThe traitor is Uncle Rodric!\nThen the door closes. Rodric locks her in!",
+   "ar": "في البرج، توجد رسائل من العدوّ.\nالخائن هو العمّ رودريك!\nثم يُغلَق الباب. رودريك يحبسها في الداخل!",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "window",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "rodric",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "raven",
+      "pos": "left",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "table",
+     "candle",
+     "scroll",
+     "chest"
+    ],
+    "light": "candle",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Outside, the first snow is falling. The enemy is coming!\nElin climbs down a rope and runs to Cassian.\n“I was wrong about you. Please help me!”",
+   "ar": "في الخارج، يتساقط أوّل ثلج. العدوّ قادم!\nتنزل إيلين على حبل وتركض إلى كاسيان.\n«كنت مخطئة في حقّك. أرجوك ساعدني!»",
+   "scene": {
+    "sky": "snow",
+    "land": "hills",
+    "landmark": {
+     "type": "dark_tower",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "cassian",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rope",
+     "torch_on_wall"
+    ],
+    "light": "moonbeam",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At midnight, Rodric opens the big gate. But Elin and Cassian are there!\nElin rings the old bell. All seven houses run to the walls.",
+   "ar": "في منتصف الليل، يفتح رودريك البوابة الكبيرة. لكنّ إيلين وكاسيان هناك!\nتقرع إيلين الجرس القديم. فتركض البيوت السبعة كلّها إلى الأسوار.",
+   "scene": {
+    "sky": "night",
+    "land": "snow",
+    "landmark": {
+     "type": "iron_gate",
+     "side": "center"
+    },
+    "sky_items": [
+     "moon",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "cassian",
+      "pose": "fight",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "rodric",
+      "pose": "fall",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "bell_rope",
+     "torch_on_wall"
+    ],
+    "light": "fire",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The enemy sees seven flags together on the walls. They turn back.\nThere is no war. Elin and Cassian are friends now. The end.",
+   "ar": "يرى العدوّ سبعة أعلام معًا على الأسوار. فيرجع من حيث أتى.\nلا توجد حرب. إيلين وكاسيان صديقان الآن. النهاية.",
+   "scene": {
+    "sky": "dawn",
+    "land": "snow",
+    "landmark": {
+     "type": "castle",
+     "side": "center"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "elin",
+      "pose": "wave",
+      "face": "right",
+      "pos": "left",
+      "item": "none"
+     },
+     {
+      "id": "cassian",
+      "pose": "wave",
+      "face": "left",
+      "pos": "right",
+      "item": "none"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "flag"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "heir",
+   "وريث / وريثة"
+  ],
+  [
+   "raven",
+   "غراب"
+  ],
+  [
+   "letter",
+   "رسالة"
+  ],
+  [
+   "window",
+   "نافذة"
+  ],
+  [
+   "gate",
+   "بوابة"
+  ],
+  [
+   "enemy",
+   "عدوّ"
+  ],
+  [
+   "river",
+   "نهر"
+  ],
+  [
+   "traitor",
+   "خائن"
+  ],
+  [
+   "ring",
+   "خاتم"
+  ],
+  [
+   "guards",
+   "حرّاس"
+  ],
+  [
+   "tower",
+   "برج"
+  ],
+  [
+   "bell",
+   "جرس"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Elin is the heir of House Morrow.",
+   false
+  ],
+  [
+   "A raven brings a secret letter.",
+   true
+  ],
+  [
+   "The fox is the sign of House Morrow.",
+   true
+  ],
+  [
+   "The raven flies to House Morrow.",
+   false
+  ],
+  [
+   "Uncle Rodric is the traitor.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: A Raven in the Storm",
+   "title_ar": "الفصل الأول: غراب في العاصفة",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "In the Kingdom of the Seven Crowns, seven great houses served the old Queen, but they did not trust one another. Elin Ashford was fourteen, and one day she would lead House Ashford, whose banner showed a white owl. She loved reading, solving puzzles and asking questions that made grown-ups uncomfortable. One stormy autumn night, she was reading by candlelight when something knocked at her window. It was a black raven, wet and shaking, with a hurt wing. Elin let it in and wrapped it in a towel. Then she noticed a tiny roll of paper tied to its leg.",
+    "She knew she should not read other people’s letters, but something told her to open it. The message was short: “Fox, our army is ready across the river. Open the castle gate on the first snowy night, and the crown will be yours.” Elin’s hands went cold. Everyone knew that the raiders of the Frozen Coast were camped on the other side of the river, waiting for winter. If someone opened the gate, the city would fall in one night. There was a traitor inside the castle, and the snow was only days away."
+   ],
+   "ar": [
+    "في مملكة التيجان السبعة، كانت سبعة بيوت نبيلة كبيرة تخدم الملكة العجوز، لكنها لم تكن تثق ببعضها. كانت إيلين آشفورد في الرابعة عشرة، وستقود يومًا ما بيت آشفورد، الذي تحمل رايته بومة بيضاء. كانت تحبّ القراءة، وحلّ الألغاز، وطرح أسئلة تُحرج الكبار. وفي ليلة خريفية عاصفة، كانت تقرأ على ضوء الشمعة حين طرق شيء نافذتها. كان غرابًا أسود، مبلّلًا يرتجف، وجناحه مصاب. أدخلته إيلين ولفّته بمنشفة. ثم لاحظت لفافة ورق صغيرة مربوطة في ساقه.",
+    "كانت تعرف أنه لا ينبغي أن تقرأ رسائل الآخرين، لكنّ شيئًا ما دفعها إلى فتحها. كانت الرسالة قصيرة: «أيّها الثعلب، جيشنا جاهز عبر النهر. افتح بوابة القلعة في أوّل ليلة يتساقط فيها الثلج، وسيكون التاج لك.» بردت يدا إيلين. فالجميع يعرف أنّ غزاة الساحل المتجمّد يخيّمون على الضفّة الأخرى من النهر، ينتظرون الشتاء. ولو فتح أحدهم البوابة، لسقطت المدينة في ليلة واحدة. كان هناك خائن داخل القلعة، ولم يبقَ على الثلج إلا أيّام قليلة."
+   ],
+   "words": [
+    [
+     "banner",
+     "راية"
+    ],
+    [
+     "uncomfortable",
+     "محرَج / غير مرتاح"
+    ],
+    [
+     "wrap",
+     "يلفّ"
+    ],
+    [
+     "traitor",
+     "خائن"
+    ],
+    [
+     "camp",
+     "يخيّم"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The Sign of the Fox",
+   "title_ar": "الفصل الثاني: شعار الثعلب",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "The next morning, Elin showed the letter to the Queen’s council in the great hall. The lords began shouting at once. The fox was the sign of House Morrow, the oldest enemy of House Ashford. Then Elin’s uncle, Lord Rodric, stood up. He was tall and calm, and everyone respected him. He held up a gold ring with a red fox on it. “My guards found this near the gate last night,” he said sadly. “It belongs to young Cassian Morrow. I am sorry, my friends, but the answer is clear. Cassian is our traitor.”",
+    "Cassian was sixteen, clever and very proud. He had never been kind to Elin, and he often laughed at her books. But now his face went white. “That ring was stolen from my room a month ago!” he shouted. “I told the guards, but nobody listened!” The lords laughed at him. Two guards took his arms and led him away to the North Tower. As he passed Elin, he looked straight at her. “You like puzzles,” he said quietly. “Then solve this one.” Elin felt something strange. Everything fitted together too perfectly, like a story that someone had written."
+   ],
+   "ar": [
+    "في الصباح التالي، عرضت إيلين الرسالة على مجلس الملكة في القاعة الكبرى. فبدأ اللوردات يصرخون جميعًا. فالثعلب هو شعار بيت مورو، أقدم أعداء بيت آشفورد. ثم وقف عمّ إيلين، اللورد رودريك. كان طويلًا هادئًا، والجميع يحترمه. رفع خاتمًا ذهبيًّا عليه ثعلب أحمر، وقال بحزن: «وجد حرّاسي هذا قرب البوابة الليلة الماضية. إنه للشابّ كاسيان مورو. أنا آسف يا أصدقائي، لكنّ الجواب واضح. كاسيان هو خائننا.»",
+    "كان كاسيان في السادسة عشرة، ذكيًّا ومتكبّرًا جدًّا. لم يكن لطيفًا مع إيلين أبدًا، وكثيرًا ما سخر من كتبها. لكنّ وجهه الآن صار أبيض. صرخ: «ذلك الخاتم سُرق من غرفتي قبل شهر! أخبرت الحرّاس، لكن لم يستمع إليّ أحد!» فضحك اللوردات منه. وأمسك حارسان بذراعيه وقاداه إلى البرج الشمالي. وحين مرّ بجانب إيلين، نظر في عينيها مباشرة وقال بهدوء: «أنتِ تحبّين الألغاز. إذن حُلّي هذا اللغز.» شعرت إيلين بشيء غريب. كان كلّ شيء مترابطًا بإتقان زائد، كأنه قصة كتبها أحدهم."
+   ],
+   "words": [
+    [
+     "council",
+     "مجلس"
+    ],
+    [
+     "respect",
+     "يحترم"
+    ],
+    [
+     "belong",
+     "يخصّ / يكون ملكًا لـ"
+    ],
+    [
+     "proud",
+     "متكبّر / فخور"
+    ],
+    [
+     "perfectly",
+     "بشكل مثاليّ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: A Raven Always Flies Home",
+   "title_ar": "الفصل الثالث: الغراب يعود دائمًا إلى بيته",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "That evening, Elin sat with the raven, whose wing was now much better. She was thinking about something her grandfather had taught her when she was small: “A messenger raven always flies home to the place where it was born.” This raven had been flying from the enemy camp when the storm caught it. So where was its home? Elin wrote a short note, “The plan has a problem. Come and see me,” and tied it to the raven’s leg. At sunrise, she climbed onto the castle wall, kissed the bird’s head and let it go.",
+    "The raven circled once over the castle. Elin was sure that it would fly towards the Morrow towers in the west. Instead, it turned east. Elin ran along the wall, then through the gardens, keeping her eyes on the black shape in the orange sky. Her heart was beating faster and faster. The raven flew over the stables, over the old well, and landed on a high window that she knew very well. It was the tower of her own family, House Ashford. And the window belonged to the person she had always trusted most."
+   ],
+   "ar": [
+    "في ذلك المساء، جلست إيلين مع الغراب، وكان جناحه قد تحسّن كثيرًا. كانت تفكّر في شيء علّمها إيّاه جدّها حين كانت صغيرة: «غراب الرسائل يطير دائمًا عائدًا إلى المكان الذي وُلد فيه.» هذا الغراب كان قادمًا من معسكر العدوّ حين فاجأته العاصفة. فأين بيته إذن؟ كتبت إيلين ورقة قصيرة: «في الخطّة مشكلة. تعالَ وقابلني»، وربطتها في ساق الغراب. وعند شروق الشمس، صعدت إلى سور القلعة، وقبّلت رأس الطائر، وأطلقته.",
+    "دار الغراب دورة واحدة فوق القلعة. كانت إيلين متأكّدة أنه سيطير نحو أبراج آل مورو في الغرب. لكنه بدلًا من ذلك اتّجه شرقًا. ركضت إيلين على السور، ثم عبر الحدائق، وعيناها على الشكل الأسود في السماء البرتقالية. كان قلبها يدقّ أسرع فأسرع. طار الغراب فوق الإسطبلات، وفوق البئر القديمة، ثم حطّ على نافذة عالية تعرفها جيّدًا. كانت نافذة برج عائلتها هي، بيت آشفورد. وكانت تلك النافذة لأكثر شخص وثقت به طوال حياتها."
+   ],
+   "words": [
+    [
+     "messenger",
+     "ساعي الرسائل"
+    ],
+    [
+     "circle",
+     "يدور في دائرة"
+    ],
+    [
+     "instead",
+     "بدلًا من ذلك"
+    ],
+    [
+     "stables",
+     "إسطبلات"
+    ],
+    [
+     "trust",
+     "يثق بـ"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: Locked in the Tower",
+   "title_ar": "الفصل الرابع: سجينة في البرج",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Elin climbed the stairs quietly and pushed open the door. The room was full of cages with black ravens inside. On the table lay maps of the city gate and a pile of letters, all signed with the mark of the enemy king. On top of them was her own note, still tied with string. Uncle Rodric was the Fox! He had stolen Cassian’s ring and planned everything, so that the houses would fight each other while the raiders walked in. Then she heard a soft laugh behind her. Rodric was standing at the door.",
+    "“You were always too clever, little owl,” he said. “When the raiders take the city, I will be king.” Then he stepped outside and turned the key. Through the window, Elin watched the first snowflakes drifting down. She did not cry. Instead, she pulled down the heavy curtains, tied them into a rope and climbed down the cold wall. She ran to the North Tower, where a guard who knew her opened the door. Cassian looked up in surprise. “I was wrong about you,” Elin said. “I know who the Fox is, and I can’t stop him alone. Please help me.”"
+   ],
+   "ar": [
+    "صعدت إيلين الدرج بهدوء ودفعت الباب. كانت الغرفة مليئة بأقفاص فيها غربان سوداء. وعلى الطاولة خرائط لبوابة المدينة، وكومة من الرسائل كلّها مختومة بعلامة ملك الأعداء. وفوقها كانت ورقتها هي، ما زالت مربوطة بالخيط. العمّ رودريك هو الثعلب! لقد سرق خاتم كاسيان وخطّط لكلّ شيء، حتى تتقاتل البيوت فيما بينها بينما يدخل الغزاة. ثم سمعت ضحكة خفيفة خلفها. كان رودريك واقفًا عند الباب.",
+    "قال: «كنتِ دائمًا ذكيّة أكثر من اللازم يا بومتي الصغيرة. حين يأخذ الغزاة المدينة، سأصبح أنا الملك.» ثم خرج وأدار المفتاح. ومن النافذة، رأت إيلين أولى ندفات الثلج تتساقط. لم تبكِ. بل أنزلت الستائر الثقيلة، وربطتها لتصنع منها حبلًا، ونزلت على الجدار البارد. ثم ركضت إلى البرج الشمالي، حيث فتح لها الباب حارس يعرفها. رفع كاسيان رأسه متفاجئًا. قالت إيلين: «كنت مخطئة في حقّك. أعرف من هو الثعلب، ولا أستطيع أن أوقفه وحدي. أرجوك ساعدني.»"
+   ],
+   "words": [
+    [
+     "cage",
+     "قفص"
+    ],
+    [
+     "pile",
+     "كومة"
+    ],
+    [
+     "plan",
+     "يخطّط"
+    ],
+    [
+     "snowflake",
+     "ندفة ثلج"
+    ],
+    [
+     "curtain",
+     "ستارة"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: Seven Flags in the Snow",
+   "title_ar": "الفصل الخامس: سبعة أعلام في الثلج",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "At midnight, a dark figure crept through the snow to the city gate. Rodric lifted the heavy iron bar and began to pull the gate open. Across the frozen river, hundreds of torches started to move. But two shadows stepped out from behind the wall. Cassian drew his sword, and Rodric fell back into the snow in surprise. At the same moment, Elin grabbed the rope of the old warning bell and pulled with all her strength. Its deep voice rang over the sleeping city. Lights appeared in every window, and soldiers from all seven houses ran to the walls.",
+    "When the raiders came close, they did not see a city at war with itself. They saw the flags of seven houses flying side by side, and thousands of soldiers standing together. Slowly, the torches turned and disappeared into the night. There was no battle at all. Rodric was taken to the North Tower, to the same room where Cassian had been. In the morning, the Queen gave Elin a silver owl and gave Cassian a new gold ring. “Thank you, Ashford,” Cassian said with a small smile. “Thank you, Morrow,” said Elin. From that winter on, the owl and the fox were friends."
+   ],
+   "ar": [
+    "في منتصف الليل، تسلّل شخص في الظلام عبر الثلج إلى بوابة المدينة. رفع رودريك القضيب الحديدي الثقيل، وبدأ يفتح البوابة. وعبر النهر المتجمّد، بدأت مئات المشاعل تتحرّك. لكنّ ظلّين خرجا من خلف السور. سحب كاسيان سيفه، فسقط رودريك إلى الخلف في الثلج من المفاجأة. وفي اللحظة نفسها، أمسكت إيلين حبل جرس الإنذار القديم وشدّته بكلّ قوّتها. دوّى صوته العميق فوق المدينة النائمة. فظهرت الأضواء في كلّ نافذة، وركض جنود البيوت السبعة كلّها إلى الأسوار.",
+    "وحين اقترب الغزاة، لم يروا مدينة تتقاتل مع نفسها. بل رأوا أعلام سبعة بيوت ترفرف جنبًا إلى جنب، وآلاف الجنود يقفون معًا. وببطء، استدارت المشاعل واختفت في الليل. لم تقع أيّ معركة. وأُخذ رودريك إلى البرج الشمالي، إلى الغرفة نفسها التي كان فيها كاسيان. وفي الصباح، أهدت الملكة إيلين بومة فضّية، وأهدت كاسيان خاتمًا ذهبيًّا جديدًا. قال كاسيان بابتسامة صغيرة: «شكرًا يا آشفورد.» وقالت إيلين: «شكرًا يا مورو.» ومنذ ذلك الشتاء، صارت البومة والثعلب صديقين."
+   ],
+   "words": [
+    [
+     "frozen",
+     "متجمّد"
+    ],
+    [
+     "warning",
+     "تحذير / إنذار"
+    ],
+    [
+     "strength",
+     "قوّة"
+    ],
+    [
+     "side by side",
+     "جنبًا إلى جنب"
+    ],
+    [
+     "battle",
+     "معركة"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "How did the secret letter come to Elin?",
+   [
+    "A guard gave it to her",
+    "A hurt raven landed at her window",
+    "She found it in the great hall"
+   ],
+   1
+  ],
+  [
+   "Why did everyone think Cassian was the traitor?",
+   [
+    "The letter said “Fox”, and his fox ring was found near the gate",
+    "He tried to open the gate",
+    "He sent a letter to the Queen"
+   ],
+   0
+  ],
+  [
+   "How did Elin find the real traitor?",
+   [
+    "She followed a guard",
+    "She read the Queen’s letters",
+    "She let the raven fly home and followed it"
+   ],
+   2
+  ],
+  [
+   "How did Elin get out of the locked room?",
+   [
+    "Cassian opened the door",
+    "She made a rope from the curtains",
+    "The raven brought her a key"
+   ],
+   1
+  ],
+  [
+   "Why did the raiders turn back?",
+   [
+    "They saw the seven houses standing together",
+    "The river was too deep",
+    "Rodric told them to go home"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Elin believed the clues, not what everyone was saying. Have you ever judged someone too quickly? Write about it, or discuss: how can we find the truth before we blame someone?",
+ "talk_ar": "إيلين صدّقت الأدلّة، مو كلام الناس. هل حكمت مرّة على أحد بسرعة؟ اكتب عن الموقف، أو ناقش: كيف نوصل للحقيقة قبل ما نلوم أحد؟"
+}

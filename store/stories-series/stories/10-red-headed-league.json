@@ -1,0 +1,785 @@
+{
+ "n": 10,
+ "slug": "red-headed-league",
+ "title": "The Red-Headed League",
+ "series_tag": "Sherlock Holmes",
+ "subtitle_ar": "شيرلوك هولمز: رابطة ذوي الشعر الأحمر",
+ "genre": "Mystery",
+ "based_on": "Arthur Conan Doyle (public domain)",
+ "blurb_en": "A club that pays red-haired men to copy a book? It sounds like a joke, until the club suddenly disappears and Sherlock Holmes starts tapping the pavement with his stick.",
+ "blurb_ar": "نادٍ يدفع للرجال ذوي الشعر الأحمر ليَنسخوا كتابًا؟ تبدو مزحة، حتى يختفي النادي فجأة، ويبدأ شيرلوك هولمز بطرق الرصيف بعصاه.",
+ "palette": "copper",
+ "cast": [
+  {
+   "id": "holmes",
+   "name": "Sherlock Holmes",
+   "body": "man",
+   "outfit": "coat",
+   "head": "deerstalker",
+   "item": "magnifier",
+   "height": 1.08
+  },
+  {
+   "id": "watson",
+   "name": "Dr Watson",
+   "body": "stout_man",
+   "outfit": "coat",
+   "head": "top_hat",
+   "item": "cane"
+  },
+  {
+   "id": "wilson",
+   "name": "Jabez Wilson",
+   "body": "stout_man",
+   "outfit": "coat",
+   "head": "curly_hair",
+   "item": "none",
+   "height": 0.96
+  },
+  {
+   "id": "clay",
+   "name": "John Clay (“Vincent Spaulding”)",
+   "body": "man",
+   "outfit": "coat",
+   "head": "cap",
+   "item": "none",
+   "height": 0.98
+  },
+  {
+   "id": "jones",
+   "name": "Inspector Jones",
+   "body": "man",
+   "outfit": "coat",
+   "head": "helmet",
+   "item": "lantern"
+  }
+ ],
+ "cover_scene": {
+  "sky": "night",
+  "land": "london_street",
+  "landmark": {
+   "type": "street_lamps",
+   "side": "right"
+  },
+  "sky_items": [
+   "moon",
+   "clouds"
+  ],
+  "chars": [
+   {
+    "id": "holmes",
+    "pose": "point",
+    "face": "right",
+    "pos": "left",
+    "item": "cane"
+   },
+   {
+    "id": "watson",
+    "pose": "stand",
+    "face": "right",
+    "pos": "center"
+   },
+   {
+    "id": "wilson",
+    "pose": "look_up",
+    "face": "left",
+    "pos": "right"
+   }
+  ],
+  "creatures": [],
+  "props": [
+   "lamp_post",
+   "door"
+  ],
+  "light": "lantern",
+  "mood": "tense"
+ },
+ "a1": [
+  {
+   "en": "One morning, Mr Wilson goes to his office. The door is locked.\nOn the door is a card: “The Red-Headed League is closed.”",
+   "ar": "في صباح أحد الأيام، يذهب السيّد ويلسون إلى مكتبه. الباب مقفل.\nوعلى الباب بطاقة: «رابطة ذوي الشعر الأحمر أُغلقت.»",
+   "scene": {
+    "sky": "mist",
+    "land": "london_street",
+    "landmark": {
+     "type": "street_lamps",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "wilson",
+      "pose": "read",
+      "face": "right",
+      "pos": "center",
+      "item": "letter"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "door",
+     "lamp_post"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Mr Wilson has bright red hair. He visits Sherlock Holmes.\n“Somebody played a trick on me!” he says. “Please find out why.”",
+   "ar": "شعر السيّد ويلسون أحمر لامع. يزور شيرلوك هولمز.\nيقول: «أحدهم خدعني! أرجوك اكتشف السبب.»",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "fireplace",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "wilson",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left",
+      "item": "letter"
+     },
+     {
+      "id": "holmes",
+      "pose": "think",
+      "face": "left",
+      "pos": "center"
+     },
+     {
+      "id": "watson",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chair",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Eight weeks ago, Wilson’s young helper showed him a newspaper.\n“Look! A club wants men with red hair. The pay is very good!”",
+   "ar": "قبل ثمانية أسابيع، عرض مساعدُ ويلسون الشابّ عليه جريدة.\n«انظر! نادٍ يريد رجالًا شعرهم أحمر. والأجر جيّد جدًّا!»",
+   "scene": {
+    "sky": "day",
+    "land": "london_street",
+    "landmark": {
+     "type": "market_stalls",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "clay",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "item": "letter"
+     },
+     {
+      "id": "wilson",
+      "pose": "read",
+      "face": "left",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "crates",
+     "door"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "Wilson gets the job. Every day, he copies a big book by hand.\nHe works from ten to two. His helper stays in the shop.",
+   "ar": "يحصل ويلسون على الوظيفة. وكلّ يوم ينسخ كتابًا كبيرًا بخطّ يده.\nيعمل من العاشرة إلى الثانية. ومساعده يبقى في الدكّان.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "wilson",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left",
+      "item": "book"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "chair",
+     "candle",
+     "scroll"
+    ],
+    "light": "candle",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Holmes smokes his pipe and thinks for a long time.\n“Why pay a man to stay away from his shop?”",
+   "ar": "يدخّن هولمز غليونه ويفكّر وقتًا طويلًا.\n«لماذا يدفعون لرجل حتى يبتعد عن دكّانه؟»",
+   "scene": {
+    "sky": "indoor_night",
+    "land": "room",
+    "landmark": {
+     "type": "fireplace",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left",
+      "item": "pipe"
+     },
+     {
+      "id": "watson",
+      "pose": "read",
+      "face": "left",
+      "pos": "right",
+      "item": "book"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "chair",
+     "candle"
+    ],
+    "light": "fire",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Holmes goes to the shop. He hits the street with his stick.\nThe helper opens the door. His trousers are dirty at the knees!",
+   "ar": "يذهب هولمز إلى الدكّان. ويضرب أرض الشارع بعصاه.\nيفتح المساعد الباب. بنطاله متّسخ عند الركبتين!",
+   "scene": {
+    "sky": "day",
+    "land": "london_street",
+    "landmark": {
+     "type": "street_lamps",
+     "side": "left"
+    },
+    "sky_items": [
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "item": "cane"
+     },
+     {
+      "id": "clay",
+      "pose": "stand",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "door",
+     "lamp_post"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "Behind the shop, there is a big bank.\nDeep under the bank, there is a room full of French gold.",
+   "ar": "خلف الدكّان يوجد مصرف كبير.\nوفي عمق الأرض تحت المصرف، غرفة مليئة بالذهب الفرنسي.",
+   "scene": {
+    "sky": "sunset",
+    "land": "london_street",
+    "landmark": {
+     "type": "clock_tower",
+     "side": "right"
+    },
+    "sky_items": [
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "point",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "coins",
+     "crates",
+     "lamp_post"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At night, Holmes, Watson and the police wait in the gold room.\nIt is dark and cold. Nobody speaks.",
+   "ar": "في الليل، ينتظر هولمز وواطسون والشرطة في غرفة الذهب.\nالمكان مظلم وبارد. ولا أحد يتكلّم.",
+   "scene": {
+    "sky": "cave",
+    "land": "tunnel",
+    "landmark": {
+     "type": "iron_gate",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "holmes",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "watson",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "jones",
+      "pose": "stand",
+      "face": "right",
+      "pos": "right",
+      "item": "lantern"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "crates",
+     "coins",
+     "safe"
+    ],
+    "light": "lantern",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Suddenly, a stone in the floor moves. A hand comes up!\nIt is Wilson’s helper. His real name is John Clay. He is a famous thief!",
+   "ar": "فجأة، يتحرّك حجر في الأرض. وتخرج يد!\nإنه مساعد ويلسون. واسمه الحقيقي جون كلاي. إنه لصّ مشهور!",
+   "scene": {
+    "sky": "cave",
+    "land": "tunnel",
+    "landmark": {
+     "type": "iron_gate",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "clay",
+      "pose": "kneel",
+      "face": "right",
+      "pos": "left",
+      "item": "lantern"
+     },
+     {
+      "id": "holmes",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right",
+      "item": "cane"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "rocks",
+     "crates",
+     "coins"
+    ],
+    "light": "lantern",
+    "mood": "scary"
+   }
+  },
+  {
+   "en": "Clay dug a tunnel from the shop to the bank. The club was only a trick!\nThe police take Clay away. Holmes smiles. Case closed.",
+   "ar": "حفر كلاي نفقًا من الدكّان إلى المصرف. والنادي كان مجرّد خدعة!\nتأخذ الشرطة كلاي بعيدًا. ويبتسم هولمز. القضية انتهت.",
+   "scene": {
+    "sky": "dawn",
+    "land": "london_street",
+    "landmark": {
+     "type": "clock_tower",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "jones",
+      "pose": "walk",
+      "face": "right",
+      "pos": "right"
+     },
+     {
+      "id": "clay",
+      "pose": "walk",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "holmes",
+      "pose": "wave",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "lamp_post",
+     "fence"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "hair",
+   "شعر"
+  ],
+  [
+   "door",
+   "باب"
+  ],
+  [
+   "card",
+   "بطاقة"
+  ],
+  [
+   "newspaper",
+   "جريدة"
+  ],
+  [
+   "book",
+   "كتاب"
+  ],
+  [
+   "shop",
+   "دكّان / متجر"
+  ],
+  [
+   "helper",
+   "مساعد"
+  ],
+  [
+   "stick",
+   "عصا"
+  ],
+  [
+   "knees",
+   "ركبتان"
+  ],
+  [
+   "bank",
+   "مصرف / بنك"
+  ],
+  [
+   "gold",
+   "ذهب"
+  ],
+  [
+   "tunnel",
+   "نفق"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "Mr Wilson has bright red hair.",
+   true
+  ],
+  [
+   "Wilson works in the office from ten to two.",
+   true
+  ],
+  [
+   "The helper’s trousers are clean.",
+   false
+  ],
+  [
+   "The French gold is in Wilson’s shop.",
+   false
+  ],
+  [
+   "John Clay dug a tunnel to the bank.",
+   true
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: The Card on the Door",
+   "title_ar": "الفصل الأول: البطاقة على الباب",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "One autumn morning, I found Sherlock Holmes talking to a stout, red-faced gentleman with the brightest red hair I had ever seen. “Watson, you have come at the perfect moment,” Holmes said. “This is Mr Jabez Wilson, and he has a most unusual story.” Mr Wilson took a small white card from his pocket and laid it on the table. It said: THE RED-HEADED LEAGUE IS DISSOLVED. “I found it on the office door this morning,” he said angrily. “The door was locked, and nobody in the building had ever heard of the League. Eight weeks of good work, Mr Holmes, and now this!”",
+    "Holmes looked at our visitor for a moment. Then he smiled. “I can see that you once did manual work, that you have visited China, and that you have done a lot of writing lately. Nothing more.” Mr Wilson’s mouth fell open. “How on earth do you know all that?” Holmes pointed at his large right hand, his Chinese tattoo and the shiny cuff of his sleeve. Wilson laughed. “It seems so simple when you explain it!” Then he told us his story. He owned a small pawnshop near the City of London. Business was slow, so he had only one helper, a young man called Vincent Spaulding."
+   ],
+   "ar": [
+    "في صباح من أيام الخريف، وجدت شيرلوك هولمز يتحدّث مع رجل ممتلئ الجسم، أحمر الوجه، له أشدّ شعر أحمر رأيته في حياتي. قال هولمز: «يا واطسون، جئت في أنسب لحظة. هذا السيّد جابيز ويلسون، وعنده قصّة غريبة جدًّا.» أخرج السيّد ويلسون بطاقة بيضاء صغيرة من جيبه ووضعها على الطاولة. كان مكتوبًا عليها: رابطة ذوي الشعر الأحمر قد حُلّت. قال بغضب: «وجدتها على باب المكتب هذا الصباح. كان الباب مقفلًا، ولم يسمع أحد في المبنى بالرابطة من قبل. ثمانية أسابيع من العمل الجيّد يا سيّد هولمز، والآن هذا!»",
+    "نظر هولمز إلى ضيفنا لحظة، ثم ابتسم وقال: «أرى أنك قمت بعمل يدويّ في الماضي، وزرت الصين، وكتبت كثيرًا في الفترة الأخيرة. لا شيء أكثر.» فتح السيّد ويلسون فمه من الدهشة: «كيف عرفت كلّ هذا؟» فأشار هولمز إلى يده اليمنى الكبيرة، ووشمه الصينيّ، وطرف كمّه اللامع من كثرة الكتابة. ضحك ويلسون: «يبدو الأمر بسيطًا جدًّا عندما تشرحه!» ثم حكى لنا قصّته. كان يملك دكّان رهونات صغيرًا قرب وسط لندن. وكان العمل قليلًا، فلم يكن عنده إلا مساعد واحد، شابّ اسمه فنسنت سبولدينغ."
+   ],
+   "words": [
+    [
+     "stout",
+     "ممتلئ الجسم"
+    ],
+    [
+     "unusual",
+     "غير عاديّ / غريب"
+    ],
+    [
+     "dissolve",
+     "يحلّ (جمعية أو نادٍ)"
+    ],
+    [
+     "manual work",
+     "عمل يدويّ"
+    ],
+    [
+     "lately",
+     "مؤخّرًا"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: The League of Red-Headed Men",
+   "title_ar": "الفصل الثاني: رابطة الرجال ذوي الشعر الأحمر",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "“Spaulding is a clever lad,” said Wilson. “He works for half the usual pay, because he wants to learn the business. His only fault is photography. He is always running down into the cellar to develop his pictures.” Eight weeks earlier, Spaulding had come in with a newspaper. There was an advertisement for the League of Red-Headed Men. A rich American with red hair had left money to help men like him, and the League was offering four pounds a week for very easy work. “Your hair is perfect, sir,” Spaulding said. “You must apply!” He even offered to close the shop and take his master there himself.",
+    "When they arrived, the street was full of men with hair of every shade of red, orange and brown. Spaulding pushed Wilson through the crowd to a small office. A man called Duncan Ross looked at his hair, pulled it hard to check that it was real, and gave him the job at once. The rules were strange. Wilson had to stay in the office from ten until two every day, and he must never leave the building, or he would lose his place. His work was to copy the encyclopaedia by hand, starting with the letter A. For eight weeks he wrote and wrote, and every Saturday he was paid in gold coins."
+   ],
+   "ar": [
+    "قال ويلسون: «سبولدينغ شابّ ذكيّ. يعمل بنصف الأجر المعتاد، لأنه يريد أن يتعلّم المهنة. عيبه الوحيد هو التصوير. فهو دائمًا ينزل مسرعًا إلى القبو ليحمّض صوره.» قبل ثمانية أسابيع، دخل سبولدينغ ومعه جريدة. كان فيها إعلان عن رابطة الرجال ذوي الشعر الأحمر. فقد ترك أمريكيّ غنيّ ذو شعر أحمر مالًا لمساعدة رجال مثله، وكانت الرابطة تعرض أربعة جنيهات في الأسبوع مقابل عمل سهل جدًّا. قال سبولدينغ: «شعرك مثاليّ يا سيّدي. يجب أن تتقدّم!» بل عرض أن يغلق الدكّان ويأخذ سيّده إلى هناك بنفسه.",
+    "عندما وصلا، كان الشارع مزدحمًا برجال شعرهم بكلّ درجات الأحمر والبرتقاليّ والبنّيّ. دفع سبولدينغ ويلسون بين الجموع إلى مكتب صغير. نظر رجل اسمه دنكن روس إلى شعره، وشدّه بقوّة ليتأكّد أنه حقيقيّ، ثم أعطاه الوظيفة في الحال. كانت القواعد غريبة. كان على ويلسون أن يبقى في المكتب من العاشرة حتى الثانية كلّ يوم، وألّا يغادر المبنى أبدًا، وإلا خسر مكانه. وكان عمله أن ينسخ الموسوعة بخطّ يده، بادئًا بحرف الألف. وظلّ ثمانية أسابيع يكتب ويكتب، وفي كلّ يوم سبت كان يتقاضى أجره قطعًا ذهبية."
+   ],
+   "words": [
+    [
+     "fault",
+     "عيب"
+    ],
+    [
+     "cellar",
+     "قبو"
+    ],
+    [
+     "advertisement",
+     "إعلان"
+    ],
+    [
+     "apply",
+     "يتقدّم (لوظيفة)"
+    ],
+    [
+     "shade",
+     "درجة لون"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: A Walk to Saxe-Coburg Square",
+   "title_ar": "الفصل الثالث: جولة إلى ساحة ساكس كوبرغ",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "When Mr Wilson had gone, Holmes sat in his armchair with his knees pulled up to his chin. He lit his old black pipe. “This is a three-pipe problem, Watson,” he said, and he did not speak again for almost an hour. At last he jumped up. “Ask yourself a simple question. Why would anyone pay a man four pounds a week to copy a book? The answer must be that somebody wanted Mr Wilson out of his shop for four hours every day. And who suggested the idea? His helper, who works for half pay. Come, Watson. Let us go and see this shop.”",
+    "Saxe-Coburg Square was a small, shabby place with a few tired trees. Holmes walked slowly along the pavement, looking at the houses. Then, to my surprise, he struck the ground hard with his stick, two or three times, in front of the pawnshop. After that, he knocked at the door. A bright young man opened it, and Holmes politely asked him the way to the Strand. While the young man was answering, Holmes did not look at his face at all. He looked at his trousers. Both knees were worn, wrinkled and covered in dirt. “Now let us explore the street behind the square,” Holmes said with a smile."
+   ],
+   "ar": [
+    "بعد أن ذهب السيّد ويلسون، جلس هولمز في كرسيّه الوثير وقد ضمّ ركبتيه إلى ذقنه. وأشعل غليونه الأسود القديم. قال: «هذه مشكلة تحتاج إلى ثلاثة غلايين يا واطسون»، ولم يتكلّم ثانية مدّة ساعة تقريبًا. وأخيرًا قفز واقفًا: «اسأل نفسك سؤالًا بسيطًا. لماذا يدفع أحد لرجل أربعة جنيهات في الأسبوع لينسخ كتابًا؟ لا بدّ أن الجواب هو أن أحدًا أراد أن يبعد السيّد ويلسون عن دكّانه أربع ساعات كلّ يوم. ومن اقترح الفكرة؟ مساعده الذي يعمل بنصف الأجر. هيّا يا واطسون. لنذهب ونرَ هذا الدكّان.»",
+    "كانت ساحة ساكس كوبرغ مكانًا صغيرًا رثًّا فيه بضع أشجار ذابلة. مشى هولمز ببطء على الرصيف، ينظر إلى البيوت. ثم، ولدهشتي، ضرب الأرض بعصاه بقوّة مرّتين أو ثلاثًا أمام دكّان الرهونات. بعد ذلك طرق الباب. ففتحه شابّ ذكيّ الملامح، وسأله هولمز بأدب عن الطريق إلى شارع ستراند. وبينما كان الشابّ يجيب، لم ينظر هولمز إلى وجهه أبدًا، بل نظر إلى بنطاله. كانت ركبتاه باليتين مجعّدتين ومغطّاتين بالتراب. قال هولمز مبتسمًا: «والآن لنستكشف الشارع الذي خلف الساحة.»"
+   ],
+   "words": [
+    [
+     "armchair",
+     "كرسيّ بذراعين"
+    ],
+    [
+     "suggest",
+     "يقترح"
+    ],
+    [
+     "shabby",
+     "رثّ / بالٍ"
+    ],
+    [
+     "pavement",
+     "رصيف"
+    ],
+    [
+     "explore",
+     "يستكشف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: Waiting in the Dark",
+   "title_ar": "الفصل الرابع: الانتظار في الظلام",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "The street behind the square was completely different. It was busy and rich, full of fine shops and offices. Holmes stopped in front of one large building: the City and Suburban Bank. “Its back wall stands right behind Mr Wilson’s cellar,” he said quietly. “Now I understand. Our young photographer has not been developing pictures at all. He has been digging. I tapped the pavement to find out if the tunnel ran in front of the house. It did not. So it must run behind it, towards the bank. And the League has closed, which means the tunnel is finished. They will try tonight, Watson. Bring your revolver.”",
+    "That night, we met Inspector Jones of Scotland Yard and Mr Merryweather, a director of the bank. Mr Merryweather explained that the bank had borrowed thirty thousand gold coins from France. The boxes were still lying in the cellar, so it was a perfect target for a thief. We went down into the huge stone vault, among the wooden crates. Holmes covered the lantern, and we were left in complete darkness. “Their only way out is back through the house,” he whispered, “and three policemen are waiting at the front door.” We crouched behind the boxes and waited. The air was cold and damp, and the minutes passed very slowly."
+   ],
+   "ar": [
+    "كان الشارع الذي خلف الساحة مختلفًا تمامًا. كان مزدحمًا وغنيًّا، مليئًا بالمتاجر الأنيقة والمكاتب. توقّف هولمز أمام مبنى كبير: مصرف المدينة والضواحي. قال بهدوء: «جداره الخلفيّ يقع خلف قبو السيّد ويلسون تمامًا. الآن فهمت. مصوّرنا الشابّ لم يكن يحمّض صورًا أبدًا، بل كان يحفر. طرقت الرصيف لأعرف إن كان النفق يمرّ أمام البيت، فلم يكن كذلك. إذن لا بدّ أنه يمرّ خلفه، نحو المصرف. والرابطة أُغلقت، وهذا يعني أن النفق اكتمل. سيحاولون الليلة يا واطسون. أحضر مسدّسك.»",
+    "في تلك الليلة، التقينا بالمفتّش جونز من سكوتلاند يارد، وبالسيّد ميريويذر، أحد مديري المصرف. شرح السيّد ميريويذر أن المصرف اقترض ثلاثين ألف قطعة ذهبية من فرنسا. وكانت الصناديق ما تزال في القبو، فكانت هدفًا مثاليًّا للصّ. نزلنا إلى الخزانة الحجرية الضخمة بين الصناديق الخشبية. غطّى هولمز الفانوس، فبقينا في ظلام تامّ. همس: «طريقهم الوحيد للهرب هو العودة عبر البيت، وثلاثة من رجال الشرطة ينتظرون عند الباب الأماميّ.» جثمنا خلف الصناديق وانتظرنا. كان الهواء باردًا رطبًا، والدقائق تمرّ ببطء شديد."
+   ],
+   "words": [
+    [
+     "revolver",
+     "مسدّس"
+    ],
+    [
+     "director",
+     "مدير"
+    ],
+    [
+     "borrow",
+     "يقترض / يستعير"
+    ],
+    [
+     "target",
+     "هدف"
+    ],
+    [
+     "crouch",
+     "يجثم / ينحني"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: The Hand in the Floor",
+   "title_ar": "الفصل الخامس: اليد في الأرض",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "More than an hour passed. Then, suddenly, I saw a tiny line of light between the stones of the floor. It grew longer and wider, and a white hand came up out of the ground, feeling around the edges. A moment later, one of the big stones turned over with a loud crack. A sharp young face looked out, and then a man pulled himself up into the vault. “It’s all clear, Archie!” he whispered down the hole. At that moment, Holmes jumped out and grabbed him by the collar. His partner, Archie, tried to run back down the tunnel, but the policemen were already waiting for him at the other end.",
+    "The thief looked at Holmes calmly. “You have beaten me, Mr Holmes,” he said. It was Vincent Spaulding, Mr Wilson’s helper, and his real name was John Clay. He was one of the cleverest criminals in London, and the police had been trying to catch him for years. Later, over breakfast, Holmes explained the whole plan to me. Clay had invented the League with his red-haired partner, Duncan Ross, only to keep Wilson out of the shop while he dug. “So poor Mr Wilson was useful after all,” I said, laughing. “Yes,” said Holmes. “He has saved the bank a fortune, and he has learned a great deal about the letter A.”"
+   ],
+   "ar": [
+    "مرّت أكثر من ساعة. ثم فجأة رأيت خطًّا رفيعًا من الضوء بين حجارة الأرض. أخذ يطول ويتّسع، ثم خرجت من الأرض يد بيضاء تتحسّس الحواف. وبعد لحظة، انقلب أحد الحجارة الكبيرة بصوت طقطقة عالٍ. أطلّ وجه شابّ حادّ الملامح، ثم رفع رجل نفسه إلى داخل الخزانة. همس في الفتحة: «الطريق آمن يا آرتشي!» وفي تلك اللحظة قفز هولمز وأمسكه من ياقته. حاول شريكه آرتشي أن يهرب راجعًا في النفق، لكنّ رجال الشرطة كانوا ينتظرونه في الطرف الآخر.",
+    "نظر اللصّ إلى هولمز بهدوء وقال: «لقد هزمتني يا سيّد هولمز.» كان هو فنسنت سبولدينغ، مساعد السيّد ويلسون، واسمه الحقيقي جون كلاي. كان من أذكى المجرمين في لندن، وكانت الشرطة تحاول القبض عليه منذ سنوات. وفيما بعد، على الفطور، شرح لي هولمز الخطّة كلّها. فقد اخترع كلاي الرابطة مع شريكه ذي الشعر الأحمر، دنكن روس، فقط ليُبعد ويلسون عن الدكّان بينما هو يحفر. قلت ضاحكًا: «إذن كان السيّد ويلسون المسكين مفيدًا في النهاية.» قال هولمز: «نعم. لقد أنقذ للمصرف ثروة، وتعلّم الكثير عن حرف الألف.»"
+   ],
+   "words": [
+    [
+     "edge",
+     "حافّة"
+    ],
+    [
+     "grab",
+     "يمسك بقوّة"
+    ],
+    [
+     "partner",
+     "شريك"
+    ],
+    [
+     "criminal",
+     "مجرم"
+    ],
+    [
+     "fortune",
+     "ثروة"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What did Mr Wilson find on the office door?",
+   [
+    "A letter from Holmes",
+    "A card saying the League was dissolved",
+    "A bag of gold coins"
+   ],
+   1
+  ],
+  [
+   "What did Wilson’s helper always do in the cellar?",
+   [
+    "He said he developed photographs",
+    "He slept",
+    "He counted money"
+   ],
+   0
+  ],
+  [
+   "Why did Holmes look at the helper’s trousers?",
+   [
+    "They were very expensive",
+    "They had red spots",
+    "The knees were worn and dirty from digging"
+   ],
+   2
+  ],
+  [
+   "What was in the bank’s cellar?",
+   [
+    "French gold",
+    "Old books",
+    "Photographs"
+   ],
+   0
+  ],
+  [
+   "Why did John Clay invent the Red-Headed League?",
+   [
+    "To help red-haired men",
+    "To keep Wilson away from his shop",
+    "To sell encyclopaedias"
+   ],
+   1
+  ]
+ ],
+ "talk_en": "John Clay’s plan was very clever, but Holmes saw small details. Write three clues from the story and explain what each one told Holmes.",
+ "talk_ar": "خطّة جون كلاي كانت ذكيّة وايد، بس هولمز انتبه لتفاصيل صغيرة. اكتب ثلاثة أدلّة من القصّة، ووضّح شو كشف كلّ دليل لهولمز."
+}

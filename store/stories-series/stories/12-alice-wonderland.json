@@ -1,0 +1,783 @@
+{
+ "n": 12,
+ "slug": "alice-wonderland",
+ "title": "Alice in Wonderland",
+ "series_tag": "",
+ "subtitle_ar": "أليس في بلاد العجائب",
+ "genre": "Classic",
+ "based_on": "Lewis Carroll (public domain)",
+ "blurb_en": "A White Rabbit with a watch, a bottle that says DRINK ME, a cat that disappears, and a Queen who shouts “Off with her head!” Follow Alice down the rabbit hole.",
+ "blurb_ar": "أرنب أبيض يحمل ساعة، وزجاجة مكتوب عليها «اشربيني»، وقطّ يختفي، وملكة تصرخ «اقطعوا رأسها!» اتبع أليس إلى داخل جحر الأرنب.",
+ "palette": "violet",
+ "cast": [
+  {
+   "id": "alice",
+   "name": "Alice",
+   "body": "girl",
+   "outfit": "dress",
+   "head": "long_hair",
+   "item": "none"
+  },
+  {
+   "id": "sister",
+   "name": "Alice’s sister",
+   "body": "woman",
+   "outfit": "dress",
+   "head": "bun",
+   "item": "book"
+  },
+  {
+   "id": "hatter",
+   "name": "The Hatter",
+   "body": "man",
+   "outfit": "coat",
+   "head": "top_hat",
+   "item": "none",
+   "height": 0.95
+  },
+  {
+   "id": "queen",
+   "name": "The Queen of Hearts",
+   "body": "woman",
+   "outfit": "gown",
+   "head": "crown",
+   "item": "none",
+   "height": 1.05
+  }
+ ],
+ "cover_scene": {
+  "sky": "magic",
+  "land": "garden",
+  "landmark": {
+   "type": "rabbit_hole",
+   "side": "right"
+  },
+  "sky_items": [
+   "stars",
+   "crescent"
+  ],
+  "chars": [
+   {
+    "id": "alice",
+    "pose": "run",
+    "face": "right",
+    "pos": "left"
+   }
+  ],
+  "creatures": [
+   {
+    "type": "rabbit",
+    "pos": "right",
+    "size": "m",
+    "face": "right"
+   },
+   {
+    "type": "cat",
+    "pos": "sky",
+    "size": "s",
+    "face": "left"
+   }
+  ],
+  "props": [
+   "mushrooms",
+   "teacups",
+   "cards",
+   "flowers"
+  ],
+  "light": "magic",
+  "mood": "magical"
+ },
+ "a1": [
+  {
+   "en": "Alice sits by the river with her sister. She is bored.\nSuddenly, a white rabbit runs past. He has a watch! “I am late!”",
+   "ar": "تجلس أليس بجانب النهر مع أختها. وهي تشعر بالملل.\nفجأة، يركض أرنب أبيض بجانبها. ومعه ساعة! «أنا متأخّر!»",
+   "scene": {
+    "sky": "day",
+    "land": "field",
+    "landmark": {
+     "type": "rabbit_hole",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "sit",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "sister",
+      "pose": "read",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "rabbit",
+      "pos": "right",
+      "size": "s",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "grass",
+     "flowers"
+    ],
+    "light": "none",
+    "mood": "calm"
+   }
+  },
+  {
+   "en": "Alice follows the rabbit down a big hole.\nShe falls and falls… very, very slowly.",
+   "ar": "تتبع أليس الأرنب في حفرة كبيرة.\nوتسقط وتسقط… ببطء شديد جدًّا.",
+   "scene": {
+    "sky": "cave",
+    "land": "tunnel",
+    "landmark": {
+     "type": "bookshelves",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "fall",
+      "face": "right",
+      "pos": "center"
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "jar",
+     "candle",
+     "cards"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "At the bottom, there is a tiny door and a little bottle.\nThe bottle says “DRINK ME”. Alice drinks, and she gets very small!",
+   "ar": "في الأسفل، يوجد باب صغير جدًّا وزجاجة صغيرة.\nمكتوب على الزجاجة «اشربيني». تشرب أليس، فتصير صغيرة جدًّا!",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "round_door",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "center",
+      "scale": 0.55
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "jar",
+     "candle"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "Then she eats a little cake. Now she is very, very tall!\nShe cries, and her big tears make a lake.",
+   "ar": "ثم تأكل كعكة صغيرة. الآن صارت طويلة جدًّا جدًّا!\nتبكي، ودموعها الكبيرة تصنع بحيرة.",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "room",
+    "landmark": {
+     "type": "round_door",
+     "side": "left"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "stand",
+      "face": "left",
+      "pos": "center",
+      "scale": 1.7
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "table",
+     "jar"
+    ],
+    "light": "magic",
+    "mood": "sad"
+   }
+  },
+  {
+   "en": "In a forest, a blue caterpillar sits on a mushroom.\n“Who are you?” he asks. Alice does not know! She changes too much.",
+   "ar": "في غابة، تجلس يرقة زرقاء فوق فطر.\nتسأل: «من أنتِ؟» أليس لا تعرف! فهي تتغيّر كثيرًا جدًّا.",
+   "scene": {
+    "sky": "dusk",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "think",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "caterpillar",
+      "pos": "center",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "mushrooms",
+     "grass"
+    ],
+    "light": "magic",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "A cat smiles in a tree. Then the cat disappears, but the smile stays!\n“Everyone here is mad,” says the cat.",
+   "ar": "قطّ يبتسم فوق شجرة. ثم يختفي القطّ، لكنّ الابتسامة تبقى!\nيقول القطّ: «كلّ من هنا مجنون.»",
+   "scene": {
+    "sky": "night",
+    "land": "forest",
+    "landmark": {
+     "type": "big_tree",
+     "side": "right"
+    },
+    "sky_items": [
+     "crescent",
+     "stars"
+    ],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "look_up",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "cat",
+      "pos": "right",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "mushrooms",
+     "grass"
+    ],
+    "light": "moonbeam",
+    "mood": "magical"
+   }
+  },
+  {
+   "en": "The Hatter and the March Hare have a tea party.\nIt is always six o’clock, so it is always tea time!",
+   "ar": "القبّعاتيّ والأرنب البرّي يقيمان حفلة شاي.\nالساعة دائمًا السادسة، لذلك هو دائمًا وقت الشاي!",
+   "scene": {
+    "sky": "sunset",
+    "land": "garden",
+    "landmark": {
+     "type": "cottage",
+     "side": "right"
+    },
+    "sky_items": [
+     "clouds",
+     "birds"
+    ],
+    "chars": [
+     {
+      "id": "hatter",
+      "pose": "raise",
+      "face": "right",
+      "pos": "left"
+     },
+     {
+      "id": "alice",
+      "pose": "sit",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "rabbit",
+      "pos": "center",
+      "size": "m",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "table",
+     "teacups",
+     "chair"
+    ],
+    "light": "none",
+    "mood": "happy"
+   }
+  },
+  {
+   "en": "The Queen of Hearts plays a strange game in her garden.\nThe sticks are pink birds! “Off with her head!” she shouts.",
+   "ar": "ملكة القلوب تلعب لعبة غريبة في حديقتها.\nالعِصيّ طيور وردية! وتصرخ: «اقطعوا رأسها!»",
+   "scene": {
+    "sky": "day",
+    "land": "maze",
+    "landmark": {
+     "type": "castle",
+     "side": "right"
+    },
+    "sky_items": [
+     "sun",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "queen",
+      "pose": "point",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "alice",
+      "pose": "hold_out",
+      "face": "right",
+      "pos": "left"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "flamingo",
+      "pos": "left",
+      "size": "m",
+      "face": "right"
+     }
+    ],
+    "props": [
+     "roses",
+     "hedge",
+     "cards"
+    ],
+    "light": "none",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "At a trial, the Queen is very angry with Alice.\nBut Alice is growing big again. “You are only a pack of cards!”",
+   "ar": "في محاكمة، الملكة غاضبة جدًّا من أليس.\nلكنّ أليس تكبر من جديد. «أنتم لستم إلا مجموعة أوراق لعب!»",
+   "scene": {
+    "sky": "indoor_warm",
+    "land": "palace_hall",
+    "landmark": {
+     "type": "throne",
+     "side": "right"
+    },
+    "sky_items": [],
+    "chars": [
+     {
+      "id": "queen",
+      "pose": "raise",
+      "face": "left",
+      "pos": "right"
+     },
+     {
+      "id": "alice",
+      "pose": "point",
+      "face": "right",
+      "pos": "left",
+      "scale": 1.35
+     }
+    ],
+    "creatures": [],
+    "props": [
+     "cards",
+     "crown_on_cushion",
+     "jar"
+    ],
+    "light": "candle",
+    "mood": "tense"
+   }
+  },
+  {
+   "en": "The cards fly up into the air… and Alice wakes up!\nShe is by the river with her sister. Was it all a dream?",
+   "ar": "تطير الأوراق في الهواء… وتستيقظ أليس!\nإنها بجانب النهر مع أختها. هل كان كلّ ذلك حلمًا؟",
+   "scene": {
+    "sky": "sunset",
+    "land": "field",
+    "landmark": {
+     "type": "big_tree",
+     "side": "left"
+    },
+    "sky_items": [
+     "birds",
+     "clouds"
+    ],
+    "chars": [
+     {
+      "id": "alice",
+      "pose": "sit",
+      "face": "right",
+      "pos": "center"
+     },
+     {
+      "id": "sister",
+      "pose": "read",
+      "face": "left",
+      "pos": "right"
+     }
+    ],
+    "creatures": [
+     {
+      "type": "rabbit",
+      "pos": "far",
+      "size": "s",
+      "face": "left"
+     }
+    ],
+    "props": [
+     "cards",
+     "grass",
+     "flowers"
+    ],
+    "light": "sunrise",
+    "mood": "happy"
+   }
+  }
+ ],
+ "a1_words": [
+  [
+   "rabbit",
+   "أرنب"
+  ],
+  [
+   "watch",
+   "ساعة يد / جيب"
+  ],
+  [
+   "hole",
+   "حفرة"
+  ],
+  [
+   "bottle",
+   "زجاجة"
+  ],
+  [
+   "small",
+   "صغير"
+  ],
+  [
+   "cake",
+   "كعكة"
+  ],
+  [
+   "tall",
+   "طويل"
+  ],
+  [
+   "caterpillar",
+   "يرقة"
+  ],
+  [
+   "smile",
+   "ابتسامة"
+  ],
+  [
+   "tea",
+   "شاي"
+  ],
+  [
+   "queen",
+   "ملكة"
+  ],
+  [
+   "cards",
+   "أوراق لعب"
+  ]
+ ],
+ "a1_quiz": [
+  [
+   "The white rabbit has a watch.",
+   true
+  ],
+  [
+   "The bottle makes Alice very tall.",
+   false
+  ],
+  [
+   "The cat’s smile stays in the tree.",
+   true
+  ],
+  [
+   "At the tea party, it is always six o’clock.",
+   true
+  ],
+  [
+   "At the end, Alice is in the Queen’s castle.",
+   false
+  ]
+ ],
+ "b1": [
+  {
+   "title": "Chapter 1: Down the Rabbit Hole",
+   "title_ar": "الفصل الأول: في جحر الأرنب",
+   "pics": [
+    0,
+    1
+   ],
+   "en": [
+    "It was a hot summer afternoon, and Alice was sitting on the riverbank beside her older sister. Her sister was reading a book with no pictures and no conversations in it. “What is the use of a book without pictures?” Alice thought sleepily. She was wondering whether to get up and pick some daisies when a White Rabbit with pink eyes ran close by her. That was not very unusual. But then the Rabbit took a watch out of his waistcoat pocket, looked at it and said, “Oh dear! Oh dear! I shall be too late!” Alice had never seen a rabbit with a watch before, so she jumped up and ran across the field after him.",
+    "She was just in time to see him disappear down a large rabbit hole under a hedge. A moment later, Alice went down after him, without stopping to think how she would ever climb out. The hole went straight on like a tunnel for some way, and then it dipped suddenly down. Alice found herself falling down a very deep well. It was a strange fall, slow and gentle like a leaf, so she had plenty of time to look around. The walls were covered with cupboards and bookshelves. She took a jar from a shelf as she passed. Its label said ORANGE JAM, but sadly there was nothing inside."
+   ],
+   "ar": [
+    "كانت ظهيرة صيفية حارّة، وكانت أليس جالسة على ضفّة النهر بجانب أختها الكبرى. كانت أختها تقرأ كتابًا ليس فيه صور ولا حوارات. فكّرت أليس وهي نعسانة: «ما فائدة كتاب بلا صور؟» وبينما كانت تتساءل إن كانت ستقوم لتقطف بعض زهور الأقحوان، ركض قريبًا منها أرنب أبيض ذو عينين ورديّتين. لم يكن هذا غريبًا جدًّا. لكنّ الأرنب أخرج ساعة من جيب صُدرته، ونظر إليها وقال: «يا إلهي! يا إلهي! سأتأخّر كثيرًا!» لم تكن أليس قد رأت أرنبًا يحمل ساعة من قبل، فقفزت وركضت خلفه عبر الحقل.",
+    "وصلت في الوقت المناسب لترى الأرنب يختفي في جحر كبير تحت سياج من الشجيرات. وبعد لحظة، نزلت أليس خلفه، دون أن تتوقّف لتفكّر كيف ستتسلّق إلى الخارج. امتدّ الجحر مستقيمًا كالنفق مسافةً، ثم انحدر فجأة إلى الأسفل. فوجدت أليس نفسها تسقط في بئر عميقة جدًّا. كان سقوطًا غريبًا، بطيئًا ولطيفًا كسقوط ورقة شجر، فوجدت وقتًا كافيًا لتنظر حولها. كانت الجدران مغطّاة بالخزائن ورفوف الكتب. وأخذت برطمانًا من أحد الرفوف وهي تمرّ. كان مكتوبًا عليه «مربّى برتقال»، لكن للأسف لم يكن فيه شيء."
+   ],
+   "words": [
+    [
+     "riverbank",
+     "ضفّة النهر"
+    ],
+    [
+     "wonder",
+     "يتساءل"
+    ],
+    [
+     "plenty",
+     "كثير / وفير"
+    ],
+    [
+     "gentle",
+     "لطيف / هادئ"
+    ],
+    [
+     "cupboard",
+     "خزانة"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 2: Too Small, Too Tall",
+   "title_ar": "الفصل الثاني: صغيرة جدًّا، طويلة جدًّا",
+   "pics": [
+    2,
+    3
+   ],
+   "en": [
+    "At last, Alice landed softly on a pile of dry leaves. She was in a long hall with doors all around it, but every door was locked. On a glass table she found a tiny golden key. It opened a little door, behind which was the loveliest garden she had ever seen. But the door was far too small for her. Then she noticed a bottle on the table with a paper label: DRINK ME. Alice checked carefully that it did not say POISON. Then she tasted it. It was delicious, and soon she was only twenty-five centimetres tall, the perfect size for the little door.",
+    "Unfortunately, she had left the golden key on top of the glass table, and now she could not reach it. Poor Alice sat down and cried. Then she found a small cake with the words EAT ME on it in currants. She ate it, and she began to grow taller and taller, until her head hit the ceiling. “Curiouser and curiouser!” she cried. Now she was nearly three metres tall, and the garden was further away than ever. She cried again, so much that her enormous tears made a salty lake around her feet. Later, when she became small once more, she had to swim through her own tears."
+   ],
+   "ar": [
+    "أخيرًا، هبطت أليس بنعومة على كومة من الأوراق اليابسة. كانت في قاعة طويلة تحيط بها الأبواب، لكنّ كلّ الأبواب كانت مقفلة. وعلى طاولة زجاجية وجدت مفتاحًا ذهبيًّا صغيرًا جدًّا. فتح المفتاح بابًا صغيرًا، وخلفه أجمل حديقة رأتها في حياتها. لكنّ الباب كان أصغر منها بكثير. ثم لاحظت على الطاولة زجاجة عليها ورقة مكتوب فيها: «اشربيني». تأكّدت أليس بعناية أنه ليس مكتوبًا عليها «سمّ». ثم تذوّقتها. كانت لذيذة، وسرعان ما صار طولها خمسة وعشرين سنتيمترًا فقط، وهو الحجم المثاليّ للباب الصغير.",
+    "لكن للأسف، كانت قد تركت المفتاح الذهبيّ فوق الطاولة الزجاجية، ولم تعد تستطيع الوصول إليه. فجلست أليس المسكينة وبكت. ثم وجدت كعكة صغيرة كُتب عليها بالزبيب «كُليني». أكلتها، فأخذت تطول وتطول، حتى اصطدم رأسها بالسقف. صاحت: «الأمر يزداد غرابة وغرابة!» صار طولها الآن نحو ثلاثة أمتار، وصارت الحديقة أبعد من أيّ وقت مضى. فبكت من جديد، كثيرًا جدًّا، حتى صنعت دموعها الضخمة بحيرة مالحة حول قدميها. وفيما بعد، عندما صغرت مرّة أخرى، اضطرّت أن تسبح في دموعها."
+   ],
+   "words": [
+    [
+     "land",
+     "يهبط"
+    ],
+    [
+     "label",
+     "ورقة تعريف / ملصق"
+    ],
+    [
+     "delicious",
+     "لذيذ"
+    ],
+    [
+     "unfortunately",
+     "للأسف"
+    ],
+    [
+     "ceiling",
+     "سقف"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 3: A Caterpillar and a Cat",
+   "title_ar": "الفصل الثالث: يرقة وقطّ",
+   "pics": [
+    4,
+    5
+   ],
+   "en": [
+    "Alice wandered into a wood full of enormous flowers and mushrooms. On top of one mushroom sat a large blue caterpillar, quietly smoking a long pipe. He looked at her for a long time. “Who are you?” he asked at last. “I hardly know, sir,” Alice replied. “I knew who I was when I got up this morning, but I have changed so many times since then.” The Caterpillar did not seem to understand at all. Before he crawled away, he gave her some useful advice: “One side of the mushroom will make you grow taller, and the other side will make you grow shorter.”",
+    "Alice broke off a piece from each side and kept them in her pockets, so that she could change her size whenever she wanted. Further on, she saw a large cat sitting on the branch of a tree, with a grin that went from ear to ear. It was the Cheshire Cat. “Which way should I go from here?” Alice asked. “That depends on where you want to go,” the Cat answered. “Over there lives a Hatter, and over there lives a March Hare. Visit either one. They’re both mad.” Then the Cat slowly vanished, starting with the tail and ending with the grin, which stayed in the air for some time."
+   ],
+   "ar": [
+    "تجوّلت أليس في غابة مليئة بالزهور والفطر الضخم. وفوق إحدى الفطرات جلست يرقة زرقاء كبيرة تدخّن غليونًا طويلًا بهدوء. نظرت إليها اليرقة وقتًا طويلًا. ثم سألت أخيرًا: «من أنتِ؟» فأجابت أليس: «بالكاد أعرف يا سيّدي. كنت أعرف من أنا عندما استيقظت هذا الصباح، لكنني تغيّرت مرّات كثيرة منذ ذلك الحين.» ولم يبدُ أن اليرقة فهمت شيئًا أبدًا. وقبل أن تزحف مبتعدة، أعطتها نصيحة مفيدة: «جانب من الفطرة يجعلك أطول، والجانب الآخر يجعلك أقصر.»",
+    "قطعت أليس قطعة من كلّ جانب وحفظتهما في جيبيها، لكي تغيّر حجمها متى شاءت. وأبعد من ذلك، رأت قطًّا كبيرًا جالسًا على غصن شجرة، وابتسامته تمتدّ من أذن إلى أذن. كان قطّ شيشاير. سألته أليس: «أيّ طريق يجب أن أسلك من هنا؟» فقال القطّ: «هذا يعتمد على المكان الذي تريدين الوصول إليه. هناك يعيش صانع القبّعات، وهناك يعيش الأرنب البرّي. زوري أيًّا منهما، فكلاهما مجنون.» ثم اختفى القطّ ببطء، بادئًا بذيله ومنتهيًا بابتسامته، التي بقيت في الهواء مدّة من الزمن."
+   ],
+   "words": [
+    [
+     "hardly",
+     "بالكاد"
+    ],
+    [
+     "crawl",
+     "يزحف"
+    ],
+    [
+     "advice",
+     "نصيحة"
+    ],
+    [
+     "grin",
+     "ابتسامة عريضة"
+    ],
+    [
+     "vanish",
+     "يختفي"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 4: Tea Time and Croquet",
+   "title_ar": "الفصل الرابع: وقت الشاي ولعبة الكروكيه",
+   "pics": [
+    6,
+    7
+   ],
+   "en": [
+    "Under a tree in front of a little house, a long table was set for tea. The Hatter and the March Hare were sitting at one end, with a sleepy Dormouse between them. “There’s no space for you!” they cried when they saw Alice coming. “There’s lots of space!” said Alice, and she sat down in a big armchair. The Hatter asked her a riddle: “Why is a raven like a writing desk?” But when Alice gave up, he admitted that he had no idea either. His watch always showed six o’clock, he explained, so it was always tea time, and they never had time to wash the cups.",
+    "Alice soon left that rude party. At last she found her way into the beautiful garden she had seen through the tiny door. Gardeners shaped like playing cards were painting the white roses red, because the Queen hated white roses. Then the Queen of Hearts arrived and invited Alice to play croquet. It was the strangest game Alice had ever played. The balls were live hedgehogs, the sticks were pink flamingos, and the soldiers bent over to make the hoops. Everyone played at the same time, and they all argued. Whenever the Queen got angry, which happened every minute, she shouted, “Off with his head!”"
+   ],
+   "ar": [
+    "تحت شجرة أمام بيت صغير، كانت هناك طاولة طويلة مُعدّة للشاي. وكان صانع القبّعات والأرنب البرّي جالسين في أحد طرفيها، وبينهما فأر زغبيّ نعسان. صاحا عندما رأيا أليس قادمة: «لا يوجد مكان لكِ!» فقالت أليس: «هناك أماكن كثيرة!» وجلست على كرسيّ كبير. سألها صانع القبّعات لغزًا: «لماذا يشبه الغرابُ مكتبَ الكتابة؟» لكن عندما استسلمت أليس، اعترف بأنه هو أيضًا لا يعرف الجواب. وشرح أن ساعته تشير دائمًا إلى السادسة، لذلك هو دائمًا وقت الشاي، ولا يجدون وقتًا لغسل الفناجين أبدًا.",
+    "سرعان ما تركت أليس تلك الحفلة الوقحة. وأخيرًا وجدت طريقها إلى الحديقة الجميلة التي رأتها عبر الباب الصغير. كان هناك بستانيّون على شكل أوراق لعب يطلون الورود البيضاء باللون الأحمر، لأن الملكة تكره الورود البيضاء. ثم وصلت ملكة القلوب ودعت أليس إلى لعب الكروكيه. كانت أغرب لعبة لعبتها أليس في حياتها. الكرات قنافذ حيّة، والمضارب طيور فلامنغو وردية، والجنود ينحنون ليصنعوا الأقواس. كان الجميع يلعبون في الوقت نفسه، وكلّهم يتجادلون. وكلّما غضبت الملكة، وهذا يحدث كلّ دقيقة، صرخت: «اقطعوا رأسه!»"
+   ],
+   "words": [
+    [
+     "riddle",
+     "لغز / أحجية"
+    ],
+    [
+     "admit",
+     "يعترف"
+    ],
+    [
+     "rude",
+     "وقح / قليل الأدب"
+    ],
+    [
+     "invite",
+     "يدعو"
+    ],
+    [
+     "argue",
+     "يتجادل"
+    ]
+   ]
+  },
+  {
+   "title": "Chapter 5: Who Stole the Tarts?",
+   "title_ar": "الفصل الخامس: من سرق الفطائر؟",
+   "pics": [
+    8,
+    9
+   ],
+   "en": [
+    "Luckily, nobody’s head was ever really cut off, because the King quietly forgave everyone. Soon a trial began in the royal court. The Knave of Hearts was accused of stealing the Queen’s jam tarts. The King was the judge, the White Rabbit read out the charges, and twelve animals sat in the jury, writing on little slates. The Hatter was called as a witness, but he was so nervous that he said nothing useful at all. Meanwhile, Alice had a curious feeling. She was beginning to grow again, without eating anything. When the Rabbit called the next witness, he read out, “Alice!”",
+    "“Here!” cried Alice, jumping up so quickly that she knocked over the whole jury box. The Queen wanted the sentence first and the verdict afterwards. “That’s nonsense!” said Alice loudly. “Be quiet!” screamed the Queen, turning purple. “I will not be quiet!” said Alice. “Off with her head!” the Queen shouted. Nobody moved. By now Alice was her full size, and she was not afraid any more. “I’m not afraid of you,” she said. “You’re nothing but a pack of cards!” At this, the whole pack rose up into the air and flew down upon her. Alice gave a little scream, and woke up on the riverbank, with her head in her sister’s lap."
+   ],
+   "ar": [
+    "لحسن الحظّ، لم يُقطع رأس أحد في الحقيقة أبدًا، لأن الملك كان يعفو عن الجميع بهدوء. وسرعان ما بدأت محاكمة في المحكمة الملكية. فقد اتُّهم خادم القلوب بسرقة فطائر المربّى التي صنعتها الملكة. كان الملك هو القاضي، والأرنب الأبيض يقرأ التهم، واثنا عشر حيوانًا يجلسون في هيئة المحلّفين ويكتبون على ألواح صغيرة. استُدعي صانع القبّعات شاهدًا، لكنه كان متوتّرًا جدًّا فلم يقل أيّ شيء مفيد. وفي هذه الأثناء، كان عند أليس شعور غريب. فقد بدأت تكبر من جديد، دون أن تأكل شيئًا. وعندما نادى الأرنب الشاهد التالي، قرأ: «أليس!»",
+    "صاحت أليس: «أنا هنا!» وقفزت بسرعة حتى أوقعت مقاعد المحلّفين كلّها. أرادت الملكة أن يصدر الحكم أوّلًا، ثم يُقرَّر الذنب بعده. قالت أليس بصوت عالٍ: «هذا كلام فارغ!» فصرخت الملكة وقد احمرّ وجهها حتى صار بنفسجيًّا: «اسكتي!» قالت أليس: «لن أسكت أبدًا!» صاحت الملكة: «اقطعوا رأسها!» لم يتحرّك أحد. كانت أليس قد عادت إلى حجمها الكامل، ولم تعد خائفة. قالت: «لست خائفة منكم. لستم إلا مجموعة من أوراق اللعب!» عندها، ارتفعت الأوراق كلّها في الهواء وانهالت عليها. أطلقت أليس صرخة صغيرة، واستيقظت على ضفّة النهر، ورأسها في حضن أختها."
+   ],
+   "words": [
+    [
+     "trial",
+     "محاكمة"
+    ],
+    [
+     "accuse",
+     "يتّهم"
+    ],
+    [
+     "witness",
+     "شاهد"
+    ],
+    [
+     "nervous",
+     "متوتّر"
+    ],
+    [
+     "nonsense",
+     "كلام فارغ / هراء"
+    ]
+   ]
+  }
+ ],
+ "b1_quiz": [
+  [
+   "What did the White Rabbit take out of his pocket?",
+   [
+    "A key",
+    "A watch",
+    "A cake"
+   ],
+   1
+  ],
+  [
+   "What happened when Alice ate the cake marked EAT ME?",
+   [
+    "She grew very tall",
+    "She became very small",
+    "She fell asleep"
+   ],
+   0
+  ],
+  [
+   "What advice did the Caterpillar give Alice?",
+   [
+    "Follow the White Rabbit",
+    "Never visit the Hatter",
+    "The mushroom can change your size"
+   ],
+   2
+  ],
+  [
+   "Why was it always tea time at the Hatter’s party?",
+   [
+    "The Queen ordered it",
+    "His watch always showed six o’clock",
+    "They loved tea too much"
+   ],
+   1
+  ],
+  [
+   "What did Alice say to the Queen at the end of the trial?",
+   [
+    "“You’re nothing but a pack of cards!”",
+    "“I stole the tarts!”",
+    "“Please forgive me!”"
+   ],
+   0
+  ]
+ ],
+ "talk_en": "Alice changes size many times and asks, “Who am I?” Have you ever felt very small or very big in a new place? Write about it in four or five sentences.",
+ "talk_ar": "حجم أليس يتغيّر مرّات وايد، وهي تسأل: «من أنا؟» هل حسّيت مرّة إنك صغير وايد أو كبير وايد في مكان جديد؟ اكتب عن هالشي في أربع أو خمس جمل."
+}
