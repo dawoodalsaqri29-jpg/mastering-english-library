@@ -18,7 +18,7 @@
 | 30–33 | «إنت أي رقم؟ اكتبه تحت 👇» ثم يرجع للخطّاف | لوب للبداية |
 
 ملف الفيديو المتوقع: `instagram-assets/ig/2026-11-w46/reels/07-very-angry-c-4k.mp4`
-ستوري ميا (8:30 م): سؤال «وش أقوى كلمة؟ annoyed · furious · irritated» · الجواب في ستوري اليوم اللي بعده: «furious ✅ وأقوى منها livid 🔥» → `stories/mia-story-07q.mp4` و `mia-story-07a.mp4`
+ستوري ميا (8:30 م): سؤال «أي وحدة صح؟» · A: She was angry with me. · B: She was angry from me. · الجواب (A) في ستوري اليوم اللي بعده 12:00 ظ → `stories/mia-story-07q.mp4` و `mia-story-07a.mp4`
 
 
 ## 08 · very happy · 2026-11-09
@@ -36,7 +36,7 @@
 | 30–33 | «إنت أي رقم؟ اكتبه تحت 👇» ثم يرجع للخطّاف | لوب للبداية |
 
 ملف الفيديو المتوقع: `instagram-assets/ig/2026-11-w46/reels/08-very-happy-c-4k.mp4`
-ستوري ميا (8:30 م): سؤال «pleased ولا delighted… أيهم أقوى؟» · الجواب في ستوري اليوم اللي بعده: «delighted ✅ فرحان واجد 🤩» → `stories/mia-story-08q.mp4` و `mia-story-08a.mp4`
+ستوري ميا (8:30 م): سؤال «أي وحدة صح؟» · A: I'm happy for meet you. · B: I'm happy to meet you. · الجواب (B) في ستوري اليوم اللي بعده 12:00 ظ → `stories/mia-story-08q.mp4` و `mia-story-08a.mp4`
 
 
 ## 09 · very cold · 2026-11-10
@@ -54,7 +54,7 @@
 | 30–33 | «إنت أي رقم؟ اكتبه تحت 👇» ثم يرجع للخطّاف | لوب للبداية |
 
 ملف الفيديو المتوقع: `instagram-assets/ig/2026-11-w46/reels/09-very-cold-c-4k.mp4`
-ستوري ميا (8:30 م): سؤال ««I have a cold» معناها…؟» · الجواب في ستوري اليوم اللي بعده: «عندي زكام 🤧 · بردان = I'm cold» → `stories/mia-story-09q.mp4` و `mia-story-09a.mp4`
+ستوري ميا (8:30 م): سؤال «تبي تقول «بردان» أي وحدة صح؟» · A: I'm cold. · B: I have cold. · الجواب (A) في ستوري اليوم اللي بعده 12:00 ظ → `stories/mia-story-09q.mp4` و `mia-story-09a.mp4`
 
 
 ## 10 · very small · 2026-11-11
@@ -72,7 +72,7 @@
 | 30–33 | «إنت أي رقم؟ اكتبه تحت 👇» ثم يرجع للخطّاف | لوب للبداية |
 
 ملف الفيديو المتوقع: `instagram-assets/ig/2026-11-w46/reels/10-very-small-c-4k.mp4`
-ستوري ميا (8:30 م): سؤال «كيف تنطق minute لما معناها «صغير جداً»؟» · الجواب في ستوري اليوم اللي بعده: «my-NEWT /maɪˈnjuːt/ ✅» → `stories/mia-story-10q.mp4` و `mia-story-10a.mp4`
+ستوري ميا (8:30 م): سؤال «minute بمعنى «صغير جداً» كيف تنطقها؟» · A: MIN-it · B: my-NEWT · الجواب (B) في ستوري اليوم اللي بعده 12:00 ظ → `stories/mia-story-10q.mp4` و `mia-story-10a.mp4`
 
 
 ## 11 · very sad · 2026-11-12
@@ -90,4 +90,4 @@
 | 30–33 | «إنت أي رقم؟ اكتبه تحت 👇» ثم يرجع للخطّاف | لوب للبداية |
 
 ملف الفيديو المتوقع: `instagram-assets/ig/2026-11-w46/reels/11-very-sad-c-4k.mp4`
-ستوري ميا (8:30 م): سؤال «make me ___ sad: to feel ولا feel؟» · الجواب في ستوري اليوم اللي بعده: «feel ✅ بدون to» → `stories/mia-story-11q.mp4` و `mia-story-11a.mp4`
+ستوري ميا (8:30 م): سؤال «أي وحدة صح؟» · A: It makes me to feel sad. · B: It makes me feel sad. · الجواب (B) في ستوري اليوم اللي بعده 12:00 ظ → `stories/mia-story-11q.mp4` و `mia-story-11a.mp4`
