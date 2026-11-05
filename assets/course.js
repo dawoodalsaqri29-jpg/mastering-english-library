@@ -73,6 +73,17 @@
       }
     }
 
+    // 1b. Invite the learner into the course player.
+    var lead = article.querySelector(".lesson-head");
+    if (lead) {
+      var cta = document.createElement("a");
+      cta.className = "c-btn no-print";
+      cta.style.marginTop = ".25rem";
+      cta.href = BASE + "course.html?l=" + slug;
+      cta.textContent = "▶ Study this as a course module: slides, checks and a challenge";
+      lead.appendChild(cta);
+    }
+
     // 2. Status chip in the header.
     var head = article.querySelector(".lesson-head .meta");
     if (head && prog[slug]) {
@@ -104,7 +115,17 @@
     sec.id = "challenge";
     var pager = article.querySelector(".pager");
     article.insertBefore(sec, pager);
+    mountChallenge(sec, data, slug, { where: where, link: function (s) { return s + ".html"; } });
+  }
 
+  // The graded challenge, mounted into any element. Used by lesson pages and the course player.
+  // opts.link(slug) builds the URL of another module; opts.onResult(pct, passed) runs after each attempt.
+  function mountChallenge(sec, data, slug, opts) {
+    opts = opts || {};
+    var L = data.lessons[slug];
+    var pass = data.passMark;
+    var where = opts.where || locate(data, slug);
+    var link = opts.link || function (s) { return BASE + "lessons/" + s + ".html"; };
     function intro() {
       var p = get(PROG_KEY, {})[slug];
       sec.innerHTML = '<div class="c-head"><span class="c-eyebrow">Graded challenge</span><h2>Prove it: ' + L.questions.length + " questions, pass mark " + pass + "%</h2></div>" +
@@ -231,7 +252,7 @@
         put(PROG_KEY, all);
         markDay();
         var next = where && where.course.lessons[where.index + 1];
-        var nextLink = next ? '<a class="c-btn" href="' + next + '.html">Next lesson: ' + esc(data.lessons[next].title) + " →</a>" :
+        var nextLink = next ? '<a class="c-btn" href="' + link(next) + '">Next module: ' + esc(data.lessons[next].title) + " →</a>" :
           '<a class="c-btn" href="' + BASE + 'courses.html">Back to your courses →</a>';
         var review = mistakes.length ? "<h3>Review your mistakes</h3><ol class=\"c-review\">" + mistakes.map(function (m) {
           return "<li><p class=\"c-q\">" + esc(m.q) + "</p><p class=\"bad\">You: " + esc(m.given) + "</p><p class=\"good\">Correct: " + esc(m.right) + "</p>" +
@@ -247,6 +268,7 @@
           review +
           '<div class="c-actions"><button type="button" class="c-btn ghost" id="cRetry">Retake</button>' + (passed ? nextLink : "") + "</div>";
         sec.querySelector("#cRetry").addEventListener("click", run);
+        if (opts.onResult) opts.onResult(pct, all[slug].passed);
         sec.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
@@ -254,7 +276,10 @@
     }
 
     intro();
+    return { start: run };
   }
+  window.MECourse = { load: load, mount: mountChallenge, locate: locate, progress: function () { return get(PROG_KEY, {}); } };
+
 
   // =====================================================================
   // Courses dashboard
@@ -275,13 +300,15 @@
           if (p) { tried++; sum += p.best; }
           if (p && p.passed) { done++; passedN++; }
           var prevOk = i === 0 || (prog[c.lessons[i - 1]] && prog[c.lessons[i - 1]].passed);
-          var state = p && p.passed ? "passed" : p ? "tried" : prevOk ? "ready" : "early";
-          var icon = { passed: "✓", tried: "↻", ready: (i + 1), early: "!" }[state];
-          var note = { passed: "Passed · best " + (p && p.best) + "%", tried: "Best " + (p && p.best) + "%: needs " + data.passMark + "%", ready: "Ready to start", early: "Pass the lesson before this one first" }[state];
+          var state = p && p.passed ? "passed" : !prevOk ? "early" : p ? "tried" : "ready";
+          var icon = { passed: "✓", tried: "↻", ready: (i + 1), early: "🔒" }[state];
+          var note = { passed: "Passed · best " + (p && p.best) + "%", tried: "Best " + (p && p.best) + "%: needs " + data.passMark + "%", ready: "Ready to start", early: "Locked: pass " + data.lessons[c.lessons[i - 1]].title + " first" }[state];
+          var go = "course.html?l=" + s;
+          var title = state === "early" ? '<span class="m-locked">' + esc(L.title) + "</span>" : '<a href="' + go + '">' + esc(L.title) + "</a>";
           return '<li class="m-row ' + state + '"><span class="m-ic">' + icon + "</span>" +
-            '<div class="m-txt"><a href="lessons/' + s + '.html#challenge">' + esc(L.title) + "</a>" +
+            '<div class="m-txt">' + title +
             '<span class="m-sub">' + esc(L.skill) + " · " + L.questions.length + " questions · " + note + "</span></div>" +
-            '<a class="m-go" href="lessons/' + s + '.html">' + (state === "passed" ? "Review" : state === "tried" ? "Retake" : "Start") + "</a></li>";
+            (state === "early" ? "" : '<a class="m-go" href="' + go + '">' + (state === "passed" ? "Review" : state === "tried" ? "Continue" : "Start") + "</a>") + "</li>";
         }).join("");
         var pct = Math.round(done / c.lessons.length * 100);
         var complete = done === c.lessons.length;
@@ -337,6 +364,7 @@
 
   // ---------- boot ----------
   var root = document.querySelector("[data-courses]");
+  if (document.querySelector("[data-player]")) return;
   load().then(function (data) {
     if (root) dashboard(data, root);
     else lessonPage(data);

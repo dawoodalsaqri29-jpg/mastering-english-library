@@ -127,3 +127,5 @@
 }
 
 @media print { body:not(.printing-cert) .challenge, body:not(.printing-cert) .c-alert, .c-chip { display: none !important; } }
+.m-locked { font-weight: 600; color: var(--muted); }
+.m-row.early { opacity: .75; }

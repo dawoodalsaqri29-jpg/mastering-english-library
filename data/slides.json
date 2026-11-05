@@ -1,0 +1,130 @@
+{
+  "b1-present-perfect-vs-past-simple": [
+    { "t": "cover", "kicker": "B1 · Grammar · Module 1", "title": "Present perfect or past simple?", "sub": "Two tenses, one question: is the time finished, or connected to now?" },
+    { "t": "text", "h": "What you'll be able to do", "bullets": ["Choose between I did and I have done without guessing", "Spot the signal words that decide the tense", "Avoid the mistake Arabic speakers make with since and for"] },
+    { "t": "table", "h": "The core difference", "head": ["Past simple", "Present perfect"], "rows": [["Finished time: yesterday, in 2019, last week, two days ago", "Unfinished time or no time: today, this year, ever, never, yet, so far"], ["I lost my keys yesterday.", "I've lost my keys. (I still can't find them.)"], ["She lived in Paris for five years. (Not now.)", "She has lived in Paris for five years. (She still does.)"]] },
+    { "t": "text", "h": "The quick test", "big": "Can you add a finished time, like last year?", "p": "If yes, use the past simple. If the time is still open, or you don't say when, use the present perfect." },
+    { "t": "check", "q": "I ___ him two days ago.", "opts": ["saw", "have seen"], "a": 0, "why": "ago marks a finished time, so use the past simple." },
+    { "t": "example", "h": "Mistakes to fix", "pairs": [{ "bad": "I have seen him yesterday.", "good": "I saw him yesterday.", "note": "yesterday is finished." }, { "bad": "We are married since 2015.", "good": "We have been married since 2015.", "note": "since needs the present perfect, not the present simple." }] },
+    { "t": "table", "h": "Form", "head": ["Tense", "Form", "Example"], "rows": [["Present perfect", "have / has + past participle", "She has finished."], ["Past simple", "verb + -ed or irregular past", "She finished. / She went."]] },
+    { "t": "check", "q": "___ your homework yet?", "opts": ["Did you finish", "Have you finished"], "a": 1, "why": "yet is a present perfect signal word in British English and in exams." },
+    { "t": "dodont", "h": "Remember", "do": ["Past simple with ago, yesterday, last…, in 2019", "Present perfect with ever, never, yet, already, since, for (up to now)"], "dont": ["Don't mix have with a finished time", "Don't use the present simple with since"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Finished time → past simple", "Connected to now → present perfect", "When…? questions ask for a finished time, so use the past simple"] }
+  ],
+  "b1-everyday-phrasal-verbs": [
+    { "t": "cover", "kicker": "B1 · Vocabulary · Module 2", "title": "Everyday phrasal verbs", "sub": "Twelve verbs you hear every day, and the grammar that holds them together." },
+    { "t": "text", "h": "What is a phrasal verb?", "p": "A verb plus a small word such as up, out, on or off. The meaning often changes completely.", "big": "give = يعطي · give up = يستسلم" },
+    { "t": "table", "h": "Daily life", "head": ["Phrasal verb", "Meaning", "Example"], "rows": [["get up", "leave your bed", "I get up at seven."], ["look for", "try to find", "I'm looking for my phone."], ["look after", "take care of", "She looks after her brother."], ["find out", "discover information", "Find out when the train leaves."], ["pick up", "collect", "I'll pick you up at six."], ["put on", "start wearing", "Put on your coat."]] },
+    { "t": "table", "h": "Starting, stopping, finishing", "head": ["Phrasal verb", "Meaning", "Example"], "rows": [["turn on / off", "start / stop a machine", "Turn off the lights."], ["give up", "stop trying, stop a habit", "He gave up smoking."], ["run out of", "have none left", "We've run out of milk."], ["set off", "start a journey", "We set off early."], ["come back", "return", "When are you coming back?"], ["fill in", "complete a form", "Fill in this form."]] },
+    { "t": "check", "q": "She ___ her grandmother every weekend.", "opts": ["looks for", "looks after"], "a": 1, "why": "look after = take care of. look for = search." },
+    { "t": "text", "h": "Grammar rule: where does the pronoun go?", "big": "pick you up ✓   pick up you ✗", "p": "With pronouns (it, him, you, them), put the pronoun between the verb and the particle. With nouns, both orders work: pick up the kids / pick the kids up." },
+    { "t": "check", "q": "Please turn ___. It's too loud.", "opts": ["it off", "off it"], "a": 0, "why": "With a pronoun, the particle goes after it: turn it off." },
+    { "t": "dodont", "h": "Remember", "do": ["Learn each one with an example sentence", "give up + -ing: give up smoking"], "dont": ["Don't split run out of: run out milk ✗", "Don't put a pronoun after the particle"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["The particle changes the meaning", "Pronoun in the middle: pick it up", "Three-part verbs stay together: run out of"] }
+  ],
+  "b1-writing-informal-email": [
+    { "t": "cover", "kicker": "B1 · Writing · Module 3", "title": "Writing an informal email", "sub": "Sound warm and natural, not like an office letter." },
+    { "t": "text", "h": "The goal", "bullets": ["Natural, friendly tone", "Contractions: I'm, can't, I've", "Short paragraphs", "A clear reason for writing"] },
+    { "t": "table", "h": "The structure", "head": ["Part", "Useful phrases"], "rows": [["Greeting", "Hi Sam, / Dear Anna,"], ["Opening", "Thanks for your email. / How are things?"], ["Reason", "I'm writing to tell you… / Guess what?"], ["Details", "By the way… / Also… / Anyway…"], ["Closing", "Can't wait to hear from you. / Write back soon."], ["Sign-off", "Love, / Best, / Take care,"]] },
+    { "t": "check", "q": "Which sign-off suits a close friend?", "opts": ["Yours faithfully,", "Take care,"], "a": 1, "why": "Yours faithfully is only for formal letters to someone you don't know." },
+    { "t": "example", "h": "Translated vs natural", "pairs": [{ "bad": "Respected Sam,", "good": "Hi Sam,", "note": "المحترم doesn't translate into English greetings." }, { "bad": "I wish you are fine.", "good": "Hope you're well.", "note": "Use hope for real wishes. wish is for unreal things." }, { "bad": "I am writing to inform you that…", "good": "Guess what? …", "note": "inform is office English." }] },
+    { "t": "text", "h": "Model email", "quote": "Hi Sam,\nThanks for your email. It was great to hear about your new job! I'm writing because I've got some news too. I'm coming to London next month for a short course. Are you free on Saturday the 12th? We could have lunch and catch up.\nBy the way, do you know any cheap places to stay near the centre?\nWrite back soon.\nLove,\nMaria" },
+    { "t": "check", "q": "Which phrase changes the topic informally?", "opts": ["By the way,", "Furthermore,"], "a": 0, "why": "Furthermore is for essays. By the way is conversational." },
+    { "t": "dodont", "h": "Remember", "do": ["Give your reason early", "Ask a question so your friend replies"], "dont": ["Don't use Yours faithfully or I would be grateful if", "Don't translate Arabic greetings word for word"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Greeting → reason → details → closing → sign-off", "Contractions make it friendly", "Short, warm, clear"] }
+  ],
+  "b2-conditionals": [
+    { "t": "cover", "kicker": "B2 · Grammar · Module 1", "title": "Conditionals: zero to mixed", "sub": "Real or unreal? Present, future or past? Two questions, five patterns." },
+    { "t": "text", "h": "Ask two questions", "bullets": ["Is it real (possible) or unreal (imaginary)?", "Is it about now, the future, or the past?"], "big": "The answers choose the tense for you." },
+    { "t": "table", "h": "The five patterns", "head": ["Type", "Form", "Example"], "rows": [["Zero", "if + present, present", "If you heat ice, it melts."], ["First", "if + present, will + verb", "If it rains, we'll stay home."], ["Second", "if + past, would + verb", "If I had time, I'd learn Japanese."], ["Third", "if + past perfect, would have + pp", "If I had left earlier, I would have caught the train."], ["Mixed", "if + past perfect, would + verb", "If I had studied medicine, I'd be a doctor now."]] },
+    { "t": "check", "q": "If it ___ tomorrow, we'll cancel the trip.", "opts": ["rains", "will rain"], "a": 0, "why": "Never use will in the if clause, even for the future." },
+    { "t": "example", "h": "The number one mistake", "pairs": [{ "bad": "If I would know, I would tell you.", "good": "If I knew, I would tell you.", "note": "would belongs in the result clause only." }, { "bad": "If I was you, …", "good": "If I were you, …", "note": "Use were in exams and formal writing." }] },
+    { "t": "text", "h": "Mixed conditionals", "p": "A past condition with a result now:", "big": "If he hadn't missed the flight, he would be here now.", "note": "Look for now or today. They signal a present result." },
+    { "t": "check", "q": "If I had saved money, I ___ rich now.", "opts": ["would be", "would have been"], "a": 0, "why": "now = present result, so use would + verb." },
+    { "t": "table", "h": "Formal style: drop if, invert", "head": ["Normal", "Inverted"], "rows": [["If I had known, …", "Had I known, …"], ["If you should need help, …", "Should you need help, …"], ["If I were in your position, …", "Were I in your position, …"]] },
+    { "t": "dodont", "h": "Remember", "do": ["unless = if not: Unless you hurry…", "Use were for all persons in unreal conditionals"], "dont": ["Don't put will or would after if", "Don't say unless you don't (double negative)"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Real → present / will", "Unreal now → past / would", "Unreal past → past perfect / would have", "Watch for now: it means mixed"] }
+  ],
+  "b2-collocations-work": [
+    { "t": "cover", "kicker": "B2 · Vocabulary · Module 2", "title": "Collocations for work and study", "sub": "Why make research sounds wrong, and how to sound fluent instead of translated." },
+    { "t": "text", "h": "What is a collocation?", "p": "Words that naturally go together. Native speakers don't choose them. They hear them thousands of times.", "big": "meet a deadline · do research · pay attention" },
+    { "t": "table", "h": "Ten you need", "head": ["Collocation", "Meaning"], "rows": [["meet a deadline", "finish on time"], ["raise an issue", "mention a problem"], ["make progress", "improve"], ["take responsibility", "accept a duty or the blame"], ["do research", "study to find facts"], ["reach an agreement", "agree after discussion"], ["gain experience", "learn by doing"], ["pay attention", "watch or listen carefully"], ["set a goal", "decide on an aim"], ["hold a meeting", "organise and have a meeting"]] },
+    { "t": "text", "h": "make or do?", "bullets": ["make = create a result: make a decision, make progress, make a mistake", "do = carry out a task: do research, do homework, do a course"] },
+    { "t": "check", "q": "I'm ___ research on solar energy.", "opts": ["making", "doing"], "a": 1, "why": "Research is a task. You do (or carry out) research." },
+    { "t": "example", "h": "Translated vs natural", "pairs": [{ "bad": "catch the deadline", "good": "meet the deadline" }, { "bad": "give attention to", "good": "pay attention to" }, { "bad": "a big progress", "good": "a lot of progress / great progress", "note": "progress is uncountable." }] },
+    { "t": "check", "q": "The manager ___ an important issue.", "opts": ["rose", "raised"], "a": 1, "why": "raise takes an object. rise doesn't." },
+    { "t": "dodont", "h": "Remember", "do": ["Learn verb + noun as one block", "Check whether the noun is uncountable"], "dont": ["Don't translate the Arabic verb", "Don't say researches, progresses, informations"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Collocations = sounding fluent", "make for results, do for tasks", "Uncountable nouns take no a and no -s"] }
+  ],
+  "b2-opinion-essay": [
+    { "t": "cover", "kicker": "B2 · Writing · Module 3", "title": "Writing an opinion essay", "sub": "A clear position, solid reasons, and the linkers examiners look for." },
+    { "t": "table", "h": "The four-paragraph plan", "head": ["Paragraph", "Content"], "rows": [["1. Introduction", "Rephrase the question, state your opinion"], ["2. First reason", "Topic sentence, explanation, example"], ["3. Second reason", "Topic sentence, explanation, example (plus the opposing view, answered)"], ["4. Conclusion", "Restate your opinion in new words, summarise"]] },
+    { "t": "check", "q": "Where do you first state your opinion?", "opts": ["In the introduction", "In the conclusion"], "a": 0, "why": "The reader needs your position from the start." },
+    { "t": "table", "h": "Linkers by job", "head": ["Job", "Linkers"], "rows": [["Opinion", "In my view, / I strongly believe that"], ["Adding", "Furthermore, / In addition, / What is more,"], ["Contrast", "However, / Nevertheless, / Although"], ["Example", "For instance, / such as"], ["Conclusion", "To sum up, / All in all,"]] },
+    { "t": "example", "h": "Mistakes examiners notice", "pairs": [{ "bad": "Although it is expensive, but it is useful.", "good": "Although it is expensive, it is useful.", "note": "although OR but, never both." }, { "bad": "According to my opinion, …", "good": "In my view, …", "note": "according to is for other people's views." }, { "bad": "Cars are useful, however they pollute.", "good": "Cars are useful. However, they pollute." }] },
+    { "t": "check", "q": "Despite ___ expensive, it's worth it.", "opts": ["it is", "being"], "a": 1, "why": "despite + noun / -ing. For a full clause, use although." },
+    { "t": "dodont", "h": "Remember", "do": ["One clear position from start to finish", "A topic sentence at the start of every body paragraph"], "dont": ["Don't add new arguments in the conclusion", "Don't sit on the fence in an opinion essay"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Plan before you write: four paragraphs", "Use linkers with the right job", "Restate, don't repeat, in the conclusion"] }
+  ],
+  "c1-inversion-for-emphasis": [
+    { "t": "cover", "kicker": "C1 · Grammar · Module 1", "title": "Inversion for emphasis", "sub": "Never have I… · Not only did she… · Little did they know…" },
+    { "t": "text", "h": "What is inversion?", "p": "After a negative or limiting expression at the start, the word order changes to question order: auxiliary + subject.", "big": "I have never seen → Never have I seen" },
+    { "t": "table", "h": "The trigger expressions", "head": ["Opening", "Example"], "rows": [["Never / Rarely / Seldom", "Rarely have I seen such dedication."], ["Not only … but also", "Not only did she win, but she also broke the record."], ["Hardly / Scarcely … when", "Hardly had we arrived when it rained."], ["No sooner … than", "No sooner had he sat down than the phone rang."], ["Little", "Little did they know what was coming."], ["Only when / Only after", "Only when I left did I realise."], ["Under no circumstances", "Under no circumstances should you open it."]] },
+    { "t": "check", "q": "Rarely ___ such talent.", "opts": ["I have seen", "have I seen"], "a": 1, "why": "Rarely at the start → auxiliary before subject." },
+    { "t": "text", "h": "No auxiliary? Add do / does / did", "big": "She rarely complains → Rarely does she complain.", "p": "After do / does / did, the main verb goes back to its base form: complain, not complains." },
+    { "t": "check", "q": "Little ___ that he was being followed.", "opts": ["did he know", "did he knew"], "a": 0, "why": "After did, use the base form: know." },
+    { "t": "example", "h": "Traps", "pairs": [{ "bad": "Only after the meeting I understood.", "good": "Only after the meeting did I understand.", "note": "Invert the main clause." }, { "bad": "Only Sara did know.", "good": "Only Sara knew.", "note": "Only + subject doesn't invert." }] },
+    { "t": "dodont", "h": "Remember", "do": ["Use it in formal writing and speeches for emphasis", "No sooner and Hardly go with the past perfect"], "dont": ["Don't overuse it. One or two per essay is enough", "Don't invert the main verb: Never saw I ✗"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Negative or limiting opener → question order", "Add do/does/did if needed, then the base verb", "Only + time phrase: invert the main clause"] }
+  ],
+  "c1-academic-vocabulary": [
+    { "t": "cover", "kicker": "C1 · Vocabulary · Module 2", "title": "Academic vocabulary for essays", "sub": "Twelve words that lift your register, and the grammar each one needs." },
+    { "t": "text", "h": "Why it matters", "p": "At C1, examiners reward precision. A better word often replaces three weaker ones.", "big": "make easier → facilitate · weaken → undermine" },
+    { "t": "table", "h": "Verbs", "head": ["Word", "Meaning", "Example"], "rows": [["undermine", "weaken gradually", "Criticism can undermine confidence."], ["facilitate", "make easier", "Technology can facilitate learning."], ["advocate", "publicly support", "Experts advocate earlier intervention."], ["mitigate", "make less harmful", "to mitigate the impact"], ["constrain", "limit", "constrained by funding"]] },
+    { "t": "table", "h": "Adjectives, nouns, adverbs", "head": ["Word", "Meaning", "Example"], "rows": [["substantial", "large, important", "substantial evidence"], ["inherent", "a natural, permanent part", "inherent risk"], ["plausible", "believable", "a plausible explanation"], ["comprehensive", "complete", "a comprehensive overview"], ["discrepancy", "a difference that shouldn't exist", "a discrepancy between reports"], ["notion", "an idea", "the notion of free will"], ["subsequently", "later", "subsequently analysed"]] },
+    { "t": "check", "q": "Planting trees can help ___ flooding.", "opts": ["mitigate", "facilitate"], "a": 0, "why": "mitigate reduces something bad. facilitate makes something easier." },
+    { "t": "example", "h": "Grammar traps", "pairs": [{ "bad": "The app facilitates students to learn.", "good": "The app facilitates learning.", "note": "The object of facilitate is the process." }, { "bad": "There are many evidences.", "good": "There is substantial evidence.", "note": "evidence is uncountable." }] },
+    { "t": "check", "q": "Every investment carries ___ risk.", "opts": ["inherent", "plausible"], "a": 0, "why": "inherent = a permanent part of something." },
+    { "t": "dodont", "h": "Remember", "do": ["Learn each word with its collocation: substantial evidence", "Use them where they are precise, not everywhere"], "dont": ["Don't confuse mitigate with militate", "Don't stack academic words until the meaning disappears"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Precision over decoration", "Each word has grammar: learn the pattern", "Check your nouns: evidence, research and information are uncountable"] }
+  ],
+  "c1-formal-report": [
+    { "t": "cover", "kicker": "C1 · Writing · Module 3", "title": "Writing a formal report", "sub": "Headings, an impersonal voice, and recommendations someone can act on." },
+    { "t": "table", "h": "Typical structure", "head": ["Heading", "Purpose"], "rows": [["Introduction", "Aim of the report and how information was gathered"], ["Findings (2–3 headed sections)", "The facts, grouped by topic"], ["Recommendations", "Specific actions based on the findings"], ["Conclusion", "A brief summary"]] },
+    { "t": "table", "h": "Personal → impersonal", "head": ["Personal", "Impersonal"], "rows": [["We asked 50 staff.", "Fifty staff members were surveyed."], ["Most people said they liked it.", "The majority of respondents expressed satisfaction."], ["I think we should change the hours.", "It is recommended that the opening hours be extended."]] },
+    { "t": "check", "q": "Which is impersonal?", "opts": ["We found that…", "It was found that…"], "a": 1, "why": "The passive removes the writer and sounds objective." },
+    { "t": "text", "h": "The subjunctive in recommendations", "big": "It is recommended that new computers be purchased.", "p": "After recommend / suggest / propose that, formal English uses the base form: be, not are or will be." },
+    { "t": "check", "q": "It is recommended that the canteen ___ enlarged.", "opts": ["be", "will be"], "a": 0, "why": "recommend that + base form (subjunctive)." },
+    { "t": "dodont", "h": "Remember", "do": ["Use headings for each section", "Support every recommendation with a finding"], "dont": ["Don't use contractions or I think", "Don't write The aim of this report it is… (double subject)"] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Clear headings, objective tone", "Passive and impersonal phrases", "Recommendations: specific and justified"] }
+  ],
+  "c2-cleft-sentences": [
+    { "t": "cover", "kicker": "C2 · Grammar · Module 1", "title": "Cleft sentences and fronting", "sub": "Move the spotlight to exactly the part of the sentence that matters." },
+    { "t": "text", "h": "It-clefts", "p": "It + be + focus + that / who + the rest", "big": "It was Maria who sent the email.", "note": "This suggests someone thought it was another person." },
+    { "t": "check", "q": "We met in 2010. → It was in 2010 ___ we met.", "opts": ["that", "what"], "a": 0, "why": "It-clefts use that (or who for people), never what." },
+    { "t": "text", "h": "Wh-clefts", "p": "What + clause + be + focus", "big": "What I need is a long holiday.", "bullets": ["He lied to us. → What he did was lie to us.", "Reversed: A long holiday is what I need."] },
+    { "t": "table", "h": "More focus devices", "head": ["Device", "Example"], "rows": [["All … is / was", "All I wanted was a quiet evening."], ["The reason why … is that", "The reason why it failed is that nobody tested it."], ["Fronting", "Strange as it may seem, I enjoyed the exam."]] },
+    { "t": "check", "q": "She resigned. → What she ___ resign.", "opts": ["did was", "was did"], "a": 0, "why": "What + subject + did + was + base verb." },
+    { "t": "example", "h": "Traps", "pairs": [{ "bad": "What I need it is rest.", "good": "What I need is rest." }, { "bad": "It is the noise what annoys me.", "good": "It is the noise that annoys me." }, { "bad": "The reason is because…", "good": "The reason is that…" }] },
+    { "t": "summary", "h": "Key takeaways", "points": ["It-cleft: contrast or correction", "Wh-cleft: build up to the new information", "Clefts are never neutral. Use them on purpose."] }
+  ],
+  "c2-idioms-and-nuance": [
+    { "t": "cover", "kicker": "C2 · Vocabulary · Module 2", "title": "Idioms and nuance", "sub": "At C2, the challenge is choosing the word with exactly the right shade." },
+    { "t": "table", "h": "Ten idioms with nuance", "head": ["Idiom", "Meaning"], "rows": [["a double-edged sword", "good and bad effects"], ["split hairs", "argue about tiny differences"], ["toe the line", "follow the official position"], ["a moot point", "debatable, or no longer relevant"], ["pay lip service to", "support in words only"], ["the elephant in the room", "an obvious problem nobody mentions"], ["have a field day", "enjoy an opportunity, often to criticise"], ["beg the question", "assume the conclusion (strict sense)"], ["by the same token", "for the same reason"], ["throw caution to the wind", "act without worrying about risk"]] },
+    { "t": "check", "q": "The company says it values diversity but does nothing. It only ___ it.", "opts": ["pays lip service to", "toes the line of"], "a": 0, "why": "pay lip service to = support in words only." },
+    { "t": "example", "h": "Idioms are fixed", "pairs": [{ "bad": "a sword with two edges", "good": "a double-edged sword", "note": "Don't translate سلاح ذو حدين word for word." }, { "bad": "tow the line", "good": "toe the line" }, { "bad": "a mute point", "good": "a moot point" }] },
+    { "t": "check", "q": "Everyone knew the budget was the problem, but nobody mentioned ___.", "opts": ["the elephant in the room", "a moot point"], "a": 0, "why": "the elephant in the room = an obvious problem that is ignored." },
+    { "t": "dodont", "h": "Remember", "do": ["Check the register. Many idioms are journalistic.", "Keep every word of the idiom exactly"], "dont": ["Don't use idioms in formal reports", "Don't stack idioms. One well-placed idiom beats five."] },
+    { "t": "summary", "h": "Key takeaways", "points": ["Idioms are fixed blocks", "Nuance = the right word for the reader", "Beware sound-alikes: moot / mute, toe / tow"] }
+  ],
+  "c2-style-and-register": [
+    { "t": "cover", "kicker": "C2 · Writing · Module 3", "title": "Style, register and concision", "sub": "Every word should earn its place." },
+    { "t": "table", "h": "Cut wordiness", "head": ["Wordy", "Concise"], "rows": [["due to the fact that", "because"], ["in the event that", "if"], ["at this point in time", "now"], ["make a decision", "decide"], ["it is important to note that", "(delete)"]] },
+    { "t": "check", "q": "Concise version of in the event that:", "opts": ["if", "in case of the event"], "a": 0, "why": "One word does the job." },
+    { "t": "table", "h": "Control register", "head": ["Register", "Example"], "rows": [["Casual", "The plan fell apart pretty fast."], ["Neutral", "The plan failed quickly."], ["Formal", "The initiative proved unsustainable within a short period."]] },
+    { "t": "text", "h": "Vary the rhythm", "quote": "Long sentences build an argument, add the qualifications a careful reader expects, and carry the reader forward. Short ones land it.", "p": "Alternate them to keep the reader alert." },
+    { "t": "example", "h": "Avoid elegant variation", "pairs": [{ "bad": "The policy… The scheme… This initiative…", "good": "The policy… The policy… The policy…", "note": "Readers assume a new word means a new thing." }] },
+    { "t": "check", "q": "Which is neutral?", "opts": ["The plan failed quickly.", "The plan went belly up."], "a": 0, "why": "go belly up is slang. Neutral uses plain words." },
+    { "t": "summary", "h": "Key takeaways", "points": ["Delete what adds nothing", "Match the register to the reader", "Keep key terms consistent"] }
+  ]
+}
