@@ -1,19 +1,23 @@
-// Learner's dictionary: curated entries from data/dictionary.json, with the
-// Free Dictionary API (Wiktionary) as a fallback for words we have not written yet.
+// Learner's dictionary.
+// data/dict/index.json lists every headword: [word, part of speech, level, Arabic].
+// data/dict/<letter>.json holds the full entries, loaded only when needed.
+// Words outside the list fall back to the Free Dictionary API (Wiktionary).
 (function () {
   "use strict";
 
   var API = "https://api.dictionaryapi.dev/api/v2/entries/en/";
   var LIST_KEY = "me-wordlist";
   var RECENT_KEY = "me-recent";
+  var LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
   var main = document.getElementById("dictMain");
   var form = document.getElementById("dictForm");
   var input = document.getElementById("dictQ");
   var sug = document.getElementById("dictSuggest");
 
-  var entries = [];
-  var byKey = {};
+  var index = [];        // [{w, pos, l, ar}]
+  var byKey = {};        // search key -> index item
+  var shards = {};       // letter -> Promise<{word -> entry}>
   var audioCache = {};
   var current = "";
 
@@ -26,14 +30,7 @@
   function norm(s) {
     return String(s || "").toLowerCase().trim().replace(/[’']/g, "'").replace(/\s+/g, " ");
   }
-  // "the elephant in the room" is also found by "elephant in the room".
-  function keysFor(word) {
-    var k = norm(word);
-    var out = [k];
-    var stripped = k.replace(/^(a|an|the|to) /, "");
-    if (stripped !== k) out.push(stripped);
-    return out;
-  }
+  function bare(w) { return norm(w).replace(/^(a|an|the|to) /, ""); }
   function store(key, fallback) {
     try { var v = JSON.parse(localStorage.getItem(key)); return v || fallback; } catch (e) { return fallback; }
   }
@@ -41,26 +38,48 @@
     try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* private mode */ }
   }
   function href(word) { return "dictionary.html?q=" + encodeURIComponent(word); }
+  function letterOf(w) { var c = norm(w).charAt(0); return /[a-z]/.test(c) ? c : "other"; }
   function lev(a, b) {
-    var m = a.length, n = b.length, d = [], i, j;
-    for (i = 0; i <= m; i++) d[i] = [i];
-    for (j = 0; j <= n; j++) d[0][j] = j;
-    for (i = 1; i <= m; i++) for (j = 1; j <= n; j++)
-      d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
-    return d[m][n];
+    if (Math.abs(a.length - b.length) > 3) return 9;
+    var m = a.length, n = b.length, prev = [], cur, i, j;
+    for (j = 0; j <= n; j++) prev[j] = j;
+    for (i = 1; i <= m; i++) {
+      cur = [i];
+      for (j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur;
+    }
+    return prev[n];
   }
+  // Prefix matches first, then words containing the query, then near spellings.
   function closest(q, limit) {
     q = norm(q);
-    return entries
-      .map(function (e) {
-        var w = norm(e.word);
-        var score = w.indexOf(q) === 0 ? 0 : w.indexOf(q) > -1 ? 1 : 2 + lev(q, w.replace(/^(a|the) /, ""));
-        return { e: e, s: score };
-      })
-      .filter(function (x) { return x.s < 2 + Math.max(2, Math.floor(q.length / 3)); })
-      .sort(function (a, b) { return a.s - b.s || a.e.word.length - b.e.word.length; })
-      .slice(0, limit || 6)
-      .map(function (x) { return x.e; });
+    limit = limit || 6;
+    if (!q) return [];
+    var pre = [], mid = [], near = [];
+    var maxD = q.length < 5 ? 1 : 2;
+    for (var i = 0; i < index.length; i++) {
+      var it = index[i], w = it.k;
+      if (w.indexOf(q) === 0 || it.b.indexOf(q) === 0) pre.push(it);
+      else if (q.length > 2 && w.indexOf(q) > -1) mid.push(it);
+      else if (q.length > 3) { var d = lev(q, it.b); if (d <= maxD) near.push({ it: it, d: d }); }
+    }
+    pre.sort(function (a, b) { return a.w.length - b.w.length || a.w.localeCompare(b.w); });
+    near.sort(function (a, b) { return a.d - b.d; });
+    return pre.concat(mid, near.map(function (x) { return x.it; })).slice(0, limit);
+  }
+  function loadShard(letter) {
+    if (!shards[letter]) {
+      shards[letter] = fetch("data/dict/" + letter + ".json")
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) { var map = {}; d.entries.forEach(function (e) { map[norm(e.word)] = e; }); return map; })
+        .catch(function (err) { delete shards[letter]; throw err; });
+    }
+    return shards[letter];
+  }
+  function getEntry(word) {
+    var it = byKey[norm(word)];
+    if (!it) return Promise.resolve(null);
+    return loadShard(letterOf(it.w)).then(function (map) { return map[norm(it.w)] || null; });
   }
 
   // ---------- pronunciation ----------
@@ -145,13 +164,13 @@
     return '<button class="star" type="button" data-star="' + esc(word) + '" aria-pressed="' + on + '">' + (on ? "★ Saved" : "☆ Save") + "</button>";
   }
 
-  // ---------- rendering: curated entry ----------
+  // ---------- rendering: entry from our list ----------
   function senseHTML(s, i, total) {
     var exs = s.ex || [];
     var lis = exs.map(function (x, k) { return '<li class="' + (k > 1 ? "more" : "") + '">' + esc(x) + "</li>"; }).join("");
     return '<div class="sense">' +
       (s.guide ? '<span class="guide">' + esc(s.guide) + (total > 1 ? " <em>(" + (i + 1) + ")</em>" : "") + "</span>" : "") +
-      '<div class="def-row"><span class="lvl ' + esc(s.level || "") + '" title="CEFR level">' + esc(s.level || "–") + "</span>" +
+      '<div class="def-row">' + (s.level ? '<span class="lvl ' + esc(s.level) + '" title="CEFR level">' + esc(s.level) + "</span>" : "") +
       '<p class="def">' + (s.gram ? '<span class="gram">' + esc(s.gram) + "</span> " : "") + esc(s.def) + "</p></div>" +
       (s.ar ? '<p class="ar" lang="ar" dir="rtl">' + esc(s.ar) + "</p>" : "") +
       (lis ? '<ul class="exs">' + lis + "</ul>" + (exs.length > 2 ? '<button class="more-btn" type="button" data-more>More examples (' + (exs.length - 2) + ")</button>" : "") : "") +
@@ -163,16 +182,17 @@
       return '<a href="' + href(clean) + '">' + esc(w) + "</a>";
     }).join("") + "</div>";
   }
-  function renderCurated(e) {
+  function renderEntry(e) {
+    var first = e.blocks[0];
     var head = '<div class="entry-head"><div class="hw-row"><h1 class="hw">' + esc(e.word) + "</h1>" + starHTML(e.word) + "</div>" +
-      '<p class="posline"><span class="pos">' + esc(e.pos) + "</span>" + (e.gram ? '<span class="gram">' + esc(e.gram) + "</span>" : "") + "</p>" +
-      pronHTML(e.word, e.uk, e.us) + "</div>";
-    var body = '<div class="pos-block">' + e.senses.map(function (s, i) { return senseHTML(s, i, e.senses.length); }).join("") + "</div>";
-    if (e.also) {
-      body += '<div class="pos-block"><h2 class="pos-label">' + esc(e.word) + ' <span class="pos" style="font-style:italic;font-weight:400">' + esc(e.also.pos) + "</span></h2>" +
-        pronHTML(e.word, e.also.uk, e.also.us || e.also.uk) +
-        senseHTML({ level: e.also.level, def: e.also.def, ar: e.also.ar, ex: e.also.ex }, 0, 1) + "</div>";
-    }
+      '<p class="posline"><span class="pos">' + esc(first.pos) + "</span>" + (first.gram ? '<span class="gram">' + esc(first.gram) + "</span>" : "") + "</p>" +
+      pronHTML(e.word, first.uk || e.uk, first.us || e.us) + "</div>";
+    var body = e.blocks.map(function (b, k) {
+      var label = k === 0 ? "" : '<h2 class="pos-label">' + esc(e.word) + ' <span class="pos" style="font-style:italic;font-weight:400">' + esc(b.pos) + "</span>" +
+        (b.gram ? ' <span class="gram">' + esc(b.gram) + "</span>" : "") + "</h2>" +
+        (b.uk && b.uk !== (first.uk || e.uk) ? pronHTML(e.word, b.uk, b.us || b.uk) : "");
+      return '<div class="pos-block">' + label + b.senses.map(function (s, i) { return senseHTML(s, i, b.senses.length); }).join("") + "</div>";
+    }).join("");
     var panels = "";
     if (e.syn && e.syn.length) panels += '<div class="panel"><h3>Synonyms</h3>' + chips(e.syn) + "</div>";
     if (e.ant && e.ant.length) panels += '<div class="panel"><h3>Opposites</h3>' + chips(e.ant, "ant") + "</div>";
@@ -180,7 +200,7 @@
     if (e.family && e.family.length) panels += '<div class="panel"><h3>Word family</h3>' + chips(e.family) + "</div>";
     if (e.mistake) {
       panels += '<div class="mistake"><h3 style="margin:0 0 .3rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c2)">Common mistake · Arabic speakers</h3>' +
-        '<p class="bad">' + esc(e.mistake.wrong) + "</p><p class=\"good\">" + esc(e.mistake.right) + '</p><p class="why">' + esc(e.mistake.note) + "</p></div>";
+        '<p class="bad">' + esc(e.mistake.wrong) + '</p><p class="good">' + esc(e.mistake.right) + '</p><p class="why">' + esc(e.mistake.note) + "</p></div>";
     }
     if (e.lesson) panels += '<p class="learn-link"><a href="' + esc(e.lesson) + '">Learn and practise this word in its lesson →</a></p>';
     return '<article class="entry">' + head + body + (panels ? '<div class="panels">' + panels + "</div>" : "") + "</article>";
@@ -220,7 +240,7 @@
 
   // ---------- views ----------
   function dym(list) {
-    return list.length ? '<div class="dym">' + list.map(function (e) { return '<a href="' + href(e.word) + '">' + esc(e.word) + "</a>"; }).join("") + "</div>" : "";
+    return list.length ? '<div class="dym">' + list.map(function (it) { return '<a href="' + href(it.w) + '">' + esc(it.w) + "</a>"; }).join("") + "</div>" : "";
   }
   function show(word, push) {
     word = norm(word);
@@ -230,19 +250,28 @@
     document.title = word + " | English Dictionary | Mastering English Library";
     if (push) history.pushState({ q: word }, "", href(word));
     var hit = byKey[word];
+    main.innerHTML = '<div class="skeleton" aria-label="Loading"></div>';
     if (hit) {
-      main.innerHTML = renderCurated(hit);
-      pushRecent(hit.word);
-      renderSide();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      getEntry(hit.w).then(function (e) {
+        if (current !== word) return;
+        if (!e) { apiLookup(word); return; }
+        main.innerHTML = renderEntry(e);
+        pushRecent(e.word);
+        renderSide();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }).catch(function () {
+        main.innerHTML = '<div class="notice"><h2>Couldn\'t load this entry</h2><p>Check your connection and try again.</p></div>';
+      });
       return;
     }
-    main.innerHTML = '<div class="skeleton" aria-label="Loading"></div>';
+    apiLookup(word);
+  }
+  function apiLookup(word) {
     fetch(API + encodeURIComponent(word))
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         if (current !== word) return;
-        var near = closest(word, 5);
+        var near = closest(word, 6);
         if (data && data.length) {
           main.innerHTML = renderApi(data, word) +
             (near.length ? '<div class="notice"><strong>In our learner list:</strong>' + dym(near) + "</div>" : "");
@@ -255,6 +284,7 @@
         }
       })
       .catch(function () {
+        if (current !== word) return;
         var near = closest(word, 6);
         main.innerHTML = '<div class="notice"><h2>“' + esc(word) + '” isn\'t in our learner list yet</h2><p>The online dictionary we use for other words isn\'t responding (or you are offline). Try again in a minute.</p>' +
           (near.length ? "<p><strong>Did you mean:</strong></p>" + dym(near) : "") + "</div>";
@@ -265,22 +295,34 @@
     input.value = "";
     document.title = "English Dictionary with Arabic | Mastering English Library";
     if (push) history.pushState({}, "", "dictionary.html");
-    var groups = ["A1", "A2", "B1", "B2", "C1", "C2"].map(function (lv) {
-      var words = entries.filter(function (e) { return e.senses[0].level === lv; });
+    var counts = {};
+    index.forEach(function (it) { counts[it.l] = (counts[it.l] || 0) + 1; });
+    var day = Math.floor(Date.now() / 86400000);
+    var groups = LEVELS.map(function (lv) {
+      var words = index.filter(function (it) { return it.l === lv; });
       if (!words.length) return "";
-      return '<div class="level-group"><h3><span class="lvl ' + lv + '">' + lv + "</span> words</h3>" + chips(words.map(function (e) { return e.word; })) + "</div>";
+      var sample = [];
+      for (var i = 0; i < 14 && i < words.length; i++) sample.push(words[(day * 7 + i * 37) % words.length].w);
+      return '<div class="level-group"><h3><span class="lvl ' + lv + '">' + lv + "</span> " + words.length.toLocaleString("en") + ' words <button type="button" class="see-level" data-level="' + lv + '">See all →</button></h3>' + chips(sample) + "</div>";
     }).join("");
-    main.innerHTML = '<section class="home-hero"><h2>A learner\'s dictionary built for Arabic speakers</h2>' +
-      "<p>Look up any English word. Words in our learner list come with more support:</p>" +
+    main.innerHTML = '<section class="home-hero"><h2>' + index.length.toLocaleString("en") + " words, built for Arabic speakers</h2>" +
+      "<p>Every word in our list comes with:</p>" +
       '<div class="feature-grid">' +
       '<div class="feature"><strong>🔊 UK and US</strong><span>IPA and audio for both accents.</span></div>' +
       '<div class="feature"><strong>CEFR levels</strong><span>A level for every meaning, so you learn the right meaning first.</span></div>' +
       '<div class="feature"><strong lang="ar">عربي</strong><span>An Arabic translation for each meaning.</span></div>' +
-      '<div class="feature"><strong>✗ → ✓</strong><span>The mistakes Arabic speakers make with each word, and the fix.</span></div>' +
-      '<div class="feature"><strong>Thesaurus</strong><span>Synonyms, opposites, word family and collocations.</span></div>' +
+      '<div class="feature"><strong>✗ → ✓</strong><span>The mistakes Arabic speakers make, and the fix.</span></div>' +
+      '<div class="feature"><strong>Thesaurus</strong><span>Synonyms and opposites one click away.</span></div>' +
       '<div class="feature"><strong>☆ Word list</strong><span>Save words and test yourself on them.</span></div>' +
       "</div></section>" +
-      '<section class="home-hero"><h2>Our learner list by level</h2><div class="level-groups">' + groups + "</div></section>";
+      '<section class="home-hero"><h2>Browse by level</h2><div class="level-groups">' + groups + "</div></section>";
+  }
+  function listView(title, items) {
+    main.innerHTML = '<section class="home-hero"><h2>' + esc(title) + ' <span class="side-muted">(' + items.length.toLocaleString("en") + ")</span></h2>" +
+      '<ul class="word-cols">' + items.map(function (it) {
+        return '<li><a href="' + href(it.w) + '">' + esc(it.w) + '</a> <span class="lvl ' + it.l + '">' + it.l + '</span> <span class="wc-ar" lang="ar" dir="rtl">' + esc(it.ar) + "</span></li>";
+      }).join("") + "</ul></section>";
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   // ---------- sidebar ----------
@@ -295,79 +337,88 @@
     document.getElementById("recent").innerHTML = rec.length ? rec.map(function (w) { return '<li><a href="' + href(w) + '">' + esc(w) + "</a></li>"; }).join("") : '<li class="side-muted">Nothing yet.</li>';
   }
   function renderWotd() {
+    // Word of the day comes from B1 to C1: useful, not too easy.
+    var pool = index.filter(function (it) { return it.l === "B1" || it.l === "B2" || it.l === "C1"; });
+    if (!pool.length) pool = index;
     var day = Math.floor(Date.now() / 86400000);
-    var e = entries[day % entries.length];
-    document.getElementById("wotd").innerHTML = "<h2>Word of the day</h2>" +
-      '<a class="w" href="' + href(e.word) + '">' + esc(e.word) + "</a>" +
-      '<p><span class="lvl ' + e.senses[0].level + '">' + e.senses[0].level + "</span> " + esc(e.senses[0].def) + "</p>" +
-      '<p class="ar" lang="ar" dir="rtl">' + esc(e.senses[0].ar) + "</p>";
+    var it = pool[(day * 2654435761 >>> 0) % pool.length];
+    var box = document.getElementById("wotd");
+    box.innerHTML = "<h2>Word of the day</h2>" + '<a class="w" href="' + href(it.w) + '">' + esc(it.w) + "</a>" +
+      '<p><span class="lvl ' + it.l + '">' + it.l + "</span> <em>" + esc(it.pos) + "</em></p>" +
+      '<p class="ar" lang="ar" dir="rtl">' + esc(it.ar) + "</p>";
+    getEntry(it.w).then(function (e) {
+      if (!e) return;
+      var p = box.querySelectorAll("p")[0];
+      p.innerHTML += " " + esc(e.blocks[0].senses[0].def);
+    }).catch(function () {});
   }
   function renderAZ() {
     var have = {};
-    entries.forEach(function (e) { have[norm(e.word).replace(/^(a|the) /, "")[0]] = 1; });
+    index.forEach(function (it) { have[it.b.charAt(0)] = 1; });
     document.getElementById("az").innerHTML = "abcdefghijklmnopqrstuvwxyz".split("").map(function (l) {
       return '<button type="button" data-az="' + l + '"' + (have[l] ? "" : " disabled") + ">" + l.toUpperCase() + "</button>";
     }).join("");
-  }
-  function browse(letter) {
-    var words = entries.filter(function (e) { return norm(e.word).replace(/^(a|the) /, "")[0] === letter; });
-    main.innerHTML = '<section class="home-hero"><h2>Words starting with ' + letter.toUpperCase() + "</h2>" + chips(words.map(function (e) { return e.word; })) + "</section>";
   }
 
   // ---------- word-list test ----------
   function test() {
     var dlg = document.getElementById("quizDlg");
     var box = document.getElementById("quizInner");
-    var mine = store(LIST_KEY, []).map(function (w) { return byKey[norm(w)]; }).filter(Boolean);
-    var qs = mine.sort(function () { return Math.random() - 0.5; }).slice(0, 10);
-    var i = 0, score = 0;
-    function ask() {
-      if (i >= qs.length) {
-        var pct = Math.round(score / qs.length * 100);
-        box.innerHTML = "<h2>" + (pct >= 80 ? "Well done!" : "Keep practising") + "</h2><p>You scored <strong>" + score + " / " + qs.length + "</strong> (" + pct + "%).</p>" +
-          (pct < 80 ? "<p>⚠️ Below 80% means these words are not yet active vocabulary. Read each entry again, say the examples out loud, then retake the test tomorrow.</p>" : "<p>Now use each word in a sentence of your own. Recognising a word is not the same as using it.</p>") +
-          '<div class="qrow"><button class="side-btn" value="close">Close</button></div>';
-        return;
-      }
-      var e = qs[i];
-      var pool = entries.filter(function (x) { return x !== e && x.pos === e.pos; });
-      if (pool.length < 3) pool = entries.filter(function (x) { return x !== e; });
-      var opts = pool.sort(function () { return Math.random() - 0.5; }).slice(0, 3).concat([e]).sort(function () { return Math.random() - 0.5; });
-      box.innerHTML = '<div class="qbar"><span style="width:' + (i / qs.length * 100) + '%"></span></div>' +
-        '<p class="side-muted">Question ' + (i + 1) + " of " + qs.length + "</p>" +
-        "<h2>Which word means…</h2><p class=\"def\">" + esc(e.senses[0].def) + "</p>" +
-        '<div class="qopts">' + opts.map(function (o) { return '<button type="button" data-w="' + esc(o.word) + '">' + esc(o.word) + "</button>"; }).join("") + "</div>" +
-        '<div class="qrow"><span class="side-muted" id="qfb"></span><button type="button" class="side-btn" id="qnext" style="width:auto;padding:.6rem 1.4rem" hidden>Next</button></div>';
-      box.querySelectorAll(".qopts button").forEach(function (b) {
-        b.addEventListener("click", function () {
-          var right = b.getAttribute("data-w") === e.word;
-          box.querySelectorAll(".qopts button").forEach(function (x) {
-            x.disabled = true;
-            if (x.getAttribute("data-w") === e.word) x.classList.add("ok");
-          });
-          if (!right) b.classList.add("no"); else score++;
-          document.getElementById("qfb").innerHTML = right ? "✓ Correct" : "✗ It's <strong>" + esc(e.word) + "</strong> (" + esc(e.senses[0].ar) + ")";
-          var n = document.getElementById("qnext");
-          n.hidden = false;
-          n.focus();
-          n.onclick = function () { i++; ask(); };
-        });
-      });
-    }
-    ask();
+    var saved = store(LIST_KEY, []).filter(function (w) { return byKey[norm(w)]; });
+    var picked = saved.sort(function () { return Math.random() - 0.5; }).slice(0, 10);
+    box.innerHTML = "<p>Loading your words…</p>";
     dlg.showModal();
+    Promise.all(picked.map(getEntry)).then(function (list) {
+      var qs = list.filter(Boolean);
+      var i = 0, score = 0;
+      function ask() {
+        if (i >= qs.length) {
+          var pct = Math.round(score / qs.length * 100);
+          box.innerHTML = "<h2>" + (pct >= 80 ? "Well done!" : "Keep practising") + "</h2><p>You scored <strong>" + score + " / " + qs.length + "</strong> (" + pct + "%).</p>" +
+            (pct < 80 ? "<p>⚠️ Below 80% means these words are not yet active vocabulary. Read each entry again, say the examples out loud, then retake the test tomorrow.</p>" : "<p>Now use each word in a sentence of your own. Recognising a word is not the same as using it.</p>") +
+            '<div class="qrow"><button class="side-btn" value="close">Close</button></div>';
+          return;
+        }
+        var e = qs[i], s = e.blocks[0].senses[0], it = byKey[norm(e.word)];
+        var pool = index.filter(function (x) { return x !== it && x.pos === it.pos && x.l === it.l; });
+        if (pool.length < 3) pool = index.filter(function (x) { return x !== it; });
+        var opts = [];
+        while (opts.length < 3) { var c = pool[Math.floor(Math.random() * pool.length)]; if (opts.indexOf(c) === -1) opts.push(c); }
+        opts = opts.map(function (x) { return x.w; }).concat([e.word]).sort(function () { return Math.random() - 0.5; });
+        box.innerHTML = '<div class="qbar"><span style="width:' + (i / qs.length * 100) + '%"></span></div>' +
+          '<p class="side-muted">Question ' + (i + 1) + " of " + qs.length + "</p>" +
+          '<h2>Which word means…</h2><p class="def">' + esc(s.def) + "</p>" +
+          '<div class="qopts">' + opts.map(function (o) { return '<button type="button" data-w="' + esc(o) + '">' + esc(o) + "</button>"; }).join("") + "</div>" +
+          '<div class="qrow"><span class="side-muted" id="qfb"></span><button type="button" class="side-btn" id="qnext" style="width:auto;padding:.6rem 1.4rem" hidden>Next</button></div>';
+        box.querySelectorAll(".qopts button").forEach(function (b) {
+          b.addEventListener("click", function () {
+            var right = b.getAttribute("data-w") === e.word;
+            box.querySelectorAll(".qopts button").forEach(function (x) {
+              x.disabled = true;
+              if (x.getAttribute("data-w") === e.word) x.classList.add("ok");
+            });
+            if (!right) b.classList.add("no"); else score++;
+            document.getElementById("qfb").innerHTML = right ? "✓ Correct" : "✗ It's <strong>" + esc(e.word) + "</strong> (" + esc(s.ar) + ")";
+            var n = document.getElementById("qnext");
+            n.hidden = false;
+            n.focus();
+            n.onclick = function () { i++; ask(); };
+          });
+        });
+      }
+      ask();
+    }).catch(function () { box.innerHTML = '<p>Couldn\'t load your words. Check your connection.</p><button class="side-btn" value="close">Close</button>'; });
   }
 
   // ---------- autocomplete ----------
   var active = -1;
   function suggest() {
     var q = norm(input.value);
-    if (!q) { sug.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
-    var list = closest(q, 7);
+    var list = q ? closest(q, 8) : [];
     if (!list.length) { sug.hidden = true; input.setAttribute("aria-expanded", "false"); return; }
     active = -1;
-    sug.innerHTML = list.map(function (e, i) {
-      return '<li role="option" id="sg' + i + '" data-w="' + esc(e.word) + '"><span>' + esc(e.word) + '</span><span class="s-pos">' + esc(e.pos) + " · " + esc(e.senses[0].level) + "</span></li>";
+    sug.innerHTML = list.map(function (it, i) {
+      return '<li role="option" id="sg' + i + '" data-w="' + esc(it.w) + '"><span>' + esc(it.w) + '</span><span class="s-pos">' + esc(it.pos) + " · " + esc(it.l) + "</span></li>";
     }).join("");
     sug.hidden = false;
     input.setAttribute("aria-expanded", "true");
@@ -416,7 +467,17 @@
       return;
     }
     var az = t.closest("[data-az]");
-    if (az) { browse(az.getAttribute("data-az")); return; }
+    if (az) {
+      var l = az.getAttribute("data-az");
+      listView("Words starting with " + l.toUpperCase(), index.filter(function (it) { return it.b.charAt(0) === l; }));
+      return;
+    }
+    var lv = t.closest("[data-level]");
+    if (lv) {
+      var L = lv.getAttribute("data-level");
+      listView(L + " words", index.filter(function (it) { return it.l === L; }));
+      return;
+    }
     var a = t.closest("a[href^='dictionary.html?q=']");
     if (a && !ev.metaKey && !ev.ctrlKey) {
       ev.preventDefault();
@@ -429,11 +490,14 @@
   });
 
   // ---------- boot ----------
-  fetch("data/dictionary.json")
+  fetch("data/dict/index.json")
     .then(function (r) { return r.json(); })
     .then(function (data) {
-      entries = data.entries || [];
-      entries.forEach(function (e) { keysFor(e.word).forEach(function (k) { byKey[k] = e; }); });
+      index = data.words.map(function (r) { return { w: r[0], pos: r[1], l: r[2], ar: r[3], k: norm(r[0]), b: bare(r[0]) }; });
+      index.forEach(function (it) {
+        if (!byKey[it.k]) byKey[it.k] = it;
+        if (!byKey[it.b]) byKey[it.b] = it;
+      });
       renderWotd();
       renderAZ();
       renderSide();

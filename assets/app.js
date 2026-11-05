@@ -98,17 +98,27 @@
     });
   }
   function close() { if (pop) { pop.remove(); pop = null; } }
+  // The index lists every headword; full entries live in one file per letter.
   function loadDict() {
-    if (!dict) dict = fetch(BASE + "data/dictionary.json").then(function (r) { return r.json(); }).then(function (d) {
+    if (!dict) dict = fetch(BASE + "data/dict/index.json").then(function (r) { return r.json(); }).then(function (d) {
       var map = {};
-      d.entries.forEach(function (e) {
-        var k = e.word.toLowerCase();
-        map[k] = e;
-        map[k.replace(/^(a|an|the|to) /, "")] = e;
+      d.words.forEach(function (row) {
+        var k = row[0].toLowerCase();
+        if (!map[k]) map[k] = row[0];
+        var b = k.replace(/^(a|an|the|to) /, "");
+        if (!map[b]) map[b] = row[0];
       });
       return map;
     }).catch(function () { return {}; });
     return dict;
+  }
+  var shards = {};
+  function entryFor(head) {
+    var c = head.toLowerCase().charAt(0);
+    if (!shards[c]) shards[c] = fetch(BASE + "data/dict/" + c + ".json").then(function (r) { return r.json(); });
+    return shards[c].then(function (d) {
+      return d.entries.filter(function (e) { return e.word.toLowerCase() === head.toLowerCase(); })[0] || null;
+    });
   }
   function show(word, rect) {
     close();
@@ -128,14 +138,17 @@
     loadDict().then(function (map) {
       if (mine !== pop) return;
       // A phrase such as "meet a deadline" falls back to its longest listed word.
-      var e = map[word] || word.split(" ").sort(function (a, b) { return b.length - a.length; })
+      var head = map[word] || word.split(" ").sort(function (a, b) { return b.length - a.length; })
         .map(function (w) { return map[w]; }).filter(Boolean)[0];
-      if (e) {
-        var s = e.senses[0];
-        pop.querySelector(".lp-w").textContent = e.word;
-        pop.querySelector("p").outerHTML = '<span class="lp-pos">' + esc(e.pos) + "</span>" +
-          '<p><strong style="color:var(--accent)">' + esc(s.level) + "</strong> " + esc(s.def) + "</p>" +
-          '<p dir="rtl" lang="ar" style="text-align:right">' + esc(s.ar) + "</p>" + linkFor(e.word);
+      if (head) {
+        entryFor(head).then(function (e) {
+          if (mine !== pop || !e) return;
+          var s = e.blocks[0].senses[0];
+          pop.querySelector(".lp-w").textContent = e.word;
+          pop.querySelector("p").outerHTML = '<span class="lp-pos">' + esc(e.blocks[0].pos) + "</span>" +
+            '<p><strong style="color:var(--accent)">' + esc(s.level) + "</strong> " + esc(s.def) + "</p>" +
+            '<p dir="rtl" lang="ar" style="text-align:right">' + esc(s.ar) + "</p>" + linkFor(e.word);
+        }).catch(function () { if (mine === pop) pop.querySelector("p").textContent = "Couldn't load this word. Check your connection."; });
         return;
       }
       fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + encodeURIComponent(word))
