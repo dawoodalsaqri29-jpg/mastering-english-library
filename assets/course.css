@@ -1,0 +1,129 @@
+/* Graded challenges (lesson pages) and the Courses dashboard. */
+:root { --ok: #0f7b3e; --no: #b42318; --warn-bg: #fff5e6; --tip-bg: #e9f7f3; }
+@media (prefers-color-scheme: dark) { :root { --ok: #6ee7a8; --no: #ff8a80; --warn-bg: #3a2c12; --tip-bg: #12342c; } }
+
+.c-alert { border-radius: var(--radius); padding: .9rem 1.1rem; margin: 0 0 1.25rem; border: 1px solid var(--border); }
+.c-alert.warn { background: var(--warn-bg); border-left: 4px solid var(--amber); }
+.c-alert.tip { background: var(--tip-bg); border-left: 4px solid var(--b1); }
+.c-alert ol { margin: .5rem 0 0; padding-left: 1.2rem; }
+.c-chip { font-size: .78rem; font-weight: 600; padding: .15rem .6rem; border-radius: 999px; border: 1px solid currentColor; }
+.c-chip.ok { color: var(--ok); }
+.c-chip.no { color: var(--c2); }
+.c-lock { background: var(--warn-bg); border-radius: 10px; padding: .6rem .8rem; font-size: .95rem; }
+
+.challenge { margin: 2.5rem 0 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.5rem; box-shadow: var(--shadow); scroll-margin-top: 80px; }
+.c-eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 700; color: var(--amber); }
+.c-head h2 { margin: .3rem 0 1rem; }
+.dd { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+@media (max-width: 640px) { .dd { grid-template-columns: 1fr; } }
+.dd-col { border-radius: 12px; padding: .8rem 1rem; border: 1px solid var(--border); }
+.dd-col h3 { margin: 0 0 .3rem; font-family: Inter, system-ui, sans-serif; font-size: .95rem; }
+.dd-col ul { margin: 0; padding-left: 1.1rem; font-size: .95rem; }
+.dd-col.do { background: var(--tip-bg); }
+.dd-col.do h3 { color: var(--ok); }
+.dd-col.dont { background: color-mix(in srgb, var(--no) 8%, var(--surface)); }
+.dd-col.dont h3 { color: var(--no); }
+.c-rules { margin: 1rem 0; padding-left: 1.2rem; color: var(--muted); font-size: .95rem; }
+.c-best { margin: .5rem 0 1rem; }
+.c-btn { display: inline-block; border: 0; border-radius: 999px; padding: .75rem 1.4rem; background: var(--accent); color: #fff; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+.c-btn:hover { filter: brightness(1.08); }
+.c-btn.ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+.c-btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+.c-top { display: flex; justify-content: space-between; gap: 1rem; font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.c-bar { height: 6px; border-radius: 99px; background: var(--accent-soft); overflow: hidden; margin: .5rem 0 1.2rem; }
+.c-bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--b1), var(--accent)); transition: width .4s; }
+.c-type { margin: 0; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 700; }
+.c-q { font-size: 1.15rem; font-weight: 600; margin: .3rem 0 1rem; }
+.c-opts { display: grid; gap: .55rem; }
+.c-opts button { text-align: left; font: inherit; padding: .8rem 1rem; border-radius: 12px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; transition: border-color .15s, transform .1s; }
+.c-opts button:hover:not(:disabled) { border-color: var(--accent); }
+.c-opts button[aria-checked="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.c-opts button.ok { border-color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, var(--surface)); }
+.c-opts button.no { border-color: var(--no); background: color-mix(in srgb, var(--no) 12%, var(--surface)); text-decoration: line-through; }
+.c-opts button:disabled { cursor: default; }
+.c-input { width: 100%; font: inherit; font-size: 1.1rem; padding: .8rem 1rem; border-radius: 12px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text); }
+.c-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.c-fb { margin-top: 1rem; }
+.c-ok, .c-no { border-radius: 12px; padding: .8rem 1rem; animation: pop .25s ease-out; }
+.c-ok { background: color-mix(in srgb, var(--ok) 12%, var(--surface)); border: 1px solid var(--ok); }
+.c-no { background: color-mix(in srgb, var(--no) 9%, var(--surface)); border: 1px solid var(--no); }
+.c-no p, .c-ok p { margin: .35rem 0 0; }
+@keyframes pop { from { transform: translateY(4px); opacity: 0; } }
+.c-do { color: var(--ok); font-weight: 700; }
+.c-dont { color: var(--no); font-weight: 700; }
+.c-note { color: var(--muted); }
+.c-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.2rem; }
+
+.c-result { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1rem; }
+.c-result h2 { margin: 0 0 .2rem; }
+.c-result p { margin: 0; color: var(--muted); }
+.c-ring, .ring { --p: 0; flex: none; width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center;
+  background: conic-gradient(var(--ring, var(--accent)) calc(var(--p) * 1%), var(--accent-soft) 0); }
+.c-ring span, .ring span { width: 72px; height: 72px; border-radius: 50%; background: var(--surface); display: grid; place-items: center; font-weight: 700; font-size: 1.2rem; }
+.c-result.pass .c-ring { --ring: var(--ok); }
+.c-result.fail .c-ring { --ring: var(--no); }
+.c-review { padding-left: 1.2rem; }
+.c-review li { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.c-review p { margin: .2rem 0; }
+.c-review .c-q { font-size: 1rem; }
+.c-review .bad { color: var(--no); }
+.c-review .good { color: var(--ok); }
+
+/* Dashboard */
+.course-hero { background: radial-gradient(900px 300px at 85% -40%, #4c4cc0 0%, transparent 60%), linear-gradient(160deg, #1f1f5c, #2a2a7a 70%, var(--b1)); color: #fff; padding: 2.6rem 0 2.2rem; }
+.course-hero h1 { color: #fff; }
+.course-hero p { color: #dcdcf5; max-width: 680px; margin: 0; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; margin: -2.2rem 0 1.8rem; position: relative; }
+.stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.1rem; box-shadow: var(--shadow); }
+.stat strong { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.7rem; }
+.stat span { color: var(--muted); font-size: .9rem; }
+.courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; }
+@media (max-width: 400px) { .courses { grid-template-columns: 1fr; } }
+.course { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; }
+.course.b1 { --ring: var(--b1); } .course.b2 { --ring: var(--b2); } .course.c1 { --ring: var(--c1); } .course.c2 { --ring: var(--c2); }
+.course-head { display: flex; gap: 1rem; align-items: center; padding: 1.2rem 1.3rem; border-bottom: 1px solid var(--border); }
+.course-head .ring { width: 70px; height: 70px; }
+.course-head .ring span { width: 54px; height: 54px; font-size: 1rem; color: var(--ring); }
+.course-head h2 { margin: 0; font-size: 1.25rem; }
+.course-head p { margin: .15rem 0 0; color: var(--muted); font-size: .92rem; }
+.modules { list-style: none; margin: 0; padding: .4rem 0; flex: 1; }
+.m-row { display: flex; align-items: center; gap: .8rem; padding: .7rem 1.3rem; }
+.m-row + .m-row { border-top: 1px solid var(--border); }
+.m-ic { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: .85rem; font-weight: 700; border: 2px solid var(--border); color: var(--muted); }
+.m-row.passed .m-ic { background: var(--ok); border-color: var(--ok); color: #fff; }
+.m-row.tried .m-ic { border-color: var(--amber); color: var(--amber); }
+.m-row.ready .m-ic { border-color: var(--ring); color: var(--ring); }
+.m-row.early .m-ic { border-color: var(--c2); color: var(--c2); }
+.m-txt { flex: 1; min-width: 0; }
+.m-txt a { font-weight: 600; text-decoration: none; color: var(--text); }
+.m-txt a:hover { color: var(--accent); }
+.m-sub { display: block; font-size: .83rem; color: var(--muted); }
+.m-row.early .m-sub { color: var(--c2); }
+.m-go { flex: none; font-size: .85rem; font-weight: 600; text-decoration: none; padding: .35rem .85rem; border-radius: 999px; border: 1px solid var(--border); }
+.course-foot { padding: 1rem 1.3rem; border-top: 1px solid var(--border); background: var(--bg); }
+.course-foot .lock { color: var(--muted); font-size: .9rem; }
+.how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .9rem; }
+.how-grid .card h3 { margin-top: 0; }
+
+/* Certificate */
+.cert-dlg { border: 0; padding: 0; border-radius: 18px; width: min(820px, calc(100vw - 24px)); background: var(--surface); color: var(--text); }
+.cert-dlg::backdrop { background: rgba(10,10,30,.6); }
+.cert-wrap { padding: 1.3rem; }
+.cert-name { display: grid; gap: .3rem; font-weight: 600; margin-bottom: 1rem; }
+.cert-name input { font: inherit; padding: .6rem .8rem; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+.cert { background: #fffdf7; color: #16163a; padding: 14px; border-radius: 6px; }
+.cert-in { border: 3px double #b8892c; padding: 2rem 1.5rem; text-align: center; }
+.cert-k { font-family: Fraunces, Georgia, serif; font-size: 1.9rem; margin: 0; color: #1f1f5c; }
+.cert-small { margin: .7rem 0 .2rem; color: #4a4a6a; }
+.cert-n { font-family: Fraunces, Georgia, serif; font-size: 2.2rem; margin: .2rem 0; border-bottom: 1px solid #b8892c; display: inline-block; padding: 0 1.5rem .2rem; }
+.cert-c { font-weight: 700; font-size: 1.15rem; margin: .2rem 0; }
+.cert-l { list-style: none; padding: 0; margin: .8rem 0; color: #4a4a6a; font-size: .95rem; }
+.cert-fine { font-size: .75rem; color: #7a7a95; margin-top: 1rem; }
+@media print {
+  body.printing-cert > *:not(dialog) { display: none !important; }
+  body.printing-cert dialog { position: static; box-shadow: none; width: 100%; }
+  body.printing-cert .cert-name, body.printing-cert .c-actions { display: none; }
+}
+
+@media print { body:not(.printing-cert) .challenge, body:not(.printing-cert) .c-alert, .c-chip { display: none !important; } }

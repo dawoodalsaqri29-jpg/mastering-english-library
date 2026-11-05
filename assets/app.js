@@ -83,3 +83,82 @@
       catalog.innerHTML = '<p class="empty">Could not load the catalogue. If you opened this file directly, serve the folder over HTTP instead.</p>';
     });
 })();
+
+// Double-click any word in a lesson to see its dictionary entry in a popup.
+(function () {
+  "use strict";
+  var scope = document.querySelector("article");
+  if (!scope || document.getElementById("dictMain")) return;
+  var BASE = new URL("../", document.currentScript.src).href;
+  var dict = null, pop = null;
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function close() { if (pop) { pop.remove(); pop = null; } }
+  function loadDict() {
+    if (!dict) dict = fetch(BASE + "data/dictionary.json").then(function (r) { return r.json(); }).then(function (d) {
+      var map = {};
+      d.entries.forEach(function (e) {
+        var k = e.word.toLowerCase();
+        map[k] = e;
+        map[k.replace(/^(a|an|the|to) /, "")] = e;
+      });
+      return map;
+    }).catch(function () { return {}; });
+    return dict;
+  }
+  function show(word, rect) {
+    close();
+    pop = document.createElement("div");
+    pop.className = "lookup-pop";
+    pop.setAttribute("role", "dialog");
+    pop.setAttribute("aria-label", "Dictionary: " + word);
+    pop.innerHTML = '<button class="lp-x" type="button" aria-label="Close">×</button><span class="lp-w">' + esc(word) + "</span><p>Looking up…</p>";
+    document.body.appendChild(pop);
+    var left = Math.min(window.scrollX + rect.left, window.scrollX + document.documentElement.clientWidth - pop.offsetWidth - 12);
+    pop.style.left = Math.max(window.scrollX + 12, left) + "px";
+    pop.style.top = (window.scrollY + rect.bottom + 8) + "px";
+    pop.querySelector(".lp-x").addEventListener("click", close);
+    var link = '<a class="lp-more" href="' + BASE + "dictionary.html?q=" + encodeURIComponent(word) + '">Full entry: pronunciation, examples, mistakes →</a>';
+    var linkFor = function (w) { return link.replace(encodeURIComponent(word), encodeURIComponent(w)); };
+    var mine = pop;
+    loadDict().then(function (map) {
+      if (mine !== pop) return;
+      // A phrase such as "meet a deadline" falls back to its longest listed word.
+      var e = map[word] || word.split(" ").sort(function (a, b) { return b.length - a.length; })
+        .map(function (w) { return map[w]; }).filter(Boolean)[0];
+      if (e) {
+        var s = e.senses[0];
+        pop.querySelector(".lp-w").textContent = e.word;
+        pop.querySelector("p").outerHTML = '<span class="lp-pos">' + esc(e.pos) + "</span>" +
+          '<p><strong style="color:var(--accent)">' + esc(s.level) + "</strong> " + esc(s.def) + "</p>" +
+          '<p dir="rtl" lang="ar" style="text-align:right">' + esc(s.ar) + "</p>" + linkFor(e.word);
+        return;
+      }
+      fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + encodeURIComponent(word))
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (mine !== pop) return;
+          var m = d && d[0] && d[0].meanings && d[0].meanings[0];
+          pop.querySelector("p").outerHTML = m ?
+            '<span class="lp-pos">' + esc(m.partOfSpeech) + "</span><p>" + esc(m.definitions[0].definition) + "</p>" + link :
+            "<p>No entry found.</p>" + link;
+        })
+        .catch(function () { if (mine === pop) pop.querySelector("p").textContent = "Not in our learner list, and the online dictionary isn't responding right now."; });
+    });
+  }
+  scope.addEventListener("dblclick", function (ev) {
+    var sel = window.getSelection();
+    var head = ev.target.closest(".vocab .word");
+    var raw = head ? head.textContent : String(sel).trim().split(/\s+/)[0] || "";
+    var word = raw.toLowerCase().replace(/[^a-z' -]/g, "").replace(/\s+/g, " ").trim();
+    if (!word || word.length < 2) return;
+    var rect = head ? head.getBoundingClientRect() : sel.rangeCount ? sel.getRangeAt(0).getBoundingClientRect() : ev.target.getBoundingClientRect();
+    show(word, rect);
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+  document.addEventListener("click", function (e) { if (pop && !pop.contains(e.target)) close(); });
+})();

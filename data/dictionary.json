@@ -1,0 +1,510 @@
+{
+  "note": "Definitions, examples, levels and Arabic translations written for Mastering English Library. Levels are our own CEFR guide.",
+  "entries": [
+    {
+      "word": "substantial", "pos": "adjective", "uk": "səbˈstæn.ʃəl", "us": "səbˈstæn.ʃəl",
+      "senses": [
+        { "guide": "LARGE", "level": "C1", "def": "large in amount, size or importance", "ar": "كبير؛ ضخم؛ جوهري",
+          "ex": ["There is substantial evidence for this claim.", "The company made a substantial loss last year.", "She received a substantial pay rise."] },
+        { "guide": "SOLID", "level": "C2", "def": "strongly made and solid", "ar": "متين؛ صلب",
+          "ex": ["The castle walls are thick and substantial."] }
+      ],
+      "syn": ["considerable", "significant", "sizeable"], "ant": ["insignificant", "negligible"],
+      "family": ["substance (n)", "substantially (adv)", "insubstantial (adj)"],
+      "coll": ["substantial amount", "substantial evidence", "substantial increase", "substantial number"],
+      "mistake": { "wrong": "There was a substantial of evidence.", "right": "There was a substantial amount of evidence.", "note": "substantial is an adjective, so it needs a noun after it." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "undermine", "pos": "verb", "gram": "[T]", "uk": "ˌʌn.dəˈmaɪn", "us": "ˌʌn.dɚˈmaɪn",
+      "senses": [
+        { "guide": "WEAKEN", "level": "C1", "def": "to make something or someone gradually weaker or less effective", "ar": "يُقوِّض؛ يُضعِف تدريجياً",
+          "ex": ["Constant criticism can undermine confidence.", "The scandal undermined public trust in the government.", "These results undermine the original theory."] }
+      ],
+      "syn": ["weaken", "erode", "sabotage"], "ant": ["strengthen", "reinforce", "support"],
+      "coll": ["undermine confidence", "undermine trust", "undermine efforts", "seriously undermine"],
+      "mistake": { "wrong": "This undermines on our efforts.", "right": "This undermines our efforts.", "note": "undermine takes a direct object, with no preposition." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "inherent", "pos": "adjective", "uk": "ɪnˈher.ənt", "us": "ɪnˈhɪr.ənt",
+      "senses": [
+        { "guide": "NATURAL PART", "level": "C1", "def": "existing as a natural or basic part of something that cannot be removed", "ar": "مُتأصِّل؛ كامن؛ مُلازِم",
+          "ex": ["Every investment carries inherent risk.", "There are dangers inherent in any extreme sport.", "Her inherent sense of fairness made her a good judge."] }
+      ],
+      "syn": ["intrinsic", "built-in", "innate"], "ant": ["external", "acquired"],
+      "family": ["inherently (adv)"],
+      "coll": ["inherent risk", "inherent in", "inherent weakness", "inherent danger"],
+      "mistake": { "wrong": "The risk is inherent to every plan.", "right": "The risk is inherent in every plan.", "note": "The usual preposition is in." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "facilitate", "pos": "verb", "gram": "[T]", "uk": "fəˈsɪl.ɪ.teɪt", "us": "fəˈsɪl.ə.teɪt",
+      "senses": [
+        { "guide": "MAKE EASIER", "level": "C1", "def": "to make an action or process possible or easier", "ar": "يُسهِّل؛ يُيسِّر",
+          "ex": ["Technology can facilitate learning.", "The new road will facilitate trade between the towns.", "A good chair facilitates discussion in a meeting."] }
+      ],
+      "syn": ["enable", "assist", "ease"], "ant": ["hinder", "obstruct", "impede"],
+      "family": ["facilitator (n)", "facilitation (n)", "facility (n)"],
+      "coll": ["facilitate learning", "facilitate communication", "facilitate trade", "help facilitate"],
+      "mistake": { "wrong": "The app facilitates students to learn.", "right": "The app facilitates learning. / The app helps students (to) learn.", "note": "Do not use facilitate + person + to-infinitive. Its object is the process, not the person." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "discrepancy", "pos": "noun", "gram": "[C or U]", "uk": "dɪˈskrep.ən.si", "us": "dɪˈskrep.ən.si",
+      "senses": [
+        { "guide": "DIFFERENCE", "level": "C1", "def": "a difference between two things that should be the same", "ar": "تباين؛ تناقض؛ عدم تطابق",
+          "ex": ["There was a discrepancy between the two reports.", "Auditors found several discrepancies in the accounts.", "How do you explain the discrepancy in the figures?"] }
+      ],
+      "syn": ["inconsistency", "mismatch", "disparity"], "ant": ["agreement", "consistency"],
+      "coll": ["discrepancy between X and Y", "a slight discrepancy", "explain a discrepancy", "a major discrepancy"],
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "advocate", "pos": "verb", "gram": "[T]", "uk": "ˈæd.və.keɪt", "us": "ˈæd.və.keɪt",
+      "senses": [
+        { "guide": "SUPPORT", "level": "C1", "def": "to publicly support or recommend a particular idea, plan or way of doing something", "ar": "يُناصِر؛ يدعو إلى؛ يؤيِّد علناً",
+          "ex": ["Many experts advocate earlier intervention.", "Several studies advocate a four-day working week.", "She advocates teaching coding in primary schools."] }
+      ],
+      "also": { "pos": "noun", "uk": "ˈæd.və.kət", "def": "a person who publicly supports an idea, plan or group", "ar": "مُناصِر؛ مُدافِع", "level": "C2", "ex": ["He is a passionate advocate of free education."] },
+      "syn": ["champion", "promote", "back", "endorse"], "ant": ["oppose", "reject"],
+      "family": ["advocacy (n)", "advocate (n)"],
+      "coll": ["strongly advocate", "advocate a policy", "advocate + -ing"],
+      "mistake": { "wrong": "Experts advocate for to start school later.", "right": "Experts advocate starting school later.", "note": "advocate + -ing or + noun. In British English, advocate for is less common; never add to." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "plausible", "pos": "adjective", "uk": "ˈplɔː.zə.bəl", "us": "ˈplɑː.zə.bəl",
+      "senses": [
+        { "guide": "REASONABLE", "level": "C1", "def": "seeming likely to be true, or able to be believed", "ar": "معقول؛ مقبول؛ قابل للتصديق",
+          "ex": ["This is a plausible explanation.", "Her story sounded plausible at first.", "It is plausible that the data was entered incorrectly."] }
+      ],
+      "syn": ["credible", "believable", "reasonable"], "ant": ["implausible", "far-fetched", "unlikely"],
+      "family": ["plausibility (n)", "implausible (adj)"],
+      "coll": ["plausible explanation", "plausible reason", "perfectly plausible", "it is plausible that"],
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "mitigate", "pos": "verb", "gram": "[T]", "uk": "ˈmɪt.ɪ.ɡeɪt", "us": "ˈmɪt̬.ə.ɡeɪt",
+      "senses": [
+        { "guide": "REDUCE HARM", "level": "C2", "def": "to make something bad less severe, harmful or painful", "ar": "يُخفِّف (الضرر أو الأثر)",
+          "ex": ["Measures were taken to mitigate the impact.", "Planting trees can help mitigate flooding.", "Nothing can mitigate the seriousness of the crime."] }
+      ],
+      "syn": ["alleviate", "lessen", "reduce"], "ant": ["aggravate", "worsen", "intensify"],
+      "family": ["mitigation (n)", "mitigating (adj)"],
+      "coll": ["mitigate the impact", "mitigate the risk", "mitigate the effects", "mitigating circumstances"],
+      "mistake": { "wrong": "We need to mitigate against the risk.", "right": "We need to mitigate the risk.", "note": "Do not confuse mitigate with militate against." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "notion", "pos": "noun", "gram": "[C]", "uk": "ˈnəʊ.ʃən", "us": "ˈnoʊ.ʃən",
+      "senses": [
+        { "guide": "IDEA", "level": "C1", "def": "a belief or idea", "ar": "فكرة؛ مفهوم؛ تصوُّر",
+          "ex": ["The notion of free will is still debated.", "She rejected the notion that women are less ambitious.", "I had no notion of what he meant."] }
+      ],
+      "syn": ["idea", "concept", "belief"],
+      "coll": ["the notion that", "reject the notion", "a vague notion", "challenge the notion"],
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "comprehensive", "pos": "adjective", "uk": "ˌkɒm.prɪˈhen.sɪv", "us": "ˌkɑːm.prəˈhen.sɪv",
+      "senses": [
+        { "guide": "COMPLETE", "level": "B2", "def": "including everything that is necessary", "ar": "شامل؛ وافٍ",
+          "ex": ["The report gives a comprehensive overview.", "We offer comprehensive insurance.", "a comprehensive list of sources"] }
+      ],
+      "syn": ["thorough", "complete", "exhaustive"], "ant": ["partial", "limited", "incomplete"],
+      "family": ["comprehensively (adv)", "comprehend (v)", "comprehension (n)"],
+      "coll": ["comprehensive overview", "comprehensive review", "comprehensive guide"],
+      "mistake": { "wrong": "The teacher was very comprehensive with me.", "right": "The teacher was very understanding with me.", "note": "comprehensive means complete. Understanding (sympathetic) is a different word." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "subsequently", "pos": "adverb", "uk": "ˈsʌb.sɪ.kwənt.li", "us": "ˈsʌb.sɪ.kwənt.li",
+      "senses": [
+        { "guide": "AFTER", "level": "C1", "def": "after something else happened; later", "ar": "لاحقاً؛ فيما بعد",
+          "ex": ["The data was subsequently analysed.", "He was arrested and subsequently released.", "Subsequently, the policy was withdrawn."] }
+      ],
+      "syn": ["later", "afterwards", "thereafter"], "ant": ["previously", "beforehand"],
+      "family": ["subsequent (adj)"],
+      "mistake": { "wrong": "Subsequently to the meeting, we left.", "right": "Subsequent to the meeting, we left. / After the meeting, we left.", "note": "The prepositional phrase uses the adjective: subsequent to." },
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "constrain", "pos": "verb", "gram": "[T]", "uk": "kənˈstreɪn", "us": "kənˈstreɪn",
+      "senses": [
+        { "guide": "LIMIT", "level": "C2", "def": "to control or limit something", "ar": "يُقيِّد؛ يَحُدّ من",
+          "ex": ["Our research was constrained by funding.", "Growth is constrained by a lack of skilled workers."] },
+        { "guide": "FORCE", "level": "C2", "def": "to force someone to do something", "ar": "يُرغِم؛ يُجبِر", "gram": "[+ to infinitive]",
+          "ex": ["I felt constrained to tell her the truth."] }
+      ],
+      "syn": ["restrict", "limit", "restrain"], "ant": ["free", "release"],
+      "family": ["constraint (n)", "constrained (adj)"],
+      "coll": ["constrained by", "budget constraints", "time constraints"],
+      "lesson": "lessons/c1-academic-vocabulary.html"
+    },
+    {
+      "word": "resilient", "pos": "adjective", "uk": "rɪˈzɪl.i.ənt", "us": "rɪˈzɪl.jənt",
+      "senses": [
+        { "guide": "RECOVER QUICKLY", "level": "C1", "def": "able to become strong, healthy or successful again after something bad happens", "ar": "صامد؛ قادر على التعافي بسرعة",
+          "ex": ["Children are often remarkably resilient.", "The economy has proved resilient despite the crisis."] },
+        { "guide": "RETURN TO SHAPE", "level": "C2", "def": "returning to its original shape after being bent or pressed", "ar": "مَرِن؛ يعود لشكله الأصلي",
+          "ex": ["Rubber is a resilient material."] }
+      ],
+      "syn": ["tough", "hardy", "adaptable"], "ant": ["fragile", "vulnerable"],
+      "family": ["resilience (n)"],
+      "coll": ["remarkably resilient", "resilient economy", "build resilience"]
+    },
+    {
+      "word": "deadline", "pos": "noun", "gram": "[C]", "uk": "ˈded.laɪn", "us": "ˈded.laɪn",
+      "senses": [
+        { "guide": "TIME LIMIT", "level": "B1", "def": "a time or day by which something must be done", "ar": "الموعد النهائي",
+          "ex": ["We worked late to meet the deadline.", "The deadline for applications is 30 June.", "I'm sorry, we missed the deadline."] }
+      ],
+      "coll": ["meet a deadline", "miss a deadline", "a tight deadline", "extend a deadline", "the deadline for X"],
+      "mistake": { "wrong": "We must catch the deadline.", "right": "We must meet the deadline.", "note": "Say meet or make a deadline, not catch or reach." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "progress", "pos": "noun", "gram": "[U]", "uk": "ˈprəʊ.ɡres", "us": "ˈprɑː.ɡres",
+      "senses": [
+        { "guide": "IMPROVEMENT", "level": "B1", "def": "movement towards a better or more developed situation", "ar": "تقدُّم؛ تحسُّن",
+          "ex": ["You've made real progress this term.", "The patient is making good progress.", "We need to check our progress every week."] },
+        { "guide": "FORWARD MOVEMENT", "level": "B2", "def": "movement forward in a particular direction", "ar": "تقدُّم (حركة للأمام)",
+          "ex": ["Heavy snow made progress up the mountain slow."] }
+      ],
+      "also": { "pos": "verb", "uk": "prəʊˈɡres", "def": "to develop or improve", "ar": "يتقدَّم؛ يتطوَّر", "level": "B2", "ex": ["The course progresses from easy to difficult tasks."] },
+      "syn": ["advance", "improvement", "development"], "ant": ["decline", "regression"],
+      "family": ["progressive (adj)", "progression (n)", "progressively (adv)"],
+      "coll": ["make progress", "good progress", "slow progress", "in progress"],
+      "mistake": { "wrong": "She made a big progress. / He made many progresses.", "right": "She made a lot of progress. / She made great progress.", "note": "progress is uncountable: no a, no plural. In Arabic تقدُّم can be counted, so this mistake is very common." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "research", "pos": "noun", "gram": "[U]", "uk": "rɪˈsɜːtʃ", "us": "ˈriː.sɝːtʃ",
+      "senses": [
+        { "guide": "STUDY", "level": "B1", "def": "a detailed study of a subject to discover new information", "ar": "بحث؛ أبحاث",
+          "ex": ["I'm doing research on renewable energy.", "Research shows that sleep improves memory.", "She has carried out research into climate change."] }
+      ],
+      "syn": ["investigation", "study", "inquiry"],
+      "family": ["researcher (n)", "research (v)"],
+      "coll": ["do research", "carry out research", "conduct research", "research into / on", "research shows"],
+      "mistake": { "wrong": "I made a research about it. / Researches show that...", "right": "I did some research on it. / Research shows that... / Studies show that...", "note": "research is uncountable, and the verb is do or carry out, never make." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "experience", "pos": "noun", "uk": "ɪkˈspɪə.ri.əns", "us": "ɪkˈspɪr.i.əns",
+      "senses": [
+        { "guide": "KNOWLEDGE", "level": "B1", "def": "[U] knowledge or skill that you get from doing a job or activity", "ar": "خبرة",
+          "ex": ["An internship helps you gain experience.", "Do you have any experience of working with children?", "She has ten years' experience in marketing."] },
+        { "guide": "EVENT", "level": "B1", "def": "[C] something that happens to you that affects how you feel", "ar": "تجربة",
+          "ex": ["Living abroad was an amazing experience.", "We had some strange experiences on that trip."] }
+      ],
+      "family": ["experienced (adj)", "inexperienced (adj)", "experience (v)"],
+      "coll": ["gain experience", "work experience", "a valuable experience", "learn from experience"],
+      "mistake": { "wrong": "I have three years experiences in sales.", "right": "I have three years' experience in sales.", "note": "When it means خبرة, experience is uncountable. Use the plural only for تجارب (events)." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "responsibility", "pos": "noun", "uk": "rɪˌspɒn.sɪˈbɪl.ə.ti", "us": "rɪˌspɑːn.səˈbɪl.ə.t̬i",
+      "senses": [
+        { "guide": "DUTY", "level": "B1", "def": "something that it is your job or duty to deal with", "ar": "مسؤولية؛ واجب",
+          "ex": ["It's my responsibility to lock the office.", "Parents have a responsibility to protect their children."] },
+        { "guide": "BLAME", "level": "B2", "def": "blame for something that has happened", "ar": "تَبِعة؛ مسؤولية (عن خطأ)",
+          "ex": ["The manager took responsibility for the error.", "No group has claimed responsibility for the attack."] }
+      ],
+      "family": ["responsible (adj)", "irresponsible (adj)", "responsibly (adv)"],
+      "coll": ["take responsibility for", "accept responsibility", "a sense of responsibility", "claim responsibility"],
+      "mistake": { "wrong": "Who is the responsible of this project?", "right": "Who is responsible for this project? / Who is in charge of this project?", "note": "responsible is an adjective and takes for. Do not use it as a noun (المسؤول)." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "attention", "pos": "noun", "gram": "[U]", "uk": "əˈten.ʃən", "us": "əˈten.ʃən",
+      "senses": [
+        { "guide": "NOTICE", "level": "B1", "def": "the act of watching, listening to or thinking about something carefully", "ar": "انتباه؛ اهتمام",
+          "ex": ["Pay attention to the instructions.", "Can I have your attention, please?", "The film attracted a lot of attention."] }
+      ],
+      "family": ["attentive (adj)", "attend (v)"],
+      "coll": ["pay attention to", "draw attention to", "attract attention", "attention span"],
+      "mistake": { "wrong": "Take attention! / Give attention on the road.", "right": "Pay attention! / Pay attention to the road.", "note": "The verb is pay, and the preposition is to. خُذ بالك is not take attention." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "agreement", "pos": "noun", "uk": "əˈɡriː.mənt", "us": "əˈɡriː.mənt",
+      "senses": [
+        { "guide": "DEAL", "level": "B1", "def": "[C] a decision or arrangement, often formal and written, between two or more groups", "ar": "اتفاق؛ اتفاقية",
+          "ex": ["The two sides finally reached an agreement.", "They signed a trade agreement."] },
+        { "guide": "SAME OPINION", "level": "B1", "def": "[U] the situation in which people have the same opinion", "ar": "توافق؛ موافقة",
+          "ex": ["We're all in agreement on this point."] }
+      ],
+      "family": ["agree (v)", "agreeable (adj)", "disagreement (n)"],
+      "coll": ["reach an agreement", "sign an agreement", "in agreement with", "a verbal agreement"],
+      "mistake": { "wrong": "I am agree with you.", "right": "I agree with you.", "note": "agree is a verb. Do not add am / is / are before it." },
+      "lesson": "lessons/b2-collocations-work.html"
+    },
+    {
+      "word": "give up", "pos": "phrasal verb", "uk": "ɡɪv ˈʌp", "us": "ɡɪv ˈʌp",
+      "senses": [
+        { "guide": "STOP TRYING", "level": "B1", "def": "to stop trying to do something before you have finished", "ar": "يستسلم؛ يتوقف عن المحاولة", "gram": "[I]",
+          "ex": ["Don't give up! You're nearly there.", "I gave up trying to explain."] },
+        { "guide": "STOP A HABIT", "level": "B1", "def": "to stop doing something you do regularly", "ar": "يُقلِع عن", "gram": "[T]",
+          "ex": ["He gave up smoking last year.", "I'm giving up sugar for a month."] }
+      ],
+      "syn": ["quit", "abandon"], "ant": ["persevere", "carry on"],
+      "mistake": { "wrong": "He gave up to smoke.", "right": "He gave up smoking.", "note": "give up is followed by -ing, not to-infinitive." },
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "look after", "pos": "phrasal verb", "gram": "[T]", "uk": "lʊk ˈɑːf.tər", "us": "lʊk ˈæf.tɚ",
+      "senses": [
+        { "guide": "CARE FOR", "level": "A2", "def": "to take care of someone or something", "ar": "يعتني بـ؛ يرعى",
+          "ex": ["She looks after her younger brother.", "Can you look after my cat while I'm away?"] }
+      ],
+      "syn": ["take care of", "care for", "mind"],
+      "mistake": { "wrong": "I look after my keys but I can't find them.", "right": "I'm looking for my keys but I can't find them.", "note": "look after = يعتني. look for = يبحث عن." },
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "run out of", "pos": "phrasal verb", "gram": "[T]", "uk": "rʌn ˈaʊt əv", "us": "rʌn ˈaʊt əv",
+      "senses": [
+        { "guide": "HAVE NONE LEFT", "level": "B1", "def": "to finish, use or sell all of something so that there is none left", "ar": "ينفد (منه شيء)",
+          "ex": ["We've run out of milk.", "The car ran out of petrol on the motorway.", "I'm running out of patience."] }
+      ],
+      "mistake": { "wrong": "The milk has run out of.", "right": "We've run out of milk. / The milk has run out.", "note": "The person is the subject of run out of. The thing can be the subject of run out (without of)." },
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "find out", "pos": "phrasal verb", "gram": "[I or T]", "uk": "faɪnd ˈaʊt", "us": "faɪnd ˈaʊt",
+      "senses": [
+        { "guide": "DISCOVER", "level": "A2", "def": "to get information about something because you want to know more about it", "ar": "يكتشف؛ يعرف؛ يستعلم",
+          "ex": ["Can you find out when the train leaves?", "I found out that she had lied."] }
+      ],
+      "syn": ["discover", "learn", "realize"],
+      "mistake": { "wrong": "I want to know-out the price.", "right": "I want to find out the price.", "note": "Use find out for getting new information." },
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "set off", "pos": "phrasal verb", "uk": "set ˈɒf", "us": "set ˈɑːf",
+      "senses": [
+        { "guide": "START A JOURNEY", "level": "B1", "def": "to start a journey", "ar": "ينطلق؛ يبدأ رحلة", "gram": "[I]",
+          "ex": ["We set off early to avoid the traffic."] },
+        { "guide": "CAUSE", "level": "B2", "def": "to cause an alarm to start ringing, or a bomb to explode", "ar": "يُطلِق (إنذاراً)؛ يُفجِّر", "gram": "[T]",
+          "ex": ["Burnt toast set off the fire alarm."] }
+      ],
+      "syn": ["leave", "depart", "set out"],
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "pick up", "pos": "phrasal verb", "gram": "[T]", "uk": "pɪk ˈʌp", "us": "pɪk ˈʌp",
+      "senses": [
+        { "guide": "COLLECT", "level": "A2", "def": "to go somewhere in order to collect someone or something", "ar": "يُقِلّ (شخصاً)؛ يستلم",
+          "ex": ["I'll pick you up at the station.", "Can you pick up the dry cleaning?"] },
+        { "guide": "LIFT", "level": "A2", "def": "to lift something or someone using your hands", "ar": "يلتقط؛ يرفع",
+          "ex": ["Please pick up your clothes."] },
+        { "guide": "LEARN", "level": "B2", "def": "to learn a skill or language without studying it formally", "ar": "يتعلَّم بالممارسة",
+          "ex": ["She picked up Spanish while living in Madrid."] }
+      ],
+      "mistake": { "wrong": "I'll pick up you at six.", "right": "I'll pick you up at six.", "note": "With a pronoun (you, him, it), it must go between pick and up." },
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "fill in", "pos": "phrasal verb", "gram": "[T]", "uk": "fɪl ˈɪn", "us": "fɪl ˈɪn",
+      "senses": [
+        { "guide": "COMPLETE", "level": "A2", "def": "to write all the necessary information on an official document", "ar": "يملأ (استمارة)",
+          "ex": ["Please fill in this form.", "Fill in your name and address."] }
+      ],
+      "syn": ["complete", "fill out (US)"],
+      "lesson": "lessons/b1-everyday-phrasal-verbs.html"
+    },
+    {
+      "word": "the elephant in the room", "pos": "idiom", "uk": "ði ˌel.ɪ.fənt ɪn ðə ˈruːm", "us": "ði ˌel.ə.fənt ɪn ðə ˈruːm",
+      "senses": [
+        { "guide": "IGNORED PROBLEM", "level": "C2", "def": "an obvious problem or difficult situation that people do not want to talk about", "ar": "المشكلة الواضحة التي يتجاهلها الجميع",
+          "ex": ["The budget cut was the elephant in the room.", "Someone had to mention the elephant in the room."] }
+      ],
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "a double-edged sword", "pos": "idiom", "uk": "ə ˌdʌb.əl.edʒd ˈsɔːd", "us": "ə ˌdʌb.əl.edʒd ˈsɔːrd",
+      "senses": [
+        { "guide": "GOOD AND BAD", "level": "C2", "def": "something that has both good and bad effects", "ar": "سلاح ذو حدَّين",
+          "ex": ["Fame can be a double-edged sword.", "Online anonymity is a double-edged sword: it protects activists but also trolls."] }
+      ],
+      "mistake": { "wrong": "It's a sword with two edges.", "right": "It's a double-edged sword.", "note": "Idioms are fixed. Translating سلاح ذو حدين word for word breaks the idiom." },
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "split hairs", "pos": "idiom", "uk": "ˌsplɪt ˈheəz", "us": "ˌsplɪt ˈherz",
+      "senses": [
+        { "guide": "TINY DIFFERENCES", "level": "C2", "def": "to argue about very small differences that are not important", "ar": "يُدقِّق في التفاصيل التافهة",
+          "ex": ["Let's not split hairs over the wording."] }
+      ],
+      "family": ["hair-splitting (n)"],
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "a moot point", "pos": "idiom", "uk": "ə ˌmuːt ˈpɔɪnt", "us": "ə ˌmuːt ˈpɔɪnt",
+      "senses": [
+        { "guide": "UNDECIDED", "level": "C2", "def": "a matter about which people disagree, or one that is no longer important", "ar": "مسألة خلافية؛ أمر لم يَعُد مهماً",
+          "ex": ["Whether he knew is a moot point now.", "It's a moot point whether the plan would have worked."] }
+      ],
+      "mistake": { "wrong": "It's a mute point.", "right": "It's a moot point.", "note": "moot /muːt/ and mute /mjuːt/ sound different and mean different things." },
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "pay lip service to", "pos": "idiom", "uk": "peɪ ˈlɪp ˌsɜː.vɪs tuː", "us": "peɪ ˈlɪp ˌsɝː.vɪs tuː",
+      "senses": [
+        { "guide": "WORDS ONLY", "level": "C2", "def": "to say that you support something without doing anything to help it", "ar": "يؤيِّد بالكلام فقط دون فعل",
+          "ex": ["The company only pays lip service to diversity."] }
+      ],
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "toe the line", "pos": "idiom", "uk": "ˌtəʊ ðə ˈlaɪn", "us": "ˌtoʊ ðə ˈlaɪn",
+      "senses": [
+        { "guide": "OBEY", "level": "C2", "def": "to do what people in authority tell you to do, even if you do not agree", "ar": "يلتزم بالتعليمات أو بالخط الرسمي",
+          "ex": ["Ministers are expected to toe the party line."] }
+      ],
+      "mistake": { "wrong": "You must tow the line.", "right": "You must toe the line.", "note": "toe (إصبع القدم), not tow (يسحب)." },
+      "lesson": "lessons/c2-idioms-and-nuance.html"
+    },
+    {
+      "word": "concise", "pos": "adjective", "uk": "kənˈsaɪs", "us": "kənˈsaɪs",
+      "senses": [
+        { "guide": "SHORT AND CLEAR", "level": "C1", "def": "short and clear, expressing what needs to be said without unnecessary words", "ar": "موجز؛ مُختصَر ومُركَّز",
+          "ex": ["Keep your answers concise.", "a concise summary of the report"] }
+      ],
+      "syn": ["brief", "succinct", "to the point"], "ant": ["wordy", "verbose", "long-winded"],
+      "family": ["concisely (adv)", "concision (n)", "conciseness (n)"],
+      "lesson": "lessons/c2-style-and-register.html"
+    },
+    {
+      "word": "register", "pos": "noun", "gram": "[C]", "uk": "ˈredʒ.ɪ.stər", "us": "ˈredʒ.ə.stɚ",
+      "senses": [
+        { "guide": "LIST", "level": "B2", "def": "an official list of names or things", "ar": "سجل؛ قائمة رسمية",
+          "ex": ["The teacher took the register.", "the electoral register"] },
+        { "guide": "LANGUAGE STYLE", "level": "C1", "def": "the style of language, grammar and words used in particular situations", "ar": "المستوى اللغوي (رسمي / غير رسمي)",
+          "ex": ["Emails to friends use an informal register.", "Match the register to your reader."] }
+      ],
+      "also": { "pos": "verb", "uk": "ˈredʒ.ɪ.stər", "def": "to put information, especially your name, on an official list", "ar": "يُسجِّل", "level": "B1", "ex": ["You must register for the course by Friday."] },
+      "family": ["registration (n)", "registered (adj)"],
+      "lesson": "lessons/c2-style-and-register.html"
+    },
+    {
+      "word": "emphasis", "pos": "noun", "gram": "[C or U]", "uk": "ˈem.fə.sɪs", "us": "ˈem.fə.sɪs",
+      "senses": [
+        { "guide": "IMPORTANCE", "level": "B2", "def": "special importance or attention given to something", "ar": "تأكيد؛ تركيز",
+          "ex": ["The course places emphasis on speaking.", "Inversion adds emphasis and a formal tone."] }
+      ],
+      "family": ["emphasize (v)", "emphatic (adj)", "emphatically (adv)"],
+      "coll": ["place emphasis on", "put emphasis on", "strong emphasis", "for emphasis"],
+      "mistake": { "wrong": "He emphasized on the importance of practice.", "right": "He emphasized the importance of practice. / He put emphasis on the importance of practice.", "note": "The verb emphasize has no preposition. The noun emphasis takes on." },
+      "lesson": "lessons/c1-inversion-for-emphasis.html"
+    },
+    {
+      "word": "recommend", "pos": "verb", "gram": "[T]", "uk": "ˌrek.əˈmend", "us": "ˌrek.əˈmend",
+      "senses": [
+        { "guide": "SUGGEST", "level": "B1", "def": "to suggest that someone or something would be good or suitable", "ar": "يوصي بـ؛ يرشِّح",
+          "ex": ["Can you recommend a good dictionary?", "I'd recommend this book to anyone."] },
+        { "guide": "ADVISE", "level": "B2", "def": "to advise someone that something should be done", "ar": "يَنصح؛ يوصي", "gram": "[+ that] [+ -ing]",
+          "ex": ["It is recommended that new computers be purchased.", "I recommend booking early."] }
+      ],
+      "family": ["recommendation (n)"],
+      "coll": ["highly recommend", "strongly recommend", "it is recommended that"],
+      "mistake": { "wrong": "Can you recommend me a hotel? / I recommend you to book early.", "right": "Can you recommend a hotel (to me)? / I recommend booking early. / I recommend that you book early.", "note": "In careful English, do not put the person straight after recommend." },
+      "lesson": "lessons/c1-formal-report.html"
+    },
+    {
+      "word": "opinion", "pos": "noun", "uk": "əˈpɪn.jən", "us": "əˈpɪn.jən",
+      "senses": [
+        { "guide": "IDEA", "level": "A2", "def": "a thought or belief about something or someone", "ar": "رأي",
+          "ex": ["In my opinion, uniforms are a good idea.", "What's your opinion of the new manager?"] }
+      ],
+      "syn": ["view", "belief", "point of view"],
+      "coll": ["in my opinion", "express an opinion", "a strong opinion", "public opinion"],
+      "mistake": { "wrong": "According to my opinion, ...", "right": "In my opinion, ... / In my view, ...", "note": "Use according to for other people's opinions or sources, never for your own." },
+      "lesson": "lessons/b2-opinion-essay.html"
+    },
+    {
+      "word": "although", "pos": "conjunction", "uk": "ɔːlˈðəʊ", "us": "ɑːlˈðoʊ",
+      "senses": [
+        { "guide": "DESPITE", "level": "B1", "def": "despite the fact that", "ar": "رغم أن؛ مع أن",
+          "ex": ["Although cars are convenient, they pollute the air.", "She came to work although she was ill."] }
+      ],
+      "syn": ["though", "even though", "while"],
+      "mistake": { "wrong": "Although it was raining, but we went out.", "right": "Although it was raining, we went out. / It was raining, but we went out.", "note": "Use although OR but, never both. Arabic says رغم أن... لكن, English does not." },
+      "lesson": "lessons/b2-opinion-essay.html"
+    },
+    {
+      "word": "however", "pos": "adverb", "uk": "haʊˈev.ər", "us": "haʊˈev.ɚ",
+      "senses": [
+        { "guide": "CONTRAST", "level": "B1", "def": "used to introduce a statement that contrasts with something just said", "ar": "ومع ذلك؛ إلا أن",
+          "ex": ["Cars are convenient. However, they pollute the air."] },
+        { "guide": "NO MATTER HOW", "level": "B2", "def": "in whatever way or to whatever degree", "ar": "مهما",
+          "ex": ["However hard I try, I can't remember her name."] }
+      ],
+      "syn": ["nevertheless", "nonetheless", "but"],
+      "mistake": { "wrong": "Cars are convenient, however they pollute the air.", "right": "Cars are convenient. However, they pollute the air. / Cars are convenient; however, they pollute the air.", "note": "however is not a conjunction like but. Start a new sentence or use a semicolon." },
+      "lesson": "lessons/b2-opinion-essay.html"
+    },
+    {
+      "word": "advice", "pos": "noun", "gram": "[U]", "uk": "ədˈvaɪs", "us": "ədˈvaɪs",
+      "senses": [
+        { "guide": "OPINION", "level": "A2", "def": "an opinion that someone gives you about what you should do", "ar": "نصيحة؛ نصائح",
+          "ex": ["Can you give me some advice?", "My teacher gave me a good piece of advice."] }
+      ],
+      "family": ["advise (v)", "adviser (n)", "advisable (adj)"],
+      "coll": ["give advice", "take someone's advice", "a piece of advice", "seek advice"],
+      "mistake": { "wrong": "He gave me many advices. / I advice you to rest.", "right": "He gave me a lot of advice. / I advise you to rest.", "note": "advice (noun, /s/) is uncountable. advise (verb, /z/) is the action." }
+    },
+    {
+      "word": "information", "pos": "noun", "gram": "[U]", "uk": "ˌɪn.fəˈmeɪ.ʃən", "us": "ˌɪn.fɚˈmeɪ.ʃən",
+      "senses": [
+        { "guide": "FACTS", "level": "A2", "def": "facts about a situation, person or event", "ar": "معلومات",
+          "ex": ["For more information, visit our website.", "I need some information about the course."] }
+      ],
+      "family": ["inform (v)", "informative (adj)"],
+      "coll": ["a piece of information", "useful information", "further information"],
+      "mistake": { "wrong": "I have many informations.", "right": "I have a lot of information. / I have several pieces of information.", "note": "information is uncountable in English, even though معلومات is plural in Arabic." }
+    },
+    {
+      "word": "discuss", "pos": "verb", "gram": "[T]", "uk": "dɪˈskʌs", "us": "dɪˈskʌs",
+      "senses": [
+        { "guide": "TALK ABOUT", "level": "B1", "def": "to talk about a subject with someone and tell each other your ideas", "ar": "يناقش",
+          "ex": ["We need to discuss the budget.", "They discussed what to do next."] }
+      ],
+      "family": ["discussion (n)"],
+      "mistake": { "wrong": "Let's discuss about the problem.", "right": "Let's discuss the problem. / Let's talk about the problem.", "note": "discuss has no preposition. The noun does: a discussion about the problem." }
+    },
+    {
+      "word": "explain", "pos": "verb", "uk": "ɪkˈspleɪn", "us": "ɪkˈspleɪn",
+      "senses": [
+        { "guide": "MAKE CLEAR", "level": "A2", "def": "to make something clear or easy to understand by giving details", "ar": "يشرح؛ يوضِّح", "gram": "[I or T]",
+          "ex": ["Can you explain this rule to me?", "He explained why he was late."] }
+      ],
+      "family": ["explanation (n)", "explanatory (adj)"],
+      "mistake": { "wrong": "Can you explain me this?", "right": "Can you explain this to me?", "note": "explain + thing + to + person. Never explain me." }
+    },
+    {
+      "word": "married", "pos": "adjective", "uk": "ˈmær.id", "us": "ˈmer.id",
+      "senses": [
+        { "guide": "HAVING A HUSBAND OR WIFE", "level": "A1", "def": "having a husband or wife", "ar": "متزوِّج",
+          "ex": ["They have been married for ten years.", "She's married to a doctor."] }
+      ],
+      "coll": ["get married", "married to", "happily married", "a married couple"],
+      "mistake": { "wrong": "She is married with a doctor. / He married with her.", "right": "She is married to a doctor. / He married her.", "note": "married to (adjective); marry + person, with no preposition. متزوج من is not married with." },
+      "lesson": "lessons/b1-present-perfect-vs-past-simple.html"
+    },
+    {
+      "word": "concession", "pos": "noun", "uk": "kənˈseʃ.ən", "us": "kənˈseʃ.ən",
+      "senses": [
+        { "guide": "AGREEING", "level": "C1", "def": "something that you agree to do or give to someone in order to end an argument", "ar": "تنازُل",
+          "ex": ["Both sides made concessions to reach an agreement."] },
+        { "guide": "ADMITTING", "level": "C2", "def": "the act of admitting that something is true, especially in an argument", "ar": "إقرار؛ اعتراف بنقطة",
+          "ex": ["A good essay makes a concession before rejecting the other view."] }
+      ],
+      "family": ["concede (v)"],
+      "coll": ["make a concession", "a major concession", "as a concession to"],
+      "lesson": "lessons/b2-opinion-essay.html"
+    }
+  ]
+}
