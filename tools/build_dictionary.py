@@ -24,6 +24,51 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+VOWELS = set("aeiouæɑɒɔəɜɚɝɪʊʌɛɐøœyɘɵɤʉɨ")
+ONSETS2 = {"pr", "br", "tr", "dr", "kr", "gr", "fr", "θr", "ʃr", "pl", "bl", "kl", "gl", "fl", "sl",
+           "sp", "st", "sk", "sm", "sn", "sw", "tw", "dw", "kw", "pj", "bj", "tj", "dj", "kj", "mj", "nj", "fj", "vj", "hj", "lj", "sj"}
+ONSETS3 = {"spr", "str", "skr", "spl", "skw", "spj", "stj", "skj"}
+
+
+def shift_stress(p):
+    """Move stress marks from before the vowel to the start of the syllable (ˈ/ˌ before its onset)."""
+    out = list(p)
+    i = 0
+    while i < len(out):
+        if out[i] in "ˈˌ":
+            mark = out.pop(i)
+            j = i
+            cons = []
+            while j > 0 and out[j - 1] not in VOWELS and out[j - 1] not in "ˈˌ. ːʊɪə" and out[j - 1].isalpha() or (j > 0 and out[j - 1] in "ʃʒθðŋʤʧ"):
+                cons.insert(0, out[j - 1])
+                j -= 1
+            take = 0
+            if cons:
+                take = 1
+                if len(cons) >= 2 and "".join(cons[-2:]) in ONSETS2:
+                    take = 2
+                if len(cons) >= 3 and "".join(cons[-3:]) in ONSETS3:
+                    take = 3
+                if len(cons) >= 2 and "".join(cons[-2:]) in ("tʃ", "dʒ"):
+                    take = max(take, 2)
+            out.insert(i - take, mark)
+            i += 1
+        else:
+            i += 1
+    return "".join(out)
+
+
+def tidy_uk(p):
+    p = p.replace("ɹ", "r").replace("ɐ", "ə").replace("ɛ", "e").replace("ɫ", "l").replace("ᵻ", "ɪ")
+    return shift_stress(p)
+
+
+def tidy_us(p):
+    p = p.replace("ɹ", "r").replace("ɫ", "l").replace("ɛ", "e")
+    # A stressed schwa is the STRUT vowel: ˈrən -> ˈrʌn
+    return re.sub(r"([ˈˌ][^aeiouæɑɒɔəɜɚɝɪʊʌ ]*)ə", r"\1ʌ", p)
+
+
 def load_ipa(path, us=False):
     out = {}
     if not path:
@@ -34,8 +79,7 @@ def load_ipa(path, us=False):
                 continue
             word, prons = line.rstrip("\n").split("\t", 1)
             p = prons.split(",")[0].strip().strip("/")
-            if us:
-                p = p.replace("ɹ", "r")
+            p = tidy_us(p) if us else tidy_uk(p)
             out.setdefault(word.lower(), p)
     return out
 
