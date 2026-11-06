@@ -55,6 +55,16 @@ python3 $S run MODEL_ID --json '{"prompt":"…","image_url":"https://…"}' --ou
 `--out`. It prints the saved file paths, and the `request_id` on stderr. If it times out, the job is
 still running on MuAPI: poll later rather than submitting again.
 
+## Voice cloning (ElevenLabs-style)
+
+```bash
+python3 $S clone-voice path/to/voice.mp3 --id dawoodVoice01     # Minimax clone, Arabic + English
+python3 $S speak "النص هنا" --voice dawoodVoice01 --lang Arabic --emotion neutral --out content/generated
+python3 $S voices                                                # saved ids (references/voices.json)
+```
+Stock voices work too (`--voice English_GentleTeacher`). For free local cloning and the full engine
+choice, see the `voice-clone` skill.
+
 ## Rules
 
 - Look at every generated image or frame before using it (wrong text, extra fingers, off-brand colours).

@@ -1,0 +1,8 @@
+{
+  "name": "media-studio",
+  "version": "1.0.0",
+  "description": "Images, video, talking photos (Open Generative AI / MuAPI, 638 models), voice cloning (local Pocket TTS, MuAPI Minimax, ElevenLabs), and OpenWhispr speech-to-text, subtitles and meeting notes.",
+  "author": {
+    "name": "Dawood Al Saqri"
+  }
+}

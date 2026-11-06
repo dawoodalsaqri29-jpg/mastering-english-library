@@ -1,0 +1,24 @@
+{
+  "name": "mastering-english-library",
+  "description": "Dawood's AI studio: media + voice, SEO, workspace.",
+  "owner": {
+    "name": "Dawood Al Saqri"
+  },
+  "plugins": [
+    {
+      "name": "media-studio",
+      "source": "./plugins/media-studio",
+      "description": "Images, video, talking photos (Open Generative AI / MuAPI, 638 models), voice cloning (local Pocket TTS, MuAPI Minimax, ElevenLabs), and OpenWhispr speech-to-text, subtitles and meeting notes."
+    },
+    {
+      "name": "seo-studio",
+      "source": "./plugins/seo-studio",
+      "description": "OpenSEO (open-source Semrush/Ahrefs): local site audit + 12 SEO workflows and the OpenSEO MCP."
+    },
+    {
+      "name": "workspace",
+      "source": "./plugins/workspace",
+      "description": "AppFlowy (open-source Notion) workspace pack: content calendar, courses and dictionary databases, brand and SOP pages."
+    }
+  ]
+}

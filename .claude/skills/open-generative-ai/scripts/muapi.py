@@ -6,6 +6,10 @@
   muapi.py upload FILE                             upload an image/video/audio -> hosted URL
   muapi.py run MODEL_ID --json '{"prompt": "..."}' [--out DIR] [--timeout 900]
                                                    submit, poll until done, download outputs
+  muapi.py clone-voice FILE --id dawoodVoice01    clone a voice (Minimax, 10 s-5 min clean speech, Arabic OK)
+  muapi.py speak "text" --voice ID [--lang Arabic] [--emotion neutral] [--speed 1] [--out DIR]
+                                                   text to speech with a cloned or stock Minimax voice
+  muapi.py voices                                  cloned voice ids saved by clone-voice
 
 Auth: header x-api-key. In this cloud session the proxy injects the saved key for
 api.muapi.ai, so MUAPI_KEY may be any placeholder. Elsewhere set MUAPI_KEY.
@@ -83,10 +87,54 @@ def cmd_run(a):
         urllib.request.urlretrieve(u, p); print(p)
     print(json.dumps({"request_id": rid, "outputs": outs}), file=sys.stderr)
 
+
+VOICES = os.path.join(HERE, "..", "references", "voices.json")
+
+def _voices():
+    return json.load(open(VOICES)) if os.path.exists(VOICES) else {}
+
+def _submit_wait(mid, payload, out, timeout=900):
+    import types
+    a = types.SimpleNamespace(model=mid, json=json.dumps(payload), out=out, timeout=timeout)
+    cmd_run(a)
+
+def cmd_clone(a):
+    if not a.file.startswith("http"):
+        import io, contextlib
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            cmd_upload(type("A", (), {"file": a.file}))
+        url = buf.getvalue().strip()
+    else:
+        url = a.file
+    payload = {"audio_url": url, "custom_voice_id": a.id, "model": "speech-2.6-hd",
+               "need_noise_reduction": True, "need_volume_normalization": True,
+               "prompt": a.preview or "Hello, this is my cloned voice for Mastering English Library."}
+    _submit_wait("minimax-voice-clone", payload, a.out)
+    v = _voices(); v[a.id] = {"engine": "minimax", "source": os.path.basename(a.file)}
+    json.dump(v, open(VOICES, "w"), indent=1)
+    print(f"voice id saved: {a.id}  (use: muapi.py speak \"...\" --voice {a.id})")
+
+def cmd_speak(a):
+    payload = {"prompt": a.text, "voice_id": a.voice, "speed": a.speed, "emotion": a.emotion,
+               "language_boost": a.lang, "sample_rate": 44100, "bitrate": 128000, "format": "mp3",
+               "english_normalization": a.lang == "English"}
+    _submit_wait(a.model, payload, a.out)
+
+def cmd_voices(a):
+    print(json.dumps(_voices(), indent=1) if _voices() else "(no cloned voices yet)")
+
 ap = argparse.ArgumentParser(); sp = ap.add_subparsers(dest="cmd", required=True)
 p = sp.add_parser("models"); p.add_argument("--kind"); p.add_argument("--search"); p.set_defaults(f=cmd_models)
 p = sp.add_parser("show"); p.add_argument("model"); p.set_defaults(f=cmd_show)
 p = sp.add_parser("upload"); p.add_argument("file"); p.set_defaults(f=cmd_upload)
 p = sp.add_parser("run"); p.add_argument("model"); p.add_argument("--json", required=True)
 p.add_argument("--out", default="out"); p.add_argument("--timeout", type=int, default=900); p.set_defaults(f=cmd_run)
+p = sp.add_parser("clone-voice"); p.add_argument("file"); p.add_argument("--id", required=True)
+p.add_argument("--preview"); p.add_argument("--out", default="out"); p.set_defaults(f=cmd_clone)
+p = sp.add_parser("speak"); p.add_argument("text"); p.add_argument("--voice", required=True)
+p.add_argument("--model", default="minimax-speech-2.6-hd"); p.add_argument("--lang", default="auto")
+p.add_argument("--emotion", default="neutral"); p.add_argument("--speed", type=float, default=1.0)
+p.add_argument("--out", default="out"); p.set_defaults(f=cmd_speak)
+p = sp.add_parser("voices"); p.set_defaults(f=cmd_voices)
 a = ap.parse_args(); a.f(a)
