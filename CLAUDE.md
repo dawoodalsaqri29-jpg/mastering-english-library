@@ -11,28 +11,37 @@ QA, security officer, release engineer.
 
 ### 1. Install check — first thing in every session
 
-Cloud sessions start in a fresh container, so gstack may be missing. Run:
+Cloud sessions start in a fresh container, so gstack may be missing. Install the
+pinned, reviewed version (1.96.0.0). Plain `./setup`, not `--team`, so nothing
+auto-updates; upgrade only when the owner asks, after reviewing the new version,
+by changing `GSTACK_SHA` here.
 
 ```bash
+GSTACK_SHA=648b33459049c25b87daf1217b90d2da7310de9f
 if [ ! -d "$HOME/.claude/skills/gstack/bin" ]; then
-  git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
-  (cd ~/.claude/skills/gstack && ./setup --team)
+  git init -q ~/.claude/skills/gstack
+  git -C ~/.claude/skills/gstack fetch -q --depth 1 https://github.com/garrytan/gstack.git "$GSTACK_SHA"
+  git -C ~/.claude/skills/gstack checkout -q FETCH_HEAD
+  (cd ~/.claude/skills/gstack && ./setup)
 fi
 ```
 
 If `./setup` reports `Browser unavailable ... chromium-install` (the cloud container
-blocks the Chromium download), alias the preinstalled Playwright Chromium to the
-revision gstack wants, then re-run setup:
+blocks the Chromium download), alias the newest preinstalled Playwright Chromium to
+the revision gstack wants, then re-run setup:
 
 ```bash
 WANT=$(node -p "require('$HOME/.claude/skills/gstack/node_modules/playwright-core/browsers.json').browsers.find(b=>b.name==='chromium').revision")
-HAVE=$(ls -d /opt/pw-browsers/chromium-[0-9]* | sed 's/.*chromium-//' | sort -n | head -1)
-ln -sfn /opt/pw-browsers/chromium-$HAVE /opt/pw-browsers/chromium-$WANT
-ln -sfn /opt/pw-browsers/chromium_headless_shell-$HAVE /opt/pw-browsers/chromium_headless_shell-$WANT
-(cd ~/.claude/skills/gstack && ./setup --team)
+HAVE=$(ls -d /opt/pw-browsers/chromium-[0-9]* 2>/dev/null | sed 's/.*chromium-//' | grep -vx "$WANT" | sort -n | tail -1)
+if [ -n "$HAVE" ] && [ ! -e "/opt/pw-browsers/chromium-$WANT" ]; then
+  ln -s "/opt/pw-browsers/chromium-$HAVE" "/opt/pw-browsers/chromium-$WANT"
+  ln -s "/opt/pw-browsers/chromium_headless_shell-$HAVE" "/opt/pw-browsers/chromium_headless_shell-$WANT"
+fi
+(cd ~/.claude/skills/gstack && ./setup)
 ```
 
-Do not skip skills, ignore gstack errors, or work around a missing gstack.
+If the install or setup fails, stop and tell the owner what failed and the error;
+do not work around it or carry on as if gstack were there.
 Use `~/.claude/skills/gstack/...` for gstack file paths.
 Use `/browse` (gstack) for all web browsing; never use `mcp__claude-in-chrome__*` tools.
 
