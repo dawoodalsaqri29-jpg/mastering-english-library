@@ -33,7 +33,7 @@ Open `assets/catalog.js` and copy one of the entries in `window.BOOKS`:
 - `level` can be one level such as `B2` or a range such as `B1–C1`. A range appears under every level it covers.
 - `category` creates a filter chip automatically.
 - `cover` is optional. Leave it as `""` to get a generated cover.
-- `link` is where the "Get PDF" button goes, for example your Wix, PayPal or Gumroad product page. While it is `"#"`, the button does nothing.
+- `link` is where the "Get PDF" button goes, for example your Wix, PayPal or Gumroad product page. While it is `"#"`, the card shows a disabled "Coming soon" label instead.
 
 Set `storeUrl` in `window.SITE` to your main store address to turn the header button into a "Visit store" link. Set `contactEmail` to show an email link in the footer.
 
