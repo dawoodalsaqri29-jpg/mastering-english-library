@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dawoodalsaqri29-jpg.github.io/mastering-english-library/sitemap.xml
