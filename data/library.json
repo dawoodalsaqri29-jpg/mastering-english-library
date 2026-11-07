@@ -97,6 +97,30 @@
       ]
     },
     {
+      "title": "Skimming and scanning",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b1-skimming-and-scanning.html",
+      "description": "Two fast reading skills: get the main idea in seconds, or find one fact without reading everything.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
+      "title": "Skimming and scanning",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-skimming-and-scanning.pdf",
+      "description": "Two fast reading skills: get the main idea in seconds, or find one fact without reading everything.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -189,6 +213,30 @@
       "description": "Report statements, questions and requests, and know when the tense moves back.",
       "tags": [
         "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "Understanding the writer's attitude",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b2-writers-attitude.html",
+      "description": "Spot the words that show what a writer really thinks, even when they never say \"I think\".",
+      "tags": [
+        "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Understanding the writer's attitude",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-writers-attitude.pdf",
+      "description": "Spot the words that show what a writer really thinks, even when they never say \"I think\".",
+      "tags": [
+        "reading",
         "b2"
       ]
     },
@@ -289,6 +337,30 @@
       ]
     },
     {
+      "title": "Working out meaning from context",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c1-meaning-from-context.html",
+      "description": "Guess unknown words from the clues around them instead of reaching for a dictionary.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
+      "title": "Working out meaning from context",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-meaning-from-context.pdf",
+      "description": "Guess unknown words from the clues around them instead of reaching for a dictionary.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -381,6 +453,30 @@
       "description": "Turn verbs and adjectives into nouns for a denser, more academic style, without losing clarity.",
       "tags": [
         "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Irony and understatement",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c2-irony-and-understatement.html",
+      "description": "Read between the lines: when writers say less, or the opposite, of what they mean.",
+      "tags": [
+        "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "Irony and understatement",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-irony-and-understatement.pdf",
+      "description": "Read between the lines: when writers say less, or the opposite, of what they mean.",
+      "tags": [
+        "reading",
         "c2"
       ]
     }
