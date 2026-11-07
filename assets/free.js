@@ -11,10 +11,11 @@
     return on ? on.dataset.v : "All";
   }
 
-  function sample(all, max) {
-    const byLevel = {};
-    all.forEach((l) => (byLevel[l.level] = byLevel[l.level] || []).push(l));
-    const queues = Object.keys(byLevel).sort().map((k) => byLevel[k].slice());
+  // Round-robin over a key (level or skill) so a short list still shows variety.
+  function sample(all, max, key) {
+    const groups = {};
+    all.forEach((l) => (groups[l[key]] = groups[l[key]] || []).push(l));
+    const queues = Object.keys(groups).sort().map((k) => groups[k].slice());
     const out = [];
     while (out.length < max && queues.some((q) => q.length)) {
       queues.forEach((q) => { if (q.length && out.length < max) out.push(q.shift()); });
@@ -22,16 +23,37 @@
     return out;
   }
 
+  // Two lessons per level, rotating the skills so the eight cards cover all six skills.
+  function mixed() {
+    const skills = [...new Set(lessons.map((l) => l.skill))].sort();
+    const levels = [...new Set(lessons.map((l) => l.level))].sort();
+    const out = [];
+    levels.forEach((lv, i) => {
+      [0, 1].forEach((k) => {
+        const want = skills[(2 * i + k) % skills.length];
+        const hit = lessons.find((l) => l.level === lv && l.skill === want) || lessons.find((l) => l.level === lv && !out.includes(l));
+        if (hit && !out.includes(hit)) out.push(hit);
+      });
+    });
+    return out;
+  }
+
   function render() {
     const lv = currentLevel();
-    // "All" shows a short sample (two per level, round-robin) so the home page stays short;
-    // the full list lives on library.html. A chosen level shows all of its lessons.
-    const list = lv === "All" ? sample(lessons, 8) : lessons.filter((l) => l.level === lv);
+    // Keep the home page short: 8 lessons across levels, or 6 across skills for one level.
+    // The full, filtered list lives on library.html.
+    const list = lv === "All" ? mixed() : sample(lessons.filter((l) => l.level === lv), 6, "skill");
     grid.innerHTML = list.map((l) => `<a class="free-card" href="${esc(l.path)}">
       <div class="meta"><span class="tag">${esc(l.level)}</span><span class="tag cat">${esc(l.skill)}</span></div>
       <h3>${esc(l.title)}</h3>
       <p>${esc(l.description)}</p>
     </a>`).join("");
+    const all = document.querySelector("#free .see-all");
+    if (all) {
+      const n = lv === "All" ? lessons.length : lessons.filter((l) => l.level === lv).length;
+      all.href = lv === "All" ? "library.html" : "library.html?level=" + encodeURIComponent(lv);
+      all.textContent = "See all " + n + (lv === "All" ? "" : " " + lv) + " free lessons \u2192";
+    }
   }
 
   fetch("data/library.json")
