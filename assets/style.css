@@ -165,3 +165,11 @@ a.toggle { display: inline-block; text-decoration: none; }
 .related li { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
 .related p { margin: 0; font-size: .95rem; }
 @media print { .related { display: none; } }
+.placement fieldset { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: .8rem 1rem; margin: 0 0 .75rem; }
+.placement legend { font-weight: 600; padding: 0 .3rem; }
+.placement label { display: block; padding: .25rem 0; cursor: pointer; }
+.placement fieldset.right { border-color: var(--b1); box-shadow: inset 4px 0 0 var(--b1); }
+.placement fieldset.wrong { border-color: var(--c2); box-shadow: inset 4px 0 0 var(--c2); }
+.placement .result:not(:empty) { margin-top: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+button.toggle.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.placement .verdict { font-weight: 500; font-size: .9rem; color: var(--muted); }
