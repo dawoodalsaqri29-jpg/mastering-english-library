@@ -10,6 +10,7 @@ A free, static website of English lessons (grammar, vocabulary, writing, reading
 | `assets/catalog.js` | **Your catalogue.** Edit this file to add, remove or change PDF titles, prices and buy links |
 | `assets/store.css`, `assets/store.js` | Styles and behaviour for the home page |
 | `library.html`, `levels.html`, `lessons/` | Free web lessons with a searchable index |
+| `assets/placement.js` | The 12-question level check on `levels.html` (scored in the browser, nothing stored) |
 | `assets/listen.js` | Reads Listening lesson transcripts aloud with the browser's built-in voice (no audio files) |
 | `pdfs/b1` … `pdfs/c2` | Free lesson PDFs, one folder per level |
 | `data/library.json` | The index that powers the free lessons page |
