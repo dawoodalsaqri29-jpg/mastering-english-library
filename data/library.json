@@ -169,6 +169,30 @@
       ]
     },
     {
+      "title": "Adjectives for feelings",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b1-feelings-adjectives.html",
+      "description": "Twelve adjectives to describe how you feel, plus the -ed and -ing difference that catches many learners.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
+      "title": "Adjectives for feelings",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-feelings-adjectives.pdf",
+      "description": "Twelve adjectives to describe how you feel, plus the -ed and -ing difference that catches many learners.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -333,6 +357,30 @@
       "description": "Share your view in discussions and exams: agree strongly, agree in part, or disagree without sounding rude.",
       "tags": [
         "speaking",
+        "b2"
+      ]
+    },
+    {
+      "title": "Easily confused words",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b2-easily-confused-words.html",
+      "description": "Pairs that Arabic speakers often mix up, such as borrow and lend, rob and steal, and say and tell.",
+      "tags": [
+        "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Easily confused words",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-easily-confused-words.pdf",
+      "description": "Pairs that Arabic speakers often mix up, such as borrow and lend, rob and steal, and say and tell.",
+      "tags": [
+        "vocabulary",
         "b2"
       ]
     },
@@ -505,6 +553,30 @@
       ]
     },
     {
+      "title": "Formal verbs for phrasal verbs",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c1-formal-verbs.html",
+      "description": "Swap everyday phrasal verbs for one-word formal verbs in essays, reports and professional emails.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
+      "title": "Formal verbs for phrasal verbs",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-formal-verbs.pdf",
+      "description": "Swap everyday phrasal verbs for one-word formal verbs in essays, reports and professional emails.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -669,6 +741,30 @@
       "description": "Interrupt, hold the floor, bring others in and steer the conversation back, all with natural, tactful language.",
       "tags": [
         "speaking",
+        "c2"
+      ]
+    },
+    {
+      "title": "Shades of meaning: from mild to strong",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c2-shades-of-meaning.html",
+      "description": "Choose the exact word on a scale of intensity, so your English says precisely what you mean.",
+      "tags": [
+        "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "Shades of meaning: from mild to strong",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-shades-of-meaning.pdf",
+      "description": "Choose the exact word on a scale of intensity, so your English says precisely what you mean.",
+      "tags": [
+        "vocabulary",
         "c2"
       ]
     }
