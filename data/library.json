@@ -145,6 +145,30 @@
       ]
     },
     {
+      "title": "Making polite requests",
+      "level": "B1",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/b1-polite-requests.html",
+      "description": "Ask for things politely in shops, at work and with friends, and know which form fits each situation.",
+      "tags": [
+        "speaking",
+        "b1"
+      ]
+    },
+    {
+      "title": "Making polite requests",
+      "level": "B1",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-polite-requests.pdf",
+      "description": "Ask for things politely in shops, at work and with friends, and know which form fits each situation.",
+      "tags": [
+        "speaking",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -285,6 +309,30 @@
       "description": "Note the who, what and when from a voicemail, including the details people say only once.",
       "tags": [
         "listening",
+        "b2"
+      ]
+    },
+    {
+      "title": "Agreeing and disagreeing politely",
+      "level": "B2",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/b2-agreeing-and-disagreeing.html",
+      "description": "Share your view in discussions and exams: agree strongly, agree in part, or disagree without sounding rude.",
+      "tags": [
+        "speaking",
+        "b2"
+      ]
+    },
+    {
+      "title": "Agreeing and disagreeing politely",
+      "level": "B2",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-agreeing-and-disagreeing.pdf",
+      "description": "Share your view in discussions and exams: agree strongly, agree in part, or disagree without sounding rude.",
+      "tags": [
+        "speaking",
         "b2"
       ]
     },
@@ -433,6 +481,30 @@
       ]
     },
     {
+      "title": "Participle clauses",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c1-participle-clauses.html",
+      "description": "Combine ideas with -ing, past participle and having + past participle clauses for a tighter, more formal style.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
+      "title": "Participle clauses",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-participle-clauses.pdf",
+      "description": "Combine ideas with -ing, past participle and having + past participle clauses for a tighter, more formal style.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -573,6 +645,30 @@
       "description": "Work out what a speaker really thinks from hedges, contrasts and loaded words in spoken English.",
       "tags": [
         "listening",
+        "c2"
+      ]
+    },
+    {
+      "title": "Managing a discussion",
+      "level": "C2",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/c2-managing-a-discussion.html",
+      "description": "Interrupt, hold the floor, bring others in and steer the conversation back, all with natural, tactful language.",
+      "tags": [
+        "speaking",
+        "c2"
+      ]
+    },
+    {
+      "title": "Managing a discussion",
+      "level": "C2",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-managing-a-discussion.pdf",
+      "description": "Interrupt, hold the floor, bring others in and steer the conversation back, all with natural, tactful language.",
+      "tags": [
+        "speaking",
         "c2"
       ]
     }
