@@ -159,3 +159,9 @@ a.toggle { display: inline-block; text-decoration: none; }
 }
 .skill-links { display: flex; flex-wrap: wrap; gap: .5rem; }
 .level-link { font-size: .85rem; }
+.related { margin-top: 2.5rem; padding: 1rem 1.2rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.related h2 { margin-top: 0; font-size: 1.1rem; }
+.related ul { list-style: none; padding: 0; margin: 0 0 .5rem; display: grid; gap: .4rem; }
+.related li { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; }
+.related p { margin: 0; font-size: .95rem; }
+@media print { .related { display: none; } }
