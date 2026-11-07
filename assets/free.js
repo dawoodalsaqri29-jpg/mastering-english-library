@@ -92,9 +92,8 @@
       if (filters) new MutationObserver(render).observe(filters, { childList: true });
     })
     .catch((err) => {
-      // The section is optional on the home page: hide it rather than show a broken grid, but log why.
+      // Never leave a blank area: say what happened and point to the full library, and log why.
       console.error("Free lessons section failed to load:", err);
-      const section = document.getElementById("free");
-      if (section) section.hidden = true;
+      grid.innerHTML = `<p class="free-error" role="status">The free lessons could not load just now. <a href="library.html">Open the full library &rarr;</a> or refresh the page.</p>`;
     });
 })();
