@@ -1,0 +1,127 @@
+{
+ "audio": "isa/voice-HOOK.mp3",
+ "audio_delay": 0.5,
+ "out": "lantern-HOOK-isabella.mp4",
+ "total": 35.1,
+ "shots": [
+  {
+   "img": "L-R5-whispering-woods.jpg",
+   "start": 0,
+   "end": 2.73,
+   "move": "in",
+   "fade": 0
+  },
+  {
+   "img": "L-R4-cottage.jpg",
+   "start": 2.73,
+   "end": 7.48,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R1-noor.jpg",
+   "start": 7.48,
+   "end": 9.05,
+   "move": "out",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R2-ember.jpg",
+   "start": 9.05,
+   "end": 10.36,
+   "move": "pan-r",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R3-elder-oak.jpg",
+   "start": 10.36,
+   "end": 14.11,
+   "move": "in-up",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R6-misty-river.jpg",
+   "start": 14.11,
+   "end": 18.5,
+   "move": "pan-r",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R7-dark-hollow.jpg",
+   "start": 18.5,
+   "end": 23.19,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R8-heart-glade-unlit-edit.jpg",
+   "start": 23.19,
+   "end": 29.88,
+   "move": "in-up",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R8-heart-glade-lit.jpg",
+   "start": 29.88,
+   "end": 35.1,
+   "move": "in-up",
+   "fade": 1.6
+  }
+ ],
+ "subs": [
+  [
+   0.5,
+   2.23,
+   "The forest was dying.",
+   "الغابة كانت تموت."
+  ],
+  [
+   3.08,
+   6.98,
+   "The mushrooms turned grey. The fireflies vanished, one by one.",
+   "تحوّل الفطر إلى الرمادي، واختفت اليراعات واحدةً تلو الأخرى."
+  ],
+  [
+   7.83,
+   9.86,
+   "One girl. One little fox.",
+   "فتاةٌ واحدة. وثعلبٌ صغير."
+  ],
+  [
+   10.71,
+   13.61,
+   "A talking oak with a riddle no one could answer.",
+   "شجرةُ بلّوطٍ تتكلّم، ولديها لغزٌ لم يستطع أحدٌ حلَّه."
+  ],
+  [
+   14.46,
+   18.0,
+   "A river so misty that one wrong step could carry her away.",
+   "نهرٌ يلفّه الضباب، وخطوةٌ واحدةٌ خاطئة قد تجرفها بعيدًا."
+  ],
+  [
+   18.85,
+   22.69,
+   "A hollow so dark that even the brave little fox was afraid.",
+   "وتجويفٌ مظلمٌ لدرجة أنّ الثعلب الشجاع نفسه خاف."
+  ],
+  [
+   23.54,
+   26.25,
+   "And at the end of it all... an empty Lantern.",
+   "وفي نهاية كلّ شيء... فانوسٌ فارغ."
+  ],
+  [
+   27.1,
+   29.38,
+   "No wick. No oil. No flame.",
+   "لا فتيل. لا زيت. لا لهب."
+  ],
+  [
+   30.23,
+   33.5,
+   "So how do you light a lantern that no fire can kindle?",
+   "فكيف تُشعل فانوسًا لا تستطيع أيُّ نارٍ أن تُوقِده؟"
+  ]
+ ]
+}
