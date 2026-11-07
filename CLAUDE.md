@@ -91,6 +91,10 @@ ECC agents are specialists you call for one job.
 
 Do not install ECC's hooks or run its install scripts in this repo.
 
+25 more specialists from The Agency (`.claude/agents/agency-*`, pinned, see `.claude/agents/AGENCY.md`)
+cover stories, video, social platforms, sales to schools and pricing. Which agent does which job is in
+the "Agents by job" table in `.claude/team/ROSTER.md`: one job, one agent, a short brief.
+
 Who does what, and the hourly and daily schedule, is in `.claude/team/ROSTER.md`.
 Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
 
