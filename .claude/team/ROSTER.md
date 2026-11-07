@@ -72,6 +72,17 @@ The owner (Dawood) writes in Gulf Arabic: every report and suggestion is in Arab
   use `rel="noopener"`, no secrets in the repo, third-party scripts pinned to exact versions, gstack and ECC still at
   the pinned commits in `CLAUDE.md` and `.claude/agents/README.md`.
 
+### Strix security squad (run by hand, not on a schedule)
+[Strix](https://github.com/usestrix/strix) 1.7.0 (`uv tool install strix-agent==1.7.0`) is an AI penetration tester with
+its own team: a root agent that coordinates, a reconnaissance agent, a source-code (whitebox) analyst, an exploit-proof
+agent that must demonstrate every finding, and a fix-verification agent. It needs Docker and an AI model; the Gemini key
+is stored as a network secret (`x-goog-api-key` for `generativelanguage.googleapis.com`), so run it with
+`STRIX_LLM=gemini/gemini-3.5-flash LLM_API_KEY=proxy-injected`.
+- **Scope rule:** only this repository's code and a local copy of the site served inside the session
+  (`python3 -m http.server 8790 --bind 0.0.0.0`, target `http://172.17.0.1:8790/`). Never point it at the live
+  github.io site, the Wix store or any other host: they are run by GitHub and Wix, not by the owner.
+- Findings are verified by the lead and fixed through the normal PR flow; Strix itself changes nothing.
+
 ### Users and search
 - **خبير سهولة الوصول (`ecc-a11y-architect`) + المصمم (`/design-review`):** axe in light and dark mode on every page,
   keyboard use of filters and the level check, contrast, text size on phones, visual consistency.
