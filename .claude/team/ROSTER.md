@@ -42,7 +42,8 @@ The owner (Dawood) writes in Gulf Arabic: every report and suggestion is in Arab
 - **مستشار YC (`/office-hours`):** on Fridays challenges the top suggestion: who is it for, what evidence, what is the smallest test.
 
 ### Guard and quality
-- **الحارس اليقظ (guard):** every hour checks:
+- **الحارس اليقظ (guard):** every hour runs `node scripts/check-site.js`, which covers the list below and exits non-zero
+  on any failure. A check that could not run counts as a failure, never as a pass. The checks:
   1. every local `href`/`src` in all HTML and every path in `data/library.json` exists;
   2. every page loads in a real browser with no console errors (index, library, levels, all lessons);
   3. `node --check assets/*.js`;
