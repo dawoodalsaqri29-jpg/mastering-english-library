@@ -73,6 +73,30 @@
       ]
     },
     {
+      "title": "Articles: a, an, the or no article",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b1-articles.html",
+      "description": "When to use a, an, the or no article at all, with the slip Arabic speakers make most.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
+      "title": "Articles: a, an, the or no article",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-articles.pdf",
+      "description": "When to use a, an, the or no article at all, with the slip Arabic speakers make most.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -141,6 +165,30 @@
       "description": "A four-paragraph plan and linking words for clear, persuasive essays.",
       "tags": [
         "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Reported speech",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b2-reported-speech.html",
+      "description": "Report statements, questions and requests, and know when the tense moves back.",
+      "tags": [
+        "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "Reported speech",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-reported-speech.pdf",
+      "description": "Report statements, questions and requests, and know when the tense moves back.",
+      "tags": [
+        "grammar",
         "b2"
       ]
     },
@@ -217,6 +265,30 @@
       ]
     },
     {
+      "title": "Signposting in presentations",
+      "level": "C1",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/c1-signposting-presentations.html",
+      "description": "Phrases that guide listeners through a talk: opening, moving on, giving examples and concluding.",
+      "tags": [
+        "speaking",
+        "c1"
+      ]
+    },
+    {
+      "title": "Signposting in presentations",
+      "level": "C1",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-signposting-presentations.pdf",
+      "description": "Phrases that guide listeners through a talk: opening, moving on, giving examples and concluding.",
+      "tags": [
+        "speaking",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -283,6 +355,30 @@
       "type": "pdf",
       "path": "pdfs/c2/c2-style-and-register.pdf",
       "description": "Edit for precision: cut wordiness, control register and vary sentence rhythm.",
+      "tags": [
+        "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Nominalisation for formal writing",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c2-nominalisation.html",
+      "description": "Turn verbs and adjectives into nouns for a denser, more academic style, without losing clarity.",
+      "tags": [
+        "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Nominalisation for formal writing",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-nominalisation.pdf",
+      "description": "Turn verbs and adjectives into nouns for a denser, more academic style, without losing clarity.",
       "tags": [
         "writing",
         "c2"
