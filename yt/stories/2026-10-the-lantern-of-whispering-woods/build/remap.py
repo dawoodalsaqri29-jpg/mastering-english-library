@@ -1,12 +1,14 @@
 # Retime a section plan to a new narration.
 # python remap.py plan.json story.json CHUNK new-voice.mp3 out-plan.json out.mp4
 # new-voice.json (written by narrate.py) holds each story line's exact start/end.
+# Each subtitle also gets its story line's Arabic translation.
 # Subtitles are matched to story lines by text; a line shown as two subtitles is split by length.
 import json, sys, bisect
 plan, story, chunk, audio, outp, outv = sys.argv[1:7]
 d = json.load(open(plan)); delay = d.get("audio_delay", 0)
 norm = lambda t: "".join(ch for ch in t.lower() if ch.isalnum())
-lines = [norm(l["text"]) for l in json.load(open(story))["lines"] if l.get("chunk") == chunk]
+src = [l for l in json.load(open(story))["lines"] if l.get("chunk") == chunk]
+lines = [norm(l["text"]) for l in src]
 spans = json.load(open(audio[:-4] + ".json"))
 assert len(spans) == len(lines), (len(spans), len(lines))
 new_subs, li, pos = [], 0, 0
@@ -18,10 +20,10 @@ for a, b, text in d["subs"]:
     L = lines[li]; i = L.find(t, pos)
     s0, s1 = spans[li]
     s = s0 + (s1 - s0) * i / len(L); e = s0 + (s1 - s0) * (i + len(t)) / len(L)
-    new_subs.append([round(s + delay, 2), round(e + delay, 2), text, a, b])
+    new_subs.append([round(s + delay, 2), round(e + delay, 2), text, a, b, src[li].get("ar", "")])
     pos = i + len(t)
 old = [0.0]; new = [0.0]
-for s, e, _, a, b in new_subs:
+for s, e, _, a, b, _ar in new_subs:
     old += [a, b]; new += [s, e]
 total = round(spans[-1][1] + delay + (d["total"] - d["subs"][-1][1]), 2)
 old.append(d["total"]); new.append(total)
@@ -31,7 +33,7 @@ def m(t):
     return round(n0 + (t - t0) * (n1 - n0) / (t1 - t0 or 1), 2)
 for s in d["shots"]: s["start"], s["end"] = m(s["start"]), m(s["end"])
 d["shots"][-1]["end"] = total
-d["subs"] = [x[:3] for x in new_subs]
+d["subs"] = [x[:3] + [x[5]] for x in new_subs]  # [start, end, English, Arabic]
 d["audio"], d["out"], d["total"] = audio, outv, total
 json.dump(d, open(outp, "w"), ensure_ascii=False, indent=1)
 print(outp, "subs", len(new_subs), "total", total)

@@ -24,10 +24,18 @@ total=plan["total"]
 def ts(t): h=int(t//3600); m=int(t%3600//60); s=t%60; return f"{h}:{m:02d}:{s:05.2f}"
 ass=["[Script Info]","ScriptType: v4.00+","PlayResX: 1920","PlayResY: 1080","WrapStyle: 0","",
  "[V4+ Styles]","Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
- "Style: Read,Inter,46,&H00F0F4F6,&H000000FF,&H00101A1F,&H8C0B1418,0,0,0,0,100,100,0,0,4,14,0,2,260,260,58,1","",
+ "Style: Read,Inter,42,&H00F0F4F6,&H000000FF,&H00101A1F,&H8C0B1418,0,0,0,0,100,100,0,0,4,14,0,2,260,260,58,1",
+ # bilingual: English bottom-left, Arabic bottom-right, separate boxes
+ "Style: En,Inter,48,&H00F0F4F6,&H000000FF,&H00101A1F,&H8C0B1418,0,0,0,0,100,100,0,0,4,14,0,1,50,990,50,1",
+ "Style: Ar,Noto Sans Arabic SemBd,54,&H009FD8E8,&H000000FF,&H00101A1F,&H8C0B1418,0,0,0,0,100,100,0,0,4,14,0,3,990,50,50,1","",
  "[Events]","Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
-for st,en,tx in plan["subs"]:
-    ass.append(f"Dialogue: 0,{ts(st)},{ts(en)},Read,,0,0,0,,{{\\fad(180,180)}}{tx}")
+for sub in plan["subs"]:
+    st,en,tx=sub[:3]; ar=sub[3] if len(sub)>3 else ""
+    if ar:
+        ass.append(f"Dialogue: 0,{ts(st)},{ts(en)},En,,0,0,0,,{{\\fad(180,180)}}{tx}")
+        ass.append(f"Dialogue: 0,{ts(st)},{ts(en)},Ar,,0,0,0,,{{\\fad(180,180)}}{ar}")
+    else:
+        ass.append(f"Dialogue: 0,{ts(st)},{ts(en)},Read,,0,0,0,,{{\\fad(180,180)}}{tx}")
 open("_subs.ass","w").write("\n".join(ass)+"\n")
 fc.append(f"[{prev}]subtitles=_subs.ass:fontsdir=fonts-ttf,fade=t=in:st=0:d=0.8,fade=t=out:st={total-1:.2f}:d=1[v]")
 na=len(files)

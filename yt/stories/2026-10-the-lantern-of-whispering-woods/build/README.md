@@ -23,3 +23,10 @@ channel and to promote the store. Model files come from the kokoro-onnx releases
 `narrate.py` writes one mp3 per chunk and a `.json` with each line's exact start and end.
 `remap.py` moves a section plan's shots and subtitles onto the new timings.
 The OmniVoice model in VoiceStudio is CC BY-NC (non-commercial), so it is not used for channel videos.
+
+## Bilingual subtitles
+
+Each subtitle is `[start, end, English, Arabic]`. The English sits bottom-left and the Arabic
+bottom-right, each in its own box, so they never overlap. The Arabic comes from each story line's
+`ar` field in `story.json`. Fonts for the burn-in live in `build/fonts` (pass it as `fontsdir`):
+Inter and Noto Sans Arabic SemiBold (OFL). Cairo draws some letters as empty boxes in libass, so it is not used.
