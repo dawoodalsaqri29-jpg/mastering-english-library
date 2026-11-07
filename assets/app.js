@@ -164,16 +164,22 @@
   }
 
   fetch(base + "data/library.json")
-    .then(function (r) { return r.json(); })
+    .then(function (r) {
+      if (!r.ok) throw new Error("library.json: HTTP " + r.status);
+      return r.json();
+    })
     .then(function (data) {
-      items = group(data.resources || []);
+      if (!data || !Array.isArray(data.resources) || !data.resources.length) throw new Error("library.json: no resources");
+      items = group(data.resources);
       var order = { B1: 1, B2: 2, C1: 3, C2: 4 };
-      items.sort(function (a, b) { return (order[a.level] - order[b.level]) || a.title.localeCompare(b.title); });
+      var rank = function (lv) { return order[lv] || 99; };
+      items.sort(function (a, b) { return (rank(a.level) - rank(b.level)) || a.title.localeCompare(b.title); });
       readUrl();
       [q, level, skill, hideDone].forEach(function (el) { if (el) el.addEventListener("input", function () { writeUrl(); render(); }); });
       render();
     })
-    .catch(function () {
-      catalog.innerHTML = '<p class="empty">Could not load the catalogue. If you opened this file directly, serve the folder over HTTP instead.</p>';
+    .catch(function (err) {
+      console.error("Free lessons list failed to load:", err);
+      catalog.innerHTML = '<p class="empty">The lesson list could not load. Please reload the page in a moment.</p>';
     });
 })();

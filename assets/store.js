@@ -20,6 +20,8 @@
     return found;
   }
 
+  // Only web links are allowed in buy buttons; anything else (e.g. "javascript:") is treated as no link.
+  const safeUrl = (u) => (/^https?:\/\//i.test(String(u || "")) ? u : "");
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function cover(b, i) {
@@ -33,7 +35,7 @@
 
   function card(b, i) {
     // Titles without a real link show a disabled "Coming soon" label instead of a button that jumps to the top.
-    const hasLink = b.link && b.link !== "#";
+    const hasLink = !!safeUrl(b.link);
     const action = hasLink
       ? `<a class="btn btn-small" href="${esc(b.link)}" target="_blank" rel="noopener">Get PDF</a>`
       : `<span class="btn btn-small btn-soon" aria-disabled="true">Coming soon</span>`;
@@ -69,7 +71,10 @@
       .filter(({ b }) => state.cat === "All" || b.category === state.cat)
       .filter(({ b }) => !q || `${b.title} ${b.subtitle} ${b.description}`.toLowerCase().includes(q));
     document.getElementById("grid").innerHTML = list.map(({ b, i }) => card(b, i)).join("");
-    document.getElementById("empty").hidden = list.length > 0;
+    const empty = document.getElementById("empty");
+    // If catalog.js did not load, say so instead of "No titles match".
+    if (!books.length) empty.textContent = "The PDF catalogue could not load. Please reload the page in a moment.";
+    empty.hidden = list.length > 0;
   }
 
   document.getElementById("search").addEventListener("input", (e) => { state.q = e.target.value; render(); });
@@ -82,7 +87,7 @@
   document.getElementById("statCount").textContent = books.length;
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("author").textContent = site.author || site.name || "";
-  if (site.storeUrl && site.storeUrl !== "#") {
+  if (safeUrl(site.storeUrl)) {
     const s = document.getElementById("storeBtn");
     s.href = site.storeUrl; s.target = "_blank"; s.rel = "noopener"; s.textContent = "Visit store";
   }

@@ -79,12 +79,22 @@
   }
 
   fetch("data/library.json")
-    .then((r) => r.json())
+    .then((r) => {
+      if (!r.ok) throw new Error("library.json: HTTP " + r.status);
+      return r.json();
+    })
     .then((data) => {
       lessons = (data.resources || []).filter((r) => r.type === "lesson");
+      if (!lessons.length) throw new Error("library.json: no lessons");
       render();
       // Re-render whenever the store's level filters or level cards change the level.
-      new MutationObserver(render).observe(document.getElementById("levelFilters"), { childList: true });
+      const filters = document.getElementById("levelFilters");
+      if (filters) new MutationObserver(render).observe(filters, { childList: true });
     })
-    .catch(() => { document.getElementById("free").hidden = true; });
+    .catch((err) => {
+      // The section is optional on the home page: hide it rather than show a broken grid, but log why.
+      console.error("Free lessons section failed to load:", err);
+      const section = document.getElementById("free");
+      if (section) section.hidden = true;
+    });
 })();

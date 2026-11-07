@@ -30,6 +30,12 @@
       u.rate = parseFloat(b.getAttribute("data-rate") || "1");
       var v = englishVoice();
       if (v) u.voice = v;
+      u.onerror = function (e) {
+        if (e.error === "canceled" || e.error === "interrupted") return; // Stop or a new Play
+        document.querySelectorAll("[data-speak-note]").forEach(function (n) {
+          n.textContent = "The audio could not play in this browser. Open the transcript and read it instead.";
+        });
+      };
       window.speechSynthesis.speak(u);
     });
   });
