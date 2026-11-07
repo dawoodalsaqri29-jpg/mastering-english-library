@@ -241,6 +241,30 @@
       ]
     },
     {
+      "title": "Following directions",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b1-following-directions.html",
+      "description": "Understand spoken directions to a place: turns, landmarks and distances, in the right order.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
+      "title": "Following directions",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-following-directions.pdf",
+      "description": "Understand spoken directions to a place: turns, landmarks and distances, in the right order.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -477,6 +501,30 @@
       "description": "Separate what can be checked from what the writer believes, a key skill for news, reviews and exam texts.",
       "tags": [
         "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Catching numbers and statistics",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b2-numbers-and-statistics.html",
+      "description": "Note percentages, large numbers, dates and trends accurately in a short news report.",
+      "tags": [
+        "listening",
+        "b2"
+      ]
+    },
+    {
+      "title": "Catching numbers and statistics",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-numbers-and-statistics.pdf",
+      "description": "Note percentages, large numbers, dates and trends accurately in a short news report.",
+      "tags": [
+        "listening",
         "b2"
       ]
     },
@@ -721,6 +769,30 @@
       ]
     },
     {
+      "title": "News reports: main idea and detail",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c1-news-main-idea-detail.html",
+      "description": "Separate the main story from supporting detail and background in a short radio news item.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
+      "title": "News reports: main idea and detail",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-news-main-idea-detail.pdf",
+      "description": "Separate the main story from supporting detail and background in a short radio news item.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -957,6 +1029,30 @@
       "description": "Read the strength of a claim in academic and news texts, from tentative suggestion to firm conclusion.",
       "tags": [
         "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "Spoken discourse markers",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c2-spoken-discourse-markers.html",
+      "description": "Follow a fast, natural speaker through markers like mind you, that said, anyway and as I say.",
+      "tags": [
+        "listening",
+        "c2"
+      ]
+    },
+    {
+      "title": "Spoken discourse markers",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-spoken-discourse-markers.pdf",
+      "description": "Follow a fast, natural speaker through markers like mind you, that said, anyway and as I say.",
+      "tags": [
+        "listening",
         "c2"
       ]
     }
