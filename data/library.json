@@ -193,6 +193,30 @@
       ]
     },
     {
+      "title": "Writing a short story",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b1-writing-a-story.html",
+      "description": "Tell a story about a past event with a clear order, past tenses and time words that link the events.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
+      "title": "Writing a short story",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-writing-a-story.pdf",
+      "description": "Tell a story about a past event with a clear order, past tenses and time words that link the events.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -381,6 +405,30 @@
       "description": "Pairs that Arabic speakers often mix up, such as borrow and lend, rob and steal, and say and tell.",
       "tags": [
         "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing a formal complaint email",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b2-complaint-email.html",
+      "description": "Complain clearly and politely, explain the problem with facts, and ask for a specific solution.",
+      "tags": [
+        "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing a formal complaint email",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-complaint-email.pdf",
+      "description": "Complain clearly and politely, explain the problem with facts, and ask for a specific solution.",
+      "tags": [
+        "writing",
         "b2"
       ]
     },
@@ -577,6 +625,30 @@
       ]
     },
     {
+      "title": "Essay introductions and conclusions",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c1-essay-introductions-conclusions.html",
+      "description": "Open with a clear context and thesis, and close by drawing your argument together, not by repeating it.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
+      "title": "Essay introductions and conclusions",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-essay-introductions-conclusions.pdf",
+      "description": "Open with a clear context and thesis, and close by drawing your argument together, not by repeating it.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -765,6 +837,30 @@
       "description": "Choose the exact word on a scale of intensity, so your English says precisely what you mean.",
       "tags": [
         "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "The subjunctive in formal English",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c2-subjunctive.html",
+      "description": "Use the base-form subjunctive after verbs like insist and recommend, and were for unreal situations.",
+      "tags": [
+        "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "The subjunctive in formal English",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-subjunctive.pdf",
+      "description": "Use the base-form subjunctive after verbs like insist and recommend, and were for unreal situations.",
+      "tags": [
+        "grammar",
         "c2"
       ]
     }
