@@ -121,6 +121,30 @@
       ]
     },
     {
+      "title": "Understanding announcements",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b1-understanding-announcements.html",
+      "description": "Catch the key facts in station and airport announcements: times, numbers, places and changes.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
+      "title": "Understanding announcements",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-understanding-announcements.pdf",
+      "description": "Catch the key facts in station and airport announcements: times, numbers, places and changes.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -237,6 +261,30 @@
       "description": "Spot the words that show what a writer really thinks, even when they never say \"I think\".",
       "tags": [
         "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Understanding phone messages",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b2-phone-messages.html",
+      "description": "Note the who, what and when from a voicemail, including the details people say only once.",
+      "tags": [
+        "listening",
+        "b2"
+      ]
+    },
+    {
+      "title": "Understanding phone messages",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-phone-messages.pdf",
+      "description": "Note the who, what and when from a voicemail, including the details people say only once.",
+      "tags": [
+        "listening",
         "b2"
       ]
     },
@@ -361,6 +409,30 @@
       ]
     },
     {
+      "title": "Following a short lecture",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c1-following-a-lecture.html",
+      "description": "Use the speaker's signposts to follow the structure of an academic talk and take useful notes.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
+      "title": "Following a short lecture",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-following-a-lecture.pdf",
+      "description": "Use the speaker's signposts to follow the structure of an academic talk and take useful notes.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -477,6 +549,30 @@
       "description": "Read between the lines: when writers say less, or the opposite, of what they mean.",
       "tags": [
         "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "Hearing the speaker's attitude",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c2-speaker-attitude.html",
+      "description": "Work out what a speaker really thinks from hedges, contrasts and loaded words in spoken English.",
+      "tags": [
+        "listening",
+        "c2"
+      ]
+    },
+    {
+      "title": "Hearing the speaker's attitude",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-speaker-attitude.pdf",
+      "description": "Work out what a speaker really thinks from hedges, contrasts and loaded words in spoken English.",
+      "tags": [
+        "listening",
         "c2"
       ]
     }
