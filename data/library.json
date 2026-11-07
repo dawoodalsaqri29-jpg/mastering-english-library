@@ -289,6 +289,30 @@
       ]
     },
     {
+      "title": "Must, have to and should",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b1-modals-obligation-advice.html",
+      "description": "Talk about rules, obligations and advice, and know when something is not necessary.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
+      "title": "Must, have to and should",
+      "level": "B1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-modals-obligation-advice.pdf",
+      "description": "Talk about rules, obligations and advice, and know when something is not necessary.",
+      "tags": [
+        "grammar",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -573,6 +597,30 @@
       "description": "Talk for a minute about a picture: say what you see, speculate about it, and compare two photos.",
       "tags": [
         "speaking",
+        "b2"
+      ]
+    },
+    {
+      "title": "The passive voice",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/b2-passive-voice.html",
+      "description": "Form the passive in every tense and choose it when the action matters more than the person who did it.",
+      "tags": [
+        "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "The passive voice",
+      "level": "B2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-passive-voice.pdf",
+      "description": "Form the passive in every tense and choose it when the action matters more than the person who did it.",
+      "tags": [
+        "grammar",
         "b2"
       ]
     },
@@ -865,6 +913,30 @@
       ]
     },
     {
+      "title": "Future perfect and future continuous",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c1-future-perfect-continuous.html",
+      "description": "Look back from a point in the future and describe actions in progress then, with precise future forms.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
+      "title": "Future perfect and future continuous",
+      "level": "C1",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-future-perfect-continuous.pdf",
+      "description": "Look back from a point in the future and describe actions in progress then, with precise future forms.",
+      "tags": [
+        "grammar",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1149,6 +1221,30 @@
       "description": "Make a persuasive case, handle objections and reach agreement with precise, diplomatic language.",
       "tags": [
         "speaking",
+        "c2"
+      ]
+    },
+    {
+      "title": "Ellipsis and substitution",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "lesson",
+      "path": "lessons/c2-ellipsis-and-substitution.html",
+      "description": "Avoid repetition the way fluent speakers do, by leaving words out or replacing them with so, do, one and not.",
+      "tags": [
+        "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "Ellipsis and substitution",
+      "level": "C2",
+      "skill": "Grammar",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-ellipsis-and-substitution.pdf",
+      "description": "Avoid repetition the way fluent speakers do, by leaving words out or replacing them with so, do, one and not.",
+      "tags": [
+        "grammar",
         "c2"
       ]
     }
