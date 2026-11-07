@@ -157,3 +157,5 @@ a.toggle { display: inline-block; text-decoration: none; }
   h2, h3 { break-after: avoid; }
   a { color: inherit; text-decoration: none; }
 }
+.skill-links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.level-link { font-size: .85rem; }
