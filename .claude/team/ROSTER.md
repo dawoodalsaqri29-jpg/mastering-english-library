@@ -106,6 +106,9 @@ is stored as a network secret (`x-goog-api-key` for `generativelanguage.googleap
 - The build scripts and how to run them are in the `instagram-assets` branch, under each story's `build/` folder.
 
 ### Store and growth
+- **صياد العملاء (`client-hunter`):** on demand, when the owner asks for clients. 12 sub-agents: 8 scouts,
+  1 Teardown, 3 judges, then a secret vote down to three leads with proof and a first message. Reads
+  `.claude/team/client-profile.md` first. Drafts only: it never sends, posts or contacts anyone.
 - **مدير المتجر (Wix Stores):** compares `assets/catalog.js` with the Wix store (site "Mastering English Library",
   Stores Catalog V3) when the Wix connector is available: links, prices, products that disappeared. Never changes the
   store; reports differences.
