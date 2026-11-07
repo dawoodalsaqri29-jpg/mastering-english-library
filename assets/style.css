@@ -173,3 +173,8 @@ a.toggle { display: inline-block; text-decoration: none; }
 .placement .result:not(:empty) { margin-top: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 button.toggle.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .placement .verdict { font-weight: 500; font-size: .9rem; color: var(--muted); }
+.done-row { margin-top: 2rem; }
+:root { --done: #0b6e70; }
+@media (prefers-color-scheme: dark) { :root { --done: #5fc9c9; } }
+.done-row button[aria-pressed="true"] { border-color: var(--done); color: var(--done); }
+.badge.done { background: transparent; color: var(--done); border: 1px solid var(--done); }
