@@ -96,6 +96,15 @@ is stored as a network secret (`x-goog-api-key` for `generativelanguage.googleap
 - **محلل التعليقات (`ecc-comment-analyzer`) + محدّث التوثيق (`ecc-doc-updater`):** comments that no longer match the code,
   README and CLAUDE.md out of date with the site.
 
+### Videos (stories and lessons)
+- **Narration voice:** the owner chose Kokoro `bf_isabella` (speed 0.92) as the main voice for every video on
+  YouTube, Instagram and TikTok. Kokoro-82M is Apache-2.0, so commercial use is allowed. Do not use OmniVoice
+  (VoiceStudio): its weights are CC BY-NC, non-commercial only.
+- **Subtitles:** English and Arabic in separate boxes, never mixed: English left and Arabic right in the 16:9
+  version, English above Arabic in the 9:16 version. Arabic font: Noto Sans Arabic (Cairo drops letters in libass).
+- **Two versions of every video:** 16:9 for YouTube and 9:16 for Reels, TikTok and Shorts.
+- The build scripts and how to run them are in the `instagram-assets` branch, under each story's `build/` folder.
+
 ### Store and growth
 - **مدير المتجر (Wix Stores):** compares `assets/catalog.js` with the Wix store (site "Mastering English Library",
   Stores Catalog V3) when the Wix connector is available: links, prices, products that disappeared. Never changes the
