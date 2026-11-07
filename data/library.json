@@ -313,6 +313,30 @@
       ]
     },
     {
+      "title": "Travel and airport vocabulary",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b1-travel-vocabulary.html",
+      "description": "The words and phrases you need from check-in to arrival, and the verbs that go with them.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
+      "title": "Travel and airport vocabulary",
+      "level": "B1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-travel-vocabulary.pdf",
+      "description": "The words and phrases you need from check-in to arrival, and the verbs that go with them.",
+      "tags": [
+        "vocabulary",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -621,6 +645,30 @@
       "description": "Form the passive in every tense and choose it when the action matters more than the person who did it.",
       "tags": [
         "grammar",
+        "b2"
+      ]
+    },
+    {
+      "title": "Word formation: prefixes and suffixes",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/b2-word-formation.html",
+      "description": "Build families of words from one root and choose the right form for nouns, verbs, adjectives and opposites.",
+      "tags": [
+        "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Word formation: prefixes and suffixes",
+      "level": "B2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-word-formation.pdf",
+      "description": "Build families of words from one root and choose the right form for nouns, verbs, adjectives and opposites.",
+      "tags": [
+        "vocabulary",
         "b2"
       ]
     },
@@ -937,6 +985,30 @@
       ]
     },
     {
+      "title": "Hedging: sounding careful and precise",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c1-hedging-language.html",
+      "description": "Soften claims in essays and discussions so you sound measured and academic rather than absolute.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
+      "title": "Hedging: sounding careful and precise",
+      "level": "C1",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-hedging-language.pdf",
+      "description": "Soften claims in essays and discussions so you sound measured and academic rather than absolute.",
+      "tags": [
+        "vocabulary",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1245,6 +1317,30 @@
       "description": "Avoid repetition the way fluent speakers do, by leaving words out or replacing them with so, do, one and not.",
       "tags": [
         "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "Metaphor in everyday English",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "lesson",
+      "path": "lessons/c2-metaphor-in-everyday-english.html",
+      "description": "Recognise the hidden metaphors behind common expressions and use them naturally in your own speech and writing.",
+      "tags": [
+        "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "Metaphor in everyday English",
+      "level": "C2",
+      "skill": "Vocabulary",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-metaphor-in-everyday-english.pdf",
+      "description": "Recognise the hidden metaphors behind common expressions and use them naturally in your own speech and writing.",
+      "tags": [
+        "vocabulary",
         "c2"
       ]
     }
