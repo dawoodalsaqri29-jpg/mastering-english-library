@@ -1963,21 +1963,115 @@
  ],
  "lines": [
   {
-   "id": 1,
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "The forest was dying.",
+   "ar": "الغابة كانت تموت.",
+   "shots": [
+    "S008"
+   ],
+   "id": 1
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "The mushrooms turned grey. The fireflies vanished, one by one.",
+   "ar": "تحوّل الفطر إلى الرمادي، واختفت اليراعات واحدةً تلو الأخرى.",
+   "shots": [
+    "S006"
+   ],
+   "id": 2
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "One girl. One little fox.",
+   "ar": "فتاةٌ واحدة. وثعلبٌ صغير.",
+   "shots": [
+    "S022"
+   ],
+   "id": 3
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "A talking oak with a riddle no one could answer.",
+   "ar": "شجرةُ بلّوطٍ تتكلّم، ولديها لغزٌ لم يستطع أحدٌ حلَّه.",
+   "shots": [
+    "S036",
+    "S043"
+   ],
+   "id": 4
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "A river so misty that one wrong step could carry her away.",
+   "ar": "نهرٌ يلفّه الضباب، وخطوةٌ واحدةٌ خاطئة قد تجرفها بعيدًا.",
+   "shots": [
+    "S055",
+    "S061"
+   ],
+   "id": 5
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "A hollow so dark that even the brave little fox was afraid.",
+   "ar": "وتجويفٌ مظلمٌ لدرجة أنّ الثعلب الشجاع نفسه خاف.",
+   "shots": [
+    "S074",
+    "S076"
+   ],
+   "id": 6
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "And at the end of it all... an empty Lantern.",
+   "ar": "وفي نهاية كلّ شيء... فانوسٌ فارغ.",
+   "shots": [
+    "S092",
+    "S095"
+   ],
+   "id": 7
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "No wick. No oil. No flame.",
+   "ar": "لا فتيل. لا زيت. لا لهب.",
+   "shots": [
+    "S097"
+   ],
+   "id": 8
+  },
+  {
+   "chunk": "HOOK",
+   "section": "hook",
+   "text": "So how do you light a lantern that no fire can kindle?",
+   "ar": "فكيف تُشعل فانوسًا لا تستطيع أيُّ نارٍ أن تُوقِده؟",
+   "shots": [
+    "S099"
+   ],
+   "id": 9
+  },
+  {
+   "id": 10,
    "chunk": "A",
    "section": "title",
    "text": "Welcome to a new English story. Tonight, we walk into a forest where the light is slowly fading. Listen closely, and read along.",
    "slide": "title"
   },
   {
-   "id": 2,
+   "id": 11,
    "chunk": "A",
    "section": "chapter",
    "text": "Chapter one. The Fading Light.",
    "slide": "chapter-1"
   },
   {
-   "id": 3,
+   "id": 12,
    "chunk": "A",
    "section": "story",
    "text": "At the edge of the Whispering Woods, in a small stone cottage with a mossy roof, there lived a girl named Noor.",
@@ -1987,7 +2081,7 @@
    ]
   },
   {
-   "id": 4,
+   "id": 13,
    "chunk": "A",
    "section": "story",
    "text": "Every night, Noor fell asleep to the glow of the forest outside her window.",
@@ -1997,7 +2091,7 @@
    ]
   },
   {
-   "id": 5,
+   "id": 14,
    "chunk": "A",
    "section": "story",
    "text": "Mushrooms shone like tiny blue moons between the roots. Fireflies drifted through the branches like sparks from a gentle fire.",
@@ -2008,7 +2102,7 @@
    ]
   },
   {
-   "id": 6,
+   "id": 15,
    "chunk": "A",
    "section": "story",
    "text": "And the trees themselves would murmur soft songs that no one could quite understand, but everyone could feel.",
@@ -2018,7 +2112,7 @@
    ]
   },
   {
-   "id": 7,
+   "id": 16,
    "chunk": "A",
    "section": "story",
    "text": "But this autumn, something was wrong.",
@@ -2028,7 +2122,7 @@
    ]
   },
   {
-   "id": 8,
+   "id": 17,
    "chunk": "A",
    "section": "story",
    "text": "Night by night, the glow began to dwindle, the way a candle shrinks when no one remembers to tend it.",
@@ -2038,7 +2132,7 @@
    ]
   },
   {
-   "id": 9,
+   "id": 18,
    "chunk": "A",
    "section": "story",
    "text": "The mushrooms faded to grey. The fireflies vanished one by one. And the songs of the trees became a thin, eerie silence.",
@@ -2048,7 +2142,7 @@
    ]
   },
   {
-   "id": 10,
+   "id": 19,
    "chunk": "A",
    "section": "story",
    "text": "Noor sat at her window, chin in hands, remembering her grandmother's old story.",
@@ -2058,7 +2152,7 @@
    ]
   },
   {
-   "id": 11,
+   "id": 20,
    "chunk": "A",
    "section": "story",
    "text": "“Deep in the heart of the woods,” Grandmother would whisper, “there is an ancient Lantern. As long as it shines, the forest shines too.”",
@@ -2069,7 +2163,7 @@
    ]
   },
   {
-   "id": 12,
+   "id": 21,
    "chunk": "A",
    "section": "story",
    "text": "“Then someone must find it,” Noor said. “Before the light is gone for ever.”",
@@ -2079,7 +2173,7 @@
    ]
   },
   {
-   "id": 13,
+   "id": 22,
    "chunk": "B",
    "section": "story",
    "text": "Just then, a sharp little cry came from the garden.",
@@ -2090,7 +2184,7 @@
    ]
   },
   {
-   "id": 14,
+   "id": 23,
    "chunk": "B",
    "section": "story",
    "text": "Noor pulled on her cloak and hurried out into the cold blue dark.",
@@ -2100,7 +2194,7 @@
    ]
   },
   {
-   "id": 15,
+   "id": 24,
    "chunk": "B",
    "section": "story",
    "text": "There, caught in the brambles by the gate, was a fox cub no bigger than a cat, with a coat the colour of autumn leaves.",
@@ -2111,7 +2205,7 @@
    ]
   },
   {
-   "id": 16,
+   "id": 25,
    "chunk": "B",
    "section": "story",
    "text": "“Hush now,” Noor murmured, kneeling down. “I won't hurt you.”",
@@ -2121,7 +2215,7 @@
    ]
   },
   {
-   "id": 17,
+   "id": 26,
    "chunk": "B",
    "section": "story",
    "text": "Slowly, gently, she untangled each thorn from his fur, even though the brambles scratched her fingers.",
@@ -2132,7 +2226,7 @@
    ]
   },
   {
-   "id": 18,
+   "id": 27,
    "chunk": "B",
    "section": "story",
    "text": "Once free, the cub didn't run away. He sat in the frosty grass and looked up at her with bright amber eyes.",
@@ -2142,7 +2236,7 @@
    ]
   },
   {
-   "id": 19,
+   "id": 28,
    "chunk": "B",
    "section": "story",
    "text": "“I'll call you Ember,” she smiled, “because you look like the last spark of a fire.”",
@@ -2152,7 +2246,7 @@
    ]
   },
   {
-   "id": 20,
+   "id": 29,
    "chunk": "B",
    "section": "story",
    "text": "Ember tilted his head. Then he trotted three steps towards the dark trees, stopped, and looked back at her.",
@@ -2163,7 +2257,7 @@
    ]
   },
   {
-   "id": 21,
+   "id": 30,
    "chunk": "B",
    "section": "story",
    "text": "“You want me to follow you?” Noor whispered. Her heart was beating fast, but her feet were already moving.",
@@ -2173,7 +2267,7 @@
    ]
   },
   {
-   "id": 22,
+   "id": 31,
    "chunk": "B",
    "section": "story",
    "text": "And so, under a thin silver moon, the girl and the fox stepped into the Whispering Woods.",
@@ -2183,14 +2277,14 @@
    ]
   },
   {
-   "id": 23,
+   "id": 32,
    "chunk": "C",
    "section": "chapter",
    "text": "Chapter two. The Riddle of the Elder Oak.",
    "slide": "chapter-2"
   },
   {
-   "id": 24,
+   "id": 33,
    "chunk": "C",
    "section": "story",
    "text": "Inside the woods, the air smelled of moss and cold rain, and every shadow seemed to lean closer to listen.",
@@ -2201,7 +2295,7 @@
    ]
   },
   {
-   "id": 25,
+   "id": 34,
    "chunk": "C",
    "section": "story",
    "text": "Ember was nimble and quick. He slipped under roots and over fallen logs as if he had wings instead of paws.",
@@ -2211,7 +2305,7 @@
    ]
   },
   {
-   "id": 26,
+   "id": 35,
    "chunk": "C",
    "section": "story",
    "text": "Noor followed more slowly, as the last few mushrooms flickered weakly at her feet.",
@@ -2221,7 +2315,7 @@
    ]
   },
   {
-   "id": 27,
+   "id": 36,
    "chunk": "C",
    "section": "story",
    "text": "Then the whispering began.",
@@ -2231,7 +2325,7 @@
    ]
   },
   {
-   "id": 28,
+   "id": 37,
    "chunk": "C",
    "section": "story",
    "text": "It rose from every side, from the leaves, the bark and the roots deep under the earth.",
@@ -2241,7 +2335,7 @@
    ]
   },
   {
-   "id": 29,
+   "id": 38,
    "chunk": "C",
    "section": "story",
    "text": "It was a soft, endless murmur, like the sea inside a shell.",
@@ -2251,7 +2345,7 @@
    ]
   },
   {
-   "id": 30,
+   "id": 39,
    "chunk": "C",
    "section": "story",
    "text": "“Who goes there?” the trees seemed to say. “Who walks in the woods when the light is dying?”",
@@ -2261,7 +2355,7 @@
    ]
   },
   {
-   "id": 31,
+   "id": 40,
    "chunk": "C",
    "section": "story",
    "text": "The path ended suddenly at an enormous oak, so old that its silver bark had folded itself into a face.",
@@ -2271,7 +2365,7 @@
    ]
   },
   {
-   "id": 32,
+   "id": 41,
    "chunk": "C",
    "section": "story",
    "text": "Two moss-green eyes opened slowly in the trunk, glowing like lamps behind green glass.",
@@ -2281,7 +2375,7 @@
    ]
   },
   {
-   "id": 33,
+   "id": 42,
    "chunk": "C",
    "section": "story",
    "text": "“Little ones,” rumbled the Elder Oak, in a voice as deep as thunder underground. “Why have you come?”",
@@ -2291,7 +2385,7 @@
    ]
   },
   {
-   "id": 34,
+   "id": 43,
    "chunk": "C",
    "section": "story",
    "text": "Noor swallowed hard and stood up straight. “We're looking for the Lantern. The forest is fading, and I want to help.”",
@@ -2302,7 +2396,7 @@
    ]
   },
   {
-   "id": 35,
+   "id": 44,
    "chunk": "D",
    "section": "story",
    "text": "The old tree was silent. Then its roots twisted across the path like sleeping snakes.",
@@ -2312,7 +2406,7 @@
    ]
   },
   {
-   "id": 36,
+   "id": 45,
    "chunk": "D",
    "section": "story",
    "text": "“Many have searched,” said the Oak. “The way is perilous, and I open it only to those who can answer my riddle.”",
@@ -2322,7 +2416,7 @@
    ]
   },
   {
-   "id": 37,
+   "id": 46,
    "chunk": "D",
    "section": "story",
    "text": "The leaves around them hushed, as if the whole forest were holding its breath.",
@@ -2332,7 +2426,7 @@
    ]
   },
   {
-   "id": 38,
+   "id": 47,
    "chunk": "D",
    "section": "story",
    "text": "“The more you take, the more you leave behind. What am I?”",
@@ -2342,7 +2436,7 @@
    ]
   },
   {
-   "id": 39,
+   "id": 48,
    "chunk": "D",
    "section": "story",
    "text": "Noor thought hard. She looked at the dark path ahead, and then back at the soft earth behind her.",
@@ -2352,7 +2446,7 @@
    ]
   },
   {
-   "id": 40,
+   "id": 49,
    "chunk": "D",
    "section": "story",
    "text": "There in the mud were her own small boot prints, and beside them, the tiny paw prints of a fox.",
@@ -2362,7 +2456,7 @@
    ]
   },
   {
-   "id": 41,
+   "id": 50,
    "chunk": "D",
    "section": "story",
    "text": "“Footsteps!” she cried. “The more steps you take, the more footsteps you leave behind!”",
@@ -2372,7 +2466,7 @@
    ]
   },
   {
-   "id": 42,
+   "id": 51,
    "chunk": "D",
    "section": "story",
    "text": "The Elder Oak laughed, a warm, creaking sound, and its roots slid aside to open the path.",
@@ -2382,7 +2476,7 @@
    ]
   },
   {
-   "id": 43,
+   "id": 52,
    "chunk": "D",
    "section": "story",
    "text": "“Clever child,” it said. “But remember this: no flint or flame can light the Lantern. You must kindle it another way.”",
@@ -2392,7 +2486,7 @@
    ]
   },
   {
-   "id": 44,
+   "id": 53,
    "chunk": "D",
    "section": "story",
    "text": "“What way?” Noor asked. But the Oak's eyes had already closed, and only a gentle murmur answered her.",
@@ -2403,14 +2497,14 @@
    ]
   },
   {
-   "id": 45,
+   "id": 54,
    "chunk": "E",
    "section": "chapter",
    "text": "Chapter three. Across the Misty River.",
    "slide": "chapter-3"
   },
   {
-   "id": 46,
+   "id": 55,
    "chunk": "E",
    "section": "story",
    "text": "Soon they heard water, slow and heavy, somewhere in the dark.",
@@ -2420,7 +2514,7 @@
    ]
   },
   {
-   "id": 47,
+   "id": 56,
    "chunk": "E",
    "section": "story",
    "text": "The Misty River lay across their path, wrapped in a mist so thick that Noor could barely see her own hands.",
@@ -2430,7 +2524,7 @@
    ]
   },
   {
-   "id": 48,
+   "id": 57,
    "chunk": "E",
    "section": "story",
    "text": "Somewhere beneath that mist, she knew, were the old stepping stones. But where?",
@@ -2441,7 +2535,7 @@
    ]
   },
   {
-   "id": 49,
+   "id": 58,
    "chunk": "E",
    "section": "story",
    "text": "One wrong step, and the cold current would carry her away. It was the most perilous crossing in the whole forest.",
@@ -2451,7 +2545,7 @@
    ]
   },
   {
-   "id": 50,
+   "id": 59,
    "chunk": "E",
    "section": "story",
    "text": "Noor's knees began to tremble. “I can't do it,” she whispered. “I can't see a thing.”",
@@ -2462,7 +2556,7 @@
    ]
   },
   {
-   "id": 51,
+   "id": 60,
    "chunk": "E",
    "section": "story",
    "text": "Ember pressed his warm nose against her hand. Then, without a sound, he leapt into the mist.",
@@ -2473,7 +2567,7 @@
    ]
   },
   {
-   "id": 52,
+   "id": 61,
    "chunk": "E",
    "section": "story",
    "text": "He landed on a hidden stone, light and nimble as a falling leaf, and turned to look back at her.",
@@ -2483,7 +2577,7 @@
    ]
   },
   {
-   "id": 53,
+   "id": 62,
    "chunk": "E",
    "section": "story",
    "text": "And there, glowing faintly in the moonlight, was the white tip of his tail, bright as a little star.",
@@ -2493,7 +2587,7 @@
    ]
   },
   {
-   "id": 54,
+   "id": 63,
    "chunk": "E",
    "section": "story",
    "text": "“Of course!” Noor breathed. “I don't have to see the stones. I only have to follow you.”",
@@ -2503,7 +2597,7 @@
    ]
   },
   {
-   "id": 55,
+   "id": 64,
    "chunk": "E",
    "section": "story",
    "text": "Stone by stone, the fox led the way, and stone by stone, the girl followed the small white light of his tail.",
@@ -2514,7 +2608,7 @@
    ]
   },
   {
-   "id": 56,
+   "id": 65,
    "chunk": "E",
    "section": "story",
    "text": "Halfway across, Noor saw something tiny struggling on a wet rock: a firefly, its wings soaked and heavy.",
@@ -2525,7 +2619,7 @@
    ]
   },
   {
-   "id": 57,
+   "id": 66,
    "chunk": "E",
    "section": "story",
    "text": "Its light was dwindling to almost nothing, like the last breath of a candle.",
@@ -2535,7 +2629,7 @@
    ]
   },
   {
-   "id": 58,
+   "id": 67,
    "chunk": "E",
    "section": "story",
    "text": "Noor cupped it carefully in her palm and blew on it softly until its wings were dry.",
@@ -2545,7 +2639,7 @@
    ]
   },
   {
-   "id": 59,
+   "id": 68,
    "chunk": "E",
    "section": "story",
    "text": "The firefly shivered. Then it glowed, just once, warm and golden, before it flew away into the mist.",
@@ -2555,7 +2649,7 @@
    ]
   },
   {
-   "id": 60,
+   "id": 69,
    "chunk": "E",
    "section": "story",
    "text": "“Goodbye, little friend,” Noor smiled. Then, with one last jump, she reached the far bank beside Ember.",
@@ -2566,14 +2660,14 @@
    ]
   },
   {
-   "id": 61,
+   "id": 70,
    "chunk": "F",
    "section": "chapter",
    "text": "Chapter four. The Dark Hollow.",
    "slide": "chapter-4"
   },
   {
-   "id": 62,
+   "id": 71,
    "chunk": "F",
    "section": "story",
    "text": "Beyond the river, the ground sloped down into a deep, shadowy hollow where no moonlight could reach.",
@@ -2583,7 +2677,7 @@
    ]
   },
   {
-   "id": 63,
+   "id": 72,
    "chunk": "F",
    "section": "story",
    "text": "Here the trees did not whisper at all. The silence was so eerie that Noor could hear her own heartbeat.",
@@ -2593,7 +2687,7 @@
    ]
   },
   {
-   "id": 64,
+   "id": 73,
    "chunk": "F",
    "section": "story",
    "text": "Black roots twisted overhead like the ribs of some enormous, sleeping creature.",
@@ -2603,7 +2697,7 @@
    ]
   },
   {
-   "id": 65,
+   "id": 74,
    "chunk": "F",
    "section": "story",
    "text": "At the bottom, the path split into three tunnels, each as black as the inside of a closed eye.",
@@ -2613,7 +2707,7 @@
    ]
   },
   {
-   "id": 66,
+   "id": 75,
    "chunk": "F",
    "section": "story",
    "text": "“Which way?” Noor whispered. Ember's ears flattened. For the first time, the brave little fox looked afraid.",
@@ -2623,7 +2717,7 @@
    ]
   },
   {
-   "id": 67,
+   "id": 76,
    "chunk": "F",
    "section": "story",
    "text": "Noor knelt and gathered him into her cloak. She could feel him trembling against her.",
@@ -2633,7 +2727,7 @@
    ]
   },
   {
-   "id": 68,
+   "id": 77,
    "chunk": "F",
    "section": "story",
    "text": "“It's all right,” she said softly, though her own voice shook. “We'll be steadfast together. We won't give up.”",
@@ -2643,7 +2737,7 @@
    ]
   },
   {
-   "id": 69,
+   "id": 78,
    "chunk": "F",
    "section": "story",
    "text": "Then she remembered an old trick of her grandmother's.",
@@ -2653,7 +2747,7 @@
    ]
   },
   {
-   "id": 70,
+   "id": 79,
    "chunk": "F",
    "section": "story",
    "text": "She licked one finger and held it up in the darkness, very still, and waited.",
@@ -2663,7 +2757,7 @@
    ]
   },
   {
-   "id": 71,
+   "id": 80,
    "chunk": "F",
    "section": "story",
    "text": "From the left tunnel came nothing. From the right came nothing. But from the middle came the faintest breath of cool, sweet air.",
@@ -2674,7 +2768,7 @@
    ]
   },
   {
-   "id": 72,
+   "id": 81,
    "chunk": "F",
    "section": "story",
    "text": "“Air means an opening,” Noor said. “This way leads out!”",
@@ -2684,7 +2778,7 @@
    ]
   },
   {
-   "id": 73,
+   "id": 82,
    "chunk": "F",
    "section": "story",
    "text": "The middle tunnel was darker than any night she had known, and the roots seemed to reach for her cloak.",
@@ -2694,7 +2788,7 @@
    ]
   },
   {
-   "id": 74,
+   "id": 83,
    "chunk": "F",
    "section": "story",
    "text": "Then, far ahead, a tiny golden light blinked.",
@@ -2704,7 +2798,7 @@
    ]
   },
   {
-   "id": 75,
+   "id": 84,
    "chunk": "F",
    "section": "story",
    "text": "It was the firefly from the river. And behind it came another, and another, and then a hundred more.",
@@ -2714,7 +2808,7 @@
    ]
   },
   {
-   "id": 76,
+   "id": 85,
    "chunk": "F",
    "section": "story",
    "text": "They poured through the tunnel like a river of stars, lighting every root and stone with a soft, radiant glow.",
@@ -2724,7 +2818,7 @@
    ]
   },
   {
-   "id": 77,
+   "id": 86,
    "chunk": "F",
    "section": "story",
    "text": "“You came back for us!” Noor laughed, tears shining in her eyes. Ember gave a happy yip and bounded ahead.",
@@ -2735,7 +2829,7 @@
    ]
   },
   {
-   "id": 78,
+   "id": 87,
    "chunk": "F",
    "section": "story",
    "text": "Guided by the fireflies, they climbed up and out of the hollow, into a circle of moonlight.",
@@ -2745,14 +2839,14 @@
    ]
   },
   {
-   "id": 79,
+   "id": 88,
    "chunk": "G",
    "section": "chapter",
    "text": "Chapter five. The Lantern's Secret.",
    "slide": "chapter-5"
   },
   {
-   "id": 80,
+   "id": 89,
    "chunk": "G",
    "section": "story",
    "text": "They stood at the edge of a round glade, ringed by ancient standing stones covered in silver moss.",
@@ -2762,7 +2856,7 @@
    ]
   },
   {
-   "id": 81,
+   "id": 90,
    "chunk": "G",
    "section": "story",
    "text": "In the very centre, on a pedestal of old grey stone, stood the Lantern.",
@@ -2772,7 +2866,7 @@
    ]
   },
   {
-   "id": 82,
+   "id": 91,
    "chunk": "G",
    "section": "story",
    "text": "It was taller than Ember and made of dark iron twisted like vines, with glass as clear as frozen water.",
@@ -2783,7 +2877,7 @@
    ]
   },
   {
-   "id": 83,
+   "id": 92,
    "chunk": "G",
    "section": "story",
    "text": "But it was empty. No wick, no oil, not even a trace of ash.",
@@ -2793,7 +2887,7 @@
    ]
   },
   {
-   "id": 84,
+   "id": 93,
    "chunk": "G",
    "section": "story",
    "text": "Noor's heart sank. She struck her flint again and again, but the sparks simply died against the glass.",
@@ -2803,7 +2897,7 @@
    ]
   },
   {
-   "id": 85,
+   "id": 94,
    "chunk": "G",
    "section": "story",
    "text": "“The Oak was right,” she said quietly. “No flint or flame can kindle it.”",
@@ -2813,7 +2907,7 @@
    ]
   },
   {
-   "id": 86,
+   "id": 95,
    "chunk": "G",
    "section": "story",
    "text": "The woods grew darker. Even the fireflies' light began to dwindle, and the cold crept closer.",
@@ -2823,7 +2917,7 @@
    ]
   },
   {
-   "id": 87,
+   "id": 96,
    "chunk": "G",
    "section": "story",
    "text": "Ember was shivering, exhausted. So Noor sat down on the cold stone, wrapped her cloak around him, and held him close.",
@@ -2834,7 +2928,7 @@
    ]
   },
   {
-   "id": 88,
+   "id": 97,
    "chunk": "G",
    "section": "story",
    "text": "“Whatever happens,” she whispered into his soft ear, “I'm so glad you came with me. I could never have done this alone.”",
@@ -2844,7 +2938,7 @@
    ]
   },
   {
-   "id": 89,
+   "id": 98,
    "chunk": "G",
    "section": "story",
    "text": "Ember looked up and gently licked her scratched fingers, the ones the brambles had torn when she set him free.",
@@ -2854,7 +2948,7 @@
    ]
   },
   {
-   "id": 90,
+   "id": 99,
    "chunk": "G",
    "section": "story",
    "text": "And at that very moment, a tiny golden spark appeared inside the Lantern.",
@@ -2864,7 +2958,7 @@
    ]
   },
   {
-   "id": 91,
+   "id": 100,
    "chunk": "G",
    "section": "story",
    "text": "Then another spark rose, drifting up from Noor's hands like warm pollen, and another floated from Ember's fur.",
@@ -2874,7 +2968,7 @@
    ]
   },
   {
-   "id": 92,
+   "id": 101,
    "chunk": "G",
    "section": "story",
    "text": "The thorns she had pulled from his fur. The firefly she had saved. The courage they had shared in the dark.",
@@ -2886,7 +2980,7 @@
    ]
   },
   {
-   "id": 93,
+   "id": 102,
    "chunk": "H",
    "section": "story",
    "text": "Far away, the Elder Oak's deep voice rolled through the woods.",
@@ -2896,7 +2990,7 @@
    ]
   },
   {
-   "id": 94,
+   "id": 103,
    "chunk": "H",
    "section": "story",
    "text": "“The Lantern was never lit by fire, child,” it said. “It is lit by kindness given freely, and by courage shared.”",
@@ -2906,7 +3000,7 @@
    ]
   },
   {
-   "id": 95,
+   "id": 104,
    "chunk": "H",
    "section": "story",
    "text": "“For a hundred years, no one came with a kind heart, and so its light slowly faded.”",
@@ -2916,7 +3010,7 @@
    ]
   },
   {
-   "id": 96,
+   "id": 105,
    "chunk": "H",
    "section": "story",
    "text": "“But kindness is the only light that never truly goes out.”",
@@ -2926,7 +3020,7 @@
    ]
   },
   {
-   "id": 97,
+   "id": 106,
    "chunk": "H",
    "section": "story",
    "text": "The Lantern burst into light. Not the red of fire, but a warm, radiant gold, like sunrise poured into glass.",
@@ -2937,7 +3031,7 @@
    ]
   },
   {
-   "id": 98,
+   "id": 107,
    "chunk": "H",
    "section": "story",
    "text": "The light rolled out across the glade in a great golden wave, and the whole forest woke.",
@@ -2947,7 +3041,7 @@
    ]
   },
   {
-   "id": 99,
+   "id": 108,
    "chunk": "H",
    "section": "story",
    "text": "Mushrooms bloomed blue and violet beneath the roots. Thousands of fireflies rose from the grass like sparks from a joyful fire.",
@@ -2958,7 +3052,7 @@
    ]
   },
   {
-   "id": 100,
+   "id": 109,
    "chunk": "H",
    "section": "story",
    "text": "And the trees began to sing again, a deep and happy murmur that seemed to fill the whole sky.",
@@ -2968,7 +3062,7 @@
    ]
   },
   {
-   "id": 101,
+   "id": 110,
    "chunk": "H",
    "section": "story",
    "text": "Noor and Ember walked home through a forest that glittered like a jewel box.",
@@ -2978,7 +3072,7 @@
    ]
   },
   {
-   "id": 102,
+   "id": 111,
    "chunk": "H",
    "section": "story",
    "text": "The Elder Oak bowed its branches as they passed, and the river below them shone like liquid moonlight.",
@@ -2989,7 +3083,7 @@
    ]
   },
   {
-   "id": 103,
+   "id": 112,
    "chunk": "H",
    "section": "story",
    "text": "From that night on, the Whispering Woods never went dark again.",
@@ -3000,7 +3094,7 @@
    ]
   },
   {
-   "id": 104,
+   "id": 113,
    "chunk": "H",
    "section": "story",
    "text": "Noor grew up brave and kind, and wherever she went, a small red fox walked steadfast at her side.",
@@ -3010,7 +3104,7 @@
    ]
   },
   {
-   "id": 105,
+   "id": 114,
    "chunk": "H",
    "section": "story",
    "text": "And whenever anyone asked how she had lit the Lantern, Noor would smile and say,",
@@ -3020,7 +3114,7 @@
    ]
   },
   {
-   "id": 106,
+   "id": 115,
    "chunk": "H",
    "section": "story",
    "text": "“It's simple. Give a little of your light away, and somehow, there is always more.”",
@@ -3030,70 +3124,70 @@
    ]
   },
   {
-   "id": 107,
+   "id": 116,
    "chunk": "I",
    "section": "words",
    "text": "Now, let's look at eight beautiful words from the story. Listen, and say each one with me.",
    "slide": "words-intro"
   },
   {
-   "id": 108,
+   "id": 117,
    "chunk": "I",
    "section": "words",
    "text": "Dwindle. To dwindle means to become smaller and weaker, little by little. Night by night, the glow began to dwindle.",
    "slide": "word-dwindle"
   },
   {
-   "id": 109,
+   "id": 118,
    "chunk": "I",
    "section": "words",
    "text": "Eerie. Eerie means strange and a little frightening. The silence was so eerie that Noor could hear her own heartbeat.",
    "slide": "word-eerie"
   },
   {
-   "id": 110,
+   "id": 119,
    "chunk": "I",
    "section": "words",
    "text": "Nimble. Nimble means able to move quickly and lightly. Ember was nimble and quick.",
    "slide": "word-nimble"
   },
   {
-   "id": 111,
+   "id": 120,
    "chunk": "I",
    "section": "words",
    "text": "Kindle. To kindle means to make a fire or a light start to burn. No flint or flame can kindle it.",
    "slide": "word-kindle"
   },
   {
-   "id": 112,
+   "id": 121,
    "chunk": "I",
    "section": "words",
    "text": "Perilous. Perilous means very dangerous. It was the most perilous crossing in the whole forest.",
    "slide": "word-perilous"
   },
   {
-   "id": 113,
+   "id": 122,
    "chunk": "I",
    "section": "words",
    "text": "Murmur. A murmur is a soft, low sound that goes on and on. It was a soft, endless murmur, like the sea inside a shell.",
    "slide": "word-murmur"
   },
   {
-   "id": 114,
+   "id": 123,
    "chunk": "I",
    "section": "words",
    "text": "Steadfast. Steadfast means loyal and firm, never giving up. We'll be steadfast together. We won't give up.",
    "slide": "word-steadfast"
   },
   {
-   "id": 115,
+   "id": 124,
    "chunk": "I",
    "section": "words",
    "text": "Radiant. Radiant means shining with bright, warm light. Not the red of fire, but a warm, radiant gold.",
    "slide": "word-radiant"
   },
   {
-   "id": 116,
+   "id": 125,
    "chunk": "I",
    "section": "quiz",
    "text": "Question one. How did Noor cross the perilous river in the mist?",
@@ -3101,14 +3195,14 @@
    "pause": 4
   },
   {
-   "id": 117,
+   "id": 126,
    "chunk": "I",
    "section": "quiz",
    "text": "She followed the white tip of Ember's tail. Well done!",
    "slide": "quiz-q1-answer"
   },
   {
-   "id": 118,
+   "id": 127,
    "chunk": "I",
    "section": "quiz",
    "text": "Question two. In the eerie hollow, how did Noor choose the right tunnel?",
@@ -3116,14 +3210,14 @@
    "pause": 4
   },
   {
-   "id": 119,
+   "id": 128,
    "chunk": "I",
    "section": "quiz",
    "text": "She felt cool air on her wet finger. Moving air means a way out!",
    "slide": "quiz-q2-answer"
   },
   {
-   "id": 120,
+   "id": 129,
    "chunk": "I",
    "section": "quiz",
    "text": "Question three. What really kindled the ancient Lantern?",
@@ -3131,14 +3225,14 @@
    "pause": 4
   },
   {
-   "id": 121,
+   "id": 130,
    "chunk": "I",
    "section": "quiz",
    "text": "Not fire at all, but kindness given freely, and courage shared. Beautiful!",
    "slide": "quiz-q3-answer"
   },
   {
-   "id": 122,
+   "id": 131,
    "chunk": "I",
    "section": "outro",
    "text": "Thank you for walking through the Whispering Woods with me. Tell me in the comments: who is the most steadfast friend in your life? See you in the next story.",

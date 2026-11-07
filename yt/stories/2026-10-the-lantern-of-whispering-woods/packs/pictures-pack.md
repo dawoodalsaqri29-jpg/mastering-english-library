@@ -100,6 +100,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S006 · 🖼️ picture · ref: R1, R4
 
+> The mushrooms turned grey. The fireflies vanished, one by one.
 > But this autumn, something was wrong.
 
 ```
@@ -116,6 +117,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S008 · 🖼️ picture · ref: R5
 
+> The forest was dying.
 > The mushrooms faded to grey. The fireflies vanished one by one. And the songs of the trees became a thin, eerie silence.
 
 ```
@@ -228,6 +230,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S022 · 🖼️ picture · ref: R1, R2, R4
 
+> One girl. One little fox.
 > “I'll call you Ember,” she smiled, “because you look like the last spark of a fire.”
 
 ```
@@ -340,6 +343,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S036 · 🎬 video 5 s · ref: R3, R5
 
+> A talking oak with a riddle no one could answer.
 > Two moss-green eyes opened slowly in the trunk, glowing like lamps behind green glass.
 
 ```
@@ -396,6 +400,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S043 · 🖼️ picture · ref: R3, R5
 
+> A talking oak with a riddle no one could answer.
 > “The more you take, the more you leave behind. What am I?”
 
 ```
@@ -492,6 +497,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S055 · 🎬 video 5 s · ref: R6
 
+> A river so misty that one wrong step could carry her away.
 > One wrong step, and the cold current would carry her away. It was the most perilous crossing in the whole forest.
 
 ```
@@ -540,6 +546,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S061 · 🎬 video 5 s · ref: R2, R6
 
+> A river so misty that one wrong step could carry her away.
 > And there, glowing faintly in the moonlight, was the white tip of his tail, bright as a little star.
 
 ```
@@ -644,6 +651,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S074 · 🖼️ picture · ref: R1, R2, R7
 
+> A hollow so dark that even the brave little fox was afraid.
 > Black roots twisted overhead like the ribs of some enormous, sleeping creature.
 
 ```
@@ -660,6 +668,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S076 · 🖼️ picture · ref: R2, R7
 
+> A hollow so dark that even the brave little fox was afraid.
 > “Which way?” Noor whispered. Ember's ears flattened. For the first time, the brave little fox looked afraid.
 
 ```
@@ -788,6 +797,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S092 · 🖼️ picture · ref: R8
 
+> And at the end of it all... an empty Lantern.
 > In the very centre, on a pedestal of old grey stone, stood the Lantern.
 
 ```
@@ -812,6 +822,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S095 · 🖼️ picture · ref: R8
 
+> And at the end of it all... an empty Lantern.
 > But it was empty. No wick, no oil, not even a trace of ash.
 
 ```
@@ -828,6 +839,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S097 · 🖼️ picture · ref: R1, R8
 
+> No wick. No oil. No flame.
 > “The Oak was right,” she said quietly. “No flint or flame can kindle it.”
 
 ```
@@ -844,6 +856,7 @@ A storybook illustration in a rich, impasto painterly style, reminiscent of clas
 
 ### S099 · 🖼️ picture · ref: R2, R8
 
+> So how do you light a lantern that no fire can kindle?
 > Ember was shivering, exhausted. So Noor sat down on the cold stone, wrapped her cloak around him, and held him close.
 
 ```
