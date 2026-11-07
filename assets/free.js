@@ -11,9 +11,22 @@
     return on ? on.dataset.v : "All";
   }
 
+  function sample(all, max) {
+    const byLevel = {};
+    all.forEach((l) => (byLevel[l.level] = byLevel[l.level] || []).push(l));
+    const queues = Object.keys(byLevel).sort().map((k) => byLevel[k].slice());
+    const out = [];
+    while (out.length < max && queues.some((q) => q.length)) {
+      queues.forEach((q) => { if (q.length && out.length < max) out.push(q.shift()); });
+    }
+    return out;
+  }
+
   function render() {
     const lv = currentLevel();
-    const list = lessons.filter((l) => lv === "All" || l.level === lv);
+    // "All" shows a short sample (two per level, round-robin) so the home page stays short;
+    // the full list lives on library.html. A chosen level shows all of its lessons.
+    const list = lv === "All" ? sample(lessons, 8) : lessons.filter((l) => l.level === lv);
     grid.innerHTML = list.map((l) => `<a class="free-card" href="${esc(l.path)}">
       <div class="meta"><span class="tag">${esc(l.level)}</span><span class="tag cat">${esc(l.skill)}</span></div>
       <h3>${esc(l.title)}</h3>
