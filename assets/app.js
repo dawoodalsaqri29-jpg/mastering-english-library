@@ -24,6 +24,46 @@
     });
   }
 
+  // Progress: learners can mark lessons as done. Stored only in this browser (localStorage);
+  // if storage is blocked, the button still toggles for this visit.
+  var DONE_KEY = "mel-done-lessons";
+  var memoryDone = [];
+  function readDone() {
+    try { var v = JSON.parse(localStorage.getItem(DONE_KEY) || "[]"); return Array.isArray(v) ? v : []; }
+    catch (e) { return memoryDone; }
+  }
+  function writeDone(list) {
+    memoryDone = list;
+    try { localStorage.setItem(DONE_KEY, JSON.stringify(list)); } catch (e) { /* private mode: keep in memory */ }
+  }
+  function slugFromPath(path) { var m = /([a-z0-9-]+)\.html$/.exec(path || ""); return m ? m[1] : ""; }
+
+  var lessonHead = document.querySelector("article .lesson-head");
+  var pager = document.querySelector("nav.pager");
+  if (lessonHead && pager && /\/lessons\//.test(location.pathname)) {
+    var slug = slugFromPath(location.pathname);
+    var row = document.createElement("p");
+    row.className = "done-row no-print";
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "toggle secondary";
+    var paint = function () {
+      var on = readDone().indexOf(slug) !== -1;
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "\u2713 Done. Mark as not done" : "Mark this lesson as done";
+    };
+    btn.addEventListener("click", function () {
+      var list = readDone().filter(function (s) { return s !== slug; });
+      if (btn.getAttribute("aria-pressed") !== "true") list.push(slug);
+      writeDone(list);
+      paint();
+    });
+    paint();
+    row.appendChild(btn);
+    var related = document.querySelector("aside.related");
+    (related || pager).parentNode.insertBefore(row, related || pager);
+  }
+
   // Library catalogue: load data/library.json and filter it.
   var catalog = document.querySelector("[data-catalog]");
   if (!catalog) return;
@@ -98,17 +138,20 @@
       }
       return true;
     });
-    count.textContent = out.length + " of " + items.length + " lessons";
+    var done = readDone();
+    var doneCount = items.filter(function (it) { return it.lesson && done.indexOf(slugFromPath(it.lesson)) !== -1; }).length;
+    count.textContent = out.length + " of " + items.length + " lessons" + (doneCount ? " \u00b7 " + doneCount + " done" : "");
     if (!out.length) {
       catalog.innerHTML = '<p class="empty">Nothing matches those filters yet.</p>';
       return;
     }
     catalog.innerHTML = "<ul class=\"list\">" + out.map(function (it) {
       var main = it.lesson || it.pdf;
+      var isDone = it.lesson && done.indexOf(slugFromPath(it.lesson)) !== -1;
       var pdf = it.lesson && it.pdf ? '<a class="pdf" href="' + esc(link(it.pdf)) + '" download aria-label="Download PDF: ' + esc(it.title) + '">PDF</a>' : "";
       return "<li>" +
         '<div class="meta"><span class="badge ' + esc(it.level.toLowerCase()) + '">' + esc(it.level) + "</span>" +
-        '<span class="badge type">' + esc(it.skill) + "</span>" + (it.lesson ? "" : ' <span class="badge type">PDF</span>') + pdf + "</div>" +
+        '<span class="badge type">' + esc(it.skill) + "</span>" + (it.lesson ? "" : ' <span class="badge type">PDF</span>') + (isDone ? ' <span class="badge done">\u2713 Done</span>' : "") + pdf + "</div>" +
         '<a class="title" href="' + esc(link(main)) + '">' + esc(it.title) + "</a>" +
         "<p>" + esc(it.description) + "</p></li>";
     }).join("") + "</ul>";
