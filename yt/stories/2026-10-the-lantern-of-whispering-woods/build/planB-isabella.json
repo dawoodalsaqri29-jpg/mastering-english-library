@@ -1,0 +1,137 @@
+{
+ "audio": "isa/voice-B.mp3",
+ "audio_delay": 0.5,
+ "out": "lantern-B-isabella.mp4",
+ "total": 59.34,
+ "shots": [
+  {
+   "img": "A3-noor-worried-window.jpg",
+   "start": 0.0,
+   "end": 4.25,
+   "move": "in-up",
+   "fade": 0
+  },
+  {
+   "img": "A5-noor-rises.jpg",
+   "start": 4.25,
+   "end": 8.58,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R4-cottage.jpg",
+   "start": 8.58,
+   "end": 11.72,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "B2-ember-brambles.jpg",
+   "start": 11.72,
+   "end": 16.39,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "B3-noor-kneels.jpg",
+   "start": 16.39,
+   "end": 23.48,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "B2-ember-brambles.jpg",
+   "start": 23.48,
+   "end": 27.0,
+   "move": "out",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R2-ember.jpg",
+   "start": 27.0,
+   "end": 33.91,
+   "move": "in-up",
+   "fade": 0.8
+  },
+  {
+   "img": "B4-noor-smiles-at-ember.jpg",
+   "start": 33.91,
+   "end": 39.51,
+   "move": "in",
+   "fade": 0.8
+  },
+  {
+   "img": "B5-ember-trots.jpg",
+   "start": 39.51,
+   "end": 46.28,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R1-noor.jpg",
+   "start": 46.28,
+   "end": 52.66,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "B6-into-the-woods.jpg",
+   "start": 52.66,
+   "end": 59.34,
+   "move": "in-up",
+   "fade": 1.0
+  }
+ ],
+ "subs": [
+  [
+   0.5,
+   3.51,
+   "Just then, a sharp little cry came from the garden."
+  ],
+  [
+   4.36,
+   8.05,
+   "Noor pulled on her cloak and hurried out into the cold blue dark."
+  ],
+  [
+   8.9,
+   15.75,
+   "There, caught in the brambles by the gate, was a fox cub no bigger than a cat, with a coat the colour of autumn leaves."
+  ],
+  [
+   16.6,
+   20.01,
+   "“Hush now,” Noor murmured, kneeling down. “I won't hurt you.”"
+  ],
+  [
+   20.86,
+   26.58,
+   "Slowly, gently, she untangled each thorn from his fur, even though the brambles scratched her fingers."
+  ],
+  [
+   27.43,
+   33.44,
+   "Once free, the cub didn't run away. He sat in the frosty grass and looked up at her with bright amber eyes."
+  ],
+  [
+   34.29,
+   38.94,
+   "“I'll call you Ember,” she smiled, “because you look like the last spark of a fire.”"
+  ],
+  [
+   39.79,
+   45.81,
+   "Ember tilted his head. Then he trotted three steps towards the dark trees, stopped, and looked back at her."
+  ],
+  [
+   46.66,
+   52.19,
+   "“You want me to follow you?” Noor whispered. Her heart was beating fast, but her feet were already moving."
+  ],
+  [
+   53.03,
+   57.94,
+   "And so, under a thin silver moon, the girl and the fox stepped into the Whispering Woods."
+  ]
+ ]
+}

@@ -1,0 +1,137 @@
+{
+ "audio": "isa/voice-D.mp3",
+ "audio_delay": 0.5,
+ "out": "lantern-D-isabella.mp4",
+ "total": 60.83,
+ "shots": [
+  {
+   "img": "D1-roots-coil.jpg",
+   "start": 0.0,
+   "end": 5.88,
+   "move": "in",
+   "fade": 0
+  },
+  {
+   "img": "D2-oak-stern.jpg",
+   "start": 5.88,
+   "end": 12.95,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "D3-facing-the-oak.jpg",
+   "start": 12.95,
+   "end": 17.88,
+   "move": "out",
+   "fade": 0.8
+  },
+  {
+   "img": "D4-oak-eye.jpg",
+   "start": 17.88,
+   "end": 22.12,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "D5-noor-looks-back.jpg",
+   "start": 22.12,
+   "end": 28.21,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "D6-footprints.jpg",
+   "start": 28.21,
+   "end": 34.4,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "D7-noor-points.jpg",
+   "start": 34.4,
+   "end": 40.01,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "D8-oak-smiles-roots-part.jpg",
+   "start": 40.01,
+   "end": 46.3,
+   "move": "out",
+   "fade": 0.8
+  },
+  {
+   "img": "D2-oak-stern.jpg",
+   "start": 46.3,
+   "end": 53.85,
+   "move": "in-up",
+   "fade": 0.8
+  },
+  {
+   "img": "C4-noor-listens.jpg",
+   "start": 53.85,
+   "end": 57.38,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R3-elder-oak.jpg",
+   "start": 57.38,
+   "end": 60.83,
+   "move": "out",
+   "fade": 0.8
+  }
+ ],
+ "subs": [
+  [
+   0.5,
+   5.41,
+   "The old tree was silent. Then its roots twisted across the path like sleeping snakes."
+  ],
+  [
+   6.26,
+   12.57,
+   "“Many have searched,” said the Oak. “The way is perilous, and I open it only to those who can answer my riddle.”"
+  ],
+  [
+   13.42,
+   17.45,
+   "The leaves around them hushed, as if the whole forest were holding its breath."
+  ],
+  [
+   18.3,
+   21.65,
+   "“The more you take, the more you leave behind. What am I?”"
+  ],
+  [
+   22.5,
+   27.79,
+   "Noor thought hard. She looked at the dark path ahead, and then back at the soft earth behind her."
+  ],
+  [
+   28.64,
+   34.08,
+   "There in the mud were her own small boot prints, and beside them, the tiny paw prints of a fox."
+  ],
+  [
+   34.93,
+   39.63,
+   "“Footsteps!” she cried. “The more steps you take, the more footsteps you leave behind!”"
+  ],
+  [
+   40.48,
+   45.87,
+   "The Elder Oak laughed, a warm, creaking sound, and its roots slid aside to open the path."
+  ],
+  [
+   46.72,
+   53.42,
+   "“Clever child,” it said. “But remember this: no flint or flame can light the Lantern. You must kindle it another way.”"
+  ],
+  [
+   54.27,
+   59.93,
+   "“What way?” Noor asked. But the Oak's eyes had already closed, and only a gentle murmur answered her."
+  ]
+ ]
+}

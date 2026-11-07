@@ -1,0 +1,147 @@
+{
+ "audio": "isa/voice-C.mp3",
+ "audio_delay": 0.5,
+ "out": "lantern-C-isabella.mp4",
+ "total": 68.84,
+ "shots": [
+  {
+   "img": "CARD-ch2.png",
+   "start": 0.0,
+   "end": 3.55,
+   "move": "card",
+   "fade": 0
+  },
+  {
+   "img": "C1-small-among-trunks.jpg",
+   "start": 3.55,
+   "end": 10.54,
+   "move": "in",
+   "fade": 0.8
+  },
+  {
+   "img": "C2-ember-leaps.jpg",
+   "start": 10.54,
+   "end": 17.7,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "C3-noor-path-fading.jpg",
+   "start": 17.7,
+   "end": 23.31,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "C4-noor-listens.jpg",
+   "start": 23.31,
+   "end": 26.33,
+   "move": "in",
+   "fade": 0.5
+  },
+  {
+   "img": "L-R5-whispering-woods.jpg",
+   "start": 26.33,
+   "end": 31.52,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "C5-trees-bend.jpg",
+   "start": 31.52,
+   "end": 41.44,
+   "move": "in-up",
+   "fade": 0.8
+  },
+  {
+   "img": "L-R3-elder-oak.jpg",
+   "start": 41.44,
+   "end": 48.78,
+   "move": "in-up",
+   "fade": 1.0
+  },
+  {
+   "img": "C6-oak-eyes-open.jpg",
+   "start": 48.78,
+   "end": 54.69,
+   "move": "in",
+   "fade": 0.8
+  },
+  {
+   "img": "L-R3-elder-oak.jpg",
+   "start": 54.69,
+   "end": 61.16,
+   "move": "out",
+   "fade": 0.7
+  },
+  {
+   "img": "C7-noor-stands-tall.jpg",
+   "start": 61.16,
+   "end": 68.84,
+   "move": "in",
+   "fade": 0.8
+  }
+ ],
+ "subs": [
+  [
+   0.5,
+   3.08,
+   "Chapter two. The Riddle of the Elder Oak."
+  ],
+  [
+   3.93,
+   10.16,
+   "Inside the woods, the air smelled of moss and cold rain, and every shadow seemed to lean closer to listen."
+  ],
+  [
+   11.01,
+   17.28,
+   "Ember was nimble and quick. He slipped under roots and over fallen logs as if he had wings instead of paws."
+  ],
+  [
+   18.13,
+   22.89,
+   "Noor followed more slowly, as the last few mushrooms flickered weakly at her feet."
+  ],
+  [
+   23.74,
+   25.57,
+   "Then the whispering began."
+  ],
+  [
+   26.43,
+   31.14,
+   "It rose from every side, from the leaves, the bark and the roots deep under the earth."
+  ],
+  [
+   31.99,
+   35.66,
+   "It was a soft, endless murmur, like the sea inside a shell."
+  ],
+  [
+   36.51,
+   41.01,
+   "“Who goes there?” the trees seemed to say. “Who walks in the woods when the light is dying?”"
+  ],
+  [
+   41.86,
+   48.02,
+   "The path ended suddenly at an enormous oak, so old that its silver bark had folded itself into a face."
+  ],
+  [
+   48.88,
+   54.27,
+   "Two moss-green eyes opened slowly in the trunk, glowing like lamps behind green glass."
+  ],
+  [
+   55.12,
+   60.78,
+   "“Little ones,” rumbled the Elder Oak, in a voice as deep as thunder underground. “Why have you come?”"
+  ],
+  [
+   61.63,
+   67.94,
+   "Noor swallowed hard and stood up straight. “We're looking for the Lantern. The forest is fading, and I want to help.”"
+  ]
+ ]
+}
