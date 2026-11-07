@@ -119,3 +119,4 @@ section.wrap { padding-top: 64px; padding-bottom: 16px; }
 
 /* Nine titles fill a 3x3 grid on desktop instead of 4 + 4 + 1. */
 @media (min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+.level-hint { margin: -.5rem 0 1.25rem; color: var(--ink-soft); }
