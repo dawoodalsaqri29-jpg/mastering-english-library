@@ -69,16 +69,38 @@ Use `/browse` (gstack) for all web browsing; never use `mcp__claude-in-chrome__*
 | Reflect | `/retro`, `/learn` | Eng manager / memory | Weekly retro, project learnings |
 | Safety | `/careful`, `/freeze`, `/guard` | Guardrails | Warn before destructive commands; lock edits to one folder |
 
-### 3. Default routing for this repo
+### 3. ECC agents (`.claude/agents/ecc-*`)
+
+Fourteen subagents from [ECC](https://github.com/affaan-m/ECC), pinned and reviewed; see
+`.claude/agents/README.md` for the version and what was left out. Start them with the Agent
+tool (`subagent_type: "ecc-<name>"`). They work alongside gstack: gstack runs the sprint,
+ECC agents are specialists you call for one job.
+
+| Agent | Use it for |
+|-------|-----------|
+| `ecc-planner`, `ecc-architect` | Plan a feature or a structural change before building |
+| `ecc-code-reviewer`, `ecc-typescript-reviewer` | Review any HTML/CSS/JS change (the site's JS is plain browser JavaScript) |
+| `ecc-silent-failure-hunter` | JS that fetches data or catches errors (`app.js`, `free.js`, `store.js`, `listen.js`) |
+| `ecc-security-reviewer` | Anything that takes input, builds HTML from data, or adds a script or link |
+| `ecc-a11y-architect` | New pages, components and lessons (WCAG 2.2) |
+| `ecc-seo-specialist` | Titles, descriptions, structured data, sitemap, internal links |
+| `ecc-performance-optimizer` | Page weight, images, fonts, Core Web Vitals |
+| `ecc-code-simplifier`, `ecc-refactor-cleaner` | Tidy code and remove dead files after a feature lands |
+| `ecc-comment-analyzer`, `ecc-doc-updater` | Keep comments, README and CLAUDE.md accurate |
+| `ecc-marketing-agent` | Store copy, Instagram posts, campaigns (with the marketing skills) |
+
+Do not install ECC's hooks or run its install scripts in this repo.
+
+### 4. Default routing for this repo
 
 - New page, lesson section or feature → `/office-hours` then `/autoplan`, then build.
-- Any change before commit → `/review`.
-- Anything user-visible (HTML/CSS/lessons) → `/qa` on the page and `/design-review`.
+- Any change before commit → `/review`, plus `ecc-code-reviewer` for JS changes.
+- Anything user-visible (HTML/CSS/lessons) → `/qa` on the page and `/design-review`; `ecc-a11y-architect` and `ecc-seo-specialist` for new pages.
 - Before going public or touching forms/scripts/links → `/cso`.
 - Something broken → `/investigate` (no fix without a found cause).
 - Ready to publish → `/ship`.
 
-### 4. Repo rules
+### 5. Repo rules
 
 - Work on the session's designated branch; never push to `main` without permission.
 - The existing marketing skills in `.claude/skills/` (seo-audit, copywriting, cro, ...) stay;
