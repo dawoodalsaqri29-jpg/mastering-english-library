@@ -14,6 +14,7 @@ A free, static website of English lessons (grammar, vocabulary, writing, reading
 | `assets/listen.js` | Reads Listening lesson transcripts aloud with the browser's built-in voice (no audio files) |
 | `pdfs/b1` … `pdfs/c2` | Free lesson PDFs, one folder per level |
 | `data/library.json` | The index that powers the free lessons page |
+| `assets/fonts/` | Self-hosted Fraunces and Inter (SIL Open Font License), Latin subsets only; no requests to Google Fonts |
 | `assets/share/`, `scripts/share-images.js` | Link-preview images (WhatsApp, X, Instagram DMs): one for the site, one per level. Re-render with `node scripts/share-images.js` |
 | `scripts/related.js` | Writes the "More … lessons" box at the end of each lesson. Run `node scripts/related.js` after adding lessons |
 
