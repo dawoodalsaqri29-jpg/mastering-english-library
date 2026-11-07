@@ -1965,103 +1965,45 @@
   {
    "chunk": "HOOK",
    "section": "hook",
-   "text": "The forest was dying.",
-   "ar": "الغابة كانت تموت.",
-   "shots": [
-    "S008"
-   ],
+   "text": "There is a Lantern that no fire can light.",
+   "ar": "هناكَ فانوسٌ لا تُشعِلُه أيُّ نار.",
    "id": 1
   },
   {
    "chunk": "HOOK",
    "section": "hook",
-   "text": "The mushrooms turned grey. The fireflies vanished, one by one.",
-   "ar": "تحوّل الفطر إلى الرمادي، واختفت اليراعات واحدةً تلو الأخرى.",
-   "shots": [
-    "S006"
-   ],
+   "text": "And without it, this whole forest is going dark.",
+   "ar": "ومن دونِه، يخيِّمُ الظلامُ على هذه الغابةِ كلِّها.",
    "id": 2
   },
   {
    "chunk": "HOOK",
    "section": "hook",
-   "text": "One girl. One little fox.",
-   "ar": "فتاةٌ واحدة. وثعلبٌ صغير.",
-   "shots": [
-    "S022"
-   ],
+   "text": "One girl and one small fox go looking for the Lantern.",
+   "ar": "فتاةٌ واحدةٌ وثعلبٌ صغيرٌ ينطلقانِ بحثًا عن الفانوس.",
    "id": 3
   },
   {
    "chunk": "HOOK",
    "section": "hook",
-   "text": "A talking oak with a riddle no one could answer.",
-   "ar": "شجرةُ بلّوطٍ تتكلّم، ولديها لغزٌ لم يستطع أحدٌ حلَّه.",
-   "shots": [
-    "S036",
-    "S043"
-   ],
+   "text": "The way is dark and dangerous.",
+   "ar": "الطريقُ مظلمٌ وخطير.",
    "id": 4
   },
   {
    "chunk": "HOOK",
    "section": "hook",
-   "text": "A river so misty that one wrong step could carry her away.",
-   "ar": "نهرٌ يلفّه الضباب، وخطوةٌ واحدةٌ خاطئة قد تجرفها بعيدًا.",
-   "shots": [
-    "S055",
-    "S061"
-   ],
+   "text": "What will light the Lantern?",
+   "ar": "ما الذي سيُشعِلُ الفانوس؟",
    "id": 5
-  },
-  {
-   "chunk": "HOOK",
-   "section": "hook",
-   "text": "A hollow so dark that even the brave little fox was afraid.",
-   "ar": "وتجويفٌ مظلمٌ لدرجة أنّ الثعلب الشجاع نفسه خاف.",
-   "shots": [
-    "S074",
-    "S076"
-   ],
-   "id": 6
-  },
-  {
-   "chunk": "HOOK",
-   "section": "hook",
-   "text": "And at the end of it all... an empty Lantern.",
-   "ar": "وفي نهاية كلّ شيء... فانوسٌ فارغ.",
-   "shots": [
-    "S092",
-    "S095"
-   ],
-   "id": 7
-  },
-  {
-   "chunk": "HOOK",
-   "section": "hook",
-   "text": "No wick. No oil. No flame.",
-   "ar": "لا فتيل. لا زيت. لا لهب.",
-   "shots": [
-    "S097"
-   ],
-   "id": 8
-  },
-  {
-   "chunk": "HOOK",
-   "section": "hook",
-   "text": "So how do you light a lantern that no fire can kindle?",
-   "ar": "فكيف تُشعل فانوسًا لا تستطيع أيُّ نارٍ أن تُوقِده؟",
-   "shots": [
-    "S099"
-   ],
-   "id": 9
   },
   {
    "id": 10,
    "chunk": "A",
    "section": "title",
-   "text": "Welcome to a new English story. Tonight, we walk into a forest where the light is slowly fading. Listen closely, and read along.",
-   "slide": "title"
+   "text": "Welcome to a new English story. Listen closely, and read along.",
+   "slide": "title",
+   "ar": "مرحبًا بك في قصةٍ إنجليزيةٍ جديدة. استمِعْ جيدًا، واقرأْ معنا."
   },
   {
    "id": 11,
@@ -3339,5 +3281,44 @@
  ],
  "outro": {
   "text": "Thank you for walking through the Whispering Woods with me. Tell me in the comments: who is the most steadfast friend in your life? See you in the next story."
- }
+ },
+ "hook_previous": [
+  {
+   "text": "The forest was dying.",
+   "ar": "الغابة كانت تموت."
+  },
+  {
+   "text": "The mushrooms turned grey. The fireflies vanished, one by one.",
+   "ar": "تحوّل الفطر إلى الرمادي، واختفت اليراعات واحدةً تلو الأخرى."
+  },
+  {
+   "text": "One girl. One little fox.",
+   "ar": "فتاةٌ واحدة. وثعلبٌ صغير."
+  },
+  {
+   "text": "A talking oak with a riddle no one could answer.",
+   "ar": "شجرةُ بلّوطٍ تتكلّم، ولديها لغزٌ لم يستطع أحدٌ حلَّه."
+  },
+  {
+   "text": "A river so misty that one wrong step could carry her away.",
+   "ar": "نهرٌ يلفّه الضباب، وخطوةٌ واحدةٌ خاطئة قد تجرفها بعيدًا."
+  },
+  {
+   "text": "A hollow so dark that even the brave little fox was afraid.",
+   "ar": "وتجويفٌ مظلمٌ لدرجة أنّ الثعلب الشجاع نفسه خاف."
+  },
+  {
+   "text": "And at the end of it all... an empty Lantern.",
+   "ar": "وفي نهاية كلّ شيء... فانوسٌ فارغ."
+  },
+  {
+   "text": "No wick. No oil. No flame.",
+   "ar": "لا فتيل. لا زيت. لا لهب."
+  },
+  {
+   "text": "So how do you light a lantern that no fire can kindle?",
+   "ar": "فكيف تُشعل فانوسًا لا تستطيع أيُّ نارٍ أن تُوقِده؟"
+  }
+ ],
+ "hook_note": "Hook chosen by an arena run (16 competitors, 4 rounds) on 2026-11-07; the previous hook is kept in hook_previous."
 }

@@ -39,8 +39,15 @@ ass = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}"
  f"Style: En,Inter,50,{box},8,60,60,{PY+PH+50},1",
  f"Style: Ar,Noto Sans Arabic SemBd,58,&H009FD8E8,&H000000FF,&H00101A1F,&H8C0B1418,0,0,0,0,100,100,0,0,4,16,0,8,60,60,{PY+PH+300},1", "",
  "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
- f"Dialogue: 0,{ts(0)},{ts(total)},TEn,,0,0,0,,{TITLE_EN}",
- f"Dialogue: 0,{ts(0)},{ts(total)},TAr,,0,0,0,,{TITLE_AR}"]
+]
+# The story title sits at the top. A teaser can carry a "label" (e.g. where the full story is) that
+# replaces the title from label.start onwards.
+lab = plan.get("label"); t_end = lab["start"] if lab else total
+ass += [f"Dialogue: 0,{ts(0)},{ts(t_end)},TEn,,0,0,0,,{{\\fad(0,250)}}{TITLE_EN}",
+        f"Dialogue: 0,{ts(0)},{ts(t_end)},TAr,,0,0,0,,{{\\fad(0,250)}}{TITLE_AR}"]
+if lab:
+    ass += [f"Dialogue: 0,{ts(t_end)},{ts(total)},TEn,,0,0,0,,{{\\fad(250,0)}}{lab['en']}",
+            f"Dialogue: 0,{ts(t_end)},{ts(total)},TAr,,0,0,0,,{{\\fad(250,0)}}{lab['ar']}"]
 for sub in plan["subs"]:
     st, en, tx = sub[:3]; ar = sub[3] if len(sub) > 3 else ""
     ass.append(f"Dialogue: 0,{ts(st)},{ts(en)},En,,0,0,0,,{{\\fad(180,180)}}{tx}")

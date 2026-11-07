@@ -1,27 +1,153 @@
-{"audio":"voice-A.mp3","out":"lantern-A.mp4","total":78.0,
- "shots":[
-  {"img":"CARD-title.png","start":0,"end":8.45,"move":"card","fade":0},
-  {"img":"CARD-ch1.png","start":8.45,"end":11.35,"move":"card","fade":0.6},
-  {"img":"L-R4-cottage.jpg","start":11.35,"end":18.3,"move":"in","fade":0.8},
-  {"img":"A1-noor-asleep-window.jpg","start":18.3,"end":23.15,"move":"in-up","fade":0.7},
-  {"img":"L-R5-whispering-woods.jpg","start":23.15,"end":31.6,"move":"in","fade":0.7},
-  {"img":"L-R5-whispering-woods.jpg","start":31.6,"end":38.75,"move":"pan-r","fade":0.8},
-  {"img":"A3-noor-worried-window.jpg","start":38.75,"end":41.95,"move":"in-up","fade":0.6},
-  {"img":"L-R5-whispering-woods.jpg","start":41.95,"end":46.0,"move":"out","fade":0.6},
-  {"img":"A2-forest-grey.jpg","start":46.0,"end":57.25,"move":"in","fade":3.0},
-  {"img":"A4-noor-thinking.jpg","start":57.25,"end":62.75,"move":"in-up","fade":0.7},
-  {"img":"L-R8-heart-glade-lit.jpg","start":62.75,"end":71.25,"move":"in-up","fade":1.0},
-  {"img":"A5-noor-rises.jpg","start":71.25,"end":78.0,"move":"in","fade":0.8}],
- "subs":[
-  [0.0,8.0,"Welcome to a new English story. Tonight, we walk into a forest where the light is slowly fading. Listen closely, and read along."],
-  [11.8,17.9,"At the edge of the Whispering Woods, in a small stone cottage with a mossy roof, there lived a girl named Noor."],
-  [18.7,22.7,"Every night, Noor fell asleep to the glow of the forest outside her window."],
-  [23.6,26.8,"Mushrooms shone like tiny blue moons between the roots."],
-  [27.3,31.2,"Fireflies drifted through the branches like sparks from a gentle fire."],
-  [32.0,38.3,"And the trees themselves would murmur soft songs that no one could quite understand, but everyone could feel."],
-  [39.2,41.5,"But this autumn, something was wrong."],
-  [42.4,48.3,"Night by night, the glow began to dwindle, the way a candle shrinks when no one remembers to tend it."],
-  [49.1,56.8,"The mushrooms faded to grey. The fireflies vanished one by one. And the songs of the trees became a thin, eerie silence."],
-  [57.7,62.3,"Noor sat at her window, chin in hands, remembering her grandmother's old story."],
-  [63.2,70.8,"“Deep in the heart of the woods,” Grandmother would whisper, “there is an ancient Lantern. As long as it shines, the forest shines too.”"],
-  [71.7,76.1,"“Then someone must find it,” Noor said. “Before the light is gone for ever.”"]]}
+{
+ "audio": "voice-A.mp3",
+ "out": "lantern-A.mp4",
+ "total": 78.0,
+ "shots": [
+  {
+   "img": "CARD-title.png",
+   "start": 0,
+   "end": 8.45,
+   "move": "card",
+   "fade": 0
+  },
+  {
+   "img": "CARD-ch1.png",
+   "start": 8.45,
+   "end": 11.35,
+   "move": "card",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R4-cottage.jpg",
+   "start": 11.35,
+   "end": 18.3,
+   "move": "in",
+   "fade": 0.8
+  },
+  {
+   "img": "A1-noor-asleep-window.jpg",
+   "start": 18.3,
+   "end": 23.15,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R5-whispering-woods.jpg",
+   "start": 23.15,
+   "end": 31.6,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R5-whispering-woods.jpg",
+   "start": 31.6,
+   "end": 38.75,
+   "move": "pan-r",
+   "fade": 0.8
+  },
+  {
+   "img": "A3-noor-worried-window.jpg",
+   "start": 38.75,
+   "end": 41.95,
+   "move": "in-up",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R5-whispering-woods.jpg",
+   "start": 41.95,
+   "end": 46.0,
+   "move": "out",
+   "fade": 0.6
+  },
+  {
+   "img": "A2-forest-grey.jpg",
+   "start": 46.0,
+   "end": 57.25,
+   "move": "in",
+   "fade": 3.0
+  },
+  {
+   "img": "A4-noor-thinking.jpg",
+   "start": 57.25,
+   "end": 62.75,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R8-heart-glade-lit.jpg",
+   "start": 62.75,
+   "end": 71.25,
+   "move": "in-up",
+   "fade": 1.0
+  },
+  {
+   "img": "A5-noor-rises.jpg",
+   "start": 71.25,
+   "end": 78.0,
+   "move": "in",
+   "fade": 0.8
+  }
+ ],
+ "subs": [
+  [
+   0.0,
+   8.0,
+   "Welcome to a new English story. Listen closely, and read along."
+  ],
+  [
+   11.8,
+   17.9,
+   "At the edge of the Whispering Woods, in a small stone cottage with a mossy roof, there lived a girl named Noor."
+  ],
+  [
+   18.7,
+   22.7,
+   "Every night, Noor fell asleep to the glow of the forest outside her window."
+  ],
+  [
+   23.6,
+   26.8,
+   "Mushrooms shone like tiny blue moons between the roots."
+  ],
+  [
+   27.3,
+   31.2,
+   "Fireflies drifted through the branches like sparks from a gentle fire."
+  ],
+  [
+   32.0,
+   38.3,
+   "And the trees themselves would murmur soft songs that no one could quite understand, but everyone could feel."
+  ],
+  [
+   39.2,
+   41.5,
+   "But this autumn, something was wrong."
+  ],
+  [
+   42.4,
+   48.3,
+   "Night by night, the glow began to dwindle, the way a candle shrinks when no one remembers to tend it."
+  ],
+  [
+   49.1,
+   56.8,
+   "The mushrooms faded to grey. The fireflies vanished one by one. And the songs of the trees became a thin, eerie silence."
+  ],
+  [
+   57.7,
+   62.3,
+   "Noor sat at her window, chin in hands, remembering her grandmother's old story."
+  ],
+  [
+   63.2,
+   70.8,
+   "“Deep in the heart of the woods,” Grandmother would whisper, “there is an ancient Lantern. As long as it shines, the forest shines too.”"
+  ],
+  [
+   71.7,
+   76.1,
+   "“Then someone must find it,” Noor said. “Before the light is gone for ever.”"
+  ]
+ ]
+}
