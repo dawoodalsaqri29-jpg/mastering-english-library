@@ -217,6 +217,30 @@
       ]
     },
     {
+      "title": "Reading short messages and notices",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b1-reading-messages.html",
+      "description": "Find who wrote a message, why, and what you need to do, in emails, texts and signs.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
+      "title": "Reading short messages and notices",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-reading-messages.pdf",
+      "description": "Find who wrote a message, why, and what you need to do, in emails, texts and signs.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -429,6 +453,30 @@
       "description": "Complain clearly and politely, explain the problem with facts, and ask for a specific solution.",
       "tags": [
         "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Fact or opinion?",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b2-fact-or-opinion.html",
+      "description": "Separate what can be checked from what the writer believes, a key skill for news, reviews and exam texts.",
+      "tags": [
+        "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Fact or opinion?",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-fact-or-opinion.pdf",
+      "description": "Separate what can be checked from what the writer believes, a key skill for news, reviews and exam texts.",
+      "tags": [
+        "reading",
         "b2"
       ]
     },
@@ -649,6 +697,30 @@
       ]
     },
     {
+      "title": "Following an argument: reference words",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c1-reference-words.html",
+      "description": "Track what this, which, such, the former and the latter point back to, so long texts stay clear.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
+      "title": "Following an argument: reference words",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-reference-words.pdf",
+      "description": "Track what this, which, such, the former and the latter point back to, so long texts stay clear.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -861,6 +933,30 @@
       "description": "Use the base-form subjunctive after verbs like insist and recommend, and were for unreal situations.",
       "tags": [
         "grammar",
+        "c2"
+      ]
+    },
+    {
+      "title": "How certain is the writer?",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c2-claims-and-certainty.html",
+      "description": "Read the strength of a claim in academic and news texts, from tentative suggestion to firm conclusion.",
+      "tags": [
+        "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "How certain is the writer?",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-claims-and-certainty.pdf",
+      "description": "Read the strength of a claim in academic and news texts, from tentative suggestion to firm conclusion.",
+      "tags": [
+        "reading",
         "c2"
       ]
     }
