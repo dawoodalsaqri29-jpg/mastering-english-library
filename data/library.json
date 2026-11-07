@@ -337,6 +337,30 @@
       ]
     },
     {
+      "title": "Linking words: and, but, because, so",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b1-linking-words.html",
+      "description": "Join short sentences into clear, connected writing with the most useful linking words and the right punctuation.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
+      "title": "Linking words: and, but, because, so",
+      "level": "B1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-linking-words.pdf",
+      "description": "Join short sentences into clear, connected writing with the most useful linking words and the right punctuation.",
+      "tags": [
+        "writing",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -669,6 +693,30 @@
       "description": "Build families of words from one root and choose the right form for nouns, verbs, adjectives and opposites.",
       "tags": [
         "vocabulary",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing a review",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/b2-writing-a-review.html",
+      "description": "Write a lively, balanced review of a film, book, restaurant or product that ends with a clear recommendation.",
+      "tags": [
+        "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Writing a review",
+      "level": "B2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-writing-a-review.pdf",
+      "description": "Write a lively, balanced review of a film, book, restaurant or product that ends with a clear recommendation.",
+      "tags": [
+        "writing",
         "b2"
       ]
     },
@@ -1009,6 +1057,30 @@
       ]
     },
     {
+      "title": "Writing a proposal",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c1-writing-a-proposal.html",
+      "description": "Persuade a decision-maker with a clear, well-organised proposal that states the problem, the plan and the benefits.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
+      "title": "Writing a proposal",
+      "level": "C1",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-writing-a-proposal.pdf",
+      "description": "Persuade a decision-maker with a clear, well-organised proposal that states the problem, the plan and the benefits.",
+      "tags": [
+        "writing",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1341,6 +1413,30 @@
       "description": "Recognise the hidden metaphors behind common expressions and use them naturally in your own speech and writing.",
       "tags": [
         "vocabulary",
+        "c2"
+      ]
+    },
+    {
+      "title": "Summarising a text concisely",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "lesson",
+      "path": "lessons/c2-summarising-concisely.html",
+      "description": "Reduce a long text to its essential argument in your own words, keeping the writer's stance without adding your own.",
+      "tags": [
+        "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Summarising a text concisely",
+      "level": "C2",
+      "skill": "Writing",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-summarising-concisely.pdf",
+      "description": "Reduce a long text to its essential argument in your own words, keeping the writer's stance without adding your own.",
+      "tags": [
+        "writing",
         "c2"
       ]
     }
