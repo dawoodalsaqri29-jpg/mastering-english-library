@@ -32,22 +32,14 @@
 <main>
   <div class="wrap">
 <h1>Free lessons</h1>
-<p class="lead">Every free lesson, as a web page and a printable PDF. Filter by level, skill or format.</p>
+<p class="lead">Every free lesson, as a web page and a printable PDF. Filter by level or skill.</p>
 <div class="filters">
   <input type="search" id="f-search" placeholder="Search titles and topics" aria-label="Search">
   <label>Level <select id="f-level"><option value="">All</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></label>
   <label>Skill <select id="f-skill"><option value="">All</option><option>Grammar</option><option>Vocabulary</option><option>Reading</option><option>Writing</option><option>Listening</option><option>Speaking</option></select></label>
-  <label>Format <select id="f-type"><option value="">All</option><option value="lesson">Web lesson</option><option value="pdf">PDF</option></select></label>
   <span class="count" id="f-count"></span>
 </div>
 <div data-catalog data-base=""><p class="empty">Loading&hellip;</p></div>
-<script>
-  // Allow links such as library.html#B2 to preselect a level.
-  (function () {
-    var h = location.hash.replace("#", "").toUpperCase();
-    if (/^(B1|B2|C1|C2)$/.test(h)) document.getElementById("f-level").value = h;
-  })();
-</script>
 
   </div>
 </main>

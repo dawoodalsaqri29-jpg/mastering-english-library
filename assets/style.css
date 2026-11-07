@@ -107,6 +107,7 @@ footer.site { margin-top: 2rem; border-top: 1px solid var(--border); padding: 1.
 .list li .meta { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin-bottom: .3rem; }
 .list li a.title { font-weight: 600; text-decoration: none; color: var(--text); font-size: 1.05rem; }
 .list li a.title:hover { color: var(--accent); }
+.list li .meta a.pdf { margin-left: auto; font-size: .85rem; font-weight: 600; color: var(--accent); }
 .list li p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
 .empty { color: var(--muted); padding: 2rem 0; text-align: center; }
 .lesson-head { margin-bottom: 1.5rem; }
