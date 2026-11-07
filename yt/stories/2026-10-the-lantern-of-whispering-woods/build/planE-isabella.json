@@ -1,0 +1,225 @@
+{
+ "audio": "isa/voice-E.mp3",
+ "audio_delay": 0.5,
+ "out": "lantern-E-isabella.mp4",
+ "total": 96.34,
+ "shots": [
+  {
+   "img": "CARD-ch3.png",
+   "start": 0,
+   "end": 3.41,
+   "move": "card",
+   "fade": 0
+  },
+  {
+   "img": "E1-mist-creeps.jpg",
+   "start": 3.41,
+   "end": 7.85,
+   "move": "in",
+   "fade": 0.6
+  },
+  {
+   "img": "L-R6-misty-river.jpg",
+   "start": 7.85,
+   "end": 14.35,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R6-misty-river.jpg",
+   "start": 14.35,
+   "end": 17.0,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "E2-noor-peers.jpg",
+   "start": 17.0,
+   "end": 19.66,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "L-R6-misty-river.jpg",
+   "start": 19.66,
+   "end": 26.76,
+   "move": "out",
+   "fade": 0.7
+  },
+  {
+   "img": "E3-noor-afraid.jpg",
+   "start": 26.76,
+   "end": 32.64,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "E4-ember-nose.jpg",
+   "start": 32.64,
+   "end": 38.57,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "E5-ember-on-stone.jpg",
+   "start": 38.57,
+   "end": 44.92,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "E5-ember-on-stone.jpg",
+   "start": 44.92,
+   "end": 51.15,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "E6-noor-understands.jpg",
+   "start": 51.15,
+   "end": 56.56,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "E7-stone-by-stone.jpg",
+   "start": 56.56,
+   "end": 63.69,
+   "move": "pan-r",
+   "fade": 0.7
+  },
+  {
+   "img": "E8-firefly-on-rock.jpg",
+   "start": 63.69,
+   "end": 70.87,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "E8-firefly-on-rock.jpg",
+   "start": 70.87,
+   "end": 76.08,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "E9-cupped-hands.jpg",
+   "start": 76.08,
+   "end": 81.75,
+   "move": "in",
+   "fade": 0.7
+  },
+  {
+   "img": "E9-cupped-hands.jpg",
+   "start": 81.75,
+   "end": 88.27,
+   "move": "in-up",
+   "fade": 0.7
+  },
+  {
+   "img": "E10-goodbye-firefly.jpg",
+   "start": 88.27,
+   "end": 96.34,
+   "move": "in",
+   "fade": 0.7
+  }
+ ],
+ "subs": [
+  [
+   0.5,
+   2.91,
+   "Chapter three. Across the Misty River.",
+   ""
+  ],
+  [
+   3.76,
+   7.34,
+   "Soon they heard water, slow and heavy, somewhere in the dark.",
+   "وسرعان ما سمعا خرير ماء، بطيئًا ثقيلًا، في مكان ما في الظلام."
+  ],
+  [
+   8.2,
+   13.85,
+   "The Misty River lay across their path, wrapped in a mist so thick that Noor could barely see her own hands.",
+   "كان النهر الضبابي يعترض طريقهما، ملفوفًا بضباب كثيف حتى إنّ نور بالكاد ترى يديها."
+  ],
+  [
+   14.7,
+   19.16,
+   "Somewhere beneath that mist, she knew, were the old stepping stones. But where?",
+   "كانت تعلم أنّ الحجارة القديمة التي يُعبَر عليها تختبئ في مكان ما تحت ذلك الضباب. لكن أين؟"
+  ],
+  [
+   20.01,
+   26.26,
+   "One wrong step, and the cold current would carry her away. It was the most perilous crossing in the whole forest.",
+   "خطوة واحدة خاطئة، ويجرفها التيار البارد. كان ذلك أخطر معبر في الغابة كلّها."
+  ],
+  [
+   27.11,
+   32.14,
+   "Noor's knees began to tremble. “I can't do it,” she whispered. “I can't see a thing.”",
+   "بدأت ركبتا نور ترتجفان، وهمست: «لا أستطيع. لا أرى شيئًا.»"
+  ],
+  [
+   32.99,
+   38.07,
+   "Ember pressed his warm nose against her hand. Then, without a sound, he leapt into the mist.",
+   "ضغط إمبر أنفه الدافئ على يدها، ثم قفز في الضباب دون أن يُصدر صوتًا."
+  ],
+  [
+   38.92,
+   44.42,
+   "He landed on a hidden stone, light and nimble as a falling leaf, and turned to look back at her.",
+   "حطّ على حجر خفيّ، خفيفًا رشيقًا كورقة تسقط، ثم التفت إليها."
+  ],
+  [
+   45.27,
+   50.65,
+   "And there, glowing faintly in the moonlight, was the white tip of his tail, bright as a little star.",
+   "وهناك، يلمع خافتًا في ضوء القمر، كان طرف ذيله الأبيض، ساطعًا كنجمة صغيرة."
+  ],
+  [
+   51.5,
+   56.06,
+   "“Of course!” Noor breathed. “I don't have to see the stones. I only have to follow you.”",
+   "همست نور: «بالطبع! لست مضطرّة إلى رؤية الحجارة. يكفي أن أتبعك.»"
+  ],
+  [
+   56.91,
+   63.19,
+   "Stone by stone, the fox led the way, and stone by stone, the girl followed the small white light of his tail.",
+   "حجرًا بعد حجر، قاد الثعلب الطريق، وحجرًا بعد حجر، تبعت الفتاة الضوء الأبيض الصغير في ذيله."
+  ],
+  [
+   64.04,
+   70.37,
+   "Halfway across, Noor saw something tiny struggling on a wet rock: a firefly, its wings soaked and heavy.",
+   "في منتصف الطريق، لمحت نور شيئًا صغيرًا يصارع على صخرة مبتلّة: يراعةً جناحاها مبلّلان ثقيلان."
+  ],
+  [
+   71.22,
+   75.58,
+   "Its light was dwindling to almost nothing, like the last breath of a candle.",
+   "كان ضوؤها يتضاءل حتى كاد يتلاشى، كآخر نفَس لشمعة."
+  ],
+  [
+   76.42,
+   81.25,
+   "Noor cupped it carefully in her palm and blew on it softly until its wings were dry.",
+   "حملتها نور بحذر في راحة يدها، ونفخت عليها برفق حتى جفّ جناحاها."
+  ],
+  [
+   82.1,
+   87.77,
+   "The firefly shivered. Then it glowed, just once, warm and golden, before it flew away into the mist.",
+   "ارتعشت اليراعة، ثم توهّجت مرّة واحدة بضوء ذهبيّ دافئ، قبل أن تطير بعيدًا في الضباب."
+  ],
+  [
+   88.62,
+   94.74,
+   "“Goodbye, little friend,” Noor smiled. Then, with one last jump, she reached the far bank beside Ember.",
+   "ابتسمت نور: «وداعًا يا صديقتي الصغيرة.» ثم بقفزة أخيرة، بلغت الضفّة الأخرى بجانب إمبر."
+  ]
+ ]
+}
