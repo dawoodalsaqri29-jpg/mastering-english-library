@@ -361,6 +361,30 @@
       ]
     },
     {
+      "title": "Finding the main idea: topic sentences",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b1-main-idea-topic-sentences.html",
+      "description": "Find what each paragraph is about by spotting its topic sentence, and tell main ideas from supporting details.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
+      "title": "Finding the main idea: topic sentences",
+      "level": "B1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-main-idea-topic-sentences.pdf",
+      "description": "Find what each paragraph is about by spotting its topic sentence, and tell main ideas from supporting details.",
+      "tags": [
+        "reading",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -717,6 +741,30 @@
       "description": "Write a lively, balanced review of a film, book, restaurant or product that ends with a clear recommendation.",
       "tags": [
         "writing",
+        "b2"
+      ]
+    },
+    {
+      "title": "Reading between the lines: inference",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/b2-reading-between-the-lines.html",
+      "description": "Work out what a writer means but does not say directly, using clues in the text rather than guesses.",
+      "tags": [
+        "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Reading between the lines: inference",
+      "level": "B2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-reading-between-the-lines.pdf",
+      "description": "Work out what a writer means but does not say directly, using clues in the text rather than guesses.",
+      "tags": [
+        "reading",
         "b2"
       ]
     },
@@ -1081,6 +1129,30 @@
       ]
     },
     {
+      "title": "Recognising text structure",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c1-text-structure.html",
+      "description": "Identify how a text is organised, such as problem and solution or cause and effect, to read faster and predict what comes next.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
+      "title": "Recognising text structure",
+      "level": "C1",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-text-structure.pdf",
+      "description": "Identify how a text is organised, such as problem and solution or cause and effect, to read faster and predict what comes next.",
+      "tags": [
+        "reading",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1437,6 +1509,30 @@
       "description": "Reduce a long text to its essential argument in your own words, keeping the writer's stance without adding your own.",
       "tags": [
         "writing",
+        "c2"
+      ]
+    },
+    {
+      "title": "Evaluating arguments: spotting weak reasoning",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "lesson",
+      "path": "lessons/c2-evaluating-arguments.html",
+      "description": "Read critically by identifying common flaws in reasoning, such as false cause, hasty generalisation and false choice.",
+      "tags": [
+        "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "Evaluating arguments: spotting weak reasoning",
+      "level": "C2",
+      "skill": "Reading",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-evaluating-arguments.pdf",
+      "description": "Read critically by identifying common flaws in reasoning, such as false cause, hasty generalisation and false choice.",
+      "tags": [
+        "reading",
         "c2"
       ]
     }
