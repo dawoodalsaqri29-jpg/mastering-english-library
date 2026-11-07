@@ -385,6 +385,30 @@
       ]
     },
     {
+      "title": "Understanding a weather forecast",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b1-weather-forecast.html",
+      "description": "Catch the key facts in a radio weather forecast: places, times, temperatures and what the weather will do.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
+      "title": "Understanding a weather forecast",
+      "level": "B1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-weather-forecast.pdf",
+      "description": "Catch the key facts in a radio weather forecast: places, times, temperatures and what the weather will do.",
+      "tags": [
+        "listening",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -765,6 +789,30 @@
       "description": "Work out what a writer means but does not say directly, using clues in the text rather than guesses.",
       "tags": [
         "reading",
+        "b2"
+      ]
+    },
+    {
+      "title": "Following an interview",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/b2-following-an-interview.html",
+      "description": "Follow a radio interview: separate the questions from the answers, and catch the speaker's reasons and examples.",
+      "tags": [
+        "listening",
+        "b2"
+      ]
+    },
+    {
+      "title": "Following an interview",
+      "level": "B2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-following-an-interview.pdf",
+      "description": "Follow a radio interview: separate the questions from the answers, and catch the speaker's reasons and examples.",
+      "tags": [
+        "listening",
         "b2"
       ]
     },
@@ -1153,6 +1201,30 @@
       ]
     },
     {
+      "title": "A radio discussion: who thinks what",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c1-radio-discussion.html",
+      "description": "Track several speakers in a discussion and match each opinion, agreement or objection to the right person.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
+      "title": "A radio discussion: who thinks what",
+      "level": "C1",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-radio-discussion.pdf",
+      "description": "Track several speakers in a discussion and match each opinion, agreement or objection to the right person.",
+      "tags": [
+        "listening",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1533,6 +1605,30 @@
       "description": "Read critically by identifying common flaws in reasoning, such as false cause, hasty generalisation and false choice.",
       "tags": [
         "reading",
+        "c2"
+      ]
+    },
+    {
+      "title": "Connected speech: linking, weak forms and elision",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "lesson",
+      "path": "lessons/c2-connected-speech.html",
+      "description": "Understand natural, fast English by recognising how sounds join, shrink and disappear between words.",
+      "tags": [
+        "listening",
+        "c2"
+      ]
+    },
+    {
+      "title": "Connected speech: linking, weak forms and elision",
+      "level": "C2",
+      "skill": "Listening",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-connected-speech.pdf",
+      "description": "Understand natural, fast English by recognising how sounds join, shrink and disappear between words.",
+      "tags": [
+        "listening",
         "c2"
       ]
     }
