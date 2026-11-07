@@ -91,6 +91,9 @@ ECC agents are specialists you call for one job.
 
 Do not install ECC's hooks or run its install scripts in this repo.
 
+Who does what, and the hourly and daily schedule, is in `.claude/team/ROSTER.md`.
+Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
+
 ### 4. Default routing for this repo
 
 - New page, lesson section or feature → `/office-hours` then `/autoplan`, then build.
