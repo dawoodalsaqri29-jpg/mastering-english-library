@@ -2,3 +2,78 @@
 
 The content editor reads eight lessons each Wednesday, oldest-checked first. One line per lesson: date, lesson, result.
 
+
+## 2026-11-07: full check of all 72 lessons (four parallel reviewers, findings verified by the lead)
+
+- 2026-11-07 · b1-articles · ok
+- 2026-11-07 · b1-describing-people-and-places · ok
+- 2026-11-07 · b1-everyday-phrasal-verbs · ok
+- 2026-11-07 · b1-feelings-adjectives · ok
+- 2026-11-07 · b1-following-directions · ok
+- 2026-11-07 · b1-linking-words · ok
+- 2026-11-07 · b1-main-idea-topic-sentences · ok
+- 2026-11-07 · b1-modals-obligation-advice · ok
+- 2026-11-07 · b1-polite-requests · ok
+- 2026-11-07 · b1-present-perfect-vs-past-simple · ok
+- 2026-11-07 · b1-reading-messages · ok
+- 2026-11-07 · b1-skimming-and-scanning · ok
+- 2026-11-07 · b1-small-talk · fixed: 'How long have you been doing that?'
+- 2026-11-07 · b1-travel-vocabulary · ok
+- 2026-11-07 · b1-understanding-announcements · ok
+- 2026-11-07 · b1-weather-forecast · ok
+- 2026-11-07 · b1-writing-a-story · ok
+- 2026-11-07 · b1-writing-informal-email · ok
+- 2026-11-07 · b2-agreeing-and-disagreeing · fixed: 'true to some extent, but...' (comma splice)
+- 2026-11-07 · b2-collocations-work · ok
+- 2026-11-07 · b2-complaint-email · ok
+- 2026-11-07 · b2-conditionals · ok
+- 2026-11-07 · b2-describing-a-photo · fixed: 'It looks like + clause' is informal, not wrong; Q3 now 'Make it more formal'
+- 2026-11-07 · b2-easily-confused-words · ok
+- 2026-11-07 · b2-fact-or-opinion · ok
+- 2026-11-07 · b2-following-an-interview · ok
+- 2026-11-07 · b2-making-plans-together · ok
+- 2026-11-07 · b2-numbers-and-statistics · ok
+- 2026-11-07 · b2-opinion-essay · ok
+- 2026-11-07 · b2-passive-voice · ok
+- 2026-11-07 · b2-phone-messages · fixed: number groups of three to five digits
+- 2026-11-07 · b2-reading-between-the-lines · ok
+- 2026-11-07 · b2-reported-speech · ok
+- 2026-11-07 · b2-word-formation · ok
+- 2026-11-07 · b2-writers-attitude · ok
+- 2026-11-07 · b2-writing-a-review · ok
+- 2026-11-07 · c1-academic-vocabulary · fixed: Q1 'make trade ... easier'
+- 2026-11-07 · c1-essay-introductions-conclusions · ok
+- 2026-11-07 · c1-following-a-lecture · ok
+- 2026-11-07 · c1-formal-report · ok
+- 2026-11-07 · c1-formal-verbs · ok
+- 2026-11-07 · c1-future-perfect-continuous · ok
+- 2026-11-07 · c1-giving-feedback-diplomatically · ok
+- 2026-11-07 · c1-handling-difficult-questions · ok
+- 2026-11-07 · c1-hedging-language · ok
+- 2026-11-07 · c1-inversion-for-emphasis · ok
+- 2026-11-07 · c1-meaning-from-context · ok
+- 2026-11-07 · c1-news-main-idea-detail · ok
+- 2026-11-07 · c1-participle-clauses · ok
+- 2026-11-07 · c1-radio-discussion · ok
+- 2026-11-07 · c1-reference-words · fixed: which-after-comma rule; 'the former raise / the latter make'
+- 2026-11-07 · c1-signposting-presentations · ok
+- 2026-11-07 · c1-text-structure · ok
+- 2026-11-07 · c1-writing-a-proposal · ok
+- 2026-11-07 · c2-claims-and-certainty · ok
+- 2026-11-07 · c2-cleft-sentences · ok
+- 2026-11-07 · c2-connected-speech · ok
+- 2026-11-07 · c2-ellipsis-and-substitution · ok
+- 2026-11-07 · c2-evaluating-arguments · ok
+- 2026-11-07 · c2-idioms-and-nuance · ok
+- 2026-11-07 · c2-irony-and-understatement · ok
+- 2026-11-07 · c2-managing-a-discussion · ok
+- 2026-11-07 · c2-metaphor-in-everyday-english · ok
+- 2026-11-07 · c2-nominalisation · ok
+- 2026-11-07 · c2-persuading-and-negotiating · ok
+- 2026-11-07 · c2-shades-of-meaning · ok
+- 2026-11-07 · c2-speaker-attitude · ok
+- 2026-11-07 · c2-spoken-discourse-markers · ok
+- 2026-11-07 · c2-style-and-register · ok
+- 2026-11-07 · c2-subjunctive · ok
+- 2026-11-07 · c2-summarising-concisely · ok
+- 2026-11-07 · c2-telling-an-anecdote · fixed: historic present uses continuous + simple
