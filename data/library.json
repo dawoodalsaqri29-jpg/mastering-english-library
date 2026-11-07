@@ -409,6 +409,30 @@
       ]
     },
     {
+      "title": "Describing people and places",
+      "level": "B1",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/b1-describing-people-and-places.html",
+      "description": "Describe someone you know or a place you love, with the right order of details and plenty of useful adjectives.",
+      "tags": [
+        "speaking",
+        "b1"
+      ]
+    },
+    {
+      "title": "Describing people and places",
+      "level": "B1",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/b1/b1-describing-people-and-places.pdf",
+      "description": "Describe someone you know or a place you love, with the right order of details and plenty of useful adjectives.",
+      "tags": [
+        "speaking",
+        "b1"
+      ]
+    },
+    {
       "title": "Conditionals: zero to mixed",
       "level": "B2",
       "skill": "Grammar",
@@ -813,6 +837,30 @@
       "description": "Follow a radio interview: separate the questions from the answers, and catch the speaker's reasons and examples.",
       "tags": [
         "listening",
+        "b2"
+      ]
+    },
+    {
+      "title": "Making suggestions and reaching a decision",
+      "level": "B2",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/b2-making-plans-together.html",
+      "description": "Work with a partner on a shared task: suggest ideas, respond to theirs and agree on a final choice.",
+      "tags": [
+        "speaking",
+        "b2"
+      ]
+    },
+    {
+      "title": "Making suggestions and reaching a decision",
+      "level": "B2",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/b2/b2-making-plans-together.pdf",
+      "description": "Work with a partner on a shared task: suggest ideas, respond to theirs and agree on a final choice.",
+      "tags": [
+        "speaking",
         "b2"
       ]
     },
@@ -1225,6 +1273,30 @@
       ]
     },
     {
+      "title": "Giving feedback diplomatically",
+      "level": "C1",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/c1-giving-feedback-diplomatically.html",
+      "description": "Praise, criticise and suggest improvements to colleagues or classmates in a way that is honest but tactful.",
+      "tags": [
+        "speaking",
+        "c1"
+      ]
+    },
+    {
+      "title": "Giving feedback diplomatically",
+      "level": "C1",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/c1/c1-giving-feedback-diplomatically.pdf",
+      "description": "Praise, criticise and suggest improvements to colleagues or classmates in a way that is honest but tactful.",
+      "tags": [
+        "speaking",
+        "c1"
+      ]
+    },
+    {
       "title": "Cleft sentences and fronting",
       "level": "C2",
       "skill": "Grammar",
@@ -1629,6 +1701,30 @@
       "description": "Understand natural, fast English by recognising how sounds join, shrink and disappear between words.",
       "tags": [
         "listening",
+        "c2"
+      ]
+    },
+    {
+      "title": "Telling an engaging anecdote",
+      "level": "C2",
+      "skill": "Speaking",
+      "type": "lesson",
+      "path": "lessons/c2-telling-an-anecdote.html",
+      "description": "Tell a short personal story that holds attention, using a hook, vivid detail, suspense and a satisfying ending.",
+      "tags": [
+        "speaking",
+        "c2"
+      ]
+    },
+    {
+      "title": "Telling an engaging anecdote",
+      "level": "C2",
+      "skill": "Speaking",
+      "type": "pdf",
+      "path": "pdfs/c2/c2-telling-an-anecdote.pdf",
+      "description": "Tell a short personal story that holds attention, using a hook, vivid detail, suspense and a satisfying ending.",
+      "tags": [
+        "speaking",
         "c2"
       ]
     }
