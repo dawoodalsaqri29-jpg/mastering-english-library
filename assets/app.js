@@ -74,6 +74,7 @@
   var level = document.getElementById("f-level");
   var skill = document.getElementById("f-skill");
   var count = document.getElementById("f-count");
+  var hideDone = document.getElementById("f-hide-done");
   var LEVELS = /^(B1|B2|C1|C2)$/;
 
   function esc(s) {
@@ -95,12 +96,14 @@
       if (skill.options[i].value.toLowerCase() === sk.toLowerCase()) skill.value = skill.options[i].value;
     }
     if (u.get("q")) q.value = u.get("q");
+    if (hideDone && u.get("done") === "hide") hideDone.checked = true;
   }
   function writeUrl() {
     var u = new URLSearchParams();
     if (level.value) u.set("level", level.value);
     if (skill.value) u.set("skill", skill.value);
     if (q.value.trim()) u.set("q", q.value.trim());
+    if (hideDone && hideDone.checked) u.set("done", "hide");
     var s = u.toString();
     history.replaceState(null, "", location.pathname + (s ? "?" + s : ""));
   }
@@ -129,7 +132,11 @@
 
   function render() {
     var text = (q.value || "").trim().toLowerCase();
+    var done = readDone();
+    // The "Hide finished" option only appears once the learner has finished a lesson.
+    if (hideDone) hideDone.parentNode.hidden = !done.length;
     var out = items.filter(function (it) {
+      if (hideDone && hideDone.checked && it.lesson && done.indexOf(slugFromPath(it.lesson)) !== -1) return false;
       if (level.value && it.level !== level.value) return false;
       if (skill.value && it.skill !== skill.value) return false;
       if (text) {
@@ -138,7 +145,6 @@
       }
       return true;
     });
-    var done = readDone();
     var doneCount = items.filter(function (it) { return it.lesson && done.indexOf(slugFromPath(it.lesson)) !== -1; }).length;
     count.textContent = out.length + " of " + items.length + " lessons" + (doneCount ? " \u00b7 " + doneCount + " done" : "");
     if (!out.length) {
@@ -164,7 +170,7 @@
       var order = { B1: 1, B2: 2, C1: 3, C2: 4 };
       items.sort(function (a, b) { return (order[a.level] - order[b.level]) || a.title.localeCompare(b.title); });
       readUrl();
-      [q, level, skill].forEach(function (el) { el.addEventListener("input", function () { writeUrl(); render(); }); });
+      [q, level, skill, hideDone].forEach(function (el) { if (el) el.addEventListener("input", function () { writeUrl(); render(); }); });
       render();
     })
     .catch(function () {
