@@ -201,10 +201,58 @@ function checkWorkflows() {
   record("GitHub workflows are safe", !bad.length && files.length > 0, bad.length ? bad.slice(0, 6).join("; ") : files.length + " workflow(s) checked");
 }
 
+// 7. SEO tags, sitemap and robots (static, no browser needed).
+const SITE = "https://dawoodalsaqri29-jpg.github.io/mastering-english-library/";
+function checkSeo() {
+  const pages = ["index.html", "library.html", "levels.html",
+    ...fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html")).map((f) => "lessons/" + f)];
+  const seo = [], titles = new Map(), descs = new Map();
+  const one = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
+  for (const p of pages) {
+    const html = fs.readFileSync(path.join(ROOT, p), "utf8");
+    const url = p === "index.html" ? SITE : SITE + p;
+    const title = one(html, /<title>([^<]+)<\/title>/i);
+    const desc = one(html, /<meta name="description" content="([^"]+)"/i);
+    const canon = one(html, /<link rel="canonical" href="([^"]+)"/i);
+    const ogUrl = one(html, /<meta property="og:url" content="([^"]+)"/i);
+    if (!title) seo.push(p + ": no <title>"); else titles.set(title, [...(titles.get(title) || []), p]);
+    if (!desc) seo.push(p + ": no meta description"); else descs.set(desc, [...(descs.get(desc) || []), p]);
+    if (canon !== url) seo.push(p + ": canonical is " + canon + ", expected " + url);
+    if (ogUrl !== canon) seo.push(p + ": og:url differs from canonical");
+    if (!/<meta property="og:image" content="https:/i.test(html)) seo.push(p + ": no og:image");
+    if ((html.match(/<h1[\s>]/gi) || []).length !== 1) seo.push(p + ": not exactly one <h1>");
+    if (/<meta name="robots" content="[^"]*noindex/i.test(html)) seo.push(p + ": noindex on a page that should be found");
+    for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+      try { JSON.parse(m[1]); } catch (e) { seo.push(p + ": JSON-LD does not parse (" + e.message.slice(0, 40) + ")"); }
+    }
+  }
+  for (const [t, ps] of titles) if (ps.length > 1) seo.push("same title on " + ps.join(", "));
+  for (const [d, ps] of descs) if (ps.length > 1) seo.push("same description on " + ps.join(", "));
+  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
+  const inMap = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+  const want = new Set(pages.map((p) => (p === "index.html" ? SITE : SITE + p)));
+  for (const u of want) if (!inMap.has(u)) seo.push("sitemap.xml is missing " + u.replace(SITE, ""));
+  for (const u of inMap) if (!want.has(u)) seo.push("sitemap.xml lists a page that does not exist: " + u.replace(SITE, ""));
+  const robots = fs.existsSync(path.join(ROOT, "robots.txt")) ? fs.readFileSync(path.join(ROOT, "robots.txt"), "utf8") : "";
+  if (!robots.includes("Sitemap: " + SITE + "sitemap.xml")) seo.push("robots.txt has no Sitemap line");
+  if (/^Disallow:\s*\/\s*$/m.test(robots)) seo.push("robots.txt blocks the whole site");
+  record("SEO tags, sitemap and robots", !seo.length, seo.length ? seo.slice(0, 10).join("; ") : pages.length + " pages, " + inMap.size + " sitemap URLs");
+}
+
+// 8. Site safety: every link, script, host and PDF action is one we expect (scripts/site-safety.js).
+function checkSafetyRules() {
+  let r;
+  try { r = require("./site-safety.js").checkSafety(ROOT); }
+  catch (e) { record("Site safety rules", false, "could not run: " + e.message.split("\n")[0]); return; }
+  record("Site safety rules", !r.length, r.length ? r.slice(0, 8).join("; ") : "links, scripts, hosts and PDF actions all expected");
+}
+
 (async () => {
   const pages = checkFiles();
   checkSyntax();
   checkWorkflows();
+  checkSeo();
+  checkSafetyRules();
   await checkBrowser(pages);
   for (const r of results) console.log((r.ok ? "PASS " : "FAIL ") + r.name + (r.detail ? " — " + r.detail : ""));
   const failed = results.filter((r) => !r.ok).length;
