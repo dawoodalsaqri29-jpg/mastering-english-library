@@ -58,6 +58,16 @@ precise and saves tokens.
 | Replies to customer messages (drafts only) | `agency-support-support-responder` |
 | Instagram comment and DM replies (drafts only) | `agency-support-support-responder` + `agency-marketing-instagram-curator` |
 | Site SEO, code, security, accessibility | the `ecc-*` agents above |
+| Test a new product or offer before building it (board vote: offer, monopoly, product) | `founder-board` skill |
+| Real profit per pack after Wix fees, payment fees and ads | `founder-cfo` skill |
+| How Gulf learners and school buyers react to an offer (100 simulated buyers) | `founder-consumer` skill |
+| One-page launch plan from the board, CFO and panel results | `founder-plan` skill |
+| Which automations (skills, subagents, MCP servers) the team is missing; Friday review, suggestions only, no hooks | `claude-automation-recommender` skill |
+
+The other seven `founder-*` skills (marketing, launch, pricing, offer, competitors, brand, ops) are installed but
+are second choice: their jobs already belong to the agents above (pricing analyst, offer strategist, marketing
+agents, `competitors` skill). Use one only when its agent is not enough, and say why in the report.
+Simulated buyers are a test of the pitch, not evidence of demand: real numbers come from the store and the site.
 
 Instagram replies: the owner stopped using ChatPlace (2026-11-07). The owner pastes comments or screenshots; the
 agents draft a reply for each one in his voice, in the commenter's language; the owner posts them. No agent posts.
