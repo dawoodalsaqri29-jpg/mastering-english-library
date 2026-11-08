@@ -112,3 +112,5 @@ Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
 - Work on the session's designated branch; never push to `main` without permission.
 - The existing marketing skills in `.claude/skills/` (seo-audit, copywriting, cro, ...) stay;
   use them for marketing work next to gstack's engineering skills.
+- When you change a lesson, run `node scripts/build-pdfs.js lessons/<file>.html` in the same PR and commit the PDF
+  and `data/pdf-manifest.json`. The site check fails until the PDF prints what the lesson says.
