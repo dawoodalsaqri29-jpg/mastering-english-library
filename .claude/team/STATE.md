@@ -7,8 +7,8 @@ the repo is public. Update it in the same commit as the work it describes.
 Last updated: 2026-11-08
 
 ## In progress
-- Schools plan step 4, teachers page (PR open): owner approved the defaults on 2026-11-08 (library name only, no bio
-  line, "store price" only, class sets asked on WhatsApp; no licence terms written). Next: step 6 (Wix product line).
+- Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
+  line, "store price" only, class sets asked on WhatsApp; no licence terms written).
 - Security and SEO plan (arena winner a007, 2026-11-08): Claude's part fully done (PR-A1 to E, A1b, A4; SEO S1, S3, S6 part). Claude's part is PR-A to PR-E
   (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
   SEO check, SECURITY.md, Dependabot, CSP. Done: safe links (PR #60). Done: daily live check (PR #61, first manual run green, no API errors). Next:
@@ -17,11 +17,11 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
+- Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
   from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
 - OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
   C5 (Gemini budget); Claude part PR-F and C3/C4 after the owner approves.
-- Schools plan, PDF footer: approval of the usage line "Free to copy for your own classes".
 - Schools plan questions 2 to 12 (name on the page, class-set price, licence terms, invoice): see the
   plan's section 5; ask them step by step.
 - Lantern story video: pictures B1 and C1 to C7 (must be sent in a new message on their own),
@@ -30,6 +30,8 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Owner approved the PDF line "Free to copy for your own classes": in every PDF footer (72 rebuilt) and on teachers.html.
+- 2026-11-08: Schools plan step 6: "Teaching a class? Ask for a class set →" (link to teachers.html#class-sets) appended to all 61 paid Wix products, at the owner's request; free products untouched.
 - 2026-11-08: Owner's three prompts as project skills: /handoff (summary for a new chat), /clarify (up to 3 questions first), /short (under 120 words).
 - 2026-11-08: Schools plan step 1: owner's tested WhatsApp number in catalog.js and the home footer (wa.me allowed in #69).
 - 2026-11-08: Lesson search descriptions lengthened to 117-155 characters with level, skill and free PDF (SEO S4, PR #68).
