@@ -7,7 +7,7 @@ const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inl
 const REQUIRE_CSP = true;
 // Every script file the pages may load, and every outside host. A new one fails until it is added here on purpose,
 // in its own PR that says why; /cso reviews it.
-const ALLOWED_SCRIPTS = ["assets/app.js", "assets/catalog.js", "assets/free.js", "assets/listen.js", "assets/placement.js", "assets/store.js"];
+const ALLOWED_SCRIPTS = ["assets/app.js", "assets/catalog.js", "assets/free.js", "assets/listen.js", "assets/placement.js", "assets/store.js", "assets/teachers.js"];
 const ALLOWED_HOSTS = ["dawoodalsaqri29-jpg.github.io", "www.masteringenglishlibrary.com", "static.wixstatic.com", "schema.org", "wa.me"];
 const SITE_HOST = "dawoodalsaqri29-jpg.github.io";
 // Named HTML entities that can spell a URL. Any other named entity inside a URL attribute fails (fail closed).
@@ -48,7 +48,7 @@ function pdfText(buf) {
 function checkSafety(ROOT) {
   const safety = [];
   const ls = (d, ext) => fs.readdirSync(path.join(ROOT, d)).filter((f) => f.endsWith(ext)).map((f) => d + "/" + f);
-  const files = ["index.html", "library.html", "levels.html", "404.html", ...ls("lessons", ".html"), ...ls("assets", ".js"), "data/library.json"];
+  const files = ["index.html", "library.html", "levels.html", "404.html", ...["teachers.html"].filter((f) => fs.existsSync(path.join(ROOT, f))), ...ls("lessons", ".html"), ...ls("assets", ".js"), "data/library.json"];
   const clean = (v) => unentity(v).replace(/[\u0000-\u0020\u007f-\u00a0]+/g, (s) => (s.includes(BAD) ? BAD : "")).toLowerCase();
   const attr = (tag, name) => { const m = tag.match(new RegExp("[\\s\"'/]" + name + "\\s*=\\s*(\"[^\"]*\"|'[^']*'|[^\\s>]+)", "i")); return m ? m[1].replace(/^["']|["']$/g, "") : null; };
   // Attribute names outside quoted values only, so title=">" or title="onclick=" cannot hide or fake one.
