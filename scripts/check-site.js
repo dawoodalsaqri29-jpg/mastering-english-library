@@ -75,6 +75,9 @@ async function checkBrowser(pages) {
     // 3. Every page loads with no script errors and no failed local requests.
     const problems = [];
     const page = await browser.newPage();
+    // CSP blocks are not console messages in Playwright, so report them as errors.
+    await page.addInitScript(() => document.addEventListener("securitypolicyviolation",
+      (e) => console.error("CSP blocked " + e.effectiveDirective + " " + (e.blockedURI || "inline"))));
     let current = "";
     page.on("pageerror", (e) => problems.push(current + ": " + e.message));
     page.on("console", (m) => { if (m.type() === "error" && !/net::ERR|Failed to load resource/.test(m.text())) problems.push(current + ": " + m.text()); });
