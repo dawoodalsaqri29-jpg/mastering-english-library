@@ -62,6 +62,7 @@ precise and saves tokens.
 | Real profit per pack after Wix fees, payment fees and ads | `founder-cfo` skill |
 | How Gulf learners and school buyers react to an offer (100 simulated buyers) | `founder-consumer` skill |
 | One-page launch plan from the board, CFO and panel results | `founder-plan` skill |
+| Which automations (skills, subagents, MCP servers) the team is missing; Friday review, suggestions only, no hooks | `claude-automation-recommender` skill |
 
 The other seven `founder-*` skills (marketing, launch, pricing, offer, competitors, brand, ops) are installed but
 are second choice: their jobs already belong to the agents above (pricing analyst, offer strategist, marketing

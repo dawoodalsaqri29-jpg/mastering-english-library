@@ -24,6 +24,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
 - 2026-11-08: Installed the 11 founder-* skills (MIT, pinned fd9385b); four have their own job in the roster.
 - 2026-11-08: PDFs never link to the local build server (PR #53); found by the security arena.
 - 2026-11-08: Security hardening of the PDF build server and CI checkout, plus this STATE file (PR #52).
