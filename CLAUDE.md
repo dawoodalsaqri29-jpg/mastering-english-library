@@ -116,3 +116,5 @@ Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
   use them for marketing work next to gstack's engineering skills.
 - When you change a lesson, run `node scripts/build-pdfs.js lessons/<file>.html` in the same PR and commit the PDF
   and `data/pdf-manifest.json`. The site check fails until the PDF prints what the lesson says.
+- When you change `data/library.json`, run `node scripts/static-catalog.js` in the same PR and commit `library.html`.
+  The site check fails until the page's lesson list matches the data.

@@ -29,6 +29,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: library.html carries all 72 lessons as plain HTML for search engines (PR #65); main's safety rules run on every PR (PR #64).
 - 2026-11-08: seo-content-brief skill, Loop 1 data source (Wix search data + monthly CSV), roster security section (PR #63).
 - 2026-11-08: PDF byte fingerprints and the PDF-with-its-lesson rule (PR #62).
 - 2026-11-08: Daily live-site check (PR #61); first run green. Main's protection rules show as warnings until the owner turns them on.
