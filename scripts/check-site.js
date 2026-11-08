@@ -12,7 +12,7 @@ const record = (name, ok, detail) => results.push({ name, ok, detail: detail || 
 
 // 1. Local links and catalogue paths exist.
 function checkFiles() {
-  const pages = ["index.html", "library.html", "levels.html", "404.html",
+  const pages = ["index.html", "library.html", "levels.html", "teachers.html", "404.html",
     ...fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html")).map((f) => "lessons/" + f)];
   const missing = [];
   for (const page of pages) {
@@ -140,6 +140,24 @@ async function checkBrowser(pages) {
     }));
     record("Store buttons all work", buy.want > 0 && buy.got === buy.want && buy.store === buy.site && /^https:\/\/www\.masteringenglishlibrary\.com\//.test(buy.store),
       buy.got + " of " + buy.want + " Get PDF buttons; store " + (buy.store || "(none)"));
+    // Teachers page: the course map lists every lesson, a working contact link exists, and an outreach tag (?ref=)
+    // survives a visit to a lesson and reaches the store links and the contact message.
+    await page.goto(base + "teachers.html?ref=test");
+    await page.waitForSelector("#course-map .map-lesson", { timeout: 10000 });
+    await page.goto(base + "lessons/b1-articles.html");
+    await page.goto(base + "teachers.html");
+    await page.waitForSelector("#course-map .map-lesson", { timeout: 10000 });
+    const tp = await page.evaluate(() => ({
+      map: document.querySelectorAll("#course-map .map-lesson").length,
+      want: Number((document.querySelector('[data-count="lessons"]') || {}).textContent),
+      contact: [...document.querySelectorAll("#ask a")].map((a) => a.href),
+      store: [...document.querySelectorAll("a[data-store]")].map((a) => a.href),
+    }));
+    const contactOk = tp.contact.length > 0 && tp.contact.every((h) => /%5Btest%5D|\[test\]/.test(h));
+    const storeOk = tp.store.length > 1 && tp.store.every((h) => /utm_source=test/.test(h));
+    record("Teachers page works", tp.map === tp.want && contactOk && storeOk,
+      tp.map + " of " + tp.want + " lessons in the course map; " + tp.contact.length + " contact link(s)" + (contactOk ? " tagged" : " NOT tagged") +
+      "; " + tp.store.length + " store link(s)" + (storeOk ? " tagged" : " NOT tagged"));
     await page.goto(base + "library.html#B2");
     await page.waitForSelector("#f-count:not(:empty)", { timeout: 10000 });
     const lv = await page.$eval("#f-level", (e) => e.value);
@@ -262,7 +280,7 @@ function checkWorkflows() {
 // 7. SEO tags, sitemap and robots (static, no browser needed).
 const SITE = "https://dawoodalsaqri29-jpg.github.io/mastering-english-library/";
 function checkSeo() {
-  const pages = ["index.html", "library.html", "levels.html",
+  const pages = ["index.html", "library.html", "levels.html", "teachers.html",
     ...fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html")).map((f) => "lessons/" + f)];
   const seo = [], titles = new Map(), descs = new Map();
   const one = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
@@ -297,6 +315,36 @@ function checkSeo() {
   record("SEO tags, sitemap and robots", !seo.length, seo.length ? seo.slice(0, 10).join("; ") : pages.length + " pages, " + inMap.size + " sitemap URLs");
 }
 
+// 10. Every number on teachers.html (data-count) matches the lessons, and a contact is set.
+function checkTeachersClaims() {
+  const html = fs.readFileSync(path.join(ROOT, "teachers.html"), "utf8");
+  const lib = JSON.parse(fs.readFileSync(path.join(ROOT, "data/library.json"), "utf8"));
+  const L = lib.resources.filter((r) => r.type === "lesson");
+  const per = new Set(Object.values(L.reduce((m, r) => { const k = r.level + r.skill; m[k] = (m[k] || 0) + 1; return m; }, {})));
+  const lessonFiles = fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html"));
+  const real = {
+    lessons: L.length,
+    levels: new Set(L.map((r) => r.level)).size,
+    skills: new Set(L.map((r) => r.skill)).size,
+    "per-skill": per.size === 1 ? [...per][0] : -1,
+    listening: L.filter((r) => r.skill === "Listening").length,
+    mistake: lessonFiles.filter((f) => /[Cc]ommon mistake/.test(fs.readFileSync(path.join(ROOT, "lessons", f), "utf8"))).length,
+    questions: 12,
+  };
+  const bad = [];
+  const digits = (t) => Number(t.replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d)));
+  for (const m of html.matchAll(/<span data-count="([a-z-]+)">([^<]+)<\/span>/g)) {
+    if (!(m[1] in real)) bad.push("unknown data-count " + m[1]);
+    else if (digits(m[2]) !== real[m[1]]) bad.push(m[1] + " says " + m[2] + ", real " + real[m[1]]);
+  }
+  const site = fs.readFileSync(path.join(ROOT, "assets/catalog.js"), "utf8");
+  const wa = (site.match(/whatsapp:\s*"(\d*)"/) || [])[1] || "";
+  const mail = (site.match(/contactEmail:\s*"([^"]*)"/) || [])[1] || "";
+  if (!/^[1-9]\d{7,14}$/.test(wa) && !/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(mail)) bad.push("no contactEmail or whatsapp set in assets/catalog.js");
+  if (/\[OWNER/.test(html)) bad.push("placeholder text on the page");
+  record("Teachers page claims match the lessons", !bad.length, bad.length ? bad.slice(0, 6).join("; ") : "every number checked, contact set");
+}
+
 // 8. Site safety: every link, script, host and PDF action is one we expect (scripts/site-safety.js).
 // The lesson list written into library.html (for search engines and visitors without JavaScript) matches data/library.json.
 function checkStaticCatalog() {
@@ -319,7 +367,7 @@ function checkSafetyRules() {
   checkSyntax();
   checkWorkflows();
   checkSeo();
-  checkSafetyRules(); checkStaticCatalog();
+  checkSafetyRules(); checkStaticCatalog(); checkTeachersClaims();
   await checkBrowser(pages);
   for (const r of results) console.log((r.ok ? "PASS " : "FAIL ") + r.name + (r.detail ? " — " + r.detail : ""));
   const failed = results.filter((r) => !r.ok).length;
