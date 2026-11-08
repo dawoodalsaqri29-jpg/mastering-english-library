@@ -36,5 +36,7 @@ Last updated: 2026-11-08
 - Not used: FounderOS, the nine self-hosted apps, Reverse API Engineer, FreeLLMAPI, caveman-setup,
   ChatPlace, the Humanizer for school or university work (academic dishonesty), the Context Engineering
   Kit as a whole (overlaps gstack and ECC, and its hooks are not allowed), Scientific Agent Skills
-  (177 lab-science skills: biology, chemistry, medical databases; nothing for an English-learning business).
+  (177 lab-science skills: biology, chemistry, medical databases; nothing for an English-learning business),
+  claude-mem (hooks on every message and tool call, a background worker, an extra paid API key or the
+  cmem.ai cloud; its local database would be lost when the cloud container is reclaimed; STATE.md does the job).
 - Arenas: 8 agents by default (about 43 calls); 16 only for big decisions.
