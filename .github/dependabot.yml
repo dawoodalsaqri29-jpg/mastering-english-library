@@ -1,0 +1,9 @@
+# Monthly pull requests that bump the pinned GitHub Actions. They go through /review and the
+# site check like every other PR, and are never merged automatically.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
