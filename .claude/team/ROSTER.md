@@ -210,5 +210,5 @@ is stored as a network secret (`x-goog-api-key` for `generativelanguage.googleap
 - Client Hunter and The Agency: in use (see above).
 - Nine self-hosted apps (Umami, Easy!Appointments, Twenty, ...): not used. They need a rented server and upkeep,
   and the Wix store already covers forms, bookings, invoices and email. Revisit only if a Wix bill becomes the problem.
-- Reverse API Engineer: not used. The site needs no data pulled from other sites, and scraping risks breaking
-  sites' terms.
+- Reverse API Engineer: reviewed 2026-11-07 as not needed; on 2026-11-08 the owner chose to keep it on demand
+  (see the `reverse-api-engineer` skill: own or permitted sites only, never the stealth extra).
