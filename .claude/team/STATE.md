@@ -30,6 +30,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Owner reversed the earlier "not used" for Reverse API Engineer: on-demand skill, pinned 0.14.0, own/permitted sites only, no stealth extra.
 - 2026-11-08: Owner approved the PDF line "Free to copy for your own classes": in every PDF footer (72 rebuilt) and on teachers.html.
 - 2026-11-08: Schools plan step 6: "Teaching a class? Ask for a class set →" (link to teachers.html#class-sets) appended to all 61 paid Wix products, at the owner's request; free products untouched.
 - 2026-11-08: Owner's three prompts as project skills: /handoff (summary for a new chat), /clarify (up to 3 questions first), /short (under 120 words).
@@ -60,7 +61,7 @@ Last updated: 2026-11-08
 ## Decisions that stand (do not reopen without the owner)
 - Narration voice: Kokoro `bf_isabella`, speed 0.92, on every platform. No OmniVoice (non-commercial licence).
 - Subtitles: English and Arabic in separate boxes, never mixed.
-- Not used: FounderOS, the nine self-hosted apps, Reverse API Engineer, FreeLLMAPI, caveman-setup,
+- Not used: FounderOS, the nine self-hosted apps, FreeLLMAPI, caveman-setup,
   ChatPlace, the Humanizer for school or university work (academic dishonesty), the Context Engineering
   Kit as a whole (overlaps gstack and ECC, and its hooks are not allowed), Scientific Agent Skills
   (177 lab-science skills: biology, chemistry, medical databases; nothing for an English-learning business),
