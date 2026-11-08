@@ -266,6 +266,15 @@ function checkSeo() {
 }
 
 // 8. Site safety: every link, script, host and PDF action is one we expect (scripts/site-safety.js).
+// The lesson list written into library.html (for search engines and visitors without JavaScript) matches data/library.json.
+function checkStaticCatalog() {
+  let r;
+  try { r = require("./static-catalog.js").build(); }
+  catch (e) { record("Library page lists every lesson in its HTML", false, "could not run: " + e.message.split("\n")[0]); return; }
+  const n = (r.page.match(/<a class="title"/g) || []).length;
+  record("Library page lists every lesson in its HTML", r.next === r.page, r.next === r.page ? n + " lessons in the page source" : "out of date: run node scripts/static-catalog.js");
+}
+
 function checkSafetyRules() {
   let r;
   try { r = require("./site-safety.js").checkSafety(ROOT); }
@@ -278,7 +287,7 @@ function checkSafetyRules() {
   checkSyntax();
   checkWorkflows();
   checkSeo();
-  checkSafetyRules();
+  checkSafetyRules(); checkStaticCatalog();
   await checkBrowser(pages);
   for (const r of results) console.log((r.ok ? "PASS " : "FAIL ") + r.name + (r.detail ? " — " + r.detail : ""));
   const failed = results.filter((r) => !r.ok).length;
