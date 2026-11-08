@@ -1,0 +1,59 @@
+# Once a day: (1) every file served on the live site equals main, (2) every commit that reached main in the
+# last 50 hours came from a merged PR, (3) main's protection rules are reported (a warning until the owner turns
+# them on). Read-only: nothing here can write. GitHub emails the owner when it fails.
+# An API error is a warning ("API ERROR (not a breach)"), never a breach alarm.
+name: live site matches repo
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check live files, commits and rules
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -uo pipefail
+          bad=0; warn=0
+          base="https://dawoodalsaqri29-jpg.github.io/mastering-english-library/"
+          age=$(( $(date +%s) - $(git log -1 --format=%ct) ))
+          if [ "$age" -lt 1800 ]; then
+            echo "Last commit is under 30 minutes old (Pages may still be deploying); skipping the file comparison."
+          else
+            # Every tracked file outside dot-folders is served (.nojekyll is set): pages, lessons, assets, data, PDFs.
+            mapfile -t files < <(git ls-files | grep -Ev '(^|/)\.')
+            for f in "${files[@]}"; do
+              case "$f" in *[!A-Za-z0-9._/-]*) echo "UNEXPECTED NAME: $f"; bad=1; continue;; esac
+              url="$base$f"; [ "$f" = index.html ] && url="$base"
+              if ! curl -fsSL --retry 2 -o "$RUNNER_TEMP/live" "$url"; then echo "MISSING ON LIVE: $f"; bad=1
+              elif ! cmp -s "$RUNNER_TEMP/live" "$f"; then echo "DIFFERENT: $f"; bad=1; fi
+            done
+            echo "compared ${#files[@]} files"
+          fi
+          # 50-hour window: a commit skipped by one day's API error is checked again the next day.
+          for sha in $(git log --since="50 hours ago" --format=%H); do
+            if ! n=$(gh api "repos/$GITHUB_REPOSITORY/commits/$sha/pulls" --jq '[.[] | select(.merged_at != null)] | length'); then
+              echo "::warning::API ERROR (not a breach): could not look up the PR for $sha"; warn=1; continue
+            fi
+            [ "$n" -gt 0 ] || { echo "COMMIT ON MAIN WITHOUT A MERGED PR: $sha"; bad=1; }
+          done
+          # Protection rules on main are an owner step; until they exist this is a reminder, not a failure.
+          if rules=$(gh api "repos/$GITHUB_REPOSITORY/rules/branches/main" --jq '[.[].type] | join(" ")'); then
+            for t in deletion non_fast_forward pull_request required_status_checks; do
+              case " $rules " in *" $t "*) ;; *) echo "::warning::Rule not on main yet (owner step): $t";; esac
+            done
+          else
+            echo "::warning::API ERROR (not a breach): could not read the rules of main"; warn=1
+          fi
+          [ "$warn" = 0 ] || echo "Some checks could not run (API errors above); they run again tomorrow."
+          exit $bad
