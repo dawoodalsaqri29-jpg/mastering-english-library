@@ -25,3 +25,19 @@ jobs:
       - run: node scripts/check-site.js
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      # A lesson PDF may only change in the same PR as its lesson, or when the PDF build itself changes.
+      - name: PDFs change only with their lesson or the PDF build
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          changed=$(git diff --name-only "$BASE_SHA"...HEAD)
+          if echo "$changed" | grep -qE '^(scripts/build-pdfs\.js|assets/style\.css|assets/fonts/)'; then
+            echo "PDF build inputs changed: a full rebuild is allowed"; exit 0
+          fi
+          bad=0
+          for p in $(echo "$changed" | grep -E '^pdfs/.+\.pdf$'); do
+            l="lessons/$(basename "$p" .pdf).html"
+            echo "$changed" | grep -qx "$l" || { echo "PDF CHANGED WITHOUT ITS LESSON: $p (run node scripts/build-pdfs.js $l)"; bad=1; }
+          done
+          exit $bad
