@@ -8,7 +8,7 @@ const REQUIRE_CSP = true;
 // Every script file the pages may load, and every outside host. A new one fails until it is added here on purpose,
 // in its own PR that says why; /cso reviews it.
 const ALLOWED_SCRIPTS = ["assets/app.js", "assets/catalog.js", "assets/free.js", "assets/listen.js", "assets/placement.js", "assets/store.js"];
-const ALLOWED_HOSTS = ["dawoodalsaqri29-jpg.github.io", "www.masteringenglishlibrary.com", "static.wixstatic.com", "schema.org"];
+const ALLOWED_HOSTS = ["dawoodalsaqri29-jpg.github.io", "www.masteringenglishlibrary.com", "static.wixstatic.com", "schema.org", "wa.me"];
 const SITE_HOST = "dawoodalsaqri29-jpg.github.io";
 // Named HTML entities that can spell a URL. Any other named entity inside a URL attribute fails (fail closed).
 const NAMED = { amp: "&", sol: "/", bsol: "\\", colon: ":", period: ".", commat: "@", tab: "", newline: "", lpar: "(", rpar: ")",
