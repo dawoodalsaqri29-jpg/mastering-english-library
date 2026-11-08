@@ -8,7 +8,9 @@ Last updated: 2026-11-08
 
 ## In progress
 - Security and SEO plan (arena winner a007, 2026-11-08): sent to the owner. Claude's part is PR-A to PR-E
-  (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Owner part P0
+  (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
+  SEO check, SECURITY.md, Dependabot, CSP. Next: PR-A2 safe links in store.js/app.js, PR-C daily live check,
+  PR-A5 PDF byte check, PR-E seo-content-brief. Owner part P0
   (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
 - (none waiting on CI)
 
@@ -27,6 +29,9 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Dependabot #57 (checkout 7.0.1) and #58 (setup-node 7.1.0) reviewed: SHAs match the official tags, CI green, merged.
+- 2026-11-08: Content-Security-Policy on all 76 pages, enforced by the site check (PR #59).
+- 2026-11-08: Site safety rules and SEO checks in the site check (PR #56); C4 workflow rules, SECURITY.md, Dependabot (PR #55).
 - 2026-11-08: 3D business dashboard v1 (three.js, golden library, 7 objects, data.json + saved copy, 2D cards on phones).
 - 2026-11-08: OWASP arena done (8 agents): do not install owasp-security; 4 gaps found (C1 to C5).
 - 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
