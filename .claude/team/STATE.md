@@ -7,9 +7,10 @@ the repo is public. Update it in the same commit as the work it describes.
 Last updated: 2026-11-08
 
 ## In progress
-- Arena "claude-seo + security plan" (8 agents, 3 rounds), run folder in the session scratchpad
-  (`arena-seosec`). Result goes to the owner before anything is applied.
-- Next: a second 8-agent arena on `claude-code-owasp` (one skill, owasp-security), given the first winner.
+- Arena on `claude-code-owasp` (8 agents), given the security plan winner, run folder `arena-owasp`.
+- Security and SEO plan (arena winner a007, 2026-11-08): sent to the owner. Claude's part is PR-A to PR-E
+  (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Owner part P0
+  (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
 - (none waiting on CI)
 
 ## Waiting on the owner
@@ -23,6 +24,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: PDFs never link to the local build server (PR #53); found by the security arena.
 - 2026-11-08: Security hardening of the PDF build server and CI checkout, plus this STATE file (PR #52).
 - 2026-11-08: Lantern prompts for sections F, G, H (12 pictures each); section I is slides only.
 - 2026-11-08: Classroom PDFs, worksheet first and teacher answer page last, plus the PDF guard (PR #51).
