@@ -95,6 +95,8 @@ Do not install ECC's hooks or run its install scripts in this repo.
 cover stories, video, social platforms, sales to schools and pricing. Which agent does which job is in
 the "Agents by job" table in `.claude/team/ROSTER.md`: one job, one agent, a short brief.
 
+Where work stands (in progress, waiting on the owner, decisions that stand) is in `.claude/team/STATE.md`:
+read it at the start of every session and after any context compaction, and update it with each step.
 Who does what, and the hourly and daily schedule, is in `.claude/team/ROSTER.md`.
 Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
 
