@@ -10,7 +10,7 @@ Last updated: 2026-11-08
 - Arena "claude-seo + security plan" (8 agents, 3 rounds), run folder in the session scratchpad
   (`arena-seosec`). Result goes to the owner before anything is applied.
 - Next: a second 8-agent arena on `claude-code-owasp` (one skill, owasp-security), given the first winner.
-- PR #52 (hardening of build-pdfs.js and the CI checkout): waiting for the site check, then squash-merge.
+- (none waiting on CI)
 
 ## Waiting on the owner
 - Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
@@ -23,6 +23,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Security hardening of the PDF build server and CI checkout, plus this STATE file (PR #52).
 - 2026-11-08: Lantern prompts for sections F, G, H (12 pictures each); section I is slides only.
 - 2026-11-08: Classroom PDFs, worksheet first and teacher answer page last, plus the PDF guard (PR #51).
 - 2026-11-08: Site check runs on every PR through GitHub Actions (PR #50).
