@@ -15,8 +15,8 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
-- 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 1, example
-  sales and visitor numbers): which Wix site is the real store, then connect real sales; Search Console CSV monthly.
+- 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
+  from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
 - OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
   C5 (Gemini budget); Claude part PR-F and C3/C4 after the owner approves.
 - Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
@@ -29,6 +29,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Dashboard v2 reads the real Wix store (owner named masteringenglishlibrary.com); finding sent to the owner, not stored here.
 - 2026-11-08: Dependabot #57 (checkout 7.0.1) and #58 (setup-node 7.1.0) reviewed: SHAs match the official tags, CI green, merged.
 - 2026-11-08: Content-Security-Policy on all 76 pages, enforced by the site check (PR #59).
 - 2026-11-08: Site safety rules and SEO checks in the site check (PR #56); C4 workflow rules, SECURITY.md, Dependabot (PR #55).
