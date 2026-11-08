@@ -7,13 +7,16 @@ the repo is public. Update it in the same commit as the work it describes.
 Last updated: 2026-11-08
 
 ## In progress
-- Arena on `claude-code-owasp` (8 agents), given the security plan winner, run folder `arena-owasp`.
 - Security and SEO plan (arena winner a007, 2026-11-08): sent to the owner. Claude's part is PR-A to PR-E
   (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Owner part P0
   (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
 - (none waiting on CI)
 
 ## Waiting on the owner
+- 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 1, example
+  sales and visitor numbers): which Wix site is the real store, then connect real sales; Search Console CSV monthly.
+- OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
+  C5 (Gemini budget); Claude part PR-F and C3/C4 after the owner approves.
 - Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
 - Schools plan, PDF footer: approval of the usage line "Free to copy for your own classes".
 - Schools plan questions 2 to 12 (name on the page, class-set price, licence terms, invoice): see the
@@ -24,6 +27,8 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: 3D business dashboard v1 (three.js, golden library, 7 objects, data.json + saved copy, 2D cards on phones).
+- 2026-11-08: OWASP arena done (8 agents): do not install owasp-security; 4 gaps found (C1 to C5).
 - 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
 - 2026-11-08: Installed the 11 founder-* skills (MIT, pinned fd9385b); four have their own job in the roster.
 - 2026-11-08: PDFs never link to the local build server (PR #53); found by the security arena.

@@ -20,8 +20,8 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 20
-      - run: npm install --no-save --no-package-lock playwright@1.63.0
-      - run: npx playwright install --with-deps chromium
+      - run: npm install --ignore-scripts --no-save --no-package-lock playwright@1.63.0
+      - run: npx --no playwright install --with-deps chromium
       - run: node scripts/check-site.js
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
