@@ -135,9 +135,76 @@ async function checkPdfs(browser, base) {
     : all.length + " PDFs up to date" + look);
 }
 
+// OWASP A03 (CI/CD). Every workflow declares permissions (top level, or on every job); no ${{ }} inside run: or
+// script: (it is pasted into the shell or the JS before they run; pass values through env: instead); package
+// installs skip lifecycle scripts; npx runs only packages already installed (--no), never a fresh download.
+function workflowHygiene(f, text) {
+  const bad = [];
+  const lines = text.split("\n");
+  const indent = (l) => l.match(/^ */)[0].length;
+  if (!/^permissions:/m.test(text)) {
+    const j = lines.findIndex((l) => /^jobs:\s*$/.test(l));
+    const jobs = [];
+    let ind = -1;
+    for (let i = j + 1; j >= 0 && i < lines.length; i++) {
+      const l = lines[i];
+      if (l.trim() === "" || /^\s*#/.test(l)) continue;
+      if (indent(l) === 0) break;
+      if (ind < 0) ind = indent(l);
+      if (indent(l) === ind && /^\s*[\w-]+:\s*$/.test(l)) jobs.push({ name: l.trim().slice(0, -1), perms: false, child: -1 });
+      else if (jobs.length && indent(l) > ind) {
+        const job = jobs[jobs.length - 1];
+        if (job.child < 0) job.child = indent(l);
+        if (indent(l) === job.child && /^\s*permissions:/.test(l)) job.perms = true;
+      }
+    }
+    const missing = jobs.filter((x) => !x.perms).map((x) => x.name);
+    if (!jobs.length || missing.length)
+      bad.push(f + ": no permissions: at the top or on job(s) " + (missing.join(", ") || "(no jobs found)"));
+  }
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(/^(\s*(?:-\s+)?)(run|script):\s*(.*)$/);
+    if (!m) continue;
+    const keyCol = m[1].length;
+    const body = [m[3]];
+    const isBlock = /^[|>][-+]?\s*(#.*)?$/.test(m[3]);
+    for (let j = i + 1; isBlock && j < lines.length; j++) {
+      const l = lines[j];
+      if (l.trim() === "") { body.push(""); continue; }
+      if (indent(l) <= keyCol) break;
+      body.push(l);
+    }
+    const script = body.join("\n");
+    const at = f + ":" + (i + 1) + ": ";
+    if (/\$\{\{/.test(script)) bad.push(at + "${{ }} inside " + m[2] + ": (pass it through env: instead)");
+    if (m[2] !== "run") continue;
+    const installs = script.match(/\b(?:npm|pnpm|yarn)\s+(?:install|i|ci|add)\b[^\n;&|]*|\byarn(?=\s*(?:$|[;&|\n]))/g) || [];
+    for (const cmd of installs)
+      if (!/--ignore-scripts(?:=true)?(?![=\w-])/.test(cmd)) bad.push(at + "install without --ignore-scripts: " + cmd.trim());
+    for (const cmd of script.match(/\bnpx\s+[^\n;&|]*/g) || [])
+      if (!/^npx\s+(?:--no|--no-install)(?![=\w-])/.test(cmd)) bad.push(at + "npx without --no (may download and run a package): " + cmd.trim());
+  }
+  return bad;
+}
+
+// Every workflow passes the hygiene rules above, and pins each action to a full commit SHA.
+function checkWorkflows() {
+  const dir = path.join(ROOT, ".github/workflows");
+  const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /\.ya?ml$/.test(f)) : [];
+  const bad = [];
+  for (const f of files) {
+    const text = fs.readFileSync(path.join(dir, f), "utf8");
+    if (/pull_request_target/.test(text)) bad.push(f + ": uses pull_request_target");
+    for (const m of text.matchAll(/uses:\s*([^\s#]+)/g)) if (!/@[0-9a-f]{40}$/.test(m[1]) && !m[1].startsWith("./")) bad.push(f + ": action not pinned to a commit SHA: " + m[1]);
+    bad.push(...workflowHygiene(f, text));
+  }
+  record("GitHub workflows are safe", !bad.length && files.length > 0, bad.length ? bad.slice(0, 6).join("; ") : files.length + " workflow(s) checked");
+}
+
 (async () => {
   const pages = checkFiles();
   checkSyntax();
+  checkWorkflows();
   await checkBrowser(pages);
   for (const r of results) console.log((r.ok ? "PASS " : "FAIL ") + r.name + (r.detail ? " — " + r.detail : ""));
   const failed = results.filter((r) => !r.ok).length;
