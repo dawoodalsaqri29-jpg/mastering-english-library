@@ -19,7 +19,7 @@ Last updated: 2026-11-08
   from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
 - OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
   C5 (Gemini budget); Claude part PR-F and C3/C4 after the owner approves.
-- Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
+- Schools plan step 4 (teachers page): owner's answers to questions 2-4 (name on the page, a line about him, paid licence terms).
 - Schools plan, PDF footer: approval of the usage line "Free to copy for your own classes".
 - Schools plan questions 2 to 12 (name on the page, class-set price, licence terms, invoice): see the
   plan's section 5; ask them step by step.
@@ -29,6 +29,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Schools plan step 1: owner's tested WhatsApp number in catalog.js and the home footer (wa.me allowed in #69).
 - 2026-11-08: Lesson search descriptions lengthened to 117-155 characters with level, skill and free PDF (SEO S4, PR #68).
 - 2026-11-08: Home page Organization JSON-LD with the store (PR #66); links checked again as Chromium reads them (PR #67). Live-site check run by hand: 183 files match, no API errors.
 - 2026-11-08: library.html carries all 72 lessons as plain HTML for search engines (PR #65); main's safety rules run on every PR (PR #64).
