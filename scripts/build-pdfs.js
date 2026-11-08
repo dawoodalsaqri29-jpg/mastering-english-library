@@ -17,7 +17,7 @@ const sha = (...parts) => { const h = crypto.createHash("sha256"); for (const p 
 
 // The words printed on every page. Change them and all 72 PDFs must be rebuilt (the checker says so).
 // The usage line ("Free to copy for your own classes") is added once the owner approves the wording.
-const FOOTER = (level) => `Mastering English Library · ${level} · ${SITE}`;
+const FOOTER = (level) => `Mastering English Library · ${level} · ${SITE} · Free to copy for your own classes`;
 
 // Runs inside the lesson page: moves every answer (and the Listening transcript) to a final teacher page.
 // Returns true if something is wrong (an answer label left, or no answers found).
