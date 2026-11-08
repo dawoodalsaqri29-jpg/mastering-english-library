@@ -29,6 +29,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Lesson search descriptions lengthened to 117-155 characters with level, skill and free PDF (SEO S4, PR open).
 - 2026-11-08: Home page Organization JSON-LD with the store (PR #66); links checked again as Chromium reads them (PR #67). Live-site check run by hand: 183 files match, no API errors.
 - 2026-11-08: library.html carries all 72 lessons as plain HTML for search engines (PR #65); main's safety rules run on every PR (PR #64).
 - 2026-11-08: seo-content-brief skill, Loop 1 data source (Wix search data + monthly CSV), roster security section (PR #63).
