@@ -12,7 +12,7 @@ const record = (name, ok, detail) => results.push({ name, ok, detail: detail || 
 
 // 1. Local links and catalogue paths exist.
 function checkFiles() {
-  const pages = ["index.html", "library.html", "levels.html", "teachers.html", "404.html",
+  const pages = ["index.html", "library.html", "levels.html", "teachers.html", "level-ar.html", "404.html",
     ...fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html")).map((f) => "lessons/" + f)];
   const missing = [];
   for (const page of pages) {
@@ -170,6 +170,14 @@ async function checkBrowser(pages) {
     await page.click('#placement button[type="submit"]');
     const result = await page.$eval("#placement .result", (e) => e.textContent.trim());
     record("Level check scores answers", groups === 12 && /You scored \d+ out of 12/.test(result), groups + " questions; " + result.slice(0, 60));
+    // The Arabic page (level-ar.html, embedded in the Wix blog) runs the same check with Arabic instructions.
+    await page.goto(base + "level-ar.html");
+    const arGroups = await page.$$eval("#placement fieldset", (f) => f.length);
+    for (let i = 0; i < arGroups; i++) await page.check(`#placement input[name="q${i}"][value="1"]`);
+    await page.click('#placement button[type="submit"]');
+    const ar = await page.$eval("#placement .result", (e) => ({ text: e.textContent.trim(), link: (e.querySelector("a") || {}).getAttribute ? e.querySelector("a").getAttribute("href") : "" }));
+    record("Arabic level check scores answers", arGroups === 12 && /نتيجتك \d+ من 12/.test(ar.text) && /^library\.html\?level=(B1|B2|C1|C2)$/.test(ar.link),
+      arGroups + " questions; " + ar.text.slice(0, 50) + "; " + ar.link);
 
     // 6. Every lesson PDF prints the words its lesson prints today (see scripts/build-pdfs.js).
     await checkPdfs(browser, base);
@@ -280,7 +288,7 @@ function checkWorkflows() {
 // 7. SEO tags, sitemap and robots (static, no browser needed).
 const SITE = "https://dawoodalsaqri29-jpg.github.io/mastering-english-library/";
 function checkSeo() {
-  const pages = ["index.html", "library.html", "levels.html", "teachers.html",
+  const pages = ["index.html", "library.html", "levels.html", "teachers.html", "level-ar.html",
     ...fs.readdirSync(path.join(ROOT, "lessons")).filter((f) => f.endsWith(".html")).map((f) => "lessons/" + f)];
   const seo = [], titles = new Map(), descs = new Map();
   const one = (html, re) => { const m = html.match(re); return m ? m[1] : null; };
