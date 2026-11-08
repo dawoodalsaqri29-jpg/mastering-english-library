@@ -7,7 +7,7 @@ the repo is public. Update it in the same commit as the work it describes.
 Last updated: 2026-11-08
 
 ## In progress
-- Schools plan step 4, teachers page (PR open): owner approved the defaults on 2026-11-08 (library name only, no bio
+- Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
   line, "store price" only, class sets asked on WhatsApp; no licence terms written). Next: step 6 (Wix product line).
 - Security and SEO plan (arena winner a007, 2026-11-08): Claude's part fully done (PR-A1 to E, A1b, A4; SEO S1, S3, S6 part). Claude's part is PR-A to PR-E
   (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
@@ -17,6 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
+- Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
   from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
 - OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
