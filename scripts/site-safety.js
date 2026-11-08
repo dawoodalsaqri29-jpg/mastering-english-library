@@ -4,7 +4,7 @@
 const fs = require("fs"), path = require("path"), zlib = require("zlib");
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://static.wixstatic.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
 // PR-B (CSP on every page) sets this to true.
-const REQUIRE_CSP = false;
+const REQUIRE_CSP = true;
 // Every script file the pages may load, and every outside host. A new one fails until it is added here on purpose,
 // in its own PR that says why; /cso reviews it.
 const ALLOWED_SCRIPTS = ["assets/app.js", "assets/catalog.js", "assets/free.js", "assets/listen.js", "assets/placement.js", "assets/store.js"];
