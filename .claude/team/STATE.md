@@ -41,5 +41,8 @@ Last updated: 2026-11-08
   Kit as a whole (overlaps gstack and ECC, and its hooks are not allowed), Scientific Agent Skills
   (177 lab-science skills: biology, chemistry, medical databases; nothing for an English-learning business),
   claude-mem (hooks on every message and tool call, a background worker, an extra paid API key or the
-  cmem.ai cloud; its local database would be lost when the cloud container is reclaimed; STATE.md does the job).
+  cmem.ai cloud; its local database would be lost when the cloud container is reclaimed; STATE.md does the job),
+  the "Claude Video Editing Toolkit" guide: Ghost Editor (macOS-only, talking-head reels), FFmpeg Skill (our
+  build scripts already use ffmpeg directly), Claude Shorts and OpenMontage (install scripts; we have no long
+  footage). HyperFrames, from the same guide, is already installed: use it for the Lantern section I slides.
 - Arenas: 8 agents by default (about 43 calls); 16 only for big decisions.
