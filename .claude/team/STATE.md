@@ -10,7 +10,7 @@ Last updated: 2026-11-08
 - Security and SEO plan (arena winner a007, 2026-11-08): sent to the owner. Claude's part is PR-A to PR-E
   (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
   SEO check, SECURITY.md, Dependabot, CSP. Done: safe links (PR #60). Done: daily live check (PR #61, first manual run green, no API errors). Next:
-  PDF byte check (PR open), PR-E seo-content-brief. Owner part P0
+  PDF byte check (PR #62). seo-content-brief + roster (PR open): then the plan's Claude part is done. Owner part P0
   (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
 - (none waiting on CI)
 
@@ -29,6 +29,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: PDF byte fingerprints and the PDF-with-its-lesson rule (PR #62).
 - 2026-11-08: Daily live-site check (PR #61); first run green. Main's protection rules show as warnings until the owner turns them on.
 - 2026-11-08: Buy, store and library links can only go to the Wix store or inside the site, with two new browser checks (PR #60).
 - 2026-11-08: Dashboard v2 reads the real Wix store (owner named masteringenglishlibrary.com); finding sent to the owner, not stored here.

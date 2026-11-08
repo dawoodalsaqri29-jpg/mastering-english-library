@@ -23,3 +23,16 @@ ayghri/i-have-adhd, morluto/rea (reverse-engineer-anything only).
 - career-ops-hq/career-ops and ai-job-search-dev/ai-job-search: job-application tools, unrelated to the site.
 
 Notes: `last30days` asks before reading browser cookies and needs its own API keys for some sources.
+
+## claude-seo (AgriciDaniel/claude-seo 2.5.0, MIT), reviewed 2026-11-08
+Only `seo-content-brief` is used, copied unchanged into `.claude/skills/seo-content-brief/`. The release has no commit id, so each
+file is pinned by sha256:
+- SKILL.md b668d656363da68d5d573a43e9f04fe3d0d21eaf0b59f7bff2a737c10f43bf47
+- LICENSE.txt 25bc881ab74d06a365261e004f44c445a78a5241ee322cdeeb4ba7d7669be9b1
+- references/excluded-domains.md 17b3fb0c9f0cd979c949d54a3e88eb7b39b5d3514baaaa0560022b16c3ed32b8
+- references/keyword-density.md 965607f9e79bb472d789485e312faa694a4ab12bd5506af9a073e00e3e84578d
+- references/page-type-templates.md ac638c16ee6ef871d07d8d8172e23a491e11e5e9734f5a5f9ac070631156fd6d
+It is run with local site files instead of fetching the live site (see the roster line). Left out: 18 agents and 25 skills that
+call the package's Python scripts, need paid APIs (DataForSEO, Ahrefs, Firecrawl, SE Ranking, Profound) or repeat
+ecc-seo-specialist, the marketing SEO skills or the citation strategist; `seo-audit` also clashes by name. Its hooks, installers,
+requirements.txt and extensions are not used. SEO drift and technical checks are done by scripts/check-site.js instead.
