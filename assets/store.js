@@ -99,8 +99,15 @@
     const s = document.getElementById("storeBtn");
     s.href = store; s.target = "_blank"; s.rel = "noopener"; s.textContent = "Visit store";
   }
-  if (site.contactEmail) {
-    document.getElementById("contact").innerHTML = `<a href="mailto:${esc(site.contactEmail)}">${esc(site.contactEmail)}</a>`;
+  // Contact in the footer: only a real email address and a WhatsApp number in international digits are shown.
+  const contact = [];
+  if (/^[^@\s"<>]+@[^@\s"<>]+\.[a-z]{2,}$/i.test(site.contactEmail || "") && !/^your@/i.test(site.contactEmail)) {
+    contact.push(`<a href="mailto:${esc(site.contactEmail)}">${esc(site.contactEmail)}</a>`);
   }
+  if (/^[1-9][0-9]{7,14}$/.test(String(site.whatsapp || ""))) {
+    const text = encodeURIComponent("Hello, I am a teacher / institute and I have a question about Mastering English Library.");
+    contact.push(`<a href="https://wa.me/${site.whatsapp}?text=${text}" target="_blank" rel="noopener">Teachers and institutes: WhatsApp +${esc(site.whatsapp)}</a>`);
+  }
+  if (contact.length) document.getElementById("contact").innerHTML = contact.join(" · ");
   render();
 })();

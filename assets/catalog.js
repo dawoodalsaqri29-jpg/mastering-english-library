@@ -104,4 +104,5 @@ window.SITE = {
   author: "Dawood Bin Abdullah Bin Saeed Al-Saqri",
   storeUrl: "https://www.masteringenglishlibrary.com",          // your main store (e.g. Wix) — used by the header button
   contactEmail: "",       // optional: shows a contact link in the footer
+  whatsapp: "96897868908", // WhatsApp Business number, international digits only (Oman +968); shows in the footer
 };
