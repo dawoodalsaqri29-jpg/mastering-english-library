@@ -82,7 +82,8 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
-  function link(p) { return /^https?:/.test(p) ? p : base + p; }
+  // Library entries may only point to a lesson or PDF inside this site; anything else becomes a dead "#" link.
+  function link(p) { return /^(lessons|pdfs\/(b1|b2|c1|c2))\/[a-z0-9-]+\.(html|pdf)$/.test(p) ? base + p : "#"; }
 
   // Filters live in the address (?level=B2&skill=Speaking&q=essay) so a filtered list can be shared.
   // The older library.html#B2 form still works.

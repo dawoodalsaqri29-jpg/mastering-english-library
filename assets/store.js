@@ -20,8 +20,15 @@
     return found;
   }
 
-  // Only web links are allowed in buy buttons; anything else (e.g. "javascript:") is treated as no link.
-  const safeUrl = (u) => (/^https?:\/\//i.test(String(u || "")) ? u : "");
+  // Buy and store buttons may only go to the owner's Wix store over https: no user@host, no other site.
+  // A product that moves to another host is added here and to ALLOWED_HOSTS in scripts/site-safety.js together.
+  const STORE_HOSTS = ["www.masteringenglishlibrary.com"];
+  const safeUrl = (u) => {
+    try {
+      const x = new URL(String(u || ""));
+      return x.protocol === "https:" && !x.username && !x.password && STORE_HOSTS.includes(x.host) ? x.href : "";
+    } catch (e) { return ""; }
+  };
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function cover(b, i) {
@@ -35,9 +42,9 @@
 
   function card(b, i) {
     // Titles without a real link show a disabled "Coming soon" label instead of a button that jumps to the top.
-    const hasLink = !!safeUrl(b.link);
-    const action = hasLink
-      ? `<a class="btn btn-small" href="${esc(b.link)}" target="_blank" rel="noopener">Get PDF</a>`
+    const link = safeUrl(b.link);
+    const action = link
+      ? `<a class="btn btn-small" href="${esc(link)}" target="_blank" rel="noopener">Get PDF</a>`
       : `<span class="btn btn-small btn-soon" aria-disabled="true">Coming soon</span>`;
     return `<article class="book">
       ${cover(b, i)}
@@ -87,9 +94,10 @@
   document.getElementById("statCount").textContent = books.length;
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("author").textContent = site.author || site.name || "";
-  if (safeUrl(site.storeUrl)) {
+  const store = safeUrl(site.storeUrl);
+  if (store) {
     const s = document.getElementById("storeBtn");
-    s.href = site.storeUrl; s.target = "_blank"; s.rel = "noopener"; s.textContent = "Visit store";
+    s.href = store; s.target = "_blank"; s.rel = "noopener"; s.textContent = "Visit store";
   }
   if (site.contactEmail) {
     document.getElementById("contact").innerHTML = `<a href="mailto:${esc(site.contactEmail)}">${esc(site.contactEmail)}</a>`;

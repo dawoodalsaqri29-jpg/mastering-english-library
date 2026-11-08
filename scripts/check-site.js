@@ -92,7 +92,22 @@ async function checkBrowser(pages) {
     const filtered = await page.$eval("#f-count", (e) => e.textContent);
     const cards = await page.$$eval("[data-catalog] li", (l) => l.length);
     record("Library ?level=C1&skill=Speaking", cards > 0 && /^\d+ of \d+/.test(filtered), filtered + ", " + cards + " cards");
+    // A library link that is not a lesson or PDF inside the site turns into "#" (assets/app.js link()): none may.
+    await page.goto(base + "library.html");
+    await page.waitForSelector("#f-count:not(:empty)", { timeout: 10000 });
+    const dead = await page.$$eval('[data-catalog] a[href="#"]', (l) => l.map((a) => a.textContent.trim()));
+    record("Library links all work", !dead.length, dead.length ? dead.length + " dead: " + dead.slice(0, 5).join("; ") : "no dead links");
+    // A buy link that is not the Wix store over https turns into "Coming soon" (assets/store.js safeUrl): every catalogue
+    // link must still show as a "Get PDF" button.
     await page.goto(base + "index.html");
+    const buy = await page.evaluate(() => ({
+      want: (window.BOOKS || []).filter((b) => b.link).length,
+      got: document.querySelectorAll("#grid a.btn").length,
+      store: (document.getElementById("storeBtn") || {}).href || "",
+      site: (() => { try { return new URL((window.SITE || {}).storeUrl).href; } catch (e) { return "bad: " + (window.SITE || {}).storeUrl; } })(),
+    }));
+    record("Store buttons all work", buy.want > 0 && buy.got === buy.want && buy.store === buy.site && /^https:\/\/www\.masteringenglishlibrary\.com\//.test(buy.store),
+      buy.got + " of " + buy.want + " Get PDF buttons; store " + (buy.store || "(none)"));
     await page.goto(base + "library.html#B2");
     await page.waitForSelector("#f-count:not(:empty)", { timeout: 10000 });
     const lv = await page.$eval("#f-level", (e) => e.value);

@@ -8,13 +8,15 @@ Last updated: 2026-11-08
 
 ## In progress
 - Security and SEO plan (arena winner a007, 2026-11-08): sent to the owner. Claude's part is PR-A to PR-E
-  (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Owner part P0
+  (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
+  SEO check, SECURITY.md, Dependabot, CSP. Next: PR-A2 safe links in store.js/app.js, PR-C daily live check,
+  PR-A5 PDF byte check, PR-E seo-content-brief. Owner part P0
   (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
 - (none waiting on CI)
 
 ## Waiting on the owner
-- 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 1, example
-  sales and visitor numbers): which Wix site is the real store, then connect real sales; Search Console CSV monthly.
+- 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
+  from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
 - OWASP arena result (plan a004): owner steps C1 (stock task connectors), C2-b (send/post/pay tools need approval),
   C5 (Gemini budget); Claude part PR-F and C3/C4 after the owner approves.
 - Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
@@ -27,6 +29,10 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Dashboard v2 reads the real Wix store (owner named masteringenglishlibrary.com); finding sent to the owner, not stored here.
+- 2026-11-08: Dependabot #57 (checkout 7.0.1) and #58 (setup-node 7.1.0) reviewed: SHAs match the official tags, CI green, merged.
+- 2026-11-08: Content-Security-Policy on all 76 pages, enforced by the site check (PR #59).
+- 2026-11-08: Site safety rules and SEO checks in the site check (PR #56); C4 workflow rules, SECURITY.md, Dependabot (PR #55).
 - 2026-11-08: 3D business dashboard v1 (three.js, golden library, 7 objects, data.json + saved copy, 2D cards on phones).
 - 2026-11-08: OWASP arena done (8 agents): do not install owasp-security; 4 gaps found (C1 to C5).
 - 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
