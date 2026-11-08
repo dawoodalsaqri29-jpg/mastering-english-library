@@ -57,3 +57,5 @@ Then open http://localhost:8000.
 ## Publishing with GitHub Pages
 
 In the repository settings, open **Pages**, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, and save. The site appears at `https://<username>.github.io/mastering-english-library/`.
+
+- `teachers.html` and `assets/teachers.js`: the page for teachers and institutes (course map, class sets by WhatsApp, corrections list).

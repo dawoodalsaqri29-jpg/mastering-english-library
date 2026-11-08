@@ -7,8 +7,8 @@ the repo is public. Update it in the same commit as the work it describes.
 Last updated: 2026-11-08
 
 ## In progress
-- Schools plan step 4, teachers page: owner approved the defaults on 2026-11-08 (library name only, no bio line,
-  "store price" only, class sets asked on WhatsApp; no licence terms written).
+- Schools plan step 4, teachers page (PR open): owner approved the defaults on 2026-11-08 (library name only, no bio
+  line, "store price" only, class sets asked on WhatsApp; no licence terms written). Next: step 6 (Wix product line).
 - Security and SEO plan (arena winner a007, 2026-11-08): Claude's part fully done (PR-A1 to E, A1b, A4; SEO S1, S3, S6 part). Claude's part is PR-A to PR-E
   (safety rules, CSP, daily live check, SECURITY.md and Dependabot, seo-content-brief). Done: safety rules,
   SEO check, SECURITY.md, Dependabot, CSP. Done: safe links (PR #60). Done: daily live check (PR #61, first manual run green, no API errors). Next:
