@@ -102,12 +102,37 @@ async function checkBrowser(pages) {
     await page.click('#placement button[type="submit"]');
     const result = await page.$eval("#placement .result", (e) => e.textContent.trim());
     record("Level check scores answers", groups === 12 && /You scored \d+ out of 12/.test(result), groups + " questions; " + result.slice(0, 60));
+
+    // 6. Every lesson PDF prints the words its lesson prints today (see scripts/build-pdfs.js).
+    await checkPdfs(browser, base);
   } catch (e) {
     record("Browser checks", false, "stopped early: " + e.message.split("\n")[0]);
   } finally {
     await browser.close();
     server.close();
   }
+}
+
+// The words each PDF would print now, against data/pdf-manifest.json written when the PDFs were built.
+// A changed word blocks (red); a changed colour, spacing or font only reminds (stays green).
+async function checkPdfs(browser, base) {
+  const { printed, entry, LOOK, lessonOf, MANIFEST } = require("./build-pdfs.js");
+  const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, "utf8")) : {};
+  const lib = JSON.parse(fs.readFileSync(path.join(ROOT, "data/library.json"), "utf8"));
+  const all = lib.resources.filter((r) => r.type === "pdf");
+  const page = await browser.newPage();
+  const stale = [];
+  for (const r of all) {
+    const html = lessonOf(r.path);
+    const { text } = await printed(page, base + html);
+    if (!manifest[html] || manifest[html].pdf !== entry(text, r.level).pdf) stale.push(html);
+  }
+  await page.close();
+  const cmd = stale.length === all.length ? "node scripts/build-pdfs.js" : "node scripts/build-pdfs.js " + stale.slice(0, 5).join(" ") + (stale.length > 5 ? " …" : "");
+  const look = manifest._look === LOOK() ? "" : "; reminder: CSS or fonts changed since the last full build, so run node scripts/build-pdfs.js when convenient";
+  record("Lesson PDFs match their lessons", !stale.length, stale.length
+    ? stale.length + " PDF(s) out of date, run: " + cmd
+    : all.length + " PDFs up to date" + look);
 }
 
 (async () => {
