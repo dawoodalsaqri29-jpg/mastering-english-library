@@ -22,6 +22,18 @@ jobs:
           node-version: 20
       - run: npm install --ignore-scripts --no-save --no-package-lock playwright@1.63.0
       - run: npx --no playwright install --with-deps chromium
+      # The safety rules as they are on main, run on this PR's files: a PR that loosens scripts/site-safety.js and adds
+      # bad content in the same change fails. A rule change goes in its own PR first, with no content change.
+      - name: Safety rules as they are on main
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if git show "$BASE_SHA:scripts/site-safety.js" > "$RUNNER_TEMP/site-safety-main.js" 2>/dev/null; then
+            node "$RUNNER_TEMP/site-safety-main.js" "$GITHUB_WORKSPACE"
+          else
+            echo "main has no scripts/site-safety.js yet"
+          fi
       - run: node scripts/check-site.js
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
