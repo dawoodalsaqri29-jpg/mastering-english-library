@@ -30,7 +30,12 @@ function items(resources) {
   return out.sort((a, b) => (rank(a.level) - rank(b.level)) || a.title.localeCompare(b.title));
 }
 
+// Same rule as link() in assets/app.js: only a lesson or PDF inside this site. Anything else stops the build.
+const SAFE_PATH = /^(lessons|pdfs\/(b1|b2|c1|c2))\/[a-z0-9-]+\.(html|pdf)$/;
+
 function listHtml(resources) {
+  const bad = resources.filter((r) => !SAFE_PATH.test(r.path)).map((r) => r.path);
+  if (bad.length) throw new Error("data/library.json has paths outside lessons/ and pdfs/: " + bad.slice(0, 3).join(", "));
   return '<ul class="list">' + items(resources).map((it) => {
     const pdf = it.lesson && it.pdf ? '<a class="pdf" href="' + esc(it.pdf) + '" download aria-label="Download PDF: ' + esc(it.title) + '">PDF</a>' : "";
     return "<li>" +

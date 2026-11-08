@@ -182,7 +182,7 @@
     .catch(function (err) {
       console.error("Free lessons list failed to load:", err);
       // library.html already holds the full list as plain HTML: keep it and say the filters are off.
-      var note = '<p class="empty">The filters could not load. Please reload the page in a moment.</p>';
+      var note = '<p class="empty" role="status">The filters could not load. Please reload the page in a moment.</p>';
       if (catalog.querySelector("ul.list")) catalog.insertAdjacentHTML("afterbegin", note);
       else catalog.innerHTML = note;
     });
