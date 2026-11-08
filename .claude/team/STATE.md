@@ -30,6 +30,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-09: FreeLLMAPI set up on the owner's Windows PC (desktop app, Google AI Studio + Groq + OpenRouter free keys, routing "Fastest"); local Claude Code 2.1.319 points at it via `freellmapi setup-claude`. Cerebras skipped (needs a card). Use: open the app, then `cd ~\free-work; claude`.
 - 2026-11-08: Owner reversed the earlier "not used" for FreeLLMAPI (tashfeenahmed/freellmapi, MIT): approved for routine work (drafts, translation, ideas, captions) in Claude Code on the owner's own computer, to save Claude tokens. Not in cloud sessions (network blocks its providers). Site edits, reviews, security and publishing stay on Claude here. No customer data or secrets through it (free tiers may train on prompts; upstream says personal use only).
 - 2026-11-08: Owner reversed the earlier "not used" for Reverse API Engineer: on-demand skill, pinned 0.14.0, own/permitted sites only, no stealth extra.
 - 2026-11-08: Owner approved the PDF line "Free to copy for your own classes": in every PDF footer (72 rebuilt) and on teachers.html.
