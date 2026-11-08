@@ -28,7 +28,9 @@ function TRANSFORM() {
   document.querySelectorAll("main article details").forEach((d) => {
     const label = d.querySelector("summary").textContent.replace(/^Show /, "");
     const box = document.createElement("div");
-    box.innerHTML = "<h3>" + label.charAt(0).toUpperCase() + label.slice(1) + "</h3>";
+    const h3 = document.createElement("h3");
+    h3.textContent = label.charAt(0).toUpperCase() + label.slice(1);
+    box.appendChild(h3);
     [...d.childNodes].filter((c) => c.nodeName !== "SUMMARY").forEach((c) => box.appendChild(c));
     key.appendChild(box);
     d.remove();
@@ -66,8 +68,10 @@ function serve() {
   const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
     ".svg": "image/svg+xml", ".png": "image/png", ".woff2": "font/woff2" };
   const server = http.createServer((req, res) => {
-    const file = path.join(ROOT, decodeURIComponent(new URL(req.url, "http://x").pathname));
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.writeHead(404); return res.end(); }
+    let file;
+    try { file = path.join(ROOT, decodeURIComponent(new URL(req.url, "http://x").pathname)); }
+    catch (e) { res.writeHead(400); return res.end(); }
+    if (!file.startsWith(ROOT + path.sep) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.writeHead(404); return res.end(); }
     res.writeHead(200, { "Content-Type": types[path.extname(file)] || "application/octet-stream" });
     fs.createReadStream(file).pipe(res);
   });
