@@ -64,6 +64,37 @@ function serve() {
   return new Promise((resolve) => server.listen(0, "127.0.0.1", () => resolve(server)));
 }
 
+// 9. Every link, source and event handler as Chromium itself reads it, after the page's own scripts ran: this also
+// covers the library links app.js builds and the buy cards store.js builds, which the text reading cannot see.
+async function checkDomLinks(browser, base, pages) {
+  const { ALLOWED_HOSTS } = require("./site-safety.js");
+  const page = await browser.newPage(), bad = [], local = new URL(base).hostname;
+  for (const p of pages) {
+    await page.goto(base + p, { waitUntil: "networkidle" });
+    const found = await page.evaluate(() => {
+      const out = [], URLS = ["href", "src", "action", "formaction", "data", "poster", "background", "ping", "xlink:href", "srcset"];
+      for (const el of document.querySelectorAll("*")) for (const a of el.attributes) {
+        const n = a.name.toLowerCase(), where = el.tagName.toLowerCase() + " " + n + "=" + a.value.slice(0, 60);
+        if (n.startsWith("on")) { out.push({ bad: "event handler: " + where }); continue; }
+        if (!URLS.includes(n)) continue;
+        for (const v of n === "srcset" ? a.value.split(",").map((x) => x.trim().split(/\s+/)[0]) : [a.value]) {
+          try { const u = new URL(v, document.baseURI); out.push({ proto: u.protocol, host: u.hostname, cred: !!(u.username || u.password), where }); }
+          catch (e) { out.push({ bad: "not a URL: " + where }); }
+        }
+      }
+      return out;
+    });
+    for (const f of found) {
+      if (f.bad) { bad.push(p + ": " + f.bad); continue; }
+      if (f.proto === "mailto:" || f.proto === "tel:") continue;
+      const ok = !f.cred && (f.host === local ? f.proto === "http:" : f.proto === "https:" && ALLOWED_HOSTS.includes(f.host));
+      if (!ok) bad.push(p + ": " + f.where);
+    }
+  }
+  await page.close();
+  record("Links as the browser reads them", !bad.length, bad.length ? [...new Set(bad)].slice(0, 10).join("; ") : pages.length + " pages, after scripts ran");
+}
+
 async function checkBrowser(pages) {
   let chromium;
   try { ({ chromium } = require("playwright")); }
@@ -85,6 +116,7 @@ async function checkBrowser(pages) {
     page.on("response", (r) => { if (r.url().startsWith(base) && r.status() >= 400) problems.push(current + ": " + r.status() + " " + r.url().replace(base, "")); });
     for (const p of pages) { current = p; await page.goto(base + p, { waitUntil: "networkidle" }); }
     record("Pages load without errors", !problems.length, problems.length ? problems.slice(0, 10).join("; ") : pages.length + " pages");
+    await checkDomLinks(browser, base, pages);
 
     // 4. Library filters.
     await page.goto(base + "library.html?level=C1&skill=Speaking");
