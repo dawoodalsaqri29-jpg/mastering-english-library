@@ -2,290 +2,362 @@
  "_look": "6f7a923d2fb303d7",
  "lessons/b1-articles.html": {
   "pdf": "5ba473076acdd453",
-  "text": "9f7891752969b2b6"
+  "text": "9f7891752969b2b6",
+  "bytes": "d5838a0733bfeef1e484ea8c9a27f007d7036d0b2f88dc9a8dc234560a00046a"
  },
  "lessons/b1-describing-people-and-places.html": {
   "pdf": "5e6e250798fcefa5",
-  "text": "629a6d4e41b5fd07"
+  "text": "629a6d4e41b5fd07",
+  "bytes": "897c0b6efb488ed27186598db723b038ef82cbd48a86082f12d93efbecb7351f"
  },
  "lessons/b1-everyday-phrasal-verbs.html": {
   "pdf": "5f1275f886cc5e91",
-  "text": "b3fa5b365dda0a22"
+  "text": "b3fa5b365dda0a22",
+  "bytes": "44e9b7252d6d07b77f57e91e1502b61987b35babed1516c70a910f8b76415863"
  },
  "lessons/b1-feelings-adjectives.html": {
   "pdf": "d56f654fcb3b22c9",
-  "text": "10a313f285a3bc1d"
+  "text": "10a313f285a3bc1d",
+  "bytes": "3b5f68d8571b4d92e3e6374b91a5321a6be402426a4c72493ac20ba27a818946"
  },
  "lessons/b1-following-directions.html": {
   "pdf": "c699d225f33abb2e",
-  "text": "94198827d32e60ac"
+  "text": "94198827d32e60ac",
+  "bytes": "cc8f29a1c83bfe69c5bc08a7ffccb7f97643b43cdd765ad4d47ddcbd6a4ce169"
  },
  "lessons/b1-linking-words.html": {
   "pdf": "725a532db5ae6d08",
-  "text": "cfb70279f98ffc77"
+  "text": "cfb70279f98ffc77",
+  "bytes": "826c8eebcca319b03ba745bd21e5b771eac98be08c83316aaa3b7e5c84c28e70"
  },
  "lessons/b1-main-idea-topic-sentences.html": {
   "pdf": "5963f6e47b312897",
-  "text": "f7d77f22d594bcdc"
+  "text": "f7d77f22d594bcdc",
+  "bytes": "104839cbc4e1a1da4741e4d139b74af3878e47ee657522a21032e23ce2da0b6d"
  },
  "lessons/b1-modals-obligation-advice.html": {
   "pdf": "6d9ddaec8e763243",
-  "text": "ab47ef335cab4b6a"
+  "text": "ab47ef335cab4b6a",
+  "bytes": "2ff326ba3c6dc7fd82224654575d13b10a618e950b76b8585ba95e98b05c0b78"
  },
  "lessons/b1-polite-requests.html": {
   "pdf": "ae70ef1604ca23d8",
-  "text": "78fde906742b59f5"
+  "text": "78fde906742b59f5",
+  "bytes": "8998a08245b42bca971ee962c2a6220309a8c6e876da149b64ac5c817f6d9fa5"
  },
  "lessons/b1-present-perfect-vs-past-simple.html": {
   "pdf": "91f1d6f7e04f951b",
-  "text": "6dee65414dc2e378"
+  "text": "6dee65414dc2e378",
+  "bytes": "e8a9c697f42e54694bd73b4f0e52fc601aadf736957cf0bb14c553bdbf4d1413"
  },
  "lessons/b1-reading-messages.html": {
   "pdf": "2d9ede953ef43b62",
-  "text": "bdd5e9fc4c78ba95"
+  "text": "bdd5e9fc4c78ba95",
+  "bytes": "4338e3365336e6f7d7cf0246cbe285e39da543a5c8265b93e5cd2e707f3aaf04"
  },
  "lessons/b1-skimming-and-scanning.html": {
   "pdf": "c7adf541c0095a03",
-  "text": "843669f40d4af300"
+  "text": "843669f40d4af300",
+  "bytes": "4fe494a6de6196a72cee327dbfbecff51b86b986e08d0c0fc33132d83278615b"
  },
  "lessons/b1-small-talk.html": {
   "pdf": "1eebddde5d3877f5",
-  "text": "eb1117382eaa444c"
+  "text": "eb1117382eaa444c",
+  "bytes": "31d4cf50f19c6d129c17d2e1066fe0103c944d4a1db5c8f5c865315b1080f19c"
  },
  "lessons/b1-travel-vocabulary.html": {
   "pdf": "d298dd1b737eb469",
-  "text": "3eba1dd807922e0a"
+  "text": "3eba1dd807922e0a",
+  "bytes": "792eeebfb3a38aed1d8044a29e36b5e70db79b7437e71ed2a6cb3a0f9848a535"
  },
  "lessons/b1-understanding-announcements.html": {
   "pdf": "0c3b96c3e89880bd",
-  "text": "0994aecdc1971b3e"
+  "text": "0994aecdc1971b3e",
+  "bytes": "6ba8ded1e7cb78ea4aad2f7ece1ce6002971ed978517d36575201fcd1d2560c6"
  },
  "lessons/b1-weather-forecast.html": {
   "pdf": "00ca8996c37131d1",
-  "text": "70cdc79194cebafd"
+  "text": "70cdc79194cebafd",
+  "bytes": "86860a4fc051d7945d2cd74a475277ad39814c2f470a81a5af49b5819ceb8d35"
  },
  "lessons/b1-writing-a-story.html": {
   "pdf": "db89b4b7f85c1865",
-  "text": "786f9c848c720e0a"
+  "text": "786f9c848c720e0a",
+  "bytes": "8035336df02d62607cf80b7211fd87e494ac3c559796f40a176bd98fa4799e73"
  },
  "lessons/b1-writing-informal-email.html": {
   "pdf": "459ce01edaf930f4",
-  "text": "3696de52a700b97b"
+  "text": "3696de52a700b97b",
+  "bytes": "20463832a46c1bb282449e15fbf52c1bf23664b357b47ce8bab536ec16f4b40e"
  },
  "lessons/b2-agreeing-and-disagreeing.html": {
   "pdf": "ea128bb575f7eacf",
-  "text": "eec0376fdbc150bb"
+  "text": "eec0376fdbc150bb",
+  "bytes": "60f765b80fd7e3d03e455b88bf6390709b205d52dc1441ddb443f07ac4648bf4"
  },
  "lessons/b2-collocations-work.html": {
   "pdf": "2f0f1b32fd82edb5",
-  "text": "aca7996f994759a5"
+  "text": "aca7996f994759a5",
+  "bytes": "fd802f9a5d9346752e881d1a6449359593c2b08859dc3962a906270098814b65"
  },
  "lessons/b2-complaint-email.html": {
   "pdf": "9b315f316adf29aa",
-  "text": "99cf7810c6b52283"
+  "text": "99cf7810c6b52283",
+  "bytes": "17ca867e3821f9a1afd9d7a9939e0f36a4a0fbd9702b5d20bad8e1e737aaf916"
  },
  "lessons/b2-conditionals.html": {
   "pdf": "23596029f8286452",
-  "text": "e32cafe716a8f1a4"
+  "text": "e32cafe716a8f1a4",
+  "bytes": "89fba5231581cf400fac4e7c199c4e6ff8b58778594e409ef95d7ead703febc0"
  },
  "lessons/b2-describing-a-photo.html": {
   "pdf": "a7fc29c6d0961f3e",
-  "text": "ba6c821eeb921093"
+  "text": "ba6c821eeb921093",
+  "bytes": "d5775dab605d9ea8a868be6ab7aa81cc90cfce6c7f1fdef3901ed9c66599261d"
  },
  "lessons/b2-easily-confused-words.html": {
   "pdf": "442466eec2a934ca",
-  "text": "cef61dc00a69bf81"
+  "text": "cef61dc00a69bf81",
+  "bytes": "8afa158fb51f28eb25593efc50b43408948bd0bdb887fbb05f095c6d67f95376"
  },
  "lessons/b2-fact-or-opinion.html": {
   "pdf": "94d9c0ddfe9db0c5",
-  "text": "cec13dc90d28a4f6"
+  "text": "cec13dc90d28a4f6",
+  "bytes": "732dcab454e14eaa927f5a085bedc4162321d9775b816ed51d7da61ea0bb04f0"
  },
  "lessons/b2-following-an-interview.html": {
   "pdf": "da96478e4bb59f13",
-  "text": "cbf4142ad4149d80"
+  "text": "cbf4142ad4149d80",
+  "bytes": "5ffb000a3220d0e699c47f68b87e91d1e85c68369d03323349ec4925ba650fad"
  },
  "lessons/b2-making-plans-together.html": {
   "pdf": "4613e05edac8008b",
-  "text": "f2f6bba173cc2c7d"
+  "text": "f2f6bba173cc2c7d",
+  "bytes": "8ee2e5c40095289e87e8b904da49f71dfc660507a98dcbb8ccd1b6a6f1d9c734"
  },
  "lessons/b2-numbers-and-statistics.html": {
   "pdf": "3e8247397efb547a",
-  "text": "f266e8092892f5bd"
+  "text": "f266e8092892f5bd",
+  "bytes": "f550fd6573fad7c121be311c698679aa8e2fbfd1347d0f65bb0e4e733a955dec"
  },
  "lessons/b2-opinion-essay.html": {
   "pdf": "9c09cb3233d563ba",
-  "text": "63600d4547a718c4"
+  "text": "63600d4547a718c4",
+  "bytes": "fc05eb15c71c5d8eb290708e0f29ba6d14f5ca08e4d86c8a48bafb6fd5d6e1eb"
  },
  "lessons/b2-passive-voice.html": {
   "pdf": "85ff1459220a9de8",
-  "text": "dd04c1304495a7b7"
+  "text": "dd04c1304495a7b7",
+  "bytes": "7078d9d79c48d7f2f153e06c4f28aae4f5e2184d7e1c568adea29b3fe5a6ed88"
  },
  "lessons/b2-phone-messages.html": {
   "pdf": "ce2a0f0f5df460cb",
-  "text": "12e191956d2fad04"
+  "text": "12e191956d2fad04",
+  "bytes": "ccf8ef28ef27dca222a12ade40100879e6c18d2350a6a0faf8352a3e75a45e74"
  },
  "lessons/b2-reading-between-the-lines.html": {
   "pdf": "3e02a810893f50d8",
-  "text": "ce5f6c8cbb70f2ef"
+  "text": "ce5f6c8cbb70f2ef",
+  "bytes": "c91c5f0664ec947654bbe7891ba1a3d526453d555d74b0f96dc306eb00096c0f"
  },
  "lessons/b2-reported-speech.html": {
   "pdf": "9e50a066ebf98a13",
-  "text": "980a22aefc712630"
+  "text": "980a22aefc712630",
+  "bytes": "7e5dd00823981b22c41315b930bed02bf69a1f6a47f4d58a68349f47180d3ec4"
  },
  "lessons/b2-word-formation.html": {
   "pdf": "9370ebe363d77058",
-  "text": "74352311c63d9bc5"
+  "text": "74352311c63d9bc5",
+  "bytes": "15e264b1df41505edefeb99c06c608a35a67d2c6bcbeffd0c15a30c13596455d"
  },
  "lessons/b2-writers-attitude.html": {
   "pdf": "9cb0c7712d84ddbb",
-  "text": "df54d66322b2abbc"
+  "text": "df54d66322b2abbc",
+  "bytes": "83e0464c2e7ab05f8fe6fe2740ea60d0a935958c46e230ddbfa8c7ddfff5565c"
  },
  "lessons/b2-writing-a-review.html": {
   "pdf": "2e582ee24d6cd6fc",
-  "text": "64abc8cc0971ba4f"
+  "text": "64abc8cc0971ba4f",
+  "bytes": "9ac4a4b3a568459906b2a700cefcdd1b00ab7e48098f222641243a24b5d52389"
  },
  "lessons/c1-academic-vocabulary.html": {
   "pdf": "e3bf999d4f0bc920",
-  "text": "f104492e14014f37"
+  "text": "f104492e14014f37",
+  "bytes": "147c659542b734e4758db2c53d26d1633ed890b2b5ab2e51d90cb5b729676faa"
  },
  "lessons/c1-essay-introductions-conclusions.html": {
   "pdf": "95071b4c9aa6bdcc",
-  "text": "57b507bcf49c9c40"
+  "text": "57b507bcf49c9c40",
+  "bytes": "d53d2e6d71425282ffefb8f1027e5b0be60d7ea8813c87b0399f0f868fb4b340"
  },
  "lessons/c1-following-a-lecture.html": {
   "pdf": "4ad261b827034637",
-  "text": "6df9f6d9e6ae6b8d"
+  "text": "6df9f6d9e6ae6b8d",
+  "bytes": "989e93a42c6ffe61e88bca7250c7fdf13ef0290db56493fa9d665262d5fb7e6b"
  },
  "lessons/c1-formal-report.html": {
   "pdf": "59acde6ba43203f1",
-  "text": "64a3a093a589f467"
+  "text": "64a3a093a589f467",
+  "bytes": "31286e07c70fb9a8a0c2b19ae2b1316cbd34a1f103e86d3bf1ee6d9f62e4a372"
  },
  "lessons/c1-formal-verbs.html": {
   "pdf": "814229f8d32ef903",
-  "text": "ad8116d763960a96"
+  "text": "ad8116d763960a96",
+  "bytes": "f8d3e6913815261efbaba32c4fd6666326d8c3a09cbc09834b149b974513bedd"
  },
  "lessons/c1-future-perfect-continuous.html": {
   "pdf": "697aaf196b66d8d2",
-  "text": "06cb6fca4e2849f1"
+  "text": "06cb6fca4e2849f1",
+  "bytes": "77b1d7db1e1c04a64de57b822bb65d5d96d5f1ddcd14433744484bd463832aee"
  },
  "lessons/c1-giving-feedback-diplomatically.html": {
   "pdf": "9a904540873438ab",
-  "text": "03955b3a9bf9d303"
+  "text": "03955b3a9bf9d303",
+  "bytes": "21c46295a9c41c7c364ebc1367827f93e5cedc1a0b3750a4d76ccb63b6b9af96"
  },
  "lessons/c1-handling-difficult-questions.html": {
   "pdf": "95c4f958eee893c9",
-  "text": "d36646acdb90a5ce"
+  "text": "d36646acdb90a5ce",
+  "bytes": "3e3f730271a69beaaa0b91f779d55e5057bc3216c9de3a624770688bea495a48"
  },
  "lessons/c1-hedging-language.html": {
   "pdf": "a8338e2d881e7619",
-  "text": "d5f7df0278ba04f2"
+  "text": "d5f7df0278ba04f2",
+  "bytes": "a7be955d309da6c94e63bcb960a1caff10e42f6ac868d0a8048da044d488d16f"
  },
  "lessons/c1-inversion-for-emphasis.html": {
   "pdf": "71cbfe3215ba126c",
-  "text": "6735c15eaf0c4e35"
+  "text": "6735c15eaf0c4e35",
+  "bytes": "d830727e17c620fbf2d5c7571c1f43ca8dbfb860fba6265f9f18abf04b2b9208"
  },
  "lessons/c1-meaning-from-context.html": {
   "pdf": "525fa7449a1cc67e",
-  "text": "2db561f414c59578"
+  "text": "2db561f414c59578",
+  "bytes": "ba5c613e9144a904ba6026c9cbd97754018168eef40a18d2596387853dd05871"
  },
  "lessons/c1-news-main-idea-detail.html": {
   "pdf": "1dd21cab2346a662",
-  "text": "b492be03dab84f22"
+  "text": "b492be03dab84f22",
+  "bytes": "6cd28041ddfcedfaf8051ea0841fce3f7f4f3894cf5cf51f9dd7034620b9e789"
  },
  "lessons/c1-participle-clauses.html": {
   "pdf": "6f3153140cc6a191",
-  "text": "bba6fb15e4ea79d1"
+  "text": "bba6fb15e4ea79d1",
+  "bytes": "a5d3dd533f8354fa5f812d8e15e661ac02261aa032367086f780c9b0301e7507"
  },
  "lessons/c1-radio-discussion.html": {
   "pdf": "49e6354c4084e708",
-  "text": "22708ac9358ac105"
+  "text": "22708ac9358ac105",
+  "bytes": "3f887ef634c5668b89b5a0c1069f5364dfc7b1edbba28a6da1ca4c6901adb939"
  },
  "lessons/c1-reference-words.html": {
   "pdf": "baa298c616d59651",
-  "text": "cdaaa99af4fb9c31"
+  "text": "cdaaa99af4fb9c31",
+  "bytes": "08965191ea95b9ec87fde537276237e720696baa23486e137e281e0ac5a33fd4"
  },
  "lessons/c1-signposting-presentations.html": {
   "pdf": "e8d9dc6d93a71f21",
-  "text": "c961dbdf1395b368"
+  "text": "c961dbdf1395b368",
+  "bytes": "711734348ce13765fd390c3934d4b195ef36485ebb5cffa84fc94b11dcabcc6a"
  },
  "lessons/c1-text-structure.html": {
   "pdf": "00e3c7135cf149f4",
-  "text": "6fa30ccac2251f1a"
+  "text": "6fa30ccac2251f1a",
+  "bytes": "8c2930f62e08f054c59370de10de0fc4b9cb88a2140fdc9c61ad44dafd4c07f1"
  },
  "lessons/c1-writing-a-proposal.html": {
   "pdf": "fbf6662f80b02b7e",
-  "text": "09c5a5c858d03bb8"
+  "text": "09c5a5c858d03bb8",
+  "bytes": "041ed8f1c1c1bee493fe1749501bd119de7c0f9924231d7f88f9585d65ebfec8"
  },
  "lessons/c2-claims-and-certainty.html": {
   "pdf": "f673398faa2e6289",
-  "text": "cd8d4eea3d2606ff"
+  "text": "cd8d4eea3d2606ff",
+  "bytes": "af45835f4fa323ae8cf87f9453081c0a338472409c8a5bd0d289d4b4101abc55"
  },
  "lessons/c2-cleft-sentences.html": {
   "pdf": "c00166b10a804ad2",
-  "text": "e1bc8d6618a756d2"
+  "text": "e1bc8d6618a756d2",
+  "bytes": "f0537aa32646054d68cde8246aaaf74d0d1869c02b9643230f7037d257faf0d0"
  },
  "lessons/c2-connected-speech.html": {
   "pdf": "c779d6b5c0d78a94",
-  "text": "0fc58c8234a39e54"
+  "text": "0fc58c8234a39e54",
+  "bytes": "555c1bd9d0be13f909640df3b7fe83f9eff09330523e7aec6e4a33727b04eecf"
  },
  "lessons/c2-ellipsis-and-substitution.html": {
   "pdf": "bd4de57a8c0ea94e",
-  "text": "d208491c28150559"
+  "text": "d208491c28150559",
+  "bytes": "c0fd45c3affc2b33052cb67f048865128b7099e05c1389d3473d4f524c25849c"
  },
  "lessons/c2-evaluating-arguments.html": {
   "pdf": "d061616bf2eaf717",
-  "text": "64af9ed307f52d8e"
+  "text": "64af9ed307f52d8e",
+  "bytes": "df5b54213d663d84e296594f3f44e5b0158b7fea7712182669556a35b924822c"
  },
  "lessons/c2-idioms-and-nuance.html": {
   "pdf": "106b400398570444",
-  "text": "ef23fd28ee554076"
+  "text": "ef23fd28ee554076",
+  "bytes": "90677dc25a57884d06fab8b4a9aaab27be9bb5828018ce46f54c9c7692636ff6"
  },
  "lessons/c2-irony-and-understatement.html": {
   "pdf": "922d1483a580a372",
-  "text": "c2c53e04e05a722a"
+  "text": "c2c53e04e05a722a",
+  "bytes": "d2df4320d899d82eef14011ab49c8b6896e40b54da36c5b3e1f7036d1e1102ed"
  },
  "lessons/c2-managing-a-discussion.html": {
   "pdf": "fd129b11a2b0bd3e",
-  "text": "d04cdfd5b209cb8b"
+  "text": "d04cdfd5b209cb8b",
+  "bytes": "32d576b8e9b74ffbd9316fc9250eb99175c267cb0f93a24fe8cedc711889d837"
  },
  "lessons/c2-metaphor-in-everyday-english.html": {
   "pdf": "1325b64b00d3c54c",
-  "text": "13be682ef89c6cb2"
+  "text": "13be682ef89c6cb2",
+  "bytes": "46fbe01e1e930883f216754133b3fff3f3ced6ca03b3d33bf1959623c3048455"
  },
  "lessons/c2-nominalisation.html": {
   "pdf": "64ee97db7d5ed156",
-  "text": "c8463a133ffac695"
+  "text": "c8463a133ffac695",
+  "bytes": "1f62e9f8cc109aac292a4838d63094ce021bad4f614ba22238d0347043b835d6"
  },
  "lessons/c2-persuading-and-negotiating.html": {
   "pdf": "2547fd221b176d78",
-  "text": "0c71793f6cf53d97"
+  "text": "0c71793f6cf53d97",
+  "bytes": "24595a7f457adaf056c3c0ac09246d2b278f1da69db7f910b29014f45a0c46ca"
  },
  "lessons/c2-shades-of-meaning.html": {
   "pdf": "ef47a2de52b9d42c",
-  "text": "1eaffd4a0b3af7dc"
+  "text": "1eaffd4a0b3af7dc",
+  "bytes": "63545cddf3224df5dec1939aac240500d2a3df494db061eb4fe560ee1135f86e"
  },
  "lessons/c2-speaker-attitude.html": {
   "pdf": "fc73f2e7437ab635",
-  "text": "c54910f98b2cfd24"
+  "text": "c54910f98b2cfd24",
+  "bytes": "8bfe8ccf4db48e1b1dd2e78a4e9f1c49c257715e5ee491193eb37fc3234675b3"
  },
  "lessons/c2-spoken-discourse-markers.html": {
   "pdf": "8af9758c5f7154d8",
-  "text": "0a399b118a5b3ab8"
+  "text": "0a399b118a5b3ab8",
+  "bytes": "0466aa6607a660089e01f66f54528a0b8c27e0a9fd80379625425d777629a651"
  },
  "lessons/c2-style-and-register.html": {
   "pdf": "7680065a7da23a08",
-  "text": "9eda80dddea8e22e"
+  "text": "9eda80dddea8e22e",
+  "bytes": "fdff75385c2e34563fee22473d0d3949b4db779c21c1e79ac2e0f08316f2bd4b"
  },
  "lessons/c2-subjunctive.html": {
   "pdf": "8c46fe80dc5ef0fa",
-  "text": "55abd27c95ba360b"
+  "text": "55abd27c95ba360b",
+  "bytes": "792ef02dd1111f0e32990f67f455b1cd0ade88099f88572847f63f3050fa3152"
  },
  "lessons/c2-summarising-concisely.html": {
   "pdf": "1e2d716e1d054b3f",
-  "text": "7bd2d194f6ca2a7c"
+  "text": "7bd2d194f6ca2a7c",
+  "bytes": "eea6796d48ad2e19c7cb7a94d10f616253f9f7271f80982257b610829a2729e2"
  },
  "lessons/c2-telling-an-anecdote.html": {
   "pdf": "34d866a92bef1ffb",
-  "text": "b7c1b5718a6f184c"
+  "text": "b7c1b5718a6f184c",
+  "bytes": "3d29c0ef10aab19c574ed6e410bd350a003a65c683549add7e350bc8eb11c239"
  }
 }

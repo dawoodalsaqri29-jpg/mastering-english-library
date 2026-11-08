@@ -12,6 +12,7 @@ const crypto = require("crypto");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "dawoodalsaqri29-jpg.github.io/mastering-english-library/";
 const MANIFEST = path.join(ROOT, "data/pdf-manifest.json");
+const fileHash = (buf) => crypto.createHash("sha256").update(buf).digest("hex");
 const sha = (...parts) => { const h = crypto.createHash("sha256"); for (const p of parts) h.update(String(p) + "\0"); return h.digest("hex").slice(0, 16); };
 
 // The words printed on every page. Change them and all 72 PDFs must be rebuilt (the checker says so).
@@ -68,7 +69,7 @@ const LOOK = () => { const fdir = path.join(ROOT, "assets/fonts");
   return sha(...["assets/style.css", "assets/fonts/fonts.css", ...fs.readdirSync(fdir).filter((f) => f.endsWith(".woff2")).sort().map((f) => "assets/fonts/" + f)]
     .map((f) => fs.readFileSync(path.join(ROOT, f)).toString("base64"))); };
 const lessonOf = (pdfPath) => pdfPath.replace(/^pdfs\/[a-z0-9]+\//, "lessons/").replace(/\.pdf$/, ".html");
-module.exports = { printed, entry, LOOK, lessonOf, MANIFEST };
+module.exports = { printed, entry, LOOK, lessonOf, MANIFEST, fileHash };
 
 function serve() {
   const types = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".json": "application/json",
@@ -107,8 +108,10 @@ if (require.main === module) (async () => {
         ${FOOTER(r.level)} · page <span class="pageNumber"></span> of <span class="totalPages"></span></div>`,
     });
     // A PDF must never carry a link to the build machine.
-    if (fs.readFileSync(path.join(ROOT, r.path)).includes("127.0.0.1")) bad.push(html + " (local link)");
-    manifest[html] = entry(text, r.level);
+    const bytes = fs.readFileSync(path.join(ROOT, r.path));
+    if (bytes.includes("127.0.0.1")) bad.push(html + " (local link)");
+    // "bytes" ties the committed PDF file to this build: the site check fails if the file is swapped later.
+    manifest[html] = { ...entry(text, r.level), bytes: fileHash(bytes) };
   }
   if (!only.length) manifest._look = LOOK(); // the look is only "up to date" when every PDF was rebuilt
   await browser.close();

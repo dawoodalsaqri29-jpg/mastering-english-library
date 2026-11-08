@@ -134,7 +134,7 @@ async function checkBrowser(pages) {
 // The words each PDF would print now, against data/pdf-manifest.json written when the PDFs were built.
 // A changed word blocks (red); a changed colour, spacing or font only reminds (stays green).
 async function checkPdfs(browser, base) {
-  const { printed, entry, LOOK, lessonOf, MANIFEST } = require("./build-pdfs.js");
+  const { printed, entry, LOOK, lessonOf, MANIFEST, fileHash } = require("./build-pdfs.js");
   const manifest = fs.existsSync(MANIFEST) ? JSON.parse(fs.readFileSync(MANIFEST, "utf8")) : {};
   const lib = JSON.parse(fs.readFileSync(path.join(ROOT, "data/library.json"), "utf8"));
   const all = lib.resources.filter((r) => r.type === "pdf");
@@ -151,6 +151,14 @@ async function checkPdfs(browser, base) {
   record("Lesson PDFs match their lessons", !stale.length, stale.length
     ? stale.length + " PDF(s) out of date, run: " + cmd
     : all.length + " PDFs up to date" + look);
+  // The PDF files themselves must be the ones the build wrote (a swapped file would pass the text check above).
+  const swapped = all.filter((r) => {
+    const m = manifest[lessonOf(r.path)];
+    return !m || m.bytes !== fileHash(fs.readFileSync(path.join(ROOT, r.path)));
+  }).map((r) => r.path);
+  record("Lesson PDFs are the files the build wrote", !swapped.length, swapped.length
+    ? swapped.length + " PDF(s) differ from data/pdf-manifest.json (" + swapped.slice(0, 5).join(", ") + "); rebuild with node scripts/build-pdfs.js <lesson>"
+    : all.length + " PDFs");
 }
 
 // OWASP A03 (CI/CD). Every workflow declares permissions (top level, or on every job); no ${{ }} inside run: or
