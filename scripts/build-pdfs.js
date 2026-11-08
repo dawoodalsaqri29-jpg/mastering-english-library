@@ -36,6 +36,12 @@ function TRANSFORM() {
     d.remove();
   });
   article.appendChild(key);
+  // Links inside the lesson would point at the local build server; point them at the live site instead.
+  document.querySelectorAll("main a[href]").forEach((a) => {
+    const u = new URL(a.href);
+    if (u.hostname === "127.0.0.1" || u.hostname === "localhost")
+      a.href = "https://dawoodalsaqri29-jpg.github.io/mastering-english-library" + u.pathname + u.search + u.hash;
+  });
   const s = document.createElement("style");
   s.textContent = ".teacher-key{break-before:page}.teacher-key>p{color:#444;font-size:10pt}";
   document.head.appendChild(s);
@@ -100,6 +106,8 @@ if (require.main === module) (async () => {
       footerTemplate: `<div style="font-size:7.5pt;color:#555;width:100%;text-align:center;font-family:sans-serif">
         ${FOOTER(r.level)} · page <span class="pageNumber"></span> of <span class="totalPages"></span></div>`,
     });
+    // A PDF must never carry a link to the build machine.
+    if (fs.readFileSync(path.join(ROOT, r.path)).includes("127.0.0.1")) bad.push(html + " (local link)");
     manifest[html] = entry(text, r.level);
   }
   if (!only.length) manifest._look = LOOK(); // the look is only "up to date" when every PDF was rebuilt
@@ -107,6 +115,6 @@ if (require.main === module) (async () => {
   server.close();
   const sorted = Object.fromEntries(Object.keys(manifest).sort().map((k) => [k, manifest[k]]));
   fs.writeFileSync(MANIFEST, JSON.stringify(sorted, null, 1) + "\n");
-  console.log(jobs.length + " PDFs built; manifest updated" + (bad.length ? ". PROBLEM, no answer page or 'Show answers' left: " + bad.join(", ") : ""));
+  console.log(jobs.length + " PDFs built; manifest updated" + (bad.length ? ". PROBLEM (no answer page, 'Show answers' left, or a local link): " + bad.join(", ") : ""));
   process.exit(bad.length ? 1 : 0);
 })();
