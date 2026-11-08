@@ -10,7 +10,7 @@ Last updated: 2026-11-08
 - Arena "claude-seo + security plan" (8 agents, 3 rounds), run folder in the session scratchpad
   (`arena-seosec`). Result goes to the owner before anything is applied.
 - Next: a second 8-agent arena on `claude-code-owasp` (one skill, owasp-security), given the first winner.
-- PR #52 (hardening of build-pdfs.js and the CI checkout): waiting for the site check, then squash-merge.
+- (none waiting on CI)
 
 ## Waiting on the owner
 - Schools plan step 1 and step 4: the email and/or business WhatsApp number institutes should use.
@@ -23,6 +23,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-08: Security hardening of the PDF build server and CI checkout, plus this STATE file (PR #52).
 - 2026-11-08: Lantern prompts for sections F, G, H (12 pictures each); section I is slides only.
 - 2026-11-08: Classroom PDFs, worksheet first and teacher answer page last, plus the PDF guard (PR #51).
 - 2026-11-08: Site check runs on every PR through GitHub Actions (PR #50).
@@ -34,5 +35,8 @@ Last updated: 2026-11-08
 - Subtitles: English and Arabic in separate boxes, never mixed.
 - Not used: FounderOS, the nine self-hosted apps, Reverse API Engineer, FreeLLMAPI, caveman-setup,
   ChatPlace, the Humanizer for school or university work (academic dishonesty), the Context Engineering
-  Kit as a whole (overlaps gstack and ECC, and its hooks are not allowed).
+  Kit as a whole (overlaps gstack and ECC, and its hooks are not allowed), Scientific Agent Skills
+  (177 lab-science skills: biology, chemistry, medical databases; nothing for an English-learning business),
+  claude-mem (hooks on every message and tool call, a background worker, an extra paid API key or the
+  cmem.ai cloud; its local database would be lost when the cloud container is reclaimed; STATE.md does the job).
 - Arenas: 8 agents by default (about 43 calls); 16 only for big decisions.
