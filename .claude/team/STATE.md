@@ -17,7 +17,6 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
-- Read and publish (or ask for changes) the Wix blog draft «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة» (2026-11-09, unpublished). Built from the store's Google queries about remembering vocabulary.
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
@@ -32,6 +31,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-09: Published the Wix blog post «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة».
 - 2026-11-09: Published the Wix blog post «اعرف مستواك في الإنجليزي خلال دقيقتين» at the owner's request.
 - 2026-11-08: Arabic level check page level-ar.html (#77; safety rule first in #76), embedded in an unpublished Wix blog draft (owner chose option B). Teacher sample pack PDF (cover, course map, 6 lessons) delivered as a file, not in the repo.
 - 2026-11-08: Owner reversed the earlier "not used" for Reverse API Engineer: on-demand skill, pinned 0.14.0, own/permitted sites only, no stealth extra.
@@ -63,6 +63,7 @@ Last updated: 2026-11-08
 - 2026-11-07: free.js shows a message when lessons fail to load (PR #49); roster updates (PR #48).
 
 ## Decisions that stand (do not reopen without the owner)
+- 2026-11-09: the owner said Claude publishes Wix blog posts itself ("كله سوي انت"). Posts stay factual, link to the free lessons, and add no prices or claims the site cannot back.
 - The Arabic level page lives on the Wix site (blog post) and embeds level-ar.html from this repo.
 - Narration voice: Kokoro `bf_isabella`, speed 0.92, on every platform. No OmniVoice (non-commercial licence).
 - Subtitles: English and Arabic in separate boxes, never mixed.
