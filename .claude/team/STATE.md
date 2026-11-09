@@ -17,6 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
+- Read and publish (or ask for changes) the Wix blog draft «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة» (2026-11-09, unpublished). Built from the store's Google queries about remembering vocabulary.
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
