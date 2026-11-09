@@ -17,7 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
-- Publish the Wix blog draft «اعرف مستواك في الإنجليزي خلال دقيقتين» (Blog > Drafts). It embeds level-ar.html; check it on a phone first.
+- Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
   from the Wix store at masteringenglishlibrary.com (orders + Wix Analytics). Refresh by hand when asked; numbers stay out of this repo.
@@ -31,6 +31,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-09: Published the Wix blog post «اعرف مستواك في الإنجليزي خلال دقيقتين» at the owner's request.
 - 2026-11-08: Arabic level check page level-ar.html (#77; safety rule first in #76), embedded in an unpublished Wix blog draft (owner chose option B). Teacher sample pack PDF (cover, course map, 6 lessons) delivered as a file, not in the repo.
 - 2026-11-08: Owner reversed the earlier "not used" for Reverse API Engineer: on-demand skill, pinned 0.14.0, own/permitted sites only, no stealth extra.
 - 2026-11-08: Owner approved the PDF line "Free to copy for your own classes": in every PDF footer (72 rebuilt) and on teachers.html.
