@@ -31,6 +31,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-09: Published the Wix blog post «الاستعداد لاختبار الآيلتس: الدرجات والمستويات وخطة التحضير» (IELTS queries). Band-to-CEFR table marked approximate, as IELTS itself says. Three Arabic posts now live: level, vocabulary, IELTS. Next: check Wix search queries for clicks in 2–3 weeks.
 - 2026-11-09: Published the Wix blog post «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة».
 - 2026-11-09: Published the Wix blog post «اعرف مستواك في الإنجليزي خلال دقيقتين» at the owner's request.
 - 2026-11-08: Arabic level check page level-ar.html (#77; safety rule first in #76), embedded in an unpublished Wix blog draft (owner chose option B). Teacher sample pack PDF (cover, course map, 6 lessons) delivered as a file, not in the repo.
