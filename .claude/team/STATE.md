@@ -17,7 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
-- Mobile-transfer payment: owner connects Manual Payments in Wix (Settings > Accept Payments) with the instruction text, and confirms the transfer number (he wrote …8907; WhatsApp is …8908).
+- Mobile-transfer payment: owner connects Manual Payments in Wix (Settings > Accept Payments) with the instruction text, (transfer number …8907 confirmed by the owner 2026-11-09; WhatsApp stays …8908). Then Claude adds the payment line to the product descriptions.
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
