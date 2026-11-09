@@ -17,6 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
+- Mobile-transfer payment: owner connects Manual Payments in Wix (Settings > Accept Payments) with the instruction text, and confirms the transfer number (he wrote …8907; WhatsApp is …8908).
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
@@ -64,6 +65,7 @@ Last updated: 2026-11-08
 - 2026-11-07: free.js shows a message when lessons fail to load (PR #49); roster updates (PR #48).
 
 ## Decisions that stand (do not reopen without the owner)
+- 2026-11-09: mobile-transfer orders. A scheduled task (every 3 h, this session) lists unpaid offline orders and asks the owner per order. Claude marks an order paid (Add Payments, offline) only after the owner says yes for that order number. Buyer details stay out of chat and repo.
 - 2026-11-09: the owner said Claude publishes Wix blog posts itself ("كله سوي انت"). Posts stay factual, link to the free lessons, and add no prices or claims the site cannot back.
 - The Arabic level page lives on the Wix site (blog post) and embeds level-ar.html from this repo.
 - Narration voice: Kokoro `bf_isabella`, speed 0.92, on every platform. No OmniVoice (non-commercial licence).
