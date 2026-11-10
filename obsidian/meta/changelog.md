@@ -1,0 +1,262 @@
+---
+tags: [meta, changelog]
+updated: 2026-10-14
+---
+
+# Changelog
+
+Chronological log of notable changes to **this project**. Newest first.
+Human-curated — not a mirror of `git log`.
+
+Log a change here when it would surprise someone returning in six months: a new
+dependency, a new route or section, a convention bent, a bug whose cause is worth
+remembering. Routine commits do not need an entry.
+
+For *why* the conventions are what they are, see [[decisions-log]].
+
+---
+
+## 2026-11-10
+
+**Fresh project from the starter.** Cloned `next16-claude-starter`, removed its git
+history and started a new repository. `.env` copied from `.env.example`;
+`yarn install` and `yarn dev` checked (home route returns 200).
+
+**Design reference vault added: `ai-design-vault/`** (cloned from
+`textura-agency/ai-design-vault`, its `.git` removed). It is a **reference only**:
+the app is not restructured around it, its `.claude/` and `/adapt` are not
+installed, and this `obsidian/` vault stays the source of truth for the code.
+Its notes on layout, typography, colour, spacing and motion guide every UI
+change — start at `ai-design-vault/README.md`. Tailwind only scans `src/`
+(`source("../")` in `globals.css`), so the vault's docs never become utilities.
+
+## 2026-10-14
+
+**Lint is a real check again (ADR-0030).** Eight rules switched off in
+`eslint.config.mjs` hid 63 problems (14 `any`, unused code, unexplained
+`@ts-expect-error`, a `@ts-nocheck`, setState in effects). All fixed — the
+animation engine with sign-off, types only (plus `Handle` honouring `tag`) —
+and the rules restored; `yarn lint --max-warnings 0` passes on the starter
+and on every Payload kit. `verify.sh` flags the engine diff until committed.
+
+**SEO, part 2: content at scale, local, languages, and growth after launch.**
+
+- **Payload kits `blog` and `collection`** (`scaffold.sh blog|collection`, both
+  bringing `templates/cms-shared`). Blog: posts / topics / authors,
+  `/blog/{,<slug>,topic/<slug>,author/<slug>,feed.xml}`, `BlogPosting` +
+  `Person` + breadcrumb, `revisedAt` as the only `lastmod`, old slugs → 308,
+  thin topics `noindex`. Collection: one template for many pages (locations,
+  services…), a quality bar (own words + facts) deciding indexing with the
+  reason in the admin, `Service` / `LocalBusiness` / `FAQPage` by kind,
+  group links. Verified against a seeded Postgres (Payload 3.89, Next 16.3.7):
+  types / lint / build clean, every route ● SSG, Lighthouse A11y / BP / SEO
+  100. References: `payload-cms/references/{blog,collection-pages}.md`;
+  decision D17; `/cms` phases 4b / 4c.
+- **Local SEO** — skill `local-seo`; `siteConfig.organization` gains
+  `openingHours`, `geo`, `areaServed`, `priceRange`, `hasMap`;
+  `getLocalBusinessStructuredData()` per location. Bare-starter output unchanged.
+- **hreflang (opt-in)** — skill `i18n-seo`; `ROUTES[].alternates`,
+  `src/utils/seo/hreflang.ts` (an invalid code fails the build),
+  `generateMetadata({ languages, alternateLocales })`, sitemap alternates;
+  `qa:seo` FAILs non-reciprocal / invalid / relative hreflang and WARNs on a
+  missing self-reference or x-default, `<html lang>` mismatch, a
+  cross-language canonical.
+- **`/seo-grow`** — skill + command + `yarn seo:grow`
+  (`tools/qa/gsc-grow.mjs`): a Search Console export → the site's own CTR
+  curve, striking distance, low CTR, zero-click, decliners, cannibalisation.
+- `qa:seo`: `/llms.txt` must list every *registry* page; CMS collection pages
+  may be a curated subset (it is a map, not a dump).
+
+
+**SEO: one route registry, `/llms.txt`, explicit AI-crawler policy, page
+schema, and a crawler that checks values.** After a gap analysis against
+coreyhaines31/marketingskills (its `seo-audit`, `ai-seo`, `schema` skills):
+
+- `src/lib/routes.ts` (`ROUTES`) lists every public page; `sitemap.xml`,
+  the new `/llms.txt` (`src/app/llms.txt/route.ts`, prerendered) and the
+  breadcrumb JSON-LD read it. `verify.sh` FAILs on a `page.tsx` without an
+  entry. The sitemap no longer stamps `lastModified: new Date()` — `<lastmod>`
+  only from a route's real `updated` date (new WARN in `verify.sh`).
+- `robots.ts` writes a named group per AI crawler, grouped by purpose
+  (`search` / `userFetch` / `training`) and switched by
+  `siteConfig.aiCrawlers` (defaults: all allowed — same behaviour as before,
+  now stated).
+- `siteConfig.organization` (founding date, contact, address, `sameAs`) feeds
+  the Organization JSON-LD and `/llms.txt`; `siteConfig.verification` from the
+  new env vars `GOOGLE_SITE_VERIFICATION` / `BING_SITE_VERIFICATION`.
+- `structured-data.ts` gained typed builders (Breadcrumb, Article/BlogPosting,
+  Service, FAQPage, Person, LocalBusiness via `type`) and `jsonLdGraph()`;
+  `<JsonLd>` (`src/components/common/json-ld.tsx`) renders them with `<`
+  escaped. `/privacy-policy` carries a breadcrumb.
+- `yarn qa:seo` (`tools/qa/seo-crawl.mjs`) crawls the served HTML as people and
+  as Googlebot: titles, descriptions, canonicals, h1, JSON-LD, broken links,
+  orphans, depth, sitemap/llms.txt agreement, robot-form parity. In `/ship`.
+- Skills corrected: `schema-markup` no longer sells FAQ rich results (Google
+  stopped showing them 7 May 2026; HowTo 2023; sitelinks search box 2024);
+  `aeo-visibility` covers user-triggered fetchers, CDN/WAF blocks, measuring
+  citation *rates* over repeated runs and Google's own AI-features stance;
+  `seo-audit` adds the new-page findability checklist and the post-launch
+  striking-distance / CTR pass; the auditor treats fetched pages as untrusted.
+
+## 2026-10-10
+
+**Consent UI is branded per project.** The cookie banner and preferences modal
+now style only through `--consent-*` tokens (surface, text, action, action text,
+two radii) that default to the neutral theme; every project re-points them at
+its palette and matches its type and buttons as part of the first build
+([[components/common|common]] → *Brand the consent UI*, step in [[new-page]],
+check in `qa-verify`). The banner copy is cut to two lines: "We use cookies to
+keep the site working. See our cookie policy."
+
+## 2026-10-07
+
+**CMS admin flow — `/cms`, three skills, copy-ready kits.** The Payload admin
+built for a production site (every string editable, SEO per page with a link
+preview, the site's look, consented analytics, an editor's guide with
+screenshots) is now the starter's default way to add a CMS. New:
+`obsidian/workflows/cms-admin.md`; skills `payload-admin` and
+`payload-analytics`; `payload-cms` rewritten around decisions D1–D16 with
+`references/` (content model, Supabase wiring, SEO global, legal rich text) and
+`templates/` kits (`core`, `admin`, `analytics`, `guide`, `legal`) copied by
+`scaffold.sh`; `tools/qa/admin-shots.mjs` (`yarn qa:shots`). Changed:
+`generateMetadata` gains `absoluteTitle` / `ogImageSize` / `noIndex` / `locale`
+and `getSiteStructuredData` takes overrides (both default to `siteConfig`);
+`verify.sh` skips Payload's generated types and admin routes; rule `payload.md`
+and [[cms-payload]] rewritten. Reasoning: [[decisions-log]] ADR-0027.
+
+## Baseline — built from `next16-claude-starter` v0.1.0
+
+What the starter ships, so the first project entry has something to diff against:
+
+| Area | What is there |
+|------|---------------|
+| Framework | Next.js 16 App Router · React 19 · TypeScript · Yarn · Node ≥ 20.19 |
+| Styling | Tailwind v4, CSS-only config, three-tier design tokens ([[design-system]]) |
+| Motion | Vendored spring engine + `spring-text-engine`, shared rAF ticker, reduced-motion ([[animation-system]]) |
+| Layout | Adaptive scaling grid — root font-size tracks the viewport ([[design-system]]) |
+| Scroll | Lenis smooth scroll + Zustand scroll store ([[smooth-scroll]]) |
+| Server | `app/api` route handlers, zod-validated env, `{ data }`/`{ error }` envelope ([[api-architecture]]) |
+| SEO | Metadata generator, `robots.ts`, `sitemap.ts`, JSON-LD ([[seo-metadata]]) |
+| Agent harness | 8 commands, 7 path-scoped rules, 11 skills, 4 subagents, `verify.sh` ([[agent-harness]]) |
+| Not included | CMS, database, auth, payments, i18n, tests — added per project ([[backend/README]]) |
+
+The home view (`src/views/home.tsx`, route `/`) ships empty on purpose — start
+there ([[new-page]]).
+
+<!-- Log this project's changes below, newest first, under a `## YYYY-MM-DD` heading. -->
+
+## 2026-10-06 — The starter inherits lessons from many production sites
+
+What 50+ production sites built from this starter taught — measured, optimised
+and reviewed on real phones — is now part of the starter. Reasoning:
+[[decisions-log]] ADR-0026.
+
+- **New `knowledge/` section.** [[fix-catalog]] — every fix that moved a measured
+  number, by area (LCP/load, hydration/TBT, CLS, scroll, 3D/WebGL, fonts/media,
+  accessibility, SEO/robots/metadata, phones/iOS), each with symptom, cause, fix,
+  before → after and *rule* (≥ 3 sites) or *observed* (1–2) status; it ends with
+  the starter defaults that must not be undone. [[pitfalls]] — measurement,
+  tooling, code and design-to-code traps. [[knowledge/README]] — how to use them
+  and the evidence rules for adding to them; [[templates/fix-entry]].
+- **New workflows.** [[testing-pipeline]] — build → `next start` → Lighthouse ×3
+  PC + mobile (people + robot form) → scroll test PC + mobile (cold + warm) →
+  mobile/iOS probes → axe sweep → real host → real device, with the bars:
+  Performance ≥ 90 on PC and mobile, A11y/BP/SEO 100, scroll ideal (no frame
+  > 50 ms). [[mobile-device-qa]] — the companion to the new `mobile-device-qa`
+  skill (`/mobile`): Safari's toolbar resize, 120 Hz and dt, no phone frame caps,
+  WebGL context loss, menus (dvh + safe area + dark mode), touch, gyroscope,
+  loader and first scroll, stills, WebKit, the device walk.
+- **Workflows updated** to the evolved practice and linked to the knowledge:
+  [[optimize-load]] (the bars, the levers in the order they pay),
+  [[optimize-performance]] (the scroll test's cause column → fix table),
+  [[optimize-3d-scene]] (§3 prewarm against real targets; §5 **no fixed phone
+  cap** + desktop 60 fps draw cap — replaces the 30/45 fps budgets; §13 never stop
+  a visible canvas, context recovery; the starter's new scene helpers),
+  [[qa-verification]] (layers 3 and 4: the `tools/qa/` checks and a real phone),
+  [[seo-aeo]] (robot form, origin, empty `loading.tsx`, SEO 100 hiding real
+  defects), [[ship]] (the new budget and post-deploy checks), [[new-page]]
+  (build-it-fast defaults), [[ai-agent-guide]] and [[agent-harness]] (the new
+  skill, command and `tools/qa/` scripts).
+
+## 2026-09-30 — Dependency refresh: Next 16.3.7, React 19.3
+
+Bumped to pick up upstream Turbopack fixes in the 16.3.x patch line.
+
+- `next` + `eslint-config-next` 16.3.1 → 16.3.7
+- `react` / `react-dom` 19.2.8 → 19.3.0 (and `@types/react*` → 19.3.0)
+- `zod` 4.4.3 → 4.6.5 · `@types/node` → 24.19.0
+- Still held back (see [[tech-stack]] § Deliberately held back): ESLint 10,
+  TypeScript 7, `@types/node` 26.
+- Installs must run on the `.nvmrc` Node (24.16.0); Yarn rejects Node < 20.19
+  via `engines`.
+
+## 2026-09-18 — `optimize-load`: Lighthouse as a measured workflow
+
+- **New skill `optimize-load`** + `/load` command + [[optimize-load]]. Audits all
+  four Lighthouse categories across **laptop, tablet and mobile**, medians of 3+
+  runs, then fixes what the audit blames and re-measures. Hard rule 13 now routes
+  by *which half* is slow — load → `optimize-load`, scroll jank after load →
+  `optimize-performance` — because Lighthouse never scrolls and cannot see the
+  second.
+- **`references/runner.md`** carries the Lighthouse Node-API runner (three form
+  factors, medians, per-audit failures by weight), a `PerformanceObserver` CLS
+  probe — Lighthouse routinely reports shifts with **no node attached** — and the
+  WCAG contrast arithmetic.
+- **`references/fixes.md`** carries the fixes by weight (TBT 30 · LCP 25 · CLS 25),
+  the LCP phase-breakdown table that names which fix applies, the measured
+  contrast floors (**0.55 black on light, 0.46 white on black**), and the
+  width-reservation pattern for figures that count up.
+- **Findings worth carrying between projects**, all recorded: a single run is an
+  anecdote (LCP swung 2.7→4.6s on an unchanged build); axe samples animated pages
+  mid-reveal and reports artifacts; CLS sums distance, not frames, so speeding an
+  animation up does nothing; and a CLS of 0 may just mean the trace ended early.
+- **Ownership tidied so the skills cannot drift** — `seo-audit` §5 and
+  [[seo-aeo]] now delegate Core Web Vitals to `optimize-load` instead of
+  restating them (they were still advising a single Lighthouse run on one
+  profile).
+- **The ship gate now routes through it** — [[ship]] and the `ship-check` skill
+  ask for all four categories ≥ 90 on all three profiles, medians of 3+, and name
+  `optimize-performance` as the second pass Lighthouse cannot do.
+- **No new dependency** — both scripts install into a scratch directory.
+- See [[decisions-log]] ADR-0025 for why this is a second skill rather than an
+  extension of the first.
+
+
+## 2026-09-17 — performance becomes a measured workflow
+
+- **New skill `optimize-performance`** + `/perf` command + [[optimize-performance]].
+  Performance work now runs a loop — build, measure in real Chrome, attribute,
+  fix one thing, re-measure — instead of applying a checklist. Hard rule 13 in
+  `AGENTS.md` routes any "it's slow / janky / stutters" request into it; the old
+  3D rule moved to 14.
+- **The diagnostic it adds:** scroll the whole page twice and compare cold
+  against warm. A page that stutters on the *first* pass and is smooth after is
+  not slow — it is fetching and decoding lazy media inside the frames a reveal
+  animation is running in. Lighthouse cannot see this (it never scrolls), and
+  neither can you by hand, because you have already warmed the page.
+- **References:** `references/measuring.md` carries the scroll bench (real wheel
+  events over CDP, `requestAnimationFrame` deltas, long tasks, resource timing)
+  and how to read it; `references/fixes.md` carries the fixes, most-likely first,
+  including a `warmMedia` implementation with the four traps that make a naive
+  version silently do nothing.
+- **No new dependency** — the bench uses `playwright-core` installed in a scratch
+  directory, not in the project.
+- See [[decisions-log]] ADR-0024 for why this is a loop rather than a checklist.
+
+
+## 2026-09-08
+
+**`optimize-3d-scene` skill — resize no longer switched off on touch.** §13 of
+the skill (and `patterns.md` §5 / §14) told agents to attach *no* `resize`
+listener on the mobile tier, to dodge the iOS URL bar. That also removed the
+only path that could react to a breakpoint drag, a rotation or DevTools
+emulation being turned off, so a scene loaded as a phone kept its phone
+framebuffer, frame budget, parked pointer and hidden desktop passes on a desktop
+viewport and rendered skewed. The skill now listens on every tier, ignores
+height-only changes on a coarse pointer, and re-reads the tier on a width
+change or a pointer-media-query flip, with a `retune()` that re-applies DPR,
+budget, visibility, draw range and pointer binding without compiling a program.
+§2 and §11 of `SKILL.md` and the [[optimize-3d-scene]] workflow note were
+updated to match; §14 gained a tier-switch round-trip check. Reasoning in
+[[decisions-log]] ADR-0023. Measured on the project that surfaced it: phone
+390×844 / 3 draws ↔ desktop 2160×1350 / 4 draws, program count unchanged.
