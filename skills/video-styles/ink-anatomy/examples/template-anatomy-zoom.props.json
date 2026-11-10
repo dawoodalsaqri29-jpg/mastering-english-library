@@ -1,0 +1,25 @@
+{
+  "limb": "arm",
+  "labels": [
+    {
+      "text": "Muscle (grows fast)",
+      "layer": "muscle",
+      "word": "muscle"
+    },
+    {
+      "text": "Tendon (grows slow)",
+      "layer": "tendon",
+      "word": "tendon"
+    },
+    {
+      "text": "Bone",
+      "layer": "bone",
+      "word": "bone"
+    }
+  ],
+  "focus": "tendon",
+  "keyword": "stronger",
+  "title": "Inside your *arm*",
+  "note": "the tendon is the weak link until you train it",
+  "bg": "white"
+}

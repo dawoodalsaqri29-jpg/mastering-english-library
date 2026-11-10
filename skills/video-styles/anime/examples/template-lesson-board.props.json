@@ -1,0 +1,18 @@
+{
+  "character": "ren",
+  "title": "Why the sky is blue",
+  "points": [
+    {
+      "text": "Sunlight has *all* colours",
+      "word": "colours"
+    },
+    {
+      "text": "Air scatters short waves",
+      "word": "scatter"
+    },
+    {
+      "text": "Blue scatters the most",
+      "word": "most"
+    }
+  ]
+}

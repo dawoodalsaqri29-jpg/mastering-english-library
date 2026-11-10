@@ -1,0 +1,18 @@
+{
+  "character": "mochi",
+  "fact": "Octopuses have *three* hearts and blue blood!",
+  "word": "three",
+  "reaction": "sparkle",
+  "icons": [
+    {
+      "icon": "heart",
+      "label": "3 hearts",
+      "word": "hearts"
+    },
+    {
+      "icon": "droplet",
+      "label": "blue blood",
+      "word": "blood"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "WHEN IT *KNOCKS*",
+  "do": {
+    "text": "STAY *QUIET*",
+    "character": "you",
+    "pose": "hush",
+    "object": "door"
+  },
+  "dont": {
+    "text": "*OPEN* IT",
+    "character": "you",
+    "pose": "reach",
+    "object": "door",
+    "action": "open",
+    "accent": true
+  },
+  "verdict": "IT *COUNTS* THE SECONDS",
+  "verdictKeyword": "counts"
+}

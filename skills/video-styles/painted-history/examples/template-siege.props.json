@@ -1,0 +1,18 @@
+{
+  "defender": {
+    "faction": "knight",
+    "name": "Crusaders"
+  },
+  "attacker": {
+    "faction": "ottoman",
+    "name": "The Sultan's army"
+  },
+  "side": "right",
+  "keyword": "guns",
+  "assault": true,
+  "title": "The Walls Must Fall",
+  "place": "Constantinople",
+  "date": "29 May 1453",
+  "sky": "dusk",
+  "terrain": "coast"
+}

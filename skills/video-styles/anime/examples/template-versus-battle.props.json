@@ -1,0 +1,18 @@
+{
+  "left": {
+    "character": "hikari",
+    "label": "Index funds",
+    "stat": "low fees",
+    "word": "index",
+    "aura": "pink"
+  },
+  "right": {
+    "character": "kaito",
+    "label": "Stock picking",
+    "stat": "high risk",
+    "word": "picking",
+    "aura": "cyan"
+  },
+  "word": "decade",
+  "verdict": "left"
+}

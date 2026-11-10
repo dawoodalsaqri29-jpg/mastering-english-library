@@ -1,0 +1,10 @@
+{
+  "number": 3,
+  "rule": "DO NOT *ANSWER* THE DOOR",
+  "icon": "door",
+  "forbidden": true,
+  "subtext": "NO MATTER WHO IT SAYS IT IS",
+  "subtextKeyword": "who",
+  "character": "you",
+  "pose": "stop"
+}

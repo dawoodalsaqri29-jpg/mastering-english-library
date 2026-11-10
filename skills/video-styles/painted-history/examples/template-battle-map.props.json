@@ -1,0 +1,20 @@
+{
+  "attacker": {
+    "faction": "roman",
+    "name": "Legions"
+  },
+  "defender": {
+    "faction": "hoplite",
+    "name": "Carthage"
+  },
+  "manoeuvre": "pincer",
+  "keyword": "closed",
+  "title": "Cannae",
+  "towns": [
+    "Cannae",
+    "Canusium"
+  ],
+  "river": true,
+  "banner": "The Perfect Trap",
+  "date": "2 August, 216 BC"
+}

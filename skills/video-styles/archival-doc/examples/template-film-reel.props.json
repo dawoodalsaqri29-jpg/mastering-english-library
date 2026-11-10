@@ -1,0 +1,22 @@
+{
+  "title": "Reel 4: Arrival",
+  "frames": [
+    {
+      "subject": "ship",
+      "caption": "They came by sea, a thousand at a time"
+    },
+    {
+      "subject": "crowd",
+      "caption": "Through the great hall at Ellis Island"
+    },
+    {
+      "subject": "street",
+      "caption": "Into the crowded streets of the Lower East Side"
+    },
+    {
+      "subject": "factory",
+      "caption": "And into the factories that built a nation"
+    }
+  ],
+  "tone": "silver"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "What if you skipped sleep?",
+  "character": "pip",
+  "panels": [
+    {
+      "caption": "Night one: you feel fine.",
+      "pose": "smug",
+      "says": "Sleep is for quitters."
+    },
+    {
+      "caption": "Night two: things get weird.",
+      "pose": "panic",
+      "doodle": "clock"
+    },
+    {
+      "caption": "Night three: you argue with a toaster.",
+      "pose": "fall",
+      "doodle": "robot"
+    }
+  ],
+  "punchline": "Please just go to bed."
+}

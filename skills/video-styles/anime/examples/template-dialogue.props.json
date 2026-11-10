@@ -1,0 +1,32 @@
+{
+  "characters": [
+    "kaito",
+    "yuki"
+  ],
+  "location": "classroom",
+  "lines": [
+    {
+      "speaker": 0,
+      "text": "Wait, the test is today?",
+      "expression": "shocked",
+      "reaction": "sweat-drop"
+    },
+    {
+      "speaker": 1,
+      "text": "Since last week. Did you study?",
+      "expression": "smug"
+    },
+    {
+      "speaker": 0,
+      "text": "I studied... a little.",
+      "expression": "flustered",
+      "reaction": "calm"
+    },
+    {
+      "speaker": 1,
+      "text": "Then let's review together.",
+      "expression": "smile",
+      "gesture": "peace"
+    }
+  ]
+}

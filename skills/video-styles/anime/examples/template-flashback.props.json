@@ -1,0 +1,11 @@
+{
+  "character": "yuki",
+  "location": "shrine",
+  "caption": "Three years ago",
+  "lines": [
+    "We promised to never give up.",
+    "Even when it got hard."
+  ],
+  "returnWord": "today",
+  "presentExpression": "determined"
+}

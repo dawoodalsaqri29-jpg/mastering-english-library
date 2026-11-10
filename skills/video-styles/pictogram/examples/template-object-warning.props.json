@@ -1,0 +1,23 @@
+{
+  "object": "poster",
+  "title": "THE *POSTER*",
+  "callouts": [
+    {
+      "text": "YOUR DOG'S *FACE*",
+      "keyword": "face",
+      "dy": 0.5
+    },
+    {
+      "text": "YOUR *NUMBER*",
+      "keyword": "number",
+      "dy": 0.22
+    },
+    {
+      "text": "DATED *TOMORROW*",
+      "keyword": "tomorrow",
+      "dy": 0.86
+    }
+  ],
+  "stamp": "CHECK THE *DATE*",
+  "keyword": "date"
+}

@@ -1,0 +1,14 @@
+{
+  "then": {
+    "subject": "street",
+    "year": "1905",
+    "label": "Market Street, horse and tram"
+  },
+  "now": {
+    "subject": "city",
+    "year": "Today",
+    "label": "The same corner, rebuilt"
+  },
+  "title": "One Street, A Century Apart",
+  "keyword": "today"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "The Genius Trap",
+  "chapter": "Chapter Three",
+  "subtitle": "How one general lured an empire into the forest",
+  "keyword": "trap",
+  "place": "Teutoburg Forest",
+  "date": "9 AD",
+  "left": {
+    "faction": "roman"
+  },
+  "right": {
+    "faction": "viking"
+  },
+  "sky": "golden",
+  "terrain": "forest"
+}

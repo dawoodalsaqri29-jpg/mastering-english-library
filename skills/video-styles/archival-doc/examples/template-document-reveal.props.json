@@ -1,0 +1,17 @@
+{
+  "header": "Office of Strategic Services",
+  "title": "Memorandum",
+  "date": "June 2, 1944",
+  "to": "Supreme Headquarters",
+  "subject": "Operation Overlord, final timing",
+  "ref": "File 44-OV-17",
+  "body": "Weather window confirmed for the morning of June sixth. Landing forces will proceed to Normandy beaches as planned. Deception units remain in Kent. Under no circumstances is the date to be discussed outside this office.",
+  "redact": [
+    "Normandy",
+    "Kent"
+  ],
+  "classification": "Top Secret",
+  "stamp": "Approved",
+  "stampColor": "red",
+  "keyword": "approved"
+}

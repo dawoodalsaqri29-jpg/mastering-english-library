@@ -1,0 +1,12 @@
+{
+  "from": "1:58 AM",
+  "to": "2:00 AM",
+  "setting": "bedroom",
+  "pose": "sit-bed",
+  "event": "knock",
+  "eventKeyword": "exactly",
+  "stamp": "DON'T *MOVE*",
+  "keyword": "move",
+  "caption": "WAIT FOR IT",
+  "captionKeyword": "wait"
+}

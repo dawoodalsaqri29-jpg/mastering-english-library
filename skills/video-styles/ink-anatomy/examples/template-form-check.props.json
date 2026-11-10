@@ -1,0 +1,9 @@
+{
+  "exercise": "pushup",
+  "keyword": "sag",
+  "errorNote": "hips sag",
+  "goodLabel": "STRAIGHT LINE",
+  "badLabel": "BANANA",
+  "title": "Push-up *form*",
+  "bg": "white"
+}

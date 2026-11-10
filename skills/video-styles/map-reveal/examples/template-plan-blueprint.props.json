@@ -1,0 +1,20 @@
+{
+  "region": "egypt-nile",
+  "kind": "canal",
+  "path": [
+    "mediterranean",
+    "qattara"
+  ],
+  "labels": [
+    "Mediterranean",
+    "Qattara Depression"
+  ],
+  "label": "THE QATTARA CANAL",
+  "keyword": "canal",
+  "doneKeyword": "flood",
+  "headline": "A *NEW SEA* IN THE SAHARA",
+  "kicker": "THE PLAN",
+  "stat": 80,
+  "statSuffix": " KM",
+  "statCaption": "of canal"
+}

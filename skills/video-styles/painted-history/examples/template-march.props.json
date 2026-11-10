@@ -1,0 +1,14 @@
+{
+  "army": {
+    "faction": "bluecoat",
+    "name": "Grande Armee"
+  },
+  "direction": "right",
+  "keyword": "winter",
+  "weather": "snow",
+  "title": "The Long Retreat",
+  "place": "The road to Smolensk",
+  "date": "November 1812",
+  "sky": "winter",
+  "terrain": "snow"
+}

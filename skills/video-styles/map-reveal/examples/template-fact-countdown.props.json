@@ -1,0 +1,40 @@
+{
+  "region": "usa",
+  "title": "5 INSANE US FACTS",
+  "facts": [
+    {
+      "place": "death-valley",
+      "label": "Death Valley",
+      "keyword": "hottest",
+      "stat": 56.7,
+      "statSuffix": "°C",
+      "statCaption": "record heat"
+    },
+    {
+      "place": "great-lakes",
+      "label": "Great Lakes",
+      "keyword": "fresh",
+      "stat": 21,
+      "statSuffix": "%",
+      "statCaption": "of world's fresh water"
+    },
+    {
+      "place": "yellowstone",
+      "label": "Yellowstone",
+      "keyword": "supervolcano"
+    },
+    {
+      "place": "alaska",
+      "label": "Alaska",
+      "keyword": "coastline",
+      "sub": "MORE COAST THAN ALL OTHERS"
+    },
+    {
+      "place": "new-york",
+      "label": "New York",
+      "keyword": "languages",
+      "stat": 800,
+      "statCaption": "languages spoken"
+    }
+  ]
+}

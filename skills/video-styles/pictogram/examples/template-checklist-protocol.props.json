@@ -1,0 +1,33 @@
+{
+  "title": "THE PROTOCOL",
+  "steps": [
+    {
+      "text": "LOCK THE *DOOR*",
+      "icon": "door",
+      "keyword": "lock",
+      "pose": "stop"
+    },
+    {
+      "text": "CLOSE THE *CURTAINS*",
+      "icon": "window",
+      "keyword": "curtains",
+      "pose": "reach"
+    },
+    {
+      "text": "UNPLUG THE *PHONE*",
+      "icon": "phone",
+      "keyword": "unplug",
+      "pose": "hold"
+    },
+    {
+      "text": "DO NOT *LOOK* OUTSIDE",
+      "icon": "eye",
+      "keyword": "look",
+      "done": false,
+      "pose": "cover-eyes"
+    }
+  ],
+  "character": "you",
+  "stamp": "EVERY *NIGHT*",
+  "keyword": "night"
+}

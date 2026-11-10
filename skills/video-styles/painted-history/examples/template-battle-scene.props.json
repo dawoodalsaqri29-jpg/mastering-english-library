@@ -1,0 +1,18 @@
+{
+  "left": {
+    "faction": "redcoat",
+    "name": "British"
+  },
+  "right": {
+    "faction": "bluecoat",
+    "name": "French"
+  },
+  "attacker": "right",
+  "action": "charge",
+  "keyword": "charged",
+  "title": "The French Charged",
+  "place": "Waterloo",
+  "date": "18 June 1815",
+  "sky": "golden",
+  "terrain": "fields"
+}
