@@ -1,0 +1,255 @@
+[
+ {
+  "style": "stick-figure",
+  "template": "title-card",
+  "props": {
+   "kicker": "Step 4, right now",
+   "title": "Quick *quiz*",
+   "subtitle": "(test yourself, remember?)",
+   "character": "juno",
+   "pose": "point",
+   "doodles": [
+    "question",
+    "trophy",
+    "brain"
+   ]
+  },
+  "say": "Before you go, let us do step four together. A quick quiz. Five questions. Answer out loud before I do.",
+  "ar": "قبل أن تذهب، لنطبّق الخطوة الرابعة معًا. اختبار سريع. خمسة أسئلة. أجب بصوت عالٍ قبل أن أجيب أنا."
+ },
+ {
+  "style": "cartoon",
+  "template": "compare-two",
+  "props": {
+   "location": "stage",
+   "left": {
+    "character": "leo",
+    "label": "cow",
+    "points": [
+     "Old English"
+    ],
+    "word": "cow",
+    "prop": "key"
+   },
+   "right": {
+    "character": "maya",
+    "label": "beef",
+    "points": [
+     "French"
+    ],
+    "word": "beef",
+    "prop": "house"
+   },
+   "verdict": "right",
+   "word": "French"
+  },
+  "say": "Question one. Cow and beef. Which one came from French? It is beef. The farmers said cow. The lords at the table said beef.",
+  "ar": "السؤال الأول. cow وbeef. أيهما جاءت من الفرنسية؟ إنها beef. المزارعون قالوا cow. والأسياد على المائدة قالوا beef."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "face-worried",
+   "label": "*nice* = foolish",
+   "caption": "around the year 1300",
+   "keyword": "foolish",
+   "accents": [
+    "question-mark"
+   ]
+  },
+  "say": "Question two. What did nice mean in the year thirteen hundred? It meant foolish. From the Latin nescius, not knowing.",
+  "ar": "السؤال الثاني. ماذا كانت تعني nice في عام 1300؟ كانت تعني أحمق. من اللاتينية nescius، أي «لا يعرف»."
+ },
+ {
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "Which letter in ISLAND is a mistake?",
+   "reveal": "The S!",
+   "keyword": "letter",
+   "character": "nova",
+   "background": "space",
+   "revealBackground": "focus",
+   "palette": "red",
+   "sfx": "OOPS!"
+  },
+  "say": "Question three. Which letter in the word island was added by mistake? The letter s. Scholars wrongly linked the word to Latin.",
+  "ar": "السؤال الثالث. أي حرف في كلمة island أُضيف بالخطأ؟ حرف s. ربط العلماء الكلمة باللاتينية خطأً."
+ },
+ {
+  "style": "pixel-quest",
+  "template": "quest-log",
+  "props": {
+   "title": "Question Four",
+   "quests": [
+    {
+     "title": "port means... to carry",
+     "keyword": "carry"
+    },
+    {
+     "title": "transport, export, import",
+     "keyword": "transport"
+    },
+    {
+     "title": "portable, support",
+     "keyword": "portable"
+    }
+   ]
+  },
+  "say": "Question four. What does the root port mean? It means to carry. Transport, export, import, portable and support.",
+  "ar": "السؤال الرابع. ماذا يعني الجذر port؟ يعني «يحمل». transport وexport وimport وportable وsupport."
+ },
+ {
+  "style": "flat-vector",
+  "template": "cause-effect",
+  "props": {
+   "title": "Question five",
+   "steps": [
+    {
+     "illus": "sprout",
+     "label": "1 day"
+    },
+    {
+     "illus": "flower",
+     "label": "3 days"
+    },
+    {
+     "illus": "tree",
+     "label": "1 week"
+    },
+    {
+     "illus": "mountain",
+     "label": "1 month"
+    }
+   ],
+   "world": "dusk"
+  },
+  "say": "And question five. When should you review a new word? After one day, three days, one week, and one month. If you got three or more, well done. You are already using the method.",
+  "ar": "والسؤال الخامس. متى تراجع الكلمة الجديدة؟ بعد يوم، وثلاثة أيام، وأسبوع، وشهر. إن أصبت في ثلاثة أو أكثر فأحسنت. أنت تطبّق الطريقة فعلًا."
+ },
+ {
+  "style": "pictogram",
+  "template": "checklist-protocol",
+  "props": {
+   "title": "MISTAKES TO AVOID",
+   "steps": [
+    {
+     "text": "LONG *LISTS*, NO CONTEXT",
+     "icon": "envelope",
+     "keyword": "lists",
+     "pose": "stop",
+     "done": false
+    },
+    {
+     "text": "ONLY *TRANSLATING*",
+     "icon": "phone",
+     "keyword": "translate",
+     "pose": "stop",
+     "done": false
+    },
+    {
+     "text": "NEVER *REVIEWING*",
+     "icon": "clock",
+     "keyword": "reviewing",
+     "pose": "shrug",
+     "done": false
+    }
+   ],
+   "character": "you"
+  },
+  "say": "Before we finish, three mistakes to avoid. Do not memorise long lists with no context. Do not only translate. And never learn a word once and walk away without reviewing it.",
+  "ar": "قبل أن ننهي، ثلاثة أخطاء تجنّبها. لا تحفظ قوائم طويلة بلا سياق. لا تكتفِ بالترجمة. ولا تتعلم كلمة مرة واحدة ثم تتركها دون مراجعة."
+ },
+ {
+  "style": "storybook",
+  "template": "winding-path",
+  "props": {
+   "title": "The road of English",
+   "character": "wren",
+   "stops": [
+    {
+     "date": "450",
+     "label": "Old English: the *heart*",
+     "keyword": "heart"
+    },
+    {
+     "date": "1066",
+     "label": "French: the power",
+     "keyword": "power"
+    },
+    {
+     "date": "1500",
+     "label": "Latin and Greek: the science",
+     "keyword": "science"
+    },
+    {
+     "date": "Today",
+     "label": "Your turn",
+     "keyword": "turn"
+    }
+   ]
+  },
+  "say": "Let us look back at the road. Old English gave the language its heart. French gave it power. Latin and Greek gave it science. The whole world gave it colour. And today, it is your turn to add to the story.",
+  "ar": "لننظر إلى الطريق خلفنا. الإنجليزية القديمة أعطت اللغة قلبها. الفرنسية أعطتها السلطة. اللاتينية واليونانية أعطتاها العلم. والعالم كله أعطاها الألوان. واليوم جاء دورك لتضيف إلى القصة."
+ },
+ {
+  "style": "comic-book",
+  "template": "caption-narration",
+  "props": {
+   "label": "Remember...",
+   "background": "city",
+   "mood": "night",
+   "weather": "rain",
+   "character": "vex",
+   "shot": "silhouette",
+   "captions": [
+    {
+     "text": "Every word you learn was carried here by someone."
+    },
+    {
+     "text": "Now you carry it forward."
+    }
+   ]
+  },
+  "say": "Every word you learn was carried to you by someone. A farmer, a sailor, a scholar, a poet. When you learn it, you become part of that chain.",
+  "ar": "كل كلمة تتعلمها حملها إليك إنسان. مزارع، أو بحّار، أو عالم، أو شاعر. وحين تتعلمها تصبح أنت حلقة في تلك السلسلة."
+ },
+ {
+  "style": "anime",
+  "template": "lesson-board",
+  "props": {
+   "character": "yuki",
+   "title": "Your homework",
+   "points": [
+    {
+     "text": "Pick *one* word today",
+     "word": "one"
+    },
+    {
+     "text": "Find its *story*",
+     "word": "story"
+    },
+    {
+     "text": "Write it in the *comments*",
+     "word": "comments"
+    }
+   ]
+  },
+  "say": "So here is your homework. Pick one English word today. Find its story. And write it in the comments, with a sentence of your own.",
+  "ar": "وهذا واجبك. اختر كلمة إنجليزية واحدة اليوم. ابحث عن قصتها. واكتبها في التعليقات، مع جملة من عندك."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "paper-quote",
+  "props": {
+   "quote": "A word with a *story* is a word you keep.",
+   "author": "Mastering English Library",
+   "role": "",
+   "keyword": "story",
+   "backdrop": "cork"
+  },
+  "say": "A word with a story is a word you keep. If this video helped you, subscribe to Mastering English Library, and I will see you in the next one.",
+  "ar": "الكلمة التي لها قصة كلمة تبقى معك. إن أفادك هذا الفيديو فاشترك في القناة، وأراك في الفيديو القادم."
+ }
+]

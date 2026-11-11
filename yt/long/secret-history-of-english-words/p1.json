@@ -1,0 +1,514 @@
+[
+ {
+  "style": "comic-book",
+  "template": "splash-title",
+  "props": {
+   "title": "Every Word Has a Secret",
+   "subtitle": "The hidden history of English",
+   "issue": "No. 1",
+   "keyword": "insult",
+   "character": "ace",
+   "pose": "hips",
+   "expression": "grin",
+   "background": "action",
+   "palette": "red",
+   "sfx": "WHAT?!"
+  },
+  "say": "The word nice was once an insult. The word girl once meant a boy as well. And the letter b in debt was added on purpose, by scholars who wanted English to look more like Latin.",
+  "ar": "كلمة nice كانت يومًا إهانة. وكلمة girl كانت تُطلق على الولد أيضًا. وحرف b في كلمة debt أضافه علماء عمدًا، ليجعلوا الإنجليزية تشبه اللاتينية."
+ },
+ {
+  "style": "stick-figure",
+  "template": "title-card",
+  "props": {
+   "kicker": "The question",
+   "title": "Why is English so *strange*?",
+   "subtitle": "(it has reasons)",
+   "character": "pip",
+   "pose": "think",
+   "doodles": [
+    "question",
+    "book",
+    "brain"
+   ]
+  },
+  "say": "English can look like a language with no rules. But it is not random. Every strange spelling and every odd word is a fossil, and each fossil tells a story.",
+  "ar": "قد تبدو الإنجليزية لغة بلا قواعد. لكنها ليست عشوائية. كل تهجئة غريبة وكل كلمة عجيبة هي أحفورة، وكل أحفورة تحكي قصة."
+ },
+ {
+  "style": "flat-vector",
+  "template": "title-landscape",
+  "props": {
+   "title": "The Secret History of Your *Words*",
+   "subtitle": "and the best way to learn them",
+   "kicker": "Mastering English Library",
+   "setting": "meadow",
+   "creature": "pip",
+   "hero": "house"
+  },
+  "say": "In the next twenty five minutes, we will dig up those fossils. Where your words came from, why they look the way they do, and how their stories can help you remember them for life.",
+  "ar": "في الخمس والعشرين دقيقة القادمة سنستخرج هذه الأحافير. من أين جاءت كلماتك، ولماذا تُكتب هكذا، وكيف تساعدك قصصها على تذكّرها مدى الحياة."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "list-with-doodles",
+  "props": {
+   "title": "In this video",
+   "items": [
+    {
+     "text": "Where words come from",
+     "doodle": "globe"
+    },
+    {
+     "text": "Why spelling is strange",
+     "doodle": "question-mark"
+    },
+    {
+     "text": "How to learn any word",
+     "doodle": "lightbulb"
+    }
+   ],
+   "check": true
+  },
+  "say": "First, where English words come from. Second, why the spelling is so strange. And third, a four step method to learn any word. Stay for step four, because almost nobody does it.",
+  "ar": "أولًا: من أين تأتي الكلمات الإنجليزية. ثانيًا: لماذا التهجئة غريبة هكذا. وثالثًا: طريقة من أربع خطوات لتعلّم أي كلمة. ابقَ حتى الخطوة الرابعة، فلا يكاد أحد يطبّقها."
+ },
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "Chapter One",
+   "title": "Three Languages in One",
+   "subtitle": "Old English, French and Latin",
+   "date": "450 - 1500",
+   "place": "England",
+   "subject": "landscape",
+   "tone": "sepia",
+   "keyword": "three"
+  },
+  "say": "Chapter one. Three languages in one. English is not really one language. It is at least three, stacked on top of each other like layers of rock.",
+  "ar": "الفصل الأول. ثلاث لغات في لغة واحدة. الإنجليزية ليست لغة واحدة في الحقيقة. إنها ثلاث لغات على الأقل، بعضها فوق بعض كطبقات الصخر."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "timeline",
+  "props": {
+   "title": "Three layers",
+   "events": [
+    {
+     "date": "450",
+     "label": "Old English arrives",
+     "doodle": "stick-wave"
+    },
+    {
+     "date": "1066",
+     "label": "French arrives",
+     "doodle": "crown"
+    },
+    {
+     "date": "1500",
+     "label": "Latin and Greek pour in",
+     "doodle": "book"
+    }
+   ]
+  },
+  "say": "The first layer is Old English, brought by the Anglo-Saxons from about the year four fifty. The second is French, which arrived with the Norman conquest in ten sixty six. The third is Latin and Greek, which poured in during the Renaissance, when scholars needed new words for new ideas.",
+  "ar": "الطبقة الأولى هي الإنجليزية القديمة، وجاء بها الأنجلوسكسون منذ نحو عام 450. الثانية هي الفرنسية، وقد وصلت مع الغزو النورماندي عام 1066. والثالثة هي اللاتينية واليونانية، وتدفقتا في عصر النهضة حين احتاج العلماء كلمات جديدة لأفكار جديدة."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "stack-of-facts",
+  "props": {
+   "title": "The oldest layer",
+   "facts": [
+    {
+     "big": "1",
+     "text": "*house*, bread, water",
+     "keyword": "house"
+    },
+    {
+     "big": "2",
+     "text": "*mother*, father, child",
+     "keyword": "mother"
+    },
+    {
+     "big": "3",
+     "text": "*eat*, drink, sleep",
+     "keyword": "eat"
+    }
+   ]
+  },
+  "say": "The oldest layer gives you the words closest to your heart and your home. House, bread and water. Mother, father and child. Eat, drink and sleep. They are short, strong and simple.",
+  "ar": "أقدم طبقة تعطيك الكلمات الأقرب إلى قلبك وبيتك. بيت وخبز وماء. أم وأب وطفل. أكل وشرب ونوم. كلمات قصيرة وقوية وبسيطة."
+ },
+ {
+  "style": "flat-vector",
+  "template": "big-number-world",
+  "props": {
+   "value": 100,
+   "suffix": "",
+   "decimals": 0,
+   "label": "most common words: almost all *Old English*",
+   "illus": "earth",
+   "orbiters": [
+    "moon",
+    "satellite"
+   ],
+   "world": "space"
+  },
+  "say": "In fact, the one hundred most common words in English are almost all from Old English. Words like the, and, you, have and good. You cannot build a single sentence without them.",
+  "ar": "بل إن أكثر مئة كلمة شيوعًا في الإنجليزية تكاد كلها تكون من الإنجليزية القديمة. كلمات مثل the وand وyou وhave وgood. لا تستطيع بناء جملة واحدة بدونها."
+ },
+ {
+  "style": "painted-history",
+  "template": "title-banner",
+  "props": {
+   "title": "Then Came the Normans",
+   "chapter": "1066",
+   "subtitle": "A French-speaking king takes the throne",
+   "keyword": "conquered",
+   "place": "Hastings",
+   "date": "1066",
+   "left": {
+    "faction": "knight"
+   },
+   "right": {
+    "faction": "viking"
+   },
+   "sky": "dawn",
+   "terrain": "hills"
+  },
+  "say": "Then, in ten sixty six, William of Normandy conquered England. For about three hundred years, the kings, the judges and the nobles spoke French, while ordinary people kept speaking English.",
+  "ar": "ثم في عام 1066 غزا وليام النورماندي إنجلترا. ولنحو ثلاثمئة عام تكلّم الملوك والقضاة والنبلاء الفرنسية، بينما ظل عامة الناس يتكلمون الإنجليزية."
+ },
+ {
+  "style": "cartoon",
+  "template": "compare-two",
+  "props": {
+   "location": "stage",
+   "left": {
+    "character": "sam",
+    "label": "In the field",
+    "points": [
+     "cow",
+     "pig",
+     "sheep"
+    ],
+    "word": "cow",
+    "prop": "key"
+   },
+   "right": {
+    "character": "priya",
+    "label": "On the table",
+    "points": [
+     "beef",
+     "pork",
+     "mutton"
+    ],
+    "word": "beef",
+    "prop": "house"
+   },
+   "verdict": "right",
+   "word": "table"
+  },
+  "say": "You can still taste that history. The animals in the field kept their English names: cow, pig and sheep. But on the lord's table, the meat took French names: beef, pork and mutton.",
+  "ar": "وما زلت تتذوق هذا التاريخ. الحيوانات في الحقل احتفظت بأسمائها الإنجليزية: cow وpig وsheep. أما على مائدة السيد فأخذ اللحم أسماء فرنسية: beef وpork وmutton."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Words of Power",
+   "date": "After 1066",
+   "subject": "Borrowed from French",
+   "body": "Government. Court. Judge. Jury. Army. Soldier. Prison. Tax. Crown. Parliament.",
+   "classification": "Etymology",
+   "stamp": "From French",
+   "stampColor": "red",
+   "keyword": "government"
+  },
+  "say": "French gave English its words of power. Government, court, judge and jury. Army and soldier. Prison, tax, crown and parliament. If a word sounds official, there is a good chance it came from French.",
+  "ar": "أعطت الفرنسيةُ الإنجليزيةَ كلمات السلطة. الحكومة والمحكمة والقاضي وهيئة المحلفين. الجيش والجندي. السجن والضريبة والتاج والبرلمان. إذا بدت الكلمة رسمية، فالأرجح أنها جاءت من الفرنسية."
+ },
+ {
+  "style": "anime",
+  "template": "lesson-board",
+  "props": {
+   "character": "ren",
+   "title": "One idea, three words",
+   "points": [
+    {
+     "text": "*kingly*: Old English",
+     "word": "kingly"
+    },
+    {
+     "text": "*royal*: French",
+     "word": "royal"
+    },
+    {
+     "text": "*regal*: Latin",
+     "word": "regal"
+    }
+   ]
+  },
+  "say": "And this is where English becomes rich. Very often, it kept all three layers for the same idea. Kingly is Old English. Royal is French. Regal is Latin. Three words, one meaning, three different feelings.",
+  "ar": "وهنا تصبح الإنجليزية غنية. كثيرًا ما احتفظت بالطبقات الثلاث للفكرة نفسها. kingly من الإنجليزية القديمة. royal من الفرنسية. regal من اللاتينية. ثلاث كلمات، معنى واحد، وثلاثة إحساسات مختلفة."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "process-flow",
+  "props": {
+   "title": "From friendly to formal",
+   "steps": [
+    {
+     "label": "ask",
+     "doodle": "speech-bubble"
+    },
+    {
+     "label": "question",
+     "doodle": "question-mark"
+    },
+    {
+     "label": "interrogate",
+     "doodle": "magnifier"
+    }
+   ]
+  },
+  "say": "Here is another one. To ask is Old English, and it feels friendly. To question is French, and it feels more serious. To interrogate is Latin, and it sounds like a police station.",
+  "ar": "وهذا مثال آخر. ask من الإنجليزية القديمة، وتبدو ودّية. question من الفرنسية، وتبدو أكثر جدية. interrogate من اللاتينية، وكأنك في مركز شرطة."
+ },
+ {
+  "style": "stick-figure",
+  "template": "versus",
+  "props": {
+   "left": {
+    "label": "Old English",
+    "doodle": "heart",
+    "character": "juno",
+    "points": [
+     "short",
+     "warm and direct"
+    ]
+   },
+   "right": {
+    "label": "Latin",
+    "doodle": "book",
+    "character": "hank",
+    "points": [
+     "long",
+     "formal and clever"
+    ]
+   },
+   "verdict": "Verdict: use both, on purpose.",
+   "winner": "left"
+  },
+  "say": "So here is your first lesson as a learner. Short Old English words sound warm and direct. Long Latin words sound formal and clever. Good speakers choose between them on purpose.",
+  "ar": "وهذا أول درس لك كمتعلّم. الكلمات القصيرة من الإنجليزية القديمة تبدو دافئة ومباشرة. والكلمات الطويلة اللاتينية تبدو رسمية وذكية. والمتحدث الجيد يختار بينهما عن قصد."
+ },
+ {
+  "style": "pictogram",
+  "template": "do-dont",
+  "props": {
+   "title": "TALKING TO A *FRIEND*",
+   "do": {
+    "text": "SAY *HELP*",
+    "character": "you",
+    "pose": "wave",
+    "object": "phone"
+   },
+   "dont": {
+    "text": "SAY *ASSIST*",
+    "character": "you",
+    "pose": "stop",
+    "object": "phone",
+    "accent": true
+   },
+   "verdict": "SAVE IT FOR *EMAILS*",
+   "verdictKeyword": "email"
+  },
+  "say": "With a friend, say help, start and buy. In a formal email, you can say assist, commence and purchase. Same meanings, different layers. Now you know why English has so many synonyms.",
+  "ar": "مع صديقك قل help وstart وbuy. وفي بريد رسمي يمكنك أن تقول assist وcommence وpurchase. المعاني نفسها، والطبقات مختلفة. الآن عرفت لماذا في الإنجليزية مترادفات كثيرة."
+ },
+ {
+  "style": "flat-vector",
+  "template": "pillar-chart",
+  "props": {
+   "title": "Where English words come *from*",
+   "bars": [
+    {
+     "label": "Latin",
+     "value": 28
+    },
+    {
+     "label": "French",
+     "value": 28
+    },
+    {
+     "label": "Germanic",
+     "value": 25
+    },
+    {
+     "label": "Greek",
+     "value": 5
+    },
+    {
+     "label": "Other",
+     "value": 14
+    }
+   ],
+   "unit": "%",
+   "world": "studio"
+  },
+  "say": "One well known survey of the dictionary found that more than half of English words come from French and Latin, about a quarter from the Germanic family, and the rest from Greek and many other languages.",
+  "ar": "وجد مسح معروف للقاموس أن أكثر من نصف الكلمات الإنجليزية جاء من الفرنسية واللاتينية، ونحو الربع من الأسرة الجرمانية، والباقي من اليونانية ولغات أخرى كثيرة."
+ },
+ {
+  "style": "doodle-world",
+  "template": "headline-thumb",
+  "props": {
+   "location": "savanna",
+   "character": "og",
+   "headline": "A *FOURTH* LAYER",
+   "keyword": "Vikings",
+   "kicker": "wait",
+   "reaction": "hot",
+   "setup": "neutral",
+   "setupPose": "look-around",
+   "animal": "camel"
+  },
+  "say": "And there is a fourth layer, hiding inside the first. From the seven hundreds, Vikings from Scandinavia raided England, and then settled there. Their language, Old Norse, mixed with Old English.",
+  "ar": "وهناك طبقة رابعة مختبئة داخل الأولى. منذ القرن الثامن أغار الفايكنغ من إسكندنافيا على إنجلترا، ثم استقروا فيها. واختلطت لغتهم، النوردية القديمة، بالإنجليزية القديمة."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "paper-list",
+  "props": {
+   "title": "Gifts from the Vikings",
+   "board": "cork",
+   "items": [
+    {
+     "text": "*sky*, egg, knife",
+     "keyword": "sky"
+    },
+    {
+     "text": "*window* = wind-eye",
+     "keyword": "window"
+    },
+    {
+     "text": "*they*, them, their",
+     "keyword": "they"
+    }
+   ]
+  },
+  "say": "The Vikings gave English sky, egg and knife. They gave it window, which meant wind eye, a hole in the roof for the smoke. They even gave it the words they, them and their.",
+  "ar": "أعطى الفايكنغ الإنجليزية sky وegg وknife. وأعطوها window، وكان معناها «عين الريح»، فتحة في السقف للدخان. بل أعطوها حتى الكلمات they وthem وtheir."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "before-after",
+  "props": {
+   "before": {
+    "label": "shirt",
+    "doodle": "stick-wave",
+    "note": "Old English"
+   },
+   "after": {
+    "label": "skirt",
+    "doodle": "stick-run",
+    "note": "Old Norse"
+   },
+   "beforeTitle": "English",
+   "afterTitle": "Viking"
+  },
+  "say": "Sometimes English kept both versions. Shirt is the Old English word. Skirt is its Old Norse cousin. They began as the same word, and ended up as two different pieces of clothing.",
+  "ar": "وأحيانًا احتفظت الإنجليزية بالنسختين. shirt هي الكلمة الإنجليزية القديمة. وskirt قريبتها النوردية. بدأتا كلمة واحدة، وانتهتا قطعتين مختلفتين من الملابس."
+ },
+ {
+  "style": "archival-doc",
+  "template": "letter-excerpt",
+  "props": {
+   "quote": "This is my last will and testament.",
+   "salutation": "To whom it may concern,",
+   "signoff": "Signed,",
+   "signature": "A. Lawyer",
+   "author": "A legal formula",
+   "role": "English word, then Latin word",
+   "date": "Still used today",
+   "place": "England"
+  },
+  "say": "You can even see the layers side by side in legal English. Lawyers still write last will and testament. Will is the Old English word. Testament is the Latin one. Two words, one meaning, sitting together for centuries.",
+  "ar": "وترى الطبقات جنبًا إلى جنب في الإنجليزية القانونية. ما زال المحامون يكتبون last will and testament. كلمة will من الإنجليزية القديمة. وtestament من اللاتينية. كلمتان بمعنى واحد، متجاورتان منذ قرون."
+ },
+ {
+  "style": "flat-vector",
+  "template": "timeline-orbit",
+  "props": {
+   "title": "New words for *new* ideas",
+   "center": "earth",
+   "events": [
+    {
+     "year": "1500s",
+     "label": "education",
+     "illus": "brain"
+    },
+    {
+     "year": "1500s",
+     "label": "skeleton",
+     "illus": "body"
+    },
+    {
+     "year": "1600s",
+     "label": "atmosphere",
+     "illus": "cloud"
+    },
+    {
+     "year": "1600s",
+     "label": "thermometer",
+     "illus": "sun"
+    }
+   ]
+  },
+  "say": "And during the Renaissance, thousands of learned words arrived from Latin and Greek. Education. Skeleton. Atmosphere. Thermometer. When science needed a new name, it almost always went to these two languages.",
+  "ar": "وفي عصر النهضة وصلت آلاف الكلمات العلمية من اللاتينية واليونانية. education وskeleton وatmosphere وthermometer. كلما احتاج العلم اسمًا جديدًا، ذهب غالبًا إلى هاتين اللغتين."
+ },
+ {
+  "style": "isometric",
+  "template": "town-signs",
+  "props": {
+   "signs": [
+    {
+     "text": "170,000 words in use",
+     "keyword": "thousand"
+    },
+    {
+     "text": "You need a fraction",
+     "keyword": "fraction"
+    },
+    {
+     "text": "Learn the layers",
+     "keyword": "layers"
+    }
+   ],
+   "theme": "dusk"
+  },
+  "say": "Add all these layers together, and you get a giant. The Oxford English Dictionary lists about one hundred and seventy thousand words in current use. The good news is that you only need a small fraction of them, and the layers tell you which ones to choose.",
+  "ar": "اجمع هذه الطبقات كلها وستحصل على لغة عملاقة. يسجّل قاموس أكسفورد نحو مئة وسبعين ألف كلمة مستخدمة حاليًا. والخبر السار أنك تحتاج جزءًا صغيرًا منها فقط، والطبقات تدلّك على ما تختاره."
+ },
+ {
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "But three languages were only the beginning...",
+   "reveal": "Hundreds more!",
+   "keyword": "hundreds",
+   "character": "nova",
+   "background": "space",
+   "revealBackground": "focus",
+   "palette": "red",
+   "sfx": "BOOM!"
+  },
+  "say": "But three languages were only the beginning. Because English did something unusual. Wherever it travelled, it collected words, from hundreds of other languages. And some of them came from very close to home.",
+  "ar": "لكن اللغات الثلاث كانت البداية فقط. فالإنجليزية فعلت شيئًا غير مألوف. أينما سافرت جمعت كلمات، من مئات اللغات الأخرى. وبعضها جاء من مكان قريب منك جدًا."
+ }
+]

@@ -1,0 +1,515 @@
+[
+ {
+  "style": "map-reveal",
+  "template": "headline-title",
+  "props": {
+   "region": "world",
+   "headline": "WORDS THAT *TRAVELLED*",
+   "sub": "A LANGUAGE THAT COLLECTS",
+   "kicker": "CHAPTER 2",
+   "keyword": "travelled",
+   "place": "london",
+   "color": "red"
+  },
+  "say": "Chapter two. Words that travelled. English is a collector. Sailors, traders, soldiers and scientists carried words home from every corner of the world.",
+  "ar": "الفصل الثاني. كلمات سافرت. الإنجليزية لغة تجمع. بحّارة وتجار وجنود وعلماء حملوا إليها كلمات من كل أنحاء العالم."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "collage-title",
+  "props": {
+   "title": "The Arabic Connection",
+   "subtitle": "Words you already know",
+   "kicker": "Stop one",
+   "character": "pip",
+   "backdrop": "kraft"
+  },
+  "say": "Our first stop is Arabic. During the Middle Ages, Arabic was a great language of science, medicine and trade, and Europe borrowed its knowledge, and its words.",
+  "ar": "محطتنا الأولى هي العربية. في العصور الوسطى كانت العربية لغة عظيمة للعلم والطب والتجارة، واقتبست أوروبا معارفها، وكلماتها."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "book",
+   "label": "*algebra* = al-jabr",
+   "caption": "from a book by al-Khwarizmi",
+   "keyword": "algebra",
+   "accents": [
+    "star",
+    "exclamation"
+   ]
+  },
+  "say": "Algebra comes from al jabr, a word in the title of a famous book by the mathematician al Khwarizmi, written in Baghdad in the ninth century. His own name gave us another word: algorithm.",
+  "ar": "كلمة algebra من «الجبر»، وهي كلمة في عنوان كتاب مشهور للرياضي الخوارزمي، ألّفه في بغداد في القرن التاسع. واسمه هو أعطانا كلمة أخرى: algorithm."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "paper-list",
+  "props": {
+   "title": "From Arabic to English",
+   "board": "cork",
+   "items": [
+    {
+     "text": "*zero* from sifr",
+     "keyword": "zero"
+    },
+    {
+     "text": "*sugar* from sukkar",
+     "keyword": "sugar"
+    },
+    {
+     "text": "*cotton* from qutn",
+     "keyword": "cotton"
+    },
+    {
+     "text": "*magazine* from makhazin",
+     "keyword": "magazine"
+    }
+   ]
+  },
+  "say": "Zero comes from sifr, which means empty. Sugar comes from sukkar. Cotton comes from qutn. And magazine comes from makhazin, which means storehouses. A magazine was first a storehouse, and later, a storehouse of information.",
+  "ar": "zero من «صِفر». وsugar من «سُكّر». وcotton من «قُطن». وmagazine من «مخازن». كانت الكلمة تعني المخزن أولًا، ثم صارت مخزنًا للمعلومات."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "THE JOURNEY OF COFFEE",
+   "stops": [
+    {
+     "place": "istanbul",
+     "label": "Turkish: kahve",
+     "keyword": "Turkish"
+    },
+    {
+     "place": "italy",
+     "label": "Italian: caffe",
+     "keyword": "Italian"
+    },
+    {
+     "place": "london",
+     "label": "English: coffee",
+     "keyword": "English"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "red",
+   "keyword": "journeys",
+   "headline": "ONE WORD, *FOUR* LANGUAGES"
+  },
+  "say": "Some words made long journeys. Coffee began as the Arabic qahwa. In Turkish it became kahve. In Italian, caffe. And finally, in English, coffee. One word, four languages, and you drink it every morning.",
+  "ar": "بعض الكلمات قطعت رحلات طويلة. coffee بدأت بالكلمة العربية «قهوة». وفي التركية صارت kahve. وفي الإيطالية caffe. وأخيرًا في الإنجليزية coffee. كلمة واحدة، أربع لغات، وتشربها كل صباح."
+ },
+ {
+  "style": "anime",
+  "template": "dramatic-reveal",
+  "props": {
+   "character": "hikari",
+   "location": "night-city",
+   "reveal": "You already know *dozens*!",
+   "word": "dozens",
+   "reaction": "shocked"
+  },
+  "say": "So if you are an Arabic speaker, here is some good news. You already know dozens of English words. You just did not know that you knew them.",
+  "ar": "فإن كنت تتكلم العربية، فهذا خبر سار. أنت تعرف أصلًا عشرات الكلمات الإنجليزية. فقط لم تكن تعرف أنك تعرفها."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "india",
+   "place": "delhi",
+   "headline": "WORDS FROM *INDIA*",
+   "keyword": "India",
+   "label": "India",
+   "sub": "HINDI AND URDU",
+   "kicker": "STOP TWO",
+   "color": "red"
+  },
+  "say": "Our second stop is India. When British traders and soldiers lived there, they borrowed words from Hindi and Urdu for things they had never seen before.",
+  "ar": "محطتنا الثانية هي الهند. حين عاش التجار والجنود البريطانيون هناك، اقتبسوا كلمات من الهندية والأردية لأشياء لم يروها من قبل."
+ },
+ {
+  "style": "cartoon",
+  "template": "explain-with-board",
+  "props": {
+   "character": "priya",
+   "location": "classroom",
+   "title": "From Hindi and Urdu",
+   "mode": "list",
+   "items": [
+    "*shampoo*: to press",
+    "*jungle*: wild land",
+    "*bungalow*: Bengal-style house"
+   ],
+   "expression": "happy"
+  },
+  "say": "Shampoo comes from a word that meant to press, or to massage. Jungle comes from jangal, wild land. And a bungalow was a house in the Bengal style. Pyjamas and loot came the same way.",
+  "ar": "shampoo من كلمة تعني الضغط أو التدليك. وjungle من «جنگل» أي الأرض البرية. وbungalow كان بيتًا على الطراز البنغالي. وكلمتا pyjamas وloot جاءتا بالطريقة نفسها."
+ },
+ {
+  "style": "flat-vector",
+  "template": "cause-effect",
+  "props": {
+   "title": "A word crosses the ocean",
+   "steps": [
+    {
+     "illus": "sprout",
+     "label": "Nahuatl"
+    },
+    {
+     "illus": "wave",
+     "label": "Spanish"
+    },
+    {
+     "illus": "city",
+     "label": "English"
+    }
+   ],
+   "world": "ocean"
+  },
+  "say": "From the Americas came chocolate and tomato. Both started in Nahuatl, the language of the Aztecs, passed through Spanish, and then sailed into English.",
+  "ar": "ومن الأمريكتين جاءت chocolate وtomato. كلتاهما بدأت في لغة الناواتل، لغة الأزتك، ثم مرّت بالإسبانية، ثم أبحرت إلى الإنجليزية."
+ },
+ {
+  "style": "pixel-quest",
+  "template": "world-map",
+  "props": {
+   "title": "The Word Map",
+   "nodes": [
+    {
+     "label": "Tea",
+     "sublabel": "from Chinese",
+     "keyword": "tea"
+    },
+    {
+     "label": "Piano",
+     "sublabel": "from Italian",
+     "keyword": "piano"
+    },
+    {
+     "label": "Kindergarten",
+     "sublabel": "German: children's garden",
+     "keyword": "kindergarten"
+    },
+    {
+     "label": "Tsunami",
+     "sublabel": "Japanese: harbour wave",
+     "keyword": "tsunami"
+    }
+   ]
+  },
+  "say": "Tea comes from Chinese. Piano comes from Italian. Kindergarten is German, and means children's garden. And tsunami is Japanese for harbour wave. English kept them all.",
+  "ar": "tea من الصينية. وpiano من الإيطالية. وkindergarten ألمانية، ومعناها حديقة الأطفال. وtsunami يابانية، ومعناها موجة الميناء. والإنجليزية احتفظت بها كلها."
+ },
+ {
+  "style": "comic-book",
+  "template": "dialogue-panels",
+  "props": {
+   "left": "pip",
+   "right": "nova",
+   "setting": "lab",
+   "lines": [
+    {
+     "speaker": "left",
+     "text": "Where does *robot* come from? Japan?",
+     "kind": "speech",
+     "expression": "think"
+    },
+    {
+     "speaker": "right",
+     "text": "No! From a Czech play, written in 1920.",
+     "kind": "speech",
+     "expression": "happy"
+    },
+    {
+     "speaker": "left",
+     "text": "A PLAY?!",
+     "kind": "shout",
+     "expression": "shock",
+     "reaction": "grin"
+    }
+   ]
+  },
+  "say": "Where does robot come from? Japan? No. It comes from a Czech play, written in nineteen twenty. It was made from robota, a word for forced labour.",
+  "ar": "من أين جاءت كلمة robot؟ من اليابان؟ لا. جاءت من مسرحية تشيكية كُتبت عام 1920. وهي مأخوذة من robota، كلمة تعني العمل القسري."
+ },
+ {
+  "style": "stick-figure",
+  "template": "figure-explains",
+  "props": {
+   "character": "pip",
+   "title": "Words from *names*",
+   "doodle": "person",
+   "label": "the Earl of Sandwich",
+   "notes": [
+    "1760s",
+    "ate at the card table"
+   ],
+   "says": "Fame. Sort of.",
+   "keyword": "names"
+  },
+  "say": "Some words even come from people's names. The sandwich is named after the Earl of Sandwich, in the seventeen sixties. The story says he wanted to eat without leaving the card table.",
+  "ar": "وبعض الكلمات جاءت من أسماء أشخاص. الـsandwich سُمّي على إيرل ساندويتش، في ستينيات القرن الثامن عشر. وتقول الحكاية إنه أراد أن يأكل دون أن يترك طاولة اللعب."
+ },
+ {
+  "style": "archival-doc",
+  "template": "newspaper-headline",
+  "props": {
+   "paper": "The Word Gazette",
+   "date": "1880",
+   "headline": "Captain Boycott Is Shut Out",
+   "subhead": "Workers and shopkeepers in Ireland refuse to deal with the land agent",
+   "kicker": "Ireland",
+   "subject": "crowd",
+   "caption": "A name becomes a verb",
+   "price": "One Penny",
+   "tone": "silver",
+   "keyword": "Boycott"
+  },
+  "say": "And in eighteen eighty, in Ireland, a land agent named Captain Charles Boycott was shut out by his whole community. Nobody would work for him or sell to him. Within weeks, his name had become a verb.",
+  "ar": "وفي عام 1880 في أيرلندا، قاطع أهل المنطقة كلهم وكيل أراضٍ اسمه الكابتن تشارلز بويكوت. لم يعمل له أحد ولم يبعه أحد. وخلال أسابيع صار اسمه فعلًا: boycott."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "mind-map",
+  "props": {
+   "center": "English collects",
+   "branches": [
+    {
+     "label": "Arabic",
+     "doodle": "book"
+    },
+    {
+     "label": "Hindi",
+     "doodle": "tree"
+    },
+    {
+     "label": "Chinese",
+     "doodle": "coffee"
+    },
+    {
+     "label": "German",
+     "doodle": "graduation-cap"
+    },
+    {
+     "label": "Japanese",
+     "doodle": "water-drop"
+    }
+   ]
+  },
+  "say": "So English is a museum of world languages. Every borrowed word is a small postcard from history, telling you who met whom, and what they traded.",
+  "ar": "فالإنجليزية متحف للغات العالم. كل كلمة مقترَضة بطاقة بريدية صغيرة من التاريخ، تخبرك من التقى بمن، وماذا تبادلوا."
+ },
+ {
+  "style": "stick-figure",
+  "template": "list-with-doodles",
+  "props": {
+   "title": "More Arabic in English",
+   "items": [
+    {
+     "text": "lemon: laymun",
+     "doodle": "apple"
+    },
+    {
+     "text": "syrup: sharab",
+     "doodle": "coffee"
+    },
+    {
+     "text": "giraffe: zarafa",
+     "doodle": "dog"
+    },
+    {
+     "text": "admiral: amir",
+     "doodle": "flag"
+    }
+   ],
+   "style": "doodles",
+   "character": "ada",
+   "endPose": "celebrate"
+  },
+  "say": "And the list goes on. Lemon comes from laymun. Syrup comes from sharab, a drink. Giraffe comes from zarafa. And admiral comes from amir, a commander.",
+  "ar": "والقائمة تطول. lemon من «ليمون». وsyrup من «شراب». وgiraffe من «زرافة». وadmiral من «أمير»، أي القائد."
+ },
+ {
+  "style": "flat-vector",
+  "template": "scale-compare",
+  "props": {
+   "items": [
+    {
+     "illus": "star",
+     "label": "Altair",
+     "value": 2,
+     "note": "the flying one"
+    },
+    {
+     "illus": "star",
+     "label": "Aldebaran",
+     "value": 4,
+     "note": "the follower"
+    },
+    {
+     "illus": "sun",
+     "label": "Vega",
+     "value": 3,
+     "note": "the falling eagle"
+    }
+   ],
+   "world": "space"
+  },
+  "say": "Even the night sky speaks Arabic. Many of the brightest stars still carry Arabic names, like Altair, Aldebaran and Vega, written down by Arab astronomers centuries ago.",
+  "ar": "حتى سماء الليل تتكلم العربية. كثير من ألمع النجوم ما زال يحمل أسماء عربية، مثل الطائر والدبران والواقع، دوّنها الفلكيون العرب قبل قرون."
+ },
+ {
+  "style": "map-reveal",
+  "template": "fact-countdown",
+  "props": {
+   "region": "europe",
+   "title": "NEIGHBOURS WHO LENT WORDS",
+   "facts": [
+    {
+     "place": "netherlands",
+     "label": "Dutch",
+     "keyword": "Dutch",
+     "sub": "YACHT, SKIPPER, DECK"
+    },
+    {
+     "place": "france",
+     "label": "French",
+     "keyword": "French",
+     "sub": "RESTAURANT, MENU, CHEF"
+    },
+    {
+     "place": "italy",
+     "label": "Italian",
+     "keyword": "Italian",
+     "sub": "OPERA, VIOLIN, BALCONY"
+    }
+   ]
+  },
+  "say": "Closer to home, the neighbours lent words too. From Dutch sailors came yacht, skipper and deck. From French kitchens came restaurant, menu and chef. And from Italy came opera, violin and balcony.",
+  "ar": "وعلى مقربة، أقرضها الجيران كلمات أيضًا. من البحّارة الهولنديين جاءت yacht وskipper وdeck. ومن المطابخ الفرنسية جاءت restaurant وmenu وchef. ومن إيطاليا جاءت opera وviolin وbalcony."
+ },
+ {
+  "style": "anime",
+  "template": "lesson-board",
+  "props": {
+   "character": "yuki",
+   "title": "New words from Japan",
+   "points": [
+    {
+     "text": "*emoji* = picture + character",
+     "word": "emoji"
+    },
+    {
+     "text": "*karaoke* = empty orchestra",
+     "word": "karaoke"
+    },
+    {
+     "text": "*tycoon* = great lord",
+     "word": "tycoon"
+    }
+   ]
+  },
+  "say": "And it never stopped. Emoji is Japanese for picture character. It has nothing to do with the word emotion. Karaoke means empty orchestra. And tycoon comes from a Japanese title meaning great lord.",
+  "ar": "ولم يتوقف ذلك قط. emoji يابانية معناها «حرف مصوَّر»، ولا علاقة لها بكلمة emotion. وkaraoke معناها «أوركسترا فارغة». وtycoon من لقب ياباني معناه «السيد العظيم»."
+ },
+ {
+  "style": "cartoon",
+  "template": "dialogue",
+  "props": {
+   "characters": [
+    "sam",
+    "kai"
+   ],
+   "location": "market",
+   "lines": [
+    {
+     "speaker": 0,
+     "text": "So English takes words from everyone?",
+     "expression": "surprised"
+    },
+    {
+     "speaker": 1,
+     "text": "And gives them back.",
+     "expression": "happy",
+     "pose": "explain"
+    },
+    {
+     "speaker": 0,
+     "text": "Like what?",
+     "expression": "thinking"
+    },
+    {
+     "speaker": 1,
+     "text": "Internet. Computer. Weekend.",
+     "expression": "smug",
+     "pose": "point-up"
+    }
+   ]
+  },
+  "say": "So English takes words from everyone? And gives them back. Like what? Internet, computer and weekend are now used in languages all over the world.",
+  "ar": "إذن الإنجليزية تأخذ الكلمات من الجميع؟ وتردّها أيضًا. مثل ماذا؟ internet وcomputer وweekend تُستخدم اليوم في لغات كثيرة حول العالم."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "stack-of-facts",
+  "props": {
+   "title": "From Persian",
+   "facts": [
+    {
+     "big": "1",
+     "text": "*bazaar*: a market",
+     "keyword": "bazaar"
+    },
+    {
+     "big": "2",
+     "text": "*caravan*: travellers together",
+     "keyword": "caravan"
+    },
+    {
+     "big": "3",
+     "text": "*paradise*: a walled garden",
+     "keyword": "paradise"
+    }
+   ]
+  },
+  "say": "From Persian came bazaar, a market, and caravan, a group of travellers. And paradise comes from an old Persian word for a walled garden. For people of the desert, a garden with walls and water was heaven.",
+  "ar": "ومن الفارسية جاءت bazaar أي السوق، وcaravan أي القافلة. وكلمة paradise من كلمة فارسية قديمة تعني الحديقة المسوّرة. فالحديقة ذات الأسوار والماء كانت جنّة عند أهل الصحراء."
+ },
+ {
+  "style": "pictogram",
+  "template": "rule-card",
+  "props": {
+   "number": 2,
+   "rule": "*CHECKMATE* IS PERSIAN",
+   "icon": "key",
+   "forbidden": false,
+   "subtext": "SHAH MAT: THE KING IS HELPLESS",
+   "subtextKeyword": "helpless",
+   "character": "you",
+   "pose": "point"
+  },
+  "say": "And every time you say checkmate, you are speaking Persian. It comes from shah mat, which is usually explained as the king is helpless. The game of chess carried the word across the world.",
+  "ar": "وكلما قلت checkmate فأنت تتكلم الفارسية. جاءت من «شاه مات»، وتُفسَّر عادةً بأن الملك صار عاجزًا. ولعبة الشطرنج حملت الكلمة عبر العالم."
+ },
+ {
+  "style": "doodle-world",
+  "template": "headline-thumb",
+  "props": {
+   "location": "savanna",
+   "character": "og",
+   "headline": "BUT WHY THE *SPELLING*?",
+   "keyword": "spelled",
+   "kicker": "the mystery",
+   "reaction": "hot",
+   "setup": "neutral",
+   "setupPose": "look-around",
+   "animal": "camel"
+  },
+  "say": "That explains where the words came from. But it does not explain the strangest thing about English. Why on earth is it spelled like that?",
+  "ar": "هذا يفسّر من أين جاءت الكلمات. لكنه لا يفسّر أغرب ما في الإنجليزية. لماذا تُكتب بهذه الطريقة أصلًا؟"
+ }
+]

@@ -1,0 +1,419 @@
+[
+ {
+  "style": "stopmotion-paper",
+  "template": "collage-title",
+  "props": {
+   "title": "Words That Changed Their Minds",
+   "subtitle": "How meanings travel",
+   "kicker": "Chapter 4",
+   "character": "pip",
+   "backdrop": "kraft"
+  },
+  "say": "Chapter four. Words that changed their minds. A word is not a stone. It is alive, and over centuries, its meaning can travel a very long way.",
+  "ar": "الفصل الرابع. كلمات غيّرت رأيها. الكلمة ليست حجرًا. إنها حيّة، ومع القرون قد يسافر معناها بعيدًا جدًا."
+ },
+ {
+  "style": "anime",
+  "template": "eyecatch-title",
+  "props": {
+   "episode": "Word 1",
+   "title": "*Nice* was an insult",
+   "subtitle": "Latin nescius: not knowing",
+   "character": "hikari"
+  },
+  "say": "Start with nice. It comes from the Latin nescius, which means not knowing. When it entered English around thirteen hundred, a nice person was a foolish person.",
+  "ar": "نبدأ بكلمة nice. جاءت من اللاتينية nescius، ومعناها «لا يعرف». حين دخلت الإنجليزية نحو عام 1300، كان الشخص الـnice شخصًا أحمق."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "process-flow",
+  "props": {
+   "title": "The journey of *nice*",
+   "steps": [
+    {
+     "label": "foolish",
+     "doodle": "face-worried"
+    },
+    {
+     "label": "shy",
+     "doodle": "thought-bubble"
+    },
+    {
+     "label": "precise",
+     "doodle": "target"
+    },
+    {
+     "label": "pleasant",
+     "doodle": "heart"
+    }
+   ]
+  },
+  "say": "Then it slowly changed. From foolish, to shy. From shy, to careful and precise. And only around the seventeen hundreds did it arrive at the meaning you know: pleasant and kind.",
+  "ar": "ثم تغيّرت ببطء. من أحمق إلى خجول. ومن خجول إلى دقيق وحريص. ولم تصل إلى المعنى الذي تعرفه، لطيف وطيب، إلا نحو القرن الثامن عشر."
+ },
+ {
+  "style": "cartoon",
+  "template": "dialogue",
+  "props": {
+   "characters": [
+    "leo",
+    "maya"
+   ],
+   "location": "park",
+   "lines": [
+    {
+     "speaker": 0,
+     "text": "You are so nice!",
+     "expression": "happy"
+    },
+    {
+     "speaker": 1,
+     "text": "In 1300, that was an insult.",
+     "expression": "smug",
+     "pose": "explain"
+    },
+    {
+     "speaker": 0,
+     "text": "Then... you are so silly?",
+     "expression": "thinking",
+     "pose": "think"
+    },
+    {
+     "speaker": 1,
+     "text": "In 1200, that was a compliment!",
+     "expression": "laughing",
+     "pose": "point-up",
+     "mark": "sparkle"
+    }
+   ]
+  },
+  "say": "You are so nice! In thirteen hundred, that was an insult. Then, you are so silly? In twelve hundred, that was a compliment!",
+  "ar": "أنت nice جدًا! في عام 1300 كانت هذه إهانة. إذن، أنت silly جدًا؟ في عام 1200 كانت هذه مديحًا!"
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Silly",
+   "date": "Old English",
+   "subject": "From blessed to foolish",
+   "body": "First: blessed and happy. Then: innocent. Then: weak and simple. Finally: foolish.",
+   "classification": "Etymology",
+   "stamp": "Changed",
+   "stampColor": "red",
+   "keyword": "silly"
+  },
+  "say": "It is true. Silly comes from an Old English word that meant blessed and happy. Then it came to mean innocent. Then weak and simple. And finally, foolish. Nice went up. Silly went down.",
+  "ar": "هذا صحيح. silly من كلمة في الإنجليزية القديمة معناها مبارك وسعيد. ثم صار معناها بريء. ثم ضعيف وبسيط. وأخيرًا أحمق. nice صعدت، وsilly نزلت."
+ },
+ {
+  "style": "stick-figure",
+  "template": "versus",
+  "props": {
+   "left": {
+    "label": "Then",
+    "doodle": "crowd",
+    "character": "remy",
+    "points": [
+     "girl = any child",
+     "meat = any food"
+    ]
+   },
+   "right": {
+    "label": "Now",
+    "doodle": "person",
+    "character": "ada",
+    "points": [
+     "girl = female child",
+     "meat = animal flesh"
+    ]
+   },
+   "verdict": "Verdict: the meanings got narrower.",
+   "winner": "right"
+  },
+  "say": "Some meanings became narrower. In Middle English, a girl was a child of either sex. And meat meant any kind of food, not only the flesh of animals.",
+  "ar": "بعض المعاني ضاقت. في الإنجليزية الوسطى كانت girl تعني الطفل، ذكرًا كان أو أنثى. وكانت meat تعني أي طعام، لا لحم الحيوان فقط."
+ },
+ {
+  "style": "flat-vector",
+  "template": "split-worlds",
+  "props": {
+   "left": {
+    "title": "awful",
+    "illus": "blast",
+    "world": "night",
+    "points": [
+     "once: full of awe"
+    ]
+   },
+   "right": {
+    "title": "awesome",
+    "illus": "sun",
+    "world": "sky",
+    "points": [
+     "today: wonderful"
+    ]
+   },
+   "vs": "VS"
+  },
+  "say": "Look at awful and awesome. Both were born from the word awe, a feeling of fear and wonder. Awful once meant full of awe. Today, one twin is terrible, and the other is wonderful.",
+  "ar": "انظر إلى awful وawesome. كلتاهما وُلدت من كلمة awe، وهي شعور بالرهبة والدهشة. awful كانت تعني «مملوء بالرهبة». واليوم أحد التوأمين فظيع، والآخر رائع."
+ },
+ {
+  "style": "storybook",
+  "template": "story-page",
+  "props": {
+   "location": "forest",
+   "time": "dusk",
+   "character": "wren",
+   "companion": "rusty",
+   "text": "A *clew* was a ball of thread, to find your way out of a maze.",
+   "heading": "The Clue",
+   "gesture": "wave",
+   "gestureWord": "thread"
+  },
+  "say": "And here is my favourite. A clue was once a clew, a ball of thread. In the old Greek story, a hero used a thread to find his way out of a labyrinth. So a clue became anything that guides you to the answer.",
+  "ar": "وهذه المفضّلة عندي. كلمة clue كانت clew، أي كرة خيط. في الأسطورة اليونانية القديمة استخدم بطل خيطًا ليخرج من متاهة. فصارت clue تعني كل ما يقودك إلى الجواب."
+ },
+ {
+  "style": "ink-anatomy",
+  "template": "myth-vs-fact",
+  "props": {
+   "myth": "Muscle is just a body word",
+   "fact": "Muscle means *little mouse*",
+   "mythWord": "pictures",
+   "factWord": "mouse",
+   "exercise": "curl",
+   "muscle": "biceps",
+   "bg": "white"
+  },
+  "say": "Hidden pictures are everywhere. Muscle comes from the Latin musculus, which means little mouse. The Romans thought a moving muscle looked like a mouse running under the skin.",
+  "ar": "الصور المخفية في كل مكان. muscle من اللاتينية musculus، ومعناها الفأر الصغير. رأى الرومان أن العضلة المتحركة تشبه فأرًا يجري تحت الجلد."
+ },
+ {
+  "style": "flat-vector",
+  "template": "big-number-world",
+  "props": {
+   "value": 40,
+   "suffix": " days",
+   "decimals": 0,
+   "label": "*quarantine*: quaranta giorni",
+   "illus": "earth",
+   "orbiters": [
+    "moon"
+   ],
+   "world": "space"
+  },
+  "say": "Quarantine comes from the Italian for forty days. In the time of the plague, ships arriving in Venice had to wait forty days before anyone could come ashore.",
+  "ar": "quarantine من الإيطالية، ومعناها أربعون يومًا. في زمن الطاعون كانت السفن القادمة إلى البندقية تنتظر أربعين يومًا قبل أن ينزل أحد إلى الشاطئ."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "stack-of-facts",
+  "props": {
+   "title": "Stories inside words",
+   "facts": [
+    {
+     "big": "1",
+     "text": "*disaster*: a bad star",
+     "keyword": "disaster"
+    },
+    {
+     "big": "2",
+     "text": "*breakfast*: break the fast",
+     "keyword": "breakfast"
+    },
+    {
+     "big": "3",
+     "text": "*goodbye*: God be with ye",
+     "keyword": "goodbye"
+    }
+   ]
+  },
+  "say": "Disaster means a bad star, from a time when people blamed the stars for bad luck. Breakfast is the meal that breaks your night long fast. And goodbye is a short form of God be with ye.",
+  "ar": "disaster تعني «نجم سيئ»، من زمن كان الناس يلومون النجوم على سوء الحظ. وbreakfast هي الوجبة التي تكسر صيام الليل. وgoodbye اختصار لعبارة معناها «الله معك»."
+ },
+ {
+  "style": "pictogram",
+  "template": "title-card",
+  "props": {
+   "title": "EVERY WORD IS A *STORY*",
+   "subtitle": "AND STORIES ARE EASY TO *REMEMBER*",
+   "subtitleKeyword": "remember",
+   "subtitleColor": "red",
+   "kicker": "THE KEY",
+   "number": 4,
+   "icon": "key"
+  },
+  "say": "Now, stop and notice something. You have just heard the stories of about fifty words. And you will remember many of them tomorrow. Why? Because your brain loves stories.",
+  "ar": "والآن توقف ولاحظ شيئًا. لقد سمعت للتو قصص نحو خمسين كلمة. وستتذكر كثيرًا منها غدًا. لماذا؟ لأن دماغك يحب القصص."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "team",
+   "label": "*companion* = with bread",
+   "caption": "Latin: com + panis",
+   "keyword": "companion",
+   "accents": [
+    "heart"
+   ]
+  },
+  "say": "A companion is, literally, someone you share bread with. It comes from the Latin com, meaning with, and panis, meaning bread. A company was first a group of people who ate together.",
+  "ar": "كلمة companion تعني حرفيًا من تتقاسم معه الخبز. جاءت من اللاتينية com بمعنى «مع»، وpanis بمعنى «خبز». وكلمة company كانت أولًا جماعة يأكلون معًا."
+ },
+ {
+  "style": "comic-book",
+  "template": "fact-panels",
+  "props": {
+   "title": "Hidden pictures",
+   "facts": [
+    {
+     "label": "candidate: dressed in white",
+     "icon": "target",
+     "keyword": "candidate"
+    },
+    {
+     "label": "salary: from salt",
+     "icon": "heart",
+     "keyword": "salary"
+    },
+    {
+     "label": "panic: the god Pan",
+     "icon": "bolt",
+     "keyword": "panic"
+    },
+    {
+     "label": "school: free time",
+     "icon": "brain",
+     "keyword": "school"
+    }
+   ]
+  },
+  "say": "A candidate was a Roman who wore a bright white toga when asking for votes. Salary is linked to sal, the Latin word for salt. Panic comes from the Greek god Pan. And school comes from a Greek word that meant free time.",
+  "ar": "كلمة candidate كانت تُطلق على الروماني الذي يلبس رداءً أبيض ناصعًا وهو يطلب الأصوات. وsalary مرتبطة بكلمة sal، أي الملح باللاتينية. وpanic من اسم الإله اليوناني Pan. وschool من كلمة يونانية معناها وقت الفراغ."
+ },
+ {
+  "style": "storybook",
+  "template": "list-of-things",
+  "props": {
+   "title": "Small poems in everyday words",
+   "character": "bramble",
+   "items": [
+    {
+     "label": "daisy",
+     "object": "heart",
+     "note": "the day's eye",
+     "keyword": "daisy"
+    },
+    {
+     "label": "nightmare",
+     "object": "lantern",
+     "note": "a night spirit",
+     "keyword": "nightmare"
+    },
+    {
+     "label": "alphabet",
+     "object": "honey",
+     "note": "alpha + beta",
+     "keyword": "alphabet"
+    }
+   ]
+  },
+  "say": "Some everyday words are small poems. A daisy is the day's eye, because the flower opens in the morning. A nightmare was a spirit that sat on sleepers in the night. And alphabet is simply alpha and beta, the first two Greek letters.",
+  "ar": "وبعض الكلمات اليومية قصائد صغيرة. daisy هي «عين النهار»، لأن الزهرة تتفتح في الصباح. وnightmare كانت روحًا تجلس على النائمين في الليل. وalphabet هي ببساطة alpha وbeta، أول حرفين في اليونانية."
+ },
+ {
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "leo",
+   "location": "city-street",
+   "title": "A *villain* was a farm worker",
+   "kicker": "Surprise",
+   "keyword": "villain",
+   "expression": "surprised",
+   "beats": [
+    {
+     "word": "unfair",
+     "pose": "shrug",
+     "expression": "skeptical"
+    }
+   ]
+  },
+  "say": "And a villain was not a criminal at all. The word first meant a poor farm worker. Rich people looked down on farm workers, so the word slowly became an insult. Words can be unfair.",
+  "ar": "وكلمة villain لم تكن تعني مجرمًا أبدًا. كان معناها الأول عامل مزرعة فقير. نظر الأغنياء إلى عمال المزارع باحتقار، فتحولت الكلمة ببطء إلى شتيمة. الكلمات قد تكون ظالمة."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "timeline",
+  "props": {
+   "title": "Hello is young",
+   "events": [
+    {
+     "date": "1820s",
+     "label": "hello: a shout for attention",
+     "doodle": "megaphone"
+    },
+    {
+     "date": "1870s",
+     "label": "the telephone arrives",
+     "doodle": "phone"
+    },
+    {
+     "date": "Today",
+     "label": "the world's greeting",
+     "doodle": "globe"
+    }
+   ]
+  },
+  "say": "Even hello has a story, and it is a young one. In the early eighteen hundreds, it was mostly a shout to get attention. Then the telephone arrived, people needed a word to start a call, and hello became the greeting of the world.",
+  "ar": "حتى hello لها قصة، وهي قصة حديثة. في أوائل القرن التاسع عشر كانت في الغالب صيحة لجذب الانتباه. ثم جاء الهاتف، واحتاج الناس كلمة يبدؤون بها المكالمة، فصارت hello تحية العالم."
+ },
+ {
+  "style": "pixel-quest",
+  "template": "level-up",
+  "props": {
+   "level": 4,
+   "stats": [
+    {
+     "label": "omnibus to bus",
+     "from": 70,
+     "to": 30,
+     "keyword": "bus"
+    },
+    {
+     "label": "telephone to phone",
+     "from": 90,
+     "to": 50,
+     "keyword": "phone"
+    },
+    {
+     "label": "influenza to flu",
+     "from": 90,
+     "to": 30,
+     "keyword": "flu"
+    }
+   ],
+   "unlock": "Short Words"
+  },
+  "say": "And words love to get shorter. Omnibus became bus. Telephone became phone. Influenza became flu. And refrigerator became fridge. When people use a word every day, they cut it down.",
+  "ar": "والكلمات تحب أن تقصر. omnibus صارت bus. وtelephone صارت phone. وinfluenza صارت flu. وrefrigerator صارت fridge. حين يستخدم الناس كلمة كل يوم، يختصرونها."
+ },
+ {
+  "style": "cartoon",
+  "template": "idea-moment",
+  "props": {
+   "character": "maya",
+   "location": "office",
+   "problem": "How do I remember new words?",
+   "idea": "Learn the story, not the list",
+   "word": "stories",
+   "kicker": "Try this"
+  },
+  "say": "This is the big idea of this video. Do not learn words as a list. Learn them as stories. And that brings us to the method.",
+  "ar": "هذه هي الفكرة الكبرى في هذا الفيديو. لا تتعلم الكلمات كقائمة. تعلّمها كقصص. وهذا يقودنا إلى الطريقة."
+ }
+]

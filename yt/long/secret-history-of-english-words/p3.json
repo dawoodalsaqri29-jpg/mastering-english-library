@@ -1,0 +1,468 @@
+[
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "Chapter Three",
+   "title": "The Spelling Mystery",
+   "subtitle": "Why English is not written the way it sounds",
+   "date": "1400 - 1700",
+   "place": "London",
+   "subject": "landscape",
+   "tone": "sepia",
+   "keyword": "mystery"
+  },
+  "say": "Chapter three. The spelling mystery. Why does knight have a k? Why does debt have a b? And why does one letter make so many different sounds?",
+  "ar": "الفصل الثالث. لغز التهجئة. لماذا في knight حرف k؟ ولماذا في debt حرف b؟ ولماذا يصدر الحرف الواحد أصواتًا كثيرة مختلفة؟"
+ },
+ {
+  "style": "anime",
+  "template": "dialogue",
+  "props": {
+   "characters": [
+    "kaito",
+    "yuki"
+   ],
+   "location": "classroom",
+   "lines": [
+    {
+     "speaker": 0,
+     "text": "How do you say k-n-i-g-h-t?",
+     "expression": "thinking"
+    },
+    {
+     "speaker": 1,
+     "text": "Just say 'nite'.",
+     "expression": "smug"
+    },
+    {
+     "speaker": 0,
+     "text": "Then why all those letters?!",
+     "expression": "shocked",
+     "reaction": "sweat-drop"
+    },
+    {
+     "speaker": 1,
+     "text": "Because they used to be real.",
+     "expression": "smile"
+    }
+   ]
+  },
+  "say": "How do you say this word? Just say night. Then why all those letters? Because, a thousand years ago, people really pronounced them.",
+  "ar": "كيف تنطق هذه الكلمة؟ قل night فقط. إذن لماذا كل هذه الحروف؟ لأن الناس قبل ألف عام كانوا ينطقونها فعلًا."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "before-after",
+  "props": {
+   "before": {
+    "label": "cniht",
+    "doodle": "flag",
+    "note": "every letter spoken"
+   },
+   "after": {
+    "label": "knight",
+    "doodle": "question-mark",
+    "note": "k and gh are silent"
+   },
+   "beforeTitle": "Old English",
+   "afterTitle": "Today"
+  },
+  "say": "In Old English, the word was cniht, and every letter was spoken. Over the centuries, the k sound and the rough gh sound disappeared from speech. But the spelling stayed, like a photograph of an old pronunciation.",
+  "ar": "في الإنجليزية القديمة كانت الكلمة cniht، وكان كل حرف فيها يُنطق. ومع القرون اختفى صوت k وصوت gh الخشن من الكلام. لكن التهجئة بقيت، كصورة قديمة لنطق قديم."
+ },
+ {
+  "style": "archival-doc",
+  "template": "timeline-ribbon",
+  "props": {
+   "title": "How spelling froze",
+   "events": [
+    {
+     "date": "1400",
+     "label": "The vowels begin to move",
+     "subject": "landscape"
+    },
+    {
+     "date": "1476",
+     "label": "Caxton's printing press",
+     "subject": "building"
+    },
+    {
+     "date": "1700",
+     "label": "The sounds have changed",
+     "subject": "portrait"
+    }
+   ],
+   "tone": "sepia"
+  },
+  "say": "Then came two events at almost the same time. In fourteen seventy six, William Caxton set up the first printing press in England, and printers slowly began to fix the spelling of words. But while spelling was freezing, pronunciation was changing.",
+  "ar": "ثم وقع حدثان في وقت متقارب. في عام 1476 أنشأ وليام كاكستون أول مطبعة في إنجلترا، وبدأ الطبّاعون يثبّتون تهجئة الكلمات شيئًا فشيئًا. لكن بينما كانت التهجئة تتجمد، كان النطق يتغير."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "big-number",
+  "props": {
+   "value": "300",
+   "label": "years of moving vowels",
+   "doodle": "clock",
+   "keyword": "three"
+  },
+  "say": "Linguists call it the Great Vowel Shift. Between about fourteen hundred and seventeen hundred, over three hundred years, the long vowels of English slowly moved to new positions in the mouth.",
+  "ar": "يسمّيه اللغويون «التحول الكبير في حروف العلة». بين نحو عام 1400 وعام 1700، على مدى ثلاثمئة عام، انتقلت حروف العلة الطويلة ببطء إلى مواضع جديدة في الفم."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "before-after-flip",
+  "props": {
+   "title": "",
+   "before": {
+    "label": "Before",
+    "text": "*bite* sounded like beet",
+    "prop": "lightbulb"
+   },
+   "after": {
+    "label": "After",
+    "text": "*bite* sounds like bite",
+    "prop": "lightbulb"
+   },
+   "keyword": "today",
+   "character": "ada",
+   "set": "kraft"
+  },
+  "say": "Before the shift, the word bite sounded like beet. House sounded like hoos. And name sounded like nahm. Today they sound completely different, but we still spell them the old way.",
+  "ar": "قبل التحول كانت كلمة bite تُنطق مثل beet. وكلمة house تُنطق «هوس». وكلمة name تُنطق «نام». اليوم نطقها مختلف تمامًا، لكننا ما زلنا نكتبها بالطريقة القديمة."
+ },
+ {
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "maya",
+   "location": "classroom",
+   "title": "Spelling shows the *old* sound",
+   "kicker": "The secret",
+   "keyword": "old",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "blame",
+     "pose": "shrug",
+     "expression": "skeptical"
+    }
+   ]
+  },
+  "say": "So English spelling is not crazy. It is old. It shows you how words sounded six hundred years ago. When the spelling and the sound do not match, do not blame yourself. Blame history.",
+  "ar": "فالتهجئة الإنجليزية ليست مجنونة. إنها قديمة. تريك كيف كانت الكلمات تُنطق قبل ستمئة عام. فإذا لم تتطابق التهجئة مع الصوت، فلا تلُم نفسك. لُم التاريخ."
+ },
+ {
+  "style": "pictogram",
+  "template": "rule-card",
+  "props": {
+   "number": 1,
+   "rule": "THE *B* IN DEBT IS A FAKE",
+   "icon": "envelope",
+   "forbidden": false,
+   "subtext": "ADDED BY SCHOLARS",
+   "subtextKeyword": "scholars",
+   "character": "you",
+   "pose": "point"
+  },
+  "say": "But some silent letters are not old sounds at all. They are fakes. In the fifteen hundreds, scholars loved Latin so much that they added letters to English words to show off their Latin roots.",
+  "ar": "لكن بعض الحروف الصامتة ليست أصواتًا قديمة أصلًا. إنها مزيفة. في القرن السادس عشر أحبّ العلماء اللاتينية حتى أضافوا حروفًا إلى كلمات إنجليزية ليُظهروا جذورها اللاتينية."
+ },
+ {
+  "style": "archival-doc",
+  "template": "then-vs-now",
+  "props": {
+   "then": {
+    "subject": "portrait",
+    "year": "Before",
+    "label": "dette, doute"
+   },
+   "now": {
+    "subject": "portrait-woman",
+    "year": "After 1500",
+    "label": "debt, doubt"
+   },
+   "title": "The Letters Nobody Asked For",
+   "keyword": "debt"
+  },
+  "say": "The word debt came from French, and it was spelled d e t t e. Scholars added a b, because the Latin word was debitum. The same thing happened to doubt. Nobody ever pronounced those letters.",
+  "ar": "كلمة debt جاءت من الفرنسية، وكانت تُكتب dette. فأضاف العلماء حرف b لأن الكلمة اللاتينية كانت debitum. وحدث الشيء نفسه مع doubt. ولم ينطق أحد هذين الحرفين قط."
+ },
+ {
+  "style": "stick-figure",
+  "template": "labelled-diagram",
+  "props": {
+   "title": "The island mistake",
+   "doodle": "rock",
+   "labels": [
+    {
+     "text": "Old English: no s",
+     "where": "top-left"
+    },
+    {
+     "text": "Latin: insula",
+     "where": "top-right"
+    },
+    {
+     "text": "not related!",
+     "where": "right"
+    }
+   ],
+   "youAreHere": "S ADDED BY MISTAKE",
+   "herePosition": "bottom-left",
+   "keyword": "island"
+  },
+  "say": "And sometimes they got it wrong. Island was an Old English word, with no s at all. Scholars thought it came from the Latin insula, so they added an s. It did not. The s in island is a five hundred year old mistake.",
+  "ar": "وأحيانًا أخطؤوا. island كلمة من الإنجليزية القديمة، بلا حرف s أصلًا. ظنّ العلماء أنها من اللاتينية insula فأضافوا s. ولم تكن كذلك. حرف s في island خطأ عمره خمسمئة عام."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "list-with-doodles",
+  "props": {
+   "title": "How to live with it",
+   "items": [
+    {
+     "text": "Learn the sound first",
+     "doodle": "megaphone"
+    },
+    {
+     "text": "Then learn the spelling",
+     "doodle": "pencil"
+    },
+    {
+     "text": "Group words that match",
+     "doodle": "puzzle"
+    }
+   ],
+   "check": true
+  },
+  "say": "So what should a learner do? Three things. Always learn the sound of a new word first. Then learn its spelling as a separate fact. And group words with the same pattern, like night, light, right and fight.",
+  "ar": "فماذا يفعل المتعلّم؟ ثلاثة أشياء. تعلّم صوت الكلمة الجديدة أولًا دائمًا. ثم تعلّم تهجئتها كمعلومة مستقلة. واجمع الكلمات ذات النمط الواحد، مثل night وlight وright وfight."
+ },
+ {
+  "style": "pixel-quest",
+  "template": "boss-battle",
+  "props": {
+   "boss": "Silent Letters",
+   "bossType": "blob",
+   "moves": [
+    {
+     "name": "Listen First",
+     "keyword": "listen"
+    },
+    {
+     "name": "Pattern Groups",
+     "keyword": "pattern"
+    },
+    {
+     "name": "Say It Aloud",
+     "keyword": "aloud"
+    }
+   ]
+  },
+  "say": "Think of silent letters as a boss in a video game. You beat it with three moves. Listen first. Learn in pattern groups. And say every new word aloud.",
+  "ar": "تخيّل الحروف الصامتة زعيمًا في لعبة فيديو. تهزمه بثلاث حركات. استمع أولًا. تعلّم في مجموعات متشابهة. وانطق كل كلمة جديدة بصوت عالٍ."
+ },
+ {
+  "style": "stick-figure",
+  "template": "what-if",
+  "props": {
+   "title": "What if spelling matched sound?",
+   "character": "pip",
+   "panels": [
+    {
+     "caption": "Whose accent would we choose?",
+     "pose": "shrug",
+     "says": "Wotah? Wadder?"
+    },
+    {
+     "caption": "Old books: unreadable.",
+     "pose": "panic",
+     "doodle": "book"
+    },
+    {
+     "caption": "So we keep the fossils.",
+     "pose": "smug",
+     "doodle": "rock"
+    }
+   ],
+   "punchline": "Strange, but shared."
+  },
+  "say": "Could we fix the spelling? People have tried for centuries. But whose accent would we choose? A Londoner, a Texan and an Australian all say water differently. The old spelling is strange, but everyone shares it.",
+  "ar": "هل يمكن إصلاح التهجئة؟ حاول الناس ذلك لقرون. لكن لهجة مَن نختار؟ اللندني والتكساسي والأسترالي ينطقون water بطرق مختلفة. التهجئة القديمة غريبة، لكن الجميع يتشاركونها."
+ },
+ {
+  "style": "comic-book",
+  "template": "dialogue-panels",
+  "props": {
+   "left": "pip",
+   "right": "nova",
+   "setting": "lab",
+   "lines": [
+    {
+     "speaker": "left",
+     "text": "Why is there an H in *ghost*?",
+     "kind": "speech",
+     "expression": "think"
+    },
+    {
+     "speaker": "right",
+     "text": "Early printers from Flanders added it!",
+     "kind": "speech",
+     "expression": "happy"
+    },
+    {
+     "speaker": "left",
+     "text": "A printing habit?!",
+     "kind": "shout",
+     "expression": "shock",
+     "reaction": "grin"
+    }
+   ]
+  },
+  "say": "Why is there an h in ghost? Many of Caxton's printers came from Flanders, and in Flemish the word was spelled with g h. They added the h, and it stayed.",
+  "ar": "لماذا يوجد حرف h في ghost؟ كثير من طبّاعي كاكستون جاؤوا من فلاندرز، وكانت الكلمة تُكتب في الفلمنكية بالحرفين gh. فأضافوا h، وبقي."
+ },
+ {
+  "style": "whiteboard-hand",
+  "template": "list-with-doodles",
+  "props": {
+   "title": "One spelling, five sounds",
+   "items": [
+    {
+     "text": "though",
+     "doodle": "thought-bubble"
+    },
+    {
+     "text": "through",
+     "doodle": "key"
+    },
+    {
+     "text": "tough",
+     "doodle": "mountain"
+    },
+    {
+     "text": "cough",
+     "doodle": "cloud"
+    }
+   ],
+   "check": false
+  },
+  "say": "And then there are the letters o u g h. Though. Through. Tough. Cough. The same four letters, four different sounds. Each one is a fossil from a different old pronunciation.",
+  "ar": "ثم هناك الحروف ough. كلمات though وthrough وtough وcough. الحروف الأربعة نفسها، وأربعة أصوات مختلفة. كل واحدة أحفورة من نطق قديم مختلف."
+ },
+ {
+  "style": "stopmotion-paper",
+  "template": "stack-of-facts",
+  "props": {
+   "title": "They were once spoken",
+   "facts": [
+    {
+     "big": "K",
+     "text": "*knee*, knife, know",
+     "keyword": "knee"
+    },
+    {
+     "big": "W",
+     "text": "*write*, wrong, wrist",
+     "keyword": "write"
+    },
+    {
+     "big": "GH",
+     "text": "*night*, light, daughter",
+     "keyword": "daughter"
+    }
+   ]
+  },
+  "say": "The k in knee, knife and know was once pronounced. So was the w in write, wrong and wrist. And the g h in night, light and daughter was a rough sound in the throat.",
+  "ar": "حرف k في knee وknife وknow كان يُنطق يومًا. وكذلك حرف w في write وwrong وwrist. والحرفان gh في night وlight وdaughter كانا صوتًا خشنًا في الحلق."
+ },
+ {
+  "style": "flat-vector",
+  "template": "split-worlds",
+  "props": {
+   "left": {
+    "title": "British",
+    "illus": "house",
+    "world": "sky",
+    "points": [
+     "colour, centre"
+    ]
+   },
+   "right": {
+    "title": "American",
+    "illus": "city",
+    "world": "dusk",
+    "points": [
+     "color, center"
+    ]
+   },
+   "vs": "VS"
+  },
+  "say": "One man did manage to change some spellings. In eighteen twenty eight, Noah Webster published his American dictionary, with simpler forms. That is why Americans write color and center, and the British write colour and centre.",
+  "ar": "رجل واحد نجح في تغيير بعض التهجئات. في عام 1828 نشر نوح ويبستر قاموسه الأمريكي بصيغ أبسط. ولهذا يكتب الأمريكيون color وcenter، ويكتب البريطانيون colour وcentre."
+ },
+ {
+  "style": "cartoon",
+  "template": "explain-with-board",
+  "props": {
+   "character": "maya",
+   "location": "classroom",
+   "title": "The magic e",
+   "mode": "list",
+   "items": [
+    "hop becomes *hope*",
+    "bit becomes *bite*",
+    "cut becomes *cute*"
+   ],
+   "expression": "happy"
+  },
+  "say": "Some patterns do help you. Look at the letter e at the end of a word. Hop becomes hope. Bit becomes bite. Cut becomes cute. That silent e tells you the vowel before it is long.",
+  "ar": "وبعض الأنماط تساعدك فعلًا. انظر إلى حرف e في آخر الكلمة. hop تصير hope. وbit تصير bite. وcut تصير cute. هذا الحرف الصامت يخبرك أن حرف العلة قبله طويل."
+ },
+ {
+  "style": "stick-figure",
+  "template": "versus",
+  "props": {
+   "left": {
+    "label": "Same sound",
+    "doodle": "eye",
+    "character": "juno",
+    "points": [
+     "knight / night",
+     "write / right"
+    ]
+   },
+   "right": {
+    "label": "Different spelling",
+    "doodle": "pencil",
+    "character": "hank",
+    "points": [
+     "sea / see",
+     "flour / flower"
+    ]
+   },
+   "verdict": "Verdict: spelling tells them apart.",
+   "winner": "right"
+  },
+  "say": "And strange spelling has one real advantage. Knight and night sound the same. So do write and right, sea and see. On the page, the old spelling tells you instantly which one the writer means.",
+  "ar": "وللتهجئة الغريبة فائدة حقيقية. knight وnight تُنطقان بالطريقة نفسها. وكذلك write وright، وsea وsee. وعلى الورق تخبرك التهجئة القديمة فورًا أيّ الكلمتين يقصد الكاتب."
+ },
+ {
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "Spelling froze. But the meanings?",
+   "reveal": "They flipped!",
+   "keyword": "meanings",
+   "character": "nova",
+   "background": "city",
+   "revealBackground": "focus",
+   "palette": "red",
+   "sfx": "FLIP!"
+  },
+  "say": "So spelling froze while the sounds moved on. But something else was changing too, and this one is even stranger. The meanings of the words themselves.",
+  "ar": "فتجمدت التهجئة بينما مضت الأصوات. لكن شيئًا آخر كان يتغير أيضًا، وهو أغرب. معاني الكلمات نفسها."
+ }
+]
