@@ -1,0 +1,24 @@
+{
+  "title": "What Bramble packed",
+  "character": "bramble",
+  "items": [
+    {
+      "label": "A jar of honey",
+      "object": "honey",
+      "note": "for sharing",
+      "keyword": "honey"
+    },
+    {
+      "label": "A warm scarf",
+      "object": "heart",
+      "note": "knitted by Nana",
+      "keyword": "scarf"
+    },
+    {
+      "label": "A little lantern",
+      "object": "lantern",
+      "note": "",
+      "keyword": "lantern"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "location": "cave",
+  "time": "night",
+  "characters": [
+    {
+      "name": "og",
+      "activity": "cook",
+      "expression": "deadpan"
+    },
+    {
+      "name": "ug",
+      "activity": "eat",
+      "expression": "happy"
+    }
+  ],
+  "setpieces": [
+    "rock"
+  ],
+  "animal": "wolf",
+  "headline": "NO *JOBS*",
+  "keyword": "jobs",
+  "kicker": "stone age",
+  "reaction": {
+    "character": 0,
+    "mark": "...",
+    "expression": "deadpan",
+    "word": "nothing"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Muscle vs *tendon*",
+  "type": "line",
+  "series": [
+    {
+      "label": "tendon",
+      "values": [
+        1,
+        1.2,
+        1.6,
+        2.4,
+        3.6,
+        5
+      ]
+    },
+    {
+      "label": "muscle",
+      "values": [
+        1,
+        2.2,
+        3,
+        3.4,
+        3.6,
+        3.7
+      ]
+    }
+  ],
+  "xLabels": [
+    "wk 0",
+    "wk 4",
+    "wk 8",
+    "wk 12",
+    "wk 16",
+    "wk 20"
+  ],
+  "yLabel": "strength",
+  "annotation": {
+    "text": "the tendon catches up",
+    "index": 4,
+    "word": "catches"
+  },
+  "muscle": "tendons",
+  "bg": "white"
+}

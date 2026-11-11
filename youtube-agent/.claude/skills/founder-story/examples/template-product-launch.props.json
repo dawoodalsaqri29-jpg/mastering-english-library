@@ -1,0 +1,19 @@
+{
+  "company": "Northwind Motors",
+  "kicker": "MODEL YEAR",
+  "archetype": "engineer",
+  "empire": "auto",
+  "product": {
+    "name": "The *Comet* coupe",
+    "kind": "car",
+    "year": "1961"
+  },
+  "keyword": "Comet",
+  "specs": [
+    "two hundred horsepower",
+    "steel unibody",
+    "under two thousand dollars"
+  ],
+  "headline": "A car for *everyone*",
+  "headlineWord": "everyone"
+}

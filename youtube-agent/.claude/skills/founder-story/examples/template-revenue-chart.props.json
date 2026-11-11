@@ -1,0 +1,38 @@
+{
+  "company": "Northwind Motors",
+  "kicker": "ANNUAL REVENUE",
+  "archetype": "investor",
+  "empire": "finance",
+  "title": "REVENUE",
+  "prefix": "$",
+  "points": [
+    {
+      "label": "1950",
+      "value": 12000000,
+      "word": "twelve"
+    },
+    {
+      "label": "1965",
+      "value": 310000000,
+      "note": "the Comet",
+      "word": "Comet"
+    },
+    {
+      "label": "1980",
+      "value": 2400000000,
+      "word": "billion"
+    },
+    {
+      "label": "2000",
+      "value": 19000000000
+    },
+    {
+      "label": "2026",
+      "value": 48000000000,
+      "note": "today",
+      "word": "today"
+    }
+  ],
+  "headline": "Forty years of *growth*",
+  "headlineWord": "growth"
+}

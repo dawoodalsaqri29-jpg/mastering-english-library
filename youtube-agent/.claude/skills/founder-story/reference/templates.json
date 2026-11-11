@@ -1,0 +1,1787 @@
+[
+  {
+    "id": "founder-intro",
+    "name": "Founder Intro",
+    "description": "THE WORKHORSE. A big-headed caricature of a generic business archetype stands in the foreground over the aerial empire; the company headline plate (name + year band) slides in top-right; a bold caps headline pops on its key word; an optional stat counts up. Buildings can grow during the scene. Use for hooks, chapter intros, most talking scenes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string",
+          "description": "Company name shown on the plate in bold caps (1-3 words). Plain type only, never a logo."
+        },
+        "years": {
+          "type": "string",
+          "description": "Year band under the name, e.g. \"1937 – 2026\" or \"EST. 1976\"."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny caps line above the company name (1-4 words), e.g. \"THE ENTIRE HISTORY OF\"."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ],
+          "description": "Generic caricature archetype. Keep the same one for the same company across the video."
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ],
+          "description": "Aerial landscape behind the figure. Keep it consistent for a company; use garage for early days."
+        },
+        "growth": {
+          "type": "string",
+          "enum": [
+            "small",
+            "growing",
+            "full"
+          ],
+          "description": "How much of the empire exists at the start; anything missing pops up during the scene."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "storm",
+            "night"
+          ],
+          "description": "Sky mood."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Bold caps headline (2-7 words). Wrap one word in *asterisks* to colour it red."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the headline pops (must appear in the narration; defaults to the most distinctive headline word)."
+        },
+        "stat": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string",
+              "description": "Number with prefix/suffix, e.g. \"$3.2B\", \"47%\", \"12000\" (counts up)."
+            },
+            "label": {
+              "type": "string",
+              "description": "What the number is (2-6 words)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word on which the stat appears."
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "confident",
+            "happy",
+            "excited",
+            "worried",
+            "shocked",
+            "angry",
+            "determined",
+            "smug",
+            "sad",
+            "thinking",
+            "laughing",
+            "skeptical",
+            "tired"
+          ],
+          "description": "Base expression."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "idle",
+            "arms-crossed",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "blueprint",
+            "tablet",
+            "phone",
+            "thumbs-up",
+            "hands-hips",
+            "present",
+            "briefcase",
+            "coffee",
+            "think"
+          ],
+          "description": "Resting pose (default arms-crossed)."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Side the figure stands on (landscape)."
+        },
+        "beats": {
+          "type": "array",
+          "description": "Up to 3 acting beats on narration words.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "point-viewer",
+                  "blueprint",
+                  "tablet",
+                  "phone",
+                  "thumbs-up",
+                  "hands-hips",
+                  "worried",
+                  "present",
+                  "open-arms",
+                  "wave",
+                  "facepalm",
+                  "shrug",
+                  "fist-pump",
+                  "think",
+                  "celebrate",
+                  "money",
+                  "megaphone"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "confident",
+                  "happy",
+                  "excited",
+                  "worried",
+                  "shocked",
+                  "angry",
+                  "determined",
+                  "smug",
+                  "sad",
+                  "thinking",
+                  "laughing",
+                  "skeptical",
+                  "tired"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "enum": [
+                  "sweat",
+                  "exclaim",
+                  "question",
+                  "idea",
+                  "dollar",
+                  "anger",
+                  "sparkle",
+                  "zzz",
+                  "check",
+                  "cross"
+                ]
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "headline"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "years": "1937 – 2026",
+      "kicker": "THE ENTIRE HISTORY OF",
+      "archetype": "founder",
+      "empire": "auto",
+      "growth": "growing",
+      "headline": "From one garage to *forty* factories",
+      "keyword": "forty",
+      "stat": {
+        "value": "$48B",
+        "label": "annual revenue today",
+        "word": "billion"
+      },
+      "beats": [
+        {
+          "word": "nobody",
+          "pose": "shrug",
+          "expression": "skeptical"
+        }
+      ]
+    },
+    "exampleNarration": "This is the entire history of Northwind Motors. From one garage to forty factories, and forty eight billion dollars in annual revenue. And nobody believed it would work."
+  },
+  {
+    "id": "origin-workshop",
+    "name": "Origin Workshop",
+    "description": "Humble beginnings: a suburban garage world, a workbench with spinning gears and a swinging lamp, the archetype tinkering with a wrench; the plate reads FOUNDED <year>; a first product sketch unrolls as a blueprint on its key word.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string",
+          "description": "Company (or founder's workshop) name for the plate."
+        },
+        "year": {
+          "type": "string",
+          "description": "Founding year, e.g. \"1976\"."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional caps line above the name (default HUMBLE BEGINNINGS)."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "Bold caps headline (2-6 words), one *word* highlighted."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word for the headline."
+        },
+        "product": {
+          "type": "string",
+          "enum": [
+            "car",
+            "truck",
+            "phone",
+            "computer",
+            "software",
+            "rocket",
+            "plane",
+            "shoe",
+            "bottle",
+            "chip",
+            "box",
+            "lightbulb",
+            "engine",
+            "burger",
+            "bike",
+            "watch",
+            "ship",
+            "tv",
+            "camera",
+            "battery",
+            "robot"
+          ],
+          "description": "First product sketched on the blueprint."
+        },
+        "productName": {
+          "type": "string",
+          "description": "Product name on the sketch (1-4 words)."
+        },
+        "productWord": {
+          "type": "string",
+          "description": "Narration word on which the blueprint appears."
+        },
+        "specs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Up to 3 short spec callouts (2-4 words each)."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "year",
+        "product"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind",
+      "year": "1937",
+      "archetype": "inventor",
+      "headline": "Built in a *rented* garage",
+      "keyword": "garage",
+      "product": "engine",
+      "productName": "The V-Four",
+      "productWord": "engine",
+      "specs": [
+        "four cylinders",
+        "hand-cast block",
+        "twenty horsepower"
+      ]
+    },
+    "exampleNarration": "It started in a rented garage, where a stubborn inventor spent three years building a single engine. Four cylinders, a hand-cast block, twenty horsepower, and no customers."
+  },
+  {
+    "id": "product-launch",
+    "name": "Product Launch",
+    "description": "A blueprint sheet slides in and the product sketch draws itself line by line, then spec callouts appear on their words; the archetype presents it and gives a thumbs-up. Use for every flagship product, patent or model reveal.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string",
+          "description": "Year band (used if product.year is empty)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Caps line above the name (default NEW PRODUCT)."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "product": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Product name (1-4 words)."
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "car",
+                "truck",
+                "phone",
+                "computer",
+                "software",
+                "rocket",
+                "plane",
+                "shoe",
+                "bottle",
+                "chip",
+                "box",
+                "lightbulb",
+                "engine",
+                "burger",
+                "bike",
+                "watch",
+                "ship",
+                "tv",
+                "camera",
+                "battery",
+                "robot"
+              ]
+            },
+            "year": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the sheet appears (defaults to the product name)."
+        },
+        "specs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Up to 4 spec callouts (2-4 words, their key word should be in the narration)."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional bold caps headline (2-6 words)."
+        },
+        "headlineWord": {
+          "type": "string"
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "product"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "kicker": "MODEL YEAR",
+      "archetype": "engineer",
+      "empire": "auto",
+      "product": {
+        "name": "The *Comet* coupe",
+        "kind": "car",
+        "year": "1961"
+      },
+      "keyword": "Comet",
+      "specs": [
+        "two hundred horsepower",
+        "steel unibody",
+        "under two thousand dollars"
+      ],
+      "headline": "A car for *everyone*",
+      "headlineWord": "everyone"
+    },
+    "exampleNarration": "In nineteen sixty one came the Comet. Two hundred horsepower, a steel unibody, and a price under two thousand dollars. Finally, a car for everyone."
+  },
+  {
+    "id": "expansion-map",
+    "name": "Expansion Map",
+    "description": "A hand-drawn world or regional map on a paper sheet; red pins pop in city by city on their narration words with dotted routes between them and a running location counter, while buildings pop up in the empire behind.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string"
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "americas",
+            "north america",
+            "usa",
+            "south america",
+            "europe",
+            "asia",
+            "east asia",
+            "africa",
+            "australia",
+            "middle east"
+          ],
+          "description": "Map crop."
+        },
+        "title": {
+          "type": "string",
+          "description": "Caps title on the sheet (default EXPANSION)."
+        },
+        "pins": {
+          "type": "array",
+          "description": "2-10 places in narration order. Known cities/countries are placed automatically; give lat/lon for others.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "place": {
+                "type": "string"
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word for this pin (defaults to the place name)."
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lon": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "place"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "counterLabel": {
+          "type": "string",
+          "description": "Counter unit, e.g. \"countries\", \"stores\" (default locations)."
+        },
+        "headline": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "pins"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "years": "1970 – 1985",
+      "kicker": "GOING GLOBAL",
+      "archetype": "executive",
+      "empire": "auto",
+      "region": "world",
+      "pins": [
+        {
+          "place": "Detroit"
+        },
+        {
+          "place": "Mexico City",
+          "word": "Mexico"
+        },
+        {
+          "place": "Germany"
+        },
+        {
+          "place": "Japan"
+        },
+        {
+          "place": "Brazil"
+        }
+      ],
+      "counterLabel": "countries",
+      "headline": "Five countries in *ten* years",
+      "keyword": "ten"
+    },
+    "exampleNarration": "From Detroit they pushed into Mexico, then Germany, then Japan, then Brazil. Five countries in ten years."
+  },
+  {
+    "id": "revenue-chart",
+    "name": "Revenue Chart",
+    "description": "A growth line draws itself across a paper chart with year labels and milestone callouts; the final value pops large; the archetype reads a tablet, then points, then fist-pumps (or worries if the line falls). Use for revenue, sales, share price, users.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string"
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Chart title in caps, e.g. REVENUE, SHARE PRICE, USERS."
+        },
+        "points": {
+          "type": "array",
+          "description": "3-8 data points in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "x label, usually a year."
+              },
+              "value": {
+                "type": "number",
+                "description": "Raw number (e.g. 48000000000); large values are shown compact (48B)."
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional milestone note (1-3 words) shown at this point."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word on which this point lands."
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Value prefix, e.g. \"$\"."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Value suffix, e.g. \"%\" or \" users\"."
+        },
+        "milestones": {
+          "type": "boolean",
+          "description": "Show the value at every point."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the chart appears."
+        },
+        "headline": {
+          "type": "string"
+        },
+        "headlineWord": {
+          "type": "string"
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "points"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "kicker": "ANNUAL REVENUE",
+      "archetype": "investor",
+      "empire": "finance",
+      "title": "REVENUE",
+      "prefix": "$",
+      "points": [
+        {
+          "label": "1950",
+          "value": 12000000,
+          "word": "twelve"
+        },
+        {
+          "label": "1965",
+          "value": 310000000,
+          "note": "the Comet",
+          "word": "Comet"
+        },
+        {
+          "label": "1980",
+          "value": 2400000000,
+          "word": "billion"
+        },
+        {
+          "label": "2000",
+          "value": 19000000000
+        },
+        {
+          "label": "2026",
+          "value": 48000000000,
+          "note": "today",
+          "word": "today"
+        }
+      ],
+      "headline": "Forty years of *growth*",
+      "headlineWord": "growth"
+    },
+    "exampleNarration": "Revenue went from twelve million dollars in nineteen fifty, to three hundred million after the Comet, past two billion by nineteen eighty, and forty eight billion today. Forty years of growth."
+  },
+  {
+    "id": "rivals",
+    "name": "Rivals",
+    "description": "Two archetypes face off across the frame with their company names on tags, a VS badge slams in, anger marks and quick camera cuts to each face. Use for competitors, lawsuits, price wars, boardroom fights.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "company": {
+              "type": "string",
+              "description": "Company on the tag (1-3 words)."
+            },
+            "archetype": {
+              "type": "string",
+              "enum": [
+                "founder",
+                "engineer",
+                "inventor",
+                "retailer",
+                "techie",
+                "investor",
+                "executive"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "confident",
+                "happy",
+                "excited",
+                "worried",
+                "shocked",
+                "angry",
+                "determined",
+                "smug",
+                "sad",
+                "thinking",
+                "laughing",
+                "skeptical",
+                "tired"
+              ]
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word when this company is named."
+            }
+          },
+          "required": [
+            "company"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "company": {
+              "type": "string"
+            },
+            "archetype": {
+              "type": "string",
+              "enum": [
+                "founder",
+                "engineer",
+                "inventor",
+                "retailer",
+                "techie",
+                "investor",
+                "executive"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "confident",
+                "happy",
+                "excited",
+                "worried",
+                "shocked",
+                "angry",
+                "determined",
+                "smug",
+                "sad",
+                "thinking",
+                "laughing",
+                "skeptical",
+                "tired"
+              ]
+            },
+            "word": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "company"
+          ],
+          "additionalProperties": false
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the VS badge slams in (default \"versus\")."
+        },
+        "headline": {
+          "type": "string"
+        },
+        "headlineWord": {
+          "type": "string"
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "storm",
+            "night"
+          ]
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "company": "Northwind",
+        "archetype": "founder",
+        "expression": "determined",
+        "word": "Northwind"
+      },
+      "right": {
+        "company": "Atlas Auto",
+        "archetype": "investor",
+        "expression": "smug",
+        "word": "Atlas"
+      },
+      "empire": "city",
+      "keyword": "war",
+      "headline": "The *price* war",
+      "headlineWord": "price"
+    },
+    "exampleNarration": "Northwind had the cheaper car. Atlas Auto had the bigger dealers. And in nineteen seventy two, it turned into an all out price war."
+  },
+  {
+    "id": "crisis-moment",
+    "name": "Crisis Moment",
+    "description": "Storm clouds, rain and lightning over the empire; the archetype holds their head, the camera shakes on the key word; a red falling chart or a red stat lands. Use for recalls, bankruptcies, crashes, scandals, layoffs.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Caps line above the name (default CRISIS)."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "Bold red caps headline (2-6 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word for the headline + camera shake."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chart title (default SHARE PRICE)."
+        },
+        "points": {
+          "type": "array",
+          "description": "Optional 3-6 falling data points.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              },
+              "note": {
+                "type": "string"
+              },
+              "word": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "suffix": {
+          "type": "string"
+        },
+        "stat": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "word": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "headline"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "years": "1979",
+      "archetype": "founder",
+      "empire": "auto",
+      "headline": "The *recall* that nearly killed it",
+      "keyword": "recall",
+      "title": "SHARE PRICE",
+      "prefix": "$",
+      "points": [
+        {
+          "label": "Jan",
+          "value": 84
+        },
+        {
+          "label": "Mar",
+          "value": 61,
+          "word": "sixty"
+        },
+        {
+          "label": "Jun",
+          "value": 32,
+          "word": "half"
+        },
+        {
+          "label": "Sep",
+          "value": 19,
+          "note": "near bankruptcy",
+          "word": "bankruptcy"
+        }
+      ]
+    },
+    "exampleNarration": "Then came the recall. Two million cars. The share price dropped to sixty dollars, then lost half its value again, and by September the company was weeks from bankruptcy."
+  },
+  {
+    "id": "factory-floor",
+    "name": "Factory Floor",
+    "description": "A foreground assembly line rolls product units past swinging robot arms under the empire; the engineer points at the belt, the headline pops, a production-rate stat counts up. Use for manufacturing, scale, automation.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Default PRODUCTION."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "product": {
+          "type": "string",
+          "enum": [
+            "car",
+            "truck",
+            "phone",
+            "computer",
+            "software",
+            "rocket",
+            "plane",
+            "shoe",
+            "bottle",
+            "chip",
+            "box",
+            "lightbulb",
+            "engine",
+            "burger",
+            "bike",
+            "watch",
+            "ship",
+            "tv",
+            "camera",
+            "battery",
+            "robot"
+          ],
+          "description": "What rolls down the line."
+        },
+        "speed": {
+          "type": "number",
+          "description": "Belt speed 40-300 (default 110)."
+        },
+        "headline": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "rate": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string",
+              "description": "e.g. \"1200\""
+            },
+            "label": {
+              "type": "string",
+              "description": "e.g. \"cars per day\""
+            },
+            "word": {
+              "type": "string"
+            },
+            "kicker": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "product"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "years": "1955",
+      "archetype": "engineer",
+      "empire": "auto",
+      "product": "car",
+      "headline": "One car every *ninety* seconds",
+      "keyword": "ninety",
+      "rate": {
+        "value": "1200",
+        "label": "cars per day",
+        "word": "day"
+      }
+    },
+    "exampleNarration": "The new plant changed everything. One car every ninety seconds, twelve hundred cars a day, built by workers who had never seen an assembly line before."
+  },
+  {
+    "id": "era-chapter",
+    "name": "Era Chapter",
+    "description": "Chapter card: a huge year, an ink rule and the chapter title in caps over a dimmed, slowly rising view of the empire. Use between eras (2-5 per video).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "string",
+          "description": "Big year or range, e.g. \"1979\" or \"1980s\"."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chapter title (2-6 words), one *word* highlighted."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Optional italic subtitle (3-10 words)."
+        },
+        "company": {
+          "type": "string",
+          "description": "Company name shown as the small kicker."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Overrides the kicker (e.g. CHAPTER THREE)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the title lands."
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "storm",
+            "night"
+          ]
+        },
+        "growthAmount": {
+          "type": "number",
+          "description": "0-1: how much of the empire exists; the rest pops in."
+        }
+      },
+      "required": [
+        "year",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "year": "1980s",
+      "title": "The *global* decade",
+      "sub": "How a Detroit company learned to think in five languages",
+      "company": "Northwind Motors",
+      "kicker": "CHAPTER THREE",
+      "keyword": "global",
+      "empire": "auto",
+      "sky": "dawn",
+      "growthAmount": 0.6
+    },
+    "exampleNarration": "Chapter three. The nineteen eighties, the global decade, when a Detroit company had to learn to think in five languages at once."
+  },
+  {
+    "id": "deal-handshake",
+    "name": "Deal Handshake",
+    "description": "Two archetypes meet and shake hands on the key word with a camera thump; a contract sheet appears and two signatures draw on, then a red seal stamps with a shake; name tags and a deal amount. Use for mergers, acquisitions, funding rounds, partnerships.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string",
+          "description": "Company on the plate and the left tag."
+        },
+        "partner": {
+          "type": "string",
+          "description": "Other party, right tag (1-3 words)."
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Default THE DEAL."
+        },
+        "archetypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "founder",
+              "engineer",
+              "inventor",
+              "retailer",
+              "techie",
+              "investor",
+              "executive"
+            ]
+          },
+          "description": "[left, right] archetypes."
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "amount": {
+          "type": "string",
+          "description": "Deal size shown on the contract, e.g. \"$2.1B\"."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word for the handshake (default \"deal\")."
+        },
+        "signWord": {
+          "type": "string",
+          "description": "Narration word for the signature (default \"signed\")."
+        },
+        "title": {
+          "type": "string",
+          "description": "Contract title (default AGREEMENT)."
+        },
+        "headline": {
+          "type": "string"
+        },
+        "headlineWord": {
+          "type": "string"
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        }
+      },
+      "required": [
+        "company",
+        "partner"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "partner": "Kestrel Electric",
+      "years": "2009",
+      "archetypes": [
+        "founder",
+        "techie"
+      ],
+      "empire": "finance",
+      "amount": "$2.1B",
+      "keyword": "deal",
+      "signWord": "signed",
+      "title": "ACQUISITION",
+      "headline": "The *electric* bet",
+      "headlineWord": "electric"
+    },
+    "exampleNarration": "In two thousand nine they made the deal of the decade. For two point one billion dollars, Northwind signed to acquire Kestrel Electric. It was the electric bet."
+  },
+  {
+    "id": "legacy-skyline",
+    "name": "Legacy Skyline",
+    "description": "The ending: the full empire at sunset with the camera rising wide; up to three final stats count up on their words; the archetype stands proud; a closing headline. Use for the last scene or a chapter's wrap-up.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "company": {
+          "type": "string"
+        },
+        "years": {
+          "type": "string"
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Default THE LEGACY."
+        },
+        "archetype": {
+          "type": "string",
+          "enum": [
+            "founder",
+            "engineer",
+            "inventor",
+            "retailer",
+            "techie",
+            "investor",
+            "executive"
+          ]
+        },
+        "empire": {
+          "type": "string",
+          "enum": [
+            "tech",
+            "factory",
+            "auto",
+            "retail",
+            "shipping",
+            "finance",
+            "energy",
+            "food",
+            "garage",
+            "city"
+          ]
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dawn",
+            "sunset",
+            "night"
+          ]
+        },
+        "stats": {
+          "type": "array",
+          "description": "1-3 final stats.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "word": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "headline": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string"
+              },
+              "pose": {
+                "type": "string"
+              },
+              "expression": {
+                "type": "string"
+              },
+              "mark": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "company",
+        "stats"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "company": "Northwind Motors",
+      "years": "1937 – 2026",
+      "archetype": "founder",
+      "empire": "auto",
+      "sky": "sunset",
+      "stats": [
+        {
+          "value": "89",
+          "label": "years",
+          "word": "years"
+        },
+        {
+          "value": "210000",
+          "label": "employees",
+          "word": "employees"
+        },
+        {
+          "value": "$48B",
+          "label": "in revenue",
+          "word": "revenue"
+        }
+      ],
+      "headline": "All from one *garage*",
+      "keyword": "garage"
+    },
+    "exampleNarration": "Eighty nine years later, two hundred and ten thousand employees and forty eight billion dollars in revenue. All of it from one rented garage."
+  }
+]

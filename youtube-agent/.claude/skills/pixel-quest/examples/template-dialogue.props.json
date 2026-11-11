@@ -1,0 +1,13 @@
+{
+  "world": "castle",
+  "lines": [
+    {
+      "speaker": "kit",
+      "text": "Sage Orla, why does the moon change shape?"
+    },
+    {
+      "speaker": "orla",
+      "text": "It never does! We just see a different slice of its sunlit half."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "level": "WORLD 1-1 ROOTS",
+  "world": "grassland",
+  "items": [
+    {
+      "label": "Water",
+      "icon": "potion",
+      "keyword": "water"
+    },
+    {
+      "label": "Sunlight",
+      "icon": "star",
+      "keyword": "sunlight"
+    },
+    {
+      "label": "Carbon dioxide",
+      "icon": "crystal",
+      "keyword": "carbon"
+    }
+  ]
+}

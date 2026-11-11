@@ -1,0 +1,16 @@
+{
+  "left": {
+    "faction": "hoplite",
+    "name": "Greeks",
+    "count": 7000
+  },
+  "right": {
+    "faction": "ottoman",
+    "name": "Persians",
+    "count": 120000
+  },
+  "keyword": "thousand",
+  "title": "Hopelessly Outnumbered",
+  "place": "Thermopylae",
+  "date": "480 BC"
+}

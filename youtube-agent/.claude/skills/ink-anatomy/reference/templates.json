@@ -1,0 +1,1236 @@
+[
+  {
+    "id": "exercise-demo",
+    "name": "Exercise Demo",
+    "description": "The workhorse: a cast member performs an exercise loop (push-ups, pull-ups, squats, planche, sprint, dead hang…) in manga ink with effort shake and sweat. The muscle / tendon / bone under discussion lights up red and pulses on the key word while a handwritten label with a curved red arrow points at it. Optional thumbnail title, rep counter and sets badge.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who performs: rook (lean hero, default) or brick (hulking rival). Keep the same roles all video."
+        },
+        "exercise": {
+          "type": "string",
+          "enum": [
+            "pushup",
+            "pullup",
+            "squat",
+            "plank",
+            "planche",
+            "sprint",
+            "tug",
+            "lift",
+            "curl",
+            "dip",
+            "hang",
+            "handstand",
+            "flex",
+            "lunge",
+            "idle"
+          ],
+          "description": "Exercise loop."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "biceps",
+            "triceps",
+            "forearms",
+            "grip",
+            "shoulders",
+            "chest",
+            "abs",
+            "lats",
+            "back",
+            "glutes",
+            "quads",
+            "hamstrings",
+            "calves",
+            "achilles",
+            "patellar",
+            "elbow-tendon",
+            "tendons",
+            "bones",
+            "arms",
+            "legs",
+            "core",
+            "full",
+            "none"
+          ],
+          "description": "Body part highlighted in red (default: the exercise's main muscle)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Handwritten annotation pointing at the highlighted part (1–5 words, e.g. \"Not muscle. Tendon.\")."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional second handwritten aside (1–4 words, e.g. \"(at home)\")."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the red pulse, punch-in and label land (must appear in the narration)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional thumbnail-style bold title (2–6 words). Wrap one word in *asterisks* to make it red."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny red tag above the title (1–3 words)."
+        },
+        "reps": {
+          "type": "boolean",
+          "description": "Show the rep counter (default true for rep exercises)."
+        },
+        "sets": {
+          "type": "string",
+          "description": "Optional sets badge text, e.g. \"3 × 12\"."
+        },
+        "period": {
+          "type": "number",
+          "description": "Seconds per rep (1–4; default per exercise)."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "focus",
+            "strain",
+            "shout",
+            "smirk",
+            "proud",
+            "shock",
+            "scowl",
+            "tired",
+            "calm"
+          ],
+          "description": "Base face (default focus)."
+        },
+        "facing": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Facing direction (default right)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Paper white (default) or ink black background. Pick one for a whole chapter."
+        }
+      },
+      "required": [
+        "exercise"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "rook",
+      "exercise": "pullup",
+      "muscle": "forearms",
+      "label": "Not muscle. Tendon.",
+      "note": "(at home)",
+      "keyword": "tendons",
+      "title": "Train your *tendons*",
+      "kicker": "The secret",
+      "sets": "3 × 8",
+      "bg": "white"
+    },
+    "exampleNarration": "Every pull-up loads something most people never train on purpose: your tendons. They sit between muscle and bone, and they adapt slowly, but once they do, you can hold forces that pure muscle never could."
+  },
+  {
+    "id": "anatomy-zoom",
+    "name": "Anatomy Zoom",
+    "description": "X-ray cut-away of an arm, leg or forearm drawn big in the middle of the page. Skin, muscle bellies, tendon bands and bones pop in as layers, then handwritten labels with red arrows appear on their words and the named layer turns red with striations while the camera punches in.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "limb": {
+          "type": "string",
+          "enum": [
+            "arm",
+            "leg",
+            "forearm"
+          ],
+          "description": "Which limb to cut open."
+        },
+        "labels": {
+          "type": "array",
+          "description": "1–4 labels in narration order; each lands on its word and colours its layer red.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Handwritten label (1–5 words)."
+              },
+              "layer": {
+                "type": "string",
+                "enum": [
+                  "muscle",
+                  "tendon",
+                  "bone",
+                  "skin"
+                ],
+                "description": "Layer the arrow points at."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word to land on (must appear in the narration)."
+              }
+            },
+            "required": [
+              "text",
+              "layer"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "focus": {
+          "type": "string",
+          "enum": [
+            "muscle",
+            "tendon",
+            "bone",
+            "all"
+          ],
+          "description": "Optional final emphasis layer after the labels."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word for the final emphasis."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional thumbnail title (2–6 words; *word* = red)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tag above the title."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional handwritten takeaway at the bottom (≤ 12 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "limb",
+        "labels"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "limb": "arm",
+      "labels": [
+        {
+          "text": "Muscle (grows fast)",
+          "layer": "muscle",
+          "word": "muscle"
+        },
+        {
+          "text": "Tendon (grows slow)",
+          "layer": "tendon",
+          "word": "tendon"
+        },
+        {
+          "text": "Bone",
+          "layer": "bone",
+          "word": "bone"
+        }
+      ],
+      "focus": "tendon",
+      "keyword": "stronger",
+      "title": "Inside your *arm*",
+      "note": "the tendon is the weak link until you train it",
+      "bg": "white"
+    },
+    "exampleNarration": "Cut an arm open and you find three things. Muscle, which grows fast. Tendon, which grows slow. And bone. The tendon is the cable, and a thicker cable is what actually makes you stronger."
+  },
+  {
+    "id": "lean-vs-big",
+    "name": "Lean vs Big",
+    "description": "Rook, the lean athlete, and Brick, the hulking rival, face off in a strength test — tug-of-war, boulder lift, dead hang, push-ups, sprint, planche or a simple stare-down. Handwritten labels compare them, the lean figure's tendons glow red, and on the key word the loser stumbles with an impact panel and a red force arrow.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "test": {
+          "type": "string",
+          "enum": [
+            "tug",
+            "lift",
+            "hang",
+            "pushup",
+            "sprint",
+            "planche",
+            "stare"
+          ],
+          "description": "The strength test."
+        },
+        "winner": {
+          "type": "string",
+          "enum": [
+            "lean",
+            "big",
+            "none"
+          ],
+          "description": "Who wins on the key word (default lean)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word where the outcome lands."
+        },
+        "leanLabel": {
+          "type": "string",
+          "description": "Handwritten label over the lean athlete (1–4 words)."
+        },
+        "bigLabel": {
+          "type": "string",
+          "description": "Handwritten label over the big rival (1–4 words)."
+        },
+        "leanMuscle": {
+          "type": "string",
+          "enum": [
+            "tendons",
+            "forearms",
+            "grip",
+            "full",
+            "arms",
+            "legs",
+            "core",
+            "back",
+            "none"
+          ],
+          "description": "Red highlight on the lean athlete (default tendons)."
+        },
+        "forceLabel": {
+          "type": "string",
+          "description": "Optional word on the force arrow (tug only)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional thumbnail title (2–6 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "test"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "test": "tug",
+      "winner": "lean",
+      "keyword": "wins",
+      "leanLabel": "tendon strength",
+      "bigLabel": "just mass",
+      "leanMuscle": "tendons",
+      "forceLabel": "pull",
+      "title": "Who *wins*?",
+      "bg": "white"
+    },
+    "exampleNarration": "Put a lean climber against a guy twice his size in a tug of war and everyone bets on the big guy. Then the rope moves, and the lean guy wins, because tendons transfer force and mass just sits there."
+  },
+  {
+    "id": "transformation",
+    "name": "Transformation",
+    "description": "Before → after body transformation: a soft, slouching version of the character on the left, a week counter ticking up, then on the key word an ink splash reveals the lean, flexing after-body with its muscles pulsing red, an impact shake and BEFORE / AFTER tags.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Whose transformation (default rook)."
+        },
+        "weeks": {
+          "type": "number",
+          "description": "Weeks the counter runs to (1–104)."
+        },
+        "weeksLabel": {
+          "type": "string",
+          "description": "Counter label (default WEEK; e.g. DAY, MONTH)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word where the after-body is revealed."
+        },
+        "beforeLabel": {
+          "type": "string",
+          "description": "Tag under the before figure (default BEFORE)."
+        },
+        "afterLabel": {
+          "type": "string",
+          "description": "Tag under the after figure (default AFTER)."
+        },
+        "afterPose": {
+          "type": "string",
+          "enum": [
+            "flex",
+            "hips",
+            "stand",
+            "point",
+            "cheer"
+          ],
+          "description": "After-body pose (default flex)."
+        },
+        "afterMuscle": {
+          "type": "string",
+          "enum": [
+            "full",
+            "arms",
+            "legs",
+            "core",
+            "chest",
+            "back",
+            "tendons",
+            "none"
+          ],
+          "description": "Red highlight on the after-body (default full)."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional handwritten aside near the before figure (≤ 6 words)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional thumbnail title (2–6 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "weeks"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "rook",
+      "weeks": 12,
+      "keyword": "twelve",
+      "beforeLabel": "WEEK 0",
+      "afterLabel": "WEEK 12",
+      "afterPose": "flex",
+      "afterMuscle": "full",
+      "note": "zero equipment",
+      "title": "12 weeks of *calisthenics*",
+      "bg": "white"
+    },
+    "exampleNarration": "He started with zero equipment, just a floor and a bar. Push-ups, pull-ups, squats, every other day. By week twelve the difference was not just visible, it was measurable."
+  },
+  {
+    "id": "science-stat",
+    "name": "Science Stat",
+    "description": "One big number in thumbnail lettering counting up on its word, with an ink diagram beside it: a red-lit tendon, muscle or bone cut-away, or a figure performing an exercise with the relevant part glowing. Handwritten label and optional sub-note.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "The number (counts up from 0)."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Text before the number (e.g. \"×\")."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Text after the number (e.g. \"%\", \"kg\", \"×\")."
+        },
+        "decimals": {
+          "type": "number",
+          "description": "Decimal places (0–2)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Handwritten label under the number (2–8 words; *word* = red)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the number lands."
+        },
+        "diagram": {
+          "type": "string",
+          "enum": [
+            "tendon",
+            "muscle",
+            "bone",
+            "figure",
+            "none"
+          ],
+          "description": "Diagram beside the number: anatomy layer or an exercising figure."
+        },
+        "exercise": {
+          "type": "string",
+          "enum": [
+            "pushup",
+            "pullup",
+            "squat",
+            "plank",
+            "planche",
+            "sprint",
+            "curl",
+            "dip",
+            "hang",
+            "handstand",
+            "flex",
+            "lunge"
+          ],
+          "description": "Exercise for diagram = figure."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "biceps",
+            "triceps",
+            "forearms",
+            "grip",
+            "shoulders",
+            "chest",
+            "abs",
+            "lats",
+            "back",
+            "glutes",
+            "quads",
+            "hamstrings",
+            "calves",
+            "achilles",
+            "tendons",
+            "bones",
+            "full"
+          ],
+          "description": "Highlight for diagram = figure."
+        },
+        "diagramLabel": {
+          "type": "string",
+          "description": "Optional label with arrow on the anatomy diagram (1–4 words)."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Optional handwritten note under the label (≤ 12 words)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional thumbnail title (2–6 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "value": 4,
+      "prefix": "×",
+      "label": "tendon stiffness in *12 weeks*",
+      "keyword": "four",
+      "diagram": "tendon",
+      "diagramLabel": "thicker cable",
+      "sub": "heavy isometrics, 30 seconds, 3 times a week",
+      "title": "The *tendon* number",
+      "bg": "white"
+    },
+    "exampleNarration": "Here is the number that changed how I train. Heavy isometric holds increased tendon stiffness by up to four times in twelve weeks. Thirty seconds, three times a week, and the cable gets thicker."
+  },
+  {
+    "id": "routine-list",
+    "name": "Routine List",
+    "description": "A workout routine as an ink list: each row has a tiny figure looping the exercise with its muscle in red, the exercise name in handwriting, and sets × reps in bold red. Rows slide in on their words with a red tick; in landscape a big hero figure switches to each exercise as it appears.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title (2–5 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tag above the title."
+        },
+        "items": {
+          "type": "array",
+          "description": "2–5 exercises in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "exercise": {
+                "type": "string",
+                "enum": [
+                  "pushup",
+                  "pullup",
+                  "squat",
+                  "plank",
+                  "planche",
+                  "sprint",
+                  "curl",
+                  "dip",
+                  "hang",
+                  "handstand",
+                  "lunge",
+                  "flex"
+                ],
+                "description": "Exercise loop."
+              },
+              "name": {
+                "type": "string",
+                "description": "Display name (1–3 words)."
+              },
+              "sets": {
+                "type": "number",
+                "description": "Sets (1–10)."
+              },
+              "reps": {
+                "type": "number",
+                "description": "Reps or seconds (1–120)."
+              },
+              "unit": {
+                "type": "string",
+                "description": "Optional unit after reps (e.g. \"s\", \"m\")."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word the row lands on."
+              }
+            },
+            "required": [
+              "exercise",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who demonstrates (default rook)."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional handwritten note at the bottom (≤ 10 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The *home* routine",
+      "kicker": "No gym",
+      "items": [
+        {
+          "exercise": "pushup",
+          "name": "Push-ups",
+          "sets": 3,
+          "reps": 12,
+          "word": "push-ups"
+        },
+        {
+          "exercise": "pullup",
+          "name": "Pull-ups",
+          "sets": 3,
+          "reps": 6,
+          "word": "pull-ups"
+        },
+        {
+          "exercise": "squat",
+          "name": "Squats",
+          "sets": 3,
+          "reps": 15,
+          "word": "squats"
+        },
+        {
+          "exercise": "hang",
+          "name": "Dead hang",
+          "sets": 2,
+          "reps": 30,
+          "unit": "s",
+          "word": "hang"
+        }
+      ],
+      "note": "rest 90 seconds between sets",
+      "bg": "white"
+    },
+    "exampleNarration": "The whole routine fits on a napkin. Three sets of twelve push-ups. Three sets of six pull-ups. Three sets of fifteen squats. And finish with two dead hangs of thirty seconds. Rest ninety seconds between sets."
+  },
+  {
+    "id": "myth-vs-fact",
+    "name": "Myth vs Fact",
+    "description": "Split page: on the MYTH side the big rival flexes next to the handwritten myth, which gets a big red X on its word; then an ink splash reveals the FACT side where the lean athlete performs the exercise with the real muscle glowing red and a red tick.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "myth": {
+          "type": "string",
+          "description": "The myth (≤ 10 words)."
+        },
+        "fact": {
+          "type": "string",
+          "description": "The fact (≤ 10 words)."
+        },
+        "mythWord": {
+          "type": "string",
+          "description": "Narration word where the myth is crossed out."
+        },
+        "factWord": {
+          "type": "string",
+          "description": "Narration word where the fact appears."
+        },
+        "exercise": {
+          "type": "string",
+          "enum": [
+            "pushup",
+            "pullup",
+            "squat",
+            "plank",
+            "planche",
+            "sprint",
+            "curl",
+            "dip",
+            "hang",
+            "handstand",
+            "lunge"
+          ],
+          "description": "Exercise shown on the fact side."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "biceps",
+            "triceps",
+            "forearms",
+            "grip",
+            "shoulders",
+            "chest",
+            "abs",
+            "lats",
+            "back",
+            "glutes",
+            "quads",
+            "calves",
+            "tendons",
+            "bones",
+            "full"
+          ],
+          "description": "Red highlight on the fact side."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who demonstrates the fact (default rook)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional small title at the bottom."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "myth",
+        "fact"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "myth": "Bigger muscles = stronger",
+      "fact": "Tendons set your strength ceiling",
+      "mythWord": "stronger",
+      "factWord": "tendons",
+      "exercise": "pullup",
+      "muscle": "forearms",
+      "bg": "white"
+    },
+    "exampleNarration": "The myth is that bigger muscles automatically make you stronger. The fact is that your tendons set the ceiling, which is why a lean climber can out-pull a bodybuilder."
+  },
+  {
+    "id": "form-check",
+    "name": "Form Check",
+    "description": "Correct form versus wrong form: two copies of the character do the same exercise side by side, the wrong one with sagging hips, rounded back or a half rep. A red X and a handwritten note with an arrow mark the mistake on its word, then a red tick and a muscle glow reward the correct version.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "exercise": {
+          "type": "string",
+          "enum": [
+            "pushup",
+            "pullup",
+            "squat",
+            "plank",
+            "planche",
+            "sprint",
+            "curl",
+            "dip",
+            "hang",
+            "handstand",
+            "lunge",
+            "lift"
+          ],
+          "description": "Exercise to check."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word where the mistake is called out."
+        },
+        "errorNote": {
+          "type": "string",
+          "description": "Handwritten mistake note (1–4 words; default per exercise)."
+        },
+        "goodLabel": {
+          "type": "string",
+          "description": "Tag under the correct figure (default CORRECT)."
+        },
+        "badLabel": {
+          "type": "string",
+          "description": "Tag under the wrong figure (default WRONG)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who demonstrates (default rook)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional small title."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "exercise"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "exercise": "pushup",
+      "keyword": "sag",
+      "errorNote": "hips sag",
+      "goodLabel": "STRAIGHT LINE",
+      "badLabel": "BANANA",
+      "title": "Push-up *form*",
+      "bg": "white"
+    },
+    "exampleNarration": "Most push-ups fail before the arms do. Let the hips sag and the core switches off, the shoulders take the load, and the rep stops counting. Keep one straight line from heel to head."
+  },
+  {
+    "id": "effort-moment",
+    "name": "Effort Moment",
+    "description": "The dramatic manga panel: the character strains at the peak of an exercise with concentration lines closing in, sweat and shaking, then on the key word an inverted impact frame, a red ink splash, a camera punch-in and giant slammed lettering. Use for the climax of a chapter.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who strains (default rook)."
+        },
+        "exercise": {
+          "type": "string",
+          "enum": [
+            "planche",
+            "pullup",
+            "pushup",
+            "handstand",
+            "hang",
+            "lift",
+            "tug",
+            "squat",
+            "dip"
+          ],
+          "description": "Exercise held at its hardest point (omit for a standing strain pose)."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "strain",
+            "flex",
+            "cheer",
+            "pullup",
+            "planche",
+            "lift"
+          ],
+          "description": "Static pose when no exercise is given."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word where the impact lands."
+        },
+        "text": {
+          "type": "string",
+          "description": "Giant slammed text (1–3 words; *word* = red)."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Optional handwritten line under the text (≤ 6 words)."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "full",
+            "arms",
+            "legs",
+            "core",
+            "chest",
+            "back",
+            "shoulders",
+            "forearms",
+            "tendons",
+            "grip",
+            "none"
+          ],
+          "description": "Red highlight (default: the exercise's muscle)."
+        },
+        "annotation": {
+          "type": "string",
+          "description": "Optional handwritten label with arrow after the impact (1–4 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background (black is strongest here)."
+        }
+      },
+      "required": [
+        "word",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "rook",
+      "exercise": "planche",
+      "word": "lock",
+      "text": "*Lock* it",
+      "sub": "every tendon loaded",
+      "muscle": "shoulders",
+      "annotation": "straight arms",
+      "bg": "black"
+    },
+    "exampleNarration": "Three years of lean-forward holds for this one second. Shoulders over the hands, hips rising, every tendon loaded, and then you lock it."
+  },
+  {
+    "id": "title-card",
+    "name": "Title Card",
+    "description": "Chapter opener: an ink splash wipes in, giant thumbnail lettering slams on with a red kicker tag, and the character stands beside it (hands on hips, flexing or pointing) with red ink splatter behind them, talking the narration.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title (2–7 words; *word* = red)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional red tag above the title (1–3 words, e.g. PART 2)."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Optional handwritten subtitle (≤ 8 words)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who stands beside the title (default rook)."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "hips",
+            "flex",
+            "point",
+            "crossed",
+            "cheer",
+            "stand"
+          ],
+          "description": "Pose (default hips)."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "none",
+            "full",
+            "arms",
+            "tendons",
+            "core",
+            "legs"
+          ],
+          "description": "Optional red highlight on the character."
+        },
+        "pulseWord": {
+          "type": "string",
+          "description": "Optional narration word for a red pulse + shake."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Quit the gym, do *calisthenics*",
+      "kicker": "Part 1",
+      "sub": "the science of lean strength",
+      "character": "rook",
+      "pose": "hips",
+      "muscle": "tendons",
+      "pulseWord": "strength",
+      "bg": "white"
+    },
+    "exampleNarration": "Part one. Why I quit the gym and switched to calisthenics, and what the science of lean strength actually says about it."
+  },
+  {
+    "id": "progress-graph",
+    "name": "Progress Graph",
+    "description": "A hand-drawn ink chart (wobbly axes, a red line drawn on point by point or hatched bars growing up) with handwritten axis labels, one annotation with a red arrow on the key point, and the character cheering at the end.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title (2–6 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tag above the title."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "line",
+            "bars"
+          ],
+          "description": "Chart type (default line)."
+        },
+        "series": {
+          "type": "array",
+          "description": "1–3 series, 2–12 values each (first series is red).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Series label (1–3 words)."
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "description": "2–12 numbers ≥ 0."
+              }
+            },
+            "required": [
+              "values"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "xLabels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional x-axis labels (one per value, ≤ 8 chars)."
+        },
+        "yLabel": {
+          "type": "string",
+          "description": "Optional y-axis label (1–3 words)."
+        },
+        "max": {
+          "type": "number",
+          "description": "Optional y-axis maximum."
+        },
+        "annotation": {
+          "type": "object",
+          "description": "Optional handwritten callout on one point of the first series.",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Callout text (1–5 words)."
+            },
+            "index": {
+              "type": "number",
+              "description": "Point index (0-based)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word to land on."
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "rook",
+            "brick"
+          ],
+          "description": "Who cheers at the end (default rook)."
+        },
+        "muscle": {
+          "type": "string",
+          "enum": [
+            "none",
+            "full",
+            "arms",
+            "tendons",
+            "legs"
+          ],
+          "description": "Optional highlight on the character at the end."
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional handwritten footnote (≤ 10 words)."
+        },
+        "bg": {
+          "type": "string",
+          "enum": [
+            "white",
+            "black"
+          ],
+          "description": "Background."
+        }
+      },
+      "required": [
+        "series"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Muscle vs *tendon*",
+      "type": "line",
+      "series": [
+        {
+          "label": "tendon",
+          "values": [
+            1,
+            1.2,
+            1.6,
+            2.4,
+            3.6,
+            5
+          ]
+        },
+        {
+          "label": "muscle",
+          "values": [
+            1,
+            2.2,
+            3,
+            3.4,
+            3.6,
+            3.7
+          ]
+        }
+      ],
+      "xLabels": [
+        "wk 0",
+        "wk 4",
+        "wk 8",
+        "wk 12",
+        "wk 16",
+        "wk 20"
+      ],
+      "yLabel": "strength",
+      "annotation": {
+        "text": "the tendon catches up",
+        "index": 4,
+        "word": "catches"
+      },
+      "muscle": "tendons",
+      "bg": "white"
+    },
+    "exampleNarration": "Muscle responds first, so for the first eight weeks it looks like muscle wins. Then it plateaus. Tendon adapts slowly, but it keeps going, and around week sixteen it catches up and never stops."
+  }
+]

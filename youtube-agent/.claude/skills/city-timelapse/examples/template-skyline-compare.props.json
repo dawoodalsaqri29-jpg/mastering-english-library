@@ -1,0 +1,21 @@
+{
+  "title": "Two cities, one *century*",
+  "left": {
+    "city": "New Harbor",
+    "preset": "island",
+    "style": "american",
+    "seed": 7,
+    "year": 2024,
+    "stat": "8.8M people"
+  },
+  "right": {
+    "city": "Bayhaven",
+    "preset": "bay",
+    "style": "asian",
+    "seed": 3,
+    "year": 2024,
+    "stat": "7.4M people"
+  },
+  "keywordLeft": "Harbor",
+  "keywordRight": "Bayhaven"
+}

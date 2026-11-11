@@ -1,0 +1,17 @@
+{
+  "signs": [
+    {
+      "text": "8 billion people",
+      "keyword": "billion"
+    },
+    {
+      "text": "56% in cities",
+      "keyword": "cities"
+    },
+    {
+      "text": "68% by 2050",
+      "keyword": "2050"
+    }
+  ],
+  "theme": "dusk"
+}

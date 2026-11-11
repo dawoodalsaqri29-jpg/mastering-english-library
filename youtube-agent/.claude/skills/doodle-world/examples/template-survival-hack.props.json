@@ -1,0 +1,29 @@
+{
+  "location": "desert",
+  "character": "nia",
+  "prop": "jug",
+  "setpiece": "pot",
+  "expression": "hot",
+  "title": "ANCIENT *AC*?!",
+  "keyword": "cold",
+  "indicator": "hot",
+  "temperature": "50 C",
+  "callouts": [
+    {
+      "text": "porous clay pot",
+      "target": "setpiece",
+      "word": "clay"
+    },
+    {
+      "text": "water seeps out",
+      "target": "prop",
+      "word": "seeps"
+    },
+    {
+      "text": "evaporation = cold",
+      "target": "head",
+      "word": "cold"
+    }
+  ],
+  "result": "better"
+}

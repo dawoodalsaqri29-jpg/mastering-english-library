@@ -1,0 +1,44 @@
+{
+  "title": "The wrong *target*",
+  "date": "APR 1944",
+  "regions": [
+    {
+      "name": "germany",
+      "nation": "germany",
+      "word": "Germany"
+    },
+    {
+      "name": "britain",
+      "nation": "britain",
+      "word": "Britain"
+    },
+    {
+      "name": "switzerland",
+      "nation": "switzerland",
+      "word": "Switzerland"
+    }
+  ],
+  "arrows": [
+    {
+      "from": "britain",
+      "to": "germany",
+      "word": "bombers",
+      "nation": "britain"
+    }
+  ],
+  "targets": [
+    {
+      "at": "switzerland",
+      "word": "wrong",
+      "label": "Oops",
+      "boom": true
+    }
+  ],
+  "narrator": {
+    "role": "general",
+    "nation": "britain",
+    "expression": "serious"
+  },
+  "caption": "Navigation was… optimistic.",
+  "captionWord": "navigation"
+}

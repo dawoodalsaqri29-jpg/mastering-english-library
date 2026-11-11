@@ -1,0 +1,15 @@
+{
+  "id": "pixel-quest",
+  "name": "Pixel Quest",
+  "description": "Your video becomes an original 16-bit video game — a hero and friends walk through side-scrolling pixel worlds, collect facts as power-ups, battle bosses, talk in RPG dialogue boxes and level up. Hand-made pixel sprites, parallax tilesets, a bitmap font, screen shake and particles.",
+  "premium": true,
+  "palette": {
+    "background": "#140f26",
+    "foreground": "#f4f4e8",
+    "accent": "#f8d040",
+    "muted": "#8b8fa8"
+  },
+  "fonts": [
+    "\"Courier New\", ui-monospace, monospace"
+  ]
+}

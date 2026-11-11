@@ -1,0 +1,13 @@
+{
+  "role": "soldier",
+  "nation": "britain",
+  "location": "field",
+  "lines": [
+    "The letters were never answered.",
+    "But the border stayed quiet.",
+    "And that, in 1945, was enough."
+  ],
+  "title": "The end",
+  "side": "left",
+  "date": "1945"
+}

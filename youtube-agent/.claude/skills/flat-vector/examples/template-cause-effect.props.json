@@ -1,0 +1,22 @@
+{
+  "title": "How rain is made",
+  "steps": [
+    {
+      "illus": "sun",
+      "label": "Sun heats"
+    },
+    {
+      "illus": "wave",
+      "label": "Ocean evaporates"
+    },
+    {
+      "illus": "cloud",
+      "label": "Clouds form"
+    },
+    {
+      "illus": "drop",
+      "label": "Rain falls"
+    }
+  ],
+  "world": "dusk"
+}

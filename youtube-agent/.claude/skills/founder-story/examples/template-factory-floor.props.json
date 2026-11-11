@@ -1,0 +1,14 @@
+{
+  "company": "Northwind Motors",
+  "years": "1955",
+  "archetype": "engineer",
+  "empire": "auto",
+  "product": "car",
+  "headline": "One car every *ninety* seconds",
+  "keyword": "ninety",
+  "rate": {
+    "value": "1200",
+    "label": "cars per day",
+    "word": "day"
+  }
+}

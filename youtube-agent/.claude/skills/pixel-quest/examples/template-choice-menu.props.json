@@ -1,0 +1,17 @@
+{
+  "question": "Which savings path suits you?",
+  "options": [
+    {
+      "label": "Savings account",
+      "detail": "Safe and instant, but tiny growth.",
+      "keyword": "savings"
+    },
+    {
+      "label": "Index fund",
+      "detail": "Ups and downs, strong long-term growth.",
+      "keyword": "index"
+    }
+  ],
+  "chosen": 1,
+  "verdict": "Index fund, for the long game!"
+}

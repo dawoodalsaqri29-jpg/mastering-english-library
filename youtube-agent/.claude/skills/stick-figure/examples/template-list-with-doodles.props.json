@@ -1,0 +1,21 @@
+{
+  "title": "How to look busy",
+  "items": [
+    {
+      "text": "Carry a clipboard",
+      "doodle": "document"
+    },
+    {
+      "text": "Walk fast, sigh loudly",
+      "doodle": "clock"
+    },
+    {
+      "text": "Actually do the work",
+      "doodle": "pencil",
+      "crossed": true
+    }
+  ],
+  "style": "doodles",
+  "character": "hank",
+  "endPose": "smug"
+}

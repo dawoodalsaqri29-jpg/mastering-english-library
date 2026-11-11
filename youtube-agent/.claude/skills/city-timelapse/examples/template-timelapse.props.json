@@ -1,0 +1,45 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "yearFrom": 1609,
+  "yearTo": 2024,
+  "endsNow": true,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "population": 8800000,
+  "beats": [
+    {
+      "year": 1626,
+      "label": "A trading post",
+      "caption": "A fort and thirty houses at the tip of the island",
+      "keyword": "fort"
+    },
+    {
+      "year": 1811,
+      "label": "The grid",
+      "caption": "A plan of straight avenues and numbered streets",
+      "keyword": "grid"
+    },
+    {
+      "year": 1883,
+      "label": "Bridges and steam",
+      "caption": "Factories, railways and the first great bridge",
+      "keyword": "bridge"
+    },
+    {
+      "year": 1931,
+      "label": "Race to the sky",
+      "caption": "Steel frames push past 300 metres",
+      "keyword": "sky"
+    }
+  ]
+}

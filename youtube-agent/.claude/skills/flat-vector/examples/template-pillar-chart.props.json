@@ -1,0 +1,23 @@
+{
+  "title": "Hours of *sleep* we need",
+  "bars": [
+    {
+      "label": "Baby",
+      "value": 15
+    },
+    {
+      "label": "Child",
+      "value": 11
+    },
+    {
+      "label": "Teen",
+      "value": 9
+    },
+    {
+      "label": "Adult",
+      "value": 8
+    }
+  ],
+  "unit": " h",
+  "world": "studio"
+}

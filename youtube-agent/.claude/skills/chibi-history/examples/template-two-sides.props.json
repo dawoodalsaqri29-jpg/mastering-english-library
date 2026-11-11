@@ -1,0 +1,39 @@
+{
+  "left": {
+    "role": "officer",
+    "nation": "britain",
+    "label": "London",
+    "location": "office"
+  },
+  "right": {
+    "role": "general",
+    "nation": "germany",
+    "label": "Berlin",
+    "location": "war-room"
+  },
+  "lines": [
+    {
+      "side": "left",
+      "text": "We sent eight letters.",
+      "expression": "worried",
+      "gesture": "hold-up",
+      "reaction": "smug"
+    },
+    {
+      "side": "right",
+      "text": "We did not reply.",
+      "expression": "smug",
+      "gesture": "cross",
+      "reaction": "angry"
+    },
+    {
+      "side": "left",
+      "text": "Not even a postcard?",
+      "expression": "angry",
+      "gesture": "shrug",
+      "reaction": "calm"
+    }
+  ],
+  "title": "Both sides",
+  "date": "1939"
+}

@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "photo-pan",
+    "name": "Photo pan (Ken Burns)",
+    "description": "The workhorse: one archival photograph on the lamp-lit desk develops in, then the camera slowly pushes, pulls or pans across it (Ken Burns) toward the subject's face or point of interest. Serif lower-third with name/title and a typed date stamp. Use for people, places, events: most scenes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "portrait-woman",
+            "group",
+            "crowd",
+            "city",
+            "street",
+            "building",
+            "ship",
+            "train",
+            "factory",
+            "landscape",
+            "aircraft",
+            "bridge"
+          ],
+          "description": "Photograph subject: portrait (man, vintage studio bust), portrait-woman, group (posed group photo), crowd (rally/protest/celebration), city (skyline), street (period street with figures and a motor car), building (domed government building), ship (ocean liner), train (steam locomotive), factory (chimneys and smoke), landscape (farmland, hills, windmill), aircraft (biplane), bridge (suspension bridge)."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "title": {
+          "type": "string",
+          "description": "Lower-third title, up to 6 words (a name, place or event)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Lower-third line under the title, up to 10 words (role, years, context)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Typed date stamp, e.g. 'April 14, 1912' or '1929'."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place under the date stamp, e.g. 'Southampton, England'."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Handwritten note on the print's border, up to 5 words, e.g. 'Father, 1911'."
+        },
+        "focus": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "left",
+            "center",
+            "right",
+            "top",
+            "bottom"
+          ],
+          "description": "Where the camera drifts to (auto = the subject's face / point of interest)."
+        },
+        "move": {
+          "type": "string",
+          "enum": [
+            "push-in",
+            "pull-out",
+            "pan-left",
+            "pan-right"
+          ],
+          "description": "Camera move. push-in (default) for intimacy, pull-out to reveal, pans for wide scenes (crowds, cities, ships)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "subject"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "subject": "ship",
+      "tone": "sepia",
+      "title": "RMS Titanic",
+      "subtitle": "Leaving Southampton on her maiden voyage",
+      "date": "April 10, 1912",
+      "place": "Southampton, England",
+      "caption": "Last photograph",
+      "move": "pan-right",
+      "keyword": "Titanic"
+    },
+    "exampleNarration": "On a bright April morning the Titanic slipped away from Southampton, the largest moving object ever built."
+  },
+  {
+    "id": "newspaper-headline",
+    "name": "Newspaper front page",
+    "description": "A period front page spins onto the desk and lands on the key word; the camera reads the giant headline, tilts down to the front-page photo and pulls back. Masthead, dateline, deck and newsprint columns. Use for news that shook the world, announcements, turning points.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "paper": {
+          "type": "string",
+          "description": "Masthead name, e.g. 'The Evening Herald' (invent a period-sounding paper; never a real brand)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Dateline, e.g. 'Tuesday, October 29, 1929'."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline, up to 8 words, e.g. 'Stocks Collapse in Wild Selling' (set in capitals)."
+        },
+        "subhead": {
+          "type": "string",
+          "description": "Deck under the headline, up to 16 words."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small line above the headline, up to 4 words, e.g. 'EXTRA'."
+        },
+        "subject": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "portrait-woman",
+            "group",
+            "crowd",
+            "city",
+            "street",
+            "building",
+            "ship",
+            "train",
+            "factory",
+            "landscape",
+            "aircraft",
+            "bridge"
+          ],
+          "description": "Front-page photograph subject (see photo-pan subjects)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Photo caption, up to 12 words."
+        },
+        "price": {
+          "type": "string",
+          "description": "Price box, e.g. 'TWO CENTS'."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "spin": {
+          "type": "boolean",
+          "description": "Spin the paper in (default true); false for a quieter drop."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "headline"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "paper": "The Evening Herald",
+      "date": "Tuesday, October 29, 1929",
+      "headline": "Stocks Collapse in Wild Selling",
+      "subhead": "Sixteen million shares change hands as panic grips Wall Street; bankers meet in haste",
+      "kicker": "Extra",
+      "subject": "crowd",
+      "caption": "Crowds gather outside the Exchange at noon",
+      "price": "Two Cents",
+      "tone": "silver",
+      "keyword": "collapsed"
+    },
+    "exampleNarration": "By the afternoon of October twenty-ninth, the market had collapsed, and every newspaper in the country said the same thing."
+  },
+  {
+    "id": "map-route",
+    "name": "Parchment map route",
+    "description": "An antique parchment map (coastlines, mountains, rivers, compass rose, title cartouche). Places ink in as they are named while a route line draws from one to the next and the camera follows the marker (a ship for sea, a plane for air). Use for journeys, voyages, campaigns, migrations, trade routes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Cartouche title, up to 5 words, e.g. 'The Northern Passage'."
+        },
+        "places": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Place name, up to 3 words, spoken in the narration."
+              },
+              "date": {
+                "type": "string",
+                "description": "Optional date under the name, e.g. '1519'."
+              },
+              "x": {
+                "type": "number",
+                "description": "Optional position 0-1 from the left."
+              },
+              "y": {
+                "type": "number",
+                "description": "Optional position 0-1 from the top."
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2-6 places in route order (narration order)."
+        },
+        "route": {
+          "type": "string",
+          "enum": [
+            "land",
+            "sea",
+            "air",
+            "rail"
+          ],
+          "description": "Route style: land (dashed), sea (dotted, ship marker), air (arcs, plane marker), rail (track)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "continent",
+            "coast",
+            "islands",
+            "inland"
+          ],
+          "description": "Map geography."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional lower-third at the end, up to 8 words."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional typed date stamp."
+        }
+      },
+      "required": [
+        "places"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Voyage of the Endeavour",
+      "places": [
+        {
+          "name": "Plymouth",
+          "date": "1768"
+        },
+        {
+          "name": "Rio",
+          "date": "1768"
+        },
+        {
+          "name": "Tahiti",
+          "date": "1769"
+        },
+        {
+          "name": "Botany Bay",
+          "date": "1770"
+        }
+      ],
+      "route": "sea",
+      "terrain": "islands",
+      "subtitle": "Three years, thirty thousand miles"
+    },
+    "exampleNarration": "The Endeavour left Plymouth, crossed to Rio, sailed on to Tahiti and finally reached Botany Bay."
+  },
+  {
+    "id": "document-reveal",
+    "name": "Typed document reveal",
+    "description": "A typewritten memo slides onto the desk; the text strikes onto the page character by character while the camera reads along, redaction bars sweep across sensitive words, and a rubber stamp thumps down on the key word. Use for secrets, orders, reports, declassified files, official decisions.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "string",
+          "description": "Letterhead, up to 6 words, e.g. 'Department of War, Office of the Secretary'."
+        },
+        "title": {
+          "type": "string",
+          "description": "Document type, up to 3 words, e.g. 'MEMORANDUM'."
+        },
+        "date": {
+          "type": "string",
+          "description": "DATE line."
+        },
+        "to": {
+          "type": "string",
+          "description": "TO line, up to 6 words."
+        },
+        "from": {
+          "type": "string",
+          "description": "FROM line, up to 6 words."
+        },
+        "subject": {
+          "type": "string",
+          "description": "SUBJECT line, up to 8 words."
+        },
+        "ref": {
+          "type": "string",
+          "description": "REF / file number, e.g. 'File 47-B'."
+        },
+        "body": {
+          "type": "string",
+          "description": "Typed body, 20-70 words; usually words from the narration."
+        },
+        "redact": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Words or short phrases from the body to black out (0-4)."
+        },
+        "classification": {
+          "type": "string",
+          "description": "Marking printed top and bottom, e.g. 'TOP SECRET'."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Rubber stamp text, 1-2 words, e.g. 'APPROVED', 'CLASSIFIED', 'DENIED'."
+        },
+        "stampColor": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "black"
+          ],
+          "description": "Stamp ink."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "header": "Office of Strategic Services",
+      "title": "Memorandum",
+      "date": "June 2, 1944",
+      "to": "Supreme Headquarters",
+      "subject": "Operation Overlord, final timing",
+      "ref": "File 44-OV-17",
+      "body": "Weather window confirmed for the morning of June sixth. Landing forces will proceed to Normandy beaches as planned. Deception units remain in Kent. Under no circumstances is the date to be discussed outside this office.",
+      "redact": [
+        "Normandy",
+        "Kent"
+      ],
+      "classification": "Top Secret",
+      "stamp": "Approved",
+      "stampColor": "red",
+      "keyword": "approved"
+    },
+    "exampleNarration": "The memo was short. The weather window was confirmed, the landings would go ahead, and by evening the plan was approved."
+  },
+  {
+    "id": "timeline-ribbon",
+    "name": "Timeline ribbon",
+    "description": "A long paper tape of dates runs across the desk; as each year is spoken a manila date tag drops, a string ties it to the ribbon and a small print slides in, while the camera tracks along the timeline and finally pulls back to show it all. Use for chronologies, eras, the history of an idea.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional lower-third when the camera pulls back, up to 6 words."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional line under the title."
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Year or date, spoken in the narration, e.g. '1876'."
+              },
+              "label": {
+                "type": "string",
+                "description": "What happened, up to 8 words."
+              },
+              "subject": {
+                "type": "string",
+                "enum": [
+                  "portrait",
+                  "portrait-woman",
+                  "group",
+                  "crowd",
+                  "city",
+                  "street",
+                  "building",
+                  "ship",
+                  "train",
+                  "factory",
+                  "landscape",
+                  "aircraft",
+                  "bridge"
+                ],
+                "description": "Optional small photograph next to the tag."
+              }
+            },
+            "required": [
+              "date",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2-6 events in narration order."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "A Century of Flight",
+      "events": [
+        {
+          "date": "1903",
+          "label": "First powered flight at Kitty Hawk",
+          "subject": "aircraft"
+        },
+        {
+          "date": "1927",
+          "label": "Lindbergh crosses the Atlantic alone",
+          "subject": "portrait"
+        },
+        {
+          "date": "1937",
+          "label": "The age of airships ends in flames",
+          "subject": "crowd"
+        },
+        {
+          "date": "1969",
+          "label": "Men walk on the Moon",
+          "subject": "landscape"
+        }
+      ],
+      "tone": "sepia"
+    },
+    "exampleNarration": "In 1903 the first powered aircraft left the ground. By 1927 a lone pilot crossed the Atlantic. In 1937 the age of airships ended in flames, and in 1969 men walked on the Moon."
+  },
+  {
+    "id": "evidence-board",
+    "name": "Evidence board",
+    "description": "An investigator's cork board: index cards and pinned prints go up one by one as each name or clue is spoken, then red string links them while the camera moves from clue to clue and pulls back to the whole web. Use for true crime, conspiracies, who-knew-whom, cause-and-effect chains.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Typed label strip at the top, up to 5 words, e.g. 'CASE No. 1932-L'."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Name or clue, up to 4 words, spoken in the narration."
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional short note, up to 8 words."
+              },
+              "subject": {
+                "type": "string",
+                "enum": [
+                  "portrait",
+                  "portrait-woman",
+                  "group",
+                  "crowd",
+                  "city",
+                  "street",
+                  "building",
+                  "ship",
+                  "train",
+                  "factory",
+                  "landscape",
+                  "aircraft",
+                  "bridge"
+                ],
+                "description": "Optional: pin a photograph instead of a card (portrait for people)."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2-6 clues in narration order."
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "number",
+                "description": "Index of the first item (0-based)."
+              },
+              "to": {
+                "type": "number",
+                "description": "Index of the second item."
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Optional string connections; default chains the items in order."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Case No. 1932-L",
+      "items": [
+        {
+          "label": "The Ladder",
+          "note": "Homemade, one broken rung"
+        },
+        {
+          "label": "Ransom Note",
+          "note": "Odd spelling, German phrasing"
+        },
+        {
+          "label": "Gold Certificates",
+          "note": "Passed in the Bronx"
+        },
+        {
+          "label": "The Carpenter",
+          "subject": "portrait",
+          "note": "Arrested 1934"
+        }
+      ],
+      "tone": "silver"
+    },
+    "exampleNarration": "There was the ladder, then the ransom note. Two years later marked gold certificates surfaced in the Bronx, and they led straight to a carpenter."
+  },
+  {
+    "id": "letter-excerpt",
+    "name": "Handwritten letter",
+    "description": "A handwritten letter slides onto the desk beside its envelope and is written line by line in ink as the words are read aloud, the camera following the pen; it ends on the signature and an author lower-third. Use for quotes, letters home, diaries, last words, personal testimony.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "quote": {
+          "type": "string",
+          "description": "The letter text, 12-60 words; use the exact narrated words so the writing syncs."
+        },
+        "salutation": {
+          "type": "string",
+          "description": "Opening, e.g. 'My dearest Sarah,'."
+        },
+        "signoff": {
+          "type": "string",
+          "description": "Closing, e.g. 'Ever yours,'."
+        },
+        "signature": {
+          "type": "string",
+          "description": "Signed name as written (defaults to author)."
+        },
+        "author": {
+          "type": "string",
+          "description": "Author for the lower-third, e.g. 'Major Sullivan Ballou'."
+        },
+        "role": {
+          "type": "string",
+          "description": "Lower-third subline, e.g. '2nd Rhode Island Infantry'."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date written at the top right."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place written at the top right."
+        }
+      },
+      "required": [
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "quote": "The memories of the blissful moments I have spent with you come creeping over me, and I feel most gratified to God and to you that I have enjoyed them so long.",
+      "salutation": "My very dear Sarah,",
+      "signoff": "Ever yours,",
+      "signature": "Sullivan",
+      "author": "Major Sullivan Ballou",
+      "role": "2nd Rhode Island Infantry, 1861",
+      "date": "July 14, 1861",
+      "place": "Camp Clark"
+    },
+    "exampleNarration": "The memories of the blissful moments I have spent with you come creeping over me, and I feel most gratified to God and to you that I have enjoyed them so long."
+  },
+  {
+    "id": "stat-ledger",
+    "name": "Ledger statistics",
+    "description": "Numbers inked into an old accounts ledger: the headline figure counts up in big serif numerals and is circled in red ink, then supporting figures are entered on the ruled lines as they are spoken. Use for casualties, costs, populations, production figures, any big number from history.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Ledger heading, up to 5 words, e.g. 'Cost of the War'."
+        },
+        "year": {
+          "type": "string",
+          "description": "Year written in red at the top right."
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "The number."
+              },
+              "label": {
+                "type": "string",
+                "description": "What it counts, up to 7 words, spoken in the narration."
+              },
+              "prefix": {
+                "type": "string",
+                "description": "e.g. '$'."
+              },
+              "suffix": {
+                "type": "string",
+                "description": "e.g. '%', ' tons'."
+              },
+              "decimals": {
+                "type": "number",
+                "description": "Decimal places (default 0)."
+              }
+            },
+            "required": [
+              "value",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "1-4 figures; the first is the headline number."
+        },
+        "source": {
+          "type": "string",
+          "description": "Source note, up to 8 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "stats"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Great Migration",
+      "year": "1910-1940",
+      "stats": [
+        {
+          "value": 1600000,
+          "label": "people moved north"
+        },
+        {
+          "value": 6,
+          "label": "major destination cities"
+        },
+        {
+          "value": 40,
+          "suffix": "%",
+          "label": "growth of Chicago's population"
+        }
+      ],
+      "source": "U.S. Census, 1940",
+      "keyword": "million"
+    },
+    "exampleNarration": "Over one point six million people moved north, into six major cities, and Chicago's population grew by forty percent."
+  },
+  {
+    "id": "chapter-title",
+    "name": "Chapter title card",
+    "description": "Fade up from black on a dim print under the lamp; a chapter number in typewriter capitals, a serif title that resolves from blur and a typed date and place. Use to open the film and each new chapter.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "description": "Chapter label, e.g. 'Chapter Three' or 'Part II'."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chapter title, 1-6 words."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional italic line, up to 10 words."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date or years, e.g. '1914-1918'."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place, e.g. 'The Western Front'."
+        },
+        "subject": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "portrait-woman",
+            "group",
+            "crowd",
+            "city",
+            "street",
+            "building",
+            "ship",
+            "train",
+            "factory",
+            "landscape",
+            "aircraft",
+            "bridge"
+          ],
+          "description": "Photograph glowing faintly behind the title."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "chapter": "Chapter One",
+      "title": "The Gilded Age",
+      "subtitle": "Fortunes made in steel, oil and rail",
+      "date": "1870-1900",
+      "place": "New York",
+      "subject": "city",
+      "tone": "sepia",
+      "keyword": "gilded"
+    },
+    "exampleNarration": "Chapter one. The gilded age, when fortunes were made in steel, oil and rail."
+  },
+  {
+    "id": "then-vs-now",
+    "name": "Then and now",
+    "description": "An aged sepia print and a crisp modern print of the same kind of scene: the camera lingers on the past, the present slides in beside it on the key word, then pulls back to compare both with their years. Use for change over time, before/after, legacy.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "then": {
+          "type": "object",
+          "properties": {
+            "subject": {
+              "type": "string",
+              "enum": [
+                "portrait",
+                "portrait-woman",
+                "group",
+                "crowd",
+                "city",
+                "street",
+                "building",
+                "ship",
+                "train",
+                "factory",
+                "landscape",
+                "aircraft",
+                "bridge"
+              ],
+              "description": "Photograph subject: portrait (man, vintage studio bust), portrait-woman, group (posed group photo), crowd (rally/protest/celebration), city (skyline), street (period street with figures and a motor car), building (domed government building), ship (ocean liner), train (steam locomotive), factory (chimneys and smoke), landscape (farmland, hills, windmill), aircraft (biplane), bridge (suspension bridge)."
+            },
+            "year": {
+              "type": "string",
+              "description": "e.g. '1890'."
+            },
+            "label": {
+              "type": "string",
+              "description": "Up to 6 words."
+            },
+            "tone": {
+              "type": "string",
+              "enum": [
+                "sepia",
+                "silver",
+                "cyanotype",
+                "faded",
+                "modern"
+              ],
+              "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+            }
+          },
+          "required": [
+            "subject",
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        "now": {
+          "type": "object",
+          "properties": {
+            "subject": {
+              "type": "string",
+              "enum": [
+                "portrait",
+                "portrait-woman",
+                "group",
+                "crowd",
+                "city",
+                "street",
+                "building",
+                "ship",
+                "train",
+                "factory",
+                "landscape",
+                "aircraft",
+                "bridge"
+              ],
+              "description": "Photograph subject: portrait (man, vintage studio bust), portrait-woman, group (posed group photo), crowd (rally/protest/celebration), city (skyline), street (period street with figures and a motor car), building (domed government building), ship (ocean liner), train (steam locomotive), factory (chimneys and smoke), landscape (farmland, hills, windmill), aircraft (biplane), bridge (suspension bridge)."
+            },
+            "year": {
+              "type": "string",
+              "description": "e.g. 'Today' or '2024'."
+            },
+            "label": {
+              "type": "string",
+              "description": "Up to 6 words."
+            },
+            "tone": {
+              "type": "string",
+              "enum": [
+                "sepia",
+                "silver",
+                "cyanotype",
+                "faded",
+                "modern"
+              ],
+              "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+            }
+          },
+          "required": [
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional lower-third at the end, up to 6 words."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional line under it."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from the narration; the key visual lands on it."
+        }
+      },
+      "required": [
+        "then",
+        "now"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "then": {
+        "subject": "street",
+        "year": "1905",
+        "label": "Market Street, horse and tram"
+      },
+      "now": {
+        "subject": "city",
+        "year": "Today",
+        "label": "The same corner, rebuilt"
+      },
+      "title": "One Street, A Century Apart",
+      "keyword": "today"
+    },
+    "exampleNarration": "In 1905 Market Street was horses, trams and gas lamps. Today the same corner is glass and steel."
+  },
+  {
+    "id": "film-reel",
+    "name": "Film strip on a light box",
+    "description": "A strip of 35mm negatives slides across a glowing light box under a brass loupe, stopping on one frame at a time with a documentary subtitle for each. Use for montages, newsreel moments, a sequence of events or faces.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Typed reel label in the corner, up to 6 words, e.g. 'Reel 4, The Crossing'."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional line under the label."
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "subject": {
+                "type": "string",
+                "enum": [
+                  "portrait",
+                  "portrait-woman",
+                  "group",
+                  "crowd",
+                  "city",
+                  "street",
+                  "building",
+                  "ship",
+                  "train",
+                  "factory",
+                  "landscape",
+                  "aircraft",
+                  "bridge"
+                ],
+                "description": "Photograph subject: portrait (man, vintage studio bust), portrait-woman, group (posed group photo), crowd (rally/protest/celebration), city (skyline), street (period street with figures and a motor car), building (domed government building), ship (ocean liner), train (steam locomotive), factory (chimneys and smoke), landscape (farmland, hills, windmill), aircraft (biplane), bridge (suspension bridge)."
+              },
+              "caption": {
+                "type": "string",
+                "description": "Subtitle while this frame is centred, up to 12 words, from the narration."
+              }
+            },
+            "required": [
+              "subject"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2-6 frames in narration order."
+        },
+        "tone": {
+          "type": "string",
+          "enum": [
+            "sepia",
+            "silver",
+            "cyanotype",
+            "faded",
+            "modern"
+          ],
+          "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        }
+      },
+      "required": [
+        "frames"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Reel 4: Arrival",
+      "frames": [
+        {
+          "subject": "ship",
+          "caption": "They came by sea, a thousand at a time"
+        },
+        {
+          "subject": "crowd",
+          "caption": "Through the great hall at Ellis Island"
+        },
+        {
+          "subject": "street",
+          "caption": "Into the crowded streets of the Lower East Side"
+        },
+        {
+          "subject": "factory",
+          "caption": "And into the factories that built a nation"
+        }
+      ],
+      "tone": "silver"
+    },
+    "exampleNarration": "They came by sea, a thousand at a time, through the great hall at Ellis Island, into the crowded streets of the Lower East Side, and into the factories that built a nation."
+  }
+]

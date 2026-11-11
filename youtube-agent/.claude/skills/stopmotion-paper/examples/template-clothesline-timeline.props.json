@@ -1,0 +1,22 @@
+{
+  "title": "Flight in four steps",
+  "set": "countryside",
+  "events": [
+    {
+      "when": "1783",
+      "text": "First hot-air balloon"
+    },
+    {
+      "when": "1903",
+      "text": "Wright brothers fly"
+    },
+    {
+      "when": "1969",
+      "text": "Humans land on the *Moon*"
+    },
+    {
+      "when": "2021",
+      "text": "A helicopter flies on Mars"
+    }
+  ]
+}

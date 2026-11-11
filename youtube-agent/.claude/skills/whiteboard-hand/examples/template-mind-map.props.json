@@ -1,0 +1,21 @@
+{
+  "center": "Healthy Habits",
+  "branches": [
+    {
+      "label": "Sleep",
+      "doodle": "clock"
+    },
+    {
+      "label": "Exercise",
+      "doodle": "stick-run"
+    },
+    {
+      "label": "Good food",
+      "doodle": "plant"
+    },
+    {
+      "label": "Friends",
+      "doodle": "team"
+    }
+  ]
+}

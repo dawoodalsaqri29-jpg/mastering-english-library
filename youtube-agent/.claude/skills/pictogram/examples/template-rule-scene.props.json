@@ -1,0 +1,23 @@
+{
+  "setting": "bedroom",
+  "time": "2:00 AM",
+  "characters": [
+    {
+      "id": "you",
+      "pose": "sit-bed",
+      "slot": 0
+    },
+    {
+      "id": "dog",
+      "pose": "stand",
+      "slot": 1
+    }
+  ],
+  "action": "dog-hides",
+  "actionKeyword": "hides",
+  "stamp": "GET UNDER THERE *WITH* IT",
+  "keyword": "with",
+  "arrowTo": "bed",
+  "caption": "DO NOT ASK WHY",
+  "captionKeyword": "why"
+}

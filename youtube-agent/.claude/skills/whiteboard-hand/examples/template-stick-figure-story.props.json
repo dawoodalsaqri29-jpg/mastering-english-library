@@ -1,0 +1,20 @@
+{
+  "beats": [
+    {
+      "pose": "think",
+      "say": "How do I save?",
+      "keyword": "wondered"
+    },
+    {
+      "pose": "point",
+      "prop": "piggybank",
+      "say": "Pay yourself first!",
+      "keyword": "friend"
+    },
+    {
+      "pose": "cheer",
+      "prop": "money-bag",
+      "keyword": "later"
+    }
+  ]
+}

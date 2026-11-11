@@ -1,0 +1,32 @@
+{
+  "company": "Northwind Motors",
+  "years": "1979",
+  "archetype": "founder",
+  "empire": "auto",
+  "headline": "The *recall* that nearly killed it",
+  "keyword": "recall",
+  "title": "SHARE PRICE",
+  "prefix": "$",
+  "points": [
+    {
+      "label": "Jan",
+      "value": 84
+    },
+    {
+      "label": "Mar",
+      "value": 61,
+      "word": "sixty"
+    },
+    {
+      "label": "Jun",
+      "value": 32,
+      "word": "half"
+    },
+    {
+      "label": "Sep",
+      "value": 19,
+      "note": "near bankruptcy",
+      "word": "bankruptcy"
+    }
+  ]
+}

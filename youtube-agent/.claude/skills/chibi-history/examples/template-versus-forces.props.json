@@ -1,0 +1,35 @@
+{
+  "title": "On paper",
+  "left": {
+    "nation": "switzerland",
+    "label": "Switzerland"
+  },
+  "right": {
+    "nation": "germany",
+    "label": "Germany"
+  },
+  "rows": [
+    {
+      "label": "Soldiers",
+      "left": 430,
+      "right": 4500,
+      "icon": "soldier",
+      "word": "soldiers",
+      "suffix": "k"
+    },
+    {
+      "label": "Aircraft",
+      "left": 180,
+      "right": 4200,
+      "icon": "plane",
+      "word": "aircraft"
+    },
+    {
+      "label": "Tanks",
+      "left": 24,
+      "right": 2500,
+      "icon": "tank",
+      "word": "tanks"
+    }
+  ]
+}

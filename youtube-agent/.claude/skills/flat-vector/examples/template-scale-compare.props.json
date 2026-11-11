@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "illus": "moon",
+      "label": "Moon",
+      "value": 3474,
+      "note": "3,474 km"
+    },
+    {
+      "illus": "earth",
+      "label": "Earth",
+      "value": 12742,
+      "note": "12,742 km"
+    },
+    {
+      "illus": "gasgiant",
+      "label": "Jupiter",
+      "value": 139820,
+      "note": "139,820 km"
+    },
+    {
+      "illus": "sun",
+      "label": "Sun",
+      "value": 1392700,
+      "note": "1.39 million km"
+    }
+  ],
+  "world": "space"
+}

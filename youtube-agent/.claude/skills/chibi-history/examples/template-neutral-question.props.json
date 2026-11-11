@@ -1,0 +1,14 @@
+{
+  "country": "switzerland",
+  "aggressor": "germany",
+  "aggressorRegions": [
+    "germany",
+    "austria",
+    "france"
+  ],
+  "question": "Why *not*?",
+  "word": "why",
+  "role": "officer",
+  "caption": "Mountains, tunnels and a very annoying plan",
+  "date": "1940"
+}

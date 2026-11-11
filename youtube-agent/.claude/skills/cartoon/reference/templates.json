@@ -1,0 +1,1867 @@
+[
+  {
+    "id": "narrator-talks",
+    "name": "Narrator Talks",
+    "description": "One cast member addresses the camera, lip-synced to the whole narration, with natural hand gestures. A chunky key-text sticker pops in on its key word while the character turns and points at it. The workhorse for hooks, intros and key statements.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Key text shown on the sticker (2–8 words). Wrap one word in *asterisks* to highlight it."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny label above the sticker (1–3 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the sticker pops (defaults to the most distinctive title word)."
+        },
+        "prop": {
+          "type": "string",
+          "enum": [
+            "laptop",
+            "phone",
+            "coffee",
+            "book",
+            "money",
+            "coin",
+            "lightbulb",
+            "globe",
+            "rocket",
+            "clock",
+            "trophy",
+            "magnifier",
+            "briefcase",
+            "megaphone",
+            "gift",
+            "heart",
+            "star",
+            "pizza",
+            "plant",
+            "calendar",
+            "piggy-bank",
+            "key",
+            "chart",
+            "target",
+            "warning",
+            "house",
+            "car",
+            "brain",
+            "flag",
+            "battery",
+            "water",
+            "fire",
+            "question",
+            "check",
+            "cross",
+            "lock",
+            "robot",
+            "map",
+            "shield"
+          ],
+          "description": "Optional icon on the sticker."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "excited",
+            "sad",
+            "surprised",
+            "angry",
+            "worried",
+            "skeptical",
+            "thinking",
+            "smug",
+            "laughing",
+            "determined",
+            "love",
+            "sleepy",
+            "disgusted"
+          ],
+          "description": "Base expression."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Which side the character stands on (landscape)."
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "Narration word that triggers this acting beat (must appear in the narration)."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "idle",
+                  "talk",
+                  "explain",
+                  "wave",
+                  "point",
+                  "point-up",
+                  "point-down",
+                  "point-viewer",
+                  "think",
+                  "shrug",
+                  "celebrate",
+                  "jump",
+                  "facepalm",
+                  "present",
+                  "open-arms",
+                  "arms-crossed",
+                  "hands-hips",
+                  "hold",
+                  "hold-up",
+                  "phone",
+                  "type",
+                  "sad",
+                  "scared",
+                  "surprised",
+                  "fist-pump",
+                  "sit",
+                  "nod",
+                  "headshake",
+                  "bow",
+                  "lean-in",
+                  "dance"
+                ],
+                "description": "Body pose to snap into on the word."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "surprised",
+                  "angry",
+                  "worried",
+                  "skeptical",
+                  "thinking",
+                  "smug",
+                  "laughing",
+                  "determined",
+                  "love",
+                  "sleepy",
+                  "disgusted"
+                ],
+                "description": "Facial expression."
+              },
+              "mark": {
+                "type": "string",
+                "enum": [
+                  "sweat",
+                  "sparkle",
+                  "question",
+                  "exclaim",
+                  "anger",
+                  "heart",
+                  "idea",
+                  "dizzy",
+                  "music",
+                  "tears",
+                  "zzz",
+                  "shock"
+                ],
+                "description": "Emotion mark that pops over the head."
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Optional acting beats synced to words (0–4)."
+        }
+      },
+      "required": [
+        "character",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "maya",
+      "location": "living-room",
+      "title": "Save *10%* of every paycheck",
+      "kicker": "Rule #1",
+      "keyword": "save",
+      "prop": "piggy-bank",
+      "expression": "happy",
+      "beats": [
+        {
+          "word": "automatic",
+          "pose": "point-viewer",
+          "expression": "excited",
+          "mark": "sparkle"
+        }
+      ]
+    },
+    "exampleNarration": "Here's the first rule of money: save ten percent of every paycheck, before you spend anything. Make it automatic, and you won't even miss it."
+  },
+  {
+    "id": "dialogue",
+    "name": "Dialogue",
+    "description": "Two cast members talk to each other with speech bubbles; each bubble's words light up as they are spoken and the speaker lip-syncs while the listener nods and reacts. Camera cuts shot/reverse-shot. The narration should contain the lines in order.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "maya",
+              "leo",
+              "priya",
+              "sam",
+              "bolt",
+              "kai"
+            ],
+            "description": "Cast member (keep the same cast across the whole video)."
+          },
+          "description": "Exactly two cast members [left, right]."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "integer",
+                "description": "0 = left character, 1 = right character."
+              },
+              "text": {
+                "type": "string",
+                "description": "What they say — short, max ~12 words. Should match the narration wording."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "surprised",
+                  "angry",
+                  "worried",
+                  "skeptical",
+                  "thinking",
+                  "smug",
+                  "laughing",
+                  "determined",
+                  "love",
+                  "sleepy",
+                  "disgusted"
+                ],
+                "description": "Speaker expression for this line."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "idle",
+                  "talk",
+                  "explain",
+                  "wave",
+                  "point",
+                  "point-up",
+                  "point-down",
+                  "point-viewer",
+                  "think",
+                  "shrug",
+                  "celebrate",
+                  "jump",
+                  "facepalm",
+                  "present",
+                  "open-arms",
+                  "arms-crossed",
+                  "hands-hips",
+                  "hold",
+                  "hold-up",
+                  "phone",
+                  "type",
+                  "sad",
+                  "scared",
+                  "surprised",
+                  "fist-pump",
+                  "sit",
+                  "nod",
+                  "headshake",
+                  "bow",
+                  "lean-in",
+                  "dance"
+                ],
+                "description": "Speaker pose for this line."
+              },
+              "mark": {
+                "type": "string",
+                "enum": [
+                  "sweat",
+                  "sparkle",
+                  "question",
+                  "exclaim",
+                  "anger",
+                  "heart",
+                  "idea",
+                  "dizzy",
+                  "music",
+                  "tears",
+                  "zzz",
+                  "shock"
+                ],
+                "description": "Optional emotion mark."
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "speech",
+                  "thought",
+                  "shout"
+                ],
+                "description": "Bubble style."
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 alternating lines."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "idle",
+            "talk",
+            "explain",
+            "wave",
+            "point",
+            "point-up",
+            "point-down",
+            "point-viewer",
+            "think",
+            "shrug",
+            "celebrate",
+            "jump",
+            "facepalm",
+            "present",
+            "open-arms",
+            "arms-crossed",
+            "hands-hips",
+            "hold",
+            "hold-up",
+            "phone",
+            "type",
+            "sad",
+            "scared",
+            "surprised",
+            "fist-pump",
+            "sit",
+            "nod",
+            "headshake",
+            "bow",
+            "lean-in",
+            "dance"
+          ],
+          "description": "Optional pose both take after the last line (e.g. celebrate)."
+        }
+      },
+      "required": [
+        "characters",
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "characters": [
+        "leo",
+        "priya"
+      ],
+      "location": "office",
+      "lines": [
+        {
+          "speaker": 0,
+          "text": "Wait, why is my code so slow?",
+          "expression": "worried",
+          "mark": "sweat"
+        },
+        {
+          "speaker": 1,
+          "text": "You're loading the whole database on every click.",
+          "expression": "skeptical",
+          "pose": "explain"
+        },
+        {
+          "speaker": 0,
+          "text": "Oh. That's... a lot of data.",
+          "expression": "surprised",
+          "pose": "facepalm"
+        },
+        {
+          "speaker": 1,
+          "text": "Add a cache and it'll fly!",
+          "expression": "happy",
+          "pose": "point-up",
+          "mark": "sparkle"
+        }
+      ]
+    },
+    "exampleNarration": "Wait, why is my code so slow? You're loading the whole database on every click. Oh. That's... a lot of data. Add a cache and it'll fly!"
+  },
+  {
+    "id": "walk-and-talk",
+    "name": "Walk and Talk",
+    "description": "A character (optionally with a companion) strolls through a long scrolling world with parallax while talking; the camera tracks them. Optional speech-bubble lines alternate between walker and companion. Great for storytelling and transitions.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "companion": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Optional second walker."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Bubble line (max ~10 words), in narration order."
+          },
+          "description": "Optional 0–5 bubble lines (alternate walker/companion)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional small location/topic sticker (1–4 words)."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "excited",
+            "sad",
+            "surprised",
+            "angry",
+            "worried",
+            "skeptical",
+            "thinking",
+            "smug",
+            "laughing",
+            "determined",
+            "love",
+            "sleepy",
+            "disgusted"
+          ],
+          "description": "Walker expression."
+        }
+      },
+      "required": [
+        "character"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "sam",
+      "companion": "maya",
+      "location": "city-street",
+      "lines": [
+        "Cities are getting hotter every summer.",
+        "Concrete soaks up heat all day.",
+        "So we need more trees!"
+      ],
+      "caption": "Urban heat"
+    },
+    "exampleNarration": "Cities are getting hotter every summer. Concrete soaks up heat all day. So we need more trees!"
+  },
+  {
+    "id": "reaction",
+    "name": "Reaction",
+    "description": "A character sets up a reveal, then reacts BIG when a number or fact slams in on its key word: snap pose, expression change, emotion mark, burst lines and a camera shake/push. Use for surprising stats and plot twists.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "reveal": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "The reveal — a number or 1–5 words (e.g. \"$2.4 trillion\")."
+            },
+            "kicker": {
+              "type": "string",
+              "description": "Optional label above the reveal."
+            },
+            "prop": {
+              "type": "string",
+              "enum": [
+                "laptop",
+                "phone",
+                "coffee",
+                "book",
+                "money",
+                "coin",
+                "lightbulb",
+                "globe",
+                "rocket",
+                "clock",
+                "trophy",
+                "magnifier",
+                "briefcase",
+                "megaphone",
+                "gift",
+                "heart",
+                "star",
+                "pizza",
+                "plant",
+                "calendar",
+                "piggy-bank",
+                "key",
+                "chart",
+                "target",
+                "warning",
+                "house",
+                "car",
+                "brain",
+                "flag",
+                "battery",
+                "water",
+                "fire",
+                "question",
+                "check",
+                "cross",
+                "lock",
+                "robot",
+                "map",
+                "shield"
+              ],
+              "description": "Optional icon next to the reveal."
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word on which the reveal lands."
+        },
+        "reaction": {
+          "type": "string",
+          "enum": [
+            "surprised",
+            "excited",
+            "happy",
+            "worried",
+            "angry",
+            "sad",
+            "confused",
+            "facepalm"
+          ],
+          "description": "How the character reacts."
+        },
+        "setupPose": {
+          "type": "string",
+          "enum": [
+            "idle",
+            "talk",
+            "explain",
+            "wave",
+            "point",
+            "point-up",
+            "point-down",
+            "point-viewer",
+            "think",
+            "shrug",
+            "celebrate",
+            "jump",
+            "facepalm",
+            "present",
+            "open-arms",
+            "arms-crossed",
+            "hands-hips",
+            "hold",
+            "hold-up",
+            "phone",
+            "type",
+            "sad",
+            "scared",
+            "surprised",
+            "fist-pump",
+            "sit",
+            "nod",
+            "headshake",
+            "bow",
+            "lean-in",
+            "dance"
+          ],
+          "description": "Pose before the reveal (e.g. think, talk)."
+        }
+      },
+      "required": [
+        "character",
+        "reveal",
+        "reaction"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "leo",
+      "location": "living-room",
+      "reveal": {
+        "text": "$1,500 a year",
+        "kicker": "Unused subscriptions",
+        "prop": "money"
+      },
+      "word": "fifteen",
+      "reaction": "surprised",
+      "setupPose": "think"
+    },
+    "exampleNarration": "So I added up all the subscriptions I never use. The total? Fifteen hundred dollars a year. Gone."
+  },
+  {
+    "id": "explain-with-board",
+    "name": "Explain With Board",
+    "description": "A character stands beside a whiteboard / screen / chalkboard and points at each item as it appears: a numbered list, a bar chart, a line chart, a big number or a big icon. Board style follows the location unless set.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Board heading (2–6 words)."
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "list",
+            "bars",
+            "line",
+            "big",
+            "icon"
+          ],
+          "description": "What the board shows."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "List item (max ~6 words); the item pops when its most distinctive word is spoken."
+          },
+          "description": "For mode=list: 2–5 items."
+        },
+        "bars": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Bar label (1–2 words)."
+              },
+              "value": {
+                "type": "number",
+                "description": "Numeric value."
+              },
+              "display": {
+                "type": "string",
+                "description": "Optional formatted value, e.g. \"42%\"."
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "description": "For mode=bars: 2–6 bars."
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "For mode=line: 3–10 values."
+        },
+        "big": {
+          "type": "string",
+          "description": "For mode=big: big number/text, e.g. \"72%\"."
+        },
+        "icon": {
+          "type": "string",
+          "enum": [
+            "laptop",
+            "phone",
+            "coffee",
+            "book",
+            "money",
+            "coin",
+            "lightbulb",
+            "globe",
+            "rocket",
+            "clock",
+            "trophy",
+            "magnifier",
+            "briefcase",
+            "megaphone",
+            "gift",
+            "heart",
+            "star",
+            "pizza",
+            "plant",
+            "calendar",
+            "piggy-bank",
+            "key",
+            "chart",
+            "target",
+            "warning",
+            "house",
+            "car",
+            "brain",
+            "flag",
+            "battery",
+            "water",
+            "fire",
+            "question",
+            "check",
+            "cross",
+            "lock",
+            "robot",
+            "map",
+            "shield"
+          ],
+          "description": "For mode=icon: icon to show."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption under the big number/icon/line."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Sync word for big/icon/line modes."
+        },
+        "board": {
+          "type": "string",
+          "enum": [
+            "whiteboard",
+            "screen",
+            "chalk"
+          ],
+          "description": "Board style override."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "excited",
+            "sad",
+            "surprised",
+            "angry",
+            "worried",
+            "skeptical",
+            "thinking",
+            "smug",
+            "laughing",
+            "determined",
+            "love",
+            "sleepy",
+            "disgusted"
+          ],
+          "description": "Base expression."
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "Narration word that triggers this acting beat (must appear in the narration)."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "idle",
+                  "talk",
+                  "explain",
+                  "wave",
+                  "point",
+                  "point-up",
+                  "point-down",
+                  "point-viewer",
+                  "think",
+                  "shrug",
+                  "celebrate",
+                  "jump",
+                  "facepalm",
+                  "present",
+                  "open-arms",
+                  "arms-crossed",
+                  "hands-hips",
+                  "hold",
+                  "hold-up",
+                  "phone",
+                  "type",
+                  "sad",
+                  "scared",
+                  "surprised",
+                  "fist-pump",
+                  "sit",
+                  "nod",
+                  "headshake",
+                  "bow",
+                  "lean-in",
+                  "dance"
+                ],
+                "description": "Body pose to snap into on the word."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "surprised",
+                  "angry",
+                  "worried",
+                  "skeptical",
+                  "thinking",
+                  "smug",
+                  "laughing",
+                  "determined",
+                  "love",
+                  "sleepy",
+                  "disgusted"
+                ],
+                "description": "Facial expression."
+              },
+              "mark": {
+                "type": "string",
+                "enum": [
+                  "sweat",
+                  "sparkle",
+                  "question",
+                  "exclaim",
+                  "anger",
+                  "heart",
+                  "idea",
+                  "dizzy",
+                  "music",
+                  "tears",
+                  "zzz",
+                  "shock"
+                ],
+                "description": "Emotion mark that pops over the head."
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Optional acting beats synced to words (0–4)."
+        }
+      },
+      "required": [
+        "character",
+        "title",
+        "mode"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "priya",
+      "location": "classroom",
+      "title": "Why sleep matters",
+      "mode": "list",
+      "items": [
+        "Memory gets *saved*",
+        "Muscles repair",
+        "Mood resets"
+      ],
+      "expression": "happy"
+    },
+    "exampleNarration": "Why does sleep matter so much? First, your memory gets saved overnight. Second, your muscles repair. And third, your mood resets for the next day."
+  },
+  {
+    "id": "idea-moment",
+    "name": "Idea Moment",
+    "description": "A character ponders a problem (thought bubble or question marks), then — on the key word — a lightbulb pops over their head, the camera snaps back and the idea lands as a sticker while they cheer. For solutions, insights and 'aha' beats.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "problem": {
+          "type": "string",
+          "description": "Optional thought-bubble text before the idea (max ~8 words)."
+        },
+        "idea": {
+          "type": "string",
+          "description": "The idea, 2–7 words."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word when the idea strikes."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional label above the idea sticker."
+        },
+        "prop": {
+          "type": "string",
+          "enum": [
+            "laptop",
+            "phone",
+            "coffee",
+            "book",
+            "money",
+            "coin",
+            "lightbulb",
+            "globe",
+            "rocket",
+            "clock",
+            "trophy",
+            "magnifier",
+            "briefcase",
+            "megaphone",
+            "gift",
+            "heart",
+            "star",
+            "pizza",
+            "plant",
+            "calendar",
+            "piggy-bank",
+            "key",
+            "chart",
+            "target",
+            "warning",
+            "house",
+            "car",
+            "brain",
+            "flag",
+            "battery",
+            "water",
+            "fire",
+            "question",
+            "check",
+            "cross",
+            "lock",
+            "robot",
+            "map",
+            "shield"
+          ],
+          "description": "Icon on the idea sticker (default lightbulb)."
+        }
+      },
+      "required": [
+        "character",
+        "idea"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "maya",
+      "location": "office",
+      "problem": "How do I stop procrastinating?",
+      "idea": "The 2-minute rule",
+      "word": "minute",
+      "kicker": "Try this"
+    },
+    "exampleNarration": "I kept putting off every task, until I found a trick: the two minute rule. If it takes less than two minutes, do it right now."
+  },
+  {
+    "id": "compare-two",
+    "name": "Compare Two",
+    "description": "Two characters each champion one option, with label stickers and a VS badge; each presents in turn while talking, then the verdict: the winner celebrates, the other shrugs (or both cheer on a tie).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "character": {
+              "type": "string",
+              "enum": [
+                "maya",
+                "leo",
+                "priya",
+                "sam",
+                "bolt",
+                "kai"
+              ],
+              "description": "Cast member (keep the same cast across the whole video)."
+            },
+            "label": {
+              "type": "string",
+              "description": "Option name (1–4 words)."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Short point (1–3 words)."
+              },
+              "description": "Optional 0–3 points."
+            },
+            "word": {
+              "type": "string",
+              "description": "Sync word for this option."
+            },
+            "prop": {
+              "type": "string",
+              "enum": [
+                "laptop",
+                "phone",
+                "coffee",
+                "book",
+                "money",
+                "coin",
+                "lightbulb",
+                "globe",
+                "rocket",
+                "clock",
+                "trophy",
+                "magnifier",
+                "briefcase",
+                "megaphone",
+                "gift",
+                "heart",
+                "star",
+                "pizza",
+                "plant",
+                "calendar",
+                "piggy-bank",
+                "key",
+                "chart",
+                "target",
+                "warning",
+                "house",
+                "car",
+                "brain",
+                "flag",
+                "battery",
+                "water",
+                "fire",
+                "question",
+                "check",
+                "cross",
+                "lock",
+                "robot",
+                "map",
+                "shield"
+              ],
+              "description": "Optional icon."
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "happy",
+                "excited",
+                "sad",
+                "surprised",
+                "angry",
+                "worried",
+                "skeptical",
+                "thinking",
+                "smug",
+                "laughing",
+                "determined",
+                "love",
+                "sleepy",
+                "disgusted"
+              ],
+              "description": "Expression."
+            }
+          },
+          "required": [
+            "character",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "character": {
+              "type": "string",
+              "enum": [
+                "maya",
+                "leo",
+                "priya",
+                "sam",
+                "bolt",
+                "kai"
+              ],
+              "description": "Cast member (keep the same cast across the whole video)."
+            },
+            "label": {
+              "type": "string",
+              "description": "Option name (1–4 words)."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Short point (1–3 words)."
+              },
+              "description": "Optional 0–3 points."
+            },
+            "word": {
+              "type": "string",
+              "description": "Sync word for this option."
+            },
+            "prop": {
+              "type": "string",
+              "enum": [
+                "laptop",
+                "phone",
+                "coffee",
+                "book",
+                "money",
+                "coin",
+                "lightbulb",
+                "globe",
+                "rocket",
+                "clock",
+                "trophy",
+                "magnifier",
+                "briefcase",
+                "megaphone",
+                "gift",
+                "heart",
+                "star",
+                "pizza",
+                "plant",
+                "calendar",
+                "piggy-bank",
+                "key",
+                "chart",
+                "target",
+                "warning",
+                "house",
+                "car",
+                "brain",
+                "flag",
+                "battery",
+                "water",
+                "fire",
+                "question",
+                "check",
+                "cross",
+                "lock",
+                "robot",
+                "map",
+                "shield"
+              ],
+              "description": "Optional icon."
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "happy",
+                "excited",
+                "sad",
+                "surprised",
+                "angry",
+                "worried",
+                "skeptical",
+                "thinking",
+                "smug",
+                "laughing",
+                "determined",
+                "love",
+                "sleepy",
+                "disgusted"
+              ],
+              "description": "Expression."
+            }
+          },
+          "required": [
+            "character",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "tie"
+          ],
+          "description": "Who wins."
+        },
+        "word": {
+          "type": "string",
+          "description": "Sync word for the verdict."
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional stage colour (hex) when location is stage."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "location": "stage",
+      "left": {
+        "character": "sam",
+        "label": "Renting",
+        "points": [
+          "Flexible",
+          "Low upfront"
+        ],
+        "word": "renting",
+        "prop": "key"
+      },
+      "right": {
+        "character": "priya",
+        "label": "Buying",
+        "points": [
+          "Builds equity"
+        ],
+        "word": "buying",
+        "prop": "house"
+      },
+      "verdict": "right",
+      "word": "long"
+    },
+    "exampleNarration": "Renting keeps you flexible with low upfront costs. Buying builds equity over time. In the long run, buying usually wins."
+  },
+  {
+    "id": "establishing-shot",
+    "name": "Establishing Shot",
+    "description": "A sweeping camera move across a location with a big place/time tag; optional characters walk in from the sides and wave. Use to open a story, change location or start a chapter.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Place or scene title (1–5 words)."
+        },
+        "subcaption": {
+          "type": "string",
+          "description": "Optional small label, e.g. a year or time of day."
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "maya",
+              "leo",
+              "priya",
+              "sam",
+              "bolt",
+              "kai"
+            ],
+            "description": "Cast member (keep the same cast across the whole video)."
+          },
+          "description": "0–3 characters who walk in."
+        },
+        "prop": {
+          "type": "string",
+          "enum": [
+            "laptop",
+            "phone",
+            "coffee",
+            "book",
+            "money",
+            "coin",
+            "lightbulb",
+            "globe",
+            "rocket",
+            "clock",
+            "trophy",
+            "magnifier",
+            "briefcase",
+            "megaphone",
+            "gift",
+            "heart",
+            "star",
+            "pizza",
+            "plant",
+            "calendar",
+            "piggy-bank",
+            "key",
+            "chart",
+            "target",
+            "warning",
+            "house",
+            "car",
+            "brain",
+            "flag",
+            "battery",
+            "water",
+            "fire",
+            "question",
+            "check",
+            "cross",
+            "lock",
+            "robot",
+            "map",
+            "shield"
+          ],
+          "description": "Icon on the tag (default map)."
+        }
+      },
+      "required": [
+        "location",
+        "caption"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "location": "park",
+      "caption": "Central Park, NYC",
+      "subcaption": "Summer 1999",
+      "characters": [
+        "kai",
+        "maya"
+      ]
+    },
+    "exampleNarration": "It's the summer of nineteen ninety nine, in the middle of Central Park."
+  },
+  {
+    "id": "crowd-stat",
+    "name": "Crowd Stat",
+    "description": "A row (or two) of mini cast members hop in; on the key word the ones that make up the statistic light up and cheer while the rest fade — e.g. '1 in 4 people'. Big stat sticker on top.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "stat": {
+          "type": "string",
+          "description": "Stat headline, e.g. \"1 in 4\" or \"30%\"."
+        },
+        "label": {
+          "type": "string",
+          "description": "What it means (2–8 words)."
+        },
+        "total": {
+          "type": "integer",
+          "description": "How many figures (2–16; portrait max 12)."
+        },
+        "highlight": {
+          "type": "integer",
+          "description": "How many are highlighted (0–total)."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word on which they light up."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "cast": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "maya",
+              "leo",
+              "priya",
+              "sam",
+              "bolt",
+              "kai"
+            ],
+            "description": "Cast member (keep the same cast across the whole video)."
+          },
+          "description": "Optional cast order to cycle through."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional label above the stat."
+        },
+        "highlightColor": {
+          "type": "string",
+          "description": "Optional hex colour for the highlight."
+        }
+      },
+      "required": [
+        "stat",
+        "total",
+        "highlight"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "stat": "1 in 4",
+      "label": "adults will face this",
+      "total": 8,
+      "highlight": 2,
+      "word": "one",
+      "location": "stage"
+    },
+    "exampleNarration": "Here's the scary part: one in four adults will face this at some point in their life."
+  },
+  {
+    "id": "journey",
+    "name": "Journey",
+    "description": "A character walks (or runs) across a long scrolling landscape past signposts — one milestone per key word — and celebrates at the last one. For timelines, steps, processes and roadmaps.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "maya",
+            "leo",
+            "priya",
+            "sam",
+            "bolt",
+            "kai"
+          ],
+          "description": "Cast member (keep the same cast across the whole video)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional small title sticker."
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Signpost text (1–4 words)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word when they reach it."
+              },
+              "prop": {
+                "type": "string",
+                "enum": [
+                  "laptop",
+                  "phone",
+                  "coffee",
+                  "book",
+                  "money",
+                  "coin",
+                  "lightbulb",
+                  "globe",
+                  "rocket",
+                  "clock",
+                  "trophy",
+                  "magnifier",
+                  "briefcase",
+                  "megaphone",
+                  "gift",
+                  "heart",
+                  "star",
+                  "pizza",
+                  "plant",
+                  "calendar",
+                  "piggy-bank",
+                  "key",
+                  "chart",
+                  "target",
+                  "warning",
+                  "house",
+                  "car",
+                  "brain",
+                  "flag",
+                  "battery",
+                  "water",
+                  "fire",
+                  "question",
+                  "check",
+                  "cross",
+                  "lock",
+                  "robot",
+                  "map",
+                  "shield"
+                ],
+                "description": "Optional icon on the sign."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–5 milestones in order."
+        }
+      },
+      "required": [
+        "character",
+        "milestones"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "kai",
+      "location": "park",
+      "title": "Learning to code",
+      "milestones": [
+        {
+          "label": "Basics",
+          "word": "basics",
+          "prop": "book"
+        },
+        {
+          "label": "First app",
+          "word": "app",
+          "prop": "laptop"
+        },
+        {
+          "label": "First job!",
+          "word": "job",
+          "prop": "trophy"
+        }
+      ]
+    },
+    "exampleNarration": "You start with the basics. A few months later, you ship your first app. And a year in, you land your first job."
+  },
+  {
+    "id": "title-card",
+    "name": "Title Card",
+    "description": "Chapter / section opener: the cast hops onto a colourful stage and waves while a big title sticker slams in with a subtitle. Use at chapter starts.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title (1–6 words)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional subtitle (2–8 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional label like \"Chapter 2\"."
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "maya",
+              "leo",
+              "priya",
+              "sam",
+              "bolt",
+              "kai"
+            ],
+            "description": "Cast member (keep the same cast across the whole video)."
+          },
+          "description": "1–3 cast members."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "living-room",
+            "office",
+            "classroom",
+            "city-street",
+            "park",
+            "lab",
+            "space",
+            "market",
+            "stage"
+          ],
+          "description": "Illustrated world. Keep locations consistent between neighbouring scenes."
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional stage background colour (hex)."
+        },
+        "prop": {
+          "type": "string",
+          "enum": [
+            "laptop",
+            "phone",
+            "coffee",
+            "book",
+            "money",
+            "coin",
+            "lightbulb",
+            "globe",
+            "rocket",
+            "clock",
+            "trophy",
+            "magnifier",
+            "briefcase",
+            "megaphone",
+            "gift",
+            "heart",
+            "star",
+            "pizza",
+            "plant",
+            "calendar",
+            "piggy-bank",
+            "key",
+            "chart",
+            "target",
+            "warning",
+            "house",
+            "car",
+            "brain",
+            "flag",
+            "battery",
+            "water",
+            "fire",
+            "question",
+            "check",
+            "cross",
+            "lock",
+            "robot",
+            "map",
+            "shield"
+          ],
+          "description": "Optional icon on the title."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Money Mindset",
+      "subtitle": "Why we spend the way we do",
+      "kicker": "Chapter 2",
+      "characters": [
+        "maya",
+        "bolt",
+        "leo"
+      ],
+      "color": "#FFD9A8"
+    },
+    "exampleNarration": "Chapter two: the money mindset, and why we spend the way we do."
+  }
+]

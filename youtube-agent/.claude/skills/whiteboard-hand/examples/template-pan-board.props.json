@@ -1,0 +1,21 @@
+{
+  "title": "From farm to table",
+  "stops": [
+    {
+      "label": "The farm",
+      "doodle": "plant"
+    },
+    {
+      "label": "The factory",
+      "doodle": "factory"
+    },
+    {
+      "label": "The truck",
+      "doodle": "truck"
+    },
+    {
+      "label": "Your kitchen",
+      "doodle": "house"
+    }
+  ]
+}

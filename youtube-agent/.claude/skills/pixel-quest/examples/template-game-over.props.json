@@ -1,0 +1,18 @@
+{
+  "mistakes": [
+    {
+      "label": "Skipping the warm-up",
+      "keyword": "warm"
+    },
+    {
+      "label": "Lifting too heavy",
+      "keyword": "heavy"
+    },
+    {
+      "label": "No rest days",
+      "keyword": "rest"
+    }
+  ],
+  "lesson": "Start light, warm up, and let your muscles recover.",
+  "level": "GYM DUNGEON"
+}

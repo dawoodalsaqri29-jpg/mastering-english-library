@@ -1,0 +1,19 @@
+{
+  "left": {
+    "title": "Forest",
+    "illus": "tree",
+    "world": "sky",
+    "points": [
+      "Stores carbon"
+    ]
+  },
+  "right": {
+    "title": "Factory",
+    "illus": "factory",
+    "world": "dusk",
+    "points": [
+      "Releases carbon"
+    ]
+  },
+  "vs": "VS"
+}

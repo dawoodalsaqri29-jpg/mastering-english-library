@@ -1,0 +1,22 @@
+{
+  "character": "kai",
+  "location": "park",
+  "title": "Learning to code",
+  "milestones": [
+    {
+      "label": "Basics",
+      "word": "basics",
+      "prop": "book"
+    },
+    {
+      "label": "First app",
+      "word": "app",
+      "prop": "laptop"
+    },
+    {
+      "label": "First job!",
+      "word": "job",
+      "prop": "trophy"
+    }
+  ]
+}

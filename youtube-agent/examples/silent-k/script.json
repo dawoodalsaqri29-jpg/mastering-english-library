@@ -1,0 +1,152 @@
+{
+  "title": "Why Is the K in Knight Silent?",
+  "style": "whiteboard-hand",
+  "aspect": "16:9",
+  "voice": {
+    "mode": "kokoro",
+    "voiceId": "bf_isabella",
+    "speed": 0.92
+  },
+  "scenes": [
+    {
+      "id": "001",
+      "chapter": "The Silent Letter",
+      "template": "title-board",
+      "narration": "Knight. Knife. Knee. Know. Every one of them starts with a letter you never say. So why is it there?",
+      "ar": "نايت. نايف. ني. نو. كل كلمة منها تبدأ بحرف لا ننطقه أبدًا. فلماذا هو موجود؟",
+      "props": {
+        "title": "The *Silent* K",
+        "subtitle": "knight · knife · knee · know",
+        "doodles": [
+          "question-mark",
+          "book",
+          "key"
+        ]
+      }
+    },
+    {
+      "id": "002",
+      "template": "draw-concept",
+      "narration": "Here is the surprise. A thousand years ago, English speakers said that K out loud, every single time.",
+      "ar": "وهنا المفاجأة. قبل ألف سنة كان متحدثو الإنجليزية ينطقون حرف K بصوت واضح في كل مرة.",
+      "props": {
+        "doodle": "megaphone",
+        "label": "They *said* the K",
+        "caption": "about 1,000 years ago",
+        "keyword": "said",
+        "accents": [
+          "exclamation",
+          "star"
+        ]
+      }
+    },
+    {
+      "id": "003",
+      "chapter": "How It Sounded",
+      "template": "before-after",
+      "narration": "In Old English, the word was spelled c, n, i, h, t, and it sounded like k-nicht. It did not even mean a warrior. It meant a boy, or a servant.",
+      "ar": "في الإنجليزية القديمة كانت الكلمة تُكتب cniht وتُنطق «كْنِخْت». ولم تكن تعني محاربًا أصلًا، بل كانت تعني صبيًّا أو خادمًا.",
+      "props": {
+        "before": {
+          "label": "cniht",
+          "doodle": "stick-stand",
+          "note": "a boy, a servant"
+        },
+        "after": {
+          "label": "knight",
+          "doodle": "shield",
+          "note": "a mounted warrior"
+        },
+        "beforeTitle": "Old English",
+        "afterTitle": "Today"
+      }
+    },
+    {
+      "id": "004",
+      "template": "list-with-doodles",
+      "narration": "German still does this today. The German word for knee is Knie, with a clear K. And the German word Knecht, a servant, is a cousin of our knight.",
+      "ar": "والألمانية ما زالت تفعل ذلك حتى اليوم. كلمة الركبة بالألمانية هي Knie بحرف K واضح. وكلمة Knecht الألمانية، ومعناها خادم، قريبة من كلمة knight عندنا.",
+      "props": {
+        "title": "German kept the K",
+        "items": [
+          {
+            "text": "Knie = knee",
+            "doodle": "stick-sit"
+          },
+          {
+            "text": "Knecht = servant",
+            "doodle": "stick-walk"
+          },
+          {
+            "text": "the K is spoken",
+            "doodle": "megaphone"
+          }
+        ],
+        "check": true
+      }
+    },
+    {
+      "id": "005",
+      "chapter": "Why It Stayed",
+      "style": "archival-doc",
+      "template": "timeline-ribbon",
+      "narration": "So what happened? In 1476, William Caxton set up the first printing press in England, and printed spellings began to settle. Then, over about a century, speakers slowly stopped saying K before N. By around 1750, the sound was gone.",
+      "ar": "فماذا حدث؟ في عام 1476 أنشأ وليم كاكستون أول مطبعة في إنجلترا، وبدأت طريقة كتابة الكلمات تثبت. ثم على مدى قرن تقريبًا توقف الناس تدريجيًّا عن نطق K قبل N. وبحلول عام 1750 تقريبًا كان الصوت قد اختفى.",
+      "props": {
+        "title": "When the K went quiet",
+        "events": [
+          {
+            "date": "1476",
+            "label": "Caxton's press opens at Westminster"
+          },
+          {
+            "date": "1750",
+            "label": "The spoken K is gone"
+          },
+          {
+            "date": "Today",
+            "label": "The spelling is still here",
+            "subject": "landscape"
+          }
+        ],
+        "tone": "sepia"
+      }
+    },
+    {
+      "id": "006",
+      "template": "process-flow",
+      "narration": "The sound changed, but the spelling had already been printed in thousands of books. So the letter stayed on the page, long after it left the mouth.",
+      "ar": "تغيّر الصوت، لكن طريقة الكتابة كانت قد طُبعت في آلاف الكتب. فبقي الحرف على الورق بعد أن غادر الألسنة بزمن طويل.",
+      "props": {
+        "title": "Why the letter stayed",
+        "steps": [
+          {
+            "label": "Spelling printed",
+            "doodle": "book"
+          },
+          {
+            "label": "Sound changes",
+            "doodle": "megaphone"
+          },
+          {
+            "label": "Letter stays",
+            "doodle": "lock"
+          }
+        ]
+      }
+    },
+    {
+      "id": "007",
+      "chapter": "Use It",
+      "template": "big-number",
+      "narration": "So here is your rule. When a word starts with K, N, the K is silent. Knock, knot, knit, knowledge. You are not reading a mistake. You are reading a fossil.",
+      "ar": "وهذه قاعدتك. إذا بدأت الكلمة بـ KN فحرف K صامت. knock و knot و knit و knowledge. أنت لا تقرأ خطأ، بل تقرأ أثرًا قديمًا محفوظًا.",
+      "props": {
+        "value": "KN = N",
+        "label": "the K is silent",
+        "doodle": "lightbulb",
+        "keyword": "silent"
+      }
+    }
+  ]
+}

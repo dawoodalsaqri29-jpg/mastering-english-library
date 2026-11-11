@@ -1,0 +1,24 @@
+{
+  "left": {
+    "location": "savanna",
+    "label": "THEN",
+    "word": "then",
+    "character": "og",
+    "activity": "hunt",
+    "expression": "happy",
+    "caption": "4 hours of work",
+    "animal": "sabretooth"
+  },
+  "right": {
+    "location": "modern-city",
+    "label": "NOW",
+    "word": "now",
+    "character": "og",
+    "activity": "phone",
+    "expression": "deadpan",
+    "caption": "9 hours of emails",
+    "mark": "..."
+  },
+  "headline": "WHO *WON*?",
+  "keyword": "won"
+}

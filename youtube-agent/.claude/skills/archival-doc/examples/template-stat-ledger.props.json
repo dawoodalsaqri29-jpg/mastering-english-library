@@ -1,0 +1,21 @@
+{
+  "title": "The Great Migration",
+  "year": "1910-1940",
+  "stats": [
+    {
+      "value": 1600000,
+      "label": "people moved north"
+    },
+    {
+      "value": 6,
+      "label": "major destination cities"
+    },
+    {
+      "value": 40,
+      "suffix": "%",
+      "label": "growth of Chicago's population"
+    }
+  ],
+  "source": "U.S. Census, 1940",
+  "keyword": "million"
+}

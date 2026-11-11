@@ -1,0 +1,16 @@
+{
+  "label": "Meanwhile...",
+  "background": "city",
+  "mood": "night",
+  "weather": "rain",
+  "character": "vex",
+  "shot": "silhouette",
+  "captions": [
+    {
+      "text": "The city slept, unaware of the storm gathering above."
+    },
+    {
+      "text": "And one man was waiting for the lights to go out."
+    }
+  ]
+}

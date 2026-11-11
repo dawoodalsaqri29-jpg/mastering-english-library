@@ -1,0 +1,30 @@
+{
+  "title": "Who builds the most *homes*?",
+  "bars": [
+    {
+      "label": "Tokyo",
+      "value": 142,
+      "keyword": "Tokyo"
+    },
+    {
+      "label": "Paris",
+      "value": 38,
+      "keyword": "Paris"
+    },
+    {
+      "label": "London",
+      "value": 31,
+      "keyword": "London"
+    },
+    {
+      "label": "New York",
+      "value": 55,
+      "keyword": "York"
+    }
+  ],
+  "valueFormat": {
+    "suffix": "k"
+  },
+  "highlight": 0,
+  "style": "buildings"
+}

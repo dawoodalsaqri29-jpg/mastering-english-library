@@ -1,0 +1,32 @@
+{
+  "region": "australia",
+  "left": {
+    "label": "The Coast",
+    "sub": "90% OF PEOPLE",
+    "places": [
+      "brisbane",
+      "sydney",
+      "canberra",
+      "melbourne",
+      "adelaide"
+    ],
+    "color": "cyan",
+    "keyword": "coast",
+    "stat": 90,
+    "statSuffix": "%",
+    "statCaption": "of Australians"
+  },
+  "right": {
+    "label": "The Outback",
+    "sub": "ALMOST NOBODY",
+    "place": "outback",
+    "radius": 0.26,
+    "color": "red",
+    "keyword": "outback",
+    "stat": 0.1,
+    "statSuffix": " /KM²",
+    "statCaption": "people"
+  },
+  "headline": "WHERE *EVERYONE* LIVES",
+  "kicker": "POPULATION"
+}

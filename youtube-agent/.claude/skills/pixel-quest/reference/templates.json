@@ -1,0 +1,1089 @@
+[
+  {
+    "id": "title-screen",
+    "name": "Title Screen",
+    "description": "Game boot screen: a big bouncing pixel logo, a subtitle ribbon, the hero and companion marching through a scrolling world, and a blinking PRESS START that gets 'pressed' on its key word (flash + jump). Use to open the video or a big new part.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Game title, 1–5 words (rendered in caps)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional tagline, under 40 characters."
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ],
+          "description": "Background world."
+        },
+        "prompt": {
+          "type": "string",
+          "description": "Blinking prompt, default 'PRESS START'. Its last word is synced to the narration."
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ],
+          "description": "Main character (default kit)."
+        },
+        "companion": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ],
+          "description": "Sidekick walking behind (default bolt)."
+        },
+        "footer": {
+          "type": "string",
+          "description": "Optional tiny footer line."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Quest for Sleep",
+      "subtitle": "A science adventure",
+      "world": "grassland",
+      "prompt": "PRESS START"
+    },
+    "exampleNarration": "Welcome to the quest for better sleep. Grab your controller and press start."
+  },
+  {
+    "id": "level-walk",
+    "name": "Level Walk",
+    "description": "Side-scrolling level: the hero walks/runs right, jumps onto platforms and grabs one power-up per fact exactly on its key word (+100, sparkle, ITEM GET! toast with the label), stomps an enemy, then reaches the goal flag (STAGE CLEAR!). HUD shows score, hearts, level name and an XP bar. The default scene for explaining 2–6 facts or steps.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string",
+          "description": "Level name in the HUD, e.g. 'WORLD 1-2  ROOTS'. Under 22 characters."
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "items": {
+          "type": "array",
+          "description": "2–6 collectibles, in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "The fact, 1–5 words (shown in the ITEM GET toast)."
+              },
+              "icon": {
+                "type": "string",
+                "enum": [
+                  "coin",
+                  "gem",
+                  "heart",
+                  "star",
+                  "key",
+                  "scroll",
+                  "potion",
+                  "book",
+                  "sword",
+                  "shield",
+                  "bulb",
+                  "trophy",
+                  "chest",
+                  "crystal",
+                  "clock",
+                  "bag",
+                  "gear",
+                  "flag",
+                  "bomb",
+                  "leaf",
+                  "zap",
+                  "chip",
+                  "map"
+                ]
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Word from the narration on which the item is grabbed."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "goal": {
+          "type": "string",
+          "description": "Banner at the flag, default 'STAGE CLEAR!'."
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        },
+        "companion": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ],
+          "description": "Optional sidekick following the hero."
+        },
+        "enemy": {
+          "type": "string",
+          "enum": [
+            "slime",
+            "bat",
+            "spike",
+            "ghost",
+            "bugbot"
+          ],
+          "description": "Enemy stomped between items."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "level": "WORLD 1-1 ROOTS",
+      "world": "grassland",
+      "items": [
+        {
+          "label": "Water",
+          "icon": "potion",
+          "keyword": "water"
+        },
+        {
+          "label": "Sunlight",
+          "icon": "star",
+          "keyword": "sunlight"
+        },
+        {
+          "label": "Carbon dioxide",
+          "icon": "crystal",
+          "keyword": "carbon"
+        }
+      ]
+    },
+    "exampleNarration": "A plant needs three things to make food. First, water from its roots. Then sunlight on its leaves. And finally carbon dioxide from the air."
+  },
+  {
+    "id": "dialogue",
+    "name": "Dialogue Cutscene",
+    "description": "RPG cutscene: two or three cast members stand in a world while an RPG dialogue box with portrait and name plate types each line in sync with the voice; the speaker's mouth moves. Use for explanations framed as a conversation, questions and answers, quotes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "lines": {
+          "type": "array",
+          "description": "1–8 lines in order. Text should match the narration sentence it accompanies (under 160 characters each).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "kit",
+                  "orla",
+                  "bolt",
+                  "vex",
+                  "mo"
+                ]
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "world": "castle",
+      "lines": [
+        {
+          "speaker": "kit",
+          "text": "Sage Orla, why does the moon change shape?"
+        },
+        {
+          "speaker": "orla",
+          "text": "It never does! We just see a different slice of its sunlit half."
+        }
+      ]
+    },
+    "exampleNarration": "Sage Orla, why does the moon change shape? It never does! We just see a different slice of its sunlit half."
+  },
+  {
+    "id": "boss-battle",
+    "name": "Boss Battle",
+    "description": "Turn-based boss fight for problem vs. solution: a boss named after the problem (HP bar), a battle menu whose moves are the solutions. On each move's key word the cursor selects it, the hero dashes and strikes, damage numbers fly and HP drops; the boss counter-attacks once; the final move makes it explode → VICTORY.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "boss": {
+          "type": "string",
+          "description": "The problem, 1–4 words (boss name)."
+        },
+        "bossType": {
+          "type": "string",
+          "enum": [
+            "blob",
+            "golem",
+            "eye"
+          ]
+        },
+        "moves": {
+          "type": "array",
+          "description": "1–4 solutions/actions in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Move name, 1–3 words."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "victory": {
+          "type": "string",
+          "description": "Victory banner, default 'VICTORY!'."
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        }
+      },
+      "required": [
+        "boss",
+        "moves"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "boss": "Procrastination",
+      "bossType": "blob",
+      "moves": [
+        {
+          "name": "Tiny Tasks",
+          "keyword": "tiny"
+        },
+        {
+          "name": "Timer Strike",
+          "keyword": "timer"
+        },
+        {
+          "name": "No Phone Zone",
+          "keyword": "phone"
+        }
+      ]
+    },
+    "exampleNarration": "Procrastination is a tough boss. Hit it with tiny tasks, set a timer for twenty minutes, and put your phone in another room."
+  },
+  {
+    "id": "inventory",
+    "name": "Inventory Screen",
+    "description": "Full-screen RPG inventory: each item pops into a slot on its key word, the cursor jumps to it and a detail panel shows a big icon, the name and a typed description. Use for lists of tools, ingredients, resources, features.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Window title, default 'INVENTORY'."
+        },
+        "items": {
+          "type": "array",
+          "description": "1–9 items in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "1–3 words."
+              },
+              "icon": {
+                "type": "string",
+                "enum": [
+                  "coin",
+                  "gem",
+                  "heart",
+                  "star",
+                  "key",
+                  "scroll",
+                  "potion",
+                  "book",
+                  "sword",
+                  "shield",
+                  "bulb",
+                  "trophy",
+                  "chest",
+                  "crystal",
+                  "clock",
+                  "bag",
+                  "gear",
+                  "flag",
+                  "bomb",
+                  "leaf",
+                  "zap",
+                  "chip",
+                  "map"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "description": "Under 90 characters."
+              },
+              "qty": {
+                "type": "string",
+                "description": "Optional quantity shown in the slot, e.g. '3'."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ],
+          "description": "Dimmed world behind the menu."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Camping Kit",
+      "items": [
+        {
+          "name": "Water Filter",
+          "icon": "potion",
+          "description": "Turns stream water into safe drinking water.",
+          "keyword": "filter"
+        },
+        {
+          "name": "Map",
+          "icon": "map",
+          "description": "Works with no signal, no battery.",
+          "keyword": "map"
+        },
+        {
+          "name": "First Aid",
+          "icon": "heart",
+          "description": "Blisters are the number one trail injury.",
+          "keyword": "aid"
+        },
+        {
+          "name": "Headlamp",
+          "icon": "bulb",
+          "description": "Keeps both hands free after dark.",
+          "keyword": "headlamp"
+        }
+      ]
+    },
+    "exampleNarration": "Pack a water filter, a paper map, a first aid kit, and a headlamp."
+  },
+  {
+    "id": "world-map",
+    "name": "World Map",
+    "description": "Overworld map (procedural islands, forests, mountains) with numbered level nodes joined by a dotted path; the hero walks node to node on each key word and a banner names the current stage. Use for chapters, timelines, journeys, roadmaps.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Map title, default 'WORLD MAP'."
+        },
+        "nodes": {
+          "type": "array",
+          "description": "2–7 stops in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–3 words (or a year)."
+              },
+              "sublabel": {
+                "type": "string",
+                "description": "Optional one short line."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "History of Flight",
+      "nodes": [
+        {
+          "label": "1783 Balloon",
+          "sublabel": "First crewed hot-air balloon",
+          "keyword": "balloon"
+        },
+        {
+          "label": "1903 Airplane",
+          "sublabel": "Twelve seconds of powered flight",
+          "keyword": "airplane"
+        },
+        {
+          "label": "1947 Sound barrier",
+          "keyword": "sound"
+        },
+        {
+          "label": "1969 Moon",
+          "sublabel": "Footprints on another world",
+          "keyword": "moon"
+        }
+      ]
+    },
+    "exampleNarration": "It started with a balloon in 1783. Then the airplane in 1903, breaking the sound barrier in 1947, and the moon in 1969."
+  },
+  {
+    "id": "level-up",
+    "name": "Level Up",
+    "description": "LEVEL UP! celebration: the hero cheers in a pillar of light while a stats window raises each stat on its key word (bar grows, number counts, +N pops); optional NEW SKILL toast at the end. Use for key takeaways, results, improvements, before/after numbers.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Default 'LEVEL UP!'."
+        },
+        "level": {
+          "type": "number",
+          "description": "New level number (2–99)."
+        },
+        "stats": {
+          "type": "array",
+          "description": "1–6 stats in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–3 words."
+              },
+              "from": {
+                "type": "number"
+              },
+              "to": {
+                "type": "number"
+              },
+              "suffix": {
+                "type": "string",
+                "description": "Optional unit, e.g. '%'."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "unlock": {
+          "type": "string",
+          "description": "Optional skill unlocked at the end, under 30 characters."
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        }
+      },
+      "required": [
+        "stats"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "level": 5,
+      "stats": [
+        {
+          "label": "Focus",
+          "from": 40,
+          "to": 75,
+          "keyword": "focus"
+        },
+        {
+          "label": "Energy",
+          "from": 55,
+          "to": 80,
+          "keyword": "energy"
+        },
+        {
+          "label": "Memory",
+          "from": 30,
+          "to": 65,
+          "keyword": "memory"
+        }
+      ],
+      "unlock": "Deep Sleep"
+    },
+    "exampleNarration": "After two weeks of good sleep, your focus goes up, your energy climbs, and your memory gets sharper."
+  },
+  {
+    "id": "choice-menu",
+    "name": "Choice Menu",
+    "description": "RPG decision: the mentor asks a question in the dialogue box, a menu lists the options; the cursor visits each option on its key word while the box explains it; optionally one option is chosen at the end (flash + hero cheers). Use for comparisons, pros/cons, 'which should you pick'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "description": "Under 90 characters."
+        },
+        "options": {
+          "type": "array",
+          "description": "2–5 options.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–3 words."
+              },
+              "detail": {
+                "type": "string",
+                "description": "One short explanation, under 80 characters."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "chosen": {
+          "type": "integer",
+          "description": "Index of the option finally picked, or -1 for none."
+        },
+        "verdict": {
+          "type": "string",
+          "description": "What the hero says when choosing."
+        },
+        "title": {
+          "type": "string"
+        },
+        "asker": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        }
+      },
+      "required": [
+        "question",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "question": "Which savings path suits you?",
+      "options": [
+        {
+          "label": "Savings account",
+          "detail": "Safe and instant, but tiny growth.",
+          "keyword": "savings"
+        },
+        {
+          "label": "Index fund",
+          "detail": "Ups and downs, strong long-term growth.",
+          "keyword": "index"
+        }
+      ],
+      "chosen": 1,
+      "verdict": "Index fund, for the long game!"
+    },
+    "exampleNarration": "Which path suits you? A savings account is safe but grows slowly. An index fund swings, but wins over decades."
+  },
+  {
+    "id": "quest-log",
+    "name": "Quest Log",
+    "description": "Parchment quest log: each quest gets ticked on its key word with a CLEAR! stamp and XP reward while the hero keeps marching in a strip below. Use for checklists, step-by-step plans, to-dos, goals.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Default 'QUEST LOG'."
+        },
+        "quests": {
+          "type": "array",
+          "description": "1–6 quests in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Under 50 characters."
+              },
+              "reward": {
+                "type": "string",
+                "description": "Optional, e.g. '+50 XP'."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        }
+      },
+      "required": [
+        "quests"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Morning Routine",
+      "quests": [
+        {
+          "title": "Drink a glass of water",
+          "keyword": "water"
+        },
+        {
+          "title": "Five minutes of stretching",
+          "keyword": "stretching"
+        },
+        {
+          "title": "Plan your top three tasks",
+          "keyword": "plan"
+        }
+      ]
+    },
+    "exampleNarration": "Start with a glass of water, then five minutes of stretching, and finally plan your top three tasks."
+  },
+  {
+    "id": "game-over",
+    "name": "Game Over / Continue",
+    "description": "Mistakes to avoid: the hero walks into enemies, each one a mistake (hit, heart lost, red MISTAKE toast on its key word) until GAME OVER; then CONTINUE? → YES, the hero respawns and a TIP window shows the lesson. Use for pitfalls, warnings, myths.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "mistakes": {
+          "type": "array",
+          "description": "1–5 mistakes in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Under 40 characters."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "lesson": {
+          "type": "string",
+          "description": "The tip shown after continuing, under 110 characters."
+        },
+        "level": {
+          "type": "string",
+          "description": "HUD level name."
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        }
+      },
+      "required": [
+        "mistakes"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "mistakes": [
+        {
+          "label": "Skipping the warm-up",
+          "keyword": "warm"
+        },
+        {
+          "label": "Lifting too heavy",
+          "keyword": "heavy"
+        },
+        {
+          "label": "No rest days",
+          "keyword": "rest"
+        }
+      ],
+      "lesson": "Start light, warm up, and let your muscles recover.",
+      "level": "GYM DUNGEON"
+    },
+    "exampleNarration": "The classic beginner mistakes: skipping the warm-up, lifting too heavy, and taking no rest days. Start light and let your body recover."
+  },
+  {
+    "id": "pixel-chart",
+    "name": "Pixel Chart",
+    "description": "Bar chart built from falling pixel bricks: each bar's blocks stack up on its key word while its value counts up; the hero then jumps on top of the highlighted (or tallest) bar and plants a flag. Use for comparisons of quantities.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Under 40 characters."
+        },
+        "unit": {
+          "type": "string",
+          "description": "Suffix after values, e.g. '%' or 'M'."
+        },
+        "bars": {
+          "type": "array",
+          "description": "2–6 bars.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–2 short words."
+              },
+              "value": {
+                "type": "number"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "highlight": {
+          "type": "integer",
+          "description": "Index of the bar the hero lands on (default tallest)."
+        },
+        "world": {
+          "type": "string",
+          "enum": [
+            "grassland",
+            "cave",
+            "city",
+            "castle",
+            "space",
+            "underwater"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "enum": [
+            "kit",
+            "orla",
+            "bolt",
+            "vex",
+            "mo"
+          ]
+        }
+      },
+      "required": [
+        "bars"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Hours of sleep we need",
+      "unit": "h",
+      "bars": [
+        {
+          "label": "Baby",
+          "value": 15,
+          "keyword": "babies"
+        },
+        {
+          "label": "Kid",
+          "value": 11,
+          "keyword": "kids"
+        },
+        {
+          "label": "Teen",
+          "value": 9,
+          "keyword": "teens"
+        },
+        {
+          "label": "Adult",
+          "value": 8,
+          "keyword": "adults"
+        }
+      ]
+    },
+    "exampleNarration": "Babies need about fifteen hours of sleep, kids around eleven, teens nine, and adults about eight."
+  },
+  {
+    "id": "high-scores",
+    "name": "High Scores",
+    "description": "Arcade high-score table on a starfield: rainbow-cycling title, ranked rows slide in on their key words and scores count up; the 1st place gets a crown. Use for rankings, top-N lists, records, leaderboards.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Default 'HIGH SCORES'."
+        },
+        "unit": {
+          "type": "string",
+          "description": "Optional unit after scores, e.g. 'KM'."
+        },
+        "entries": {
+          "type": "array",
+          "description": "2–8 entries, already in rank order (1st first).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Under 16 characters."
+              },
+              "score": {
+                "type": "number"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "score"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "footer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Tallest mountains",
+      "unit": "M",
+      "entries": [
+        {
+          "name": "Everest",
+          "score": 8849
+        },
+        {
+          "name": "K2",
+          "score": 8611
+        },
+        {
+          "name": "Kangchenjunga",
+          "score": 8586
+        },
+        {
+          "name": "Lhotse",
+          "score": 8516
+        }
+      ]
+    },
+    "exampleNarration": "The tallest mountains on Earth: Everest, then K2, Kangchenjunga, and Lhotse."
+  }
+]

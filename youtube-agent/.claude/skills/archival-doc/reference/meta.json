@@ -1,0 +1,16 @@
+{
+  "id": "archival-doc",
+  "name": "Archival Documentary",
+  "description": "The prestige history-documentary look: a dark archive desk under a lamp where a slow Ken Burns camera drifts across sepia photographs with corner mounts, typewritten memos with redaction bars and stamps, newspaper front pages, parchment maps with routes inking between places, red-string evidence boards, handwritten letters, ledgers and film strips. Elegant serif lower-thirds, typed date stamps, lamp flicker, dust and film grain. For history, biography, true crime and investigative storytelling.",
+  "premium": true,
+  "palette": {
+    "background": "#15110D",
+    "foreground": "#EDE3D0",
+    "accent": "#C8963E",
+    "muted": "#8C7F6A"
+  },
+  "fonts": [
+    "Georgia, \"Times New Roman\", Times, serif",
+    "\"Courier New\", Courier, monospace"
+  ]
+}

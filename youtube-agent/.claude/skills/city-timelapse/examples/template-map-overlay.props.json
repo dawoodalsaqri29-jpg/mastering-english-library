@@ -1,0 +1,36 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "title": "The *plan* of 1811",
+  "kicker": "Street plan",
+  "yearFrom": 1780,
+  "yearTo": 1900,
+  "beats": [
+    {
+      "year": 1811,
+      "label": "Commissioners' plan",
+      "keyword": "plan"
+    },
+    {
+      "year": 1860,
+      "label": "Half the island built",
+      "keyword": "half"
+    },
+    {
+      "year": 1900,
+      "label": "Grid complete",
+      "keyword": "complete"
+    }
+  ]
+}

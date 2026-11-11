@@ -1,0 +1,26 @@
+{
+  "company": "Northwind Motors",
+  "years": "1937 – 2026",
+  "archetype": "founder",
+  "empire": "auto",
+  "sky": "sunset",
+  "stats": [
+    {
+      "value": "89",
+      "label": "years",
+      "word": "years"
+    },
+    {
+      "value": "210000",
+      "label": "employees",
+      "word": "employees"
+    },
+    {
+      "value": "$48B",
+      "label": "in revenue",
+      "word": "revenue"
+    }
+  ],
+  "headline": "All from one *garage*",
+  "keyword": "garage"
+}
