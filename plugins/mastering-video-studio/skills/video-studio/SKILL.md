@@ -52,7 +52,7 @@ This skill is the front door to the plugin. It picks the style, writes the scene
    The script voices every scene, renders it, joins the scenes, writes English subtitles (`.en.srt`) and makes the 4K file. Finished scenes are reused, so rerun after a fix.
 5. **Known traps:** write `date` props as plain numbers ("43 - 410", "1066", "Today"). A date such as "55 BC to AD 410" froze the archival-doc chapter title. In founder-story, `company` and `year` print as "<company> founded <year>", so never put a person's name there. Very short narration (under 6 s) cuts off hand-drawn styles such as whiteboard-hand before the drawing finishes.
 6. **Check:** make a contact sheet (`ffmpeg -i x_1080p.mp4 -vf "fps=1/5,scale=384:-1,tile=5x2" -frames:v 1 sheet.png`), look at it, and fix overlaps, empty panels and anachronisms. Delete only the bad scene's `sNNN.mp4` and rerun.
-7. **Deliver:** send the 4K file and the subtitles, and add Arabic subtitles if the user wants them.
+7. **Deliver:** the chat refuses files over 400 MB. If the 4K file is bigger (grainy styles such as archival-doc and painted-history inflate it), re-encode a send copy with `-vf hqdn3d=3:3:6:6,scale=3840:2160 -crf 27`, which gives about 120 MB for a 3-minute video. Send the 4K file and the subtitles, and add Arabic subtitles if the user wants them.
 8. **Long videos:** render chapter by chapter (each chapter is its own scenes file), then join with `ffmpeg -f concat -c copy`.
 
 ## Setup (once per machine)

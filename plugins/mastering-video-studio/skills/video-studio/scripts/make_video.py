@@ -79,7 +79,7 @@ if not a.no4k:
     w, h = map(int, subprocess.run(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height',
                                     '-of', 'csv=p=0', f'{out}_1080p.mp4'], capture_output=True, text=True).stdout.strip().split(','))
     W4, H4 = (3840, 2160) if w >= h else (2160, 3840)
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{out}_1080p.mp4', '-vf', f'scale={W4}:{H4}:flags=lanczos',
-                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{out}_1080p.mp4', '-vf', f'hqdn3d=2:2:5:5,scale={W4}:{H4}:flags=lanczos',
+                    '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '25', '-threads', '2', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
                     f'{out}_4K.mp4'], check=True)
 print('DONE', out, f'{t_acc:.1f}s', flush=True)
