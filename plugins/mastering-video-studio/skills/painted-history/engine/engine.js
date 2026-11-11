@@ -1583,7 +1583,7 @@
     musketeer: { name: "Musketeers", era: "17th c. pike and shot", coat: "#3A5A96", trim: "#F1E6C8", trousers: "#5A4030", hat: "cavalier", weapon: "musket", flag: { field: "#F1E6C8", pattern: "cross", c1: "#3A5A96", c2: "#D9B05A" }, cannon: "#4A3A2A" },
     roman: { name: "Legionaries", era: "Roman legion", coat: "#A8281E", trim: "#B9B2A6", trousers: "#C9A77A", hat: "galea", weapon: "scutum", flag: { field: "#A8281E", pattern: "eagle", c1: "#D9B05A", c2: "#D9B05A" }, cannon: "#4A3A2A" },
     hoplite: { name: "Hoplites", era: "Greek city-state phalanx", coat: "#B9893A", trim: "#2A2A2A", trousers: "#C9A77A", hat: "corinthian", weapon: "hoplon", flag: { field: "#2A4F8C", pattern: "sun", c1: "#F1E6C8", c2: "#D9B05A" }, cannon: "#4A3A2A" },
-    knight: { name: "Knights", era: "High medieval men-at-arms", coat: "#8E9096", trim: "#B3271E", trousers: "#6E7076", hat: "greathelm", weapon: "sword", flag: { field: "#F1E6C8", pattern: "cross", c1: "#B3271E", c2: "#B3271E" }, cannon: "#4A3A2A" },
+    knight: { name: "Knights", era: "High medieval men-at-arms", coat: "#8E9096", trim: "#B3271E", trousers: "#6E7076", hat: "greathelm", weapon: "sword", flag: { field: "#F1E6C8", pattern: "george", c1: "#B3271E", c2: "#B3271E" }, cannon: "#4A3A2A" },
     samurai: { name: "Samurai", era: "Sengoku Japan", coat: "#2A2A30", trim: "#B3271E", trousers: "#2A2A30", hat: "kabuto", weapon: "yari", flag: { field: "#F1E6C8", pattern: "mon", c1: "#B3271E", c2: "#2A2A30" }, cannon: "#4A3A2A" },
     viking: { name: "Northmen", era: "Viking age shield wall", coat: "#6E5A3E", trim: "#C9A77A", trousers: "#3A2E22", hat: "nasal", weapon: "axe", flag: { field: "#2A2A2A", pattern: "raven", c1: "#F1E6C8", c2: "#B3271E" }, cannon: "#4A3A2A" },
     mongol: { name: "Horde", era: "Steppe horse archers", coat: "#3A5A96", trim: "#C9A77A", trousers: "#5A4030", hat: "furcap", weapon: "bow", flag: { field: "#2A4F8C", pattern: "tails", c1: "#F1E6C8", c2: "#D9B05A" }, cannon: "#4A3A2A" },
@@ -2580,6 +2580,7 @@
     var c1 = fl.c1, c2 = fl.c2, field = fl.field;
     R(g, 0, 0, fw, fh, field);
     switch (fl.pattern) {
+      case "george": R(g, 0, fh * 0.4, fw, fh * 0.2, c1); R(g, fw * 0.42, 0, fw * 0.16, fh, c1); break; // plain upright cross (medieval)
       case "cross": Ln(g, 0, 0, fw, fh, c1, fh * 0.18); Ln(g, fw, 0, 0, fh, c1, fh * 0.18); R(g, 0, fh * 0.38, fw, fh * 0.24, c1); R(g, fw * 0.4, 0, fw * 0.2, fh, c1); R(g, 0, fh * 0.43, fw, fh * 0.14, c2); R(g, fw * 0.44, 0, fw * 0.12, fh, c2); break;
       case "tricolour": R(g, 0, 0, fw / 3, fh, c1); R(g, (fw * 2) / 3, 0, fw / 3, fh, c2); break;
       case "fleur": for (var f = 0; f < 3; f++) { var fx = fw * (0.3 + f * 0.2), fy = fh * (f === 1 ? 0.62 : 0.4); El(g, fx, fy, fw * 0.035, fh * 0.12, c1); El(g, fx - fw * 0.04, fy + fh * 0.02, fw * 0.03, fh * 0.07, c1, { transform: "rotate(-30 " + f1(fx - fw * 0.04) + " " + f1(fy) + ")" }); El(g, fx + fw * 0.04, fy + fh * 0.02, fw * 0.03, fh * 0.07, c1, { transform: "rotate(30 " + f1(fx + fw * 0.04) + " " + f1(fy) + ")" }); R(g, fx - fw * 0.05, fy + fh * 0.06, fw * 0.1, fh * 0.03, c1); } break;
@@ -3287,7 +3288,7 @@
     s += '<path d="M' + A2(hx - 3.5, hy + hr * 0.6) + " L" + A2(hx + 3.5, hy + hr * 0.6) + " L" + A2(4, -84) + " L" + A2(-4, -84) + ' Z" fill="' + shade(skin, -0.2) + '"/>';
     var expr = pose === "shout" || pose === "charge" ? "shout" : pose === "aim" || pose === "fire" || pose === "kneel" ? "grit" : "calm";
     s += faceMk(hx, hy, hr, skin, r, { hair: hair, moustache: r() > 0.5, sideburns: r() > 0.5, beard: r() > 0.85, paint: true, expr: expr });
-    s += hatMk(pose === "shout" ? "bicorne" : F.hat, hx, hy, hr, F);
+    s += hatMk(pose === "shout" && F.weapon === "musket" ? "bicorne" : F.hat, hx, hy, hr, F); // bicorne only for musket-era officers
     // ---- front leg
     s += leg(front, false);
     // ---- weapon + front arm

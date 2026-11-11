@@ -1,7 +1,7 @@
 import json, subprocess, os, sys, numpy as np, soundfile as sf
 from kokoro_onnx import Kokoro
 k = Kokoro("/home/claude/tts/kokoro-v1.0.onnx", "/home/claude/tts/voices-v1.0.bin")
-V = json.load(open('/home/claude/demo/videos.json'))
+V = json.load(open(os.environ.get('VJSON', '/home/claude/demo/videos.json')))
 base = '/home/claude/newskills'
 only = sys.argv[1:] or list(V)
 os.makedirs('/home/claude/demo/out', exist_ok=True)
@@ -22,6 +22,8 @@ for st in only:
         for x, n in zip(words, w):
             dt = (t1-t0)*n/tot; W.append({"word": x.strip('.,?!:'), "start": round(t, 3), "end": round(t+dt*0.9, 3)}); t += dt
         json.dump(W, open(f'{wd}/w{i}.json', 'w')); json.dump(sc['props'], open(f'{wd}/p{i}.json', 'w'))
+        if os.environ.get('SKIP') and os.path.exists(mp4) and i <= int(os.environ.get('SKIP')):
+            outs.append(mp4); print(st, i, 'kept', flush=True); continue
         subprocess.run(['node', f'{d}/core/build-scene.mjs', '--style', f'{d}/engine', '--template', sc['template'],
                         '--props', f'p{i}.json', '--duration', f'{dur:.2f}', '--narration', sc['say'],
                         '--words', f'w{i}.json', '--out', f's{i}.html'], check=True, cwd=wd)
@@ -31,7 +33,7 @@ for st in only:
     open(f'{wd}/list.txt', 'w').write(''.join(f"file '{o}'\n" for o in outs))
     hd = f'/home/claude/demo/out/{st}_1080p.mp4'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{wd}/list.txt', '-c', 'copy', hd], check=True)
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', hd, '-vf', 'scale=3840:2160:flags=lanczos', '-c:v', 'libx264',
+    if not os.environ.get('NO4K'): subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', hd, '-vf', 'scale=3840:2160:flags=lanczos', '-c:v', 'libx264',
                     '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k',
                     f'/home/claude/demo/out/{st}_4K.mp4'], check=True)
     print('DONE', st, flush=True)
