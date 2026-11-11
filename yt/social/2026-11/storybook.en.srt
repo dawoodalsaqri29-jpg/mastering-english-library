@@ -1,0 +1,32 @@
+1
+00:00:00,400 --> 00:00:03,900
+Once upon a time, in a quiet forest, there lived a girl named Wren.
+
+2
+00:00:05,100 --> 00:00:09,448
+Every day, Wren learned one new word, and said it to her friend, the fox.
+
+3
+00:00:09,448 --> 00:00:09,806
+Brave.
+
+4
+00:00:09,806 --> 00:00:10,223
+Gentle.
+
+5
+00:00:10,223 --> 00:00:10,699
+Curious.
+
+6
+00:00:11,900 --> 00:00:15,790
+By the end of the year, she knew three hundred and sixty five new words.
+
+7
+00:00:15,790 --> 00:00:18,167
+One word a day becomes a whole new language.
+
+8
+00:00:18,167 --> 00:00:18,599
+The end.
+

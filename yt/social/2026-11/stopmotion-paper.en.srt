@@ -1,0 +1,36 @@
+1
+00:00:00,400 --> 00:00:03,553
+You already speak some Arabic, every time you speak English.
+
+2
+00:00:03,553 --> 00:00:04,499
+Here is the proof.
+
+3
+00:00:05,700 --> 00:00:07,442
+Algebra comes from al jabr.
+
+4
+00:00:07,442 --> 00:00:08,991
+Sugar comes from sukkar.
+
+5
+00:00:08,991 --> 00:00:10,733
+And cotton comes from qutn.
+
+6
+00:00:11,933 --> 00:00:13,388
+Coffee comes from qahwa.
+
+7
+00:00:13,388 --> 00:00:14,358
+Sofa from suffa.
+
+8
+00:00:14,358 --> 00:00:15,874
+And alcohol from al kuhl.
+
+9
+00:00:15,874 --> 00:00:17,633
+Which one surprised you most?
+

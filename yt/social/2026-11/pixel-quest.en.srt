@@ -1,0 +1,44 @@
+1
+00:00:00,400 --> 00:00:01,823
+Welcome to English Quest.
+
+2
+00:00:01,823 --> 00:00:04,500
+Your mission: level up from beginner to fluent.
+
+3
+00:00:05,700 --> 00:00:06,622
+Today's quests.
+
+4
+00:00:06,622 --> 00:00:07,975
+Learn three new words.
+
+5
+00:00:07,975 --> 00:00:10,065
+Listen to English for ten minutes.
+
+6
+00:00:10,065 --> 00:00:12,033
+And say five sentences out loud.
+
+7
+00:00:13,233 --> 00:00:14,167
+Quest complete!
+
+8
+00:00:14,167 --> 00:00:15,039
+Vocabulary up.
+
+9
+00:00:15,039 --> 00:00:15,848
+Listening up.
+
+10
+00:00:15,848 --> 00:00:16,969
+Confidence way up.
+
+11
+00:00:16,969 --> 00:00:18,899
+New skill unlocked: small talk.
+
