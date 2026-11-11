@@ -64,11 +64,11 @@ Style: Brand,DejaVu Sans,64,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,1,0,0,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,{ts_ass(t_acc)},Title,,0,0,0,,{esc(te)}\\N{{\\c&H5ACFFF&\\fs112}}{esc(ta)}
+Dialogue: 0,0:00:00.00,{ts_ass(t_acc)},Title,,0,0,0,,{esc(te)}\\N{{\\c&H5ACFFF&\\fs112}}\u202b{esc(ta)}
 Dialogue: 0,0:00:00.00,{ts_ass(t_acc)},Brand,,0,0,0,,Mastering English Library {{\\c&H5ACFFF&}}@dawood_alsaqri
 """
     for a, b, e, r in cues:
-        ass += f"Dialogue: 0,{ts_ass(a)},{ts_ass(b)},Sub,,0,0,0,,{esc(e)}\\N{{\\c&H5ACFFF&\\fs88}}{esc(r)}\n"
+        ass += f"Dialogue: 0,{ts_ass(a)},{ts_ass(b)},Sub,,0,0,0,,{esc(e)}\\N{{\\c&H5ACFFF&\\fs88}}\u202b{esc(r)}\n"
     open(f'{D}/social/{st}.ass', 'w', encoding='utf-8').write(ass)
     src = f'{D}/out/{st}_1080p.mp4'
     fc = (f"[0:v]scale=2160:3840:force_original_aspect_ratio=increase,crop=2160:3840,boxblur=30:3,eq=brightness=-0.18[bg];"
