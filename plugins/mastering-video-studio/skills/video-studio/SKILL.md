@@ -22,6 +22,7 @@ This skill is the front door to the plugin. It picks the style, writes the scene
 
 - Buffer (the user's scheduler) posts YouTube Shorts only: vertical and under 3 minutes. Long 16:9 videos are uploaded by hand in YouTube Studio.
 - For Instagram, TikTok and Shorts, use 9:16 versions with English subtitles and the Arabic translation burned in (`yt/social/2026-11/make_social.py` in the channel repo shows the layout). Keep music out: voice and sound effects only.
+- Arabic subtitles burned with ffmpeg/libass: start every Arabic line with the character U+202B (right-to-left embedding) and use Encoding -1 in the ASS style. Without it, any Arabic line that contains an English word is laid out in the wrong order. Check a full-size crop of a mixed line before delivering.
 - Link Buffer videos with commit-pinned raw GitHub URLs (`.../<commit-sha>/path`); branch links can serve a stale copy, which Buffer rejects.
 - The queue lives in `yt/social/2026-11/publish-queue.json`; a daily scheduled task refills Buffer from it (free plan: 10 scheduled posts at most).
 
