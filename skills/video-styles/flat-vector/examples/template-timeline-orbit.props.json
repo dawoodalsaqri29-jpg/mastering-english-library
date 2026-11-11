@@ -1,0 +1,26 @@
+{
+  "title": "Race to *space*",
+  "center": "earth",
+  "events": [
+    {
+      "year": "1957",
+      "label": "Sputnik",
+      "illus": "satellite"
+    },
+    {
+      "year": "1961",
+      "label": "First human",
+      "illus": "rocket"
+    },
+    {
+      "year": "1969",
+      "label": "Moon landing",
+      "illus": "moon"
+    },
+    {
+      "year": "1998",
+      "label": "Space station",
+      "illus": "satellite"
+    }
+  ]
+}

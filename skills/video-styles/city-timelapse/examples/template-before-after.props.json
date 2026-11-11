@@ -1,0 +1,21 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "yearA": 1850,
+  "yearB": 2024,
+  "labelA": "Steam and brick",
+  "labelB": "Glass and steel",
+  "keyword": "today",
+  "endsNow": true
+}

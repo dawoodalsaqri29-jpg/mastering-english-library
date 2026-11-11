@@ -1,0 +1,17 @@
+{
+  "id": "stopmotion-paper",
+  "name": "Paper Stop-Motion",
+  "description": "Handmade cut-paper stop-motion: split-pin paper puppets that hop and talk, layered craft dioramas, torn edges, tape and pins — animated on threes with hand-placed boil.",
+  "premium": false,
+  "palette": {
+    "background": "#C7A06E",
+    "foreground": "#2A211C",
+    "accent": "#D9472B",
+    "muted": "#F4EBD8"
+  },
+  "fonts": [
+    "\"Arial Black\", \"Archivo Black\", \"Noto Sans\", Inter, sans-serif",
+    "\"Trebuchet MS\", Verdana, \"Noto Sans\", sans-serif",
+    "\"Courier New\", \"Noto Sans Mono\", monospace"
+  ]
+}

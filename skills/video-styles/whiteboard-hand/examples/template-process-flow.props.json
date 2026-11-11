@@ -1,0 +1,21 @@
+{
+  "title": "How a startup grows",
+  "steps": [
+    {
+      "label": "Idea",
+      "doodle": "lightbulb"
+    },
+    {
+      "label": "Build",
+      "doodle": "gears"
+    },
+    {
+      "label": "Launch",
+      "doodle": "rocket"
+    },
+    {
+      "label": "Profit",
+      "doodle": "money-bag"
+    }
+  ]
+}

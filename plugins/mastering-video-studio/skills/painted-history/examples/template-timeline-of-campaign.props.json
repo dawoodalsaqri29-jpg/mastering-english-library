@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "date": "June 1812",
+      "label": "The army crosses the Niemen"
+    },
+    {
+      "date": "September",
+      "label": "Borodino: a bloody draw"
+    },
+    {
+      "date": "October",
+      "label": "The retreat from Moscow begins"
+    },
+    {
+      "date": "December",
+      "label": "A broken army recrosses the river"
+    }
+  ],
+  "army": {
+    "faction": "bluecoat",
+    "name": "Grande Armee"
+  },
+  "title": "The Russian Campaign",
+  "subtitle": "Six months, 400,000 men",
+  "sky": "golden",
+  "terrain": "fields"
+}

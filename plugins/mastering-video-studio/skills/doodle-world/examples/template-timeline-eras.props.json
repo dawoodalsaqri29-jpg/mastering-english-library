@@ -1,0 +1,40 @@
+{
+  "location": "savanna",
+  "character": "og",
+  "title": "the whole story",
+  "format": "bc",
+  "eras": [
+    {
+      "label": "Stone Age",
+      "icon": "cave",
+      "year": -50000,
+      "word": "stone"
+    },
+    {
+      "label": "Egypt",
+      "icon": "pyramid",
+      "year": -3000,
+      "word": "egypt"
+    },
+    {
+      "label": "Rome",
+      "icon": "column",
+      "year": -100,
+      "word": "rome"
+    },
+    {
+      "label": "Middle Ages",
+      "icon": "castle",
+      "year": 1200,
+      "word": "castles"
+    },
+    {
+      "label": "Today",
+      "icon": "city",
+      "year": 2025,
+      "word": "today",
+      "expression": "deadpan",
+      "mark": "..."
+    }
+  ]
+}

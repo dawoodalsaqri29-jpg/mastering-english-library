@@ -1,0 +1,26 @@
+{
+  "title": "A Century of Flight",
+  "events": [
+    {
+      "date": "1903",
+      "label": "First powered flight at Kitty Hawk",
+      "subject": "aircraft"
+    },
+    {
+      "date": "1927",
+      "label": "Lindbergh crosses the Atlantic alone",
+      "subject": "portrait"
+    },
+    {
+      "date": "1937",
+      "label": "The age of airships ends in flames",
+      "subject": "crowd"
+    },
+    {
+      "date": "1969",
+      "label": "Men walk on the Moon",
+      "subject": "landscape"
+    }
+  ],
+  "tone": "sepia"
+}

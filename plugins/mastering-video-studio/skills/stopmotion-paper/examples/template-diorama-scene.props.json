@@ -1,0 +1,22 @@
+{
+  "set": "countryside",
+  "title": "",
+  "character": "mo",
+  "items": [
+    {
+      "prop": "sun",
+      "label": "Sunlight",
+      "keyword": "sunlight"
+    },
+    {
+      "prop": "drop",
+      "label": "Water",
+      "keyword": "water"
+    },
+    {
+      "prop": "flower",
+      "label": "Growth",
+      "keyword": "grow"
+    }
+  ]
+}

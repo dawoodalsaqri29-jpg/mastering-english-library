@@ -1,0 +1,11 @@
+{
+  "character": "sam",
+  "companion": "maya",
+  "location": "city-street",
+  "lines": [
+    "Cities are getting hotter every summer.",
+    "Concrete soaks up heat all day.",
+    "So we need more trees!"
+  ],
+  "caption": "Urban heat"
+}

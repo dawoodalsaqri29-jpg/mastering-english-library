@@ -1,0 +1,15 @@
+{
+  "company": "Northwind",
+  "year": "1937",
+  "archetype": "inventor",
+  "headline": "Built in a *rented* garage",
+  "keyword": "garage",
+  "product": "engine",
+  "productName": "The V-Four",
+  "productWord": "engine",
+  "specs": [
+    "four cylinders",
+    "hand-cast block",
+    "twenty horsepower"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "character": "hikari",
+  "location": "rooftop",
+  "text": "Small steps beat *big* leaps",
+  "kicker": "Rule #1",
+  "keyword": "steps",
+  "icon": "rocket",
+  "keyExpression": "determined",
+  "beats": [
+    {
+      "word": "every",
+      "expression": "excited"
+    }
+  ]
+}

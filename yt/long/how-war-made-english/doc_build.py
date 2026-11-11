@@ -24,8 +24,14 @@ for i, sc in enumerate(S, 1):
         subprocess.run(['node', f'{d}/core/build-scene.mjs', '--style', f'{d}/engine', '--template', sc['template'],
                         '--props', f'p{i:03}.json', '--duration', f'{dur:.2f}', '--narration', sc['say'],
                         '--words', f'w{i:03}.json', '--out', f's{i:03}.html'], check=True, cwd=wd)
-        subprocess.run(['node', f'{d}/core/render-scene.mjs', '--html', f's{i:03}.html', '--audio', wav,
-                        '--duration', f'{dur:.2f}', '--out', mp4], check=True, cwd=wd)
+        for attempt in range(3):
+            try:
+                subprocess.run(['node', f'{d}/core/render-scene.mjs', '--html', f's{i:03}.html', '--audio', wav,
+                                '--duration', f'{dur:.2f}', '--out', mp4], check=True, cwd=wd, timeout=60 + dur * 25)
+                break
+            except subprocess.TimeoutExpired:
+                subprocess.run(['pkill', '-f', f'--html s{i:03}.html']); print('timeout, retry', i, flush=True)
+                if os.path.exists(mp4): os.remove(mp4)
     # subtitles: split narration into ~2 lines per cue, timed proportionally
     sent = [s.strip() for s in sc['say'].replace('? ', '?|').replace('. ', '.|').split('|') if s.strip()]
     L = sum(len(s) for s in sent); tt = t_acc + 0.5

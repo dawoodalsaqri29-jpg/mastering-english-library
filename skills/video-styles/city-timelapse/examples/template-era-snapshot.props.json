@@ -1,0 +1,34 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "year": 1760,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "label": "A colonial port",
+  "caption": "Twenty thousand people, one church, a busy harbour",
+  "callouts": [
+    {
+      "text": "The old fort",
+      "keyword": "fort",
+      "landmark": "fort"
+    },
+    {
+      "text": "Harbour",
+      "keyword": "harbour",
+      "district": "Harbor"
+    },
+    {
+      "text": "Farmland",
+      "keyword": "farms"
+    }
+  ]
+}

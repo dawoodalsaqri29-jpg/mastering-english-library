@@ -1,0 +1,21 @@
+{
+  "title": "How a seed becomes a tree",
+  "character": "wren",
+  "stops": [
+    {
+      "date": "Spring",
+      "label": "A seed is planted",
+      "keyword": "planted"
+    },
+    {
+      "date": "Summer",
+      "label": "A green *sprout*",
+      "keyword": "sprout"
+    },
+    {
+      "date": "Years later",
+      "label": "A tall oak tree",
+      "keyword": "oak"
+    }
+  ]
+}

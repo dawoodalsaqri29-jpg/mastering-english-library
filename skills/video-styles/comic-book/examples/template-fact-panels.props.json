@@ -1,0 +1,25 @@
+{
+  "title": "Super sleep powers",
+  "facts": [
+    {
+      "label": "Boosts memory",
+      "icon": "brain",
+      "keyword": "memory"
+    },
+    {
+      "label": "Repairs muscles",
+      "icon": "heart",
+      "keyword": "muscles"
+    },
+    {
+      "label": "Sharpens focus",
+      "icon": "target",
+      "keyword": "focus"
+    },
+    {
+      "label": "Saves energy",
+      "icon": "bolt",
+      "keyword": "energy"
+    }
+  ]
+}

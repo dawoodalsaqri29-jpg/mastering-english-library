@@ -1,0 +1,18 @@
+{
+  "title": "Marco Polo's road east",
+  "stops": [
+    {
+      "name": "Venice"
+    },
+    {
+      "name": "Baghdad"
+    },
+    {
+      "name": "Samarkand"
+    },
+    {
+      "name": "Beijing"
+    }
+  ],
+  "traveller": "otto"
+}

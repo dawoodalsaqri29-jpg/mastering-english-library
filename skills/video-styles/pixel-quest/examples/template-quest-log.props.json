@@ -1,0 +1,17 @@
+{
+  "title": "Morning Routine",
+  "quests": [
+    {
+      "title": "Drink a glass of water",
+      "keyword": "water"
+    },
+    {
+      "title": "Five minutes of stretching",
+      "keyword": "stretching"
+    },
+    {
+      "title": "Plan your top three tasks",
+      "keyword": "plan"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "The Light Bulb",
+  "events": [
+    {
+      "date": "1802",
+      "text": "Humphry Davy makes the first electric light glow.",
+      "background": "lab",
+      "character": "nova",
+      "pose": "point",
+      "expression": "happy"
+    },
+    {
+      "date": "1879",
+      "text": "Edison's bulb burns for over 13 hours.",
+      "background": "interior",
+      "mood": "night",
+      "character": "sam",
+      "pose": "cheer",
+      "expression": "grin"
+    },
+    {
+      "date": "Today",
+      "text": "LEDs use a fraction of the power.",
+      "background": "city",
+      "mood": "night",
+      "character": "bolt",
+      "pose": "wave",
+      "expression": "happy"
+    }
+  ]
+}

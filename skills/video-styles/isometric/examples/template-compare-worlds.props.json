@@ -1,0 +1,15 @@
+{
+  "title": "Two ways to power a town",
+  "left": {
+    "label": "Coal town",
+    "kind": "industrial",
+    "stat": "820 g"
+  },
+  "right": {
+    "label": "Green town",
+    "kind": "green",
+    "stat": "12 g",
+    "keyword": "wind"
+  },
+  "vsText": "VS"
+}

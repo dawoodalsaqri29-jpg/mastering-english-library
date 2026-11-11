@@ -1,0 +1,16 @@
+{
+  "company": "Northwind Motors",
+  "partner": "Kestrel Electric",
+  "years": "2009",
+  "archetypes": [
+    "founder",
+    "techie"
+  ],
+  "empire": "finance",
+  "amount": "$2.1B",
+  "keyword": "deal",
+  "signWord": "signed",
+  "title": "ACQUISITION",
+  "headline": "The *electric* bet",
+  "headlineWord": "electric"
+}

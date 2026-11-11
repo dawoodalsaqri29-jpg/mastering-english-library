@@ -1,0 +1,36 @@
+{
+  "region": "india",
+  "title": "HEAT WAVE 2024",
+  "zones": [
+    {
+      "place": "rajasthan",
+      "label": "Rajasthan",
+      "value": "50°C",
+      "intensity": "extreme",
+      "keyword": "Rajasthan"
+    },
+    {
+      "place": "delhi",
+      "label": "Delhi",
+      "value": "49°C",
+      "intensity": "high",
+      "keyword": "Delhi"
+    },
+    {
+      "place": "deccan",
+      "label": "Deccan",
+      "value": "44°C",
+      "intensity": "medium",
+      "keyword": "Deccan"
+    },
+    {
+      "place": "kerala",
+      "label": "Kerala",
+      "value": "34°C",
+      "intensity": "low",
+      "keyword": "Kerala"
+    }
+  ],
+  "legendTitle": "TEMPERATURE",
+  "headline": "*50 DEGREES* AND RISING"
+}

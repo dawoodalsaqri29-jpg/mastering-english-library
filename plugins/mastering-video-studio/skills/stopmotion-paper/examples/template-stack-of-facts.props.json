@@ -1,0 +1,20 @@
+{
+  "title": "Octopus facts",
+  "facts": [
+    {
+      "big": "3",
+      "text": "An octopus has *three* hearts.",
+      "keyword": "three"
+    },
+    {
+      "big": "9",
+      "text": "It has nine brains, one in each arm plus one.",
+      "keyword": "brains"
+    },
+    {
+      "big": "",
+      "text": "Its blood is *blue*.",
+      "keyword": "blue"
+    }
+  ]
+}

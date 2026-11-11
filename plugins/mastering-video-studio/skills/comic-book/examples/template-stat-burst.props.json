@@ -1,0 +1,11 @@
+{
+  "value": 8600,
+  "suffix": " km",
+  "label": "The length of the Great Wall of China",
+  "keyword": "length",
+  "character": "pip",
+  "expression": "shock",
+  "background": "action",
+  "palette": "red",
+  "sfx": "WOW!"
+}

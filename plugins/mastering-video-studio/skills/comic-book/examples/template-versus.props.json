@@ -1,0 +1,26 @@
+{
+  "left": {
+    "name": "Cats",
+    "character": "pip",
+    "points": [
+      "Independent",
+      "Low maintenance"
+    ],
+    "palette": "red",
+    "pose": "fist",
+    "expression": "grin"
+  },
+  "right": {
+    "name": "Dogs",
+    "character": "bolt",
+    "points": [
+      "Loyal",
+      "Love walks"
+    ],
+    "palette": "blue",
+    "pose": "fight",
+    "expression": "determined"
+  },
+  "keyword": "winner",
+  "sfx": "CLASH!"
+}

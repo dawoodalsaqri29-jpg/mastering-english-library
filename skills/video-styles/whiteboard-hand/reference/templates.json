@@ -1,0 +1,2295 @@
+[
+  {
+    "id": "draw-concept",
+    "name": "Draw a concept",
+    "description": "The hand draws one big doodle in the middle, colours it in, then hand-letters a label (and optional caption) under it and underlines it. The workhorse: one idea, one picture.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "doodle": {
+          "type": "string",
+          "enum": [
+            "lightbulb",
+            "brain",
+            "coins",
+            "money",
+            "money-bag",
+            "piggybank",
+            "house",
+            "globe",
+            "clock",
+            "rocket",
+            "heart",
+            "gears",
+            "chart-up",
+            "chart-down",
+            "chart-pie",
+            "magnifier",
+            "phone",
+            "laptop",
+            "book",
+            "trophy",
+            "target",
+            "mountain",
+            "tree",
+            "sun",
+            "cloud",
+            "cloud-rain",
+            "car",
+            "factory",
+            "thought-bubble",
+            "speech-bubble",
+            "star",
+            "check",
+            "cross",
+            "warning",
+            "question-mark",
+            "exclamation",
+            "battery",
+            "shield",
+            "key",
+            "lock",
+            "gift",
+            "calendar",
+            "map-pin",
+            "handshake",
+            "plant",
+            "hourglass",
+            "flag",
+            "megaphone",
+            "envelope",
+            "atom",
+            "document",
+            "puzzle",
+            "scale",
+            "pencil",
+            "coffee",
+            "airplane",
+            "team",
+            "cart",
+            "eye",
+            "water-drop",
+            "fire",
+            "lightning",
+            "graduation-cap",
+            "dna",
+            "thumbs-up",
+            "robot",
+            "crown",
+            "city",
+            "truck",
+            "umbrella",
+            "wifi",
+            "arrow-right",
+            "arrow-up",
+            "arrow-down",
+            "light-switch",
+            "seedling",
+            "stick-stand",
+            "stick-wave",
+            "stick-walk",
+            "stick-run",
+            "stick-cheer",
+            "stick-think",
+            "stick-point",
+            "stick-sit",
+            "stick-sad",
+            "stick-shrug",
+            "stick-jump",
+            "stick-worried",
+            "face-happy",
+            "face-sad",
+            "face-surprised",
+            "face-worried",
+            "face-angry",
+            "face-woman",
+            "face-woman-bun",
+            "face-man",
+            "face-professor"
+          ],
+          "description": "The big drawing — the most literal picture of the idea."
+        },
+        "label": {
+          "type": "string",
+          "description": "Handwritten label, 1–5 words. Wrap a word in *asterisks* to write it in red."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional smaller blue line under the label, ≤ 10 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the drawing should land on."
+        },
+        "labelKeyword": {
+          "type": "string",
+          "description": "Narration word the label should land on."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "green",
+            "orange",
+            "yellow",
+            "purple",
+            "pink",
+            "teal",
+            "brown",
+            "grey",
+            "sky"
+          ],
+          "description": "Main marker colour to scribble into the doodle (optional)."
+        },
+        "emphasis": {
+          "type": "string",
+          "enum": [
+            "underline",
+            "circle",
+            "none"
+          ],
+          "description": "Final scribble emphasis (default underline)."
+        },
+        "accents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lightbulb",
+              "brain",
+              "coins",
+              "money",
+              "money-bag",
+              "piggybank",
+              "house",
+              "globe",
+              "clock",
+              "rocket",
+              "heart",
+              "gears",
+              "chart-up",
+              "chart-down",
+              "chart-pie",
+              "magnifier",
+              "phone",
+              "laptop",
+              "book",
+              "trophy",
+              "target",
+              "mountain",
+              "tree",
+              "sun",
+              "cloud",
+              "cloud-rain",
+              "car",
+              "factory",
+              "thought-bubble",
+              "speech-bubble",
+              "star",
+              "check",
+              "cross",
+              "warning",
+              "question-mark",
+              "exclamation",
+              "battery",
+              "shield",
+              "key",
+              "lock",
+              "gift",
+              "calendar",
+              "map-pin",
+              "handshake",
+              "plant",
+              "hourglass",
+              "flag",
+              "megaphone",
+              "envelope",
+              "atom",
+              "document",
+              "puzzle",
+              "scale",
+              "pencil",
+              "coffee",
+              "airplane",
+              "team",
+              "cart",
+              "eye",
+              "water-drop",
+              "fire",
+              "lightning",
+              "graduation-cap",
+              "dna",
+              "thumbs-up",
+              "robot",
+              "crown",
+              "city",
+              "truck",
+              "umbrella",
+              "wifi",
+              "arrow-right",
+              "arrow-up",
+              "arrow-down",
+              "light-switch",
+              "seedling",
+              "stick-stand",
+              "stick-wave",
+              "stick-walk",
+              "stick-run",
+              "stick-cheer",
+              "stick-think",
+              "stick-point",
+              "stick-sit",
+              "stick-sad",
+              "stick-shrug",
+              "stick-jump",
+              "stick-worried",
+              "face-happy",
+              "face-sad",
+              "face-surprised",
+              "face-worried",
+              "face-angry",
+              "face-woman",
+              "face-woman-bun",
+              "face-man",
+              "face-professor"
+            ],
+            "description": "Small accent doodle beside the main drawing (stars, arrows, check…)."
+          },
+          "description": "0–2 small accent doodles."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "doodle",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "doodle": "lightbulb",
+      "label": "A *simple* idea",
+      "caption": "starts with one question",
+      "keyword": "idea",
+      "accents": [
+        "star",
+        "question-mark"
+      ]
+    },
+    "exampleNarration": "Every great invention starts with a simple idea, and that idea starts with one good question."
+  },
+  {
+    "id": "mind-map",
+    "name": "Mind map",
+    "description": "A central idea is written and circled, then branches are drawn out one by one, each with a small doodle and a coloured handwritten label, each landing on its word.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "center": {
+          "type": "string",
+          "description": "Central idea, 1–4 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word for the centre."
+        },
+        "branches": {
+          "type": "array",
+          "description": "2–6 branches in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–3 words."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              }
+            },
+            "required": [
+              "label",
+              "doodle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "center",
+        "branches"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "center": "Healthy Habits",
+      "branches": [
+        {
+          "label": "Sleep",
+          "doodle": "clock"
+        },
+        {
+          "label": "Exercise",
+          "doodle": "stick-run"
+        },
+        {
+          "label": "Good food",
+          "doodle": "plant"
+        },
+        {
+          "label": "Friends",
+          "doodle": "team"
+        }
+      ]
+    },
+    "exampleNarration": "A healthy life rests on a few simple habits: enough sleep, regular exercise, good food, and time with friends."
+  },
+  {
+    "id": "process-flow",
+    "name": "Process flow",
+    "description": "2–5 steps drawn left-to-right (top-to-bottom in portrait), each a doodle with a label, linked by hand-drawn arrows as the narration walks through them.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading, ≤ 6 words."
+        },
+        "steps": {
+          "type": "array",
+          "description": "2–5 steps in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–4 words."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              }
+            },
+            "required": [
+              "label",
+              "doodle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "numbered": {
+          "type": "boolean",
+          "description": "Prefix labels with 1. 2. 3."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How a startup grows",
+      "steps": [
+        {
+          "label": "Idea",
+          "doodle": "lightbulb"
+        },
+        {
+          "label": "Build",
+          "doodle": "gears"
+        },
+        {
+          "label": "Launch",
+          "doodle": "rocket"
+        },
+        {
+          "label": "Profit",
+          "doodle": "money-bag"
+        }
+      ]
+    },
+    "exampleNarration": "Here is how a startup grows. It begins with an idea. Then you build the product, launch it to the world, and finally turn it into profit."
+  },
+  {
+    "id": "list-with-doodles",
+    "name": "List with doodles",
+    "description": "A handwritten, underlined title, then 2–5 rows each with a small doodle and a handwritten line, optionally ticked off with green check marks.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "List heading, ≤ 6 words."
+        },
+        "items": {
+          "type": "array",
+          "description": "2–5 items in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "≤ 7 words."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              },
+              "color": {
+                "type": "string",
+                "enum": [
+                  "black",
+                  "blue",
+                  "red",
+                  "green"
+                ],
+                "description": "Ink colour of the line."
+              }
+            },
+            "required": [
+              "text",
+              "doodle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "check": {
+          "type": "boolean",
+          "description": "Tick each item with a green check after writing it."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "title",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Before you invest",
+      "items": [
+        {
+          "text": "Build an emergency fund",
+          "doodle": "piggybank"
+        },
+        {
+          "text": "Pay off expensive debt",
+          "doodle": "money"
+        },
+        {
+          "text": "Think long term",
+          "doodle": "clock"
+        }
+      ],
+      "check": true
+    },
+    "exampleNarration": "Before you invest, do three things. Build an emergency fund. Pay off expensive debt. And always think long term."
+  },
+  {
+    "id": "before-after",
+    "name": "Before / after",
+    "description": "The board is split by a marker line; the 'before' side is drawn and labelled, then the 'after' side, finished with a red cross and a green check. Works for problem/solution, myth/fact, then/now.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "before": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "≤ 5 words."
+            },
+            "doodle": {
+              "type": "string",
+              "enum": [
+                "lightbulb",
+                "brain",
+                "coins",
+                "money",
+                "money-bag",
+                "piggybank",
+                "house",
+                "globe",
+                "clock",
+                "rocket",
+                "heart",
+                "gears",
+                "chart-up",
+                "chart-down",
+                "chart-pie",
+                "magnifier",
+                "phone",
+                "laptop",
+                "book",
+                "trophy",
+                "target",
+                "mountain",
+                "tree",
+                "sun",
+                "cloud",
+                "cloud-rain",
+                "car",
+                "factory",
+                "thought-bubble",
+                "speech-bubble",
+                "star",
+                "check",
+                "cross",
+                "warning",
+                "question-mark",
+                "exclamation",
+                "battery",
+                "shield",
+                "key",
+                "lock",
+                "gift",
+                "calendar",
+                "map-pin",
+                "handshake",
+                "plant",
+                "hourglass",
+                "flag",
+                "megaphone",
+                "envelope",
+                "atom",
+                "document",
+                "puzzle",
+                "scale",
+                "pencil",
+                "coffee",
+                "airplane",
+                "team",
+                "cart",
+                "eye",
+                "water-drop",
+                "fire",
+                "lightning",
+                "graduation-cap",
+                "dna",
+                "thumbs-up",
+                "robot",
+                "crown",
+                "city",
+                "truck",
+                "umbrella",
+                "wifi",
+                "arrow-right",
+                "arrow-up",
+                "arrow-down",
+                "light-switch",
+                "seedling",
+                "stick-stand",
+                "stick-wave",
+                "stick-walk",
+                "stick-run",
+                "stick-cheer",
+                "stick-think",
+                "stick-point",
+                "stick-sit",
+                "stick-sad",
+                "stick-shrug",
+                "stick-jump",
+                "stick-worried",
+                "face-happy",
+                "face-sad",
+                "face-surprised",
+                "face-worried",
+                "face-angry",
+                "face-woman",
+                "face-woman-bun",
+                "face-man",
+                "face-professor"
+              ],
+              "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+            },
+            "note": {
+              "type": "string",
+              "description": "Optional small note ≤ 8 words."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "purple",
+                "pink",
+                "teal",
+                "brown",
+                "grey",
+                "sky"
+              ],
+              "description": "Main marker colour to scribble into the doodle (optional)."
+            }
+          },
+          "required": [
+            "label",
+            "doodle"
+          ],
+          "additionalProperties": false
+        },
+        "after": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "≤ 5 words."
+            },
+            "doodle": {
+              "type": "string",
+              "enum": [
+                "lightbulb",
+                "brain",
+                "coins",
+                "money",
+                "money-bag",
+                "piggybank",
+                "house",
+                "globe",
+                "clock",
+                "rocket",
+                "heart",
+                "gears",
+                "chart-up",
+                "chart-down",
+                "chart-pie",
+                "magnifier",
+                "phone",
+                "laptop",
+                "book",
+                "trophy",
+                "target",
+                "mountain",
+                "tree",
+                "sun",
+                "cloud",
+                "cloud-rain",
+                "car",
+                "factory",
+                "thought-bubble",
+                "speech-bubble",
+                "star",
+                "check",
+                "cross",
+                "warning",
+                "question-mark",
+                "exclamation",
+                "battery",
+                "shield",
+                "key",
+                "lock",
+                "gift",
+                "calendar",
+                "map-pin",
+                "handshake",
+                "plant",
+                "hourglass",
+                "flag",
+                "megaphone",
+                "envelope",
+                "atom",
+                "document",
+                "puzzle",
+                "scale",
+                "pencil",
+                "coffee",
+                "airplane",
+                "team",
+                "cart",
+                "eye",
+                "water-drop",
+                "fire",
+                "lightning",
+                "graduation-cap",
+                "dna",
+                "thumbs-up",
+                "robot",
+                "crown",
+                "city",
+                "truck",
+                "umbrella",
+                "wifi",
+                "arrow-right",
+                "arrow-up",
+                "arrow-down",
+                "light-switch",
+                "seedling",
+                "stick-stand",
+                "stick-wave",
+                "stick-walk",
+                "stick-run",
+                "stick-cheer",
+                "stick-think",
+                "stick-point",
+                "stick-sit",
+                "stick-sad",
+                "stick-shrug",
+                "stick-jump",
+                "stick-worried",
+                "face-happy",
+                "face-sad",
+                "face-surprised",
+                "face-worried",
+                "face-angry",
+                "face-woman",
+                "face-woman-bun",
+                "face-man",
+                "face-professor"
+              ],
+              "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+            },
+            "note": {
+              "type": "string",
+              "description": "Optional small note ≤ 8 words."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "green",
+                "orange",
+                "yellow",
+                "purple",
+                "pink",
+                "teal",
+                "brown",
+                "grey",
+                "sky"
+              ],
+              "description": "Main marker colour to scribble into the doodle (optional)."
+            }
+          },
+          "required": [
+            "label",
+            "doodle"
+          ],
+          "additionalProperties": false
+        },
+        "beforeTitle": {
+          "type": "string",
+          "description": "Heading of the first side (default 'Before'), e.g. 'Myth', 'Then', 'Problem'."
+        },
+        "afterTitle": {
+          "type": "string",
+          "description": "Heading of the second side (default 'After'), e.g. 'Fact', 'Now', 'Solution'."
+        },
+        "mark": {
+          "type": "boolean",
+          "description": "Add the red cross / green check (default true)."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "before",
+        "after"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "before": {
+        "label": "Stuck in traffic",
+        "doodle": "car",
+        "note": "two hours a day"
+      },
+      "after": {
+        "label": "Work from home",
+        "doodle": "laptop",
+        "note": "time for life"
+      },
+      "beforeTitle": "Then",
+      "afterTitle": "Now"
+    },
+    "exampleNarration": "Back then, millions of people sat stuck in traffic for hours. Now, many of them work from home and get that time back."
+  },
+  {
+    "id": "stick-figure-story",
+    "name": "Stick-figure story",
+    "description": "Stick figures on a ground line act out a mini story: each beat draws a figure in a pose, an optional prop doodle and an optional speech bubble with handwritten words.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading, ≤ 6 words."
+        },
+        "beats": {
+          "type": "array",
+          "description": "1–4 beats (figures) in story order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "stand",
+                  "wave",
+                  "walk",
+                  "run",
+                  "cheer",
+                  "think",
+                  "point",
+                  "sit",
+                  "sad",
+                  "shrug",
+                  "jump",
+                  "worried"
+                ],
+                "description": "Stick-figure pose."
+              },
+              "say": {
+                "type": "string",
+                "description": "Optional speech bubble, ≤ 6 words."
+              },
+              "prop": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Optional object next to the figure."
+              },
+              "flip": {
+                "type": "boolean",
+                "description": "Mirror the figure (face left)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              }
+            },
+            "required": [
+              "pose"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "beats"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "beats": [
+        {
+          "pose": "think",
+          "say": "How do I save?",
+          "keyword": "wondered"
+        },
+        {
+          "pose": "point",
+          "prop": "piggybank",
+          "say": "Pay yourself first!",
+          "keyword": "friend"
+        },
+        {
+          "pose": "cheer",
+          "prop": "money-bag",
+          "keyword": "later"
+        }
+      ]
+    },
+    "exampleNarration": "Sam wondered how anyone ever saves money. A friend told him: pay yourself first. Ten years later, he was glad he listened."
+  },
+  {
+    "id": "handwritten-quote",
+    "name": "Handwritten quote",
+    "description": "Big red quote marks, then the quote is hand-lettered across the board, signed with the author's name, optionally with a small doodle, and underlined.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "quote": {
+          "type": "string",
+          "description": "The quote, ≤ 25 words. *asterisks* write a word in red."
+        },
+        "author": {
+          "type": "string",
+          "description": "Who said it (optional)."
+        },
+        "doodle": {
+          "type": "string",
+          "enum": [
+            "lightbulb",
+            "brain",
+            "coins",
+            "money",
+            "money-bag",
+            "piggybank",
+            "house",
+            "globe",
+            "clock",
+            "rocket",
+            "heart",
+            "gears",
+            "chart-up",
+            "chart-down",
+            "chart-pie",
+            "magnifier",
+            "phone",
+            "laptop",
+            "book",
+            "trophy",
+            "target",
+            "mountain",
+            "tree",
+            "sun",
+            "cloud",
+            "cloud-rain",
+            "car",
+            "factory",
+            "thought-bubble",
+            "speech-bubble",
+            "star",
+            "check",
+            "cross",
+            "warning",
+            "question-mark",
+            "exclamation",
+            "battery",
+            "shield",
+            "key",
+            "lock",
+            "gift",
+            "calendar",
+            "map-pin",
+            "handshake",
+            "plant",
+            "hourglass",
+            "flag",
+            "megaphone",
+            "envelope",
+            "atom",
+            "document",
+            "puzzle",
+            "scale",
+            "pencil",
+            "coffee",
+            "airplane",
+            "team",
+            "cart",
+            "eye",
+            "water-drop",
+            "fire",
+            "lightning",
+            "graduation-cap",
+            "dna",
+            "thumbs-up",
+            "robot",
+            "crown",
+            "city",
+            "truck",
+            "umbrella",
+            "wifi",
+            "arrow-right",
+            "arrow-up",
+            "arrow-down",
+            "light-switch",
+            "seedling",
+            "stick-stand",
+            "stick-wave",
+            "stick-walk",
+            "stick-run",
+            "stick-cheer",
+            "stick-think",
+            "stick-point",
+            "stick-sit",
+            "stick-sad",
+            "stick-shrug",
+            "stick-jump",
+            "stick-worried",
+            "face-happy",
+            "face-sad",
+            "face-surprised",
+            "face-worried",
+            "face-angry",
+            "face-woman",
+            "face-woman-bun",
+            "face-man",
+            "face-professor"
+          ],
+          "description": "Optional small doodle, e.g. face-professor or lightbulb."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "quote": "The best way to predict the future is to *create* it.",
+      "author": "Peter Drucker",
+      "doodle": "face-professor"
+    },
+    "exampleNarration": "As Peter Drucker put it: the best way to predict the future is to create it."
+  },
+  {
+    "id": "big-number",
+    "name": "Big number",
+    "description": "A huge hand-lettered number or stat lands on its word, a label is written under it, it gets a double underline, and an optional doodle illustrates it.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "The number as written, e.g. '73%', '$2.4M', '1 in 5', '1969'."
+        },
+        "label": {
+          "type": "string",
+          "description": "What it means, ≤ 7 words."
+        },
+        "doodle": {
+          "type": "string",
+          "enum": [
+            "lightbulb",
+            "brain",
+            "coins",
+            "money",
+            "money-bag",
+            "piggybank",
+            "house",
+            "globe",
+            "clock",
+            "rocket",
+            "heart",
+            "gears",
+            "chart-up",
+            "chart-down",
+            "chart-pie",
+            "magnifier",
+            "phone",
+            "laptop",
+            "book",
+            "trophy",
+            "target",
+            "mountain",
+            "tree",
+            "sun",
+            "cloud",
+            "cloud-rain",
+            "car",
+            "factory",
+            "thought-bubble",
+            "speech-bubble",
+            "star",
+            "check",
+            "cross",
+            "warning",
+            "question-mark",
+            "exclamation",
+            "battery",
+            "shield",
+            "key",
+            "lock",
+            "gift",
+            "calendar",
+            "map-pin",
+            "handshake",
+            "plant",
+            "hourglass",
+            "flag",
+            "megaphone",
+            "envelope",
+            "atom",
+            "document",
+            "puzzle",
+            "scale",
+            "pencil",
+            "coffee",
+            "airplane",
+            "team",
+            "cart",
+            "eye",
+            "water-drop",
+            "fire",
+            "lightning",
+            "graduation-cap",
+            "dna",
+            "thumbs-up",
+            "robot",
+            "crown",
+            "city",
+            "truck",
+            "umbrella",
+            "wifi",
+            "arrow-right",
+            "arrow-up",
+            "arrow-down",
+            "light-switch",
+            "seedling",
+            "stick-stand",
+            "stick-wave",
+            "stick-walk",
+            "stick-run",
+            "stick-cheer",
+            "stick-think",
+            "stick-point",
+            "stick-sit",
+            "stick-sad",
+            "stick-shrug",
+            "stick-jump",
+            "stick-worried",
+            "face-happy",
+            "face-sad",
+            "face-surprised",
+            "face-worried",
+            "face-angry",
+            "face-woman",
+            "face-woman-bun",
+            "face-man",
+            "face-professor"
+          ],
+          "description": "Optional doodle beside / under the number."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word where the number is spoken."
+        },
+        "labelKeyword": {
+          "type": "string",
+          "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "green",
+            "black",
+            "orange",
+            "purple"
+          ],
+          "description": "Ink of the number (default red)."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "value": "73%",
+      "label": "of people never budget",
+      "doodle": "face-worried",
+      "keyword": "seventy"
+    },
+    "exampleNarration": "A recent survey found that seventy three percent of people never make a budget at all."
+  },
+  {
+    "id": "pan-board",
+    "name": "Pan across the board",
+    "description": "A journey across a large whiteboard: the camera travels from stop to stop while the hand draws a connecting arrow, then each stop's doodle and label; ends by pulling back to reveal the whole board.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading at the first stop, ≤ 6 words."
+        },
+        "stops": {
+          "type": "array",
+          "description": "3–6 stops in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "1–4 words."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              }
+            },
+            "required": [
+              "label",
+              "doodle"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "stops"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "From farm to table",
+      "stops": [
+        {
+          "label": "The farm",
+          "doodle": "plant"
+        },
+        {
+          "label": "The factory",
+          "doodle": "factory"
+        },
+        {
+          "label": "The truck",
+          "doodle": "truck"
+        },
+        {
+          "label": "Your kitchen",
+          "doodle": "house"
+        }
+      ]
+    },
+    "exampleNarration": "Your food takes a long trip. It starts on the farm, goes through a factory, rides across the country in a truck, and finally lands in your kitchen."
+  },
+  {
+    "id": "simple-chart",
+    "name": "Hand-drawn chart",
+    "description": "The hand draws axes, then each bar (outlined, then scribbled in colour) or each point of a line chart, writes the values and labels, and circles the highlighted one.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading, ≤ 7 words."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "bar",
+            "line"
+          ],
+          "description": "Bar (default) or line chart."
+        },
+        "data": {
+          "type": "array",
+          "description": "2–6 points in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Short category / year."
+              },
+              "value": {
+                "type": "number",
+                "description": "Value (≥ 0)."
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Value prefix, e.g. '$'."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Value suffix, e.g. '%', 'M'."
+        },
+        "highlight": {
+          "type": "integer",
+          "description": "Index of the bar/point to circle in red (optional)."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "data"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Phones sold (millions)",
+      "kind": "bar",
+      "data": [
+        {
+          "label": "2008",
+          "value": 140
+        },
+        {
+          "label": "2012",
+          "value": 680
+        },
+        {
+          "label": "2016",
+          "value": 1490
+        },
+        {
+          "label": "2020",
+          "value": 1290
+        }
+      ],
+      "highlight": 2,
+      "suffix": "M"
+    },
+    "exampleNarration": "Smartphone sales exploded, from a hundred and forty million in two thousand eight to nearly one and a half billion by two thousand sixteen, before finally levelling off."
+  },
+  {
+    "id": "title-board",
+    "name": "Title board",
+    "description": "A big hand-lettered title with a double underline, an optional subtitle and up to three decorative doodles around it. For openers, chapter starts and section breaks.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title, ≤ 6 words. *asterisks* write a word in red."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional subtitle, ≤ 10 words."
+        },
+        "doodles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lightbulb",
+              "brain",
+              "coins",
+              "money",
+              "money-bag",
+              "piggybank",
+              "house",
+              "globe",
+              "clock",
+              "rocket",
+              "heart",
+              "gears",
+              "chart-up",
+              "chart-down",
+              "chart-pie",
+              "magnifier",
+              "phone",
+              "laptop",
+              "book",
+              "trophy",
+              "target",
+              "mountain",
+              "tree",
+              "sun",
+              "cloud",
+              "cloud-rain",
+              "car",
+              "factory",
+              "thought-bubble",
+              "speech-bubble",
+              "star",
+              "check",
+              "cross",
+              "warning",
+              "question-mark",
+              "exclamation",
+              "battery",
+              "shield",
+              "key",
+              "lock",
+              "gift",
+              "calendar",
+              "map-pin",
+              "handshake",
+              "plant",
+              "hourglass",
+              "flag",
+              "megaphone",
+              "envelope",
+              "atom",
+              "document",
+              "puzzle",
+              "scale",
+              "pencil",
+              "coffee",
+              "airplane",
+              "team",
+              "cart",
+              "eye",
+              "water-drop",
+              "fire",
+              "lightning",
+              "graduation-cap",
+              "dna",
+              "thumbs-up",
+              "robot",
+              "crown",
+              "city",
+              "truck",
+              "umbrella",
+              "wifi",
+              "arrow-right",
+              "arrow-up",
+              "arrow-down",
+              "light-switch",
+              "seedling",
+              "stick-stand",
+              "stick-wave",
+              "stick-walk",
+              "stick-run",
+              "stick-cheer",
+              "stick-think",
+              "stick-point",
+              "stick-sit",
+              "stick-sad",
+              "stick-shrug",
+              "stick-jump",
+              "stick-worried",
+              "face-happy",
+              "face-sad",
+              "face-surprised",
+              "face-worried",
+              "face-angry",
+              "face-woman",
+              "face-woman-bun",
+              "face-man",
+              "face-professor"
+            ],
+            "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+          },
+          "description": "0–3 decorative doodles."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "green",
+            "orange",
+            "purple"
+          ],
+          "description": "Underline colour."
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Power of *Habits*",
+      "subtitle": "small changes, big results",
+      "doodles": [
+        "brain",
+        "chart-up",
+        "star"
+      ]
+    },
+    "exampleNarration": "Welcome. Today we explore the power of habits, and how small changes can lead to big results."
+  },
+  {
+    "id": "timeline",
+    "name": "Timeline",
+    "description": "A hand-drawn arrow becomes a timeline; each event gets a tick, a red date, an optional doodle and a label, alternating above and below (a vertical list in portrait).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading, ≤ 6 words."
+        },
+        "events": {
+          "type": "array",
+          "description": "2–5 events in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Short date, e.g. '1969'."
+              },
+              "label": {
+                "type": "string",
+                "description": "≤ 5 words."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "brain",
+                  "coins",
+                  "money",
+                  "money-bag",
+                  "piggybank",
+                  "house",
+                  "globe",
+                  "clock",
+                  "rocket",
+                  "heart",
+                  "gears",
+                  "chart-up",
+                  "chart-down",
+                  "chart-pie",
+                  "magnifier",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "trophy",
+                  "target",
+                  "mountain",
+                  "tree",
+                  "sun",
+                  "cloud",
+                  "cloud-rain",
+                  "car",
+                  "factory",
+                  "thought-bubble",
+                  "speech-bubble",
+                  "star",
+                  "check",
+                  "cross",
+                  "warning",
+                  "question-mark",
+                  "exclamation",
+                  "battery",
+                  "shield",
+                  "key",
+                  "lock",
+                  "gift",
+                  "calendar",
+                  "map-pin",
+                  "handshake",
+                  "plant",
+                  "hourglass",
+                  "flag",
+                  "megaphone",
+                  "envelope",
+                  "atom",
+                  "document",
+                  "puzzle",
+                  "scale",
+                  "pencil",
+                  "coffee",
+                  "airplane",
+                  "team",
+                  "cart",
+                  "eye",
+                  "water-drop",
+                  "fire",
+                  "lightning",
+                  "graduation-cap",
+                  "dna",
+                  "thumbs-up",
+                  "robot",
+                  "crown",
+                  "city",
+                  "truck",
+                  "umbrella",
+                  "wifi",
+                  "arrow-right",
+                  "arrow-up",
+                  "arrow-down",
+                  "light-switch",
+                  "seedling",
+                  "stick-stand",
+                  "stick-wave",
+                  "stick-walk",
+                  "stick-run",
+                  "stick-cheer",
+                  "stick-think",
+                  "stick-point",
+                  "stick-sit",
+                  "stick-sad",
+                  "stick-shrug",
+                  "stick-jump",
+                  "stick-worried",
+                  "face-happy",
+                  "face-sad",
+                  "face-surprised",
+                  "face-worried",
+                  "face-angry",
+                  "face-woman",
+                  "face-woman-bun",
+                  "face-man",
+                  "face-professor"
+                ],
+                "description": "Doodle from the whiteboard library; pick the most literal match for the idea."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Exact word from the narration this element lands on (optional; defaults to the most distinctive word of the label)."
+              }
+            },
+            "required": [
+              "date",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "hand": {
+          "type": "string",
+          "enum": [
+            "light",
+            "medium",
+            "tan",
+            "brown",
+            "dark"
+          ],
+          "description": "Skin tone of the drawing hand. Keep the same value in every scene of a video."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Race to space",
+      "events": [
+        {
+          "date": "1957",
+          "label": "First satellite",
+          "doodle": "globe"
+        },
+        {
+          "date": "1961",
+          "label": "First human in orbit",
+          "doodle": "stick-wave"
+        },
+        {
+          "date": "1969",
+          "label": "Moon landing",
+          "doodle": "flag"
+        }
+      ]
+    },
+    "exampleNarration": "In nineteen fifty seven the first satellite reached orbit. In nineteen sixty one the first human followed. And in nineteen sixty nine, we landed on the moon."
+  }
+]

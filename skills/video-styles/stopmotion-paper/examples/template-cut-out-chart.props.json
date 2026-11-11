@@ -1,0 +1,19 @@
+{
+  "title": "Hours of screen time a day",
+  "bars": [
+    {
+      "label": "Kids",
+      "value": 4
+    },
+    {
+      "label": "Teens",
+      "value": 7
+    },
+    {
+      "label": "Adults",
+      "value": 6
+    }
+  ],
+  "suffix": "h",
+  "highlight": 1
+}

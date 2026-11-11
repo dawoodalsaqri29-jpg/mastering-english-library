@@ -1,0 +1,22 @@
+{
+  "left": "hank",
+  "right": "ada",
+  "lines": [
+    {
+      "speaker": "left",
+      "text": "So the moon is just falling?",
+      "mood": "confused"
+    },
+    {
+      "speaker": "right",
+      "text": "Constantly. It just keeps missing.",
+      "mood": "explain",
+      "reaction": "facepalm"
+    },
+    {
+      "speaker": "left",
+      "text": "That is deeply unsettling.",
+      "mood": "panic"
+    }
+  ]
+}

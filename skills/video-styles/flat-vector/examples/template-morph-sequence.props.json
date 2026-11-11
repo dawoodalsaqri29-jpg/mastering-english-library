@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {
+      "shape": "drop",
+      "label": "Water",
+      "color": "sky"
+    },
+    {
+      "shape": "leaf",
+      "label": "Leaf",
+      "color": "mint"
+    },
+    {
+      "shape": "tree",
+      "label": "Tree",
+      "color": "green"
+    },
+    {
+      "shape": "cloud",
+      "label": "Cloud",
+      "color": "#BFE6FF"
+    }
+  ],
+  "face": true,
+  "world": "studio"
+}

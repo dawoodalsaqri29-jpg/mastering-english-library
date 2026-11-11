@@ -1,0 +1,26 @@
+{
+  "title": "From bean to *cup*",
+  "steps": [
+    {
+      "label": "Harvest",
+      "kind": "farm",
+      "keyword": "harvested"
+    },
+    {
+      "label": "Roast",
+      "kind": "factory",
+      "keyword": "roasted"
+    },
+    {
+      "label": "Pack",
+      "kind": "warehouse",
+      "keyword": "packed"
+    },
+    {
+      "label": "Café",
+      "kind": "shop",
+      "keyword": "café"
+    }
+  ],
+  "item": "crate"
+}

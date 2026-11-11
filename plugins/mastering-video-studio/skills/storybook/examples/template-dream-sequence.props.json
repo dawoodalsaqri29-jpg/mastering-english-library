@@ -1,0 +1,14 @@
+{
+  "character": "oli",
+  "text": "That night, Oli dreamed of a *castle* in the clouds and a boat made of stars.",
+  "dreams": [
+    {
+      "object": "castle",
+      "keyword": "castle"
+    },
+    {
+      "object": "boat",
+      "keyword": "boat"
+    }
+  ]
+}

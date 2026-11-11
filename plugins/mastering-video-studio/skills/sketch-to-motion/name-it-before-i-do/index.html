@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+#stage{position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 50% 47%,#1f2a3a 0%,#121722 55%,#05070b 100%);font-family:"Helvetica Neue",Helvetica,"DejaVu Sans",Arial,sans-serif;color:#fff}
+#gl{position:absolute;left:430px;top:445px;width:570px;height:1013px;display:block;border-radius:6px}
+#panelFx{position:absolute;left:430px;top:445px;width:570px;height:1013px;pointer-events:none;overflow:hidden}
+#qmark{position:absolute;left:0;width:100%;top:300px;text-align:center;font-size:360px;font-weight:800;color:#ffcf5a;opacity:0;text-shadow:0 10px 50px rgba(255,207,90,.35)}
+#flash{position:absolute;inset:0;background:#fff;opacity:0}
+#sketchWrap{position:absolute;left:75px;top:737px;width:325px;height:575px;background:#fff;transform-origin:50% 50%;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+#sketch{width:325px;height:575px;display:block}
+#drawLabel{position:absolute;left:75px;width:325px;top:655px;text-align:center;font-size:56px;font-weight:600;letter-spacing:-.5px}
+#brand{position:absolute;left:430px;width:570px;top:345px;text-align:center;font-size:52px;font-weight:700;letter-spacing:-.5px}
+#brand b{color:#ffcf5a}
+#hook{position:absolute;left:0;width:1080px;top:150px;text-align:center;font-size:76px;font-weight:800;letter-spacing:-1px;line-height:1.05}
+#hook span{color:#ffcf5a}
+#cta{position:absolute;left:0;width:1080px;top:1500px;text-align:center;font-size:52px;font-weight:500}
+#cta b{font-weight:700;color:#ffcf5a}
+#topUi{position:absolute;top:44px;left:0;width:100%;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.7)}
+#topUi .a{font-size:30px;opacity:.75;letter-spacing:4px}
+#word{position:absolute;left:0;width:100%;bottom:70px;text-align:center;text-shadow:0 3px 22px rgba(0,0,0,.9)}
+#word .en{font-size:118px;font-weight:800;letter-spacing:-2px;line-height:1}
+#word .ar{font-family:"DejaVu Sans",sans-serif;font-size:58px;font-weight:700;color:#ffcf5a;margin-top:14px;direction:rtl}
+#title{position:absolute;left:0;width:100%;top:330px;text-align:center;opacity:0;text-shadow:0 3px 26px rgba(0,0,0,.95)}
+#title .t{font-size:84px;font-weight:800;line-height:1.05;letter-spacing:-1px}
+#title .s{font-size:36px;margin-top:22px;color:#ffcf5a;font-weight:700}
+</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<div id="stage">
+  <div id="hook">Name it <span>before</span> I do!</div>
+  <div id="brand">Mastering <b>English</b></div>
+  <canvas id="gl" width="1140" height="2026"></canvas>
+  <div id="panelFx">
+    <div id="topUi"><div class="a" id="count">WORD 1 / 6</div></div>
+    <div id="word"><div class="en" id="en"></div><div class="ar" id="ar"></div></div>
+    <div id="title"><div class="t">How many<br>did you get?</div><div class="s">Comment your score</div></div>
+    <div id="qmark">?</div>
+    <div id="flash"></div>
+  </div>
+  <div id="drawLabel">Drawing</div>
+  <div id="sketchWrap"><canvas id="sketch" width="650" height="1150"></canvas></div>
+  <div id="cta">Follow for <b>daily English</b></div>
+</div>
+<script type="module" src="/scene.js"></script>
+</body></html>

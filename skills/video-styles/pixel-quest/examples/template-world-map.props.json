@@ -1,0 +1,24 @@
+{
+  "title": "History of Flight",
+  "nodes": [
+    {
+      "label": "1783 Balloon",
+      "sublabel": "First crewed hot-air balloon",
+      "keyword": "balloon"
+    },
+    {
+      "label": "1903 Airplane",
+      "sublabel": "Twelve seconds of powered flight",
+      "keyword": "airplane"
+    },
+    {
+      "label": "1947 Sound barrier",
+      "keyword": "sound"
+    },
+    {
+      "label": "1969 Moon",
+      "sublabel": "Footprints on another world",
+      "keyword": "moon"
+    }
+  ]
+}

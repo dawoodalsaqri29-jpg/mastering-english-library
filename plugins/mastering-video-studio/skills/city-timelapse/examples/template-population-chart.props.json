@@ -1,0 +1,54 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "title": "Population *explodes*",
+  "points": [
+    {
+      "year": 1700,
+      "value": 5000
+    },
+    {
+      "year": 1800,
+      "value": 60000
+    },
+    {
+      "year": 1850,
+      "value": 515000
+    },
+    {
+      "year": 1900,
+      "value": 3400000
+    },
+    {
+      "year": 1950,
+      "value": 7900000
+    },
+    {
+      "year": 2020,
+      "value": 8800000
+    }
+  ],
+  "marks": [
+    {
+      "year": 1850,
+      "label": "Famine ships",
+      "keyword": "ships"
+    },
+    {
+      "year": 1900,
+      "label": "3.4 million",
+      "keyword": "million"
+    }
+  ]
+}

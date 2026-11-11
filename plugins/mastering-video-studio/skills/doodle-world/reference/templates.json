@@ -1,0 +1,3343 @@
+[
+  {
+    "id": "daily-life",
+    "name": "Daily Life",
+    "description": "The workhorse: 1-3 doodle people doing an everyday activity (hunting, cooking, scrolling, shivering) in a painted era location, with an optional set piece, animal, chunky headline on its key word and one deadpan reaction. The first character narrates with mouth flaps.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "time": {
+          "type": "string",
+          "description": "Lighting: night adds a fire + stars, dusk/dawn a warm wash.",
+          "enum": [
+            "day",
+            "night",
+            "dusk",
+            "dawn"
+          ]
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+                "enum": [
+                  "og",
+                  "ug",
+                  "nia",
+                  "pip",
+                  "elder",
+                  "zed"
+                ]
+              },
+              "activity": {
+                "type": "string",
+                "description": "What they are doing (looping pose; some add a prop automatically, e.g. hunt adds a spear).",
+                "enum": [
+                  "work",
+                  "dig",
+                  "eat",
+                  "stir",
+                  "fan",
+                  "shiver",
+                  "sit",
+                  "sleep",
+                  "think",
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "carry",
+                  "look-around",
+                  "dance",
+                  "panic",
+                  "cower",
+                  "cheer",
+                  "hold",
+                  "hold-up",
+                  "hunt",
+                  "fish",
+                  "cook",
+                  "farm",
+                  "build",
+                  "chop",
+                  "write",
+                  "read",
+                  "phone",
+                  "type",
+                  "drink",
+                  "trade",
+                  "guard",
+                  "fight",
+                  "pray",
+                  "rest",
+                  "nap",
+                  "torch",
+                  "gather",
+                  "feast",
+                  "water",
+                  "freeze",
+                  "wait",
+                  "celebrate",
+                  "cross-arms",
+                  "hands-hips",
+                  "shrug",
+                  "wave",
+                  "kneel",
+                  "facepalm"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "description": "Base face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              },
+              "prop": {
+                "type": "string",
+                "description": "Held item (overrides the activity's default).",
+                "enum": [
+                  "spear",
+                  "torch",
+                  "basket",
+                  "pot",
+                  "fan",
+                  "bread",
+                  "scroll",
+                  "phone",
+                  "tablet",
+                  "sword",
+                  "shield",
+                  "hammer",
+                  "bone",
+                  "fish",
+                  "bowl",
+                  "jug",
+                  "umbrella",
+                  "book",
+                  "coins",
+                  "map",
+                  "stick",
+                  "rock",
+                  "meat",
+                  "cup",
+                  "lantern",
+                  "laptop",
+                  "flag",
+                  "axe",
+                  "seed"
+                ]
+              },
+              "outfit": {
+                "type": "string",
+                "description": "Per-character outfit override.",
+                "enum": [
+                  "caveman",
+                  "egyptian",
+                  "roman",
+                  "greek",
+                  "medieval",
+                  "viking",
+                  "modern",
+                  "future"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ]
+          },
+          "description": "1-3 characters (left to right)."
+        },
+        "setpieces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "World object placed near the characters.",
+            "enum": [
+              "fire",
+              "rock",
+              "boulder",
+              "log",
+              "tent",
+              "hut",
+              "palm",
+              "tree",
+              "acacia",
+              "pine",
+              "cactus",
+              "column",
+              "well",
+              "barrel",
+              "bench",
+              "table",
+              "crate",
+              "signpost",
+              "pyramid",
+              "cart",
+              "tower",
+              "stall",
+              "bush",
+              "snowman",
+              "igloo",
+              "bed",
+              "firepit",
+              "stones",
+              "drum",
+              "hay",
+              "pot",
+              "grave",
+              "mushroom"
+            ]
+          },
+          "description": "0-3 set pieces."
+        },
+        "animal": {
+          "type": "string",
+          "description": "Optional animal on the right.",
+          "enum": [
+            "mammoth",
+            "sabretooth",
+            "camel",
+            "cat",
+            "dog",
+            "wolf",
+            "sheep"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "2-6 word chunky caps headline (e.g. 'NO JOBS', 'ANCIENT AC?!'). Wrap one word in *asterisks* for red."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the headline pops on (defaults to its most distinctive word)."
+        },
+        "headlineColor": {
+          "type": "string",
+          "description": "Headline colour.",
+          "enum": [
+            "yellow",
+            "white",
+            "red",
+            "orange",
+            "blue",
+            "green"
+          ]
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the headline (1-3 words)."
+        },
+        "side": {
+          "type": "string",
+          "description": "Side a lone character stands on (landscape).",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "reaction": {
+          "type": "object",
+          "properties": {
+            "character": {
+              "type": "integer",
+              "description": "Index into characters (0-based)."
+            },
+            "mark": {
+              "type": "string",
+              "description": "Reaction mark.",
+              "enum": [
+                "sweat",
+                "?!",
+                "!",
+                "!!",
+                "?",
+                "...",
+                "zzz",
+                "heart",
+                "anger",
+                "music",
+                "idea",
+                "shock",
+                "drool"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Face on the reaction.",
+              "enum": [
+                "neutral",
+                "deadpan",
+                "happy",
+                "excited",
+                "sad",
+                "shocked",
+                "scared",
+                "confused",
+                "angry",
+                "tired",
+                "hot",
+                "cold",
+                "smug",
+                "thinking",
+                "hungry",
+                "sleepy",
+                "proud"
+              ]
+            },
+            "pose": {
+              "type": "string",
+              "description": "Pose on the reaction.",
+              "enum": [
+                "work",
+                "dig",
+                "eat",
+                "stir",
+                "fan",
+                "shiver",
+                "sit",
+                "sleep",
+                "think",
+                "talk",
+                "explain",
+                "point",
+                "point-up",
+                "carry",
+                "look-around",
+                "dance",
+                "panic",
+                "cower",
+                "cheer",
+                "hold",
+                "hold-up",
+                "hunt",
+                "fish",
+                "cook",
+                "farm",
+                "build",
+                "chop",
+                "write",
+                "read",
+                "phone",
+                "type",
+                "drink",
+                "trade",
+                "guard",
+                "fight",
+                "pray",
+                "rest",
+                "nap",
+                "torch",
+                "gather",
+                "feast",
+                "water",
+                "freeze",
+                "wait",
+                "celebrate",
+                "cross-arms",
+                "hands-hips",
+                "shrug",
+                "wave",
+                "kneel",
+                "facepalm"
+              ]
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word the reaction lands on."
+            }
+          },
+          "additionalProperties": false
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "pose": {
+                "type": "string",
+                "description": "Pose.",
+                "enum": [
+                  "work",
+                  "dig",
+                  "eat",
+                  "stir",
+                  "fan",
+                  "shiver",
+                  "sit",
+                  "sleep",
+                  "think",
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "carry",
+                  "look-around",
+                  "dance",
+                  "panic",
+                  "cower",
+                  "cheer",
+                  "hold",
+                  "hold-up",
+                  "hunt",
+                  "fish",
+                  "cook",
+                  "farm",
+                  "build",
+                  "chop",
+                  "write",
+                  "read",
+                  "phone",
+                  "type",
+                  "drink",
+                  "trade",
+                  "guard",
+                  "fight",
+                  "pray",
+                  "rest",
+                  "nap",
+                  "torch",
+                  "gather",
+                  "feast",
+                  "water",
+                  "freeze",
+                  "wait",
+                  "celebrate",
+                  "cross-arms",
+                  "hands-hips",
+                  "shrug",
+                  "wave",
+                  "kneel",
+                  "facepalm"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "description": "Face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "description": "Mark.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "Optional extra acting beats for the first character (at most 3)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "location": "cave",
+      "time": "night",
+      "characters": [
+        {
+          "name": "og",
+          "activity": "cook",
+          "expression": "deadpan"
+        },
+        {
+          "name": "ug",
+          "activity": "eat",
+          "expression": "happy"
+        }
+      ],
+      "setpieces": [
+        "rock"
+      ],
+      "animal": "wolf",
+      "headline": "NO *JOBS*",
+      "keyword": "jobs",
+      "kicker": "stone age",
+      "reaction": {
+        "character": 0,
+        "mark": "...",
+        "expression": "deadpan",
+        "word": "nothing"
+      }
+    },
+    "exampleNarration": "So what did early humans actually do all day? Well, there were no jobs. You hunted, you cooked, you ate, and then you did absolutely nothing until the sun came up again."
+  },
+  {
+    "id": "what-if-time",
+    "name": "What If (Time Jump)",
+    "description": "A big YEAR counter races forward while the world changes under one watching character: night falls, snow comes, the sun swells, floods rise. Each milestone pops a headline and a reaction.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Starting face.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "from": {
+          "type": "number",
+          "description": "Starting year (negative = BC when format is bc)."
+        },
+        "to": {
+          "type": "number",
+          "description": "Final year (used when milestones have no years)."
+        },
+        "format": {
+          "type": "string",
+          "description": "Number format: plain '5,000,000,000', bc '50,000 BC', ago '5,000 YEARS AGO'.",
+          "enum": [
+            "plain",
+            "bc",
+            "ago"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Word above the number (default YEAR; empty string hides it)."
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "number",
+                "description": "Year the counter jumps to at this milestone."
+              },
+              "headline": {
+                "type": "string",
+                "description": "2-6 word caps headline."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word it lands on."
+              },
+              "change": {
+                "type": "string",
+                "description": "World change at this milestone.",
+                "enum": [
+                  "none",
+                  "night",
+                  "snow",
+                  "heat",
+                  "ash",
+                  "flood",
+                  "stars",
+                  "rain"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "description": "Character's face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "description": "Reaction mark.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "Indicator label for heat/snow (e.g. '60 C')."
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "2-5 milestones in narration order."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "milestones"
+      ]
+    },
+    "exampleProps": {
+      "location": "savanna",
+      "character": "og",
+      "from": 2025,
+      "format": "plain",
+      "milestones": [
+        {
+          "year": 1000000,
+          "headline": "ICE AGE",
+          "word": "ice",
+          "change": "snow",
+          "label": "-40 C"
+        },
+        {
+          "year": 1000000000,
+          "headline": "OCEANS *BOIL*",
+          "word": "boil",
+          "change": "heat",
+          "label": "100 C"
+        },
+        {
+          "year": 5000000000,
+          "headline": "THE SUN DIES",
+          "word": "dies",
+          "change": "stars",
+          "expression": "deadpan",
+          "mark": "..."
+        }
+      ]
+    },
+    "exampleNarration": "Say you lived forever. In a million years the next ice age rolls in. In a billion, the oceans boil away. And in five billion years the sun dies, and so does everything else."
+  },
+  {
+    "id": "survival-hack",
+    "name": "Survival Hack",
+    "description": "One character shows an ancient technique while labelled hand-drawn arrows pop in on key words (wet cloth, clay pot, shade) and a thermometer on the side shows hot or cold. Ends with a relieved reaction.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "outfit": {
+          "type": "string",
+          "description": "Outfit.",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "activity": {
+          "type": "string",
+          "description": "Pose while demonstrating.",
+          "enum": [
+            "work",
+            "dig",
+            "eat",
+            "stir",
+            "fan",
+            "shiver",
+            "sit",
+            "sleep",
+            "think",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "carry",
+            "look-around",
+            "dance",
+            "panic",
+            "cower",
+            "cheer",
+            "hold",
+            "hold-up",
+            "hunt",
+            "fish",
+            "cook",
+            "farm",
+            "build",
+            "chop",
+            "write",
+            "read",
+            "phone",
+            "type",
+            "drink",
+            "trade",
+            "guard",
+            "fight",
+            "pray",
+            "rest",
+            "nap",
+            "torch",
+            "gather",
+            "feast",
+            "water",
+            "freeze",
+            "wait",
+            "celebrate",
+            "cross-arms",
+            "hands-hips",
+            "shrug",
+            "wave",
+            "kneel",
+            "facepalm"
+          ]
+        },
+        "prop": {
+          "type": "string",
+          "description": "Item held (the technique's object).",
+          "enum": [
+            "spear",
+            "torch",
+            "basket",
+            "pot",
+            "fan",
+            "bread",
+            "scroll",
+            "phone",
+            "tablet",
+            "sword",
+            "shield",
+            "hammer",
+            "bone",
+            "fish",
+            "bowl",
+            "jug",
+            "umbrella",
+            "book",
+            "coins",
+            "map",
+            "stick",
+            "rock",
+            "meat",
+            "cup",
+            "lantern",
+            "laptop",
+            "flag",
+            "axe",
+            "seed"
+          ]
+        },
+        "setpiece": {
+          "type": "string",
+          "description": "Optional larger object beside them (e.g. pot, well, tent).",
+          "enum": [
+            "fire",
+            "rock",
+            "boulder",
+            "log",
+            "tent",
+            "hut",
+            "palm",
+            "tree",
+            "acacia",
+            "pine",
+            "cactus",
+            "column",
+            "well",
+            "barrel",
+            "bench",
+            "table",
+            "crate",
+            "signpost",
+            "pyramid",
+            "cart",
+            "tower",
+            "stall",
+            "bush",
+            "snowman",
+            "igloo",
+            "bed",
+            "firepit",
+            "stones",
+            "drum",
+            "hay",
+            "pot",
+            "grave",
+            "mushroom"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Face while suffering.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Headline at the top (2-6 caps words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Word the title pops on."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title."
+        },
+        "headlineColor": {
+          "type": "string",
+          "description": "Title colour.",
+          "enum": [
+            "yellow",
+            "white",
+            "red",
+            "orange",
+            "blue",
+            "green"
+          ]
+        },
+        "indicator": {
+          "type": "string",
+          "description": "Side indicator.",
+          "enum": [
+            "hot",
+            "cold",
+            "sun",
+            "snowflake",
+            "steam",
+            "none"
+          ]
+        },
+        "temperature": {
+          "type": "string",
+          "description": "Label on the indicator, e.g. '50 C'."
+        },
+        "callouts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Short label (at most 5 words)."
+              },
+              "target": {
+                "type": "string",
+                "description": "What the arrow points at.",
+                "enum": [
+                  "prop",
+                  "head",
+                  "body",
+                  "feet",
+                  "ground",
+                  "setpiece",
+                  "left",
+                  "right",
+                  "sky"
+                ]
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word it pops on."
+              },
+              "color": {
+                "type": "string",
+                "description": "Hex colour for this arrow."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ]
+          },
+          "description": "1-5 labelled arrows in narration order."
+        },
+        "result": {
+          "type": "string",
+          "description": "How it ends: better (relief), worse (sweat), none.",
+          "enum": [
+            "better",
+            "worse",
+            "none"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "callouts"
+      ]
+    },
+    "exampleProps": {
+      "location": "desert",
+      "character": "nia",
+      "prop": "jug",
+      "setpiece": "pot",
+      "expression": "hot",
+      "title": "ANCIENT *AC*?!",
+      "keyword": "cold",
+      "indicator": "hot",
+      "temperature": "50 C",
+      "callouts": [
+        {
+          "text": "porous clay pot",
+          "target": "setpiece",
+          "word": "clay"
+        },
+        {
+          "text": "water seeps out",
+          "target": "prop",
+          "word": "seeps"
+        },
+        {
+          "text": "evaporation = cold",
+          "target": "head",
+          "word": "cold"
+        }
+      ],
+      "result": "better"
+    },
+    "exampleNarration": "Fifty degrees in the shade. So the Egyptians used a porous clay pot. Water seeps out through the walls, evaporates, and the water left inside gets surprisingly cold."
+  },
+  {
+    "id": "versus-then-now",
+    "name": "Then vs Now",
+    "description": "Split screen: an ancient scene on one side, a modern one on the other, each with its own painted world, character, activity and caps label. A jagged divider and VS badge snap in, then an optional verdict headline.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+              "enum": [
+                "cave",
+                "savanna",
+                "tundra",
+                "forest",
+                "desert",
+                "nile",
+                "roman-forum",
+                "greek-agora",
+                "medieval-village",
+                "modern-city",
+                "future-city",
+                "dying-sun",
+                "cosmos",
+                "stage"
+              ]
+            },
+            "era": {
+              "type": "string",
+              "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+              "enum": [
+                "caveman",
+                "egyptian",
+                "roman",
+                "greek",
+                "medieval",
+                "viking",
+                "modern",
+                "future"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Caps label (default THEN)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word this side appears on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+              "enum": [
+                "og",
+                "ug",
+                "nia",
+                "pip",
+                "elder",
+                "zed"
+              ]
+            },
+            "outfit": {
+              "type": "string",
+              "description": "Outfit.",
+              "enum": [
+                "caveman",
+                "egyptian",
+                "roman",
+                "greek",
+                "medieval",
+                "viking",
+                "modern",
+                "future"
+              ]
+            },
+            "activity": {
+              "type": "string",
+              "description": "What they do.",
+              "enum": [
+                "work",
+                "dig",
+                "eat",
+                "stir",
+                "fan",
+                "shiver",
+                "sit",
+                "sleep",
+                "think",
+                "talk",
+                "explain",
+                "point",
+                "point-up",
+                "carry",
+                "look-around",
+                "dance",
+                "panic",
+                "cower",
+                "cheer",
+                "hold",
+                "hold-up",
+                "hunt",
+                "fish",
+                "cook",
+                "farm",
+                "build",
+                "chop",
+                "write",
+                "read",
+                "phone",
+                "type",
+                "drink",
+                "trade",
+                "guard",
+                "fight",
+                "pray",
+                "rest",
+                "nap",
+                "torch",
+                "gather",
+                "feast",
+                "water",
+                "freeze",
+                "wait",
+                "celebrate",
+                "cross-arms",
+                "hands-hips",
+                "shrug",
+                "wave",
+                "kneel",
+                "facepalm"
+              ]
+            },
+            "prop": {
+              "type": "string",
+              "description": "Held item.",
+              "enum": [
+                "spear",
+                "torch",
+                "basket",
+                "pot",
+                "fan",
+                "bread",
+                "scroll",
+                "phone",
+                "tablet",
+                "sword",
+                "shield",
+                "hammer",
+                "bone",
+                "fish",
+                "bowl",
+                "jug",
+                "umbrella",
+                "book",
+                "coins",
+                "map",
+                "stick",
+                "rock",
+                "meat",
+                "cup",
+                "lantern",
+                "laptop",
+                "flag",
+                "axe",
+                "seed"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Face.",
+              "enum": [
+                "neutral",
+                "deadpan",
+                "happy",
+                "excited",
+                "sad",
+                "shocked",
+                "scared",
+                "confused",
+                "angry",
+                "tired",
+                "hot",
+                "cold",
+                "smug",
+                "thinking",
+                "hungry",
+                "sleepy",
+                "proud"
+              ]
+            },
+            "animal": {
+              "type": "string",
+              "description": "Optional animal.",
+              "enum": [
+                "mammoth",
+                "sabretooth",
+                "camel",
+                "cat",
+                "dog",
+                "wolf",
+                "sheep"
+              ]
+            },
+            "caption": {
+              "type": "string",
+              "description": "Small caption at the bottom (at most 6 words)."
+            },
+            "mark": {
+              "type": "string",
+              "description": "Reaction mark.",
+              "enum": [
+                "sweat",
+                "?!",
+                "!",
+                "!!",
+                "?",
+                "...",
+                "zzz",
+                "heart",
+                "anger",
+                "music",
+                "idea",
+                "shock",
+                "drool"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+              "enum": [
+                "cave",
+                "savanna",
+                "tundra",
+                "forest",
+                "desert",
+                "nile",
+                "roman-forum",
+                "greek-agora",
+                "medieval-village",
+                "modern-city",
+                "future-city",
+                "dying-sun",
+                "cosmos",
+                "stage"
+              ]
+            },
+            "era": {
+              "type": "string",
+              "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+              "enum": [
+                "caveman",
+                "egyptian",
+                "roman",
+                "greek",
+                "medieval",
+                "viking",
+                "modern",
+                "future"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Caps label (default NOW)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word this side appears on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+              "enum": [
+                "og",
+                "ug",
+                "nia",
+                "pip",
+                "elder",
+                "zed"
+              ]
+            },
+            "outfit": {
+              "type": "string",
+              "description": "Outfit.",
+              "enum": [
+                "caveman",
+                "egyptian",
+                "roman",
+                "greek",
+                "medieval",
+                "viking",
+                "modern",
+                "future"
+              ]
+            },
+            "activity": {
+              "type": "string",
+              "description": "What they do.",
+              "enum": [
+                "work",
+                "dig",
+                "eat",
+                "stir",
+                "fan",
+                "shiver",
+                "sit",
+                "sleep",
+                "think",
+                "talk",
+                "explain",
+                "point",
+                "point-up",
+                "carry",
+                "look-around",
+                "dance",
+                "panic",
+                "cower",
+                "cheer",
+                "hold",
+                "hold-up",
+                "hunt",
+                "fish",
+                "cook",
+                "farm",
+                "build",
+                "chop",
+                "write",
+                "read",
+                "phone",
+                "type",
+                "drink",
+                "trade",
+                "guard",
+                "fight",
+                "pray",
+                "rest",
+                "nap",
+                "torch",
+                "gather",
+                "feast",
+                "water",
+                "freeze",
+                "wait",
+                "celebrate",
+                "cross-arms",
+                "hands-hips",
+                "shrug",
+                "wave",
+                "kneel",
+                "facepalm"
+              ]
+            },
+            "prop": {
+              "type": "string",
+              "description": "Held item.",
+              "enum": [
+                "spear",
+                "torch",
+                "basket",
+                "pot",
+                "fan",
+                "bread",
+                "scroll",
+                "phone",
+                "tablet",
+                "sword",
+                "shield",
+                "hammer",
+                "bone",
+                "fish",
+                "bowl",
+                "jug",
+                "umbrella",
+                "book",
+                "coins",
+                "map",
+                "stick",
+                "rock",
+                "meat",
+                "cup",
+                "lantern",
+                "laptop",
+                "flag",
+                "axe",
+                "seed"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Face.",
+              "enum": [
+                "neutral",
+                "deadpan",
+                "happy",
+                "excited",
+                "sad",
+                "shocked",
+                "scared",
+                "confused",
+                "angry",
+                "tired",
+                "hot",
+                "cold",
+                "smug",
+                "thinking",
+                "hungry",
+                "sleepy",
+                "proud"
+              ]
+            },
+            "animal": {
+              "type": "string",
+              "description": "Optional animal.",
+              "enum": [
+                "mammoth",
+                "sabretooth",
+                "camel",
+                "cat",
+                "dog",
+                "wolf",
+                "sheep"
+              ]
+            },
+            "caption": {
+              "type": "string",
+              "description": "Small caption at the bottom (at most 6 words)."
+            },
+            "mark": {
+              "type": "string",
+              "description": "Reaction mark.",
+              "enum": [
+                "sweat",
+                "?!",
+                "!",
+                "!!",
+                "?",
+                "...",
+                "zzz",
+                "heart",
+                "anger",
+                "music",
+                "idea",
+                "shock",
+                "drool"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "vs": {
+          "type": "string",
+          "description": "Badge text (default VS)."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional verdict headline after both sides (2-6 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Word the verdict pops on."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "left",
+        "right"
+      ]
+    },
+    "exampleProps": {
+      "left": {
+        "location": "savanna",
+        "label": "THEN",
+        "word": "then",
+        "character": "og",
+        "activity": "hunt",
+        "expression": "happy",
+        "caption": "4 hours of work",
+        "animal": "sabretooth"
+      },
+      "right": {
+        "location": "modern-city",
+        "label": "NOW",
+        "word": "now",
+        "character": "og",
+        "activity": "phone",
+        "expression": "deadpan",
+        "caption": "9 hours of emails",
+        "mark": "..."
+      },
+      "headline": "WHO *WON*?",
+      "keyword": "won"
+    },
+    "exampleNarration": "Back then, a hunter worked about four hours a day. Now we do nine hours of emails. So honestly, who won here?"
+  },
+  {
+    "id": "group-gathering",
+    "name": "Group Gathering",
+    "description": "A tribe or village (2-5 cast members) sits and stands around a fire, table or well, talking in turns with doodle speech bubbles; listeners nod, look and react. Firelight flickers on everyone.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "time": {
+          "type": "string",
+          "description": "Lighting.",
+          "enum": [
+            "day",
+            "night",
+            "dusk",
+            "dawn"
+          ]
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+            "enum": [
+              "og",
+              "ug",
+              "nia",
+              "pip",
+              "elder",
+              "zed"
+            ]
+          },
+          "description": "2-5 cast names (first is the main speaker)."
+        },
+        "centre": {
+          "type": "string",
+          "description": "What they gather around.",
+          "enum": [
+            "fire",
+            "table",
+            "well",
+            "pot",
+            "drum",
+            "none"
+          ]
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "integer",
+                "description": "Index into characters (0-based)."
+              },
+              "text": {
+                "type": "string",
+                "description": "Exact narration wording of this line (at most 12 words)."
+              },
+              "expression": {
+                "type": "string",
+                "description": "Speaker face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              },
+              "pose": {
+                "type": "string",
+                "description": "Speaker pose.",
+                "enum": [
+                  "work",
+                  "dig",
+                  "eat",
+                  "stir",
+                  "fan",
+                  "shiver",
+                  "sit",
+                  "sleep",
+                  "think",
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "carry",
+                  "look-around",
+                  "dance",
+                  "panic",
+                  "cower",
+                  "cheer",
+                  "hold",
+                  "hold-up",
+                  "hunt",
+                  "fish",
+                  "cook",
+                  "farm",
+                  "build",
+                  "chop",
+                  "write",
+                  "read",
+                  "phone",
+                  "type",
+                  "drink",
+                  "trade",
+                  "guard",
+                  "fight",
+                  "pray",
+                  "rest",
+                  "nap",
+                  "torch",
+                  "gather",
+                  "feast",
+                  "water",
+                  "freeze",
+                  "wait",
+                  "celebrate",
+                  "cross-arms",
+                  "hands-hips",
+                  "shrug",
+                  "wave",
+                  "kneel",
+                  "facepalm"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "description": "Mark over the speaker.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              },
+              "reaction": {
+                "type": "string",
+                "description": "Listeners' face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ]
+          },
+          "description": "0-8 lines in narration order (empty = first character narrates)."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional chunky headline."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Word it pops on."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "characters"
+      ]
+    },
+    "exampleProps": {
+      "location": "cave",
+      "characters": [
+        "elder",
+        "og",
+        "nia",
+        "pip"
+      ],
+      "centre": "fire",
+      "lines": [
+        {
+          "speaker": 0,
+          "text": "Tomorrow we move to the river.",
+          "expression": "proud"
+        },
+        {
+          "speaker": 1,
+          "text": "Again?",
+          "expression": "deadpan",
+          "mark": "..."
+        },
+        {
+          "speaker": 2,
+          "text": "The mammoths moved. We follow the mammoths.",
+          "expression": "smug"
+        },
+        {
+          "speaker": 3,
+          "text": "I like the mammoths.",
+          "expression": "happy",
+          "mark": "heart"
+        }
+      ]
+    },
+    "exampleNarration": "Every night the tribe gathered around the fire. Tomorrow we move to the river. Again? The mammoths moved. We follow the mammoths. I like the mammoths."
+  },
+  {
+    "id": "journey-trek",
+    "name": "Journey Trek",
+    "description": "Characters (and maybe an animal) walk across a wide painted landscape while the camera follows; a dotted route runs along the ground and signposts pop up at milestones on their key words.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+            "enum": [
+              "og",
+              "ug",
+              "nia",
+              "pip",
+              "elder",
+              "zed"
+            ]
+          },
+          "description": "1-3 walkers (leader first)."
+        },
+        "animal": {
+          "type": "string",
+          "description": "Animal trailing behind.",
+          "enum": [
+            "mammoth",
+            "sabretooth",
+            "camel",
+            "cat",
+            "dog",
+            "wolf",
+            "sheep"
+          ]
+        },
+        "prop": {
+          "type": "string",
+          "description": "Item the leader carries.",
+          "enum": [
+            "spear",
+            "torch",
+            "basket",
+            "pot",
+            "fan",
+            "bread",
+            "scroll",
+            "phone",
+            "tablet",
+            "sword",
+            "shield",
+            "hammer",
+            "bone",
+            "fish",
+            "bowl",
+            "jug",
+            "umbrella",
+            "book",
+            "coins",
+            "map",
+            "stick",
+            "rock",
+            "meat",
+            "cup",
+            "lantern",
+            "laptop",
+            "flag",
+            "axe",
+            "seed"
+          ]
+        },
+        "pace": {
+          "type": "string",
+          "description": "walk or run.",
+          "enum": [
+            "walk",
+            "run"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "Caps headline at the start (e.g. '3,000 KM ON FOOT')."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above it."
+        },
+        "until": {
+          "type": "string",
+          "description": "Set to 'end' to keep the headline up.",
+          "enum": [
+            "end"
+          ]
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Signpost text (at most 3 words)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "mark": {
+                "type": "string",
+                "description": "Leader's reaction mark.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ]
+          },
+          "description": "0-5 signposts in order."
+        },
+        "reaction": {
+          "type": "string",
+          "description": "Leader's face at a reaction word.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "reactionWord": {
+          "type": "string",
+          "description": "Word for that reaction."
+        },
+        "reactionMark": {
+          "type": "string",
+          "description": "Mark for it.",
+          "enum": [
+            "sweat",
+            "?!",
+            "!",
+            "!!",
+            "?",
+            "...",
+            "zzz",
+            "heart",
+            "anger",
+            "music",
+            "idea",
+            "shock",
+            "drool"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "location": "tundra",
+      "characters": [
+        "og",
+        "nia",
+        "pip"
+      ],
+      "animal": "mammoth",
+      "prop": "spear",
+      "headline": "3,000 KM ON FOOT",
+      "kicker": "ice age",
+      "milestones": [
+        {
+          "label": "Day 12",
+          "word": "twelve"
+        },
+        {
+          "label": "Ice bridge",
+          "word": "bridge",
+          "mark": "!"
+        },
+        {
+          "label": "New land",
+          "word": "land",
+          "mark": "idea"
+        }
+      ],
+      "reaction": "cold",
+      "reactionWord": "cold"
+    },
+    "exampleNarration": "They just kept walking. By day twelve the cold was unbearable. Then came the ice bridge. And on the other side, new land nobody had ever seen."
+  },
+  {
+    "id": "headline-thumb",
+    "name": "Headline Thumbnail",
+    "description": "The thumbnail moment: a giant caps headline slams in with a burst while the character does a big deadpan or panicked reaction and the camera punches. Use for hooks, twists and chapter kickers.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "outfit": {
+          "type": "string",
+          "description": "Outfit.",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "side": {
+          "type": "string",
+          "description": "Side the character stands on (landscape).",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "2-5 caps words. Wrap one in *asterisks* for red."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word it slams on."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above."
+        },
+        "color": {
+          "type": "string",
+          "description": "Headline colour.",
+          "enum": [
+            "yellow",
+            "white",
+            "red",
+            "orange",
+            "blue",
+            "green"
+          ]
+        },
+        "setup": {
+          "type": "string",
+          "description": "Face before the slam.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "setupPose": {
+          "type": "string",
+          "description": "Pose before the slam.",
+          "enum": [
+            "work",
+            "dig",
+            "eat",
+            "stir",
+            "fan",
+            "shiver",
+            "sit",
+            "sleep",
+            "think",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "carry",
+            "look-around",
+            "dance",
+            "panic",
+            "cower",
+            "cheer",
+            "hold",
+            "hold-up",
+            "hunt",
+            "fish",
+            "cook",
+            "farm",
+            "build",
+            "chop",
+            "write",
+            "read",
+            "phone",
+            "type",
+            "drink",
+            "trade",
+            "guard",
+            "fight",
+            "pray",
+            "rest",
+            "nap",
+            "torch",
+            "gather",
+            "feast",
+            "water",
+            "freeze",
+            "wait",
+            "celebrate",
+            "cross-arms",
+            "hands-hips",
+            "shrug",
+            "wave",
+            "kneel",
+            "facepalm"
+          ]
+        },
+        "reaction": {
+          "type": "string",
+          "description": "Reaction type at the slam.",
+          "enum": [
+            "shocked",
+            "scared",
+            "happy",
+            "deadpan",
+            "confused",
+            "angry",
+            "hot",
+            "cold",
+            "idea",
+            "hungry"
+          ]
+        },
+        "animal": {
+          "type": "string",
+          "description": "Optional animal.",
+          "enum": [
+            "mammoth",
+            "sabretooth",
+            "camel",
+            "cat",
+            "dog",
+            "wolf",
+            "sheep"
+          ]
+        },
+        "setpiece": {
+          "type": "string",
+          "description": "Optional set piece.",
+          "enum": [
+            "fire",
+            "rock",
+            "boulder",
+            "log",
+            "tent",
+            "hut",
+            "palm",
+            "tree",
+            "acacia",
+            "pine",
+            "cactus",
+            "column",
+            "well",
+            "barrel",
+            "bench",
+            "table",
+            "crate",
+            "signpost",
+            "pyramid",
+            "cart",
+            "tower",
+            "stall",
+            "bush",
+            "snowman",
+            "igloo",
+            "bed",
+            "firepit",
+            "stones",
+            "drum",
+            "hay",
+            "pot",
+            "grave",
+            "mushroom"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "headline"
+      ]
+    },
+    "exampleProps": {
+      "location": "savanna",
+      "character": "og",
+      "headline": "50 C AND NO *FRIDGE*",
+      "keyword": "fridge",
+      "kicker": "ancient egypt",
+      "reaction": "hot",
+      "setup": "neutral",
+      "setupPose": "look-around",
+      "animal": "camel"
+    },
+    "exampleNarration": "Now imagine the same day, but it is fifty degrees out and you have no fridge, no fan, and no idea what ice even is."
+  },
+  {
+    "id": "mini-diagram",
+    "name": "Mini Diagram",
+    "description": "A doodled cross-section on a paper card (house cooling airflow, pyramid chambers, a well, a boat) draws itself on, then labels and red flow arrows pop in on their key words while a small character explains beside it.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "outfit": {
+          "type": "string",
+          "description": "Outfit.",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Face.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "description": "Diagram subject.",
+          "enum": [
+            "house-cooling",
+            "pyramid",
+            "hut",
+            "well",
+            "boat",
+            "firepit",
+            "body",
+            "tree",
+            "generic"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Card title (at most 4 words)."
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Short label (at most 4 words)."
+              },
+              "x": {
+                "type": "number",
+                "description": "0-1 across the drawing."
+              },
+              "y": {
+                "type": "number",
+                "description": "0-1 down the drawing."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ]
+          },
+          "description": "0-6 labels."
+        },
+        "arrows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "description": "0-1"
+                },
+                "description": "[x, y] start"
+              },
+              "to": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "description": "0-1"
+                },
+                "description": "[x, y] end"
+              },
+              "label": {
+                "type": "string",
+                "description": "Tiny label on the arrow."
+              },
+              "color": {
+                "type": "string",
+                "description": "Hex colour."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "curve": {
+                "type": "number",
+                "description": "Bend amount (-0.5 to 0.5)."
+              }
+            },
+            "additionalProperties": false
+          },
+          "description": "0-6 flow arrows."
+        },
+        "flow": {
+          "type": "boolean",
+          "description": "Animate dots along arrows (default true)."
+        },
+        "mark": {
+          "type": "string",
+          "description": "Character's mark at the end.",
+          "enum": [
+            "sweat",
+            "?!",
+            "!",
+            "!!",
+            "?",
+            "...",
+            "zzz",
+            "heart",
+            "anger",
+            "music",
+            "idea",
+            "shock",
+            "drool"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "kind"
+      ]
+    },
+    "exampleProps": {
+      "location": "desert",
+      "character": "elder",
+      "kind": "house-cooling",
+      "title": "Wind catcher",
+      "labels": [
+        {
+          "text": "wind tower",
+          "x": 0.38,
+          "y": 0.08,
+          "word": "tower"
+        },
+        {
+          "text": "thick mud walls",
+          "x": 0.12,
+          "y": 0.55,
+          "word": "walls"
+        },
+        {
+          "text": "cool room",
+          "x": 0.5,
+          "y": 0.72,
+          "word": "cool"
+        }
+      ],
+      "arrows": [
+        {
+          "from": [
+            0.62,
+            0.1
+          ],
+          "to": [
+            0.4,
+            0.45
+          ],
+          "label": "hot air in",
+          "word": "catches"
+        },
+        {
+          "from": [
+            0.45,
+            0.6
+          ],
+          "to": [
+            0.85,
+            0.85
+          ],
+          "label": "cool air out",
+          "color": "#4FB0C6",
+          "word": "out"
+        }
+      ],
+      "mark": "idea"
+    },
+    "exampleNarration": "The trick is a wind tower on the roof. It catches the breeze, pushes it down through thick mud walls, and the cool air flows out into the room below."
+  },
+  {
+    "id": "list-of-ways",
+    "name": "List of Ways",
+    "description": "Numbered vignettes: each item pops a big numbered card on its key word while the character switches pose and prop to act it out (2-6 items), with progress dots at the bottom.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "outfit": {
+          "type": "string",
+          "description": "Outfit.",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Base face.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Small headline at the top (at most 5 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Item text (at most 6 words)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word it pops on."
+              },
+              "activity": {
+                "type": "string",
+                "description": "Pose/activity for this item.",
+                "enum": [
+                  "work",
+                  "dig",
+                  "eat",
+                  "stir",
+                  "fan",
+                  "shiver",
+                  "sit",
+                  "sleep",
+                  "think",
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "carry",
+                  "look-around",
+                  "dance",
+                  "panic",
+                  "cower",
+                  "cheer",
+                  "hold",
+                  "hold-up",
+                  "hunt",
+                  "fish",
+                  "cook",
+                  "farm",
+                  "build",
+                  "chop",
+                  "write",
+                  "read",
+                  "phone",
+                  "type",
+                  "drink",
+                  "trade",
+                  "guard",
+                  "fight",
+                  "pray",
+                  "rest",
+                  "nap",
+                  "torch",
+                  "gather",
+                  "feast",
+                  "water",
+                  "freeze",
+                  "wait",
+                  "celebrate",
+                  "cross-arms",
+                  "hands-hips",
+                  "shrug",
+                  "wave",
+                  "kneel",
+                  "facepalm"
+                ]
+              },
+              "prop": {
+                "type": "string",
+                "description": "Held item.",
+                "enum": [
+                  "spear",
+                  "torch",
+                  "basket",
+                  "pot",
+                  "fan",
+                  "bread",
+                  "scroll",
+                  "phone",
+                  "tablet",
+                  "sword",
+                  "shield",
+                  "hammer",
+                  "bone",
+                  "fish",
+                  "bowl",
+                  "jug",
+                  "umbrella",
+                  "book",
+                  "coins",
+                  "map",
+                  "stick",
+                  "rock",
+                  "meat",
+                  "cup",
+                  "lantern",
+                  "laptop",
+                  "flag",
+                  "axe",
+                  "seed"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "description": "Mark.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "description": "Face.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "text"
+            ]
+          },
+          "description": "2-6 items in narration order."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "items"
+      ]
+    },
+    "exampleProps": {
+      "location": "nile",
+      "character": "nia",
+      "title": "5 ways to beat the heat",
+      "items": [
+        {
+          "text": "wet linen",
+          "word": "linen",
+          "activity": "hold-up",
+          "prop": "fan"
+        },
+        {
+          "text": "sleep on the *roof*",
+          "word": "roof",
+          "activity": "sleep",
+          "mark": "zzz"
+        },
+        {
+          "text": "shave everything",
+          "word": "shave",
+          "activity": "facepalm",
+          "expression": "deadpan"
+        },
+        {
+          "text": "clay pot fridge",
+          "word": "pot",
+          "activity": "carry",
+          "prop": "jug"
+        },
+        {
+          "text": "wait for night",
+          "word": "night",
+          "activity": "look-around",
+          "mark": "..."
+        }
+      ]
+    },
+    "exampleNarration": "Five ways Egyptians beat the heat. One, wet linen on the skin. Two, sleep on the roof. Three, shave everything. Four, the clay pot fridge. Five, just wait for night."
+  },
+  {
+    "id": "reaction-close-up",
+    "name": "Reaction Close-Up",
+    "description": "The camera is tight on one big doodle face. On the key word the expression snaps (shock, deadpan, sweat, drool), a mark pops, the camera punches and an optional headline slams in below.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "outfit": {
+          "type": "string",
+          "description": "Outfit.",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "setup": {
+          "type": "string",
+          "description": "Face before the snap.",
+          "enum": [
+            "neutral",
+            "deadpan",
+            "happy",
+            "excited",
+            "sad",
+            "shocked",
+            "scared",
+            "confused",
+            "angry",
+            "tired",
+            "hot",
+            "cold",
+            "smug",
+            "thinking",
+            "hungry",
+            "sleepy",
+            "proud"
+          ]
+        },
+        "setupMark": {
+          "type": "string",
+          "description": "Mark before the snap (e.g. zzz).",
+          "enum": [
+            "sweat",
+            "?!",
+            "!",
+            "!!",
+            "?",
+            "...",
+            "zzz",
+            "heart",
+            "anger",
+            "music",
+            "idea",
+            "shock",
+            "drool"
+          ]
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the snap lands on."
+        },
+        "reaction": {
+          "type": "string",
+          "description": "Reaction type.",
+          "enum": [
+            "shocked",
+            "scared",
+            "deadpan",
+            "confused",
+            "happy",
+            "angry",
+            "hot",
+            "cold",
+            "sad",
+            "hungry",
+            "idea",
+            "smug"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional caps headline (2-5 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label."
+        },
+        "color": {
+          "type": "string",
+          "description": "Headline colour.",
+          "enum": [
+            "yellow",
+            "white",
+            "red",
+            "orange",
+            "blue",
+            "green"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "reaction"
+      ]
+    },
+    "exampleProps": {
+      "location": "tundra",
+      "character": "zed",
+      "setup": "neutral",
+      "word": "mammoth",
+      "reaction": "shocked",
+      "headline": "*THAT* IS DINNER?!",
+      "color": "yellow"
+    },
+    "exampleNarration": "And then, just over the ridge, he saw it. A mammoth. Four tons of it. That, apparently, was dinner."
+  },
+  {
+    "id": "timeline-eras",
+    "name": "Timeline of Eras",
+    "description": "A road through time: a character walks era to era past signposts with doodle era icons (cave, pyramid, column, castle, city, rocket, dying sun) and labels, while a year counter jumps at each stop and the camera follows.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "description": "Painted world. Keep neighbouring scenes in the same place; change location only at chapter/era changes.",
+          "enum": [
+            "cave",
+            "savanna",
+            "tundra",
+            "forest",
+            "desert",
+            "nile",
+            "roman-forum",
+            "greek-agora",
+            "medieval-village",
+            "modern-city",
+            "future-city",
+            "dying-sun",
+            "cosmos",
+            "stage"
+          ]
+        },
+        "era": {
+          "type": "string",
+          "description": "Outfit era for everyone in the scene (defaults to the location's era).",
+          "enum": [
+            "caveman",
+            "egyptian",
+            "roman",
+            "greek",
+            "medieval",
+            "viking",
+            "modern",
+            "future"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Cast member (fixed recurring cast; reuse the same names across the whole video).",
+          "enum": [
+            "og",
+            "ug",
+            "nia",
+            "pip",
+            "elder",
+            "zed"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Small headline at the start."
+        },
+        "label": {
+          "type": "string",
+          "description": "Word above the counter (default YEAR)."
+        },
+        "format": {
+          "type": "string",
+          "description": "Counter format.",
+          "enum": [
+            "plain",
+            "bc",
+            "ago"
+          ]
+        },
+        "eras": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Era name (at most 3 words)."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Era icon.",
+                "enum": [
+                  "cave",
+                  "pyramid",
+                  "column",
+                  "castle",
+                  "house",
+                  "city",
+                  "rocket",
+                  "sun",
+                  "star",
+                  "skull",
+                  "mammoth",
+                  "wheel",
+                  "fire"
+                ]
+              },
+              "year": {
+                "type": "number",
+                "description": "Year (negative = BC)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "expression": {
+                "type": "string",
+                "description": "Face on arrival.",
+                "enum": [
+                  "neutral",
+                  "deadpan",
+                  "happy",
+                  "excited",
+                  "sad",
+                  "shocked",
+                  "scared",
+                  "confused",
+                  "angry",
+                  "tired",
+                  "hot",
+                  "cold",
+                  "smug",
+                  "thinking",
+                  "hungry",
+                  "sleepy",
+                  "proud"
+                ]
+              },
+              "mark": {
+                "type": "string",
+                "description": "Mark on arrival.",
+                "enum": [
+                  "sweat",
+                  "?!",
+                  "!",
+                  "!!",
+                  "?",
+                  "...",
+                  "zzz",
+                  "heart",
+                  "anger",
+                  "music",
+                  "idea",
+                  "shock",
+                  "drool"
+                ]
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "label"
+            ]
+          },
+          "description": "2-7 eras in order."
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "eras"
+      ]
+    },
+    "exampleProps": {
+      "location": "savanna",
+      "character": "og",
+      "title": "the whole story",
+      "format": "bc",
+      "eras": [
+        {
+          "label": "Stone Age",
+          "icon": "cave",
+          "year": -50000,
+          "word": "stone"
+        },
+        {
+          "label": "Egypt",
+          "icon": "pyramid",
+          "year": -3000,
+          "word": "egypt"
+        },
+        {
+          "label": "Rome",
+          "icon": "column",
+          "year": -100,
+          "word": "rome"
+        },
+        {
+          "label": "Middle Ages",
+          "icon": "castle",
+          "year": 1200,
+          "word": "castles"
+        },
+        {
+          "label": "Today",
+          "icon": "city",
+          "year": 2025,
+          "word": "today",
+          "expression": "deadpan",
+          "mark": "..."
+        }
+      ]
+    },
+    "exampleNarration": "From the stone age, to egypt, to rome, to the age of castles, all the way to today. And honestly, we still complain about the weather."
+  }
+]

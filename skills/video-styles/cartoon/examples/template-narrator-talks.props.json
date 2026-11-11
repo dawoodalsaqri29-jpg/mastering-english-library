@@ -1,0 +1,17 @@
+{
+  "character": "maya",
+  "location": "living-room",
+  "title": "Save *10%* of every paycheck",
+  "kicker": "Rule #1",
+  "keyword": "save",
+  "prop": "piggy-bank",
+  "expression": "happy",
+  "beats": [
+    {
+      "word": "automatic",
+      "pose": "point-viewer",
+      "expression": "excited",
+      "mark": "sparkle"
+    }
+  ]
+}

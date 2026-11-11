@@ -1,0 +1,11 @@
+{
+  "set": "town",
+  "speaker": "pip",
+  "listener": "otto",
+  "bubble": "Did you know our town *recycles* half its rubbish?",
+  "tags": [
+    "Paper",
+    "Glass",
+    "Cans"
+  ]
+}

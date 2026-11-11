@@ -1,0 +1,1526 @@
+[
+  {
+    "id": "map-focus",
+    "name": "Map focus (workhorse)",
+    "description": "The workhorse: the satellite relief map of a region, a glowing zone and pulsing red target ring on one place, a bold red arrow sweeping in from the edge, an outlined label, and a huge thumbnail headline that lands on the key word while the camera pushes toward the place. Use for most scenes: 'this region', 'right here', 'in this corner of the country'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show. Real regions have named anchors (see SKILL.md); island / archipelago / continent / peninsula are generic landmasses with anchors like center, north, capital, coast, bay, peak."
+        },
+        "place": {
+          "type": "string",
+          "description": "Where the action is: an anchor name of the region (e.g. 'pilbara', 'cairo', 'texas') or 'lon,lat' (e.g. '131,-25') or normalised 'x,y' in 0..1 for generic landmasses."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Thumbnail-style headline, 2-7 words, caps look best. Wrap one or two words in *stars* to colour them yellow, e.g. 'HIDDEN FOR *1 BILLION* YEARS'."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied from the narration; the headline and label land on it."
+        },
+        "label": {
+          "type": "string",
+          "description": "Short boxed label on the place, 1-4 words (a name)."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Small line under the label, up to 5 words (e.g. a year, 'POPULATION 2 MILLION')."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag at top-left, up to 4 words, e.g. 'FACT #3' or 'WESTERN AUSTRALIA'."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Zone / ring / arrow colour (red default)."
+        },
+        "lava": {
+          "type": "boolean",
+          "description": "Make the zone a hot glowing lava / heat spot (orange-yellow core)."
+        },
+        "zoneRadius": {
+          "type": "number",
+          "description": "Glow size as a fraction of the map, 0.03-0.3 (default 0.1)."
+        },
+        "arrowFrom": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "left",
+            "right",
+            "top",
+            "bottom"
+          ],
+          "description": "Edge the arrow sweeps in from (auto picks the far side)."
+        },
+        "zoom": {
+          "type": "number",
+          "description": "How far the camera pushes toward the place, 1 (none) to 4 (default 1.7)."
+        },
+        "stat": {
+          "type": "number",
+          "description": "Optional number for a corner stat card (counts up)."
+        },
+        "statPrefix": {
+          "type": "string",
+          "description": "Prefix for the stat, e.g. '$'."
+        },
+        "statSuffix": {
+          "type": "string",
+          "description": "Suffix for the stat, e.g. ' KM', ' BILLION', '%'."
+        },
+        "statCaption": {
+          "type": "string",
+          "description": "Caption under the stat, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "place",
+        "headline",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "place": "pilbara",
+      "headline": "HIDDEN FOR *3 BILLION* YEARS",
+      "keyword": "ancient",
+      "label": "The Pilbara",
+      "sub": "WESTERN AUSTRALIA",
+      "kicker": "FACT #1",
+      "color": "red",
+      "stat": 3.6,
+      "statSuffix": " BN YEARS",
+      "statCaption": "oldest rocks on Earth"
+    },
+    "exampleNarration": "In the far north-west of Australia lies a region called the Pilbara, where some of the most ancient rocks on the planet have been hiding for over three billion years."
+  },
+  {
+    "id": "hidden-discovery",
+    "name": "Hidden discovery (underground reveal)",
+    "description": "Zooms from the whole region into a glowing site, then an underground cross-section panel unfolds: layered strata, a scanning line, a drill line and the glowing deposit (gold, oil, water, lava, crystal, gas, diamond, fossil, cave...). For 'scientists just found', 'buried beneath', 'deposit discovered' moments.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "site": {
+          "type": "string",
+          "description": "Anchor name or 'lon,lat' of the discovery site."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "gold",
+            "oil",
+            "water",
+            "lava",
+            "crystal",
+            "gas",
+            "diamond",
+            "fossil",
+            "cave",
+            "ore",
+            "iron",
+            "lithium",
+            "copper",
+            "uranium",
+            "coal",
+            "salt",
+            "aquifer",
+            "magma"
+          ],
+          "description": "What is buried; sets the deposit colour and look."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline, 2-7 words, shown while zooming in (e.g. 'WHAT THEY FOUND UNDERNEATH')."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the zoom-in and headline land on."
+        },
+        "revealKeyword": {
+          "type": "string",
+          "description": "Narration word on which the cross-section panel unfolds (after keyword)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Boxed label on the site, 1-4 words."
+        },
+        "discoveryLabel": {
+          "type": "string",
+          "description": "Label under the deposit in the panel, 1-5 words, e.g. '55 BILLION TONS OF IRON'."
+        },
+        "depth": {
+          "type": "string",
+          "description": "Depth text printed at the bottom of the panel, e.g. '2 KM' or '600 M'."
+        },
+        "panelTitle": {
+          "type": "string",
+          "description": "Tag on the panel, up to 3 words (default 'CROSS-SECTION')."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        },
+        "stat": {
+          "type": "number",
+          "description": "Optional number for a stat card after the reveal."
+        },
+        "statPrefix": {
+          "type": "string",
+          "description": "Stat prefix."
+        },
+        "statSuffix": {
+          "type": "string",
+          "description": "Stat suffix."
+        },
+        "statCaption": {
+          "type": "string",
+          "description": "Stat caption, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "site",
+        "kind",
+        "headline",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "site": "pilbara",
+      "kind": "iron",
+      "headline": "WHAT THEY FOUND *UNDERNEATH*",
+      "keyword": "beneath",
+      "revealKeyword": "ore",
+      "label": "Hamersley Range",
+      "discoveryLabel": "55 BILLION TONS",
+      "depth": "1 KM",
+      "kicker": "DISCOVERY",
+      "stat": 55,
+      "statSuffix": " BN TONS",
+      "statCaption": "iron ore reserve"
+    },
+    "exampleNarration": "Beneath the red dust of the Hamersley Range, geologists mapped a single body of iron ore so vast that it could supply the entire world for a century."
+  },
+  {
+    "id": "fact-countdown",
+    "name": "Fact countdown (numbered markers)",
+    "description": "A numbered marker pops onto the map for each fact (counting down 5-4-3... or up), each with a boxed label and optional stat badge, while the camera hops from place to place. For listicles: '10 insane facts', 'top 5 places'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "title": {
+          "type": "string",
+          "description": "Small red tag at top-left, up to 5 words, e.g. 'TOP 5 DISCOVERIES'."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional headline shown before the first marker, 2-6 words."
+        },
+        "countdown": {
+          "type": "boolean",
+          "description": "true (default): numbers count down from N to 1; false: count up 1..N."
+        },
+        "facts": {
+          "type": "array",
+          "description": "2-6 facts in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "place": {
+                "type": "string",
+                "description": "Anchor name or 'lon,lat'."
+              },
+              "label": {
+                "type": "string",
+                "description": "Boxed label, 1-4 words."
+              },
+              "sub": {
+                "type": "string",
+                "description": "Small line under the label, up to 5 words."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word this marker lands on."
+              },
+              "stat": {
+                "type": "number",
+                "description": "Optional number for a badge pinned to the marker."
+              },
+              "statSuffix": {
+                "type": "string",
+                "description": "Badge suffix, e.g. ' KM' or ' M'."
+              },
+              "statPrefix": {
+                "type": "string",
+                "description": "Badge prefix."
+              },
+              "statCaption": {
+                "type": "string",
+                "description": "Badge caption, up to 3 words."
+              },
+              "color": {
+                "type": "string",
+                "enum": [
+                  "red",
+                  "yellow",
+                  "cyan",
+                  "green",
+                  "orange",
+                  "white"
+                ],
+                "description": "Marker colour (alternates red/yellow by default)."
+              }
+            },
+            "required": [
+              "place",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "region",
+        "facts"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "usa",
+      "title": "5 INSANE US FACTS",
+      "facts": [
+        {
+          "place": "death-valley",
+          "label": "Death Valley",
+          "keyword": "hottest",
+          "stat": 56.7,
+          "statSuffix": "°C",
+          "statCaption": "record heat"
+        },
+        {
+          "place": "great-lakes",
+          "label": "Great Lakes",
+          "keyword": "fresh",
+          "stat": 21,
+          "statSuffix": "%",
+          "statCaption": "of world's fresh water"
+        },
+        {
+          "place": "yellowstone",
+          "label": "Yellowstone",
+          "keyword": "supervolcano"
+        },
+        {
+          "place": "alaska",
+          "label": "Alaska",
+          "keyword": "coastline",
+          "sub": "MORE COAST THAN ALL OTHERS"
+        },
+        {
+          "place": "new-york",
+          "label": "New York",
+          "keyword": "languages",
+          "stat": 800,
+          "statCaption": "languages spoken"
+        }
+      ]
+    },
+    "exampleNarration": "Number five: Death Valley, the hottest place ever measured on Earth. Four: the Great Lakes hold a fifth of all the fresh surface water on the planet. Three: Yellowstone sits on top of a supervolcano. Two: Alaska has more coastline than every other state combined. And one: New York, where eight hundred languages are spoken."
+  },
+  {
+    "id": "route-journey",
+    "name": "Route journey",
+    "description": "A dotted route draws itself across the region through named stops, led by a vehicle head (dot, plane, ship, car) that the camera follows, then a wide shot of the whole path with a headline. For trade routes, expeditions, migrations, pipelines, road trips.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "title": {
+          "type": "string",
+          "description": "Small red tag, up to 5 words."
+        },
+        "stops": {
+          "type": "array",
+          "description": "2-8 stops in travel order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "place": {
+                "type": "string",
+                "description": "Anchor name or 'lon,lat'."
+              },
+              "label": {
+                "type": "string",
+                "description": "Boxed label, 1-3 words (leave empty for intermediate waypoints)."
+              },
+              "sub": {
+                "type": "string",
+                "description": "Small line under the label."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word the route reaches this stop on (first and last matter most)."
+              }
+            },
+            "required": [
+              "place"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "vehicle": {
+          "type": "string",
+          "enum": [
+            "dot",
+            "plane",
+            "ship",
+            "car",
+            "none"
+          ],
+          "description": "Head that leads the route."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "dotted",
+            "dashed",
+            "solid"
+          ],
+          "description": "Line style (dotted default)."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Route colour (yellow default)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the route starts drawing on."
+        },
+        "follow": {
+          "type": "boolean",
+          "description": "Camera follows the head (default true)."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline when the route completes, 2-6 words."
+        },
+        "stat": {
+          "type": "number",
+          "description": "Optional stat card at the end (e.g. distance)."
+        },
+        "statPrefix": {
+          "type": "string",
+          "description": "Stat prefix."
+        },
+        "statSuffix": {
+          "type": "string",
+          "description": "Stat suffix, e.g. ' KM'."
+        },
+        "statCaption": {
+          "type": "string",
+          "description": "Stat caption, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "stops"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "africa",
+      "title": "THE LONGEST RIVER",
+      "stops": [
+        {
+          "place": "lake-victoria",
+          "label": "Lake Victoria",
+          "keyword": "Victoria"
+        },
+        {
+          "place": "khartoum",
+          "label": "Khartoum",
+          "keyword": "Khartoum"
+        },
+        {
+          "place": "aswan",
+          "label": "Aswan"
+        },
+        {
+          "place": "cairo",
+          "label": "Cairo",
+          "keyword": "Mediterranean"
+        }
+      ],
+      "vehicle": "ship",
+      "color": "cyan",
+      "keyword": "begins",
+      "headline": "6,650 KM *NORTH*",
+      "stat": 6650,
+      "statSuffix": " KM",
+      "statCaption": "source to sea"
+    },
+    "exampleNarration": "The Nile begins at Lake Victoria, pushes north past Khartoum where the two Niles meet, squeezes through Aswan and finally fans out into the Mediterranean at Cairo, six thousand six hundred and fifty kilometres later."
+  },
+  {
+    "id": "compare-size",
+    "name": "Compare size",
+    "description": "The silhouette of one region drops onto another at true relative size, then ghost copies pop in and a stat card counts how many times it fits. For 'Australia is bigger than you think', 'the UK fits 32 times in...'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Base map (the big one)."
+        },
+        "overlay": {
+          "type": "string",
+          "enum": [
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Region whose silhouette is dropped on top (must be smaller than the base)."
+        },
+        "overlayName": {
+          "type": "string",
+          "description": "Label on the silhouette, 1-3 words (e.g. 'UK', 'Japan')."
+        },
+        "place": {
+          "type": "string",
+          "description": "Anchor name or 'lon,lat' where the silhouette lands (default: a central anchor)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the silhouette drops on."
+        },
+        "countKeyword": {
+          "type": "string",
+          "description": "Narration word the 'fits N times' count lands on (after keyword)."
+        },
+        "times": {
+          "type": "number",
+          "description": "How many times the overlay fits (shown as 'N×'); estimated from areas if omitted."
+        },
+        "ghosts": {
+          "type": "number",
+          "description": "How many ghost copies to scatter, 0-6 (default 5)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption under the count, up to 4 words (default '<overlay> fits inside')."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline, 2-6 words."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Silhouette colour (yellow default)."
+        },
+        "rotate": {
+          "type": "number",
+          "description": "Rotate the silhouette, degrees (-45..45)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "overlay",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "overlay": "uk",
+      "overlayName": "UK",
+      "place": "outback",
+      "keyword": "Britain",
+      "countKeyword": "times",
+      "times": 32,
+      "headline": "*32×* BIGGER THAN BRITAIN",
+      "kicker": "SIZE CHECK"
+    },
+    "exampleNarration": "Drop Britain onto the Australian outback and it simply vanishes. The whole of the United Kingdom fits into Australia thirty-two times, with room to spare."
+  },
+  {
+    "id": "stat-on-map",
+    "name": "Stat on map",
+    "description": "A big number badge pinned to a place counts up (e.g. '55 BILLION TONS'), with a target ring, red arrow and optional headline. For any single figure tied to a location.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "place": {
+          "type": "string",
+          "description": "Anchor name or 'lon,lat'."
+        },
+        "value": {
+          "type": "number",
+          "description": "The number (counts up from 0)."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Prefix, e.g. '$'."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Suffix, e.g. ' BILLION TONS', ' KM', '%'."
+        },
+        "decimals": {
+          "type": "number",
+          "description": "Decimals to show (0-2)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption under the number, 1-4 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the badge lands on."
+        },
+        "label": {
+          "type": "string",
+          "description": "Boxed place name under the ring, 1-3 words."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Optional headline, 2-6 words."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Badge colour (yellow default)."
+        },
+        "badgePos": {
+          "type": "string",
+          "enum": [
+            "above",
+            "below",
+            "left",
+            "right"
+          ],
+          "description": "Where the badge sits relative to the place."
+        },
+        "arrowFrom": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "left",
+            "right",
+            "top",
+            "bottom"
+          ],
+          "description": "Edge the arrow sweeps in from."
+        },
+        "zoom": {
+          "type": "number",
+          "description": "Camera push toward the place, 1-4 (default 1.6)."
+        }
+      },
+      "required": [
+        "region",
+        "place",
+        "value",
+        "caption",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "middle-east",
+      "place": "neom",
+      "value": 500,
+      "prefix": "$",
+      "suffix": " BILLION",
+      "caption": "price tag",
+      "keyword": "billion",
+      "label": "NEOM",
+      "headline": "A CITY IN A *STRAIGHT LINE*",
+      "kicker": "MEGAPROJECT",
+      "zoom": 1.8
+    },
+    "exampleNarration": "On the Red Sea coast of Saudi Arabia, a city is being built in a single straight line, with a price tag of five hundred billion dollars."
+  },
+  {
+    "id": "headline-title",
+    "name": "Headline title",
+    "description": "Thumbnail-style title card over a slowly pushing map: red kicker, giant headline landing word by word on the narration, white flash and shake on the last word, a red banner sub line. Use to open a video or a chapter.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map behind the title."
+        },
+        "headline": {
+          "type": "string",
+          "description": "The headline, 2-8 words, e.g. 'AUSTRALIA JUST FOUND *SOMETHING*'. Stars colour words yellow."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Red banner line under the headline, up to 7 words."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the headline starts on; with sync each word lands as it is spoken."
+        },
+        "sync": {
+          "type": "boolean",
+          "description": "Land each headline word on its narration time (default true; words must appear in the narration)."
+        },
+        "place": {
+          "type": "string",
+          "description": "Optional place to glow and ring behind the title."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Accent colour (red default)."
+        },
+        "headlineColor": {
+          "type": "string",
+          "enum": [
+            "white",
+            "yellow"
+          ],
+          "description": "Headline fill colour."
+        },
+        "lava": {
+          "type": "boolean",
+          "description": "Hot lava glow on the place."
+        }
+      },
+      "required": [
+        "region",
+        "headline",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "headline": "AUSTRALIA JUST FOUND *SOMETHING*",
+      "sub": "15 INSANE GEOGRAPHY FACTS",
+      "kicker": "EPISODE 12",
+      "keyword": "Australia",
+      "place": "outback",
+      "color": "red"
+    },
+    "exampleNarration": "Australia just found something buried in its heart that nobody expected, and it changes what we know about the entire continent."
+  },
+  {
+    "id": "region-split",
+    "name": "Region split (two zones)",
+    "description": "Two contrasting zones (north vs south, wet vs dry, rich vs poor) glow in different colours with centred labels, optional stat badges and a big VS. The camera visits each zone then pulls wide.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "left": {
+          "type": "object",
+          "description": "First zone (spoken first).",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Zone label, 1-3 words."
+            },
+            "sub": {
+              "type": "string",
+              "description": "Small line under the label."
+            },
+            "place": {
+              "type": "string",
+              "description": "Centre anchor or 'lon,lat' (used with radius)."
+            },
+            "radius": {
+              "type": "number",
+              "description": "Zone size as a fraction of the map, 0.08-0.4 (default 0.2)."
+            },
+            "places": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Alternative: 3-8 anchors / 'lon,lat' corners of the zone polygon."
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "yellow",
+                "cyan",
+                "green",
+                "orange",
+                "white",
+                "blue",
+                "purple"
+              ],
+              "description": "Zone colour (cyan default)."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Narration word the zone appears on."
+            },
+            "stat": {
+              "type": "number",
+              "description": "Optional badge number."
+            },
+            "statSuffix": {
+              "type": "string",
+              "description": "Badge suffix."
+            },
+            "statPrefix": {
+              "type": "string",
+              "description": "Badge prefix."
+            },
+            "statCaption": {
+              "type": "string",
+              "description": "Badge caption, up to 3 words."
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "description": "Second zone (spoken second).",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Zone label, 1-3 words."
+            },
+            "sub": {
+              "type": "string",
+              "description": "Small line under the label."
+            },
+            "place": {
+              "type": "string",
+              "description": "Centre anchor or 'lon,lat'."
+            },
+            "radius": {
+              "type": "number",
+              "description": "Zone size, 0.08-0.4."
+            },
+            "places": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Alternative: 3-8 corners of the zone polygon."
+            },
+            "color": {
+              "type": "string",
+              "enum": [
+                "red",
+                "yellow",
+                "cyan",
+                "green",
+                "orange",
+                "white",
+                "blue",
+                "purple"
+              ],
+              "description": "Zone colour (red default)."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Narration word the zone appears on."
+            },
+            "stat": {
+              "type": "number",
+              "description": "Optional badge number."
+            },
+            "statSuffix": {
+              "type": "string",
+              "description": "Badge suffix."
+            },
+            "statPrefix": {
+              "type": "string",
+              "description": "Badge prefix."
+            },
+            "statCaption": {
+              "type": "string",
+              "description": "Badge caption, up to 3 words."
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "vs": {
+          "type": "boolean",
+          "description": "Show the big VS (default true)."
+        },
+        "vsText": {
+          "type": "string",
+          "description": "Text instead of VS, 1-2 words."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline after both zones, 2-6 words."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "left": {
+        "label": "The Coast",
+        "sub": "90% OF PEOPLE",
+        "places": [
+          "brisbane",
+          "sydney",
+          "canberra",
+          "melbourne",
+          "adelaide"
+        ],
+        "color": "cyan",
+        "keyword": "coast",
+        "stat": 90,
+        "statSuffix": "%",
+        "statCaption": "of Australians"
+      },
+      "right": {
+        "label": "The Outback",
+        "sub": "ALMOST NOBODY",
+        "place": "outback",
+        "radius": 0.26,
+        "color": "red",
+        "keyword": "outback",
+        "stat": 0.1,
+        "statSuffix": " /KM²",
+        "statCaption": "people"
+      },
+      "headline": "WHERE *EVERYONE* LIVES",
+      "kicker": "POPULATION"
+    },
+    "exampleNarration": "Ninety percent of Australians live squeezed along the south-east coast, while the outback, which covers most of the continent, is almost completely empty."
+  },
+  {
+    "id": "plan-blueprint",
+    "name": "Plan blueprint (proposed project)",
+    "description": "A proposed megaproject draws itself over the map in dashed yellow blueprint style over a faint grid: a canal, railway, highway, pipeline, tunnel or bridge line through waypoints, or an area (inland sea, lake, new city) that outlines and floods. For 'the plan to build...', 'what if they flooded the desert'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "canal",
+            "railway",
+            "highway",
+            "pipeline",
+            "tunnel",
+            "bridge",
+            "river",
+            "sea",
+            "lake",
+            "reservoir",
+            "city",
+            "farm"
+          ],
+          "description": "Line projects (canal, railway, highway, pipeline, tunnel, bridge, river) draw a dashed route; area projects (sea, lake, reservoir, city, farm) outline a polygon and fill it."
+        },
+        "path": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "2-8 waypoints (anchors or 'lon,lat') for a line, or 3-8 corners for an area."
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional label per waypoint (same order as path; empty string to skip)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Project name label at the middle of the plan, 1-4 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the drawing starts on."
+        },
+        "doneKeyword": {
+          "type": "string",
+          "description": "Narration word the plan completes / floods on."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline after completion, 2-6 words."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Blueprint colour (yellow default)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        },
+        "stat": {
+          "type": "number",
+          "description": "Optional stat card after completion (cost, length)."
+        },
+        "statPrefix": {
+          "type": "string",
+          "description": "Stat prefix."
+        },
+        "statSuffix": {
+          "type": "string",
+          "description": "Stat suffix."
+        },
+        "statCaption": {
+          "type": "string",
+          "description": "Stat caption, up to 4 words."
+        }
+      },
+      "required": [
+        "region",
+        "kind",
+        "path",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "egypt-nile",
+      "kind": "canal",
+      "path": [
+        "mediterranean",
+        "qattara"
+      ],
+      "labels": [
+        "Mediterranean",
+        "Qattara Depression"
+      ],
+      "label": "THE QATTARA CANAL",
+      "keyword": "canal",
+      "doneKeyword": "flood",
+      "headline": "A *NEW SEA* IN THE SAHARA",
+      "kicker": "THE PLAN",
+      "stat": 80,
+      "statSuffix": " KM",
+      "statCaption": "of canal"
+    },
+    "exampleNarration": "The plan was simple on paper: dig an eighty kilometre canal from the Mediterranean south into the Qattara Depression, let the sea flood in, and create a brand new inland sea in the middle of the Sahara."
+  },
+  {
+    "id": "heat-zones",
+    "name": "Heat zones (glowing areas)",
+    "description": "Several glowing areas coloured by intensity (low yellow, medium orange, high red, extreme magenta-lava) pop in one by one with labels, plus a legend. Choropleth-style: 'the hottest regions', 'where the earthquakes hit', 'danger zones'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean",
+            "island",
+            "archipelago",
+            "continent",
+            "peninsula"
+          ],
+          "description": "Map to show."
+        },
+        "title": {
+          "type": "string",
+          "description": "Small red tag, up to 5 words."
+        },
+        "zones": {
+          "type": "array",
+          "description": "2-8 zones in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "place": {
+                "type": "string",
+                "description": "Anchor name or 'lon,lat'."
+              },
+              "label": {
+                "type": "string",
+                "description": "Boxed label, 1-3 words."
+              },
+              "value": {
+                "type": "string",
+                "description": "Small value line under the label, e.g. '48°C' or 'M 7.1'."
+              },
+              "intensity": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high",
+                  "extreme",
+                  "cold"
+                ],
+                "description": "Sets colour and size."
+              },
+              "radius": {
+                "type": "number",
+                "description": "Override size, fraction of map 0.04-0.3."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word the zone appears on."
+              }
+            },
+            "required": [
+              "place",
+              "label",
+              "intensity"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "legendTitle": {
+          "type": "string",
+          "description": "Legend title, 1-2 words (default 'INTENSITY')."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline after the last zone, 2-6 words."
+        }
+      },
+      "required": [
+        "region",
+        "zones"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "india",
+      "title": "HEAT WAVE 2024",
+      "zones": [
+        {
+          "place": "rajasthan",
+          "label": "Rajasthan",
+          "value": "50°C",
+          "intensity": "extreme",
+          "keyword": "Rajasthan"
+        },
+        {
+          "place": "delhi",
+          "label": "Delhi",
+          "value": "49°C",
+          "intensity": "high",
+          "keyword": "Delhi"
+        },
+        {
+          "place": "deccan",
+          "label": "Deccan",
+          "value": "44°C",
+          "intensity": "medium",
+          "keyword": "Deccan"
+        },
+        {
+          "place": "kerala",
+          "label": "Kerala",
+          "value": "34°C",
+          "intensity": "low",
+          "keyword": "Kerala"
+        }
+      ],
+      "legendTitle": "TEMPERATURE",
+      "headline": "*50 DEGREES* AND RISING"
+    },
+    "exampleNarration": "The heat map tells the story. Rajasthan hit fifty degrees, Delhi touched forty-nine, the Deccan plateau baked at forty-four, and even Kerala on the coast was sweltering."
+  },
+  {
+    "id": "globe-spin",
+    "name": "Globe spin",
+    "description": "A 3D globe spins through space to the target country, a red marker pulses on it, the camera dives in and the globe dissolves into the flat satellite map with a headline. The classic intro: 'somewhere in the middle of...'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "string",
+          "enum": [
+            "world",
+            "australia",
+            "usa",
+            "europe",
+            "africa",
+            "south-america",
+            "india",
+            "china",
+            "japan",
+            "uk",
+            "egypt-nile",
+            "middle-east",
+            "antarctica",
+            "mediterranean"
+          ],
+          "description": "Flat map revealed after the zoom."
+        },
+        "target": {
+          "type": "string",
+          "description": "Globe target: a world anchor (australia, usa, europe, africa, india, china, japan, uk, middle-east, south-america, antarctica, cairo, tokyo...) or 'lon,lat'. Defaults to the region."
+        },
+        "place": {
+          "type": "string",
+          "description": "Optional place on the flat map to ring and arrow after the reveal."
+        },
+        "label": {
+          "type": "string",
+          "description": "Boxed label on the place, 1-3 words."
+        },
+        "headline": {
+          "type": "string",
+          "description": "Headline after the reveal, 2-7 words."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Red banner under the headline, up to 7 words."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small red tag, up to 4 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word the headline lands on (after the globe arrives)."
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red",
+            "yellow",
+            "cyan",
+            "green",
+            "orange",
+            "white"
+          ],
+          "description": "Marker / accent colour."
+        }
+      },
+      "required": [
+        "region",
+        "headline",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "region": "australia",
+      "target": "australia",
+      "place": "alice-springs",
+      "label": "Alice Springs",
+      "headline": "THE *EMPTIEST* PLACE ON EARTH",
+      "sub": "ONE PERSON PER 5 SQUARE KM",
+      "kicker": "GEOGRAPHY",
+      "keyword": "emptiest",
+      "color": "red"
+    },
+    "exampleNarration": "Spin the globe to the bottom of the world and you land on Australia, and right in its dead centre sits Alice Springs, the gateway to the emptiest place on Earth."
+  }
+]

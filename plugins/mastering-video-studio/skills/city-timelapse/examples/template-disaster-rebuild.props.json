@@ -1,0 +1,17 @@
+{
+  "city": "Lakeport",
+  "preset": "lake",
+  "style": "american",
+  "seed": 12,
+  "year": 1871,
+  "event": "fire",
+  "area": "core",
+  "radius": 5,
+  "keywordHit": "fire",
+  "keywordRebuild": "rebuilt",
+  "rebuildYear": 1893,
+  "label": "The Great Fire",
+  "caption": "Three days, 17,000 buildings",
+  "rebuildLabel": "Rebuilt in steel",
+  "rebuildCaption": "Out of the ashes came the first skyscrapers"
+}

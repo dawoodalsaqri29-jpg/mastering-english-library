@@ -1,0 +1,1430 @@
+[
+  {
+    "id": "character-speaks",
+    "name": "Character Speaks",
+    "description": "The workhorse: one cast member talks to camera with lip-sync, blinks and hair sway on a painted location, then the camera snaps to a close-up for the second half. An optional slanted key-text callout pops on its key word while the character gestures; anime subtitles run underneath.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki",
+            "mochi"
+          ],
+          "description": "Cast member — keep the same cast for the same roles across the whole video (hikari = hero, ren = mentor, kaito = rival/friend, yuki = classmate, mochi = mascot)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Location. Keep it consistent between neighbouring scenes."
+        },
+        "text": {
+          "type": "string",
+          "description": "Optional key text callout (2–8 words). Wrap one word in *asterisks* to highlight it."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the callout (1–3 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the callout pops and the key gesture lands."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Optional icon name for the callout (e.g. lightbulb, rocket, brain, star, heart, target, bolt, book, clock, trophy)."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Base expression (default: the character's usual look)."
+        },
+        "keyExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression from the keyword on."
+        },
+        "closeExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression in the close-up half."
+        },
+        "gesture": {
+          "type": "string",
+          "enum": [
+            "rest",
+            "fist",
+            "fist-up",
+            "point",
+            "point-left",
+            "point-up",
+            "think",
+            "wave",
+            "peace",
+            "thumbs",
+            "cheer",
+            "panic",
+            "glasses",
+            "explain",
+            "present",
+            "cross",
+            "clasp",
+            "ready",
+            "punch"
+          ],
+          "description": "Gesture on the keyword (default: the character's signature move)."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Which side the character stands on in landscape (text goes on the other side)."
+        },
+        "closeUp": {
+          "type": "boolean",
+          "description": "Cut to a close-up for the second half (default true)."
+        },
+        "subtitles": {
+          "type": "boolean",
+          "description": "Show anime subtitles of the narration (default true)."
+        },
+        "beats": {
+          "type": "array",
+          "description": "Optional acting beats (1–3) landing on narration words.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "Narration word the beat lands on (must appear in the narration)."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "sparkle",
+                  "shocked",
+                  "surprised",
+                  "determined",
+                  "serious",
+                  "sweat-drop",
+                  "panic",
+                  "flustered",
+                  "sad",
+                  "angry",
+                  "smug",
+                  "calm",
+                  "thinking",
+                  "embarrassed",
+                  "sleepy"
+                ],
+                "description": "Expression from this word on."
+              },
+              "gesture": {
+                "type": "string",
+                "enum": [
+                  "rest",
+                  "fist",
+                  "fist-up",
+                  "point",
+                  "point-left",
+                  "point-up",
+                  "think",
+                  "wave",
+                  "peace",
+                  "thumbs",
+                  "cheer",
+                  "panic",
+                  "glasses",
+                  "explain",
+                  "present",
+                  "cross",
+                  "clasp",
+                  "ready",
+                  "punch"
+                ],
+                "description": "Gesture from this word on."
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "character"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "hikari",
+      "location": "rooftop",
+      "text": "Small steps beat *big* leaps",
+      "kicker": "Rule #1",
+      "keyword": "steps",
+      "icon": "rocket",
+      "keyExpression": "determined",
+      "beats": [
+        {
+          "word": "every",
+          "expression": "excited"
+        }
+      ]
+    },
+    "exampleNarration": "Here is the secret nobody tells you. Small steps, taken every single day, beat one giant leap you never finish."
+  },
+  {
+    "id": "dialogue",
+    "name": "Dialogue (Shot / Reverse Shot)",
+    "description": "Two characters talk: an establishing two-shot, then quick cuts between single shots of whoever is speaking (with whip-pan streaks), name plates and anime subtitles. Each line lip-syncs to its words in the narration; listeners react.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "characters": {
+          "type": "array",
+          "description": "Exactly two cast members [left, right].",
+          "items": {
+            "type": "string",
+            "enum": [
+              "hikari",
+              "ren",
+              "kaito",
+              "yuki",
+              "mochi"
+            ],
+            "description": "Cast member."
+          }
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Location. Keep it consistent between neighbouring scenes."
+        },
+        "lines": {
+          "type": "array",
+          "description": "2–8 lines in narration order. The text must be the exact narration wording so mouths sync.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "integer",
+                "description": "0 = first character, 1 = second character."
+              },
+              "text": {
+                "type": "string",
+                "description": "The spoken words (exact narration wording, ≤ 16 words)."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "sparkle",
+                  "shocked",
+                  "surprised",
+                  "determined",
+                  "serious",
+                  "sweat-drop",
+                  "panic",
+                  "flustered",
+                  "sad",
+                  "angry",
+                  "smug",
+                  "calm",
+                  "thinking",
+                  "embarrassed",
+                  "sleepy"
+                ],
+                "description": "Speaker's expression for this line."
+              },
+              "reaction": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "sparkle",
+                  "shocked",
+                  "surprised",
+                  "determined",
+                  "serious",
+                  "sweat-drop",
+                  "panic",
+                  "flustered",
+                  "sad",
+                  "angry",
+                  "smug",
+                  "calm",
+                  "thinking",
+                  "embarrassed",
+                  "sleepy"
+                ],
+                "description": "Listener's reaction while this line is spoken."
+              },
+              "gesture": {
+                "type": "string",
+                "enum": [
+                  "rest",
+                  "fist",
+                  "fist-up",
+                  "point",
+                  "point-left",
+                  "point-up",
+                  "think",
+                  "wave",
+                  "peace",
+                  "thumbs",
+                  "cheer",
+                  "panic",
+                  "glasses",
+                  "explain",
+                  "present",
+                  "cross",
+                  "clasp",
+                  "ready",
+                  "punch"
+                ],
+                "description": "Speaker's gesture for this line."
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "characters",
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "characters": [
+        "kaito",
+        "yuki"
+      ],
+      "location": "classroom",
+      "lines": [
+        {
+          "speaker": 0,
+          "text": "Wait, the test is today?",
+          "expression": "shocked",
+          "reaction": "sweat-drop"
+        },
+        {
+          "speaker": 1,
+          "text": "Since last week. Did you study?",
+          "expression": "smug"
+        },
+        {
+          "speaker": 0,
+          "text": "I studied... a little.",
+          "expression": "flustered",
+          "reaction": "calm"
+        },
+        {
+          "speaker": 1,
+          "text": "Then let's review together.",
+          "expression": "smile",
+          "gesture": "peace"
+        }
+      ]
+    },
+    "exampleNarration": "Wait, the test is today? Since last week. Did you study? I studied... a little. Then let's review together."
+  },
+  {
+    "id": "dramatic-reveal",
+    "name": "Dramatic Reveal",
+    "description": "Tension builds on a slow push-in, an eyes-only cut-in strip flashes, then on the key word: impact frame, white focus-line backdrop, a shocked close-up shake and giant slanted lettering of the reveal. For twists, shocking facts and big answers.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki",
+            "mochi"
+          ],
+          "description": "Cast member — keep the same cast for the same roles across the whole video (hikari = hero, ren = mentor, kaito = rival/friend, yuki = classmate, mochi = mascot)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Location. Keep it consistent between neighbouring scenes."
+        },
+        "reveal": {
+          "type": "string",
+          "description": "The reveal text slammed on screen (1–4 words). *asterisks* = gold."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the reveal lands on."
+        },
+        "reaction": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Reaction expression in the close-up (default shocked)."
+        },
+        "setupExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression while building up (default serious)."
+        },
+        "eyesExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression in the eye cut-in (default determined)."
+        },
+        "afterExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Optional expression ~1.5 s after the reveal."
+        },
+        "eyes": {
+          "type": "boolean",
+          "description": "Show the eyes-only cut-in before the reveal (default true)."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Character side in landscape."
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional CSS colour for the reveal text."
+        },
+        "subtitles": {
+          "type": "boolean",
+          "description": "Subtitles during the build-up (default true)."
+        }
+      },
+      "required": [
+        "character",
+        "reveal"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "hikari",
+      "location": "night-city",
+      "reveal": "It was *Mochi*!",
+      "word": "Mochi",
+      "reaction": "shocked"
+    },
+    "exampleNarration": "All week someone had been eating the club's snacks. We followed the crumbs to the roof, and the culprit was Mochi all along."
+  },
+  {
+    "id": "eyecatch-title",
+    "name": "Eyecatch Title",
+    "description": "Episode or chapter opener: a stripe wipe, a rotating sunburst on a slanted pink band, a bouncing chibi mascot and a huge slanted title that slams in with an episode tag and subtitle.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "episode": {
+          "type": "string",
+          "description": "Small tag above the title, e.g. \"Episode 3\" or \"Chapter 2\"."
+        },
+        "title": {
+          "type": "string",
+          "description": "Episode title (2–6 words)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional subtitle line (≤ 8 words)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki",
+            "mochi"
+          ],
+          "description": "Chibi on the card (default mochi)."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "episode": "Episode 4",
+      "title": "The *Budget* Strikes Back",
+      "subtitle": "How to save without suffering",
+      "character": "mochi"
+    },
+    "exampleNarration": "Episode four. The budget strikes back."
+  },
+  {
+    "id": "power-up-stat",
+    "name": "Power-Up Stat",
+    "description": "A character charges a flaming aura on a speed-line backdrop while the camera rumbles; on the key word an impact frame cuts to a low-angle hero shot and a giant number counts up with a glowing label.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki"
+          ],
+          "description": "Cast member (hikari, ren, kaito, yuki). Keep roles consistent across the video."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Location. Keep it consistent between neighbouring scenes."
+        },
+        "value": {
+          "type": "number",
+          "description": "The number to count up to."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Text before the number (e.g. \"$\")."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Text after the number (e.g. \"%\", \"x\", \"k\")."
+        },
+        "decimals": {
+          "type": "integer",
+          "description": "Decimal places (0–2)."
+        },
+        "label": {
+          "type": "string",
+          "description": "What the number means (2–6 words)."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word where the number lands."
+        },
+        "aura": {
+          "type": "string",
+          "enum": [
+            "pink",
+            "gold",
+            "cyan",
+            "violet",
+            "green"
+          ],
+          "description": "Aura colour (default: the character's colour)."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression after the reveal (default excited)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional small heading during the charge (≤ 5 words)."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Character side in landscape."
+        }
+      },
+      "required": [
+        "character",
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "kaito",
+      "location": "rooftop",
+      "value": 300,
+      "suffix": "%",
+      "label": "more focus after sleep",
+      "word": "three",
+      "aura": "cyan"
+    },
+    "exampleNarration": "Sleep is the real power-up. After a full night, your focus can jump by three hundred percent."
+  },
+  {
+    "id": "training-montage-list",
+    "name": "Training Montage List",
+    "description": "A list of steps as a training montage: each step is a quick whip-panned cut with a new angle, backdrop (location or speed lines), pose and expression, a big slanted step number and label, plus progress pips.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki"
+          ],
+          "description": "Cast member (hikari, ren, kaito, yuki). Keep roles consistent across the video."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Main location (alternates with speed-line backdrops)."
+        },
+        "location2": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Second location used for the 3rd step."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional montage heading shown before the first step (≤ 5 words)."
+        },
+        "steps": {
+          "type": "array",
+          "description": "2–5 steps in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Step text (2–6 words)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word where this step cuts in."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Optional icon name (e.g. clock, book, target, heart, bolt, check)."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "character",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "hikari",
+      "location": "rooftop",
+      "title": "Exam Training Arc",
+      "steps": [
+        {
+          "label": "Plan the week",
+          "word": "plan",
+          "icon": "calendar"
+        },
+        {
+          "label": "Study in sprints",
+          "word": "sprints",
+          "icon": "clock"
+        },
+        {
+          "label": "Test yourself",
+          "word": "test",
+          "icon": "target"
+        },
+        {
+          "label": "Rest and repeat",
+          "word": "rest",
+          "icon": "heart"
+        }
+      ]
+    },
+    "exampleNarration": "First, plan the week. Then study in short sprints. Next, test yourself without notes. Finally, rest and repeat."
+  },
+  {
+    "id": "flashback",
+    "name": "Flashback",
+    "description": "A desaturated sepia memory with a soft white vignette and film flicker: the character smiles in a remembered place, a 'Memory' caption slides in and memory lines fade in. Optionally a white flash returns to the colourful present on a word.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki",
+            "mochi"
+          ],
+          "description": "Cast member — keep the same cast for the same roles across the whole video (hikari = hero, ren = mentor, kaito = rival/friend, yuki = classmate, mochi = mascot)."
+        },
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Where the memory happens (default shrine)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Time/place caption (e.g. \"Three years ago\")."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tag above the caption (default \"Memory\")."
+        },
+        "lines": {
+          "type": "array",
+          "description": "1–3 short memory lines (≤ 10 words each), in narration order.",
+          "items": {
+            "type": "string",
+            "description": "Memory line."
+          }
+        },
+        "returnWord": {
+          "type": "string",
+          "description": "Optional narration word where the scene snaps back to the present."
+        },
+        "presentLocation": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Location of the present-day shot (default rooftop)."
+        },
+        "memoryExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression in the memory (default happy)."
+        },
+        "presentExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression back in the present (default determined)."
+        }
+      },
+      "required": [
+        "character"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "yuki",
+      "location": "shrine",
+      "caption": "Three years ago",
+      "lines": [
+        "We promised to never give up.",
+        "Even when it got hard."
+      ],
+      "returnWord": "today",
+      "presentExpression": "determined"
+    },
+    "exampleNarration": "Three years ago, under the cherry trees, we promised to never give up, even when it got hard. And today, that promise still holds."
+  },
+  {
+    "id": "versus-battle",
+    "name": "Versus Battle",
+    "description": "A vs B on a diagonal split screen: each fighter slides into their own coloured speed-line half with an aura and label, a huge VS slams in, then on the clash word both lunge to the centre for an impact frame, starburst and shockwave. The winner sparkles, the loser panics.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "character": {
+              "type": "string",
+              "enum": [
+                "hikari",
+                "ren",
+                "kaito",
+                "yuki",
+                "mochi"
+              ],
+              "description": "Left (top in portrait) fighter."
+            },
+            "label": {
+              "type": "string",
+              "description": "What they represent (1–5 words)."
+            },
+            "stat": {
+              "type": "string",
+              "description": "Optional small stat line (≤ 5 words)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word introducing them."
+            },
+            "aura": {
+              "type": "string",
+              "enum": [
+                "pink",
+                "gold",
+                "cyan",
+                "violet",
+                "green"
+              ],
+              "description": "Aura colour."
+            }
+          },
+          "required": [
+            "character",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "character": {
+              "type": "string",
+              "enum": [
+                "hikari",
+                "ren",
+                "kaito",
+                "yuki",
+                "mochi"
+              ],
+              "description": "Right (bottom in portrait) fighter."
+            },
+            "label": {
+              "type": "string",
+              "description": "What they represent (1–5 words)."
+            },
+            "stat": {
+              "type": "string",
+              "description": "Optional small stat line (≤ 5 words)."
+            },
+            "word": {
+              "type": "string",
+              "description": "Narration word introducing them."
+            },
+            "aura": {
+              "type": "string",
+              "enum": [
+                "pink",
+                "gold",
+                "cyan",
+                "violet",
+                "green"
+              ],
+              "description": "Aura colour."
+            }
+          },
+          "required": [
+            "character",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word for the clash."
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "tie"
+          ],
+          "description": "Who wins (default tie)."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "character": "hikari",
+        "label": "Index funds",
+        "stat": "low fees",
+        "word": "index",
+        "aura": "pink"
+      },
+      "right": {
+        "character": "kaito",
+        "label": "Stock picking",
+        "stat": "high risk",
+        "word": "picking",
+        "aura": "cyan"
+      },
+      "word": "decade",
+      "verdict": "left"
+    },
+    "exampleNarration": "Index funds versus stock picking. Over a decade, most pickers lose to the boring index."
+  },
+  {
+    "id": "lesson-board",
+    "name": "Lesson Board",
+    "description": "The mentor at a classroom chalkboard: glasses glint, then each key point is chalked onto the board on its word while the mentor points at it. For explanations, definitions and numbered takeaways.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki"
+          ],
+          "description": "Teacher (default ren, the mentor)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Board heading (2–5 words)."
+        },
+        "points": {
+          "type": "array",
+          "description": "1–4 points in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Point text (2–7 words). *asterisks* = pink."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word where it is written."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "sparkle",
+                  "shocked",
+                  "surprised",
+                  "determined",
+                  "serious",
+                  "sweat-drop",
+                  "panic",
+                  "flustered",
+                  "sad",
+                  "angry",
+                  "smug",
+                  "calm",
+                  "thinking",
+                  "embarrassed",
+                  "sleepy"
+                ],
+                "description": "Teacher expression for this point."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "endExpression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "sparkle",
+            "shocked",
+            "surprised",
+            "determined",
+            "serious",
+            "sweat-drop",
+            "panic",
+            "flustered",
+            "sad",
+            "angry",
+            "smug",
+            "calm",
+            "thinking",
+            "embarrassed",
+            "sleepy"
+          ],
+          "description": "Expression at the end (default smile)."
+        }
+      },
+      "required": [
+        "points"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "ren",
+      "title": "Why the sky is blue",
+      "points": [
+        {
+          "text": "Sunlight has *all* colours",
+          "word": "colours"
+        },
+        {
+          "text": "Air scatters short waves",
+          "word": "scatter"
+        },
+        {
+          "text": "Blue scatters the most",
+          "word": "most"
+        }
+      ]
+    },
+    "exampleNarration": "Sunlight contains all colours. Air molecules scatter the short waves. And blue light scatters the most, so the whole sky glows blue."
+  },
+  {
+    "id": "sky-montage",
+    "name": "Sky Montage",
+    "description": "Landscape establishing shot with no characters: a slow tilt across a painted location (huge cumulus skies, sunsets, neon night, sakura shrine, space) with drifting petals or stars, a place caption and up to three narration lines fading in like a poem.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string",
+          "enum": [
+            "rooftop",
+            "sunset-city",
+            "classroom",
+            "train",
+            "night-city",
+            "shrine",
+            "space",
+            "sky",
+            "meadow"
+          ],
+          "description": "Landscape (sky, meadow, sunset-city, shrine, night-city, space, rooftop…)."
+        },
+        "lines": {
+          "type": "array",
+          "description": "0–3 short narration lines (≤ 10 words each) in narration order.",
+          "items": {
+            "type": "string",
+            "description": "Line of narration."
+          }
+        },
+        "caption": {
+          "type": "string",
+          "description": "Place/time caption (e.g. \"Tokyo — Spring\")."
+        },
+        "subcaption": {
+          "type": "string",
+          "description": "Optional small line under the caption."
+        },
+        "cuts": {
+          "type": "boolean",
+          "description": "Allow a second angle on long scenes (default true)."
+        }
+      },
+      "required": [
+        "location"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "location": "sky",
+      "lines": [
+        "Every summer felt endless.",
+        "Until the last one."
+      ],
+      "caption": "Summer",
+      "subcaption": "The final year"
+    },
+    "exampleNarration": "Every summer felt endless back then. Until the last one."
+  },
+  {
+    "id": "chibi-explainer",
+    "name": "Chibi Explainer",
+    "description": "A bouncy super-deformed chibi explains a fact in a speech bubble (words light up as spoken) while icon chips pop in; on the key word they react with sparkle eyes or comedic panic.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "hikari",
+            "ren",
+            "kaito",
+            "yuki",
+            "mochi"
+          ],
+          "description": "Chibi presenter (default mochi)."
+        },
+        "fact": {
+          "type": "string",
+          "description": "The fact in the speech bubble (≤ 18 words). *asterisks* = pink."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word for the reaction."
+        },
+        "reaction": {
+          "type": "string",
+          "enum": [
+            "sparkle",
+            "panic",
+            "happy",
+            "shocked",
+            "smug",
+            "flustered"
+          ],
+          "description": "Reaction on the word."
+        },
+        "icons": {
+          "type": "array",
+          "description": "0–4 icon chips in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string",
+                "description": "Icon name (e.g. heart, brain, clock, bolt, leaf, star, chart, globe)."
+              },
+              "label": {
+                "type": "string",
+                "description": "1–2 word label."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word where it pops."
+              }
+            },
+            "required": [
+              "icon"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional background colour (pastel hex)."
+        }
+      },
+      "required": [
+        "fact"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "mochi",
+      "fact": "Octopuses have *three* hearts and blue blood!",
+      "word": "three",
+      "reaction": "sparkle",
+      "icons": [
+        {
+          "icon": "heart",
+          "label": "3 hearts",
+          "word": "hearts"
+        },
+        {
+          "icon": "droplet",
+          "label": "blue blood",
+          "word": "blood"
+        }
+      ]
+    },
+    "exampleNarration": "Fun fact: an octopus has three hearts, and its blood is actually blue."
+  }
+]

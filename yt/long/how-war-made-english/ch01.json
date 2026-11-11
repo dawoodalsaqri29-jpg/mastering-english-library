@@ -18,7 +18,7 @@
    "sky": "dusk",
    "terrain": "hills"
   },
-  "say": "Every time you speak English, you are speaking the language of war. Invaders, raiders, conquerors and soldiers all left their words behind. And one October morning, a single battle almost wiped English off the map of its own country."
+  "say": "Every time you speak English, you are speaking the language of war. Invaders, raiders, conquerors and soldiers all left their words behind. And one October morning, a single battle pushed English out of the palaces of its own country, for three hundred years."
  },
  {
   "style": "map-reveal",
@@ -70,7 +70,7 @@
    "chapter": "Chapter One",
    "title": "Before English",
    "subtitle": "An island of Celtic tribes",
-   "date": "55 BC to AD 410",
+   "date": "43 - 410",
    "place": "Britannia",
    "subject": "landscape",
    "tone": "sepia",
@@ -218,7 +218,7 @@
    "chapter": "Chapter Two",
    "title": "The Invaders Who Named England",
    "subtitle": "Angles, Saxons and Jutes",
-   "date": "From AD 449",
+   "date": "449",
    "place": "The North Sea",
    "subject": "ship",
    "tone": "sepia",

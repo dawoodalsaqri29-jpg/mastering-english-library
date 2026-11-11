@@ -1,0 +1,37 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "eras": [
+    {
+      "year": 1660,
+      "label": "Trading post",
+      "keyword": "post"
+    },
+    {
+      "year": 1800,
+      "label": "Port town",
+      "keyword": "port"
+    },
+    {
+      "year": 1900,
+      "label": "Industrial giant",
+      "keyword": "industrial"
+    },
+    {
+      "year": 2024,
+      "label": "Metropolis",
+      "keyword": "metropolis"
+    }
+  ]
+}

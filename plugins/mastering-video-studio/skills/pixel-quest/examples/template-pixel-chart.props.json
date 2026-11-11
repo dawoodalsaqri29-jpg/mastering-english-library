@@ -1,0 +1,26 @@
+{
+  "title": "Hours of sleep we need",
+  "unit": "h",
+  "bars": [
+    {
+      "label": "Baby",
+      "value": 15,
+      "keyword": "babies"
+    },
+    {
+      "label": "Kid",
+      "value": 11,
+      "keyword": "kids"
+    },
+    {
+      "label": "Teen",
+      "value": 9,
+      "keyword": "teens"
+    },
+    {
+      "label": "Adult",
+      "value": 8,
+      "keyword": "adults"
+    }
+  ]
+}

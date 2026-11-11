@@ -1,0 +1,27 @@
+{
+  "title": "Inside a *bank*",
+  "building": "bank",
+  "label": "Your local bank",
+  "rooms": [
+    {
+      "label": "Tellers",
+      "kind": "desk",
+      "keyword": "tellers"
+    },
+    {
+      "label": "The vault",
+      "kind": "vault",
+      "keyword": "vault"
+    },
+    {
+      "label": "Servers",
+      "kind": "server",
+      "keyword": "servers"
+    },
+    {
+      "label": "Customers",
+      "kind": "people",
+      "keyword": "customers"
+    }
+  ]
+}

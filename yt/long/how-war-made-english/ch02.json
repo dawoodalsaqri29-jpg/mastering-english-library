@@ -1,0 +1,348 @@
+[
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "Chapter Three",
+   "title": "The Northmen",
+   "subtitle": "Raiders, settlers and the words they left",
+   "date": "793 - 1042",
+   "place": "Northumbria",
+   "subject": "ship",
+   "tone": "sepia",
+   "keyword": "Northmen"
+  },
+  "say": "Chapter three. The Northmen."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "uk",
+   "place": "-1.8,55.68",
+   "headline": "THE FIRST *RAID*",
+   "keyword": "Lindisfarne",
+   "label": "Lindisfarne",
+   "sub": "NORTHUMBRIA, AD 793",
+   "kicker": "793",
+   "color": "red"
+  },
+  "say": "In seven hundred and ninety three, raiders from Scandinavia attacked the monastery of Lindisfarne, on a small island off the coast of Northumbria. It was one of the richest and holiest places in England, and it had no walls."
+ },
+ {
+  "style": "painted-history",
+  "template": "aftermath",
+  "props": {
+   "army": {
+    "faction": "viking",
+    "name": "Raiders"
+   },
+   "keyword": "shock",
+   "title": "A Shock to the Christian World",
+   "weather": "rain",
+   "place": "Lindisfarne",
+   "date": "AD 793",
+   "sky": "storm",
+   "terrain": "coast"
+  },
+  "say": "The news shocked Christian Europe. For the next seventy years, the raids came again and again. Fast ships, quick attacks, and then gone, back across the sea."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "THE GREAT ARMY",
+   "stops": [
+    {
+     "place": "scandinavia",
+     "label": "Scandinavia",
+     "keyword": "Scandinavia"
+    },
+    {
+     "place": "north-sea",
+     "label": "North Sea"
+    },
+    {
+     "place": "1.0,52.4",
+     "label": "East Anglia",
+     "keyword": "Anglia"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "red",
+   "keyword": "army",
+   "headline": "NOT RAIDERS. *CONQUERORS*."
+  },
+  "say": "Then, in eight hundred and sixty five, everything changed. A huge force landed in East Anglia. The English chroniclers called it the great army. These men had not come to raid. They had come to conquer."
+ },
+ {
+  "style": "painted-history",
+  "template": "timeline-of-campaign",
+  "props": {
+   "events": [
+    {
+     "date": "865",
+     "label": "The great army lands"
+    },
+    {
+     "date": "866",
+     "label": "York is captured"
+    },
+    {
+     "date": "869",
+     "label": "East Anglia falls"
+    },
+    {
+     "date": "874",
+     "label": "Mercia is overrun"
+    }
+   ],
+   "army": {
+    "faction": "viking",
+    "name": "The Great Army"
+   },
+   "title": "Kingdom After Kingdom",
+   "subtitle": "Only Wessex was left",
+   "sky": "dusk",
+   "terrain": "fields"
+  },
+  "say": "York fell in eight hundred and sixty six. East Anglia fell. Mercia was overrun. Kingdom after kingdom collapsed, until only one was left standing. Wessex."
+ },
+ {
+  "style": "painted-history",
+  "template": "portrait-of-commander",
+  "props": {
+   "name": "Alfred",
+   "role": "King of Wessex",
+   "dates": "Reigned 871 to 899",
+   "faction": "viking",
+   "keyword": "Alfred",
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "Its king was a young man named Alfred. History would later call him Alfred the Great. But in the winter of eight hundred and seventy eight, he was very close to losing everything."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "uk",
+   "place": "-2.93,51.06",
+   "headline": "A KING IN THE *MARSHES*",
+   "keyword": "marshes",
+   "label": "Athelney",
+   "sub": "SOMERSET, 878",
+   "kicker": "878",
+   "color": "red"
+  },
+  "say": "A surprise attack at Chippenham sent him running. Alfred hid in the marshes of Athelney, in Somerset, with a small band of men. For a few months, the whole future of the English language hid there with him."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "viking",
+    "name": "Wessex"
+   },
+   "right": {
+    "faction": "viking",
+    "name": "Danes"
+   },
+   "attacker": "left",
+   "action": "clash",
+   "keyword": "Edington",
+   "title": "The Battle of Edington",
+   "place": "Edington",
+   "date": "May 878",
+   "sky": "golden",
+   "terrain": "hills"
+  },
+  "say": "In May, he struck back. At the battle of Edington, Alfred's army broke the Danes. Their leader, Guthrum, agreed to peace, and to be baptised."
+ },
+ {
+  "style": "map-reveal",
+  "template": "region-split",
+  "props": {
+   "region": "uk",
+   "left": {
+    "label": "Wessex",
+    "sub": "ENGLISH RULE",
+    "places": [
+     "london",
+     "bristol",
+     "plymouth",
+     "cornwall"
+    ],
+    "color": "cyan",
+    "keyword": "English"
+   },
+   "right": {
+    "label": "The Danelaw",
+    "sub": "DANISH LAW",
+    "places": [
+     "york",
+     "norwich",
+     "leeds",
+     "newcastle",
+     "-1.48,52.92"
+    ],
+    "color": "red",
+    "keyword": "Danelaw"
+   },
+   "headline": "ENGLAND *SPLIT* IN TWO",
+   "kicker": "AFTER 878"
+  },
+  "say": "England was split in two. The south and west stayed English. The north and east, under Danish law, became known as the Danelaw."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Wessex",
+   "title": "A King Who Chose English",
+   "date": "The 880s and 890s",
+   "subject": "Books in the people's language",
+   "body": "Alfred wanted free young men to learn to read in English. He had important Latin books translated into English, so that his people could read them.",
+   "classification": "Royal policy",
+   "stamp": "English",
+   "stampColor": "red",
+   "keyword": "English"
+  },
+  "say": "Alfred did something unusual for his time. Most learning was in Latin. But Alfred wanted his people to read in their own language, and he had important books translated into English. The war made English a symbol of survival."
+ },
+ {
+  "style": "map-reveal",
+  "template": "fact-countdown",
+  "props": {
+   "region": "uk",
+   "title": "VIKING TOWNS ON TODAY'S MAP",
+   "facts": [
+    {
+     "place": "-1.48,52.92",
+     "label": "Derby",
+     "keyword": "Derby",
+     "sub": "BY = FARM OR VILLAGE"
+    },
+    {
+     "place": "-0.61,54.49",
+     "label": "Whitby",
+     "keyword": "Whitby",
+     "sub": "OLD NORSE BY"
+    },
+    {
+     "place": "-0.08,53.57",
+     "label": "Grimsby",
+     "keyword": "Grimsby",
+     "sub": "OLD NORSE BY"
+    }
+   ]
+  },
+  "say": "But the Danes did not leave. They settled, farmed and married. Their towns are still on the map. Derby. Whitby. Grimsby. That ending, by, is Old Norse for a farm or a village."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Borrowed from the Northmen",
+   "date": "Old Norse",
+   "subject": "Everyday words",
+   "body": "Sky. Egg. Knife. Window, from vindauga, the wind eye. Law. Ugly. Husband.",
+   "classification": "Etymology",
+   "stamp": "Still in use",
+   "stampColor": "red",
+   "keyword": "window"
+  },
+  "say": "And their words moved into English. Sky. Egg. Knife. Law. Ugly. Husband. Even window, from the Norse vindauga, the wind's eye, a hole in the roof to let the smoke out."
+ },
+ {
+  "style": "archival-doc",
+  "template": "then-vs-now",
+  "props": {
+   "then": {
+    "subject": "portrait",
+    "year": "Old English",
+    "label": "hie, him, hiera"
+   },
+   "now": {
+    "subject": "crowd",
+    "year": "Today",
+    "label": "they, them, their"
+   },
+   "title": "The Words You Use Every Minute",
+   "keyword": "they"
+  },
+  "say": "The Norse even changed the smallest words. They, them and their all come from Old Norse. You probably say them hundreds of times a day, and every time, you are speaking Viking."
+ },
+ {
+  "style": "archival-doc",
+  "template": "then-vs-now",
+  "props": {
+   "then": {
+    "subject": "portrait",
+    "year": "Old English",
+    "label": "shirt"
+   },
+   "now": {
+    "subject": "portrait-woman",
+    "year": "Old Norse",
+    "label": "skirt"
+   },
+   "title": "One Word, Two Languages",
+   "keyword": "skirt"
+  },
+  "say": "Sometimes, English kept both versions. Shirt is the Old English word. Skirt is its Norse cousin. They started as the same word, and ended up as two different pieces of clothing."
+ },
+ {
+  "style": "painted-history",
+  "template": "timeline-of-campaign",
+  "props": {
+   "events": [
+    {
+     "date": "1013",
+     "label": "Sweyn Forkbeard takes England"
+    },
+    {
+     "date": "1016",
+     "label": "Cnut becomes king"
+    },
+    {
+     "date": "1042",
+     "label": "An English king returns"
+    }
+   ],
+   "army": {
+    "faction": "viking",
+    "name": "Danish kings"
+   },
+   "title": "Danish Kings of England",
+   "subtitle": "The Northmen take the crown",
+   "sky": "golden",
+   "terrain": "fields"
+  },
+  "say": "And in the end, the Danes took the crown itself. In ten sixteen, Cnut became king of England. Danish kings ruled until ten forty two, when an English king returned to the throne."
+ },
+ {
+  "style": "painted-history",
+  "template": "title-banner",
+  "props": {
+   "title": "The Year of Three Battles",
+   "chapter": "Next",
+   "subtitle": "1066",
+   "keyword": "three",
+   "place": "England",
+   "date": "1066",
+   "left": {
+    "faction": "viking"
+   },
+   "right": {
+    "faction": "knight"
+   },
+   "sky": "storm",
+   "terrain": "hills"
+  },
+  "say": "But peace would not last. In ten sixty six, two foreign armies would sail for England in the same autumn. One came from Norway. The other came from Normandy. And only one of them would win."
+ }
+]

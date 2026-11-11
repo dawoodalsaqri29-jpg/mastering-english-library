@@ -1,0 +1,54 @@
+{
+  "location": "desert",
+  "character": "elder",
+  "kind": "house-cooling",
+  "title": "Wind catcher",
+  "labels": [
+    {
+      "text": "wind tower",
+      "x": 0.38,
+      "y": 0.08,
+      "word": "tower"
+    },
+    {
+      "text": "thick mud walls",
+      "x": 0.12,
+      "y": 0.55,
+      "word": "walls"
+    },
+    {
+      "text": "cool room",
+      "x": 0.5,
+      "y": 0.72,
+      "word": "cool"
+    }
+  ],
+  "arrows": [
+    {
+      "from": [
+        0.62,
+        0.1
+      ],
+      "to": [
+        0.4,
+        0.45
+      ],
+      "label": "hot air in",
+      "word": "catches"
+    },
+    {
+      "from": [
+        0.45,
+        0.6
+      ],
+      "to": [
+        0.85,
+        0.85
+      ],
+      "label": "cool air out",
+      "color": "#4FB0C6",
+      "word": "out"
+    }
+  ],
+  "mark": "idea"
+}

@@ -1,0 +1,20 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "district": "Factory Row",
+  "yearFrom": 1850,
+  "yearTo": 1910,
+  "keyword": "factories",
+  "caption": "Mills, warehouses and tenements along the rail line"
+}

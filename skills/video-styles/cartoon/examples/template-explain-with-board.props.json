@@ -1,0 +1,12 @@
+{
+  "character": "priya",
+  "location": "classroom",
+  "title": "Why sleep matters",
+  "mode": "list",
+  "items": [
+    "Memory gets *saved*",
+    "Muscles repair",
+    "Mood resets"
+  ],
+  "expression": "happy"
+}

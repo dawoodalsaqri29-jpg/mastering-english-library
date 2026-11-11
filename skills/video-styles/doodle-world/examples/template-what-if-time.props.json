@@ -1,0 +1,30 @@
+{
+  "location": "savanna",
+  "character": "og",
+  "from": 2025,
+  "format": "plain",
+  "milestones": [
+    {
+      "year": 1000000,
+      "headline": "ICE AGE",
+      "word": "ice",
+      "change": "snow",
+      "label": "-40 C"
+    },
+    {
+      "year": 1000000000,
+      "headline": "OCEANS *BOIL*",
+      "word": "boil",
+      "change": "heat",
+      "label": "100 C"
+    },
+    {
+      "year": 5000000000,
+      "headline": "THE SUN DIES",
+      "word": "dies",
+      "change": "stars",
+      "expression": "deadpan",
+      "mark": "..."
+    }
+  ]
+}

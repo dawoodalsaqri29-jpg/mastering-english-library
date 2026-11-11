@@ -1,0 +1,21 @@
+{
+  "army": {
+    "faction": "redcoat",
+    "name": "Allies"
+  },
+  "right": {
+    "faction": "bluecoat",
+    "name": "French"
+  },
+  "keyword": "cost",
+  "title": "The Price of Victory",
+  "stat": "23,000",
+  "statLabel": "Allied losses",
+  "stat2": "41,000",
+  "stat2Label": "French losses",
+  "weather": "rain",
+  "place": "Waterloo",
+  "date": "19 June 1815",
+  "sky": "storm",
+  "terrain": "plain"
+}

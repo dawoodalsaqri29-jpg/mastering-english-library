@@ -1,0 +1,22 @@
+{
+  "title": "Tallest mountains",
+  "unit": "M",
+  "entries": [
+    {
+      "name": "Everest",
+      "score": 8849
+    },
+    {
+      "name": "K2",
+      "score": 8611
+    },
+    {
+      "name": "Kangchenjunga",
+      "score": 8586
+    },
+    {
+      "name": "Lhotse",
+      "score": 8516
+    }
+  ]
+}

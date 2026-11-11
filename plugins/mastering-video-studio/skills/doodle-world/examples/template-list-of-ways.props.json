@@ -1,0 +1,37 @@
+{
+  "location": "nile",
+  "character": "nia",
+  "title": "5 ways to beat the heat",
+  "items": [
+    {
+      "text": "wet linen",
+      "word": "linen",
+      "activity": "hold-up",
+      "prop": "fan"
+    },
+    {
+      "text": "sleep on the *roof*",
+      "word": "roof",
+      "activity": "sleep",
+      "mark": "zzz"
+    },
+    {
+      "text": "shave everything",
+      "word": "shave",
+      "activity": "facepalm",
+      "expression": "deadpan"
+    },
+    {
+      "text": "clay pot fridge",
+      "word": "pot",
+      "activity": "carry",
+      "prop": "jug"
+    },
+    {
+      "text": "wait for night",
+      "word": "night",
+      "activity": "look-around",
+      "mark": "..."
+    }
+  ]
+}

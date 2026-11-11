@@ -1,0 +1,12 @@
+{
+  "character": "pip",
+  "title": "Why the sky is *blue*",
+  "doodle": "sun",
+  "label": "sunlight = all colours",
+  "notes": [
+    "blue scatters most",
+    "red: too lazy to scatter"
+  ],
+  "says": "It's physics. Sorry.",
+  "keyword": "sunlight"
+}

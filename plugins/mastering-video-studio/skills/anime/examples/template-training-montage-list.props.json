@@ -1,0 +1,27 @@
+{
+  "character": "hikari",
+  "location": "rooftop",
+  "title": "Exam Training Arc",
+  "steps": [
+    {
+      "label": "Plan the week",
+      "word": "plan",
+      "icon": "calendar"
+    },
+    {
+      "label": "Study in sprints",
+      "word": "sprints",
+      "icon": "clock"
+    },
+    {
+      "label": "Test yourself",
+      "word": "test",
+      "icon": "target"
+    },
+    {
+      "label": "Rest and repeat",
+      "word": "rest",
+      "icon": "heart"
+    }
+  ]
+}

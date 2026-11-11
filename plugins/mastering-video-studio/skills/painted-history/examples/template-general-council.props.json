@@ -1,0 +1,22 @@
+{
+  "commanders": [
+    {
+      "faction": "bluecoat",
+      "name": "The Emperor"
+    },
+    {
+      "faction": "bluecoat",
+      "name": "Marshal of France"
+    },
+    {
+      "faction": "bluecoat",
+      "name": "Chief of Staff"
+    }
+  ],
+  "speaker": 0,
+  "decision": "Attack at Dawn",
+  "keyword": "dawn",
+  "setting": "tent",
+  "place": "Imperial headquarters",
+  "date": "The night before"
+}

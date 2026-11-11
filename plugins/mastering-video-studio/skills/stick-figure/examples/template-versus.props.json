@@ -1,0 +1,22 @@
+{
+  "left": {
+    "label": "Cats",
+    "doodle": "cat",
+    "character": "juno",
+    "points": [
+      "ignore you",
+      "sleep 16 hours"
+    ]
+  },
+  "right": {
+    "label": "Dogs",
+    "doodle": "dog",
+    "character": "hank",
+    "points": [
+      "love you",
+      "eat socks"
+    ]
+  },
+  "verdict": "Verdict: both judge you, differently.",
+  "winner": "left"
+}

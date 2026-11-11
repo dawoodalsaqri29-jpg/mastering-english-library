@@ -1,0 +1,26 @@
+{
+  "title": "Where a city's *water* goes",
+  "slices": [
+    {
+      "label": "Homes",
+      "value": 55,
+      "keyword": "homes"
+    },
+    {
+      "label": "Industry",
+      "value": 25,
+      "keyword": "industry"
+    },
+    {
+      "label": "Parks",
+      "value": 12,
+      "keyword": "parks"
+    },
+    {
+      "label": "Leaks",
+      "value": 8,
+      "keyword": "leaks"
+    }
+  ],
+  "centerLabel": "WATER"
+}

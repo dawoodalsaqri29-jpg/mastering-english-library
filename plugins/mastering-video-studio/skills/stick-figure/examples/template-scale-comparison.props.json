@@ -1,0 +1,26 @@
+{
+  "title": "How big is big?",
+  "items": [
+    {
+      "doodle": "ant",
+      "label": "an ant"
+    },
+    {
+      "doodle": "person",
+      "label": "you",
+      "note": "≈ 300× bigger"
+    },
+    {
+      "doodle": "building",
+      "label": "a skyscraper",
+      "note": "≈ 250× bigger"
+    },
+    {
+      "doodle": "mountain",
+      "label": "Everest",
+      "note": "≈ 20× bigger"
+    }
+  ],
+  "ratio": 3,
+  "caption": "And Everest is a pebble, cosmically."
+}

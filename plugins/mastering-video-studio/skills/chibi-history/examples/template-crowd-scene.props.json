@@ -1,0 +1,19 @@
+{
+  "count": 16,
+  "roles": [
+    "civilian",
+    "nurse",
+    "civilian",
+    "soldier"
+  ],
+  "nation": "france",
+  "mood": "cheer",
+  "location": "parade",
+  "leader": {
+    "role": "officer",
+    "nation": "france"
+  },
+  "text": "It's *over*!",
+  "word": "over",
+  "date": "MAY 1945"
+}

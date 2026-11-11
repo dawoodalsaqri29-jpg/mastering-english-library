@@ -1,0 +1,15 @@
+{
+  "id": "whiteboard-hand",
+  "name": "Whiteboard Animation",
+  "description": "Classic whiteboard explainer — a real-looking hand with a marker draws every doodle, writes every word by hand and colours it in, while the camera travels across a big board. The RSA-Animate / VideoScribe look for explainers, education, business and storytelling.",
+  "premium": false,
+  "palette": {
+    "background": "#FBFBF8",
+    "foreground": "#1E2026",
+    "accent": "#D63B32",
+    "muted": "#8E949C"
+  },
+  "fonts": [
+    "\"Segoe Print\", \"Comic Sans MS\", \"Noto Sans\", cursive"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "value": 8.1,
+  "suffix": " billion",
+  "decimals": 1,
+  "label": "people share this *one* planet",
+  "illus": "earth",
+  "orbiters": [
+    "moon",
+    "satellite"
+  ],
+  "world": "space"
+}

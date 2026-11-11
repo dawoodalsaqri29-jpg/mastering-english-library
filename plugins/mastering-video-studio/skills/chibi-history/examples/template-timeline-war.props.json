@@ -1,0 +1,28 @@
+{
+  "title": "Eight letters",
+  "events": [
+    {
+      "date": "JAN",
+      "label": "First letter sent",
+      "word": "January"
+    },
+    {
+      "date": "MAR",
+      "label": "Polite reminder",
+      "word": "March"
+    },
+    {
+      "date": "JUN",
+      "label": "Less polite reminder",
+      "word": "June"
+    },
+    {
+      "date": "OCT",
+      "label": "Still no reply",
+      "word": "October",
+      "nation": "switzerland"
+    }
+  ],
+  "role": "civilian",
+  "nation": "switzerland"
+}

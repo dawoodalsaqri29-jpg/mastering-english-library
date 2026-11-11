@@ -1,0 +1,20 @@
+{
+  "left": {
+    "heading": "Winter",
+    "object": "snowflake",
+    "points": [
+      "Bears sleep in their dens",
+      "Rivers turn to ice"
+    ]
+  },
+  "right": {
+    "heading": "Spring",
+    "object": "flower",
+    "points": [
+      "Everyone *wakes* up",
+      "Meadows fill with flowers"
+    ]
+  },
+  "versus": "then",
+  "keyword": "spring"
+}

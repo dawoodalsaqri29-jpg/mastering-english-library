@@ -1,0 +1,30 @@
+{
+  "title": "The journey of a *T-shirt*",
+  "stops": [
+    {
+      "label": "Cotton farm",
+      "kind": "farm",
+      "keyword": "cotton"
+    },
+    {
+      "label": "Textile mill",
+      "kind": "factory",
+      "keyword": "mill"
+    },
+    {
+      "label": "Shipping port",
+      "kind": "port",
+      "keyword": "shipped"
+    },
+    {
+      "label": "Warehouse",
+      "kind": "warehouse",
+      "keyword": "warehouse"
+    },
+    {
+      "label": "Store",
+      "kind": "shop",
+      "keyword": "store"
+    }
+  ]
+}

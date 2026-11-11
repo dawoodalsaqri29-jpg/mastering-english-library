@@ -1,0 +1,17 @@
+{
+  "condition": "IF YOU *CHECK* THE DATE",
+  "do": {
+    "label": "IF YOU DO",
+    "text": "YOU *STAY* HOME",
+    "keyword": "home",
+    "icon": "house"
+  },
+  "dont": {
+    "label": "IF YOU DON'T",
+    "text": "YOU GO *LOOKING*",
+    "keyword": "looking",
+    "icon": "poster"
+  },
+  "verdict": "IT IS *WAITING*",
+  "verdictKeyword": "waiting"
+}

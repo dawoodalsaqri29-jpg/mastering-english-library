@@ -1,0 +1,25 @@
+{
+  "title": "The Earth, roughly",
+  "doodle": "globe",
+  "labels": [
+    {
+      "text": "mostly water",
+      "where": "right"
+    },
+    {
+      "text": "some land",
+      "where": "top-left"
+    },
+    {
+      "text": "air (thin layer)",
+      "where": "top-right"
+    },
+    {
+      "text": "very hot middle",
+      "where": "center"
+    }
+  ],
+  "youAreHere": "YOU ARE HERE",
+  "herePosition": "bottom-left",
+  "keyword": "earth"
+}

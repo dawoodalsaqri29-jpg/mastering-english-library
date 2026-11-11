@@ -1,0 +1,24 @@
+{
+  "title": "Phones sold (millions)",
+  "kind": "bar",
+  "data": [
+    {
+      "label": "2008",
+      "value": 140
+    },
+    {
+      "label": "2012",
+      "value": 680
+    },
+    {
+      "label": "2016",
+      "value": 1490
+    },
+    {
+      "label": "2020",
+      "value": 1290
+    }
+  ],
+  "highlight": 2,
+  "suffix": "M"
+}

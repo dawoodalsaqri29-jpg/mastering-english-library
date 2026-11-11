@@ -1,0 +1,18 @@
+{
+  "boss": "Procrastination",
+  "bossType": "blob",
+  "moves": [
+    {
+      "name": "Tiny Tasks",
+      "keyword": "tiny"
+    },
+    {
+      "name": "Timer Strike",
+      "keyword": "timer"
+    },
+    {
+      "name": "No Phone Zone",
+      "keyword": "phone"
+    }
+  ]
+}

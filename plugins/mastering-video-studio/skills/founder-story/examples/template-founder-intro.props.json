@@ -1,0 +1,22 @@
+{
+  "company": "Northwind Motors",
+  "years": "1937 – 2026",
+  "kicker": "THE ENTIRE HISTORY OF",
+  "archetype": "founder",
+  "empire": "auto",
+  "growth": "growing",
+  "headline": "From one garage to *forty* factories",
+  "keyword": "forty",
+  "stat": {
+    "value": "$48B",
+    "label": "annual revenue today",
+    "word": "billion"
+  },
+  "beats": [
+    {
+      "word": "nobody",
+      "pose": "shrug",
+      "expression": "skeptical"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "My productivity",
+  "type": "line",
+  "values": [
+    3,
+    5,
+    8,
+    7,
+    2,
+    1
+  ],
+  "labels": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+  ],
+  "xLabel": "THE WEEK",
+  "yLabel": "GETTING THINGS DONE",
+  "highlight": 2,
+  "annotations": [
+    {
+      "index": 2,
+      "text": "coffee kicks in"
+    },
+    {
+      "index": 5,
+      "text": "the weekend wins"
+    }
+  ],
+  "caption": "Data collected by me. Badly.",
+  "character": "juno",
+  "keyword": "productivity"
+}

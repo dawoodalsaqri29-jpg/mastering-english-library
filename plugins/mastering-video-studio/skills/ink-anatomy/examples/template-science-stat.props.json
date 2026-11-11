@@ -1,0 +1,11 @@
+{
+  "value": 4,
+  "prefix": "×",
+  "label": "tendon stiffness in *12 weeks*",
+  "keyword": "four",
+  "diagram": "tendon",
+  "diagramLabel": "thicker cable",
+  "sub": "heavy isometrics, 30 seconds, 3 times a week",
+  "title": "The *tendon* number",
+  "bg": "white"
+}

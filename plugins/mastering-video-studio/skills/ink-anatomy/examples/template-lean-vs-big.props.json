@@ -1,0 +1,11 @@
+{
+  "test": "tug",
+  "winner": "lean",
+  "keyword": "wins",
+  "leanLabel": "tendon strength",
+  "bigLabel": "just mass",
+  "leanMuscle": "tendons",
+  "forceLabel": "pull",
+  "title": "Who *wins*?",
+  "bg": "white"
+}

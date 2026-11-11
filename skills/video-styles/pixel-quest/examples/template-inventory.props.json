@@ -1,0 +1,29 @@
+{
+  "title": "Camping Kit",
+  "items": [
+    {
+      "name": "Water Filter",
+      "icon": "potion",
+      "description": "Turns stream water into safe drinking water.",
+      "keyword": "filter"
+    },
+    {
+      "name": "Map",
+      "icon": "map",
+      "description": "Works with no signal, no battery.",
+      "keyword": "map"
+    },
+    {
+      "name": "First Aid",
+      "icon": "heart",
+      "description": "Blisters are the number one trail injury.",
+      "keyword": "aid"
+    },
+    {
+      "name": "Headlamp",
+      "icon": "bulb",
+      "description": "Keeps both hands free after dark.",
+      "keyword": "headlamp"
+    }
+  ]
+}

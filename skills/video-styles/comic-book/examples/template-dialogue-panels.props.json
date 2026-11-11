@@ -1,0 +1,26 @@
+{
+  "left": "pip",
+  "right": "nova",
+  "setting": "lab",
+  "lines": [
+    {
+      "speaker": "left",
+      "text": "Why is the sky blue, Doctor?",
+      "kind": "speech",
+      "expression": "think"
+    },
+    {
+      "speaker": "right",
+      "text": "Sunlight bounces off air molecules — and *blue* light scatters the most!",
+      "kind": "speech",
+      "expression": "happy"
+    },
+    {
+      "speaker": "left",
+      "text": "WOW! So the sky is full of scattered light!",
+      "kind": "shout",
+      "expression": "shock",
+      "reaction": "grin"
+    }
+  ]
+}

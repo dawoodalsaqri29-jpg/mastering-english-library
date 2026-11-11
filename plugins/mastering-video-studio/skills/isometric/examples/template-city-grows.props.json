@@ -1,0 +1,29 @@
+{
+  "title": "From village to *megacity*",
+  "milestones": [
+    {
+      "label": "A few farms",
+      "year": "1850",
+      "keyword": "farms",
+      "kind": "village"
+    },
+    {
+      "label": "Market town",
+      "year": "1900",
+      "keyword": "market",
+      "kind": "shops"
+    },
+    {
+      "label": "Factories arrive",
+      "year": "1950",
+      "keyword": "factories",
+      "kind": "industry"
+    },
+    {
+      "label": "Skyline",
+      "year": "2020",
+      "keyword": "skyline",
+      "kind": "towers"
+    }
+  ]
+}

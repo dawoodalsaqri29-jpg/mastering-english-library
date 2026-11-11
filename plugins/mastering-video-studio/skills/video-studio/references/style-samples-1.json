@@ -1,0 +1,605 @@
+{
+ "anime": [
+  {
+   "template": "eyecatch-title",
+   "props": {
+    "episode": "Episode 1",
+    "title": "Stop saying *I'm fine*",
+    "subtitle": "Sound natural in one minute",
+    "character": "hikari"
+   },
+   "say": "Everyone says I'm fine. And everyone hears that you learned English from a textbook. Let's fix that."
+  },
+  {
+   "template": "dialogue",
+   "props": {
+    "characters": [
+     "ren",
+     "yuki"
+    ],
+    "location": "classroom",
+    "lines": [
+     {
+      "speaker": 0,
+      "text": "Hey Yuki, how are you?",
+      "expression": "smile"
+     },
+     {
+      "speaker": 1,
+      "text": "I'm fine, thank you. And you?",
+      "expression": "neutral",
+      "reaction": "sweat-drop"
+     },
+     {
+      "speaker": 0,
+      "text": "Wow. Very robot.",
+      "expression": "smug"
+     },
+     {
+      "speaker": 1,
+      "text": "Then what do people really say?",
+      "expression": "flustered"
+     }
+    ]
+   },
+   "say": "Hey Yuki, how are you? I'm fine, thank you, and you? Wow, very robot. Then what do people really say?"
+  },
+  {
+   "template": "dramatic-reveal",
+   "props": {
+    "character": "hikari",
+    "location": "night-city",
+    "reveal": "They say *Not bad!*",
+    "word": "bad",
+    "reaction": "shocked"
+   },
+   "say": "The answer native speakers use every single day? Not bad!"
+  },
+  {
+   "template": "lesson-board",
+   "props": {
+    "character": "ren",
+    "title": "Say this instead",
+    "points": [
+     {
+      "text": "*Not bad*, thanks!",
+      "word": "bad"
+     },
+     {
+      "text": "*Pretty good*, you?",
+      "word": "good"
+     },
+     {
+      "text": "Can't *complain*",
+      "word": "complain"
+     }
+    ]
+   },
+   "say": "So next time, try: not bad, thanks. Pretty good, you? Or my favourite, can't complain. Which one will you use today?"
+  }
+ ],
+ "archival-doc": [
+  {
+   "template": "chapter-title",
+   "props": {
+    "chapter": "Chapter One",
+    "title": "The Book of Words",
+    "subtitle": "How English got its dictionaries",
+    "date": "1476-1928",
+    "place": "England",
+    "subject": "building",
+    "tone": "sepia",
+    "keyword": "dictionaries"
+   },
+   "say": "For centuries, English had no dictionary at all. No rules for spelling. No list of words. Here is how that changed."
+  },
+  {
+   "template": "timeline-ribbon",
+   "props": {
+    "title": "Four Centuries of Words",
+    "events": [
+     {
+      "date": "1476",
+      "label": "Caxton brings the printing press to England",
+      "subject": "building"
+     },
+     {
+      "date": "1604",
+      "label": "Cawdrey's Table Alphabeticall, the first English dictionary",
+      "subject": "portrait"
+     },
+     {
+      "date": "1755",
+      "label": "Samuel Johnson's great Dictionary",
+      "subject": "portrait"
+     },
+     {
+      "date": "1828",
+      "label": "Noah Webster's American Dictionary",
+      "subject": "city"
+     }
+    ],
+    "tone": "sepia"
+   },
+   "say": "In 1476, Caxton brings printing to England. In 1604, Cawdrey publishes the first English dictionary. In 1755, Samuel Johnson's dictionary arrives. And in 1828, Noah Webster gives America its own."
+  },
+  {
+   "template": "newspaper-headline",
+   "props": {
+    "paper": "The Mastering English Gazette",
+    "date": "1928",
+    "headline": "The Oxford Dictionary Is Complete",
+    "subhead": "Seventy years after the work began, the final part of the great dictionary is printed",
+    "kicker": "Extra",
+    "subject": "crowd",
+    "caption": "A dictionary decades in the making",
+    "price": "One Penny",
+    "tone": "silver",
+    "keyword": "complete"
+   },
+   "say": "Then, in 1928, the Oxford English Dictionary is finally complete. It took about seventy years."
+  },
+  {
+   "template": "chapter-title",
+   "props": {
+    "chapter": "Your Turn",
+    "title": "One New Word a Day",
+    "subtitle": "Three hundred and sixty five words a year",
+    "date": "Today",
+    "place": "Everywhere",
+    "subject": "landscape",
+    "tone": "sepia",
+    "keyword": "word"
+   },
+   "say": "They spent seventy years collecting words. You only need one new word a day. Comment the word you learned today."
+  }
+ ],
+ "ink-anatomy": [
+  {
+   "template": "title-card",
+   "props": {
+    "title": "Train your English like a *muscle*",
+    "kicker": "Part 1",
+    "sub": "small reps, every day",
+    "character": "rook",
+    "pose": "flex",
+    "muscle": "biceps",
+    "pulseWord": "muscle",
+    "bg": "white"
+   },
+   "say": "Your English is not a talent. It is a muscle. And muscles only grow one way."
+  },
+  {
+   "template": "myth-vs-fact",
+   "props": {
+    "myth": "You need a talent for languages",
+    "fact": "Daily practice builds fluency",
+    "mythWord": "talent",
+    "factWord": "daily",
+    "exercise": "curl",
+    "muscle": "biceps",
+    "bg": "white"
+   },
+   "say": "Myth: you need a talent for languages. Fact: daily practice is what builds fluency."
+  },
+  {
+   "template": "routine-list",
+   "props": {
+    "title": "The *daily* English workout",
+    "kicker": "No classroom",
+    "items": [
+     {
+      "exercise": "pushup",
+      "name": "Shadow a podcast",
+      "sets": 1,
+      "reps": 5,
+      "unit": " min",
+      "word": "shadow"
+     },
+     {
+      "exercise": "squat",
+      "name": "Read out loud",
+      "sets": 1,
+      "reps": 5,
+      "unit": " min",
+      "word": "read"
+     },
+     {
+      "exercise": "plank",
+      "name": "Write 3 sentences",
+      "sets": 1,
+      "reps": 3,
+      "word": "write"
+     },
+     {
+      "exercise": "hang",
+      "name": "Learn 1 new word",
+      "sets": 1,
+      "reps": 1,
+      "word": "word"
+     }
+    ],
+    "note": "fifteen minutes, every single day",
+    "bg": "white"
+   },
+   "say": "Here is the workout. Shadow a podcast for five minutes. Read out loud for five minutes. Write three sentences. And learn one new word."
+  },
+  {
+   "template": "science-stat",
+   "props": {
+    "value": 15,
+    "prefix": "",
+    "label": "minutes a *day*",
+    "keyword": "fifteen",
+    "diagram": "muscle",
+    "diagramLabel": "stronger every day",
+    "sub": "short and daily beats long and rare",
+    "title": "The *magic* number",
+    "bg": "white"
+   },
+   "say": "Fifteen minutes a day beats two hours once a week. Start today, and save this workout."
+  }
+ ],
+ "map-reveal": [
+  {
+   "template": "headline-title",
+   "props": {
+    "region": "world",
+    "headline": "ONE LANGUAGE, *EVERYWHERE*",
+    "sub": "WHERE ENGLISH TRAVELLED",
+    "kicker": "EPISODE 1",
+    "keyword": "everywhere",
+    "place": "uk",
+    "color": "red"
+   },
+   "say": "It started on one small island. Today, you can hear it on every continent."
+  },
+  {
+   "template": "fact-countdown",
+   "props": {
+    "region": "world",
+    "title": "5 PLACES ENGLISH LIVES",
+    "facts": [
+     {
+      "place": "london",
+      "label": "England",
+      "keyword": "birthplace",
+      "sub": "WHERE IT ALL BEGAN"
+     },
+     {
+      "place": "new-york",
+      "label": "United States",
+      "keyword": "American",
+      "sub": "THE BIGGEST NATIVE ENGLISH COUNTRY"
+     },
+     {
+      "place": "lagos",
+      "label": "Nigeria",
+      "keyword": "official",
+      "sub": "ENGLISH IS THE OFFICIAL LANGUAGE"
+     },
+     {
+      "place": "singapore",
+      "label": "Singapore",
+      "keyword": "four",
+      "sub": "ONE OF FOUR OFFICIAL LANGUAGES"
+     },
+     {
+      "place": "sydney",
+      "label": "Australia",
+      "keyword": "Aussie",
+      "sub": "ITS OWN ACCENT AND SLANG"
+     }
+    ]
+   },
+   "say": "Number five, England, where it all began. Four, the United States. Three, Nigeria, where English is the official language. Two, Singapore, one of four official languages. And number one, Australia, with its very own accent."
+  },
+  {
+   "template": "stat-on-map",
+   "props": {
+    "region": "world",
+    "place": "london",
+    "value": 1.5,
+    "prefix": "",
+    "suffix": " BILLION",
+    "caption": "people speak English",
+    "keyword": "billion",
+    "label": "ENGLISH",
+    "headline": "THE WORLD'S *BIGGEST* LANGUAGE",
+    "kicker": "TOTAL SPEAKERS",
+    "zoom": 1
+   },
+   "say": "Altogether, about one point five billion people speak English, more than any other language on Earth."
+  },
+  {
+   "template": "headline-title",
+   "props": {
+    "region": "world",
+    "headline": "YOU ARE *NEXT*",
+    "sub": "JOIN 1.5 BILLION SPEAKERS",
+    "kicker": "MASTERING ENGLISH",
+    "keyword": "next",
+    "place": "dubai",
+    "color": "red"
+   },
+   "say": "And the next speaker on this map? That is you. Follow to keep learning."
+  }
+ ],
+ "painted-history": [
+  {
+   "template": "title-banner",
+   "props": {
+    "title": "The Day English Changed",
+    "chapter": "Chapter One",
+    "subtitle": "One battle that rewrote a language",
+    "keyword": "changed",
+    "place": "Hastings",
+    "date": "1066",
+    "left": {
+     "faction": "knight"
+    },
+    "right": {
+     "faction": "viking"
+    },
+    "sky": "dawn",
+    "terrain": "hills"
+   },
+   "say": "One morning in 1066, a battle in England changed the words you speak today."
+  },
+  {
+   "template": "battle-scene",
+   "props": {
+    "left": {
+     "faction": "knight",
+     "name": "Normans"
+    },
+    "right": {
+     "faction": "viking",
+     "name": "Saxons"
+    },
+    "attacker": "left",
+    "action": "clash",
+    "keyword": "charged",
+    "title": "The Normans Charged",
+    "place": "Hastings",
+    "date": "14 October 1066",
+    "sky": "golden",
+    "terrain": "hills"
+   },
+   "say": "On the fourteenth of October, the Norman knights charged up the hill at Hastings. By evening, King Harold was dead, and England had a French speaking king."
+  },
+  {
+   "template": "timeline-of-campaign",
+   "props": {
+    "events": [
+     {
+      "date": "1066",
+      "label": "French becomes the language of power"
+     },
+     {
+      "date": "1100s",
+      "label": "Thousands of French words enter English"
+     },
+     {
+      "date": "1362",
+      "label": "English returns to the law courts"
+     },
+     {
+      "date": "1399",
+      "label": "Henry IV takes the throne in English"
+     }
+    ],
+    "army": {
+     "faction": "knight",
+     "name": "Normans"
+    },
+    "title": "Three Centuries of French",
+    "subtitle": "How English survived and grew",
+    "sky": "golden",
+    "terrain": "fields"
+   },
+   "say": "For three hundred years, the rulers spoke French. Thousands of French words poured into English. Then, slowly, English came back, to the courts in 1362, and to the throne in 1399."
+  },
+  {
+   "template": "title-banner",
+   "props": {
+    "title": "Cow or Beef?",
+    "chapter": "The Legacy",
+    "subtitle": "English farmers raised the cow. French lords ate the beef.",
+    "keyword": "beef",
+    "place": "Your kitchen",
+    "date": "Today",
+    "left": {
+     "faction": "viking"
+    },
+    "right": {
+     "faction": "knight"
+    },
+    "sky": "dusk",
+    "terrain": "fields"
+   },
+   "say": "That is why we say cow and pig for the animal, but beef and pork for the meat. The farmers spoke English. The lords spoke French."
+  }
+ ],
+ "pictogram": [
+  {
+   "template": "title-card",
+   "props": {
+    "title": "AFRAID TO *SPEAK* ENGLISH?",
+    "subtitle": "FOLLOW THESE *RULES*",
+    "subtitleKeyword": "rules",
+    "subtitleColor": "red",
+    "kicker": "PROTOCOL",
+    "number": 1,
+    "icon": "phone"
+   },
+   "say": "Afraid to speak English? Follow these rules. Do not skip one."
+  },
+  {
+   "template": "do-dont",
+   "props": {
+    "title": "WHEN YOU MAKE A *MISTAKE*",
+    "do": {
+     "text": "KEEP *TALKING*",
+     "character": "you",
+     "pose": "wave",
+     "object": "phone"
+    },
+    "dont": {
+     "text": "*STOP* AND APOLOGISE",
+     "character": "you",
+     "pose": "cover-eyes",
+     "object": "phone",
+     "accent": true
+    },
+    "verdict": "NOBODY IS *COUNTING*",
+    "verdictKeyword": "counting"
+   },
+   "say": "When you make a mistake, keep talking. Do not stop and apologise. Nobody is counting your mistakes."
+  },
+  {
+   "template": "checklist-protocol",
+   "props": {
+    "title": "THE DAILY PROTOCOL",
+    "steps": [
+     {
+      "text": "TALK TO THE *MIRROR*",
+      "icon": "mirror",
+      "keyword": "mirror",
+      "pose": "point"
+     },
+     {
+      "text": "RECORD YOUR *VOICE*",
+      "icon": "phone",
+      "keyword": "voice",
+      "pose": "phone"
+     },
+     {
+      "text": "LISTEN *BACK*",
+      "icon": "radio",
+      "keyword": "back",
+      "pose": "listen"
+     },
+     {
+      "text": "DON'T *WAIT*",
+      "icon": "clock",
+      "keyword": "wait",
+      "done": false,
+      "pose": "stop"
+     }
+    ],
+    "character": "you"
+   },
+   "say": "The daily protocol. Talk to the mirror. Record your voice. Listen back. And never wait until you are perfect."
+  },
+  {
+   "template": "rule-card",
+   "props": {
+    "number": 3,
+    "rule": "DO NOT *TRANSLATE* IN YOUR HEAD",
+    "icon": "bulb",
+    "forbidden": true,
+    "subtext": "THINK IN SIMPLE ENGLISH",
+    "subtextKeyword": "simple",
+    "character": "you",
+    "pose": "stop"
+   },
+   "say": "Rule number three. Do not translate in your head. Think in simple English. Follow for rule number four."
+  }
+ ],
+ "stick-figure": [
+  {
+   "template": "title-card",
+   "props": {
+    "kicker": "Episode 1",
+    "title": "What if you *thought* in English?",
+    "subtitle": "(it's easier than you think)",
+    "character": "pip",
+    "pose": "think",
+    "doodles": [
+     "brain",
+     "lightbulb",
+     "book"
+    ]
+   },
+   "say": "What if you stopped translating, and started thinking in English? Here is what happens."
+  },
+  {
+   "template": "versus",
+   "props": {
+    "left": {
+     "label": "Translating",
+     "doodle": "hourglass",
+     "character": "hank",
+     "points": [
+      "slow and tiring",
+      "freezes mid sentence"
+     ]
+    },
+    "right": {
+     "label": "Thinking",
+     "doodle": "lightning",
+     "character": "juno",
+     "points": [
+      "fast and natural",
+      "words just come"
+     ]
+    },
+    "verdict": "Verdict: thinking wins, every time.",
+    "winner": "right"
+   },
+   "say": "Translating is slow and tiring, and you freeze in the middle of a sentence. Thinking in English is fast, and the words just come."
+  },
+  {
+   "template": "what-if",
+   "props": {
+    "title": "What if you tried it for a week?",
+    "character": "pip",
+    "panels": [
+     {
+      "caption": "Day one: name things around you.",
+      "pose": "point",
+      "says": "Cup. Door. Coffee."
+     },
+     {
+      "caption": "Day three: describe what you do.",
+      "pose": "explain",
+      "doodle": "coffee"
+     },
+     {
+      "caption": "Day seven: you dream in English.",
+      "pose": "mind-blown",
+      "doodle": "brain"
+     }
+    ],
+    "punchline": "Start with one word."
+   },
+   "say": "Day one, name the things around you. Cup, door, coffee. Day three, describe what you are doing. By day seven, you might even dream in English."
+  },
+  {
+   "template": "list-with-doodles",
+   "props": {
+    "title": "Start tonight",
+    "items": [
+     {
+      "text": "Name 10 things in your room",
+      "doodle": "eye"
+     },
+     {
+      "text": "Narrate your day in your head",
+      "doodle": "brain"
+     },
+     {
+      "text": "Translate every word",
+      "doodle": "book",
+      "crossed": true
+     }
+    ],
+    "style": "doodles",
+    "character": "pip",
+    "endPose": "celebrate"
+   },
+   "say": "Start tonight. Name ten things in your room. Narrate your day in your head. And stop translating every word. Try it, and tell me in the comments."
+  }
+ ]
+}

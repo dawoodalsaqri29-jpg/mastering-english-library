@@ -1,0 +1,18 @@
+{
+  "left": {
+    "company": "Northwind",
+    "archetype": "founder",
+    "expression": "determined",
+    "word": "Northwind"
+  },
+  "right": {
+    "company": "Atlas Auto",
+    "archetype": "investor",
+    "expression": "smug",
+    "word": "Atlas"
+  },
+  "empire": "city",
+  "keyword": "war",
+  "headline": "The *price* war",
+  "headlineWord": "price"
+}

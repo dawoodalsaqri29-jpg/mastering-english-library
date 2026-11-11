@@ -1,0 +1,30 @@
+{
+  "title": "Where your *photo* goes",
+  "hub": {
+    "label": "The cloud",
+    "kind": "cloud"
+  },
+  "nodes": [
+    {
+      "label": "Your phone",
+      "kind": "phone",
+      "keyword": "phone"
+    },
+    {
+      "label": "Data centre",
+      "kind": "datacenter",
+      "keyword": "data"
+    },
+    {
+      "label": "Friend's laptop",
+      "kind": "laptop",
+      "keyword": "laptop"
+    },
+    {
+      "label": "Backup",
+      "kind": "server",
+      "keyword": "backup"
+    }
+  ],
+  "theme": "night"
+}

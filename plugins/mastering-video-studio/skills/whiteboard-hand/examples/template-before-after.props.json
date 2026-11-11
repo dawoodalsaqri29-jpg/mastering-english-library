@@ -1,0 +1,14 @@
+{
+  "before": {
+    "label": "Stuck in traffic",
+    "doodle": "car",
+    "note": "two hours a day"
+  },
+  "after": {
+    "label": "Work from home",
+    "doodle": "laptop",
+    "note": "time for life"
+  },
+  "beforeTitle": "Then",
+  "afterTitle": "Now"
+}

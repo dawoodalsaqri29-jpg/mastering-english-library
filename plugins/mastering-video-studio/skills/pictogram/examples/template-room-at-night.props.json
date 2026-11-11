@@ -1,0 +1,26 @@
+{
+  "setting": "bedroom",
+  "time": "3:00 AM",
+  "reveals": [
+    {
+      "object": "window",
+      "text": "CURTAINS *OPEN*",
+      "keyword": "window"
+    },
+    {
+      "object": "clock",
+      "text": "STILL *3:00*",
+      "keyword": "clock"
+    },
+    {
+      "object": "door",
+      "text": "*AJAR*",
+      "keyword": "door",
+      "action": "door-opens"
+    }
+  ],
+  "visitor": "door",
+  "visitorKeyword": "there",
+  "stamp": "TURN IT *OFF*",
+  "keyword": "off"
+}

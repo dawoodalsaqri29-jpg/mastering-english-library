@@ -1,0 +1,784 @@
+{
+ "cartoon": [
+  {
+   "template": "title-card",
+   "props": {
+    "title": "Make or Do?",
+    "subtitle": "The mistake almost everyone makes",
+    "kicker": "English Quick Fix",
+    "characters": [
+     "maya",
+     "leo",
+     "priya"
+    ],
+    "color": "#FFD9A8"
+   },
+   "say": "Make or do? Most learners mix them up. Here is the easy rule."
+  },
+  {
+   "template": "dialogue",
+   "props": {
+    "characters": [
+     "leo",
+     "priya"
+    ],
+    "location": "office",
+    "lines": [
+     {
+      "speaker": 0,
+      "text": "I need to make my homework.",
+      "expression": "worried",
+      "mark": "sweat"
+     },
+     {
+      "speaker": 1,
+      "text": "Almost! You DO homework.",
+      "expression": "skeptical",
+      "pose": "explain"
+     },
+     {
+      "speaker": 0,
+      "text": "Then why do I MAKE a cake?",
+      "expression": "surprised",
+      "pose": "think",
+      "mark": "question"
+     },
+     {
+      "speaker": 1,
+      "text": "Because you create something new!",
+      "expression": "happy",
+      "pose": "point-up",
+      "mark": "sparkle"
+     }
+    ]
+   },
+   "say": "I need to make my homework. Almost! You do homework. Then why do I make a cake? Because you create something new!"
+  },
+  {
+   "template": "explain-with-board",
+   "props": {
+    "character": "priya",
+    "location": "classroom",
+    "title": "The rule",
+    "mode": "list",
+    "items": [
+     "*Make* = create something",
+     "*Do* = tasks and jobs",
+     "make a cake, do the dishes"
+    ],
+    "expression": "happy"
+   },
+   "say": "Make is for creating something. Do is for tasks and jobs. So you make a cake, and then, sadly, you do the dishes."
+  }
+ ],
+ "chibi-history": [
+  {
+   "template": "headline-thumb",
+   "props": {
+    "title": "Words born in *war*",
+    "word": "war",
+    "sub": "English words from the Second World War",
+    "role": "soldier",
+    "nation": "britain",
+    "expression": "proud",
+    "reaction": "shocked",
+    "gesture": "hands-head",
+    "target": false,
+    "date": "1939-1945",
+    "side": "left"
+   },
+   "say": "Some English words were born in war. Here are two from the Second World War."
+  },
+  {
+   "template": "date-card",
+   "props": {
+    "date": "SEP 1940",
+    "title": "The *Blitz* begins",
+    "chapter": "Word One",
+    "word": "Blitz",
+    "place": "London",
+    "nation": "britain",
+    "role": "civilian",
+    "planes": "bomber"
+   },
+   "say": "September nineteen forty. German bombers begin attacking London night after night. The British called it the Blitz, short for the German Blitzkrieg, lightning war."
+  },
+  {
+   "template": "character-talks",
+   "props": {
+    "role": "historian",
+    "nation": "usa",
+    "location": "office",
+    "text": "RADAR is an *acronym*",
+    "kicker": "Word two",
+    "keyword": "radar",
+    "date": "1940s",
+    "expression": "smile",
+    "keyExpression": "excited",
+    "gesture": "point-up",
+    "side": "left",
+    "label": "The historian"
+   },
+   "say": "Word two. Radar. It is an acronym from the US Navy: radio detection and ranging. Today we just say radar, and forget it was ever five words."
+  }
+ ],
+ "city-timelapse": [
+  {
+   "template": "title-card",
+   "props": {
+    "city": "New Harbor",
+    "preset": "bay",
+    "style": "european",
+    "seed": 7,
+    "yearFrom": 1600,
+    "yearTo": 2024,
+    "kicker": "English words for",
+    "subtitle": "From a few houses to a megacity"
+   },
+   "say": "Hamlet, village, town, city. Watch one place grow, and learn every word on the way."
+  },
+  {
+   "template": "timelapse",
+   "props": {
+    "city": "New Harbor",
+    "preset": "bay",
+    "style": "european",
+    "seed": 7,
+    "yearFrom": 1600,
+    "yearTo": 2024,
+    "endsNow": true,
+    "keyDates": {
+     "settlement": 1620,
+     "village": 1680,
+     "town": 1760,
+     "grid": 1820,
+     "industry": 1850,
+     "skyscraper": 1920,
+     "modern": 1970
+    },
+    "population": 4000000,
+    "beats": [
+     {
+      "year": 1625,
+      "label": "A hamlet",
+      "caption": "Just a few houses, no church",
+      "keyword": "hamlet"
+     },
+     {
+      "year": 1690,
+      "label": "A village",
+      "caption": "A church, a market, a few hundred people",
+      "keyword": "village"
+     },
+     {
+      "year": 1780,
+      "label": "A town",
+      "caption": "Streets, shops and a town hall",
+      "keyword": "town"
+     },
+     {
+      "year": 1930,
+      "label": "A city",
+      "caption": "Factories, towers and millions of people",
+      "keyword": "city"
+     }
+    ]
+   },
+   "say": "First, a hamlet: just a few houses. Then a village, with a church and a market. Then a town, with streets and shops. And finally, a city, with towers and millions of people."
+  },
+  {
+   "template": "era-snapshot",
+   "props": {
+    "city": "New Harbor",
+    "preset": "bay",
+    "style": "european",
+    "seed": 7,
+    "year": 2024,
+    "keyDates": {
+     "settlement": 1620,
+     "village": 1680,
+     "town": 1760,
+     "grid": 1820,
+     "industry": 1850,
+     "skyscraper": 1920,
+     "modern": 1970
+    },
+    "label": "A metropolis",
+    "caption": "A huge, busy city at the centre of a region",
+    "callouts": [
+     {
+      "text": "downtown",
+      "keyword": "downtown"
+     },
+     {
+      "text": "suburbs",
+      "keyword": "suburbs"
+     }
+    ]
+   },
+   "say": "And a really huge city? That is a metropolis. The centre is downtown, and the quiet areas around it are the suburbs."
+  }
+ ],
+ "comic-book": [
+  {
+   "template": "splash-title",
+   "props": {
+    "title": "Never Give Up",
+    "subtitle": "One phrasal verb, three meanings",
+    "issue": "No. 1",
+    "keyword": "up",
+    "character": "ace",
+    "pose": "hips",
+    "expression": "grin",
+    "background": "action",
+    "palette": "red",
+    "sfx": "POW!"
+   },
+   "say": "One little word, up, can change everything. Meet the phrasal verb."
+  },
+  {
+   "template": "dialogue-panels",
+   "props": {
+    "left": "pip",
+    "right": "nova",
+    "setting": "lab",
+    "lines": [
+     {
+      "speaker": "left",
+      "text": "This is too hard. I *give up*!",
+      "kind": "shout",
+      "expression": "shock"
+     },
+     {
+      "speaker": "right",
+      "text": "Give up means stop trying. Don't do that!",
+      "kind": "speech",
+      "expression": "happy"
+     },
+     {
+      "speaker": "left",
+      "text": "OK... I'll keep going!",
+      "kind": "speech",
+      "expression": "think",
+      "reaction": "grin"
+     }
+    ]
+   },
+   "say": "This is too hard. I give up! Give up means stop trying. Don't do that! OK, I'll keep going!"
+  },
+  {
+   "template": "big-reveal",
+   "props": {
+    "setup": "So what is the opposite of give up?",
+    "reveal": "Keep going!",
+    "keyword": "going",
+    "character": "nova",
+    "background": "space",
+    "revealBackground": "focus",
+    "palette": "red",
+    "sfx": "BOOM!"
+   },
+   "say": "So what is the opposite of give up? Keep going! Comment one phrasal verb you know."
+  }
+ ],
+ "doodle-world": [
+  {
+   "template": "headline-thumb",
+   "props": {
+    "location": "savanna",
+    "character": "og",
+    "headline": "NO CLASS? NO *PROBLEM*",
+    "keyword": "problem",
+    "kicker": "learn english",
+    "reaction": "hot",
+    "setup": "neutral",
+    "setupPose": "look-around",
+    "animal": "camel"
+   },
+   "say": "No classroom? No teacher? No problem. You can practise English in your daily life."
+  },
+  {
+   "template": "list-of-ways",
+   "props": {
+    "location": "nile",
+    "character": "nia",
+    "title": "4 ways to practise every day",
+    "items": [
+     {
+      "text": "name things *around* you",
+      "word": "name",
+      "activity": "look-around",
+      "mark": "..."
+     },
+     {
+      "text": "talk to yourself",
+      "word": "talk",
+      "activity": "hold-up",
+      "prop": "fan"
+     },
+     {
+      "text": "read before *sleep*",
+      "word": "read",
+      "activity": "sleep",
+      "mark": "zzz"
+     },
+     {
+      "text": "sing in English",
+      "word": "sing",
+      "activity": "carry",
+      "prop": "jug"
+     }
+    ]
+   },
+   "say": "One: name the things around you. Two: talk to yourself. Three: read a little before you sleep. And four: sing in English, even badly."
+  },
+  {
+   "template": "daily-life",
+   "props": {
+    "location": "cave",
+    "time": "night",
+    "characters": [
+     {
+      "name": "og",
+      "activity": "cook",
+      "expression": "deadpan"
+     },
+     {
+      "name": "ug",
+      "activity": "eat",
+      "expression": "happy"
+     }
+    ],
+    "setpieces": [
+     "rock"
+    ],
+    "animal": "wolf",
+    "headline": "EVERY *DAY*",
+    "keyword": "day",
+    "kicker": "the secret",
+    "reaction": {
+     "character": 0,
+     "mark": "...",
+     "expression": "deadpan",
+     "word": "easy"
+    }
+   },
+   "say": "Even cooking dinner is a lesson. Say what you do. I'm cutting. I'm stirring. I'm eating. Every day, a little English."
+  }
+ ],
+ "flat-vector": [
+  {
+   "template": "title-landscape",
+   "props": {
+    "title": "How Many *Words* Do You Need?",
+    "subtitle": "Less than you think",
+    "kicker": "Vocabulary",
+    "setting": "meadow",
+    "creature": "pip",
+    "hero": "house"
+   },
+   "say": "How many English words do you really need? Less than you think."
+  },
+  {
+   "template": "big-number-world",
+   "props": {
+    "value": 3000,
+    "suffix": "",
+    "decimals": 0,
+    "label": "common word *families*",
+    "illus": "earth",
+    "orbiters": [
+     "moon",
+     "satellite"
+    ],
+    "world": "space"
+   },
+   "say": "Researchers estimate that about three thousand common word families cover most of the words in everyday English conversation."
+  },
+  {
+   "template": "cause-effect",
+   "props": {
+    "title": "From words to fluency",
+    "steps": [
+     {
+      "illus": "sprout",
+      "label": "Learn common words"
+     },
+     {
+      "illus": "brain",
+      "label": "Use them daily"
+     },
+     {
+      "illus": "people",
+      "label": "Talk with people"
+     },
+     {
+      "illus": "star",
+      "label": "Fluency"
+     }
+    ],
+    "world": "sky"
+   },
+   "say": "So start with the most common words. Use them every day. Talk with real people. And fluency grows, step by step."
+  }
+ ],
+ "founder-story": [
+  {
+   "template": "founder-intro",
+   "props": {
+    "company": "Webster's Dictionary",
+    "years": "1828 - today",
+    "kicker": "THE STORY OF",
+    "archetype": "founder",
+    "empire": "city",
+    "growth": "growing",
+    "headline": "One man gave America its *spelling*",
+    "keyword": "spelling",
+    "beats": [
+     {
+      "word": "nobody",
+      "pose": "shrug",
+      "expression": "skeptical"
+     }
+    ]
+   },
+   "say": "Why do Americans write color without a u? Because of one man, and one book."
+  },
+  {
+   "template": "origin-workshop",
+   "props": {
+    "company": "Webster's Dictionary",
+    "year": "1828",
+    "archetype": "inventor",
+    "headline": "An *American* dictionary",
+    "keyword": "American",
+    "product": "lightbulb",
+    "productName": "An American Dictionary",
+    "productWord": "dictionary",
+    "specs": [
+     "two volumes",
+     "about 70,000 entries",
+     "published 1828"
+    ]
+   },
+   "say": "In eighteen twenty eight, Noah Webster published An American Dictionary of the English Language. Two volumes, and about seventy thousand entries."
+  },
+  {
+   "template": "product-launch",
+   "props": {
+    "company": "Webster's Dictionary",
+    "kicker": "THE BIG CHANGE",
+    "archetype": "engineer",
+    "empire": "city",
+    "product": {
+     "name": "*Simpler* spelling",
+     "kind": "lightbulb",
+     "year": "1828"
+    },
+    "keyword": "simpler",
+    "specs": [
+     "colour became color",
+     "centre became center",
+     "theatre became theater"
+    ],
+    "headline": "Two Englishes",
+    "headlineWord": "Englishes"
+   },
+   "say": "He pushed simpler spellings. Colour became color. Centre became center. And that is why, today, British and American English look different on the page."
+  }
+ ],
+ "isometric": [
+  {
+   "template": "iso-title",
+   "props": {
+    "title": "How a word gets into the *dictionary*",
+    "blockText": "WORD",
+    "kicker": "Word Factory",
+    "subtitle": "From street to dictionary"
+   },
+   "say": "How does a brand new word get into the dictionary? It follows a path."
+  },
+  {
+   "template": "process-line",
+   "props": {
+    "title": "The life of a *word*",
+    "steps": [
+     {
+      "label": "Someone uses it",
+      "kind": "home",
+      "keyword": "uses"
+     },
+     {
+      "label": "It spreads online",
+      "kind": "phone",
+      "keyword": "spreads"
+     },
+     {
+      "label": "Editors collect examples",
+      "kind": "office",
+      "keyword": "editors"
+     },
+     {
+      "label": "It is added",
+      "kind": "school",
+      "keyword": "added"
+     }
+    ],
+    "item": "data"
+   },
+   "say": "First, someone uses it. Then it spreads, in conversations and online. Dictionary editors collect real examples of it. And if enough people keep using it, it is added."
+  },
+  {
+   "template": "town-signs",
+   "props": {
+    "signs": [
+     {
+      "text": "People decide",
+      "keyword": "people"
+     },
+     {
+      "text": "Editors record",
+      "keyword": "record"
+     },
+     {
+      "text": "Words live",
+      "keyword": "live"
+     }
+    ],
+    "theme": "dusk"
+   },
+   "say": "So dictionaries do not invent words. People do. Editors just record them. Which new word should be next?"
+  }
+ ],
+ "pixel-quest": [
+  {
+   "template": "title-screen",
+   "props": {
+    "title": "English Quest",
+    "subtitle": "From beginner to fluent",
+    "world": "grassland",
+    "prompt": "PRESS START"
+   },
+   "say": "Welcome to English Quest. Your mission: level up from beginner to fluent."
+  },
+  {
+   "template": "quest-log",
+   "props": {
+    "title": "Daily Quests",
+    "quests": [
+     {
+      "title": "Learn three new words",
+      "keyword": "words"
+     },
+     {
+      "title": "Listen for ten minutes",
+      "keyword": "listen"
+     },
+     {
+      "title": "Say five sentences out loud",
+      "keyword": "sentences"
+     }
+    ]
+   },
+   "say": "Today's quests. Learn three new words. Listen to English for ten minutes. And say five sentences out loud."
+  },
+  {
+   "template": "level-up",
+   "props": {
+    "level": 2,
+    "stats": [
+     {
+      "label": "Vocabulary",
+      "from": 30,
+      "to": 45,
+      "keyword": "vocabulary"
+     },
+     {
+      "label": "Listening",
+      "from": 25,
+      "to": 40,
+      "keyword": "listening"
+     },
+     {
+      "label": "Confidence",
+      "from": 20,
+      "to": 50,
+      "keyword": "confidence"
+     }
+    ],
+    "unlock": "Small Talk"
+   },
+   "say": "Quest complete! Vocabulary up. Listening up. Confidence way up. New skill unlocked: small talk."
+  }
+ ],
+ "stopmotion-paper": [
+  {
+   "template": "collage-title",
+   "props": {
+    "title": "English Words from Arabic",
+    "subtitle": "You already know them",
+    "kicker": "Word Origins",
+    "character": "pip",
+    "backdrop": "kraft"
+   },
+   "say": "You already speak some Arabic, every time you speak English. Here is the proof."
+  },
+  {
+   "template": "stack-of-facts",
+   "props": {
+    "title": "Borrowed from Arabic",
+    "facts": [
+     {
+      "big": "1",
+      "text": "*Algebra* comes from al-jabr.",
+      "keyword": "algebra"
+     },
+     {
+      "big": "2",
+      "text": "*Sugar* comes from sukkar.",
+      "keyword": "sugar"
+     },
+     {
+      "big": "3",
+      "text": "*Cotton* comes from qutn.",
+      "keyword": "cotton"
+     }
+    ]
+   },
+   "say": "Algebra comes from al jabr. Sugar comes from sukkar. And cotton comes from qutn."
+  },
+  {
+   "template": "paper-list",
+   "props": {
+    "title": "And there are more",
+    "board": "cork",
+    "items": [
+     {
+      "text": "*Coffee* from qahwa",
+      "keyword": "coffee"
+     },
+     {
+      "text": "*Sofa* from suffa",
+      "keyword": "sofa"
+     },
+     {
+      "text": "*Alcohol* from al-kuhl",
+      "keyword": "alcohol"
+     }
+    ]
+   },
+   "say": "Coffee comes from qahwa. Sofa from suffa. And alcohol from al kuhl. Which one surprised you most?"
+  }
+ ],
+ "storybook": [
+  {
+   "template": "title-page",
+   "props": {
+    "title": "The *Lost* Word",
+    "subtitle": "A short story for English learners",
+    "chapter": "Chapter One",
+    "location": "forest",
+    "time": "dusk",
+    "characters": [
+     "wren",
+     "rusty"
+    ]
+   },
+   "say": "Once upon a time, in a quiet forest, there lived a girl named Wren."
+  },
+  {
+   "template": "story-page",
+   "props": {
+    "location": "forest",
+    "time": "day",
+    "character": "wren",
+    "companion": "rusty",
+    "text": "Every day, Wren learned *one* new word, and said it to her friend the fox.",
+    "heading": "Chapter Two",
+    "gesture": "wave",
+    "gestureWord": "fox"
+   },
+   "say": "Every day, Wren learned one new word, and said it to her friend, the fox. Brave. Gentle. Curious."
+  },
+  {
+   "template": "the-end",
+   "props": {
+    "moral": "One word a day becomes a whole new language.",
+    "closing": "The End",
+    "location": "meadow",
+    "time": "dusk",
+    "characters": [
+     "wren",
+     "rusty",
+     "bramble"
+    ]
+   },
+   "say": "By the end of the year, she knew three hundred and sixty five new words. One word a day becomes a whole new language. The end."
+  }
+ ],
+ "whiteboard-hand": [
+  {
+   "template": "title-board",
+   "props": {
+    "title": "Remember *Any* Word",
+    "subtitle": "in four simple steps",
+    "doodles": [
+     "brain",
+     "lightbulb",
+     "star"
+    ]
+   },
+   "say": "Do you forget new words the very next day? You are not alone. Here is how to remember any word, in four simple steps."
+  },
+  {
+   "template": "process-flow",
+   "props": {
+    "title": "The four steps",
+    "steps": [
+     {
+      "label": "See it",
+      "doodle": "eye"
+     },
+     {
+      "label": "Say it",
+      "doodle": "speech-bubble"
+     },
+     {
+      "label": "Use it",
+      "doodle": "pencil"
+     },
+     {
+      "label": "Review it",
+      "doodle": "calendar"
+     }
+    ]
+   },
+   "say": "See it, in a real sentence. Say it out loud. Use it in your own sentence. And review it again tomorrow, and next week."
+  },
+  {
+   "template": "mind-map",
+   "props": {
+    "center": "One new word",
+    "branches": [
+     {
+      "label": "Meaning",
+      "doodle": "lightbulb"
+     },
+     {
+      "label": "Sound",
+      "doodle": "megaphone"
+     },
+     {
+      "label": "Example",
+      "doodle": "document"
+     },
+     {
+      "label": "Picture",
+      "doodle": "eye"
+     }
+    ]
+   },
+   "say": "For every new word, learn four things: its meaning, its sound, an example sentence, and a picture in your mind. Then it stays."
+  }
+ ]
+}

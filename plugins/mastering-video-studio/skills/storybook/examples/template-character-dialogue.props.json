@@ -1,0 +1,16 @@
+{
+  "location": "cottage",
+  "time": "night",
+  "left": "wren",
+  "right": "nana",
+  "lines": [
+    {
+      "speaker": "left",
+      "text": "Nana, why do the stars come out at night?"
+    },
+    {
+      "speaker": "right",
+      "text": "They are always there, dear. The *night* just lets them shine."
+    }
+  ]
+}

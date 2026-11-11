@@ -1,0 +1,34 @@
+{
+  "characters": [
+    "leo",
+    "priya"
+  ],
+  "location": "office",
+  "lines": [
+    {
+      "speaker": 0,
+      "text": "Wait, why is my code so slow?",
+      "expression": "worried",
+      "mark": "sweat"
+    },
+    {
+      "speaker": 1,
+      "text": "You're loading the whole database on every click.",
+      "expression": "skeptical",
+      "pose": "explain"
+    },
+    {
+      "speaker": 0,
+      "text": "Oh. That's... a lot of data.",
+      "expression": "surprised",
+      "pose": "facepalm"
+    },
+    {
+      "speaker": 1,
+      "text": "Add a cache and it'll fly!",
+      "expression": "happy",
+      "pose": "point-up",
+      "mark": "sparkle"
+    }
+  ]
+}

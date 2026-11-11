@@ -1,0 +1,22 @@
+{
+  "title": "A brief history of flight",
+  "events": [
+    {
+      "date": "1903",
+      "label": "12 seconds in the air",
+      "doodle": "plane"
+    },
+    {
+      "date": "1969",
+      "label": "humans on the moon",
+      "doodle": "moon"
+    },
+    {
+      "date": "Today",
+      "label": "still no flying cars",
+      "doodle": "car"
+    }
+  ],
+  "character": "juno",
+  "youAreHere": "YOU ARE HERE"
+}

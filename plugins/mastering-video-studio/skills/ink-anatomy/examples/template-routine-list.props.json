@@ -1,0 +1,37 @@
+{
+  "title": "The *home* routine",
+  "kicker": "No gym",
+  "items": [
+    {
+      "exercise": "pushup",
+      "name": "Push-ups",
+      "sets": 3,
+      "reps": 12,
+      "word": "push-ups"
+    },
+    {
+      "exercise": "pullup",
+      "name": "Pull-ups",
+      "sets": 3,
+      "reps": 6,
+      "word": "pull-ups"
+    },
+    {
+      "exercise": "squat",
+      "name": "Squats",
+      "sets": 3,
+      "reps": 15,
+      "word": "squats"
+    },
+    {
+      "exercise": "hang",
+      "name": "Dead hang",
+      "sets": 2,
+      "reps": 30,
+      "unit": "s",
+      "word": "hang"
+    }
+  ],
+  "note": "rest 90 seconds between sets",
+  "bg": "white"
+}

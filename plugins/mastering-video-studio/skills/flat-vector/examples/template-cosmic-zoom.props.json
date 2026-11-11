@@ -1,0 +1,28 @@
+{
+  "levels": [
+    {
+      "illus": "galaxy",
+      "label": "Milky Way",
+      "note": "100,000 light-years"
+    },
+    {
+      "illus": "sun",
+      "label": "Sun",
+      "note": "1.4 million km"
+    },
+    {
+      "illus": "earth",
+      "label": "Earth",
+      "note": "12,742 km"
+    },
+    {
+      "illus": "city",
+      "label": "City"
+    },
+    {
+      "illus": "cell",
+      "label": "Cell",
+      "note": "0.01 mm"
+    }
+  ]
+}

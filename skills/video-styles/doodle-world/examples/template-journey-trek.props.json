@@ -1,0 +1,30 @@
+{
+  "location": "tundra",
+  "characters": [
+    "og",
+    "nia",
+    "pip"
+  ],
+  "animal": "mammoth",
+  "prop": "spear",
+  "headline": "3,000 KM ON FOOT",
+  "kicker": "ice age",
+  "milestones": [
+    {
+      "label": "Day 12",
+      "word": "twelve"
+    },
+    {
+      "label": "Ice bridge",
+      "word": "bridge",
+      "mark": "!"
+    },
+    {
+      "label": "New land",
+      "word": "land",
+      "mark": "idea"
+    }
+  ],
+  "reaction": "cold",
+  "reactionWord": "cold"
+}

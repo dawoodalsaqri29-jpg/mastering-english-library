@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "iso-title",
+    "name": "Block-letter title",
+    "description": "Opening/section title: a short word is built from chunky 3D blocks that drop onto a tiny street with cars, lamps and walkers; the full title and subtitle sit underneath. Use for video openers and chapter starts.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Full title shown as text under the diorama (≤ 60 chars). *word* = accent."
+        },
+        "blockText": {
+          "type": "string",
+          "description": "1–2 short words built from 3D blocks (≤ 11 letters landscape, ≤ 7 portrait; A–Z 0–9 ! ? % $ & + - . only). Defaults to a word from the title."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above, e.g. 'Chapter 2' (≤ 24 chars)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "One line under the title (≤ 80 chars)."
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ],
+          "description": "Lighting/palette. Keep one theme per video unless the story changes time of day."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How a *city* really works",
+      "blockText": "CITY",
+      "kicker": "Chapter 1",
+      "subtitle": "Power, water, people and data — one block at a time"
+    },
+    "exampleNarration": "Let's take a city apart and see how it really works, one block at a time."
+  },
+  {
+    "id": "city-grows",
+    "name": "City grows",
+    "description": "A town grows district by district as the narration hits each milestone: buildings rise, roads fill with cars, a crane moves on, the camera pulls back. Use for growth over time, history, adoption, scaling up.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "milestones": {
+          "type": "array",
+          "description": "2–6 stages in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Stage name (≤ 28 chars)."
+              },
+              "year": {
+                "type": "string",
+                "description": "Optional big tag on the callout, e.g. '1990' or '10k users' (≤ 10 chars)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Word/phrase in the narration when this district rises."
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "homes",
+                  "shops",
+                  "downtown",
+                  "towers",
+                  "industry",
+                  "tech",
+                  "green",
+                  "farm",
+                  "civic",
+                  "village",
+                  "port"
+                ],
+                "description": "What the district looks like."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "milestones"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "From village to *megacity*",
+      "milestones": [
+        {
+          "label": "A few farms",
+          "year": "1850",
+          "keyword": "farms",
+          "kind": "village"
+        },
+        {
+          "label": "Market town",
+          "year": "1900",
+          "keyword": "market",
+          "kind": "shops"
+        },
+        {
+          "label": "Factories arrive",
+          "year": "1950",
+          "keyword": "factories",
+          "kind": "industry"
+        },
+        {
+          "label": "Skyline",
+          "year": "2020",
+          "keyword": "skyline",
+          "kind": "towers"
+        }
+      ]
+    },
+    "exampleNarration": "It started with a few farms. Then came a market, and the town grew. Factories brought jobs, and today the skyline never stops rising."
+  },
+  {
+    "id": "iso-bar-chart",
+    "name": "3D bar chart",
+    "description": "Columns (or buildings, or stacked cubes) rise from a little plaza on their key words, each topped with a counting value callout; trucks and people move around the base. Use for comparing 2–7 quantities.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "bars": {
+          "type": "array",
+          "description": "2–7 bars in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Category (≤ 20 chars)."
+              },
+              "value": {
+                "type": "number"
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Word in the narration when this bar rises."
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "valueFormat": {
+          "type": "object",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "suffix": {
+              "type": "string"
+            },
+            "decimals": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "highlight": {
+          "type": "integer",
+          "description": "0-based index of the bar to emphasise (others are muted). Omit for all-colour."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "columns",
+            "buildings",
+            "stacks"
+          ],
+          "description": "columns = clean 3D columns, buildings = skyscrapers with windows, stacks = cubes dropping in."
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "bars"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Who builds the most *homes*?",
+      "bars": [
+        {
+          "label": "Tokyo",
+          "value": 142,
+          "keyword": "Tokyo"
+        },
+        {
+          "label": "Paris",
+          "value": 38,
+          "keyword": "Paris"
+        },
+        {
+          "label": "London",
+          "value": 31,
+          "keyword": "London"
+        },
+        {
+          "label": "New York",
+          "value": 55,
+          "keyword": "York"
+        }
+      ],
+      "valueFormat": {
+        "suffix": "k"
+      },
+      "highlight": 0,
+      "style": "buildings"
+    },
+    "exampleNarration": "Tokyo builds about a hundred and forty thousand homes a year. Paris manages thirty eight thousand, London thirty one, and New York fifty five."
+  },
+  {
+    "id": "stat-tower",
+    "name": "Stat tower",
+    "description": "One big number: a skyscraper is built floor by floor (with a crane) while the counter on top climbs to the value; optional smaller comparison tower. Use for a single headline statistic.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "label": {
+          "type": "string",
+          "description": "What the number is (≤ 40 chars)."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "e.g. '$'"
+        },
+        "suffix": {
+          "type": "string",
+          "description": "e.g. '%', 'M', ' tons'"
+        },
+        "decimals": {
+          "type": "integer"
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Word when the tower should be finished (the number fully counted)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars)."
+        },
+        "context": {
+          "type": "string",
+          "description": "Optional line under the headline (≤ 80 chars)."
+        },
+        "compare": {
+          "type": "object",
+          "description": "Optional smaller reference tower.",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "value": 4.4,
+      "suffix": "B",
+      "decimals": 1,
+      "label": "people live in cities",
+      "keyword": "billion",
+      "title": "An urban planet",
+      "compare": {
+        "value": 0.75,
+        "label": "in 1950"
+      }
+    },
+    "exampleNarration": "Today about four point four billion people live in cities, up from just three quarters of a billion in 1950."
+  },
+  {
+    "id": "process-line",
+    "name": "Process line",
+    "description": "Stations (farm, factory, warehouse, shop, lab…) light up one by one, joined by moving conveyor belts that carry goods between them. Use for step-by-step processes, pipelines, how something is made.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "steps": {
+          "type": "array",
+          "description": "2–6 steps in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Step name (≤ 24 chars)."
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "factory",
+                  "warehouse",
+                  "farm",
+                  "shop",
+                  "office",
+                  "lab",
+                  "datacenter",
+                  "server",
+                  "home",
+                  "port",
+                  "hospital",
+                  "school",
+                  "bank",
+                  "mine",
+                  "energy",
+                  "solar",
+                  "phone",
+                  "laptop",
+                  "cloud",
+                  "rocket",
+                  "tower"
+                ]
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "item": {
+          "type": "string",
+          "enum": [
+            "box",
+            "crate",
+            "data",
+            "leaf",
+            "parcel",
+            "coin"
+          ],
+          "description": "What travels on the belts (data = glowing dots)."
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "From bean to *cup*",
+      "steps": [
+        {
+          "label": "Harvest",
+          "kind": "farm",
+          "keyword": "harvested"
+        },
+        {
+          "label": "Roast",
+          "kind": "factory",
+          "keyword": "roasted"
+        },
+        {
+          "label": "Pack",
+          "kind": "warehouse",
+          "keyword": "packed"
+        },
+        {
+          "label": "Café",
+          "kind": "shop",
+          "keyword": "café"
+        }
+      ],
+      "item": "crate"
+    },
+    "exampleNarration": "Beans are harvested, then roasted in huge drums, packed and shipped, and finally brewed at your local café."
+  },
+  {
+    "id": "network",
+    "name": "Network",
+    "description": "Devices and buildings around a hub (server, data centre or a floating cloud) connected by cables with glowing data packets flowing both ways; each node appears on its key word. Default night theme. Use for internet, APIs, cloud, networks, communication.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "hub": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "≤ 22 chars"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "server",
+                "datacenter",
+                "cloud",
+                "office",
+                "tower",
+                "bank",
+                "phone",
+                "laptop",
+                "people"
+              ]
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "nodes": {
+          "type": "array",
+          "description": "2–8 nodes in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "≤ 20 chars"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "server",
+                  "datacenter",
+                  "phone",
+                  "laptop",
+                  "cloud",
+                  "house",
+                  "office",
+                  "tower",
+                  "factory",
+                  "shop",
+                  "bank",
+                  "hospital",
+                  "school",
+                  "people",
+                  "rocket",
+                  "warehouse"
+                ]
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "hub",
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Where your *photo* goes",
+      "hub": {
+        "label": "The cloud",
+        "kind": "cloud"
+      },
+      "nodes": [
+        {
+          "label": "Your phone",
+          "kind": "phone",
+          "keyword": "phone"
+        },
+        {
+          "label": "Data centre",
+          "kind": "datacenter",
+          "keyword": "data"
+        },
+        {
+          "label": "Friend's laptop",
+          "kind": "laptop",
+          "keyword": "laptop"
+        },
+        {
+          "label": "Backup",
+          "kind": "server",
+          "keyword": "backup"
+        }
+      ],
+      "theme": "night"
+    },
+    "exampleNarration": "Your phone uploads the photo, a data centre stores it, your friend's laptop downloads it, and a backup copy sleeps somewhere safe."
+  },
+  {
+    "id": "island-map",
+    "name": "Island map",
+    "description": "Regions appear as floating isometric islands (city, farmland, forest, industry, port, tech, energy, village) that rise on their key words, linked by glowing trade routes and a plane. Use for geography, markets, segments, comparing places.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "regions": {
+          "type": "array",
+          "description": "1–6 regions in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "≤ 22 chars"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "city",
+                  "farm",
+                  "forest",
+                  "industry",
+                  "port",
+                  "tech",
+                  "energy",
+                  "village"
+                ]
+              },
+              "value": {
+                "type": "string",
+                "description": "Optional big figure on the callout, e.g. '42%' (≤ 10 chars)."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "connect": {
+          "type": "string",
+          "enum": [
+            "routes",
+            "none"
+          ],
+          "description": "Draw glowing routes + a plane between islands."
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "regions"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Where Europe's *energy* comes from",
+      "regions": [
+        {
+          "label": "Wind & solar",
+          "kind": "energy",
+          "value": "26%",
+          "keyword": "wind"
+        },
+        {
+          "label": "Gas plants",
+          "kind": "industry",
+          "value": "20%",
+          "keyword": "gas"
+        },
+        {
+          "label": "Ports & imports",
+          "kind": "port",
+          "value": "54%",
+          "keyword": "imports"
+        }
+      ],
+      "connect": "routes"
+    },
+    "exampleNarration": "Wind and solar now supply about a quarter of Europe's power, gas plants a fifth, and the rest still arrives through imports."
+  },
+  {
+    "id": "zoom-into",
+    "name": "Zoom into building",
+    "description": "Overview of a busy town; the camera dives into one building, its roof flies off and walls drop to reveal rooms inside (desks, servers, beds, machines, vault, shelves, lab, people, plants), each labelled on its key word. Use for 'what happens inside', organisations, how a place works.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "building": {
+          "type": "string",
+          "enum": [
+            "house",
+            "shop",
+            "office",
+            "bank",
+            "hospital",
+            "school",
+            "factory",
+            "datacenter",
+            "warehouse"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Callout on the building before the dive (≤ 24 chars)."
+        },
+        "rooms": {
+          "type": "array",
+          "description": "1–4 rooms in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "≤ 22 chars"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "desk",
+                  "server",
+                  "bed",
+                  "machine",
+                  "vault",
+                  "shelf",
+                  "people",
+                  "plant",
+                  "lab"
+                ]
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "building",
+        "rooms"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Inside a *bank*",
+      "building": "bank",
+      "label": "Your local bank",
+      "rooms": [
+        {
+          "label": "Tellers",
+          "kind": "desk",
+          "keyword": "tellers"
+        },
+        {
+          "label": "The vault",
+          "kind": "vault",
+          "keyword": "vault"
+        },
+        {
+          "label": "Servers",
+          "kind": "server",
+          "keyword": "servers"
+        },
+        {
+          "label": "Customers",
+          "kind": "people",
+          "keyword": "customers"
+        }
+      ]
+    },
+    "exampleNarration": "Step inside a bank. Tellers handle the cash, the vault keeps it safe, servers track every cent, and customers come and go all day."
+  },
+  {
+    "id": "compare-worlds",
+    "name": "Compare worlds",
+    "description": "Two little worlds side by side (stacked in portrait) — e.g. industrial vs green, city vs village, before vs after — each with its own life, a tag with a big stat, and a VS badge. Use for comparisons, before/after, two options.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "≤ 22 chars"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "city",
+                "green",
+                "industrial",
+                "village",
+                "tech",
+                "farm"
+              ]
+            },
+            "stat": {
+              "type": "string",
+              "description": "Big figure, e.g. '12 t CO₂' (≤ 10 chars)."
+            },
+            "keyword": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "label",
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "≤ 22 chars"
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "city",
+                "green",
+                "industrial",
+                "village",
+                "tech",
+                "farm"
+              ]
+            },
+            "stat": {
+              "type": "string",
+              "description": "≤ 10 chars"
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Word when the right world appears."
+            }
+          },
+          "required": [
+            "label",
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        "vsText": {
+          "type": "string",
+          "description": "Badge text, default 'VS' (≤ 4 chars)."
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Two ways to power a town",
+      "left": {
+        "label": "Coal town",
+        "kind": "industrial",
+        "stat": "820 g"
+      },
+      "right": {
+        "label": "Green town",
+        "kind": "green",
+        "stat": "12 g",
+        "keyword": "wind"
+      },
+      "vsText": "VS"
+    },
+    "exampleNarration": "A coal town emits about eight hundred grams of CO2 per kilowatt hour. A town on wind and solar? Around twelve."
+  },
+  {
+    "id": "supply-chain",
+    "name": "Supply chain",
+    "description": "Stops (farm, mine, factory, warehouse, port, shop, home…) appear along a winding road that is paved between them; trucks haul cargo stop to stop, a boat works the port. Use for logistics, supply chains, journeys of a product.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "stops": {
+          "type": "array",
+          "description": "2–6 stops in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "≤ 22 chars"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "farm",
+                  "mine",
+                  "factory",
+                  "warehouse",
+                  "port",
+                  "shop",
+                  "home",
+                  "office",
+                  "hospital",
+                  "datacenter",
+                  "bank",
+                  "school"
+                ]
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "stops"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The journey of a *T-shirt*",
+      "stops": [
+        {
+          "label": "Cotton farm",
+          "kind": "farm",
+          "keyword": "cotton"
+        },
+        {
+          "label": "Textile mill",
+          "kind": "factory",
+          "keyword": "mill"
+        },
+        {
+          "label": "Shipping port",
+          "kind": "port",
+          "keyword": "shipped"
+        },
+        {
+          "label": "Warehouse",
+          "kind": "warehouse",
+          "keyword": "warehouse"
+        },
+        {
+          "label": "Store",
+          "kind": "shop",
+          "keyword": "store"
+        }
+      ]
+    },
+    "exampleNarration": "Cotton is picked on a farm, spun at a textile mill, shipped across the ocean, sorted in a warehouse, and finally hung in a store."
+  },
+  {
+    "id": "iso-donut",
+    "name": "3D donut chart",
+    "description": "An extruded donut (or pie) on a little plaza; slices rise on their key words with counting percentages, the biggest slice slides out. Use for shares of a whole (2–6 parts).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline (≤ 50 chars)."
+        },
+        "slices": {
+          "type": "array",
+          "description": "2–6 slices in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "≤ 20 chars"
+              },
+              "value": {
+                "type": "number",
+                "description": "Any unit; shown as % of the total unless valueFormat is given."
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "centerLabel": {
+          "type": "string",
+          "description": "Short text painted on the ground in the hole (≤ 10 chars)."
+        },
+        "donut": {
+          "type": "boolean",
+          "description": "false = solid pie."
+        },
+        "valueFormat": {
+          "type": "object",
+          "description": "Show raw values instead of percentages.",
+          "properties": {
+            "prefix": {
+              "type": "string"
+            },
+            "suffix": {
+              "type": "string"
+            },
+            "decimals": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "slices"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Where a city's *water* goes",
+      "slices": [
+        {
+          "label": "Homes",
+          "value": 55,
+          "keyword": "homes"
+        },
+        {
+          "label": "Industry",
+          "value": 25,
+          "keyword": "industry"
+        },
+        {
+          "label": "Parks",
+          "value": 12,
+          "keyword": "parks"
+        },
+        {
+          "label": "Leaks",
+          "value": 8,
+          "keyword": "leaks"
+        }
+      ],
+      "centerLabel": "WATER"
+    },
+    "exampleNarration": "Homes use more than half of a city's water, industry a quarter, parks about twelve percent, and eight percent simply leaks away."
+  },
+  {
+    "id": "town-signs",
+    "name": "Town with signs",
+    "description": "A calm, living isometric town (cars, walkers, clouds, a plane) with floating signs that pop up over buildings on key words. Use for general narration, transitions, intros where no specific diagram fits.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars)."
+        },
+        "signs": {
+          "type": "array",
+          "description": "1–5 short signs in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "≤ 24 chars"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "theme": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night",
+            "mint"
+          ]
+        }
+      },
+      "required": [
+        "signs"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "signs": [
+        {
+          "text": "8 billion people",
+          "keyword": "billion"
+        },
+        {
+          "text": "56% in cities",
+          "keyword": "cities"
+        },
+        {
+          "text": "68% by 2050",
+          "keyword": "2050"
+        }
+      ],
+      "theme": "dusk"
+    },
+    "exampleNarration": "There are eight billion of us, more than half already live in cities, and by 2050 it will be over two thirds."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "id": "flat-vector",
+  "name": "Flat Vector Explainer",
+  "description": "Rich, colourful flat-vector illustration that never stops moving: illustrated worlds, round bird mascots, planets, cells and molecules, liquid shape morphs, elastic pops and zooms from the cosmic to the microscopic. The premium science-explainer look.",
+  "premium": true,
+  "palette": {
+    "background": "#1E1452",
+    "foreground": "#FFFFFF",
+    "accent": "#FFD43B",
+    "muted": "#C9C2EE"
+  },
+  "fonts": [
+    "Inter, \"Noto Sans\", system-ui, sans-serif"
+  ]
+}

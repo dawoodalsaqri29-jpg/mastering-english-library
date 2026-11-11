@@ -1,0 +1,19 @@
+{
+  "title": "Inside your *blood*",
+  "subjects": [
+    {
+      "illus": "virus",
+      "label": "Virus"
+    },
+    {
+      "illus": "cell",
+      "label": "White blood cell"
+    }
+  ],
+  "event": {
+    "from": 1,
+    "to": 0,
+    "verb": "swallows it"
+  },
+  "world": "body"
+}

@@ -1,0 +1,12 @@
+{
+  "character": "leo",
+  "location": "living-room",
+  "reveal": {
+    "text": "$1,500 a year",
+    "kicker": "Unused subscriptions",
+    "prop": "money"
+  },
+  "word": "fifteen",
+  "reaction": "surprised",
+  "setupPose": "think"
+}

@@ -1,0 +1,24 @@
+{
+  "city": "New Harbor",
+  "preset": "island",
+  "style": "american",
+  "seed": 7,
+  "year": 1931,
+  "keyDates": {
+    "settlement": 1624,
+    "village": 1660,
+    "town": 1760,
+    "grid": 1811,
+    "industry": 1850,
+    "skyscraper": 1900,
+    "modern": 1960
+  },
+  "landmark": {
+    "name": "Meridian Tower",
+    "kind": "spire",
+    "keyword": "tower",
+    "heightMetres": 381,
+    "year": 1931
+  },
+  "caption": "Finished in 410 days — the tallest building on Earth"
+}

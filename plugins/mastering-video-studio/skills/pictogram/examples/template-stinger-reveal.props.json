@@ -1,0 +1,13 @@
+{
+  "setting": "hallway",
+  "pet": "dog",
+  "time": "2:00 AM",
+  "before": "JUST THE *WIND*",
+  "buildup": "knock",
+  "keyword": "smiling",
+  "stamp": "IT'S *INSIDE*",
+  "stampKeyword": "inside",
+  "hold": 2.2,
+  "after": "GET *OUT*",
+  "afterKeyword": "out"
+}

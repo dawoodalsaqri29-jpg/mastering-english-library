@@ -1,0 +1,32 @@
+{
+  "region": "africa",
+  "title": "THE LONGEST RIVER",
+  "stops": [
+    {
+      "place": "lake-victoria",
+      "label": "Lake Victoria",
+      "keyword": "Victoria"
+    },
+    {
+      "place": "khartoum",
+      "label": "Khartoum",
+      "keyword": "Khartoum"
+    },
+    {
+      "place": "aswan",
+      "label": "Aswan"
+    },
+    {
+      "place": "cairo",
+      "label": "Cairo",
+      "keyword": "Mediterranean"
+    }
+  ],
+  "vehicle": "ship",
+  "color": "cyan",
+  "keyword": "begins",
+  "headline": "6,650 KM *NORTH*",
+  "stat": 6650,
+  "statSuffix": " KM",
+  "statCaption": "source to sea"
+}

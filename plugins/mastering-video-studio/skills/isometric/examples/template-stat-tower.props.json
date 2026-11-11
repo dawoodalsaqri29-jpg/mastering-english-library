@@ -1,0 +1,12 @@
+{
+  "value": 4.4,
+  "suffix": "B",
+  "decimals": 1,
+  "label": "people live in cities",
+  "keyword": "billion",
+  "title": "An urban planet",
+  "compare": {
+    "value": 0.75,
+    "label": "in 1950"
+  }
+}

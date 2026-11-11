@@ -1,0 +1,387 @@
+[
+ {
+  "style": "painted-history",
+  "template": "title-banner",
+  "props": {
+   "title": "How War Made English",
+   "chapter": "A Documentary",
+   "subtitle": "Twelve centuries. Ten wars. One language.",
+   "keyword": "war",
+   "place": "England",
+   "date": "AD 43 to today",
+   "left": {
+    "faction": "roman"
+   },
+   "right": {
+    "faction": "viking"
+   },
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "Every time you speak English, you are speaking the language of war. Invaders, raiders, conquerors and soldiers all left their words behind. And one October morning, a single battle pushed English out of the palaces of its own country, for three hundred years."
+ },
+ {
+  "style": "map-reveal",
+  "template": "globe-spin",
+  "props": {
+   "region": "world",
+   "target": "uk",
+   "place": "uk",
+   "label": "Britain",
+   "headline": "ONE SMALL *ISLAND*",
+   "sub": "WHERE IT ALL BEGAN",
+   "kicker": "THE STORY",
+   "keyword": "island",
+   "color": "red"
+  },
+  "say": "Today, about one point five billion people speak English. But it started on one small island, and it was shaped, again and again, by the people who came to fight for it."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "The Evidence",
+   "items": [
+    {
+     "label": "sky",
+     "note": "left by Viking settlers"
+    },
+    {
+     "label": "beef",
+     "note": "left by a French-speaking king"
+    },
+    {
+     "label": "loot",
+     "note": "carried home from India"
+    },
+    {
+     "label": "blitz",
+     "note": "born in the Second World War"
+    }
+   ],
+   "tone": "sepia"
+  },
+  "say": "The evidence is hiding in plain sight. The word sky. The word beef. The word loot. The word blitz. Each one is a scar from a different war. In this film, we follow those scars, one by one."
+ },
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "Chapter One",
+   "title": "Before English",
+   "subtitle": "An island of Celtic tribes",
+   "date": "43 - 410",
+   "place": "Britannia",
+   "subject": "landscape",
+   "tone": "sepia",
+   "keyword": "before"
+  },
+  "say": "Chapter one. Before English. Two thousand years ago, nobody in Britain spoke a word of English. The people here were Celtic tribes, and their language was closer to modern Welsh."
+ },
+ {
+  "style": "painted-history",
+  "template": "march",
+  "props": {
+   "army": {
+    "faction": "roman",
+    "name": "The Legions"
+   },
+   "direction": "right",
+   "keyword": "Rome",
+   "title": "Rome Arrives",
+   "place": "Britannia",
+   "date": "AD 43",
+   "sky": "golden",
+   "terrain": "fields"
+  },
+  "say": "Julius Caesar had come and gone. But in the year forty three, Rome returned under the emperor Claudius, and this time, the legions came to stay."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "THE LEGIONS MARCH NORTH",
+   "stops": [
+    {
+     "place": "rome",
+     "label": "Rome",
+     "keyword": "Rome"
+    },
+    {
+     "place": "france",
+     "label": "Gaul"
+    },
+    {
+     "place": "london",
+     "label": "Londinium",
+     "keyword": "Londinium"
+    }
+   ],
+   "vehicle": "none",
+   "color": "red",
+   "keyword": "north",
+   "headline": "AN EMPIRE *CROSSES* THE SEA"
+  },
+  "say": "From Rome, through Gaul, and across the sea. The Romans built a new town on the river Thames, and called it Londinium. You know it today as London."
+ },
+ {
+  "style": "painted-history",
+  "template": "siege",
+  "props": {
+   "defender": {
+    "faction": "roman",
+    "name": "Rome"
+   },
+   "attacker": {
+    "faction": "viking",
+    "name": "Northern tribes"
+   },
+   "side": "right",
+   "keyword": "wall",
+   "assault": false,
+   "title": "The Edge of the Empire",
+   "place": "Hadrian's Wall",
+   "date": "AD 122",
+   "sky": "winter",
+   "terrain": "hills"
+  },
+  "say": "In the north, the tribes never surrendered. So in one hundred and twenty two, the emperor Hadrian ordered a wall, right across the island, to mark where Rome ended."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Words from the camps",
+   "date": "Roman Britain",
+   "subject": "Where our words came from",
+   "body": "Street: from Latin strata, a paved road. Wall: from Latin vallum, a rampart. Wine: from Latin vinum. Cheese: from Latin caseus.",
+   "classification": "Etymology",
+   "stamp": "Still in use",
+   "stampColor": "red",
+   "keyword": "street"
+  },
+  "say": "Rome gave the future English language some of its oldest borrowed words. Street, from strata, a paved road. Wall, from vallum. Wine, from vinum. And cheese, from caseus."
+ },
+ {
+  "style": "map-reveal",
+  "template": "fact-countdown",
+  "props": {
+   "region": "uk",
+   "title": "THE CAMPS THAT BECAME CITIES",
+   "facts": [
+    {
+     "place": "manchester",
+     "label": "Manchester",
+     "keyword": "Manchester",
+     "sub": "CHESTER = CAMP"
+    },
+    {
+     "place": "-2.8,54.05",
+     "label": "Lancaster",
+     "keyword": "Lancaster",
+     "sub": "CASTER = CAMP"
+    },
+    {
+     "place": "-1.3,51.06",
+     "label": "Winchester",
+     "keyword": "Winchester",
+     "sub": "FROM LATIN CASTRA"
+    }
+   ]
+  },
+  "say": "Look at a map of England, and you can still see the Roman army. Manchester. Lancaster. Winchester. That ending, chester or caster, comes from the Latin word castra. It means a military camp."
+ },
+ {
+  "style": "painted-history",
+  "template": "march",
+  "props": {
+   "army": {
+    "faction": "roman",
+    "name": "The last legions"
+   },
+   "direction": "left",
+   "keyword": "left",
+   "title": "Rome Leaves",
+   "place": "The Channel coast",
+   "date": "About AD 410",
+   "sky": "dusk",
+   "terrain": "coast"
+  },
+  "say": "Then, around the year four hundred and ten, with the empire under attack at home, the last legions sailed away. Britain was left to defend itself. And that is where English truly begins."
+ },
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "Chapter Two",
+   "title": "The Invaders Who Named England",
+   "subtitle": "Angles, Saxons and Jutes",
+   "date": "449",
+   "place": "The North Sea",
+   "subject": "ship",
+   "tone": "sepia",
+   "keyword": "named"
+  },
+  "say": "Chapter two. The invaders who named England."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "ACROSS THE NORTH SEA",
+   "stops": [
+    {
+     "place": "9.5,56.2",
+     "label": "Jutland",
+     "keyword": "Jutes"
+    },
+    {
+     "place": "germany",
+     "label": "Saxony",
+     "keyword": "Saxons"
+    },
+    {
+     "place": "north-sea",
+     "label": "North Sea"
+    },
+    {
+     "place": "london",
+     "label": "Britain",
+     "keyword": "Britain"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "cyan",
+   "keyword": "crossed",
+   "headline": "THE *NEW* ARRIVALS"
+  },
+  "say": "With Rome gone, new people crossed the North Sea. Jutes from Denmark. Saxons and Angles from what is now northern Germany. The old story says they first came as hired soldiers, and then they stayed."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "viking",
+    "name": "Anglo-Saxons"
+   },
+   "right": {
+    "faction": "roman",
+    "name": "Britons"
+   },
+   "attacker": "left",
+   "action": "clash",
+   "keyword": "land",
+   "title": "A Fight for the Land",
+   "place": "Britain",
+   "date": "The 400s and 500s",
+   "sky": "storm",
+   "terrain": "hills"
+  },
+  "say": "For more than a century, they fought the Britons for the land. Slowly, the newcomers pushed west, and the old Celtic languages retreated to Wales, Cornwall and the far north."
+ },
+ {
+  "style": "archival-doc",
+  "template": "then-vs-now",
+  "props": {
+   "then": {
+    "subject": "landscape",
+    "year": "Old English",
+    "label": "Englaland, the land of the Angles"
+   },
+   "now": {
+    "subject": "city",
+    "year": "Today",
+    "label": "England"
+   },
+   "title": "A Country Named by Its Invaders",
+   "keyword": "Angles"
+  },
+  "say": "The Angles gave the whole country its name. Englaland, the land of the Angles. Their language, Englisc, is the ancestor of every English word you know."
+ },
+ {
+  "style": "map-reveal",
+  "template": "fact-countdown",
+  "props": {
+   "region": "uk",
+   "title": "SAXON KINGDOMS ON TODAY'S MAP",
+   "facts": [
+    {
+     "place": "0.6,51.8",
+     "label": "Essex",
+     "keyword": "Essex",
+     "sub": "THE EAST SAXONS"
+    },
+    {
+     "place": "-0.3,50.95",
+     "label": "Sussex",
+     "keyword": "Sussex",
+     "sub": "THE SOUTH SAXONS"
+    },
+    {
+     "place": "-1.8,51.2",
+     "label": "Wessex",
+     "keyword": "Wessex",
+     "sub": "THE WEST SAXONS"
+    }
+   ]
+  },
+  "say": "The kingdoms they built are still on the map. Essex, the East Saxons. Sussex, the South Saxons. And Wessex, the West Saxons, the kingdom that would one day save English itself."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "The Week",
+   "title": "Days of the Gods",
+   "date": "Old English",
+   "subject": "The names we still use",
+   "body": "Tuesday: the day of Tiw. Wednesday: the day of Woden. Thursday: the day of Thunor, the thunder god. Friday: the day of Frige.",
+   "classification": "Word origins",
+   "stamp": "Still in use",
+   "stampColor": "red",
+   "keyword": "Wednesday"
+  },
+  "say": "They even named your week. Tuesday is the day of Tiw. Wednesday, the day of Woden. Thursday, the day of Thunor, the god of thunder. And Friday, the day of the goddess Frige."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Plain old English",
+   "date": "Old English",
+   "subject": "Where our words came from",
+   "body": "House: Old English hus. Bread: Old English bread. Water: Old English waeter. Mother: Old English modor.",
+   "classification": "Etymology",
+   "stamp": "Still in use",
+   "stampColor": "red",
+   "keyword": "house"
+  },
+  "say": "And the simplest words of daily life are theirs too. House. Bread. Water. Mother. When you speak plainly in English, you are speaking Anglo-Saxon."
+ },
+ {
+  "style": "painted-history",
+  "template": "title-banner",
+  "props": {
+   "title": "Ships from the North",
+   "chapter": "Next",
+   "subtitle": "The raiders are coming",
+   "keyword": "ships",
+   "place": "Lindisfarne",
+   "date": "AD 793",
+   "left": {
+    "faction": "viking"
+   },
+   "right": {
+    "faction": "viking"
+   },
+   "sky": "storm",
+   "terrain": "coast"
+  },
+  "say": "But the Anglo-Saxons were about to learn what it feels like to be invaded. Because in the summer of seven hundred and ninety three, new ships appeared off the coast of Northumbria. And the men inside them were not coming to trade."
+ }
+]

@@ -1,0 +1,29 @@
+{
+  "company": "Northwind Motors",
+  "years": "1970 – 1985",
+  "kicker": "GOING GLOBAL",
+  "archetype": "executive",
+  "empire": "auto",
+  "region": "world",
+  "pins": [
+    {
+      "place": "Detroit"
+    },
+    {
+      "place": "Mexico City",
+      "word": "Mexico"
+    },
+    {
+      "place": "Germany"
+    },
+    {
+      "place": "Japan"
+    },
+    {
+      "place": "Brazil"
+    }
+  ],
+  "counterLabel": "countries",
+  "headline": "Five countries in *ten* years",
+  "keyword": "ten"
+}

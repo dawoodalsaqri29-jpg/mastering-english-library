@@ -1,0 +1,24 @@
+{
+  "location": "stage",
+  "left": {
+    "character": "sam",
+    "label": "Renting",
+    "points": [
+      "Flexible",
+      "Low upfront"
+    ],
+    "word": "renting",
+    "prop": "key"
+  },
+  "right": {
+    "character": "priya",
+    "label": "Buying",
+    "points": [
+      "Builds equity"
+    ],
+    "word": "buying",
+    "prop": "house"
+  },
+  "verdict": "right",
+  "word": "long"
+}

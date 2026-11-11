@@ -1,0 +1,15 @@
+{
+  "id": "city-timelapse",
+  "name": "City Timelapse",
+  "description": "A cinematic 3D aerial timelapse of a city growing over centuries — wild coast, fort, village, stone town, grid, factories and rail, early skyscrapers, modern glass skyline at golden hour — with a huge ticking year counter, era lower-thirds, district labels and population. For history-of-a-city, urban growth, infrastructure and 'then vs now' explainers.",
+  "premium": true,
+  "palette": {
+    "background": "#15213A",
+    "foreground": "#FFFFFF",
+    "accent": "#F2A33A",
+    "muted": "#C9D3E6"
+  },
+  "fonts": [
+    "\"Inter\", \"Segoe UI\", \"Helvetica Neue\", Arial, \"Noto Sans\", system-ui, sans-serif"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "panels": [
+    {
+      "caption": "Water evaporates from the warm ocean...",
+      "keyword": "evaporates",
+      "background": "sky",
+      "character": "pip",
+      "shot": "mid",
+      "pose": "point",
+      "expression": "happy"
+    },
+    {
+      "caption": "...rises and cools into towering clouds...",
+      "keyword": "clouds",
+      "background": "city",
+      "mood": "dusk",
+      "character": "nova",
+      "shot": "mid",
+      "pose": "explain",
+      "line": "It condenses around tiny specks of dust!",
+      "kind": "speech"
+    },
+    {
+      "caption": "...until the drops get too heavy and fall!",
+      "keyword": "heavy",
+      "background": "street",
+      "mood": "night",
+      "character": "sam",
+      "shot": "mid",
+      "expression": "shock",
+      "sfx": "SPLASH!",
+      "sfxColor": "ice",
+      "effect": "speed"
+    }
+  ],
+  "layout": "feature",
+  "camera": "follow"
+}

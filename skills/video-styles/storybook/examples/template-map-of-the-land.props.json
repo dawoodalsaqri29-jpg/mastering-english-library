@@ -1,0 +1,26 @@
+{
+  "title": "The Way to Grandma's",
+  "character": "pippin",
+  "places": [
+    {
+      "name": "Burrow",
+      "landmark": "house",
+      "keyword": "burrow"
+    },
+    {
+      "name": "Whispering Woods",
+      "landmark": "forest",
+      "keyword": "woods"
+    },
+    {
+      "name": "Old Bridge",
+      "landmark": "bridge",
+      "keyword": "bridge"
+    },
+    {
+      "name": "Hilltop Cottage",
+      "landmark": "windmill",
+      "keyword": "hilltop"
+    }
+  ]
+}

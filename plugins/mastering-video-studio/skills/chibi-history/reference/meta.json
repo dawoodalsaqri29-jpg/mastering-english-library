@@ -1,0 +1,15 @@
+{
+  "id": "chibi-history",
+  "name": "Chibi History",
+  "description": "A soft 2D cartoon history channel: round-headed chibi archetypes in generic period uniforms (officer, soldier, sailor, pilot, diplomat, general, civilian, nurse, historian) with real flags, a stylised Europe map with fronts, arrows and red targets, letters that get no reply, split-screen two-sides framing, chunky thumbnail lettering and date tags. Told from both sides, with sweat drops and anger marks instead of anything graphic.",
+  "premium": true,
+  "palette": {
+    "background": "#F3EAD6",
+    "foreground": "#2B2A33",
+    "accent": "#D7263D",
+    "muted": "#6B6878"
+  },
+  "fonts": [
+    "\"Arial Black\", \"Segoe UI\", Arial, Helvetica, \"Noto Sans\", system-ui, sans-serif"
+  ]
+}

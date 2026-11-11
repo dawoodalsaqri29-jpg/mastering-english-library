@@ -1,0 +1,20 @@
+{
+  "title": "Race to space",
+  "events": [
+    {
+      "date": "1957",
+      "label": "First satellite",
+      "doodle": "globe"
+    },
+    {
+      "date": "1961",
+      "label": "First human in orbit",
+      "doodle": "stick-wave"
+    },
+    {
+      "date": "1969",
+      "label": "Moon landing",
+      "doodle": "flag"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "title": "",
+  "before": {
+    "label": "Myth",
+    "text": "Goldfish forget everything in *3 seconds*",
+    "prop": "fish"
+  },
+  "after": {
+    "label": "Fact",
+    "text": "They remember things for *months*",
+    "prop": "lightbulb"
+  },
+  "keyword": "actually",
+  "character": "ada",
+  "set": "kraft"
+}

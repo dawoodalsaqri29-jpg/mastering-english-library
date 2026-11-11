@@ -1,0 +1,24 @@
+{
+  "title": "Where Europe's *energy* comes from",
+  "regions": [
+    {
+      "label": "Wind & solar",
+      "kind": "energy",
+      "value": "26%",
+      "keyword": "wind"
+    },
+    {
+      "label": "Gas plants",
+      "kind": "industry",
+      "value": "20%",
+      "keyword": "gas"
+    },
+    {
+      "label": "Ports & imports",
+      "kind": "port",
+      "value": "54%",
+      "keyword": "imports"
+    }
+  ],
+  "connect": "routes"
+}

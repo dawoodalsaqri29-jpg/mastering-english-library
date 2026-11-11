@@ -1,0 +1,15 @@
+{
+  "id": "comic-book",
+  "name": "Comic Book",
+  "description": "A living motion comic: inked panels with slanted gutters revealed in reading order, a camera that glides and crash-zooms between panels, a recurring inked cast who talk in speech balloons, yellow caption boxes, Ben-Day halftone shading and punchy 3D SFX lettering. For adventure-style explainers, history, science stories and anything that deserves a cliffhanger.",
+  "premium": true,
+  "palette": {
+    "background": "#FBF5E6",
+    "foreground": "#15110E",
+    "accent": "#E23B2E",
+    "muted": "#FFD23F"
+  },
+  "fonts": [
+    "Inter, \"Noto Sans\", system-ui, sans-serif"
+  ]
+}

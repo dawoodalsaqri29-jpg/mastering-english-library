@@ -1,0 +1,21 @@
+{
+  "sender": {
+    "role": "diplomat",
+    "nation": "britain"
+  },
+  "receiver": {
+    "role": "diplomat",
+    "nation": "ussr"
+  },
+  "letters": 5,
+  "words": [
+    "first",
+    "second",
+    "third",
+    "fourth",
+    "fifth"
+  ],
+  "kind": "letter",
+  "title": "Eight letters",
+  "date": "1939"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "The Voyage of the Endeavour",
+  "places": [
+    {
+      "name": "Plymouth",
+      "date": "1768"
+    },
+    {
+      "name": "Rio",
+      "date": "1768"
+    },
+    {
+      "name": "Tahiti",
+      "date": "1769"
+    },
+    {
+      "name": "Botany Bay",
+      "date": "1770"
+    }
+  ],
+  "route": "sea",
+  "terrain": "islands",
+  "subtitle": "Three years, thirty thousand miles"
+}

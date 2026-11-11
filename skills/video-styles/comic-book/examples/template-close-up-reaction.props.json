@@ -1,0 +1,11 @@
+{
+  "character": "sam",
+  "from": "neutral",
+  "expression": "shock",
+  "line": "Wait... the moon is drifting away from us?!",
+  "kind": "shout",
+  "keyword": "drifting",
+  "sfx": "GASP!",
+  "background": "halftone",
+  "palette": "pink"
+}
