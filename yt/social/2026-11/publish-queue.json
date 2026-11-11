@@ -9,7 +9,7 @@
   "instagram": "20:00",
   "tiktok": "21:00"
  },
- "rule": "One video per day on each platform, in list order. Buffer free plan: max 10 scheduled posts in total.",
+ "rule": "One video per day on each platform, in list order. Buffer free plan: max 10 scheduled posts in total. Buffer can only post YouTube Shorts (vertical, under 3 minutes): long 16:9 videos are uploaded by hand in YouTube Studio and are never scheduled through Buffer.",
  "queue": [
   {
    "slug": "name-it-before-i-do",
@@ -320,7 +320,7 @@
     "text": "Every English word carries a scar from a war. Part 1: from Rome to the Anglo-Saxons.\nكل كلمة إنجليزية تحمل أثرًا من حرب. الجزء الأول: من روما إلى الأنجلوسكسون.\n\n00:00 The evidence\n00:39 Chapter 1: Before English\n01:56 Chapter 2: The invaders who named England\n\nEnglish and Arabic subtitles are on screen.\n#LearnEnglish #EnglishHistory #تعلم_الانجليزي"
    },
    "status": {
-    "youtube": "pending"
+    "youtube": "manual upload in YouTube Studio (Buffer posts Shorts only)"
    }
   }
  ]
