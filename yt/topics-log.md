@@ -2,7 +2,7 @@
 
 | Date | Title | Kind | Styles | Status |
 |---|---|---|---|---|
-| 2026-11-11 | How War Made English, Part 1: Rome and the Anglo-Saxons | documentary | painted-history, map-reveal, archival-doc | rendered (chapter 1) |
+| 2026-11-11 | How War Made English, Part 1: Rome and the Anglo-Saxons | documentary | painted-history, map-reveal, archival-doc | rendered, awaiting review (3:19, EN + AR subtitles) |
 | 2026-11-11 | How War Made English, Part 2: The Northmen | documentary | painted-history, map-reveal, archival-doc | script ready (ch02.json) |
 
 ## Planned (from yt/long/how-war-made-english/outline.md)
