@@ -47,14 +47,14 @@ const vercelProduction = serverEnv.VERCEL_PROJECT_PRODUCTION_URL;
 
 export const siteConfig = {
   /** The brand, exactly as the logo writes it. */
-  name: `${TODO} Brand name`,
+  name: "Mastering English Library",
   /**
    * The home page's `<title>`: the brand + what it is, ≤ 60 characters
    * ("Acme — Industrial design studio"). Sub-pages use `%s · <name>`.
    */
-  title: `${TODO} Brand — what it is`,
+  title: "Mastering English Library — free English lessons, B1 to C2",
   /** 120–160 characters, from the site's own copy (the hero's lead line). */
-  description: `${TODO} One or two sentences from the site's own copy, 120–160 characters.`,
+  description: "72 free English lessons for Arabic speakers, B1 to C2, each with a printable A4 worksheet and answers. PDF packs for deeper practice.",
   /** 5–8 phrases from the copy. */
   keywords: [] as string[],
   /**
@@ -71,14 +71,14 @@ export const siteConfig = {
   /** Default Open Graph / Twitter share image (path under `public/`), 1200×630. */
   ogImage: "/open-graph.png",
   /** Describes the share image for screen readers and when it fails to load. */
-  ogImageAlt: `${TODO} What the share image shows`,
+  ogImageAlt: "Mastering English Library: free English lessons, B1 to C2",
   /**
    * The site's real X/Twitter handle (`"@acme"`), or `undefined` — the
    * generator then omits the tags. Never invent one: it tags a stranger.
    */
   twitterHandle: undefined as string | undefined,
   /** Author / creator / publisher — the brand, not the agency. */
-  author: `${TODO} Brand name`,
+  author: "Mastering English Library",
   /** Browser theme-color (address bar / PWA) — the brand's ground. */
   themeColor: "#000000",
   /** The manifest and the PWA splash background. */

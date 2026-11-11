@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Onest } from "next/font/google";
+import { Fragment_Mono, Instrument_Serif, Inter } from "next/font/google";
 
 import {
   generateMetadata,
@@ -7,7 +7,6 @@ import {
 } from "@/utils/seo/generate-page-metadata";
 import { getSiteStructuredData } from "@/utils/seo/structured-data";
 
-import { LazyCookie } from "@/components/common/Cookie";
 import { CONSENT_FLAG_SCRIPT } from "@/components/common/Cookie/consent-flag";
 import { AdaptiveGrid } from "@/components/common/grid";
 import { JsonLd } from "@/components/common/json-ld";
@@ -18,9 +17,23 @@ import { siteConfig } from "@/lib/site";
 
 import "@/app/globals.css";
 
-const onest = Onest({
-  variable: "--font-onest",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  display: "swap",
+});
+const fragmentMono = Fragment_Mono({
+  variable: "--font-fragment-mono",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -46,7 +59,7 @@ export default function RootLayout({
   return (
     // `data-consent` is set on <html> by CONSENT_FLAG_SCRIPT before hydration.
     <html lang={siteConfig.locale.split("_")[0]} suppressHydrationWarning>
-      <body className={`${onest.variable}`}>
+      <body className={`${inter.variable} ${instrumentSerif.variable} ${fragmentMono.variable}`}>
         {/* Before anything is parsed: marks a returning visitor's choice so the
             server-rendered consent banner is hidden before its first paint. */}
         <script dangerouslySetInnerHTML={{ __html: CONSENT_FLAG_SCRIPT }} />
@@ -58,7 +71,7 @@ export default function RootLayout({
         <ScrollLayout>
           <AdaptiveGrid />
           <ReducedMotion />
-          <LazyCookie />
+          {/* No consent banner: the site sets no cookies and runs no analytics. */}
           {children}
         </ScrollLayout>
       </body>

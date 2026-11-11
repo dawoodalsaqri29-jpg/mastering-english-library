@@ -16,6 +16,26 @@ For *why* the conventions are what they are, see [[decisions-log]].
 
 ---
 
+## 2026-11-11
+
+**First home page: Mastering English Library.** Black ground, one lime accent, Inter /
+Instrument Serif italic / Fragment Mono (the GetLayers "Relay" look, adapted to the
+library's own content and real numbers — no Relay copy or assets). Sections: nav, hero
+with a checked exercise window, levels row, three lesson features, lime statement plate,
+counted numbers, PDF packs (real store prices), footer. Reveals use the starter's
+`Inview` springs (280/32 and 120/26, 70 ms stagger). Fonts via `next/font/google`.
+
+**Background video: GetLayers "Stone Arch".** The 2892×2160 master (17.5 Mb/s, with an
+unused audio track) is not shipped. Re-encoded without audio to `public/media/stone-arch/`:
+1920-wide and 960-wide, VP9 WebM first and H.264 MP4 fallback (0.59 / 0.96 MB and
+0.16 / 0.20 MB), plus WebP posters (1920 and 960) from the 2K still. `<source media>`
+picks 960 at ≤ 900px. Muted, looping, `playsinline`, poster until the first frame;
+reduced motion and the robot form keep the poster still. A dark gradient scrim keeps
+text readable over the bright sky.
+
+**Consent banner removed.** The site sets no cookies and runs no analytics, so the
+starter's banner would claim something untrue.
+
 ## 2026-11-10
 
 **Fresh project from the starter.** Cloned `next16-claude-starter`, removed its git

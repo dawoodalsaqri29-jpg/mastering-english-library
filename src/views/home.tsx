@@ -1,24 +1,35 @@
 import { RobotProvider, RobotView } from "@/components/common/robot-view";
 
+import { Features } from "./home/sections/features";
+import { Footer } from "./home/sections/footer";
+import { Hero } from "./home/sections/hero";
+import { Levels } from "./home/sections/levels";
+import { Nav } from "./home/sections/nav";
+import { Numbers } from "./home/sections/numbers";
+import { Packs } from "./home/sections/packs";
+import { Statement } from "./home/sections/statement";
+import { BackgroundVideo } from "./home/ui/background-video";
+
 /**
- * Home view — a Server Component, intentionally empty.
- *
- * This is the starting point for new work: if the project is empty and no other
- * instructions are provided, begin developing here (route `/`). Build sections
- * as client leaves so this view stays a Server Component (hard rule #6).
- *
- * `robot` is the robot form (obsidian/frontend/robot-form.md): `app/robot-view`
- * renders `<HomeView robot />` for crawlers and lab tools, routed there by the
- * proxy. Same content — skip the intro, the cursor and the live 3D (a still
- * instead), and import first-screen springs from `robot-spring` / `robot-text`
- * so the served HTML is at rest. Never read `headers()` here: `/` must stay
- * static.
+ * Home view — the Mastering English Library landing page: a black-and-lime
+ * look (after the GetLayers "Relay" reference) over the calm "Stone Arch"
+ * background loop. A Server Component; the motion lives in client leaves.
  */
 export const HomeView = ({ robot = false }: { robot?: boolean }) => {
   return (
     <RobotProvider robot={robot}>
       {robot && <RobotView />}
-      <main className="min-h-lvh" />
+      <BackgroundVideo />
+      <Nav />
+      <main className="relative z-10 w-full pt-[5.5rem] max-[900px]:pt-16">
+        <Hero />
+        <Levels />
+        <Features />
+        <Statement />
+        <Numbers />
+        <Packs />
+        <Footer />
+      </main>
     </RobotProvider>
   );
 };
