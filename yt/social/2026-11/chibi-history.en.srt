@@ -1,0 +1,36 @@
+1
+00:00:00,400 --> 00:00:02,287
+Some English words were born in war.
+
+2
+00:00:02,287 --> 00:00:04,333
+Here are two from the Second World War.
+
+3
+00:00:05,533 --> 00:00:06,972
+September nineteen forty.
+
+4
+00:00:06,972 --> 00:00:10,195
+German bombers begin attacking London night after night.
+
+5
+00:00:10,195 --> 00:00:14,799
+The British called it the Blitz, short for the German Blitzkrieg, lightning war.
+
+6
+00:00:16,000 --> 00:00:16,593
+Word two.
+
+7
+00:00:16,593 --> 00:00:16,989
+Radar.
+
+8
+00:00:16,989 --> 00:00:21,143
+It is an acronym from the US Navy: radio detection and ranging.
+
+9
+00:00:21,143 --> 00:00:25,033
+Today we just say radar, and forget it was ever five words.
+

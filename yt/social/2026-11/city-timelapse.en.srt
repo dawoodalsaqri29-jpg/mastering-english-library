@@ -1,0 +1,36 @@
+1
+00:00:00,400 --> 00:00:02,027
+Hamlet, village, town, city.
+
+2
+00:00:02,027 --> 00:00:05,166
+Watch one place grow, and learn every word on the way.
+
+3
+00:00:06,366 --> 00:00:08,384
+First, a hamlet: just a few houses.
+
+4
+00:00:08,384 --> 00:00:10,863
+Then a village, with a church and a market.
+
+5
+00:00:10,863 --> 00:00:12,938
+Then a town, with streets and shops.
+
+6
+00:00:12,938 --> 00:00:16,166
+And finally, a city, with towers and millions of people.
+
+7
+00:00:17,366 --> 00:00:18,745
+And a really huge city?
+
+8
+00:00:18,745 --> 00:00:20,004
+That is a metropolis.
+
+9
+00:00:20,004 --> 00:00:24,199
+The centre is downtown, and the quiet areas around it are the suburbs.
+

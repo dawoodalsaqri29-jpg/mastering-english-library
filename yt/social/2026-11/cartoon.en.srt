@@ -1,0 +1,44 @@
+1
+00:00:00,400 --> 00:00:01,027
+Make or do?
+
+2
+00:00:01,027 --> 00:00:02,511
+Most learners mix them up.
+
+3
+00:00:02,511 --> 00:00:03,766
+Here is the easy rule.
+
+4
+00:00:04,966 --> 00:00:06,436
+I need to make my homework.
+
+5
+00:00:06,436 --> 00:00:06,817
+Almost!
+
+6
+00:00:06,817 --> 00:00:07,688
+You do homework.
+
+7
+00:00:07,688 --> 00:00:09,103
+Then why do I make a cake?
+
+8
+00:00:09,103 --> 00:00:10,899
+Because you create something new!
+
+9
+00:00:12,099 --> 00:00:13,859
+Make is for creating something.
+
+10
+00:00:13,859 --> 00:00:15,278
+Do is for tasks and jobs.
+
+11
+00:00:15,278 --> 00:00:18,399
+So you make a cake, and then, sadly, you do the dishes.
+
