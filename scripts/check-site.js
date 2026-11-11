@@ -301,6 +301,8 @@ function checkSeo() {
     const ogUrl = one(html, /<meta property="og:url" content="([^"]+)"/i);
     if (!title) seo.push(p + ": no <title>"); else titles.set(title, [...(titles.get(title) || []), p]);
     if (!desc) seo.push(p + ": no meta description"); else descs.set(desc, [...(descs.get(desc) || []), p]);
+    if (title && [...title].length > 60) seo.push(p + ": title is " + [...title].length + " characters, over 60");
+    if (desc && [...desc].length > 160) seo.push(p + ": meta description is " + [...desc].length + " characters, over 160");
     if (canon !== url) seo.push(p + ": canonical is " + canon + ", expected " + url);
     if (ogUrl !== canon) seo.push(p + ": og:url differs from canonical");
     if (!/<meta property="og:image" content="https:/i.test(html)) seo.push(p + ": no og:image");
@@ -317,6 +319,8 @@ function checkSeo() {
   const want = new Set(pages.map((p) => (p === "index.html" ? SITE : SITE + p)));
   for (const u of want) if (!inMap.has(u)) seo.push("sitemap.xml is missing " + u.replace(SITE, ""));
   for (const u of inMap) if (!want.has(u)) seo.push("sitemap.xml lists a page that does not exist: " + u.replace(SITE, ""));
+  const urls = (sitemap.match(/<url>/g) || []).length, dated = (sitemap.match(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/g) || []).length;
+  if (dated !== urls) seo.push("sitemap.xml: " + (urls - dated) + " URL(s) without a lastmod date, run: node scripts/sitemap-lastmod.js");
   const robots = fs.existsSync(path.join(ROOT, "robots.txt")) ? fs.readFileSync(path.join(ROOT, "robots.txt"), "utf8") : "";
   if (!robots.includes("Sitemap: " + SITE + "sitemap.xml")) seo.push("robots.txt has no Sitemap line");
   if (/^Disallow:\s*\/\s*$/m.test(robots)) seo.push("robots.txt blocks the whole site");
