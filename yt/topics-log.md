@@ -4,6 +4,7 @@
 |---|---|---|---|---|
 | 2026-11-11 | How War Made English, Part 1: Rome and the Anglo-Saxons | documentary | painted-history, map-reveal, archival-doc | rendered, awaiting review (3:19, EN + AR subtitles) |
 | 2026-11-11 | How War Made English, Part 2: The Northmen | documentary | painted-history, map-reveal, archival-doc | script ready (ch02.json) |
+| 2026-11-11 | The Secret History of Your English Words (word origins, spelling history, four-step learning method) | long explainer, 24:49 | 15 styles mixed | rendered, awaiting review |
 
 ## Planned (from yt/long/how-war-made-english/outline.md)
 - Part 3: 1066 (Stamford Bridge, Hastings, French words)
