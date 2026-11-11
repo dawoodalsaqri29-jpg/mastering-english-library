@@ -18,6 +18,13 @@ This skill is the front door to the plugin. It picks the style, writes the scene
 - **Visual accuracy:** the armies, flags and weapons must fit the era. For example, no cannons or modern flags before gunpowder. Check a contact sheet before delivering.
 - Replies to the user are in Arabic, neatly ordered, with English terms kept on their own lines.
 
+## Publishing
+
+- Buffer (the user's scheduler) posts YouTube Shorts only: vertical and under 3 minutes. Long 16:9 videos are uploaded by hand in YouTube Studio.
+- For Instagram, TikTok and Shorts, use 9:16 versions with English subtitles and the Arabic translation burned in (`yt/social/2026-11/make_social.py` in the channel repo shows the layout). Keep music out: voice and sound effects only.
+- Link Buffer videos with commit-pinned raw GitHub URLs (`.../<commit-sha>/path`); branch links can serve a stale copy, which Buffer rejects.
+- The queue lives in `yt/social/2026-11/publish-queue.json`; a daily scheduled task refills Buffer from it (free plan: 10 scheduled posts at most).
+
 ## Stay monetized (YouTube's "inauthentic content" policy)
 
 - Never produce a batch of near-identical videos. Each video gets its own topic, angle, research, title pattern and thumbnail layout, and differs clearly from the last ten.
