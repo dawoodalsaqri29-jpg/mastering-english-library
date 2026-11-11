@@ -1,0 +1,2026 @@
+[
+  {
+    "id": "figure-explains",
+    "name": "Figure Explains",
+    "description": "The workhorse: a cast member talks (lip-synced) beside one big hand-drawn doodle that draws on as its key word is spoken; the figure turns and points at it, a caption is lettered underneath and up to three deadpan notes arrive with labelled arrows. Use for most explanations, hooks and key points.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Cast member — pip (tuft, narrator), ada (glasses + bun, expert), hank (bowler hat, skeptic), juno (ponytail, curious), remy (beret, dreamer), anon (featureless extra). Keep the same cast across the video."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional heading at the top (2–7 words). *asterisks* = accent colour."
+        },
+        "doodle": {
+          "type": "string",
+          "enum": [
+            "lightbulb",
+            "question",
+            "exclamation",
+            "coin",
+            "money",
+            "clock",
+            "globe",
+            "sun",
+            "moon",
+            "star",
+            "cloud",
+            "rain",
+            "house",
+            "building",
+            "tree",
+            "mountain",
+            "rocket",
+            "phone",
+            "laptop",
+            "book",
+            "heart",
+            "atom",
+            "gear",
+            "chart",
+            "chart-down",
+            "chart-pie",
+            "arrow",
+            "flag",
+            "coffee",
+            "box",
+            "ball",
+            "car",
+            "ant",
+            "cat",
+            "fish",
+            "whale",
+            "cell",
+            "virus",
+            "galaxy",
+            "planet",
+            "bomb",
+            "cake",
+            "chair",
+            "door",
+            "ladder",
+            "key",
+            "magnifier",
+            "rock",
+            "trophy",
+            "brain",
+            "dna",
+            "apple",
+            "fire",
+            "lightning",
+            "eye",
+            "person",
+            "crowd",
+            "warning",
+            "calendar",
+            "battery",
+            "robot",
+            "pizza",
+            "dinosaur",
+            "plane",
+            "pencil",
+            "hourglass",
+            "money-bag",
+            "target",
+            "ufo",
+            "document",
+            "scale",
+            "dog",
+            "tooth"
+          ],
+          "description": "The doodle that illustrates the idea."
+        },
+        "label": {
+          "type": "string",
+          "description": "Caption under the doodle (1–6 words). Should use words the narrator says."
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "0–3 tiny labels with arrows pointing at the doodle (1–5 words each, dry/witty)."
+        },
+        "says": {
+          "type": "string",
+          "description": "Optional short line the figure says, shown as floating speech text (≤ 10 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the doodle draws (defaults to the label's most distinctive word)."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "explain",
+            "talk",
+            "point",
+            "shrug",
+            "smug",
+            "think",
+            "crossed"
+          ],
+          "description": "Pose after pointing (default explain)."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Optional reaction near the end of the scene."
+        }
+      },
+      "required": [
+        "doodle",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "pip",
+      "title": "Why the sky is *blue*",
+      "doodle": "sun",
+      "label": "sunlight = all colours",
+      "notes": [
+        "blue scatters most",
+        "red: too lazy to scatter"
+      ],
+      "says": "It's physics. Sorry.",
+      "keyword": "sunlight"
+    },
+    "exampleNarration": "Sunlight looks white, but it is really every colour mixed together. When it hits the air, blue light scatters the most, so blue is what we see everywhere. Red mostly goes straight through."
+  },
+  {
+    "id": "conversation",
+    "name": "Conversation",
+    "description": "Two cast members face each other and talk; each line is hand-lettered above its speaker with a little tail line, exactly when it is spoken, while the speaker's mouth moves and the listener reacts. Moods add poses and marks (sweat drops, question marks, anger, jumps). For Q&A, misconceptions, skeptic vs expert, jokes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Cast member on the left."
+        },
+        "right": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Cast member on the right (different from left)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional small heading (≤ 5 words)."
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ],
+                "description": "Who says this line."
+              },
+              "text": {
+                "type": "string",
+                "description": "The line (≤ 14 words). Use the narration's own words so it syncs."
+              },
+              "mood": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "explain",
+                  "excited",
+                  "confused",
+                  "annoyed",
+                  "panic",
+                  "smug",
+                  "sad",
+                  "thinking",
+                  "pointing",
+                  "celebrate",
+                  "surprised"
+                ],
+                "description": "Speaker's acting for this line."
+              },
+              "reaction": {
+                "type": "string",
+                "enum": [
+                  "listen",
+                  "shrug",
+                  "facepalm",
+                  "think",
+                  "crossed",
+                  "panic",
+                  "smug",
+                  "sad",
+                  "mind-blown",
+                  "celebrate"
+                ],
+                "description": "Listener's reaction while this line is spoken."
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 lines in narration order."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Optional pose both take after the last line."
+        }
+      },
+      "required": [
+        "left",
+        "right",
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": "hank",
+      "right": "ada",
+      "lines": [
+        {
+          "speaker": "left",
+          "text": "So the moon is just falling?",
+          "mood": "confused"
+        },
+        {
+          "speaker": "right",
+          "text": "Constantly. It just keeps missing.",
+          "mood": "explain",
+          "reaction": "facepalm"
+        },
+        {
+          "speaker": "left",
+          "text": "That is deeply unsettling.",
+          "mood": "panic"
+        }
+      ]
+    },
+    "exampleNarration": "So the moon is just falling? Constantly. It just keeps missing. That is deeply unsettling."
+  },
+  {
+    "id": "hand-drawn-graph",
+    "name": "Hand-Drawn Graph",
+    "description": "A graph drawn by hand: wobbly axes with arrowheads, rotated axis titles (often sarcastic), a line or hatched bars that draw on with the narration, a highlighted point in accent and up to three annotations with arrows. An optional cast member points at it. For trends, comparisons and deadpan data jokes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Graph title (2–7 words)."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "line",
+            "bar"
+          ],
+          "description": "Line for trends, bar for comparisons."
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "2–10 numbers (relative heights; no units shown)."
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional category labels under the x axis (same count as values, 1–2 words each)."
+        },
+        "xLabel": {
+          "type": "string",
+          "description": "X axis title (1–4 words, e.g. 'TIME' or 'HOURS SPENT ON EMAIL')."
+        },
+        "yLabel": {
+          "type": "string",
+          "description": "Y axis title (1–4 words, e.g. 'REGRET')."
+        },
+        "highlight": {
+          "type": "integer",
+          "description": "Index of the value to highlight in accent (optional)."
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer",
+                "description": "Which value it points at."
+              },
+              "text": {
+                "type": "string",
+                "description": "Annotation (1–6 words)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word it appears on."
+              }
+            },
+            "required": [
+              "index",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "0–3 annotations with arrows."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional dry caption/footnote (≤ 12 words)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Optional cast member who points at the graph (omit for none)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the data line/bars draw."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Optional reaction of the figure at the end."
+        }
+      },
+      "required": [
+        "type",
+        "values"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "My productivity",
+      "type": "line",
+      "values": [
+        3,
+        5,
+        8,
+        7,
+        2,
+        1
+      ],
+      "labels": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "xLabel": "THE WEEK",
+      "yLabel": "GETTING THINGS DONE",
+      "highlight": 2,
+      "annotations": [
+        {
+          "index": 2,
+          "text": "coffee kicks in"
+        },
+        {
+          "index": 5,
+          "text": "the weekend wins"
+        }
+      ],
+      "caption": "Data collected by me. Badly.",
+      "character": "juno",
+      "keyword": "productivity"
+    },
+    "exampleNarration": "Here is my productivity over a typical week. It climbs nicely until Wednesday, when the coffee kicks in. Then the weekend wins, every single time."
+  },
+  {
+    "id": "labelled-diagram",
+    "name": "Labelled Diagram",
+    "description": "One large doodle in the middle with 2–6 hand-lettered labels around it, each with an arrow pointing at a part (top, left, bottom-right…), plus an optional accent 'YOU ARE HERE' marker. For anatomy-of-a-thing, parts of a system, maps, the classic deadpan diagram.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Heading (2–6 words)."
+        },
+        "doodle": {
+          "type": "string",
+          "enum": [
+            "lightbulb",
+            "question",
+            "exclamation",
+            "coin",
+            "money",
+            "clock",
+            "globe",
+            "sun",
+            "moon",
+            "star",
+            "cloud",
+            "rain",
+            "house",
+            "building",
+            "tree",
+            "mountain",
+            "rocket",
+            "phone",
+            "laptop",
+            "book",
+            "heart",
+            "atom",
+            "gear",
+            "chart",
+            "chart-down",
+            "chart-pie",
+            "arrow",
+            "flag",
+            "coffee",
+            "box",
+            "ball",
+            "car",
+            "ant",
+            "cat",
+            "fish",
+            "whale",
+            "cell",
+            "virus",
+            "galaxy",
+            "planet",
+            "bomb",
+            "cake",
+            "chair",
+            "door",
+            "ladder",
+            "key",
+            "magnifier",
+            "rock",
+            "trophy",
+            "brain",
+            "dna",
+            "apple",
+            "fire",
+            "lightning",
+            "eye",
+            "person",
+            "crowd",
+            "warning",
+            "calendar",
+            "battery",
+            "robot",
+            "pizza",
+            "dinosaur",
+            "plane",
+            "pencil",
+            "hourglass",
+            "money-bag",
+            "target",
+            "ufo",
+            "document",
+            "scale",
+            "dog",
+            "tooth"
+          ],
+          "description": "The thing being labelled."
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Label (1–5 words)."
+              },
+              "where": {
+                "type": "string",
+                "enum": [
+                  "top",
+                  "top-right",
+                  "right",
+                  "bottom-right",
+                  "bottom",
+                  "bottom-left",
+                  "left",
+                  "top-left",
+                  "center"
+                ],
+                "description": "Which part of the doodle the arrow points at."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word it appears on."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 labels."
+        },
+        "youAreHere": {
+          "type": "string",
+          "description": "Optional 'you are here' marker text (e.g. 'YOU ARE HERE'); omit for none."
+        },
+        "herePosition": {
+          "type": "string",
+          "enum": [
+            "top",
+            "top-right",
+            "right",
+            "bottom-right",
+            "bottom",
+            "bottom-left",
+            "left",
+            "top-left",
+            "center"
+          ],
+          "description": "Where the marker dot goes."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional small caption at the bottom (≤ 12 words)."
+        },
+        "accent": {
+          "type": "boolean",
+          "description": "Draw the doodle's highlight parts in the accent colour."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the doodle draws."
+        }
+      },
+      "required": [
+        "doodle",
+        "labels"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Earth, roughly",
+      "doodle": "globe",
+      "labels": [
+        {
+          "text": "mostly water",
+          "where": "right"
+        },
+        {
+          "text": "some land",
+          "where": "top-left"
+        },
+        {
+          "text": "air (thin layer)",
+          "where": "top-right"
+        },
+        {
+          "text": "very hot middle",
+          "where": "center"
+        }
+      ],
+      "youAreHere": "YOU ARE HERE",
+      "herePosition": "bottom-left",
+      "keyword": "earth"
+    },
+    "exampleNarration": "Here is the earth, roughly. It is mostly water, with some land, wrapped in a surprisingly thin layer of air. The middle is very hot. And you are here."
+  },
+  {
+    "id": "scale-comparison",
+    "name": "Scale Comparison",
+    "description": "Tiny vs huge: 2–6 doodles from smallest to largest, each drawn several times bigger than the last while the camera keeps zooming out so the previous thing shrinks to a speck; labels and '≈ 1000× bigger' notes scale with them, then a final pull-back shows everything. For sizes, distances, numbers too big to imagine.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading that stays on screen (2–6 words)."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "question",
+                  "exclamation",
+                  "coin",
+                  "money",
+                  "clock",
+                  "globe",
+                  "sun",
+                  "moon",
+                  "star",
+                  "cloud",
+                  "rain",
+                  "house",
+                  "building",
+                  "tree",
+                  "mountain",
+                  "rocket",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "heart",
+                  "atom",
+                  "gear",
+                  "chart",
+                  "chart-down",
+                  "chart-pie",
+                  "arrow",
+                  "flag",
+                  "coffee",
+                  "box",
+                  "ball",
+                  "car",
+                  "ant",
+                  "cat",
+                  "fish",
+                  "whale",
+                  "cell",
+                  "virus",
+                  "galaxy",
+                  "planet",
+                  "bomb",
+                  "cake",
+                  "chair",
+                  "door",
+                  "ladder",
+                  "key",
+                  "magnifier",
+                  "rock",
+                  "trophy",
+                  "brain",
+                  "dna",
+                  "apple",
+                  "fire",
+                  "lightning",
+                  "eye",
+                  "person",
+                  "crowd",
+                  "warning",
+                  "calendar",
+                  "battery",
+                  "robot",
+                  "pizza",
+                  "dinosaur",
+                  "plane",
+                  "pencil",
+                  "hourglass",
+                  "money-bag",
+                  "target",
+                  "ufo",
+                  "document",
+                  "scale",
+                  "dog",
+                  "tooth"
+                ],
+                "description": "Doodle for this item."
+              },
+              "label": {
+                "type": "string",
+                "description": "Name (1–3 words)."
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional size note shown above it (e.g. '≈ 100× bigger')."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word it appears on."
+              }
+            },
+            "required": [
+              "doodle",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 items from smallest to largest."
+        },
+        "ratio": {
+          "type": "number",
+          "description": "How much bigger each item is drawn than the previous (1.8–4.5, default 3)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Optional cast member standing next to the first item for scale."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional closing line written over the final wide shot (≤ 10 words)."
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How big is big?",
+      "items": [
+        {
+          "doodle": "ant",
+          "label": "an ant"
+        },
+        {
+          "doodle": "person",
+          "label": "you",
+          "note": "≈ 300× bigger"
+        },
+        {
+          "doodle": "building",
+          "label": "a skyscraper",
+          "note": "≈ 250× bigger"
+        },
+        {
+          "doodle": "mountain",
+          "label": "Everest",
+          "note": "≈ 20× bigger"
+        }
+      ],
+      "ratio": 3,
+      "caption": "And Everest is a pebble, cosmically."
+    },
+    "exampleNarration": "Start with an ant. Now you, about three hundred times bigger. A skyscraper dwarfs you. And Everest makes the skyscraper look tiny. And Everest is a pebble, cosmically."
+  },
+  {
+    "id": "what-if",
+    "name": "What If",
+    "description": "A comic strip of 2–4 hand-drawn panels. Each panel draws its border, a caption, a cast member acting (pose, jump, fall over, walk), an optional doodle and an optional line of speech, in sync with the narration. For hypotheticals, step-by-step scenarios and setups with a punchline.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional heading, e.g. 'What if the moon disappeared?' (≤ 8 words)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "Default cast member for every panel."
+        },
+        "panels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "caption": {
+                "type": "string",
+                "description": "Panel caption (≤ 10 words) — use narration words."
+              },
+              "character": {
+                "type": "string",
+                "enum": [
+                  "pip",
+                  "ada",
+                  "hank",
+                  "juno",
+                  "remy",
+                  "anon"
+                ],
+                "description": "Cast member in this panel (defaults to the strip's character)."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "stand",
+                  "talk",
+                  "explain",
+                  "point",
+                  "point-up",
+                  "shrug",
+                  "wave",
+                  "think",
+                  "panic",
+                  "celebrate",
+                  "sad",
+                  "facepalm",
+                  "hold",
+                  "crossed",
+                  "smug",
+                  "mind-blown",
+                  "sit",
+                  "jump",
+                  "fall",
+                  "walk"
+                ],
+                "description": "What the figure does in this panel."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "question",
+                  "exclamation",
+                  "coin",
+                  "money",
+                  "clock",
+                  "globe",
+                  "sun",
+                  "moon",
+                  "star",
+                  "cloud",
+                  "rain",
+                  "house",
+                  "building",
+                  "tree",
+                  "mountain",
+                  "rocket",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "heart",
+                  "atom",
+                  "gear",
+                  "chart",
+                  "chart-down",
+                  "chart-pie",
+                  "arrow",
+                  "flag",
+                  "coffee",
+                  "box",
+                  "ball",
+                  "car",
+                  "ant",
+                  "cat",
+                  "fish",
+                  "whale",
+                  "cell",
+                  "virus",
+                  "galaxy",
+                  "planet",
+                  "bomb",
+                  "cake",
+                  "chair",
+                  "door",
+                  "ladder",
+                  "key",
+                  "magnifier",
+                  "rock",
+                  "trophy",
+                  "brain",
+                  "dna",
+                  "apple",
+                  "fire",
+                  "lightning",
+                  "eye",
+                  "person",
+                  "crowd",
+                  "warning",
+                  "calendar",
+                  "battery",
+                  "robot",
+                  "pizza",
+                  "dinosaur",
+                  "plane",
+                  "pencil",
+                  "hourglass",
+                  "money-bag",
+                  "target",
+                  "ufo",
+                  "document",
+                  "scale",
+                  "dog",
+                  "tooth"
+                ],
+                "description": "Optional doodle beside the figure."
+              },
+              "says": {
+                "type": "string",
+                "description": "Optional speech in the panel (≤ 8 words)."
+              }
+            },
+            "required": [
+              "caption"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–4 panels."
+        },
+        "punchline": {
+          "type": "string",
+          "description": "Optional last line under the strip (≤ 10 words)."
+        }
+      },
+      "required": [
+        "panels"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "What if you skipped sleep?",
+      "character": "pip",
+      "panels": [
+        {
+          "caption": "Night one: you feel fine.",
+          "pose": "smug",
+          "says": "Sleep is for quitters."
+        },
+        {
+          "caption": "Night two: things get weird.",
+          "pose": "panic",
+          "doodle": "clock"
+        },
+        {
+          "caption": "Night three: you argue with a toaster.",
+          "pose": "fall",
+          "doodle": "robot"
+        }
+      ],
+      "punchline": "Please just go to bed."
+    },
+    "exampleNarration": "What if you skipped sleep? Night one, you feel fine. Night two, things get weird. Night three, you argue with a toaster. Please just go to bed."
+  },
+  {
+    "id": "list-with-doodles",
+    "name": "List With Doodles",
+    "description": "A hand-lettered list of 2–5 items, each with a small doodle, number or checkbox that draws on as the item is spoken; items can be crossed out in accent (myths, bad ideas). A cast member presents from the side. For tips, rules, reasons, myths and checklists.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "List heading (2–6 words)."
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Item (2–8 words)."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "question",
+                  "exclamation",
+                  "coin",
+                  "money",
+                  "clock",
+                  "globe",
+                  "sun",
+                  "moon",
+                  "star",
+                  "cloud",
+                  "rain",
+                  "house",
+                  "building",
+                  "tree",
+                  "mountain",
+                  "rocket",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "heart",
+                  "atom",
+                  "gear",
+                  "chart",
+                  "chart-down",
+                  "chart-pie",
+                  "arrow",
+                  "flag",
+                  "coffee",
+                  "box",
+                  "ball",
+                  "car",
+                  "ant",
+                  "cat",
+                  "fish",
+                  "whale",
+                  "cell",
+                  "virus",
+                  "galaxy",
+                  "planet",
+                  "bomb",
+                  "cake",
+                  "chair",
+                  "door",
+                  "ladder",
+                  "key",
+                  "magnifier",
+                  "rock",
+                  "trophy",
+                  "brain",
+                  "dna",
+                  "apple",
+                  "fire",
+                  "lightning",
+                  "eye",
+                  "person",
+                  "crowd",
+                  "warning",
+                  "calendar",
+                  "battery",
+                  "robot",
+                  "pizza",
+                  "dinosaur",
+                  "plane",
+                  "pencil",
+                  "hourglass",
+                  "money-bag",
+                  "target",
+                  "ufo",
+                  "document",
+                  "scale",
+                  "dog",
+                  "tooth"
+                ],
+                "description": "Optional small doodle used as the bullet."
+              },
+              "crossed": {
+                "type": "boolean",
+                "description": "Strike the item through in accent after it is written (myth / bad idea)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word it appears on."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–5 items."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "doodles",
+            "numbers",
+            "checks"
+          ],
+          "description": "Bullet style for items without a doodle."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon",
+            "none"
+          ],
+          "description": "Presenter (or 'none')."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Optional reaction at the end."
+        }
+      },
+      "required": [
+        "title",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How to look busy",
+      "items": [
+        {
+          "text": "Carry a clipboard",
+          "doodle": "document"
+        },
+        {
+          "text": "Walk fast, sigh loudly",
+          "doodle": "clock"
+        },
+        {
+          "text": "Actually do the work",
+          "doodle": "pencil",
+          "crossed": true
+        }
+      ],
+      "style": "doodles",
+      "character": "hank",
+      "endPose": "smug"
+    },
+    "exampleNarration": "How to look busy at work. Carry a clipboard everywhere. Walk fast and sigh loudly. Or, I suppose, actually do the work. Nah."
+  },
+  {
+    "id": "thought-experiment",
+    "name": "Thought Experiment",
+    "description": "A cast member strikes a thinking pose; a thought cloud grows out of their head and fills with the premise and up to three doodles as they are mentioned, then the big question is lettered and the figure reacts (mind blown, shrug, panic…). For imagine-if setups, paradoxes and philosophical puzzles.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon"
+          ],
+          "description": "The thinker (remy is a good default)."
+        },
+        "premise": {
+          "type": "string",
+          "description": "Premise written inside the cloud (≤ 14 words)."
+        },
+        "doodles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lightbulb",
+              "question",
+              "exclamation",
+              "coin",
+              "money",
+              "clock",
+              "globe",
+              "sun",
+              "moon",
+              "star",
+              "cloud",
+              "rain",
+              "house",
+              "building",
+              "tree",
+              "mountain",
+              "rocket",
+              "phone",
+              "laptop",
+              "book",
+              "heart",
+              "atom",
+              "gear",
+              "chart",
+              "chart-down",
+              "chart-pie",
+              "arrow",
+              "flag",
+              "coffee",
+              "box",
+              "ball",
+              "car",
+              "ant",
+              "cat",
+              "fish",
+              "whale",
+              "cell",
+              "virus",
+              "galaxy",
+              "planet",
+              "bomb",
+              "cake",
+              "chair",
+              "door",
+              "ladder",
+              "key",
+              "magnifier",
+              "rock",
+              "trophy",
+              "brain",
+              "dna",
+              "apple",
+              "fire",
+              "lightning",
+              "eye",
+              "person",
+              "crowd",
+              "warning",
+              "calendar",
+              "battery",
+              "robot",
+              "pizza",
+              "dinosaur",
+              "plane",
+              "pencil",
+              "hourglass",
+              "money-bag",
+              "target",
+              "ufo",
+              "document",
+              "scale",
+              "dog",
+              "tooth"
+            ],
+            "description": "Doodle inside the cloud."
+          },
+          "description": "0–3 doodles inside the cloud, in narration order."
+        },
+        "question": {
+          "type": "string",
+          "description": "The punch question (≤ 12 words). *asterisks* = accent."
+        },
+        "reaction": {
+          "type": "string",
+          "enum": [
+            "mind-blown",
+            "shrug",
+            "panic",
+            "celebrate",
+            "think",
+            "facepalm",
+            "sad"
+          ],
+          "description": "How the figure reacts to the question."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the cloud appears (default 'imagine')."
+        },
+        "questionKeyword": {
+          "type": "string",
+          "description": "Narration word on which the question is written."
+        }
+      },
+      "required": [
+        "premise"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "remy",
+      "premise": "Replace every plank of a ship, one by one.",
+      "doodles": [
+        "box",
+        "ladder"
+      ],
+      "question": "Is it still the *same* ship?",
+      "reaction": "mind-blown",
+      "keyword": "imagine"
+    },
+    "exampleNarration": "Imagine you replace every plank of a ship, one by one, until no original piece is left. Is it still the same ship?"
+  },
+  {
+    "id": "title-card",
+    "name": "Title Card",
+    "description": "Chapter opener: a big hand-lettered title with a double accent underline, optional kicker and subtitle, a cast member pointing up at it and up to three small tilted doodles scribbled around. For the video intro, chapter breaks and section titles.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title (2–7 words). *asterisks* = accent."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional subtitle (≤ 10 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny label above (e.g. 'Chapter 2')."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon",
+            "none"
+          ],
+          "description": "Cast member (or 'none')."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Figure's pose (default point-up)."
+        },
+        "doodles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lightbulb",
+              "question",
+              "exclamation",
+              "coin",
+              "money",
+              "clock",
+              "globe",
+              "sun",
+              "moon",
+              "star",
+              "cloud",
+              "rain",
+              "house",
+              "building",
+              "tree",
+              "mountain",
+              "rocket",
+              "phone",
+              "laptop",
+              "book",
+              "heart",
+              "atom",
+              "gear",
+              "chart",
+              "chart-down",
+              "chart-pie",
+              "arrow",
+              "flag",
+              "coffee",
+              "box",
+              "ball",
+              "car",
+              "ant",
+              "cat",
+              "fish",
+              "whale",
+              "cell",
+              "virus",
+              "galaxy",
+              "planet",
+              "bomb",
+              "cake",
+              "chair",
+              "door",
+              "ladder",
+              "key",
+              "magnifier",
+              "rock",
+              "trophy",
+              "brain",
+              "dna",
+              "apple",
+              "fire",
+              "lightning",
+              "eye",
+              "person",
+              "crowd",
+              "warning",
+              "calendar",
+              "battery",
+              "robot",
+              "pizza",
+              "dinosaur",
+              "plane",
+              "pencil",
+              "hourglass",
+              "money-bag",
+              "target",
+              "ufo",
+              "document",
+              "scale",
+              "dog",
+              "tooth"
+            ],
+            "description": "Doodle."
+          },
+          "description": "0–3 small doodles around the title."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "kicker": "Chapter 1",
+      "title": "The *Universe*, briefly",
+      "subtitle": "(it's big)",
+      "character": "pip",
+      "pose": "point-up",
+      "doodles": [
+        "galaxy",
+        "planet",
+        "star"
+      ]
+    },
+    "exampleNarration": "Chapter one. The universe, briefly. It's big."
+  },
+  {
+    "id": "timeline-squiggle",
+    "name": "Timeline Squiggle",
+    "description": "A hand-drawn squiggly timeline (with a little loop) and 2–6 dated events: ticks, dates, labels and small doodles appear as each date is spoken while a cast member walks along the line to each event; the final event is in accent and an optional 'you are here' arrow ends it. Vertical in portrait. For history, origin stories and how-we-got-here.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Heading (2–6 words)."
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Date or step (1–3 words, e.g. '1969')."
+              },
+              "label": {
+                "type": "string",
+                "description": "What happened (≤ 7 words)."
+              },
+              "doodle": {
+                "type": "string",
+                "enum": [
+                  "lightbulb",
+                  "question",
+                  "exclamation",
+                  "coin",
+                  "money",
+                  "clock",
+                  "globe",
+                  "sun",
+                  "moon",
+                  "star",
+                  "cloud",
+                  "rain",
+                  "house",
+                  "building",
+                  "tree",
+                  "mountain",
+                  "rocket",
+                  "phone",
+                  "laptop",
+                  "book",
+                  "heart",
+                  "atom",
+                  "gear",
+                  "chart",
+                  "chart-down",
+                  "chart-pie",
+                  "arrow",
+                  "flag",
+                  "coffee",
+                  "box",
+                  "ball",
+                  "car",
+                  "ant",
+                  "cat",
+                  "fish",
+                  "whale",
+                  "cell",
+                  "virus",
+                  "galaxy",
+                  "planet",
+                  "bomb",
+                  "cake",
+                  "chair",
+                  "door",
+                  "ladder",
+                  "key",
+                  "magnifier",
+                  "rock",
+                  "trophy",
+                  "brain",
+                  "dna",
+                  "apple",
+                  "fire",
+                  "lightning",
+                  "eye",
+                  "person",
+                  "crowd",
+                  "warning",
+                  "calendar",
+                  "battery",
+                  "robot",
+                  "pizza",
+                  "dinosaur",
+                  "plane",
+                  "pencil",
+                  "hourglass",
+                  "money-bag",
+                  "target",
+                  "ufo",
+                  "document",
+                  "scale",
+                  "dog",
+                  "tooth"
+                ],
+                "description": "Optional small doodle."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word it appears on."
+              }
+            },
+            "required": [
+              "date",
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 events in order (≤ 5 recommended in square)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "pip",
+            "ada",
+            "hank",
+            "juno",
+            "remy",
+            "anon",
+            "none"
+          ],
+          "description": "Walker (landscape/square) or 'none'."
+        },
+        "youAreHere": {
+          "type": "string",
+          "description": "Optional end marker text (e.g. 'YOU ARE HERE')."
+        },
+        "endPose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "talk",
+            "explain",
+            "point",
+            "point-up",
+            "shrug",
+            "wave",
+            "think",
+            "panic",
+            "celebrate",
+            "sad",
+            "facepalm",
+            "hold",
+            "crossed",
+            "smug",
+            "mind-blown",
+            "sit",
+            "jump",
+            "fall"
+          ],
+          "description": "Walker's pose at the end (default point)."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "A brief history of flight",
+      "events": [
+        {
+          "date": "1903",
+          "label": "12 seconds in the air",
+          "doodle": "plane"
+        },
+        {
+          "date": "1969",
+          "label": "humans on the moon",
+          "doodle": "moon"
+        },
+        {
+          "date": "Today",
+          "label": "still no flying cars",
+          "doodle": "car"
+        }
+      ],
+      "character": "juno",
+      "youAreHere": "YOU ARE HERE"
+    },
+    "exampleNarration": "In 1903 humans managed twelve seconds in the air. By 1969 we were walking on the moon. Today, we still have no flying cars."
+  },
+  {
+    "id": "versus",
+    "name": "Versus",
+    "description": "Two sides face off: hand-lettered headers, a doodle (and optional cast member) per side, up to three short points each, a big accent 'VS' with a scribbled divider, and a verdict that circles the winner while their figure celebrates and the loser sulks. Top/bottom in portrait. For comparisons, myth vs fact, then vs now.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Header (1–3 words)."
+            },
+            "doodle": {
+              "type": "string",
+              "enum": [
+                "lightbulb",
+                "question",
+                "exclamation",
+                "coin",
+                "money",
+                "clock",
+                "globe",
+                "sun",
+                "moon",
+                "star",
+                "cloud",
+                "rain",
+                "house",
+                "building",
+                "tree",
+                "mountain",
+                "rocket",
+                "phone",
+                "laptop",
+                "book",
+                "heart",
+                "atom",
+                "gear",
+                "chart",
+                "chart-down",
+                "chart-pie",
+                "arrow",
+                "flag",
+                "coffee",
+                "box",
+                "ball",
+                "car",
+                "ant",
+                "cat",
+                "fish",
+                "whale",
+                "cell",
+                "virus",
+                "galaxy",
+                "planet",
+                "bomb",
+                "cake",
+                "chair",
+                "door",
+                "ladder",
+                "key",
+                "magnifier",
+                "rock",
+                "trophy",
+                "brain",
+                "dna",
+                "apple",
+                "fire",
+                "lightning",
+                "eye",
+                "person",
+                "crowd",
+                "warning",
+                "calendar",
+                "battery",
+                "robot",
+                "pizza",
+                "dinosaur",
+                "plane",
+                "pencil",
+                "hourglass",
+                "money-bag",
+                "target",
+                "ufo",
+                "document",
+                "scale",
+                "dog",
+                "tooth"
+              ],
+              "description": "Doodle for this side."
+            },
+            "character": {
+              "type": "string",
+              "enum": [
+                "pip",
+                "ada",
+                "hank",
+                "juno",
+                "remy",
+                "anon"
+              ],
+              "description": "Optional cast member for this side."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "0–3 points (≤ 6 words)."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Narration word it appears on."
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Header (1–3 words)."
+            },
+            "doodle": {
+              "type": "string",
+              "enum": [
+                "lightbulb",
+                "question",
+                "exclamation",
+                "coin",
+                "money",
+                "clock",
+                "globe",
+                "sun",
+                "moon",
+                "star",
+                "cloud",
+                "rain",
+                "house",
+                "building",
+                "tree",
+                "mountain",
+                "rocket",
+                "phone",
+                "laptop",
+                "book",
+                "heart",
+                "atom",
+                "gear",
+                "chart",
+                "chart-down",
+                "chart-pie",
+                "arrow",
+                "flag",
+                "coffee",
+                "box",
+                "ball",
+                "car",
+                "ant",
+                "cat",
+                "fish",
+                "whale",
+                "cell",
+                "virus",
+                "galaxy",
+                "planet",
+                "bomb",
+                "cake",
+                "chair",
+                "door",
+                "ladder",
+                "key",
+                "magnifier",
+                "rock",
+                "trophy",
+                "brain",
+                "dna",
+                "apple",
+                "fire",
+                "lightning",
+                "eye",
+                "person",
+                "crowd",
+                "warning",
+                "calendar",
+                "battery",
+                "robot",
+                "pizza",
+                "dinosaur",
+                "plane",
+                "pencil",
+                "hourglass",
+                "money-bag",
+                "target",
+                "ufo",
+                "document",
+                "scale",
+                "dog",
+                "tooth"
+              ],
+              "description": "Doodle for this side."
+            },
+            "character": {
+              "type": "string",
+              "enum": [
+                "pip",
+                "ada",
+                "hank",
+                "juno",
+                "remy",
+                "anon"
+              ],
+              "description": "Optional cast member for this side."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "0–3 points (≤ 6 words)."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Narration word it appears on."
+            }
+          },
+          "required": [
+            "label"
+          ],
+          "additionalProperties": false
+        },
+        "verdict": {
+          "type": "string",
+          "description": "Optional verdict line (≤ 12 words)."
+        },
+        "winner": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "none"
+          ],
+          "description": "Which side wins (circled in accent)."
+        },
+        "verdictKeyword": {
+          "type": "string",
+          "description": "Narration word on which the verdict appears."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "label": "Cats",
+        "doodle": "cat",
+        "character": "juno",
+        "points": [
+          "ignore you",
+          "sleep 16 hours"
+        ]
+      },
+      "right": {
+        "label": "Dogs",
+        "doodle": "dog",
+        "character": "hank",
+        "points": [
+          "love you",
+          "eat socks"
+        ]
+      },
+      "verdict": "Verdict: both judge you, differently.",
+      "winner": "left"
+    },
+    "exampleNarration": "Cats ignore you and sleep sixteen hours a day. Dogs love you, and eat your socks. Verdict: both judge you, differently."
+  }
+]

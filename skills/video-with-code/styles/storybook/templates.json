@@ -1,0 +1,916 @@
+[
+ {
+  "id": "story-page",
+  "name": "Story page",
+  "description": "The workhorse: a painted location blooms in, a cast member (optionally with a companion) stands in it and talks with lip-sync, and the page text beside/below the painting inks in word by word as it is read. Use for most storytelling and explaining beats.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "location": {
+     "type": "string",
+     "enum": [
+      "forest",
+      "village",
+      "meadow",
+      "seaside",
+      "night-sky",
+      "cottage",
+      "mountains"
+     ],
+     "description": "Painted location. Keep the same location for scenes in the same place."
+    },
+    "time": {
+     "type": "string",
+     "enum": [
+      "day",
+      "dusk",
+      "night"
+     ],
+     "description": "Time of day for the painting (night adds stars and glowing windows)."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage"
+     ],
+     "description": "The character who tells/acts this page. Recurring cast: wren (curious girl, mustard raincoat), oli (cheerful boy, striped jumper), nana (grandmother, spectacles), rusty (fox), bramble (big gentle bear), pippin (shy rabbit), sage (wise owl)."
+    },
+    "companion": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage",
+      "none"
+     ],
+     "description": "Optional second character who listens, or \"none\"."
+    },
+    "text": {
+     "type": "string",
+     "description": "The page text — the narration of this scene (or its key sentence), max 45 words. *word* = painted emphasis."
+    },
+    "heading": {
+     "type": "string",
+     "description": "Optional small-caps line above the text (e.g. \"In the deep, dark wood\"), or empty string."
+    },
+    "gesture": {
+     "type": "string",
+     "enum": [
+      "none",
+      "wave",
+      "point",
+      "present",
+      "open",
+      "cheer",
+      "think",
+      "shrug",
+      "hold",
+      "heart",
+      "nod",
+      "wonder"
+     ],
+     "description": "One gesture the character makes (on gestureWord)."
+    },
+    "gestureWord": {
+     "type": "string",
+     "description": "A word from the narration where the gesture happens, or empty string."
+    }
+   },
+   "required": [
+    "location",
+    "time",
+    "character",
+    "companion",
+    "text",
+    "heading",
+    "gesture",
+    "gestureWord"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "location": "forest",
+   "time": "day",
+   "character": "wren",
+   "companion": "rusty",
+   "text": "Deep in the old wood, Wren met a fox who knew *every* path by heart.",
+   "heading": "Chapter Two",
+   "gesture": "wave",
+   "gestureWord": "fox"
+  },
+  "exampleNarration": "Deep in the old wood, Wren met a fox who knew every path by heart."
+ },
+ {
+  "id": "title-page",
+  "name": "Title page",
+  "description": "A book cover / chapter opener: the page turns, a chapter line and a big serif title appear beside a painted vignette of a location with up to two characters waving, a fleuron and painted corner flourishes; optional italic subtitle. Use for the video opening and chapter starts.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "The title, max 7 words. *word* = painted watercolor letters."
+    },
+    "subtitle": {
+     "type": "string",
+     "description": "Optional italic line under the title (max 14 words), or empty string."
+    },
+    "chapter": {
+     "type": "string",
+     "description": "Small-caps line above the title, e.g. \"Chapter One\" or \"A Bedtime Story\"; may be empty."
+    },
+    "location": {
+     "type": "string",
+     "enum": [
+      "forest",
+      "village",
+      "meadow",
+      "seaside",
+      "night-sky",
+      "cottage",
+      "mountains"
+     ],
+     "description": "Painted location. Keep the same location for scenes in the same place."
+    },
+    "time": {
+     "type": "string",
+     "enum": [
+      "day",
+      "dusk",
+      "night"
+     ],
+     "description": "Time of day for the painting."
+    },
+    "characters": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "enum": [
+       "wren",
+       "oli",
+       "nana",
+       "rusty",
+       "bramble",
+       "pippin",
+       "sage"
+      ]
+     },
+     "description": "0-2 cast members shown in the vignette."
+    }
+   },
+   "required": [
+    "title",
+    "subtitle",
+    "chapter",
+    "location",
+    "time",
+    "characters"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "The *Lantern* in the Wood",
+   "subtitle": "A small light can find a long way home.",
+   "chapter": "Chapter One",
+   "location": "forest",
+   "time": "dusk",
+   "characters": [
+    "wren",
+    "rusty"
+   ]
+  },
+  "exampleNarration": "Chapter one. The lantern in the wood. A small light can find a long way home."
+ },
+ {
+  "id": "character-dialogue",
+  "name": "Character dialogue",
+  "description": "Two cast members face each other in a painted location; each line appears in a painted speech cloud above its speaker while that character talks (lip-sync) and gestures, and the other listens and nods. Lines should be the narration's own wording, in order.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "location": {
+     "type": "string",
+     "enum": [
+      "forest",
+      "village",
+      "meadow",
+      "seaside",
+      "night-sky",
+      "cottage",
+      "mountains"
+     ],
+     "description": "Painted location. Keep the same location for scenes in the same place."
+    },
+    "time": {
+     "type": "string",
+     "enum": [
+      "day",
+      "dusk",
+      "night"
+     ],
+     "description": "Time of day for the painting."
+    },
+    "left": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage"
+     ],
+     "description": "Character on the left (faces right). Recurring cast: wren (curious girl, mustard raincoat), oli (cheerful boy, striped jumper), nana (grandmother, spectacles), rusty (fox), bramble (big gentle bear), pippin (shy rabbit), sage (wise owl)."
+    },
+    "right": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage"
+     ],
+     "description": "Character on the right (faces left)."
+    },
+    "lines": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "speaker": {
+        "type": "string",
+        "enum": [
+         "left",
+         "right"
+        ],
+        "description": "Who says it."
+       },
+       "text": {
+        "type": "string",
+        "description": "The line, max 16 words, taken from the narration."
+       }
+      },
+      "required": [
+       "speaker",
+       "text"
+      ],
+      "additionalProperties": false
+     },
+     "description": "2-4 lines in narration order."
+    }
+   },
+   "required": [
+    "location",
+    "time",
+    "left",
+    "right",
+    "lines"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "location": "cottage",
+   "time": "night",
+   "left": "wren",
+   "right": "nana",
+   "lines": [
+    {
+     "speaker": "left",
+     "text": "Nana, why do the stars come out at night?"
+    },
+    {
+     "speaker": "right",
+     "text": "They are always there, dear. The *night* just lets them shine."
+    }
+   ]
+  },
+  "exampleNarration": "Nana, why do the stars come out at night? They are always there, dear. The night just lets them shine."
+ },
+ {
+  "id": "map-of-the-land",
+  "name": "Map of the land",
+  "description": "An illustrated storybook map: a painted island in a pale sea, a title cartouche and a compass rose; 2-6 places paint themselves on as they are named and a dotted trail grows between them while an optional character walks the journey. For journeys, routes, quests, spread-out places, or steps of a process as a trip.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Map title (max 5 words), or empty string."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage",
+      "none"
+     ],
+     "description": "Character who walks the trail, or \"none\"."
+    },
+    "places": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string",
+        "description": "Place label, 1-3 words."
+       },
+       "landmark": {
+        "type": "string",
+        "description": "Landmark to paint — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration when we arrive here."
+       }
+      },
+      "required": [
+       "name",
+       "landmark",
+       "keyword"
+      ],
+      "additionalProperties": false
+     },
+     "description": "2-6 places in travel order."
+    }
+   },
+   "required": [
+    "title",
+    "character",
+    "places"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "The Way to Grandma's",
+   "character": "pippin",
+   "places": [
+    {
+     "name": "Burrow",
+     "landmark": "house",
+     "keyword": "burrow"
+    },
+    {
+     "name": "Whispering Woods",
+     "landmark": "forest",
+     "keyword": "woods"
+    },
+    {
+     "name": "Old Bridge",
+     "landmark": "bridge",
+     "keyword": "bridge"
+    },
+    {
+     "name": "Hilltop Cottage",
+     "landmark": "windmill",
+     "keyword": "hilltop"
+    }
+   ]
+  },
+  "exampleNarration": "Pippin set off from his burrow, hopped through the whispering woods, across the old bridge, and up to the hilltop cottage."
+ },
+ {
+  "id": "list-of-things",
+  "name": "List of things",
+  "description": "A title and 1-6 painted vignettes — each a soft watercolor spot with a pen-and-wash object painted on, a serif label and an optional italic note — appearing on their key words; an optional character presents them. For naming things, ingredients, tips, reasons, a collection.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Heading (max 7 words), or empty string."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage",
+      "none"
+     ],
+     "description": "Optional presenter, or \"none\"."
+    },
+    "items": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "label": {
+        "type": "string",
+        "description": "Label, 1-4 words. *word* = emphasis."
+       },
+       "object": {
+        "type": "string",
+        "description": "What to paint — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+       },
+       "note": {
+        "type": "string",
+        "description": "Optional italic note, max 8 words, or empty string."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration when it appears."
+       }
+      },
+      "required": [
+       "label",
+       "object",
+       "note",
+       "keyword"
+      ],
+      "additionalProperties": false
+     },
+     "description": "1-6 items in narration order."
+    }
+   },
+   "required": [
+    "title",
+    "character",
+    "items"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "What Bramble packed",
+   "character": "bramble",
+   "items": [
+    {
+     "label": "A jar of honey",
+     "object": "honey",
+     "note": "for sharing",
+     "keyword": "honey"
+    },
+    {
+     "label": "A warm scarf",
+     "object": "heart",
+     "note": "knitted by Nana",
+     "keyword": "scarf"
+    },
+    {
+     "label": "A little lantern",
+     "object": "lantern",
+     "note": "",
+     "keyword": "lantern"
+    }
+   ]
+  },
+  "exampleNarration": "Bramble packed three things: a jar of honey for sharing, a warm scarf knitted by Nana, and a little lantern."
+ },
+ {
+  "id": "two-pages",
+  "name": "Two-page spread",
+  "description": "An open book spread (side by side; stacked in portrait) with a soft gutter shadow: the left page and then the right page each get a small-caps heading, a painted vignette and 1-4 lines; a painted 'or' seal joins them. For comparisons, then vs now, myth vs truth, two choices.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "left": {
+     "type": "object",
+     "properties": {
+      "heading": {
+       "type": "string",
+       "description": "Left page heading, 1-3 words."
+      },
+      "object": {
+       "type": "string",
+       "description": "Vignette — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+      },
+      "points": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "1-4 short lines (max 8 words each)."
+      }
+     },
+     "required": [
+      "heading",
+      "object",
+      "points"
+     ],
+     "additionalProperties": false
+    },
+    "right": {
+     "type": "object",
+     "properties": {
+      "heading": {
+       "type": "string",
+       "description": "Right page heading, 1-3 words."
+      },
+      "object": {
+       "type": "string",
+       "description": "Vignette — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+      },
+      "points": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "1-4 short lines (max 8 words each)."
+      }
+     },
+     "required": [
+      "heading",
+      "object",
+      "points"
+     ],
+     "additionalProperties": false
+    },
+    "versus": {
+     "type": "string",
+     "description": "Word on the seal between the pages, e.g. \"or\", \"vs\", \"then\"; max 4 letters."
+    },
+    "keyword": {
+     "type": "string",
+     "description": "Word from the narration when the right page appears, or empty string."
+    }
+   },
+   "required": [
+    "left",
+    "right",
+    "versus",
+    "keyword"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "left": {
+    "heading": "Winter",
+    "object": "snowflake",
+    "points": [
+     "Bears sleep in their dens",
+     "Rivers turn to ice"
+    ]
+   },
+   "right": {
+    "heading": "Spring",
+    "object": "flower",
+    "points": [
+     "Everyone *wakes* up",
+     "Meadows fill with flowers"
+    ]
+   },
+   "versus": "then",
+   "keyword": "spring"
+  },
+  "exampleNarration": "In winter, bears sleep in their dens and rivers turn to ice. Then spring comes, everyone wakes up and the meadows fill with flowers."
+ },
+ {
+  "id": "number-painting",
+  "name": "Number painting",
+  "description": "A big watercolor-painted number counts up on its key word over a soft wash, with an italic caption; small painted objects tally it (one per unit when the value is 1-12); an optional character points or cheers. For a single striking number or fact.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "value": {
+     "type": "number",
+     "description": "The number to count up to."
+    },
+    "prefix": {
+     "type": "string",
+     "description": "Text before the number (e.g. \"$\"), or empty string."
+    },
+    "suffix": {
+     "type": "string",
+     "description": "Text after the number (e.g. \"%\", \" years\"), or empty string."
+    },
+    "label": {
+     "type": "string",
+     "description": "Caption under the number, max 12 words."
+    },
+    "object": {
+     "type": "string",
+     "description": "Tally object — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+    },
+    "keyword": {
+     "type": "string",
+     "description": "Word from the narration when the number lands, or empty string."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage",
+      "none"
+     ],
+     "description": "Optional character, or \"none\"."
+    }
+   },
+   "required": [
+    "value",
+    "prefix",
+    "suffix",
+    "label",
+    "object",
+    "keyword",
+    "character"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "value": 7,
+   "prefix": "",
+   "suffix": "",
+   "label": "acorns hidden under the old oak",
+   "object": "acorn",
+   "keyword": "seven",
+   "character": "oli"
+  },
+  "exampleNarration": "Oli counted seven acorns hidden under the old oak tree."
+ },
+ {
+  "id": "winding-path",
+  "name": "Winding path",
+  "description": "A timeline drawn as a winding sandy path across a meadow: 2-6 stops get a painted flag, a small-caps date and a label as they are narrated, while a dotted trail grows and an optional character walks from stop to stop. For history, sequences, steps, life stages.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Heading (max 6 words), or empty string."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage",
+      "none"
+     ],
+     "description": "Character who walks the path, or \"none\"."
+    },
+    "stops": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "date": {
+        "type": "string",
+        "description": "Short date/step tag (e.g. \"Spring\", \"1850\", \"Step 1\"), or empty string."
+       },
+       "label": {
+        "type": "string",
+        "description": "What happened, max 6 words."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration for this stop."
+       }
+      },
+      "required": [
+       "date",
+       "label",
+       "keyword"
+      ],
+      "additionalProperties": false
+     },
+     "description": "2-6 stops in order."
+    }
+   },
+   "required": [
+    "title",
+    "character",
+    "stops"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "How a seed becomes a tree",
+   "character": "wren",
+   "stops": [
+    {
+     "date": "Spring",
+     "label": "A seed is planted",
+     "keyword": "planted"
+    },
+    {
+     "date": "Summer",
+     "label": "A green *sprout*",
+     "keyword": "sprout"
+    },
+    {
+     "date": "Years later",
+     "label": "A tall oak tree",
+     "keyword": "oak"
+    }
+   ]
+  },
+  "exampleNarration": "In spring a seed is planted. By summer a green sprout appears. And years later, it is a tall oak tree."
+ },
+ {
+  "id": "quote-page",
+  "name": "Quote page",
+  "description": "A framed book page with painted corner flourishes: the quotation is set in large italic serif behind an illuminated, watercolor-gilded drop cap and inks in as it is read; a fleuron and the attribution follow. For quotations, proverbs, a line from a letter.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "quote": {
+     "type": "string",
+     "description": "The quotation, max 30 words. *word* = emphasis."
+    },
+    "author": {
+     "type": "string",
+     "description": "Who said it, or empty string."
+    },
+    "ornament": {
+     "type": "string",
+     "enum": [
+      "vines",
+      "stars",
+      "leaves"
+     ],
+     "description": "Extra decoration: vines (corners only), stars (twinkling), leaves (drifting)."
+    }
+   },
+   "required": [
+    "quote",
+    "author",
+    "ornament"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "quote": "Even the smallest person can change the course of the *future*.",
+   "author": "J.R.R. Tolkien",
+   "ornament": "leaves"
+  },
+  "exampleNarration": "As Tolkien wrote: even the smallest person can change the course of the future."
+ },
+ {
+  "id": "dream-sequence",
+  "name": "Dream sequence",
+  "description": "A full night-sky painting with moon, twinkling stars, fireflies and a shooting star; a character gazes up while a painted thought cloud rises from them and 1-3 dream objects paint themselves in and float; a soft italic line inks in. For wishes, imagination, bedtime, 'what if', hopes and goals.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "character": {
+     "type": "string",
+     "enum": [
+      "wren",
+      "oli",
+      "nana",
+      "rusty",
+      "bramble",
+      "pippin",
+      "sage"
+     ],
+     "description": "The dreamer. Recurring cast: wren (curious girl, mustard raincoat), oli (cheerful boy, striped jumper), nana (grandmother, spectacles), rusty (fox), bramble (big gentle bear), pippin (shy rabbit), sage (wise owl)."
+    },
+    "text": {
+     "type": "string",
+     "description": "The line set on the page, max 25 words."
+    },
+    "dreams": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "object": {
+        "type": "string",
+        "description": "Dream object — a painted object name: apple, pear, acorn, mushroom, leaf, flower, tulip, tree, pine, forest, house, castle, tower, lighthouse, windmill, bridge, well, mountain, boat, star, moon, sun, cloud, rainbow, heart, book, key, lantern, candle, teacup, cake, bread, honey, basket, umbrella, feather, shell, fish, bird, butterfly, crown, gift, clock, letter, map, compass, egg, carrot, berries, seed, snowflake, tent, cave, lake, village (other words become a pencilled icon)."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration when it appears."
+       }
+      },
+      "required": [
+       "object",
+       "keyword"
+      ],
+      "additionalProperties": false
+     },
+     "description": "1-3 dreams in narration order."
+    }
+   },
+   "required": [
+    "character",
+    "text",
+    "dreams"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "character": "oli",
+   "text": "That night, Oli dreamed of a *castle* in the clouds and a boat made of stars.",
+   "dreams": [
+    {
+     "object": "castle",
+     "keyword": "castle"
+    },
+    {
+     "object": "boat",
+     "keyword": "boat"
+    }
+   ]
+  },
+  "exampleNarration": "That night, Oli dreamed of a castle in the clouds and a boat made of stars."
+ },
+ {
+  "id": "the-end",
+  "name": "The end",
+  "description": "The closing page: the moral of the story in italic serif, a fleuron, a painted vignette with up to three characters waving goodbye, and a watercolor 'The End' (or your closing words) painted on, with fireflies drifting. For endings, takeaways, conclusions.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "moral": {
+     "type": "string",
+     "description": "The moral / takeaway, max 20 words."
+    },
+    "closing": {
+     "type": "string",
+     "description": "Closing words, max 3 words (usually \"The End\")."
+    },
+    "location": {
+     "type": "string",
+     "enum": [
+      "forest",
+      "village",
+      "meadow",
+      "seaside",
+      "night-sky",
+      "cottage",
+      "mountains"
+     ],
+     "description": "Painted location. Keep the same location for scenes in the same place."
+    },
+    "time": {
+     "type": "string",
+     "enum": [
+      "day",
+      "dusk",
+      "night"
+     ],
+     "description": "Time of day for the vignette (dusk is lovely)."
+    },
+    "characters": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "enum": [
+       "wren",
+       "oli",
+       "nana",
+       "rusty",
+       "bramble",
+       "pippin",
+       "sage"
+      ]
+     },
+     "description": "1-3 cast members waving goodbye."
+    }
+   },
+   "required": [
+    "moral",
+    "closing",
+    "location",
+    "time",
+    "characters"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "moral": "And so they learned that kindness, like a lantern, grows brighter when it is shared.",
+   "closing": "The End",
+   "location": "meadow",
+   "time": "dusk",
+   "characters": [
+    "wren",
+    "rusty",
+    "bramble"
+   ]
+  },
+  "exampleNarration": "And so they learned that kindness, like a lantern, grows brighter when it is shared. The end."
+ }
+]

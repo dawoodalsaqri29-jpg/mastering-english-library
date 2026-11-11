@@ -1,0 +1,73 @@
+/* synthwave — 80s retro-future sunset: striped sun, magenta grid, wire mountains, chrome italic caps, camcorder HUD */
+:root {
+  --bg: #16003D;
+  --fg: #F5F0FF;
+  --muted: #B9A3E0;
+  --accent: #FF3CAC;
+  --accent-2: #22F0F0;
+  --accent-3: #FFC23A;
+  --glow-rgb: 255, 60, 172;
+  --chrome: linear-gradient(180deg, #FFFFFF 0%, #D6F4FF 26%, #7FB8FF 46%, #2A1460 50%, #FF7AC8 54%, #FFD0EC 74%, #FFFFFF 100%);
+  --surface: rgba(30, 0, 70, 0.62);
+  --line: rgba(245, 240, 255, 0.18);
+  --on-accent: #16003D;
+  --bar-muted: rgba(185, 163, 224, 0.3);
+  --hl: rgba(255, 60, 172, 0.3);
+  --halo: rgba(255, 60, 172, 0.14);
+  --dot: transparent;
+  --card-border: calc(var(--u) * 2) solid rgba(34, 240, 240, 0.55);
+  --shadow: 0 0 calc(var(--u) * 30) rgba(255, 60, 172, 0.22), inset 0 0 calc(var(--u) * 24) rgba(34, 240, 240, 0.08);
+  --shadow-lg: 0 0 calc(var(--u) * 60) rgba(255, 60, 172, 0.3);
+  --radius: calc(var(--u) * 4);
+  --pad-y: calc(var(--h, 1080px) * 0.12);
+  --pad-bottom: calc(var(--h, 1080px) * 0.32);
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 900;
+  --title-tracking: -0.02em;
+  --title-leading: 0.98;
+  --code-bg: rgba(18, 0, 46, 0.92);
+  --code-border: calc(var(--u) * 2) solid rgba(34, 240, 240, 0.5);
+  --code-hi: rgba(255, 60, 172, 0.16);
+  --tk-k: #FF3CAC;
+  --tk-s: #FFC23A;
+  --tk-f: #22F0F0;
+  --tk-n: #B26BFF;
+  --neg: #FF3CAC;
+  --pos: #22F0F0;
+  --edge: rgba(34, 240, 240, 0.75);
+  --badge-bg: rgba(34, 240, 240, 0.08);
+}
+html.is-portrait, html.is-square { --pad-y: calc(var(--h, 1920px) * 0.1); --pad-bottom: calc(var(--h, 1920px) * 0.32); }
+/* chrome type: the gradient is clipped to each word so masked word reveals keep it */
+.kind-neon .v-title { text-transform: uppercase; font-style: italic; filter: drop-shadow(0 calc(var(--u) * 4) 0 #2A0050) drop-shadow(0 0 calc(var(--u) * 22) rgba(255, 60, 172, 0.55)); }
+.kind-neon .v-title .v-word,
+.kind-neon .v-title:not(:has(.v-word)),
+.kind-neon .v-statnum,
+.kind-neon .t-section .v-secnum,
+.kind-neon .t-kinetic .v-kw {
+  background: var(--chrome);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.kind-neon .v-title .v-em .v-word,
+.kind-neon .v-title .v-em,
+.kind-neon .t-kinetic .v-kw.is-em { background: none; -webkit-text-fill-color: var(--accent-2); color: var(--accent-2); }
+.kind-neon .v-em { color: var(--accent-2); text-shadow: 0 0 calc(var(--u) * 22) rgba(34, 240, 240, 0.7); }
+.kind-neon .v-text { color: var(--fg); text-shadow: 0 0 calc(var(--u) * 4) rgba(22, 0, 61, 0.95), 0 calc(var(--u) * 2) calc(var(--u) * 14) rgba(22, 0, 61, 0.9); }
+.kind-neon .v-kicker { color: var(--accent-3); letter-spacing: 0.3em; font-weight: 700; text-shadow: 0 0 calc(var(--u) * 14) rgba(255, 194, 58, 0.6); }
+.kind-neon .v-line { height: calc(var(--u) * 5); width: calc(var(--u) * 240); border-radius: 0; background: linear-gradient(90deg, var(--accent-3), var(--accent), var(--accent-2)); box-shadow: 0 0 calc(var(--u) * 18) rgba(255, 60, 172, 0.8); }
+.kind-neon .v-num { background: transparent; color: var(--accent-2); border: calc(var(--u) * 3) solid var(--accent); box-shadow: 0 0 calc(var(--u) * 18) rgba(255, 60, 172, 0.6); font-family: var(--font-kicker); font-style: italic; }
+.kind-neon .v-icon-badge { color: var(--accent-2); border: calc(var(--u) * 2) solid rgba(255, 60, 172, 0.55); box-shadow: 0 0 calc(var(--u) * 18) rgba(255, 60, 172, 0.3); }
+.kind-neon .v-statnum { font-style: italic; filter: drop-shadow(0 0 calc(var(--u) * 30) rgba(255, 60, 172, 0.6)); }
+.kind-neon .v-vs { background: linear-gradient(180deg, var(--accent-3), var(--accent)); color: #16003D; font-style: italic; box-shadow: 0 0 calc(var(--u) * 26) rgba(255, 60, 172, 0.7); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-neon .t-section .v-secnum { -webkit-text-stroke: 0; font-style: italic; }
+.kind-neon .t-section .v-wipe { background: linear-gradient(180deg, var(--accent-3), var(--accent)); }
+.kind-neon .t-bars .v-bar.is-hi { background: linear-gradient(180deg, var(--accent-3), var(--accent)); box-shadow: 0 0 calc(var(--u) * 26) rgba(255, 60, 172, 0.6); }
+.kind-neon .t-bars.is-h .v-bar.is-hi { background: linear-gradient(90deg, var(--accent), var(--accent-3)); }
+.kind-neon .t-timeline .v-date { font-family: var(--font-kicker); color: var(--accent-3); font-style: italic; }
+.kind-neon .t-timeline .v-dot { box-shadow: 0 0 calc(var(--u) * 16) rgba(255, 60, 172, 0.8); }
+.kind-neon .t-line .v-lc-line { filter: drop-shadow(0 0 calc(var(--u) * 10) rgba(255, 60, 172, 0.9)); }
+.kind-neon .t-line .v-lc-call { background: var(--accent-2); color: #16003D; font-family: var(--font-kicker); }
+.kind-neon .t-diagram .v-edge { filter: drop-shadow(0 0 calc(var(--u) * 6) rgba(34, 240, 240, 0.8)); }

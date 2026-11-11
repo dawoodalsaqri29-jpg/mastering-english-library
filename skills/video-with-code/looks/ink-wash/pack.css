@@ -1,0 +1,50 @@
+/* ink-wash — East Asian ink painting: rice paper, misty ink mountains, brush-black type, vermilion seal */
+:root {
+  --bg: #F3EEE3;
+  --fg: #1C1C1C;
+  --muted: #6B665C;
+  --accent: #B7282E;
+  --accent-2: #44546A;
+  --accent-3: #7A8B6F;
+  --surface: rgba(255, 255, 255, 0.35);
+  --line: rgba(28, 28, 28, 0.28);
+  --on-accent: #F3EEE3;
+  --bar-muted: rgba(28, 28, 28, 0.16);
+  --halo: transparent;
+  --shadow: none;
+  --card-border: 1px solid rgba(28, 28, 28, 0.25);
+  --radius: 0px;
+  --font-display: "Noto Serif", "Noto Serif CJK SC", "Noto Serif CJK JP", Georgia, serif;
+  --font-quote: "Noto Serif", "Noto Serif CJK SC", "Noto Serif CJK JP", Georgia, serif;
+  --title-weight: 600;
+  --quote-weight: 400;
+  --title-tracking: 0.02em;
+  --title-leading: 1.15;
+  --code-bg: #F8F4EA;
+  --code-fg: #1C1C1C;
+  --code-chrome: #EAE3D3;
+  --code-border: 1px solid rgba(28, 28, 28, 0.3);
+  --code-hi: rgba(183, 40, 46, 0.1);
+  --tk-k: #B7282E;
+  --tk-s: #44546A;
+  --tk-f: #1C1C1C;
+  --tk-n: #7A8B6F;
+  --tk-c: #8E887B;
+  --neg: #B7282E;
+  --pos: #44546A;
+  --edge: rgba(28, 28, 28, 0.6);
+  --badge-bg: transparent;
+}
+.kind-documentary .v-em { color: var(--accent); }
+.kind-documentary .v-kicker { letter-spacing: 0.5em; font-weight: 500; color: var(--muted); }
+.kind-documentary .v-line { height: calc(var(--u) * 4); width: calc(var(--u) * 180); border-radius: 50%; background: radial-gradient(ellipse at 30% 50%, var(--fg) 0%, rgba(28, 28, 28, 0.6) 55%, transparent 75%); }
+.kind-documentary .v-num { background: transparent; color: var(--accent); border: 1px solid var(--accent); border-radius: calc(var(--u) * 4); font-family: var(--font-display); }
+.kind-documentary .v-icon-badge { background: transparent; border: 1px solid rgba(28, 28, 28, 0.4); color: var(--fg); }
+.kind-documentary .v-statnum { font-family: var(--font-display); font-weight: 500; }
+.kind-documentary .v-vs { background: var(--accent); color: var(--bg); border-radius: calc(var(--u) * 4); font-family: var(--font-display); }
+.kind-documentary .t-section .v-secnum { color: var(--fg); -webkit-text-stroke: 0; opacity: 0.85; font-weight: 400; }
+.kind-documentary .t-section .v-wipe { background: var(--fg); }
+.kind-documentary .t-line .v-lc-call { background: var(--accent); color: var(--bg); }
+.kind-documentary .t-diagram .v-node.is-hub { color: var(--bg); }
+.kind-documentary .t-bars .v-bar { background: rgba(28, 28, 28, 0.55); }
+.kind-documentary .t-bars .v-bar.is-hi { background: var(--accent); }

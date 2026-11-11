@@ -1,0 +1,58 @@
+/* neon-tech — futuristic dark navy, cyan/magenta glow, grid floor, mono labels */
+:root {
+  --bg: #05060F;
+  --fg: #EAF2FF;
+  --muted: #7F8BB3;
+  --accent: #22D3EE;
+  --accent-2: #E879F9;
+  --accent-3: #A3E635;
+  --glow-rgb: 34, 211, 238;
+  --surface: rgba(14, 22, 52, 0.62);
+  --line: rgba(127, 139, 179, 0.28);
+  --on-accent: #05060F;
+  --bar-muted: rgba(127, 139, 179, 0.38);
+  --halo: rgba(34, 211, 238, 0.16);
+  --card-border: 1px solid rgba(34, 211, 238, 0.38);
+  --shadow: 0 0 calc(var(--u) * 34) rgba(34, 211, 238, 0.14), inset 0 0 calc(var(--u) * 34) rgba(34, 211, 238, 0.06);
+  --radius: calc(var(--u) * 16);
+  --title-weight: 800;
+  --title-tracking: -0.03em;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --code-bg: rgba(6, 10, 28, 0.92);
+  --code-border: 1px solid rgba(34, 211, 238, 0.4);
+  --shadow-lg: 0 0 calc(var(--u) * 60) rgba(34, 211, 238, 0.18);
+  --code-hi: rgba(34, 211, 238, 0.14);
+  --tk-k: #E879F9;
+  --tk-s: #A3E635;
+  --tk-f: #22D3EE;
+  --tk-n: #FBBF24;
+  --neg: #FB7185;
+  --pos: #A3E635;
+  --edge: rgba(34, 211, 238, 0.7);
+  --badge-bg: rgba(34, 211, 238, 0.1);
+}
+.kind-neon .v-title { text-shadow: 0 0 calc(var(--u) * 26) rgba(34, 211, 238, 0.32); }
+.kind-neon .v-em { color: var(--accent-2); text-shadow: 0 0 calc(var(--u) * 24) rgba(232, 121, 249, 0.75); }
+.kind-neon .v-kicker { letter-spacing: 0.2em; font-weight: 600; text-shadow: 0 0 calc(var(--u) * 14) rgba(34, 211, 238, 0.7); }
+.kind-neon .v-kicker::before { content: "// "; opacity: 0.6; }
+.kind-neon .v-line { box-shadow: 0 0 calc(var(--u) * 20) rgba(34, 211, 238, 0.9); background: linear-gradient(90deg, var(--accent), var(--accent-2)); width: calc(var(--u) * 220); height: calc(var(--u) * 5); }
+.kind-neon .v-statnum { color: #fff; text-shadow: 0 0 calc(var(--u) * 30) rgba(34, 211, 238, 0.9), 0 0 calc(var(--u) * 80) rgba(34, 211, 238, 0.5); }
+.kind-neon .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 3) solid var(--accent); box-shadow: 0 0 calc(var(--u) * 18) rgba(34, 211, 238, 0.55), inset 0 0 calc(var(--u) * 12) rgba(34, 211, 238, 0.3); font-family: var(--font-kicker); }
+.kind-neon .v-icon-badge { border: 1px solid rgba(34, 211, 238, 0.45); box-shadow: 0 0 calc(var(--u) * 18) rgba(34, 211, 238, 0.25); }
+.kind-neon .v-bar.is-hi { background: linear-gradient(180deg, #67E8F9, #22D3EE); box-shadow: 0 0 calc(var(--u) * 30) rgba(34, 211, 238, 0.65); }
+.kind-neon .t-bars.is-h .v-bar.is-hi { background: linear-gradient(90deg, #22D3EE, #E879F9); }
+.kind-neon .t-bars .v-val, .kind-neon .t-bars .v-hval { font-family: var(--font-kicker); }
+.kind-neon .v-vs { background: #05060F; color: var(--accent-2); border: calc(var(--u) * 3) solid var(--accent-2); box-shadow: 0 0 calc(var(--u) * 26) rgba(232, 121, 249, 0.7), inset 0 0 calc(var(--u) * 16) rgba(232, 121, 249, 0.4); font-family: var(--font-kicker); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-neon .t-compare .v-side.is-right { border-color: rgba(232, 121, 249, 0.45); box-shadow: 0 0 calc(var(--u) * 34) rgba(232, 121, 249, 0.14), inset 0 0 calc(var(--u) * 34) rgba(232, 121, 249, 0.06); }
+.kind-neon .t-timeline .v-date { font-family: var(--font-kicker); text-shadow: 0 0 calc(var(--u) * 16) rgba(34, 211, 238, 0.6); }
+.kind-neon .t-timeline .v-tl-prog { box-shadow: 0 0 calc(var(--u) * 18) rgba(34, 211, 238, 0.9); }
+.kind-neon .t-timeline .v-dot { box-shadow: 0 0 calc(var(--u) * 18) rgba(34, 211, 238, 0.8); }
+.kind-neon .t-section .v-secnum { -webkit-text-stroke: calc(var(--u) * 3) var(--accent); filter: drop-shadow(0 0 calc(var(--u) * 18) rgba(34, 211, 238, 0.8)); }
+.kind-neon .t-section .v-wipe { background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.kind-neon .t-line .v-lc-line { filter: drop-shadow(0 0 calc(var(--u) * 10) rgba(34, 211, 238, 0.9)); }
+.kind-neon .t-line .v-lc-call { background: var(--accent); color: var(--bg); font-family: var(--font-kicker); }
+.kind-neon .t-line .v-lc-dot { box-shadow: 0 0 calc(var(--u) * 20) var(--accent); }
+.kind-neon .t-diagram .v-edge { filter: drop-shadow(0 0 calc(var(--u) * 6) rgba(34, 211, 238, 0.8)); }
+.kind-neon .t-kinetic .v-kw.is-em { color: var(--accent-2); text-shadow: 0 0 calc(var(--u) * 26) rgba(232, 121, 249, 0.8); }
+.kind-neon .t-kinetic .v-phrase { text-shadow: 0 0 calc(var(--u) * 26) rgba(34, 211, 238, 0.35); }

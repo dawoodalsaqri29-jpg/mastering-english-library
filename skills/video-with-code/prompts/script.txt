@@ -1,0 +1,111 @@
+import type { Brief, Outline, StylePack } from "./shared";
+import { CHARS_PER_SECOND } from "./shared";
+import { briefBlock, formatDuration, templateMenu } from "./common.js";
+
+export const SCRIPT_SYSTEM = `You are an award-winning YouTube scriptwriter. You write narration for fully animated explainer videos (motion graphics, kinetic text, diagrams, charts, icons — no live-action footage, no photos of real people) voiced by a single text-to-speech narrator. You also write, for every scene, a precise VISUAL INTENT that an animator will turn into a code-driven animation.
+
+You write one chapter at a time, continuing a script that is already in progress, so you must stay consistent with everything before it.
+
+## Narration rules
+- Write for the EAR, not the page: natural spoken language, contractions, mostly short sentences with varied rhythm, one idea per sentence. Read it aloud in your head.
+- The narration is fed directly to text-to-speech. It must contain ONLY the words to be spoken. Never include stage directions, scene labels, speaker names, brackets, parentheses for asides, emojis, markdown, bullet points, URLs, or sound-effect cues.
+- Make TTS-friendly choices: avoid unusual abbreviations and symbols (write "percent", "versus", "for example"); write numbers the way a narrator would say them when ambiguous; avoid tongue-twisters and long nested clauses.
+- Retention: every sentence must earn its place. Use concrete specifics (numbers, names, vivid examples, analogies), ask questions the viewer genuinely wants answered, then answer them. Plant small open loops ("but that raises a problem…") and close them. Vary pacing.
+- No filler: no "In this video…", "Let's dive in", "Without further ado", "As we mentioned", "It's important to note", no greetings or channel plugs, no generic recaps. A call to action only if the creator's instructions ask for one.
+- Transitions: the first sentence of each scene should flow from the previous scene; the first scene of a chapter should bridge from the previous chapter.
+- The very first scene of the video is the HOOK: within the first 10 seconds (~150 characters) it must grab attention with the most intriguing angle of the topic.
+- Accuracy matters: do not invent statistics, quotes, dates or studies. If unsure, phrase carefully or choose a claim you are sure of.
+- LENGTH IS A HARD REQUIREMENT. Each scene's narration must be close to its character target (narration is spoken at about 15 characters per second). Count roughly as you write.
+
+## Visual intent rules
+The visual intent is a short brief (2–5 sentences) for the animator. It must be:
+- CONCRETE: name the exact on-screen elements (shapes, icons, labels, numbers, chart type and values, diagram parts, layout) and the motion. Bad: "Show the concept of inflation." Good: "A price tag reading $1.00 for a loaf of bread; as the narrator says 'twenty years later', the number counts up to $2.50 and the tag swells slightly. A small line chart in the corner rises from 2004 to 2024."
+- SYNCED: tie key moments to specific words in that scene's narration, quoted exactly (e.g. "when the narrator says 'doubled', the second bar grows to twice the height").
+- ACHIEVABLE with animated HTML/CSS/SVG: text, shapes, icons, charts, diagrams, maps drawn as simple shapes, counters, timelines. No photos, no video clips, no realistic people or logos of real brands.
+- SPARING WITH TEXT: on-screen text is short labels or key phrases (≤ 7 words each), never the full narration.
+- VARIED: don't repeat the same visual idea in consecutive scenes.
+
+## Template suggestion
+For each scene set suggestedTemplate to the id of the style template that best fits the visual intent, or "custom" if none fits well. Prefer templates when they genuinely fit; don't pick the same template for more than two scenes in a row.
+
+Respond with JSON only, matching the requested schema exactly.`;
+
+export interface ChapterContext {
+  /** Summaries of all previous chapters (in order). */
+  previousSummaries: string[];
+  /** Last narration of the previous chapter (for a smooth bridge). */
+  lastNarration?: string;
+}
+
+export function outlineOverview(outline: Outline, currentIdx: number, detailed: boolean): string {
+  return outline.chapters
+    .map((c, i) => {
+      const secs = Math.round(c.scenes.reduce((a, s) => a + s.targetSeconds, 0));
+      const head = `${i + 1}. ${c.title} (${formatDuration(secs)}) — ${c.goal}${i === currentIdx ? "   ← WRITE THIS CHAPTER" : ""}`;
+      if (!detailed || i === currentIdx) return head;
+      return `${head}\n${c.scenes.map((s) => `   • ${s.summary}`).join("\n")}`;
+    })
+    .join("\n");
+}
+
+export function scriptChapterUserPrompt(
+  brief: Brief,
+  outline: Outline,
+  style: StylePack,
+  idx: number,
+  ctx: ChapterContext,
+): string {
+  const ch = outline.chapters[idx]!;
+  const total = outline.chapters.length;
+  // Long outlines: only titles/goals for other chapters to keep the prompt bounded.
+  const totalScenes = outline.chapters.reduce((a, c) => a + c.scenes.length, 0);
+  const overview = outlineOverview(outline, idx, totalScenes <= 60);
+  const scenes = ch.scenes
+    .map((s, i) => {
+      const chars = Math.round(s.targetSeconds * CHARS_PER_SECOND);
+      return `${i + 1}. [~${chars} characters / ${Math.round(s.targetSeconds)} s] ${s.summary}${s.suggestedTemplate ? ` (suggested template: ${s.suggestedTemplate})` : ""}`;
+    })
+    .join("\n");
+  const chapterChars = Math.round(ch.scenes.reduce((a, s) => a + s.targetSeconds, 0) * CHARS_PER_SECOND);
+
+  const prev = ctx.previousSummaries.length
+    ? `<story_so_far>\n${ctx.previousSummaries.map((s, i) => `Chapter ${i + 1}: ${s}`).join("\n")}\n</story_so_far>\n${
+        ctx.lastNarration ? `\n<previous_chapter_ending>\n${ctx.lastNarration}\n</previous_chapter_ending>\n` : ""
+      }`
+    : "";
+
+  const position =
+    idx === 0 && total === 1
+      ? "This is the ONLY chapter: open with the hook, deliver the payoff, and end cleanly."
+      : idx === 0
+        ? "This is the FIRST chapter: scene 1 is the hook (use or improve the outline's hook), then set up the promise of the video."
+        : idx === total - 1
+          ? "This is the FINAL chapter: bridge from the previous chapter, deliver the payoff promised at the start, and end with a crisp, memorable closing line."
+          : "This is a middle chapter: bridge from the previous chapter, and end with a line that makes the viewer want the next chapter.";
+
+  return `${briefBlock(brief)}
+
+<outline>
+Title: ${outline.title}
+Hook: ${outline.hook}
+Chapters:
+${overview}
+</outline>
+
+${prev}
+<chapter_to_write index="${idx + 1}" of="${total}">
+Title: ${ch.title}
+Goal: ${ch.goal}
+${position}
+Write exactly ${ch.scenes.length} scene(s), one per outline scene below, in order (~${chapterChars} characters of narration in total):
+${scenes}
+</chapter_to_write>
+
+<style name="${style.name}">
+${style.description}
+Template ids you may suggest:
+${templateMenu(style)}
+</style>
+
+Return JSON: { "scenes": [ { "narration": string, "visualIntent": string, "suggestedTemplate": string } ], "summary": string (2–4 sentences: what this chapter established, key facts/terms introduced, and any open question it left — used as memory for writing later chapters) }`;
+}

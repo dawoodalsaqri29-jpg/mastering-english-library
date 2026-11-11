@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "battle-scene",
+    "name": "Battle scene",
+    "description": "The workhorse: two armies of chosen factions drawn up in a painted landscape, advancing through haze; on the key word the action fires (musket volley, bayonet charge, cannonade, advance, clash). Cannons, waving colours, drifting smoke, a slow camera push into the attacker. Optional cream banner headline and a place/date lower-third. Use for most scenes that describe fighting or armies facing each other.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army on the left (faces right)."
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army on the right (faces left)."
+        },
+        "attacker": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "description": "Which side does the action (default left)."
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "volley",
+            "charge",
+            "cannonade",
+            "advance",
+            "clash",
+            "stand"
+          ],
+          "description": "What happens on the key word: volley (rolling musket fire, default), charge (bayonet charge into the enemy), cannonade (guns fire repeatedly), advance (steady march forward under fire), clash (charge met by a counter-charge), stand (hold and present arms)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the action lands on it."
+        },
+        "cavalry": {
+          "type": "string",
+          "enum": [
+            "none",
+            "left",
+            "right"
+          ],
+          "description": "Make one side a cavalry squadron on horses."
+        },
+        "cannons": {
+          "type": "boolean",
+          "description": "Draw field guns behind each side (default true)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "faction": "redcoat",
+        "name": "British"
+      },
+      "right": {
+        "faction": "bluecoat",
+        "name": "French"
+      },
+      "attacker": "right",
+      "action": "charge",
+      "keyword": "charged",
+      "title": "The French Charged",
+      "place": "Waterloo",
+      "date": "18 June 1815",
+      "sky": "golden",
+      "terrain": "fields"
+    },
+    "exampleNarration": "At four in the afternoon the French columns charged the ridge, straight into the waiting British line."
+  },
+  {
+    "id": "general-council",
+    "name": "Council of war",
+    "description": "Commanders around a candle-lit map table inside a tent or hall: one speaks and points at the map while the others listen and nod; candles flicker; the camera pushes from the room to the map. The decision lands as a cream banner on the key word. Use for plans, orders, arguments and turning-point decisions.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "commanders": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "faction": {
+                "type": "string",
+                "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              },
+              "name": {
+                "type": "string",
+                "description": "Commander's name or role for the lower-third, up to 4 words (generic archetypes are fine: 'The General')."
+              }
+            },
+            "required": [
+              "faction"
+            ],
+            "additionalProperties": false
+          },
+          "description": "One to four commanders, listed left to right. The first speaks unless `speaker` says otherwise."
+        },
+        "speaker": {
+          "type": "number",
+          "description": "Index (0-based) of the commander who talks."
+        },
+        "decision": {
+          "type": "string",
+          "description": "The plan or order as a banner headline, up to 6 words in caps, e.g. 'ATTACK AT DAWN'."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the banner slams down on it."
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "tent",
+            "hall"
+          ],
+          "description": "Campaign tent (default) or stone hall."
+        },
+        "focus": {
+          "type": "string",
+          "enum": [
+            "map",
+            "commanders"
+          ],
+          "description": "Where the camera ends: pushing into the map (default) or staying on the commanders."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        }
+      },
+      "required": [
+        "commanders"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "commanders": [
+        {
+          "faction": "bluecoat",
+          "name": "The Emperor"
+        },
+        {
+          "faction": "bluecoat",
+          "name": "Marshal of France"
+        },
+        {
+          "faction": "bluecoat",
+          "name": "Chief of Staff"
+        }
+      ],
+      "speaker": 0,
+      "decision": "Attack at Dawn",
+      "keyword": "dawn",
+      "setting": "tent",
+      "place": "Imperial headquarters",
+      "date": "The night before"
+    },
+    "exampleNarration": "Around the map the marshals argued, but the emperor had already decided: the army would attack at dawn."
+  },
+  {
+    "id": "battle-map",
+    "name": "Battle map",
+    "description": "Top-down tactical map on aged parchment: rivers, forests, hills and towns inked in; coloured unit blocks for each side; on the key word thick manoeuvre arrows sweep across the map (frontal assault, flank, pincer, feigned retreat, envelopment, breakthrough, defence) and the units move along them to a clash burst. Compass, scale bar, optional banner. Use to explain tactics and movements.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "attacker": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Attacking army (starts at the bottom of the map)."
+        },
+        "defender": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Defending army (at the top)."
+        },
+        "manoeuvre": {
+          "type": "string",
+          "enum": [
+            "frontal",
+            "flank-left",
+            "flank-right",
+            "pincer",
+            "feigned-retreat",
+            "envelopment",
+            "breakthrough",
+            "defend"
+          ],
+          "description": "The tactical move the arrows show."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the arrows begin to sweep on it."
+        },
+        "title": {
+          "type": "string",
+          "description": "Map title, up to 4 words, e.g. 'Cannae, 216 BC'."
+        },
+        "towns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Up to 4 town names to ink on the map (spoken place names)."
+        },
+        "river": {
+          "type": "boolean",
+          "description": "Draw a river (default true)."
+        },
+        "coast": {
+          "type": "boolean",
+          "description": "Sea along the left edge."
+        },
+        "banner": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "zoom": {
+          "type": "boolean",
+          "description": "Push into the clash (default true)."
+        }
+      },
+      "required": [
+        "attacker",
+        "defender",
+        "manoeuvre"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "attacker": {
+        "faction": "roman",
+        "name": "Legions"
+      },
+      "defender": {
+        "faction": "hoplite",
+        "name": "Carthage"
+      },
+      "manoeuvre": "pincer",
+      "keyword": "closed",
+      "title": "Cannae",
+      "towns": [
+        "Cannae",
+        "Canusium"
+      ],
+      "river": true,
+      "banner": "The Perfect Trap",
+      "date": "2 August, 216 BC"
+    },
+    "exampleNarration": "While the centre gave ground, both wings of cavalry swung round, and the pincer closed behind the legions."
+  },
+  {
+    "id": "versus-numbers",
+    "name": "Versus numbers",
+    "description": "Two armies drawn up facing each other across a field while troop-count banners count up on each side with a big VS medallion ('50,000 VS 250,000'), tinted with each faction's colour. Optional headline banner afterwards. Use when the narration compares strengths, odds or numbers.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Left army; set `count` to its strength."
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Right army; set `count` to its strength."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the banners slam in on it."
+        },
+        "title": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "faction": "hoplite",
+        "name": "Greeks",
+        "count": 7000
+      },
+      "right": {
+        "faction": "ottoman",
+        "name": "Persians",
+        "count": 120000
+      },
+      "keyword": "thousand",
+      "title": "Hopelessly Outnumbered",
+      "place": "Thermopylae",
+      "date": "480 BC"
+    },
+    "exampleNarration": "Seven thousand Greeks stood in the pass against an army of over a hundred and twenty thousand."
+  },
+  {
+    "id": "march",
+    "name": "March",
+    "description": "A long column of troops with colours, drummer, cavalry screen and baggage wagons crosses a wide painted landscape; the camera tracks alongside then pulls wide. Dust, dusk light, optional snow or rain. Use for campaigns, retreats, journeys, the approach to a battle.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "army": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "The marching army."
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "right",
+            "left"
+          ],
+          "description": "Direction of march (default right)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the camera pulls wide / the banner lands on it."
+        },
+        "weather": {
+          "type": "string",
+          "enum": [
+            "clear",
+            "snow",
+            "rain"
+          ],
+          "description": "Falling snow or rain over the column."
+        },
+        "cavalry": {
+          "type": "boolean",
+          "description": "Cavalry riding ahead (default true)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "army"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "army": {
+        "faction": "bluecoat",
+        "name": "Grande Armee"
+      },
+      "direction": "right",
+      "keyword": "winter",
+      "weather": "snow",
+      "title": "The Long Retreat",
+      "place": "The road to Smolensk",
+      "date": "November 1812",
+      "sky": "winter",
+      "terrain": "snow"
+    },
+    "exampleNarration": "The army marched on through the first snows of winter, losing thousands of men every single day."
+  },
+  {
+    "id": "siege",
+    "name": "Siege",
+    "description": "A fortress with towers and a burning roof under bombardment: defenders fire from the ramparts, the attackers' guns thunder on the key word, dust bursts from the wall, an assault party charges the ladders. Use for sieges, storming walls, fortified positions.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "defender": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army holding the walls."
+        },
+        "attacker": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army outside the walls."
+        },
+        "side": {
+          "type": "string",
+          "enum": [
+            "right",
+            "left"
+          ],
+          "description": "Which side of the frame the fortress stands on (default right)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the guns fire on it."
+        },
+        "assault": {
+          "type": "boolean",
+          "description": "Attackers charge the ladders after the bombardment (default true)."
+        },
+        "burning": {
+          "type": "boolean",
+          "description": "A tower burns (default true)."
+        },
+        "roofs": {
+          "type": "boolean",
+          "description": "Conical tower roofs (default true; false for a bare medieval keep)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "defender",
+        "attacker"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "defender": {
+        "faction": "knight",
+        "name": "Crusaders"
+      },
+      "attacker": {
+        "faction": "ottoman",
+        "name": "The Sultan's army"
+      },
+      "side": "right",
+      "keyword": "guns",
+      "assault": true,
+      "title": "The Walls Must Fall",
+      "place": "Constantinople",
+      "date": "29 May 1453",
+      "sky": "dusk",
+      "terrain": "coast"
+    },
+    "exampleNarration": "For fifty-three days the great guns pounded the walls, until at last the janissaries surged forward to the breach."
+  },
+  {
+    "id": "title-banner",
+    "name": "Chapter title",
+    "description": "Chapter opener: a wide battle painting under a big cream title banner in dark serif caps with ornaments, a chapter kicker, subtitle and date line; fades in from parchment, letterboxed, guns firing in the distance. Use once at the start of the video and at each new chapter.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The chapter title, up to 6 words (set in caps), e.g. 'The Genius Trap'."
+        },
+        "chapter": {
+          "type": "string",
+          "description": "Kicker above the title, e.g. 'Chapter II' or 'Part One'."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Line under the title, up to 10 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the title slams in on it."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army on the left of the painting."
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "Army on the right."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Genius Trap",
+      "chapter": "Chapter Three",
+      "subtitle": "How one general lured an empire into the forest",
+      "keyword": "trap",
+      "place": "Teutoburg Forest",
+      "date": "9 AD",
+      "left": {
+        "faction": "roman"
+      },
+      "right": {
+        "faction": "viking"
+      },
+      "sky": "golden",
+      "terrain": "forest"
+    },
+    "exampleNarration": "This is the story of the genius trap, a plan so simple that an entire empire walked straight into it."
+  },
+  {
+    "id": "portrait-of-commander",
+    "name": "Portrait of a commander",
+    "description": "A painted bust of a generic commander archetype in an oval gold frame (uniform, epaulettes, sash, hat by faction; features from the seed, never a real likeness), a distant army marching behind, slow push into the face, centred name plate with role and dates, optional quote caption. Use when a leader is introduced.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name or title shown on the plate, up to 4 words."
+        },
+        "role": {
+          "type": "string",
+          "description": "Role, e.g. 'Commander of the Army of the North'."
+        },
+        "dates": {
+          "type": "string",
+          "description": "Dates, e.g. '1769 - 1821'."
+        },
+        "faction": {
+          "type": "string",
+          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+        },
+        "hat": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "bicorne",
+            "tricorne",
+            "shako",
+            "plumed",
+            "galea",
+            "greathelm",
+            "kabuto",
+            "cavalier",
+            "bork",
+            "furcap",
+            "none"
+          ],
+          "description": "Headgear override (auto = by faction)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the name plate appears on it."
+        },
+        "quote": {
+          "type": "string",
+          "description": "Short attributed line for the caption, up to 12 words."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "name",
+        "faction"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "name": "The Duke",
+      "role": "Commander of the Allied army",
+      "dates": "1769 - 1852",
+      "faction": "redcoat",
+      "hat": "bicorne",
+      "keyword": "Duke",
+      "quote": "Hard pounding, gentlemen. We shall see who pounds longest.",
+      "sky": "dusk",
+      "terrain": "hills"
+    },
+    "exampleNarration": "The Duke had never lost a battle, and he intended to keep it that way."
+  },
+  {
+    "id": "aftermath",
+    "name": "Aftermath",
+    "description": "The quiet field after the battle: thick haze, smoke columns on the horizon, a fallen enemy colour, a broken wheel and drum, a few survivors standing with their flag, a riderless horse, crows. Never gory. Optional red banner and loss figures as versus banners. Use for consequences, costs, the morning after, reflection.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "army": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "The side that holds the field."
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "The defeated side (its colour lies fallen)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the banner / figures land on it."
+        },
+        "title": {
+          "type": "string",
+          "description": "Thumbnail-style banner headline in caps, up to 6 words, e.g. 'HE TRICKED BRITAIN'. Omit when the narration has no punchline."
+        },
+        "stat": {
+          "type": "string",
+          "description": "Loss or outcome figure for the holding side, e.g. '15,000' or 'VICTORY'."
+        },
+        "statLabel": {
+          "type": "string",
+          "description": "Label under the first figure, e.g. 'British losses'."
+        },
+        "stat2": {
+          "type": "string",
+          "description": "Figure for the other side."
+        },
+        "stat2Label": {
+          "type": "string",
+          "description": "Label under the second figure."
+        },
+        "weather": {
+          "type": "string",
+          "enum": [
+            "clear",
+            "rain",
+            "snow"
+          ],
+          "description": "Rain or snow over the field."
+        },
+        "place": {
+          "type": "string",
+          "description": "Place for the lower-third, e.g. 'Waterloo' (up to 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date for the lower-third, e.g. '18 June 1815'."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "army"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "army": {
+        "faction": "redcoat",
+        "name": "Allies"
+      },
+      "right": {
+        "faction": "bluecoat",
+        "name": "French"
+      },
+      "keyword": "cost",
+      "title": "The Price of Victory",
+      "stat": "23,000",
+      "statLabel": "Allied losses",
+      "stat2": "41,000",
+      "stat2Label": "French losses",
+      "weather": "rain",
+      "place": "Waterloo",
+      "date": "19 June 1815",
+      "sky": "storm",
+      "terrain": "plain"
+    },
+    "exampleNarration": "By morning the rain had returned, and the cost of the day was counted: more than sixty thousand men."
+  },
+  {
+    "id": "timeline-of-campaign",
+    "name": "Campaign timeline",
+    "description": "A road through a wide painted land with dated signboards: each event's board swings into view as its date is spoken while a column marches along the road and the camera walks from one board to the next, ending wide. Use for sequences of dates, phases of a campaign, before/after.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Date on the board, up to 3 words, e.g. 'June 1812'."
+              },
+              "label": {
+                "type": "string",
+                "description": "What happened, up to 8 words."
+              }
+            },
+            "required": [
+              "date"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Two to six events in order (narration order)."
+        },
+        "army": {
+          "type": "object",
+          "properties": {
+            "faction": {
+              "type": "string",
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+            },
+            "name": {
+              "type": "string",
+              "description": "Display name of this army, up to 3 words (e.g. 'British', 'The Legion')."
+            },
+            "count": {
+              "type": "number",
+              "description": "Troop strength for banners (e.g. 50000). Soldiers drawn on screen are capped to about 100 per side."
+            }
+          },
+          "required": [
+            "faction"
+          ],
+          "additionalProperties": false,
+          "description": "The army marching along the road."
+        },
+        "title": {
+          "type": "string",
+          "description": "Lower-third title shown at the end, up to 5 words."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Line under the title."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "events": [
+        {
+          "date": "June 1812",
+          "label": "The army crosses the Niemen"
+        },
+        {
+          "date": "September",
+          "label": "Borodino: a bloody draw"
+        },
+        {
+          "date": "October",
+          "label": "The retreat from Moscow begins"
+        },
+        {
+          "date": "December",
+          "label": "A broken army recrosses the river"
+        }
+      ],
+      "army": {
+        "faction": "bluecoat",
+        "name": "Grande Armee"
+      },
+      "title": "The Russian Campaign",
+      "subtitle": "Six months, 400,000 men",
+      "sky": "golden",
+      "terrain": "fields"
+    },
+    "exampleNarration": "In June the army crossed the river; by September it had fought at Borodino; in October the retreat began, and by December what was left came home."
+  },
+  {
+    "id": "quote-from-history",
+    "name": "Quote from history",
+    "description": "A spoken quotation in large italic serif over a dimmed battle painting (armies drawn up, a distant volley), revealed word by word as it is read, with an attribution line in gold caps. Use when the narration reads a letter, dispatch, speech or famous line.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "quote": {
+          "type": "string",
+          "description": "The quotation, 6 to 40 words, exactly as spoken."
+        },
+        "author": {
+          "type": "string",
+          "description": "Attribution, e.g. 'A British officer' or 'The Emperor' (generic archetypes preferred)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Date after the attribution, e.g. '1815'."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "One word copied exactly from this scene's narration; the quote begins on it (usually its first word)."
+        },
+        "faction": {
+          "type": "string",
+          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset. Colours the armies behind the quote."
+        },
+        "sky": {
+          "type": "string",
+          "enum": [
+            "golden",
+            "dawn",
+            "dusk",
+            "storm",
+            "noon",
+            "night",
+            "winter"
+          ],
+          "description": "Light and time of day: golden (default warm afternoon), dawn, dusk (red evening), storm (grey), noon (clear), night (moonlit), winter (pale, snow)."
+        },
+        "terrain": {
+          "type": "string",
+          "enum": [
+            "fields",
+            "hills",
+            "forest",
+            "river",
+            "coast",
+            "mountains",
+            "desert",
+            "snow",
+            "plain"
+          ],
+          "description": "Landscape: fields (farmland, windmill), hills, forest, river (crossing the field), coast (sea at the horizon), mountains, desert, snow, plain (open ground)."
+        }
+      },
+      "required": [
+        "quote"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "quote": "The whole art of war consists in getting at what is on the other side of the hill.",
+      "author": "The Duke",
+      "date": "1815",
+      "keyword": "whole",
+      "faction": "redcoat",
+      "sky": "dusk",
+      "terrain": "hills"
+    },
+    "exampleNarration": "He put it simply: the whole art of war consists in getting at what is on the other side of the hill."
+  }
+]

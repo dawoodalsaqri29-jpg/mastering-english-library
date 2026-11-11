@@ -1,0 +1,8 @@
+{
+  "id": "map-reveal",
+  "name": "Map Reveal",
+  "description": "The geography-discovery look: a hyper-saturated satellite-style relief map of a country or continent seen from above at a slight tilt (ochre deserts, green coasts, hillshaded ridges, glowing rivers, deep-blue ocean) with bold red curved arrows sweeping in, pulsing target rings, glowing highlight zones, pins, dotted routes, numbered markers, stat badges and huge thumbnail-style headlines with heavy black outlines. Slow push-ins and fly-tos between regions, clouds drifting over, a globe spin to the country. For geography, discovery, megaproject and 'insane facts' storytelling.",
+  "premium": true,
+  "palette": { "background": "#0A1E3F", "foreground": "#FFFFFF", "accent": "#FF2A1A", "muted": "#9FB3CC" },
+  "fonts": ["Impact, \"Arial Narrow\", \"Helvetica Neue\", Inter, \"Noto Sans\", Arial, sans-serif", "Inter, \"Noto Sans\", \"Segoe UI\", Arial, sans-serif"]
+}

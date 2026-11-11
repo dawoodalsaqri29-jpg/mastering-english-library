@@ -1,0 +1,81 @@
+/* acid-poster — loud two-colour club poster: acid lime + electric violet on navy-black, extruded caps, outlined ghost words */
+:root {
+  --bg: #120E24;
+  --fg: #F2EDE4;
+  --muted: #9D97B8;
+  --accent: #D4FF3A;
+  --accent-2: #6A3BFF;
+  --accent-3: #FF4FA3;
+  --extrude: #6A3BFF;
+  --extrude-em: #6A3BFF;
+  --surface: #1C1736;
+  --line: rgba(242, 237, 228, 0.22);
+  --on-accent: #120E24;
+  --bar-muted: rgba(242, 237, 228, 0.22);
+  --hl: rgba(212, 255, 58, 0.4);
+  --halo: transparent;
+  --dot: transparent;
+  --shadow: none;
+  --shadow-lg: none;
+  --card-border: calc(var(--u) * 3) solid var(--fg);
+  --radius: 0px;
+  --pad-bottom: calc(var(--h, 1080px) * 0.16);
+  --fs-hero: calc(var(--u) * 176);
+  --fs-xl: calc(var(--u) * 126);
+  --title-weight: 900;
+  --title-tracking: -0.055em;
+  --title-leading: 0.86;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --code-bg: #0B0818;
+  --code-border: calc(var(--u) * 3) solid #6A3BFF;
+  --tk-k: #D4FF3A;
+  --tk-s: #FF4FA3;
+  --tk-f: #9C7BFF;
+  --tk-n: #3AE3FF;
+  --neg: #FF4FA3;
+  --pos: #D4FF3A;
+  --edge: var(--fg);
+  --badge-bg: transparent;
+  --ex: calc(var(--u) * 2.5);
+}
+/* tokens that depend on the per-scene colours set on the root */
+#scene-root {
+  --surface: color-mix(in srgb, var(--fg) 7%, var(--bg));
+  --line: color-mix(in srgb, var(--fg) 24%, transparent);
+  --bar-muted: color-mix(in srgb, var(--fg) 22%, transparent);
+  --hl: color-mix(in srgb, var(--extrude) 60%, transparent);
+  --card-border: calc(var(--u) * 3) solid var(--fg);
+  --edge: var(--fg);
+}
+html.is-portrait { --fs-hero: calc(var(--u) * 144); --fs-xl: calc(var(--u) * 108); }
+.kind-minimal .v-title,
+.kind-minimal .t-kinetic .v-phrase {
+  text-transform: uppercase;
+  text-shadow: var(--ex) var(--ex) 0 var(--extrude), calc(var(--ex) * 2) calc(var(--ex) * 2) 0 var(--extrude), calc(var(--ex) * 3) calc(var(--ex) * 3) 0 var(--extrude), calc(var(--ex) * 4) calc(var(--ex) * 4) 0 var(--extrude);
+}
+.kind-minimal .v-em,
+.kind-minimal .v-statnum,
+.kind-minimal .t-kinetic .v-kw.is-em {
+  color: var(--accent);
+  text-shadow: var(--ex) var(--ex) 0 var(--extrude-em), calc(var(--ex) * 2) calc(var(--ex) * 2) 0 var(--extrude-em), calc(var(--ex) * 3) calc(var(--ex) * 3) 0 var(--extrude-em), calc(var(--ex) * 4) calc(var(--ex) * 4) 0 var(--extrude-em);
+}
+/* outlined ghost word: wrap a word in <span class="v-ghost"> */
+.v-ghost { color: transparent !important; -webkit-text-stroke: calc(var(--u) * 3) var(--fg); text-shadow: none !important; }
+.kind-minimal .v-kicker { color: var(--on-accent); background: var(--accent); display: inline-block; width: fit-content; padding: 0.3em 0.7em; letter-spacing: 0.18em; font-weight: 800; transform: rotate(-2deg); }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }
+.kind-minimal .v-line { background: repeating-linear-gradient(90deg, var(--accent) 0 calc(var(--u) * 26), transparent calc(var(--u) * 26) calc(var(--u) * 38)); height: calc(var(--u) * 10); width: calc(var(--u) * 260); border-radius: 0; }
+.kind-minimal .v-num { background: var(--accent); color: var(--on-accent); border-radius: 0; font-weight: 900; box-shadow: calc(var(--u) * 6) calc(var(--u) * 6) 0 var(--extrude-em); }
+.kind-minimal .v-card { box-shadow: calc(var(--u) * 10) calc(var(--u) * 10) 0 var(--extrude); }
+.kind-minimal .v-icon-badge { background: var(--accent-2); color: #F2EDE4; border-radius: 0; }
+.kind-minimal .v-statnum { color: var(--accent); }
+.kind-minimal .v-vs { background: var(--accent); color: var(--on-accent); border-radius: 0; transform: rotate(-8deg); box-shadow: calc(var(--u) * 6) calc(var(--u) * 6) 0 var(--extrude-em); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 4) var(--accent); text-shadow: none; }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: var(--on-accent); border-radius: 0; font-family: var(--font-kicker); }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); box-shadow: calc(var(--u) * 8) calc(var(--u) * 8) 0 var(--extrude-em); }
+.kind-minimal .t-timeline .v-dot { border-color: var(--accent); }
+/* ticker band copy lives in pseudo-elements: it scrolls past the frame edges by design */
+.ap-tick::before { content: attr(data-t); }
+.ap-star::before { content: "\2726"; }

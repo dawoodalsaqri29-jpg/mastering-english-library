@@ -1,0 +1,58 @@
+/* sketchbook — pencil and felt-tip on a lined notebook page, stop-motion boil */
+:root {
+  --bg: #FBF8F0;
+  --fg: #3A3A3A;
+  --ink: #3A3A3A;
+  --muted: #77736B;
+  --accent: #2E86AB;
+  --accent-2: #E4572E;
+  --accent-3: #F3A712;
+  --rule: rgba(46, 134, 171, 0.22);
+  --margin: rgba(228, 87, 46, 0.45);
+  --hole: #E9E4D8;
+  --surface: transparent;
+  --line: #3A3A3A;
+  --on-accent: #FFFFFF;
+  --bar-muted: rgba(58, 58, 58, 0.15);
+  --halo: transparent;
+  --grid: transparent;
+  --radius: 0px;
+  --shadow: none;
+  --shadow-lg: calc(var(--u) * 6) calc(var(--u) * 6) 0 rgba(58, 58, 58, 0.25);
+  --title-weight: 700;
+  --title-tracking: -0.01em;
+  --code-bg: #FFFFFF;
+  --code-fg: #3A3A3A;
+  --code-chrome: #F2EEE4;
+  --code-border: calc(var(--u) * 3) solid #3A3A3A;
+  --code-hi: rgba(243, 167, 18, 0.3);
+  --tk-k: #2E86AB;
+  --tk-s: #4C9F70;
+  --tk-f: #8E6C8A;
+  --tk-n: #E4572E;
+  --tk-c: #9A958B;
+  --neg: #E4572E;
+  --pos: #4C9F70;
+  --edge: #3A3A3A;
+  --badge-bg: transparent;
+}
+/* graphite: slightly soft, grainy edges */
+.kind-whiteboard .v-title,
+.kind-whiteboard .v-statnum { text-shadow: 0 0 calc(var(--u) * 0.8) rgba(58, 58, 58, 0.5); }
+.kind-whiteboard .v-em { color: var(--accent-2); }
+.kind-whiteboard .v-kicker { color: var(--accent); letter-spacing: 0.1em; }
+.kind-whiteboard .v-card { background: transparent; box-shadow: none; }
+.kind-whiteboard .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 3) solid var(--accent); border-radius: 50% 46% 52% 48%; }
+.kind-whiteboard .v-icon-badge { background: rgba(243, 167, 18, 0.18); border: calc(var(--u) * 3) solid currentColor; border-radius: 48% 52% 50% 46%; }
+.kind-whiteboard .v-vs { background: var(--accent-3); color: var(--fg); border-radius: 47% 53% 50% 48%; }
+.kind-whiteboard .t-timeline .v-dot { border-color: var(--ink); }
+.kind-whiteboard .t-timeline .v-tl-line { background: rgba(58, 58, 58, 0.3); }
+.kind-whiteboard .t-bars .v-bar { border-radius: 0; background: repeating-linear-gradient(45deg, rgba(58, 58, 58, 0.5) 0 calc(var(--u) * 2), transparent calc(var(--u) * 2) calc(var(--u) * 9)); }
+.kind-whiteboard .t-bars .v-bar.is-hi { background: repeating-linear-gradient(45deg, var(--accent-2) 0 calc(var(--u) * 3), transparent calc(var(--u) * 3) calc(var(--u) * 8)); }
+.kind-whiteboard .t-bars.is-h .v-track { background: transparent; border: calc(var(--u) * 2) solid var(--ink); }
+.kind-whiteboard .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--accent-2); }
+.kind-whiteboard .t-section .v-wipe { background: var(--ink); }
+.kind-whiteboard .t-diagram .v-node.is-hub { background: transparent !important; color: var(--accent) !important; }
+.kind-whiteboard .t-line .v-lc-call { background: var(--accent-2); color: #fff; }
+.kind-whiteboard .t-line .v-lc-grid { stroke: rgba(58, 58, 58, 0.1); }
+.kind-whiteboard .t-stat .v-statnum { color: var(--accent); }

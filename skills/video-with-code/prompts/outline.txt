@@ -1,0 +1,130 @@
+import type { Brief, Outline, StylePack } from "./shared";
+import { briefBlock, formatDuration, templateMenu } from "./common.js";
+
+export interface StructurePlan {
+  chapters: { min: number; max: number };
+  sceneSeconds: { min: number; max: number };
+  /** Approximate total scene count. */
+  scenesApprox: number;
+  /** Generate chapter list first, then scenes per chapter. */
+  twoStage: boolean;
+}
+
+export const OUTLINE_SYSTEM = `You are the head writer and showrunner of a top-performing educational YouTube channel. You plan videos that people watch to the end. The videos are fully animated (motion graphics, kinetic typography, diagrams, charts, icons — NO live-action footage, NO photos of real people) and narrated by a single voice-over.
+
+Your job right now is the OUTLINE: the structural skeleton that a scriptwriter will turn into narration. Great outlines share these traits:
+
+1. HOOK FIRST. The first scene (≤10 seconds) must create immediate curiosity: a surprising fact, a bold claim, a vivid question, or a high-stakes moment — never "In this video we will…", never a greeting, never channel branding.
+2. A PROMISE AND A PAYOFF. Early on, make clear what the viewer will understand or get by the end. Deliver it explicitly in the final chapter.
+3. ESCALATION AND OPEN LOOPS. Order ideas so each chapter raises a new question that the next answers. Save the most satisfying reveal for late in the video. Avoid front-loading everything.
+4. ONE IDEA PER SCENE. A scene is 5–40 seconds of narration with ONE visual. Each scene summary states the specific point being made (with the concrete fact, number, example or step), not a vague label. Bad: "Explain how it works." Good: "A transistor is a switch: a small voltage at the gate lets a big current flow — shown as a valve on a pipe."
+5. VARIETY. Alternate explanation, example, data, story, comparison and recap so the visuals and rhythm keep changing.
+6. NO FILLER. No throat-clearing intros, no repeated summaries, no "let's dive in", no generic outros. A short, satisfying conclusion is fine; a call to action only if the creator asked for one.
+7. ACCURACY. Only plan claims you are confident are true. Prefer well-established facts; avoid fabricated statistics, quotes or dates.
+
+Chapter titles are shown to viewers as YouTube chapters: make them short (2–6 words), specific and intriguing. Chapter goals are internal notes: one sentence on what the viewer should understand or feel after that chapter.
+
+For each scene, pick suggestedTemplate from the style's template ids when one clearly fits the scene's visual (e.g. a data point → a chart or counter template); otherwise use "custom". Spread templates around — do not use the same template for many consecutive scenes.
+
+Respond with JSON only, matching the requested schema exactly.`;
+
+export function outlineUserPrompt(brief: Brief, style: StylePack, plan: StructurePlan): string {
+  return `${briefBlock(brief)}
+
+<structure>
+- Total narration: ${brief.targetSeconds} seconds (${formatDuration(brief.targetSeconds)}). The scene targetSeconds values MUST add up to ${brief.targetSeconds} (±5%).
+- Chapters: ${plan.chapters.min === plan.chapters.max ? plan.chapters.min : `${plan.chapters.min}–${plan.chapters.max}`}.
+- Scenes: about ${plan.scenesApprox} in total, each ${plan.sceneSeconds.min}–${plan.sceneSeconds.max} seconds.
+${brief.targetSeconds <= 30 ? "- This is a very short video: one tight idea, hook immediately, end on the payoff. No chapters beyond one.\n" : ""}</structure>
+
+<style name="${style.name}">
+${style.description}
+Available templates:
+${templateMenu(style)}
+</style>
+
+Return JSON: { "title": string (YouTube title, ≤ 70 characters, specific and curiosity-inducing, no clickbait lies, no ALL CAPS), "hook": string (the 1–2 sentence opening hook, as it will be spoken), "chapters": [ { "title": string, "goal": string, "scenes": [ { "summary": string, "targetSeconds": number, "suggestedTemplate": string } ] } ] }`;
+}
+
+// ── Two-stage (long videos): chapter list first ──
+
+export function chapterListUserPrompt(brief: Brief, style: StylePack, plan: StructurePlan): string {
+  return `${briefBlock(brief)}
+
+<structure>
+This is a long video (${formatDuration(brief.targetSeconds)}). Plan it in two stages. NOW: plan only the chapter list. Scenes will be planned per chapter later.
+- Chapters: ${plan.chapters.min}–${plan.chapters.max}. Their targetSeconds MUST add up to ${brief.targetSeconds} (±3%). Chapters may differ in length according to importance.
+- Give each chapter 3–8 keyPoints: the specific facts, steps, examples or story beats it must cover, in order. Make them concrete enough that a writer could plan scenes from them alone.
+- Make sure chapters don't overlap: each key point belongs to exactly one chapter.
+</structure>
+
+<style name="${style.name}">
+${style.description}
+</style>
+
+Return JSON: { "title": string (≤ 70 characters), "hook": string (the 1–2 sentence opening hook, as spoken), "chapters": [ { "title": string, "goal": string, "targetSeconds": number, "keyPoints": [string] } ] }`;
+}
+
+export function chapterScenesUserPrompt(
+  brief: Brief,
+  style: StylePack,
+  plan: StructurePlan,
+  skeleton: { title: string; hook: string; chapters: { title: string; goal: string; targetSeconds: number; keyPoints: string[] }[] },
+  idx: number,
+): string {
+  const ch = skeleton.chapters[idx]!;
+  const approx = Math.max(1, Math.round(ch.targetSeconds / ((plan.sceneSeconds.min + plan.sceneSeconds.max) / 2)));
+  const overview = skeleton.chapters
+    .map((c, i) => `${i + 1}. ${c.title} (${formatDuration(c.targetSeconds)}) — ${c.goal}${i === idx ? "   ← PLAN THIS ONE" : ""}`)
+    .join("\n");
+  return `${briefBlock(brief)}
+
+<video_plan>
+Title: ${skeleton.title}
+Hook: ${skeleton.hook}
+Chapters:
+${overview}
+</video_plan>
+
+<chapter_to_plan index="${idx + 1}" of="${skeleton.chapters.length}">
+Title: ${ch.title}
+Goal: ${ch.goal}
+Key points (cover all, in a sensible order):
+${ch.keyPoints.map((k) => `- ${k}`).join("\n")}
+Length: ${ch.targetSeconds} seconds. Scene targetSeconds MUST add up to ${ch.targetSeconds} (±5%). About ${approx} scenes of ${plan.sceneSeconds.min}–${plan.sceneSeconds.max} seconds.
+${idx === 0 ? "This is the FIRST chapter: its first scene is the hook (≤10 s) and the chapter must set up the video's promise." : ""}${idx === skeleton.chapters.length - 1 ? "This is the FINAL chapter: deliver the payoff promised at the start and end cleanly." : ""}
+</chapter_to_plan>
+
+<style name="${style.name}">
+Available templates:
+${templateMenu(style)}
+</style>
+
+Return JSON: { "scenes": [ { "summary": string, "targetSeconds": number, "suggestedTemplate": string } ] }`;
+}
+
+export function regenerateChapterUserPrompt(brief: Brief, outline: Outline, idx: number, style: StylePack | undefined, note?: string): string {
+  const ch = outline.chapters[idx]!;
+  const seconds = Math.round(ch.scenes.reduce((a, s) => a + s.targetSeconds, 0));
+  const overview = outline.chapters
+    .map((c, i) => `${i + 1}. ${c.title} — ${c.goal}${i === idx ? "   ← REWRITE THIS ONE" : ""}`)
+    .join("\n");
+  return `${briefBlock(brief)}
+
+<current_outline>
+Title: ${outline.title}
+Hook: ${outline.hook}
+Chapters:
+${overview}
+</current_outline>
+
+<chapter_to_rewrite index="${idx + 1}">
+Current version:
+${JSON.stringify(ch, null, 2)}
+Length to keep: about ${seconds} seconds in total (scene targetSeconds must add up to ${seconds} ±10%).
+${note ? `Creator's feedback — this is the main reason for the rewrite, follow it closely: ${note}` : "No specific feedback: produce a clearly better version (sharper ideas, more concrete scenes, better flow into the next chapter)."}
+It must still fit between the previous and next chapters without overlapping them.
+</chapter_to_rewrite>
+${style ? `\n<style name="${style.name}">\nAvailable templates:\n${templateMenu(style)}\n</style>\n` : ""}
+Return JSON: { "title": string, "goal": string, "scenes": [ { "summary": string, "targetSeconds": number, "suggestedTemplate": string } ] }`;
+}

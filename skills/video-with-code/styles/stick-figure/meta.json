@@ -1,0 +1,8 @@
+{
+  "id": "stick-figure",
+  "name": "Stick Figure Doodle",
+  "description": "Minimal, witty hand-drawn stick-figure comics — black wobbly pen lines on off-white paper, one accent colour and hand-lettered text. A small recurring cast walks, points, shrugs, panics and talks in sync with the voice next to deadpan doodles, hand-drawn graphs with sarcastic labels, labelled arrows and zooming scale comparisons. The science-and-philosophy webcomic explainer look.",
+  "premium": false,
+  "palette": { "background": "#FBFBF7", "foreground": "#161616", "accent": "#E4572E", "muted": "#8A8A8A" },
+  "fonts": ["\"Segoe Print\", \"Bradley Hand\", \"Comic Sans MS\", \"Chalkboard SE\", \"Comic Neue\", \"Noto Sans\", cursive"]
+}

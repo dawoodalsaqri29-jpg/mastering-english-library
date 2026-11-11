@@ -1,0 +1,51 @@
+/* vhs-retro — 80s/90s home video: PLAY display, tracking band, RGB colour bleed, warm tape noise */
+:root {
+  --bg: #120A1F;
+  --bg-center: #2A1640;
+  --fg: #FFF1E6;
+  --muted: #B9A6C9;
+  --accent: #FF3D7F;
+  --accent-2: #2DE2E6;
+  --accent-3: #FFD319;
+  --glow-rgb: 255, 61, 127;
+  --pad-y: calc(var(--h, 1080px) * 0.12);
+  --surface: rgba(255, 241, 230, 0.06);
+  --line: rgba(255, 241, 230, 0.2);
+  --on-accent: #120A1F;
+  --bar-muted: rgba(255, 241, 230, 0.15);
+  --halo: rgba(255, 61, 127, 0.1);
+  --card-border: calc(var(--u) * 2) solid rgba(255, 241, 230, 0.35);
+  --shadow: none;
+  --shadow-lg: none;
+  --radius: calc(var(--u) * 6);
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 900;
+  --title-tracking: -0.01em;
+  --code-bg: rgba(18, 10, 31, 0.92);
+  --code-border: calc(var(--u) * 2) solid rgba(255, 241, 230, 0.35);
+  --tk-k: #FF3D7F;
+  --tk-s: #FFD319;
+  --tk-f: #2DE2E6;
+  --tk-n: #9B5DE5;
+  --neg: #FF3D7F;
+  --pos: #2DE2E6;
+  --edge: rgba(255, 241, 230, 0.6);
+  --badge-bg: rgba(255, 241, 230, 0.06);
+}
+/* chromatic aberration: magenta and cyan ghosts either side of type */
+.kind-neon .v-title,
+.kind-neon .v-statnum { text-shadow: calc(var(--u) * 4) 0 rgba(255, 61, 127, 0.75), calc(var(--u) * -4) 0 rgba(45, 226, 230, 0.75); }
+.kind-neon .v-title { text-transform: uppercase; font-style: italic; }
+.kind-neon .v-text { text-shadow: calc(var(--u) * 1.5) 0 rgba(255, 61, 127, 0.45), calc(var(--u) * -1.5) 0 rgba(45, 226, 230, 0.45); }
+.kind-neon .v-em { color: var(--accent-3); }
+.kind-neon .v-kicker { color: var(--accent-2); letter-spacing: 0.24em; font-weight: 700; }
+.kind-neon .v-line { height: calc(var(--u) * 6); width: calc(var(--u) * 200); background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2)); }
+.kind-neon .v-num { background: var(--accent); color: var(--fg); border-radius: calc(var(--u) * 6); font-family: var(--font-kicker); }
+.kind-neon .v-icon-badge { color: var(--accent-3); border: calc(var(--u) * 2) solid rgba(255, 241, 230, 0.3); }
+.kind-neon .v-bar.is-hi { background: linear-gradient(180deg, var(--accent-3), var(--accent)); }
+.kind-neon .v-vs { background: var(--accent-3); color: var(--bg); font-family: var(--font-kicker); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-neon .t-timeline .v-date { font-family: var(--font-kicker); color: var(--accent-3); }
+.kind-neon .t-section .v-secnum { color: var(--accent-3); -webkit-text-stroke: 0; }
+.kind-neon .t-section .v-wipe { background: var(--accent); }
+.kind-neon .t-line .v-lc-call { background: var(--accent-3); color: var(--bg); font-family: var(--font-kicker); }

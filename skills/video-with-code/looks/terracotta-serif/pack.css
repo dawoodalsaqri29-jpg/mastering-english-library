@@ -1,0 +1,60 @@
+/* terracotta-serif — warm paper editorial: chunky serif display, italic terracotta emphasis, espresso cards */
+:root {
+  --bg: #EFE8DF;
+  --fg: #2A211C;
+  --muted: #7A685B;
+  --accent: #C25A32;
+  --accent-2: #241C17;
+  --accent-3: #E4A47E;
+  --vignette: rgba(232, 168, 128, 0.34);
+  --surface: #F8F3EC;
+  --line: rgba(42, 33, 28, 0.16);
+  --on-accent: #FFF7EF;
+  --bar-muted: #DCCFC2;
+  --hl: rgba(194, 90, 50, 0.2);
+  --halo: rgba(194, 90, 50, 0.1);
+  --dot: transparent;
+  --card-border: 1px solid rgba(42, 33, 28, 0.08);
+  --shadow: 0 calc(var(--u) * 2) calc(var(--u) * 4) rgba(60, 35, 20, 0.05), 0 calc(var(--u) * 22) calc(var(--u) * 50) rgba(60, 35, 20, 0.12);
+  --shadow-lg: 0 calc(var(--u) * 30) calc(var(--u) * 70) rgba(36, 28, 23, 0.3);
+  --radius: calc(var(--u) * 18);
+  --font-display: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-quote: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 800;
+  --title-tracking: -0.03em;
+  --title-leading: 1.0;
+  --quote-weight: 600;
+  --code-bg: #241C17;
+  --code-fg: #EFE8DF;
+  --code-border: none;
+  --code-chrome: rgba(255, 255, 255, 0.03);
+  --tk-k: #E4835B;
+  --tk-s: #D9C08F;
+  --tk-f: #F2D2BC;
+  --tk-n: #E4A47E;
+  --tk-c: #8C7A6C;
+  --neg: #B8442A;
+  --pos: #5E8150;
+  --edge: rgba(42, 33, 28, 0.55);
+  --badge-bg: rgba(194, 90, 50, 0.12);
+}
+.kind-minimal .v-em { font-style: italic; color: var(--accent); font-weight: 700; }
+.kind-minimal .v-kicker { font-family: var(--font-kicker); color: var(--muted); font-size: calc(var(--fs-label) * 0.82); letter-spacing: 0.2em; font-weight: 500; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 3); width: calc(var(--u) * 90); border-radius: 0; }
+.kind-minimal .v-num { background: var(--accent-2); color: var(--bg); font-family: var(--font-display); font-style: italic; font-weight: 700; }
+.kind-minimal .v-icon-badge { background: var(--badge-bg); color: var(--accent); }
+.kind-minimal .v-statnum { font-family: var(--font-display); color: var(--fg); font-weight: 800; letter-spacing: -0.045em; }
+.kind-minimal .t-stat .v-statlabel { font-style: italic; font-weight: 600; }
+.kind-minimal .v-vs { background: var(--accent); color: var(--on-accent); font-family: var(--font-display); font-style: italic; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-compare .v-side.is-right { background: var(--accent-2); color: var(--bg); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent-3); font-style: italic; }
+.kind-minimal .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; font-family: var(--font-display); font-style: italic; font-weight: 700; }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent-2); color: var(--bg); font-family: var(--font-display); font-style: italic; }
+.kind-minimal .t-bars .v-bar { border-radius: calc(var(--u) * 6) calc(var(--u) * 6) 0 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-timeline .v-dot { background: var(--bg); border-color: var(--accent); }
+.kind-minimal .t-timeline .v-date { font-style: italic; }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--accent); font-style: italic; }

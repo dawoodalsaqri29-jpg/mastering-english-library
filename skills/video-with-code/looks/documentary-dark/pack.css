@@ -1,0 +1,47 @@
+/* documentary-dark — cinematic, serif, warm amber on near-black with grain */
+:root {
+  --bg: #0B0A09;
+  --bg-center: #1F1A15;
+  --fg: #F3EEE5;
+  --muted: #A39A8C;
+  --accent: #E8B04B;
+  --accent-2: #D0603F;
+  --accent-3: #8FB39A;
+  --surface: rgba(243, 238, 229, 0.035);
+  --line: rgba(243, 238, 229, 0.2);
+  --on-accent: #0B0A09;
+  --bar-muted: #4A433A;
+  --halo: rgba(232, 176, 75, 0.1);
+  --card-border: 1px solid rgba(243, 238, 229, 0.14);
+  --radius: calc(var(--u) * 4);
+  --font-display: "Noto Serif", "Playfair Display", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --font-quote: "Noto Serif", "Playfair Display", Georgia, "Times New Roman", serif;
+  --title-weight: 600;
+  --quote-weight: 500;
+  --title-tracking: -0.012em;
+  --title-leading: 1.08;
+  --code-bg: rgba(20, 17, 14, 0.92);
+  --code-border: 1px solid rgba(243, 238, 229, 0.12);
+  --tk-k: #E8B04B;
+  --tk-s: #B5C99A;
+  --tk-f: #E9D8B4;
+  --neg: #D0603F;
+  --pos: #8FB39A;
+  --edge: rgba(243, 238, 229, 0.45);
+}
+.kind-documentary .v-em { color: var(--accent); font-style: italic; }
+.kind-documentary .v-kicker { letter-spacing: 0.34em; font-weight: 600; }
+.kind-documentary .v-header.v-center .v-kicker { display: flex; align-items: center; justify-content: center; gap: 1.1em; }
+.kind-documentary .v-header.v-center .v-kicker::before,
+.kind-documentary .v-header.v-center .v-kicker::after { content: ""; flex: none; width: 3em; height: 1px; background: currentColor; opacity: 0.7; }
+.kind-documentary .v-line { height: calc(var(--u) * 2); width: calc(var(--u) * 180); border-radius: 0; }
+.kind-documentary .v-num { background: transparent; color: var(--accent); border: 1px solid var(--accent); font-family: var(--font-display); font-weight: 600; }
+.kind-documentary .v-icon-badge { background: transparent; border: 1px solid rgba(232, 176, 75, 0.55); color: var(--accent); }
+.kind-documentary .v-statnum { font-weight: 500; letter-spacing: -0.03em; }
+.kind-documentary .v-vs { background: var(--accent); color: var(--bg); font-family: var(--font-display); font-style: italic; font-weight: 600; }
+.kind-documentary .t-section .v-secnum { -webkit-text-stroke: calc(var(--u) * 2) var(--accent); font-weight: 500; }
+.kind-documentary .t-section .v-wipe { background: #000; }
+.kind-documentary .t-timeline .v-date { font-weight: 600; }
+.kind-documentary .t-timeline .v-dot { border-width: calc(var(--u) * 3); }
+.kind-documentary .t-line .v-lc-call { background: var(--accent); color: var(--bg); }
+.kind-documentary .t-diagram .v-node.is-hub { color: var(--bg); }

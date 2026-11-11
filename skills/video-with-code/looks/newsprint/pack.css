@@ -1,0 +1,56 @@
+/* newsprint — broadsheet front page: heavy serif headlines, column rules, red flag, halftone grain */
+:root {
+  --bg: #EFECE3;
+  --fg: #151515;
+  --muted: #5E5B55;
+  --accent: #C8102E;
+  --accent-2: #1F4E79;
+  --accent-3: #B08D57;
+  --copy: rgba(21, 21, 21, 0.06);
+  --rule: rgba(21, 21, 21, 0.25);
+  --surface: #F6F3EA;
+  --line: rgba(21, 21, 21, 0.35);
+  --on-accent: #FFFFFF;
+  --bar-muted: #CFCBC0;
+  --halo: transparent;
+  --shadow: none;
+  --card-border: 1px solid #151515;
+  --radius: 0px;
+  --font-display: "Noto Serif", "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-quote: "Noto Serif", "Playfair Display", Georgia, "Times New Roman", serif;
+  --title-weight: 800;
+  --quote-weight: 500;
+  --title-tracking: -0.02em;
+  --title-leading: 1.02;
+  --code-bg: #F6F3EA;
+  --code-fg: #151515;
+  --code-chrome: #E4E0D4;
+  --code-border: 1px solid #151515;
+  --code-hi: rgba(200, 16, 46, 0.1);
+  --tk-k: #C8102E;
+  --tk-s: #1F4E79;
+  --tk-f: #151515;
+  --tk-n: #B08D57;
+  --tk-c: #8A867C;
+  --neg: #C8102E;
+  --pos: #1F4E79;
+  --edge: #151515;
+  --badge-bg: transparent;
+}
+.kind-documentary .v-em { color: var(--accent); font-style: italic; }
+.kind-documentary .v-kicker { color: #fff; background: var(--accent); padding: 0.2em 0.6em; letter-spacing: 0.16em; font-weight: 700; display: inline-block; }
+.kind-documentary .v-line { height: calc(var(--u) * 3); width: calc(var(--u) * 200); border-radius: 0; background: var(--fg); }
+.kind-documentary .v-card { background: var(--surface); }
+.kind-documentary .v-num { background: var(--fg); color: var(--bg); border-radius: 0; font-family: var(--font-display); }
+.kind-documentary .v-icon-badge { color: var(--fg); border: 1px solid var(--fg); }
+.kind-documentary .v-statnum { font-family: var(--font-display); font-weight: 800; }
+.kind-documentary .v-vs { background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 800; }
+.kind-documentary .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; font-weight: 800; }
+.kind-documentary .t-section .v-wipe { background: var(--fg); }
+.kind-documentary .t-timeline .v-date { font-family: var(--font-display); font-weight: 800; }
+.kind-documentary .t-line .v-lc-call { background: var(--accent); color: #fff; }
+.kind-documentary .t-diagram .v-node.is-hub { color: var(--bg); }
+.kind-documentary .t-bars .v-bar.is-hi { background: var(--accent); }
+
+.v-kicker { width: fit-content; max-width: 100%; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }

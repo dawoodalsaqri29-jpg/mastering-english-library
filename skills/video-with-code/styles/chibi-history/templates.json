@@ -1,0 +1,2679 @@
+[
+  {
+    "id": "character-talks",
+    "name": "Character Talks",
+    "description": "The workhorse: one chibi archetype (officer, general, soldier, sailor, pilot, diplomat, civilian, nurse or the historian host) talks to camera with lip-sync, blinks, bounces and gesture beats on a painted location (war room, trench, airfield, city, office, alps, sea…). Optional chunky thumbnail text slams in on its keyword, with a date tag and the nation's flag.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Who talks. The same role+nation pair must look identical across the video.",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "nation": {
+          "type": "string",
+          "description": "Nation — defines flag and uniform colours.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Location. Keep it consistent between neighbouring scenes.",
+          "enum": [
+            "war-room",
+            "trench",
+            "airfield",
+            "city",
+            "office",
+            "alps",
+            "sea",
+            "map",
+            "plain",
+            "parade",
+            "field"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "Optional chunky thumbnail text (1–5 words, e.g. 'WHY NOT THEM?'). Wrap one word in *asterisks* to colour it."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the text (1–3 words)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the text and key gesture land (must appear in the narration)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        },
+        "prop": {
+          "type": "string",
+          "description": "Optional prop held in the right hand.",
+          "enum": [
+            "letter",
+            "telegram",
+            "map",
+            "binoculars",
+            "phone",
+            "flag",
+            "pointer",
+            "mug",
+            "sign"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Base expression (default smile).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "keyExpression": {
+          "type": "string",
+          "description": "Expression from the keyword on.",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "closeExpression": {
+          "type": "string",
+          "description": "Expression in the close-up half.",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "gesture": {
+          "type": "string",
+          "description": "Gesture on the keyword (default: role's signature move).",
+          "enum": [
+            "rest",
+            "point",
+            "point-up",
+            "point-left",
+            "point-down",
+            "salute",
+            "shrug",
+            "arms-up",
+            "cheer",
+            "fist",
+            "fist-up",
+            "facepalm",
+            "think",
+            "hold",
+            "hold-up",
+            "hold-both",
+            "wave",
+            "present",
+            "cross",
+            "hips",
+            "stop",
+            "hands-head",
+            "binoculars",
+            "march"
+          ]
+        },
+        "beats": {
+          "type": "array",
+          "description": "Acting beats on narration words (0–3).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "word": {
+                "type": "string",
+                "description": "Narration word the beat lands on."
+              },
+              "expression": {
+                "type": "string",
+                "description": "Expression from this word.",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "proud",
+                  "smug",
+                  "worried",
+                  "nervous",
+                  "angry",
+                  "furious",
+                  "shocked",
+                  "surprised",
+                  "sad",
+                  "gloomy",
+                  "confused",
+                  "thinking",
+                  "determined",
+                  "serious",
+                  "scared",
+                  "dizzy",
+                  "tired",
+                  "sleepy",
+                  "calm",
+                  "embarrassed"
+                ]
+              },
+              "gesture": {
+                "type": "string",
+                "description": "Gesture on this word.",
+                "enum": [
+                  "rest",
+                  "point",
+                  "point-up",
+                  "point-left",
+                  "point-down",
+                  "salute",
+                  "shrug",
+                  "arms-up",
+                  "cheer",
+                  "fist",
+                  "fist-up",
+                  "facepalm",
+                  "think",
+                  "hold",
+                  "hold-up",
+                  "hold-both",
+                  "wave",
+                  "present",
+                  "cross",
+                  "hips",
+                  "stop",
+                  "hands-head",
+                  "binoculars",
+                  "march"
+                ]
+              },
+              "hop": {
+                "type": "boolean",
+                "description": "Little hop on the word."
+              }
+            },
+            "required": [
+              "word"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "side": {
+          "type": "string",
+          "description": "Which side the character stands on when there is text (default left).",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Optional name chip under the character (e.g. 'BRITAIN', 'THE GENERAL')."
+        },
+        "closeUp": {
+          "type": "boolean",
+          "description": "Cut to a close-up for the second half (default true)."
+        },
+        "captions": {
+          "type": "boolean",
+          "description": "Word-synced captions at the bottom (default false)."
+        }
+      },
+      "required": [
+        "role",
+        "nation"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "role": "officer",
+      "nation": "germany",
+      "location": "war-room",
+      "text": "Why *not* them?",
+      "kicker": "The question",
+      "keyword": "Switzerland",
+      "date": "JUN 1940",
+      "expression": "thinking",
+      "keyExpression": "confused",
+      "gesture": "shrug",
+      "side": "left",
+      "label": "The staff officer"
+    },
+    "exampleNarration": "By the summer of 1940, the staff officers had a map, a plan for almost everyone, and one very awkward question. Why not Switzerland? It was right there, in the middle of everything, and nobody could quite agree on what to do about it."
+  },
+  {
+    "id": "two-sides",
+    "name": "Two Sides",
+    "description": "Split screen with a jagged divider: each side has its own location, chibi and waving flag. Lines of narration alternate between the two sides — the speaker pops forward, the other side dims and reacts — with a speech bubble per line. The signature 'told from both sides' framing.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Label chip (default: nation name)."
+            },
+            "location": {
+              "type": "string",
+              "description": "Location of the left half.",
+              "enum": [
+                "war-room",
+                "trench",
+                "airfield",
+                "city",
+                "office",
+                "alps",
+                "sea",
+                "map",
+                "plain",
+                "parade",
+                "field"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Resting expression.",
+              "enum": [
+                "neutral",
+                "smile",
+                "happy",
+                "excited",
+                "proud",
+                "smug",
+                "worried",
+                "nervous",
+                "angry",
+                "furious",
+                "shocked",
+                "surprised",
+                "sad",
+                "gloomy",
+                "confused",
+                "thinking",
+                "determined",
+                "serious",
+                "scared",
+                "dizzy",
+                "tired",
+                "sleepy",
+                "calm",
+                "embarrassed"
+              ]
+            },
+            "gesture": {
+              "type": "string",
+              "description": "Resting gesture.",
+              "enum": [
+                "rest",
+                "point",
+                "point-up",
+                "point-left",
+                "point-down",
+                "salute",
+                "shrug",
+                "arms-up",
+                "cheer",
+                "fist",
+                "fist-up",
+                "facepalm",
+                "think",
+                "hold",
+                "hold-up",
+                "hold-both",
+                "wave",
+                "present",
+                "cross",
+                "hips",
+                "stop",
+                "hands-head",
+                "binoculars",
+                "march"
+              ]
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Label chip (default: nation name)."
+            },
+            "location": {
+              "type": "string",
+              "description": "Location of the right half.",
+              "enum": [
+                "war-room",
+                "trench",
+                "airfield",
+                "city",
+                "office",
+                "alps",
+                "sea",
+                "map",
+                "plain",
+                "parade",
+                "field"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Resting expression.",
+              "enum": [
+                "neutral",
+                "smile",
+                "happy",
+                "excited",
+                "proud",
+                "smug",
+                "worried",
+                "nervous",
+                "angry",
+                "furious",
+                "shocked",
+                "surprised",
+                "sad",
+                "gloomy",
+                "confused",
+                "thinking",
+                "determined",
+                "serious",
+                "scared",
+                "dizzy",
+                "tired",
+                "sleepy",
+                "calm",
+                "embarrassed"
+              ]
+            },
+            "gesture": {
+              "type": "string",
+              "description": "Resting gesture.",
+              "enum": [
+                "rest",
+                "point",
+                "point-up",
+                "point-left",
+                "point-down",
+                "salute",
+                "shrug",
+                "arms-up",
+                "cheer",
+                "fist",
+                "fist-up",
+                "facepalm",
+                "think",
+                "hold",
+                "hold-up",
+                "hold-both",
+                "wave",
+                "present",
+                "cross",
+                "hips",
+                "stop",
+                "hands-head",
+                "binoculars",
+                "march"
+              ]
+            },
+            "night": {
+              "type": "boolean",
+              "description": "Night tint for the right location."
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "lines": {
+          "type": "array",
+          "description": "2–6 lines, the exact narration wording, alternating sides.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "side": {
+                "type": "string",
+                "description": "Which side speaks.",
+                "enum": [
+                  "left",
+                  "right"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "description": "Line text (exact narration wording, ≤ 12 words)."
+              },
+              "expression": {
+                "type": "string",
+                "description": "Speaker's expression.",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "proud",
+                  "smug",
+                  "worried",
+                  "nervous",
+                  "angry",
+                  "furious",
+                  "shocked",
+                  "surprised",
+                  "sad",
+                  "gloomy",
+                  "confused",
+                  "thinking",
+                  "determined",
+                  "serious",
+                  "scared",
+                  "dizzy",
+                  "tired",
+                  "sleepy",
+                  "calm",
+                  "embarrassed"
+                ]
+              },
+              "gesture": {
+                "type": "string",
+                "description": "Speaker's gesture.",
+                "enum": [
+                  "rest",
+                  "point",
+                  "point-up",
+                  "point-left",
+                  "point-down",
+                  "salute",
+                  "shrug",
+                  "arms-up",
+                  "cheer",
+                  "fist",
+                  "fist-up",
+                  "facepalm",
+                  "think",
+                  "hold",
+                  "hold-up",
+                  "hold-both",
+                  "wave",
+                  "present",
+                  "cross",
+                  "hips",
+                  "stop",
+                  "hands-head",
+                  "binoculars",
+                  "march"
+                ]
+              },
+              "reaction": {
+                "type": "string",
+                "description": "Listener's reaction.",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "proud",
+                  "smug",
+                  "worried",
+                  "nervous",
+                  "angry",
+                  "furious",
+                  "shocked",
+                  "surprised",
+                  "sad",
+                  "gloomy",
+                  "confused",
+                  "thinking",
+                  "determined",
+                  "serious",
+                  "scared",
+                  "dizzy",
+                  "tired",
+                  "sleepy",
+                  "calm",
+                  "embarrassed"
+                ]
+              }
+            },
+            "required": [
+              "side",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "location": {
+          "type": "string",
+          "description": "Shared default location for both halves.",
+          "enum": [
+            "war-room",
+            "trench",
+            "airfield",
+            "city",
+            "office",
+            "alps",
+            "sea",
+            "map",
+            "plain",
+            "parade",
+            "field"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional short title shown before the first line (≤ 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        }
+      },
+      "required": [
+        "left",
+        "right",
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "role": "officer",
+        "nation": "britain",
+        "label": "London",
+        "location": "office"
+      },
+      "right": {
+        "role": "general",
+        "nation": "germany",
+        "label": "Berlin",
+        "location": "war-room"
+      },
+      "lines": [
+        {
+          "side": "left",
+          "text": "We sent eight letters.",
+          "expression": "worried",
+          "gesture": "hold-up",
+          "reaction": "smug"
+        },
+        {
+          "side": "right",
+          "text": "We did not reply.",
+          "expression": "smug",
+          "gesture": "cross",
+          "reaction": "angry"
+        },
+        {
+          "side": "left",
+          "text": "Not even a postcard?",
+          "expression": "angry",
+          "gesture": "shrug",
+          "reaction": "calm"
+        }
+      ],
+      "title": "Both sides",
+      "date": "1939"
+    },
+    "exampleNarration": "Here is how both sides saw it. We sent eight letters. We did not reply. Not even a postcard? Not even a postcard."
+  },
+  {
+    "id": "war-map",
+    "name": "War Map",
+    "description": "A stylised parchment map of Europe: regions colour in with their flags, jagged front lines draw on, chunky arrows advance and red targets lock on — each on its narration word — while a small general in the corner explains with lip-sync. Optional title, date tag and caption.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional chunky title (≤ 4 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the title."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        },
+        "regions": {
+          "type": "array",
+          "description": "Regions to colour (0–8), in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Region name. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+              },
+              "nation": {
+                "type": "string",
+                "description": "Nation colouring the region (also its flag).",
+                "enum": [
+                  "germany",
+                  "britain",
+                  "usa",
+                  "ussr",
+                  "france",
+                  "italy",
+                  "japan",
+                  "switzerland",
+                  "sweden",
+                  "poland",
+                  "austria",
+                  "finland",
+                  "netherlands",
+                  "belgium",
+                  "spain",
+                  "norway",
+                  "neutral"
+                ]
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word to sync on."
+              },
+              "label": {
+                "type": "string",
+                "description": "Label text (default: nation name)."
+              },
+              "flag": {
+                "type": "boolean",
+                "description": "Plant a flag (default true)."
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "fronts": {
+          "type": "array",
+          "description": "Jagged front lines (0–2).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "points": {
+                "type": "array",
+                "description": "2–6 map points along the line.",
+                "items": {
+                  "type": "string",
+                  "description": "Map point. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+                }
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "color": {
+                "type": "string",
+                "description": "CSS colour (default red)."
+              }
+            },
+            "required": [
+              "points"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "arrows": {
+          "type": "array",
+          "description": "Advancing arrows (0–6), in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "description": "Start. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+              },
+              "to": {
+                "type": "string",
+                "description": "End. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "nation": {
+                "type": "string",
+                "description": "Arrow colour from a nation.",
+                "enum": [
+                  "germany",
+                  "britain",
+                  "usa",
+                  "ussr",
+                  "france",
+                  "italy",
+                  "japan",
+                  "switzerland",
+                  "sweden",
+                  "poland",
+                  "austria",
+                  "finland",
+                  "netherlands",
+                  "belgium",
+                  "spain",
+                  "norway",
+                  "neutral"
+                ]
+              },
+              "color": {
+                "type": "string",
+                "description": "CSS colour override."
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "targets": {
+          "type": "array",
+          "description": "Red targets (0–4).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "at": {
+                "type": "string",
+                "description": "Target point. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "label": {
+                "type": "string",
+                "description": "Label above the target (≤ 3 words)."
+              },
+              "boom": {
+                "type": "boolean",
+                "description": "Cartoon burst after the lock-on."
+              }
+            },
+            "required": [
+              "at"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "labels": {
+          "type": "array",
+          "description": "Extra text labels (0–6).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Label (≤ 3 words)."
+              },
+              "at": {
+                "type": "string",
+                "description": "Position. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "size": {
+                "type": "number",
+                "description": "Font size in map units (24–48)."
+              }
+            },
+            "required": [
+              "text",
+              "at"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "narrator": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            },
+            "expression": {
+              "type": "string",
+              "description": "Resting expression.",
+              "enum": [
+                "neutral",
+                "smile",
+                "happy",
+                "excited",
+                "proud",
+                "smug",
+                "worried",
+                "nervous",
+                "angry",
+                "furious",
+                "shocked",
+                "surprised",
+                "sad",
+                "gloomy",
+                "confused",
+                "thinking",
+                "determined",
+                "serious",
+                "scared",
+                "dizzy",
+                "tired",
+                "sleepy",
+                "calm",
+                "embarrassed"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "nation": {
+          "type": "string",
+          "description": "Default nation for the narrator.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional bottom caption (≤ 10 words)."
+        },
+        "captionWord": {
+          "type": "string",
+          "description": "Narration word for the caption."
+        },
+        "focus": {
+          "type": "boolean",
+          "description": "Camera drifts toward the first arrow's end (default true)."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The wrong *target*",
+      "date": "APR 1944",
+      "regions": [
+        {
+          "name": "germany",
+          "nation": "germany",
+          "word": "Germany"
+        },
+        {
+          "name": "britain",
+          "nation": "britain",
+          "word": "Britain"
+        },
+        {
+          "name": "switzerland",
+          "nation": "switzerland",
+          "word": "Switzerland"
+        }
+      ],
+      "arrows": [
+        {
+          "from": "britain",
+          "to": "germany",
+          "word": "bombers",
+          "nation": "britain"
+        }
+      ],
+      "targets": [
+        {
+          "at": "switzerland",
+          "word": "wrong",
+          "label": "Oops",
+          "boom": true
+        }
+      ],
+      "narrator": {
+        "role": "general",
+        "nation": "britain",
+        "expression": "serious"
+      },
+      "caption": "Navigation was… optimistic.",
+      "captionWord": "navigation"
+    },
+    "exampleNarration": "Look at the map. Germany here, Britain here, and tiny neutral Switzerland in the middle. The bombers took off at night, flew toward Germany, and dropped their load on the wrong country. Navigation was optimistic."
+  },
+  {
+    "id": "diplomacy-desk",
+    "name": "Diplomacy Desk",
+    "description": "The 'no reply' gag: in a diplomatic office a sender fires off letters or telegrams one by one (each on its narration word) that pile up on the receiver's desk while the receiver naps, shrugs or smirks. A counter ticks up, then a rubber stamp slams: NO REPLY — or, with reply: true, one answer finally flies back.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "sender": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "receiver": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "letters": {
+          "type": "number",
+          "description": "How many letters are sent (1–8)."
+        },
+        "words": {
+          "type": "array",
+          "description": "Narration words, one per letter, in order (optional).",
+          "items": {
+            "type": "string",
+            "description": "Word."
+          }
+        },
+        "kind": {
+          "type": "string",
+          "description": "Letter or telegram.",
+          "enum": [
+            "letter",
+            "telegram"
+          ]
+        },
+        "reply": {
+          "type": "boolean",
+          "description": "If true one reply finally comes back (default false = NO REPLY stamp)."
+        },
+        "replyWord": {
+          "type": "string",
+          "description": "Narration word on which the reply arrives."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Stamp text (default 'NO REPLY'; with reply e.g. 'FINALLY')."
+        },
+        "receiverMood": {
+          "type": "string",
+          "description": "Receiver's resting expression (default calm).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "receiverGesture": {
+          "type": "string",
+          "description": "Receiver's resting gesture (default cross).",
+          "enum": [
+            "rest",
+            "point",
+            "point-up",
+            "point-left",
+            "point-down",
+            "salute",
+            "shrug",
+            "arms-up",
+            "cheer",
+            "fist",
+            "fist-up",
+            "facepalm",
+            "think",
+            "hold",
+            "hold-up",
+            "hold-both",
+            "wave",
+            "present",
+            "cross",
+            "hips",
+            "stop",
+            "hands-head",
+            "binoculars",
+            "march"
+          ]
+        },
+        "senderReaction": {
+          "type": "string",
+          "description": "Sender's reaction at the end.",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "counterLabel": {
+          "type": "string",
+          "description": "Counter label (default 'letters')."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional short title (≤ 4 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        }
+      },
+      "required": [
+        "sender",
+        "receiver"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "sender": {
+        "role": "diplomat",
+        "nation": "britain"
+      },
+      "receiver": {
+        "role": "diplomat",
+        "nation": "ussr"
+      },
+      "letters": 5,
+      "words": [
+        "first",
+        "second",
+        "third",
+        "fourth",
+        "fifth"
+      ],
+      "kind": "letter",
+      "title": "Eight letters",
+      "date": "1939"
+    },
+    "exampleNarration": "So London wrote a letter. Then a second. A third. A fourth. A fifth, slightly more polite. And the answer from Moscow was the same every single time: absolutely nothing."
+  },
+  {
+    "id": "headline-thumb",
+    "name": "Headline Thumb",
+    "description": "Thumbnail-style hook frame: diagonal flag-colour stripes, one big chibi reacting (sweat drop, hands on head, anger mark) and giant chunky two-line text that slams in with a flash and a shake on its word. Optional red target circle, date tag and sub-caption.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The chunky headline (2–6 words, e.g. 'THE WRONG TARGET'). Wrap one word in *asterisks*."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the headline."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the headline lands on."
+        },
+        "sub": {
+          "type": "string",
+          "description": "Optional caption under it (≤ 10 words)."
+        },
+        "role": {
+          "type": "string",
+          "description": "Archetype by uniform (never a real person).",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "nation": {
+          "type": "string",
+          "description": "Nation — defines flag and uniform colours.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Expression before the hit (default worried).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "reaction": {
+          "type": "string",
+          "description": "Expression on the hit (default shocked).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "afterExpression": {
+          "type": "string",
+          "description": "Expression after the hit.",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "gesture": {
+          "type": "string",
+          "description": "Gesture on the hit (default hands-head).",
+          "enum": [
+            "rest",
+            "point",
+            "point-up",
+            "point-left",
+            "point-down",
+            "salute",
+            "shrug",
+            "arms-up",
+            "cheer",
+            "fist",
+            "fist-up",
+            "facepalm",
+            "think",
+            "hold",
+            "hold-up",
+            "hold-both",
+            "wave",
+            "present",
+            "cross",
+            "hips",
+            "stop",
+            "hands-head",
+            "binoculars",
+            "march"
+          ]
+        },
+        "target": {
+          "type": "boolean",
+          "description": "Red target circle locks onto the character."
+        },
+        "side": {
+          "type": "string",
+          "description": "Character side (default left).",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        },
+        "titleColor": {
+          "type": "string",
+          "description": "CSS colour for the headline text (default white)."
+        },
+        "flag": {
+          "type": "boolean",
+          "description": "Flag on a pole behind the character (default true)."
+        }
+      },
+      "required": [
+        "title",
+        "role",
+        "nation"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The *wrong* target",
+      "word": "wrong",
+      "sub": "How a map error nearly started a second war",
+      "role": "pilot",
+      "nation": "usa",
+      "expression": "proud",
+      "reaction": "shocked",
+      "gesture": "hands-head",
+      "target": true,
+      "date": "MAR 1945",
+      "side": "left"
+    },
+    "exampleNarration": "This is the story of a proud bomber crew, a very confident navigator, and the wrong target. Because the city they hit that morning was not in Germany at all."
+  },
+  {
+    "id": "date-card",
+    "name": "Date Card",
+    "description": "Chapter opener: a giant date tag slams onto flag-striped paper, the chapter title pops under it, a place chip appears, planes cross the sky and a chibi peeks up from the bottom corner to wave. Use it to open each chapter or jump in time.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "The date tag (1–3 words, e.g. 'OCT 1945', 'SPRING 1917')."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chapter title (2–6 words)."
+        },
+        "chapter": {
+          "type": "string",
+          "description": "Optional small kicker (e.g. 'CHAPTER 2')."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the title lands on."
+        },
+        "place": {
+          "type": "string",
+          "description": "Optional place chip (e.g. 'BERN, SWITZERLAND')."
+        },
+        "nation": {
+          "type": "string",
+          "description": "Nation for the stripes, the flag and the peeking chibi.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "description": "Role of the peeking chibi (default soldier).",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "planes": {
+          "type": "string",
+          "description": "Plane type crossing the sky.",
+          "enum": [
+            "fighter",
+            "bomber"
+          ]
+        }
+      },
+      "required": [
+        "date",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "date": "OCT 1945",
+      "title": "Eight letters, *no* reply",
+      "chapter": "Chapter 3",
+      "word": "letters",
+      "place": "Bern, Switzerland",
+      "nation": "switzerland",
+      "role": "soldier",
+      "planes": "fighter"
+    },
+    "exampleNarration": "October 1945. The war is over, the borders are quiet, and in Bern a very patient clerk is about to send eight letters and receive no reply."
+  },
+  {
+    "id": "versus-forces",
+    "name": "Versus Forces",
+    "description": "Numbers and equipment comparison on a jagged split screen: two flags, a VS badge, and rows of soldier / tank / plane / bomber / ship pictograms that pop in while the numbers count up — each row on its narration word. Two small generals at the bottom react (proud vs worried).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional small title (≤ 4 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the title."
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Label chip (default nation name)."
+            },
+            "role": {
+              "type": "string",
+              "description": "Reacting chibi role (default general).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            },
+            "label": {
+              "type": "string",
+              "description": "Label chip (default nation name)."
+            },
+            "role": {
+              "type": "string",
+              "description": "Reacting chibi role (default general).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            }
+          },
+          "required": [
+            "nation"
+          ],
+          "additionalProperties": false
+        },
+        "rows": {
+          "type": "array",
+          "description": "1–4 comparison rows in narration order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Row label (1–3 words)."
+              },
+              "left": {
+                "type": "number",
+                "description": "Left value."
+              },
+              "right": {
+                "type": "number",
+                "description": "Right value."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Pictogram.",
+                "enum": [
+                  "soldier",
+                  "tank",
+                  "plane",
+                  "bomber",
+                  "ship"
+                ]
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "suffix": {
+                "type": "string",
+                "description": "Number suffix (e.g. 'k', 'M')."
+              }
+            },
+            "required": [
+              "label",
+              "left",
+              "right"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "left",
+        "right",
+        "rows"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "On paper",
+      "left": {
+        "nation": "switzerland",
+        "label": "Switzerland"
+      },
+      "right": {
+        "nation": "germany",
+        "label": "Germany"
+      },
+      "rows": [
+        {
+          "label": "Soldiers",
+          "left": 430,
+          "right": 4500,
+          "icon": "soldier",
+          "word": "soldiers",
+          "suffix": "k"
+        },
+        {
+          "label": "Aircraft",
+          "left": 180,
+          "right": 4200,
+          "icon": "plane",
+          "word": "aircraft"
+        },
+        {
+          "label": "Tanks",
+          "left": 24,
+          "right": 2500,
+          "icon": "tank",
+          "word": "tanks"
+        }
+      ]
+    },
+    "exampleNarration": "On paper it was not close. Four hundred thirty thousand Swiss soldiers against four and a half million. A few hundred aircraft against thousands. And twenty four tanks. Twenty four. But the mountains do not read spreadsheets."
+  },
+  {
+    "id": "neutral-question",
+    "name": "Neutral Question",
+    "description": "A puzzled officer holds a map while the camera zooms onto a neutral country: the aggressor's regions colour in, an arrow nudges toward the border and stops, question marks sprout over the country and the chibi shrugs as a chunky 'WHY NOT?' slams in. The 'why didn't they invade…' beat.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "description": "The neutral country on the map (default switzerland). One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+        },
+        "countryNation": {
+          "type": "string",
+          "description": "Nation id for the country's flag (default: same as country).",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "aggressor": {
+          "type": "string",
+          "description": "Who is wondering (colours the surrounding regions, the officer's uniform).",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "aggressorRegions": {
+          "type": "array",
+          "description": "Map regions to colour in the aggressor's colour (default: the aggressor itself).",
+          "items": {
+            "type": "string",
+            "description": "Region. One of the named map points: britain, london, ireland, france, paris, spain, madrid, portugal, germany, berlin, switzerland, bern, alps, italy, rome, sicily, scandinavia, sweden, stockholm, norway, denmark, poland, warsaw, ussr, russia, moscow, balkans, greece, austria, vienna, netherlands, belgium, finland, baltic, north-sea, mediterranean, atlantic, channel, turkey, africa, egypt, north-africa."
+          }
+        },
+        "question": {
+          "type": "string",
+          "description": "Chunky question text (1–4 words, default 'WHY NOT?')."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the question."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the question lands on."
+        },
+        "role": {
+          "type": "string",
+          "description": "The puzzled chibi's role (default officer).",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "expression": {
+          "type": "string",
+          "description": "Resting expression (default thinking).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "afterExpression": {
+          "type": "string",
+          "description": "Expression after the question (default nervous).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "prop": {
+          "type": "string",
+          "description": "Prop held before the shrug (default map).",
+          "enum": [
+            "letter",
+            "telegram",
+            "map",
+            "binoculars",
+            "phone",
+            "flag",
+            "pointer",
+            "mug",
+            "sign"
+          ]
+        },
+        "arrows": {
+          "type": "boolean",
+          "description": "Show the nudging arrow (default true)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional bottom caption (≤ 10 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "country": "switzerland",
+      "aggressor": "germany",
+      "aggressorRegions": [
+        "germany",
+        "austria",
+        "france"
+      ],
+      "question": "Why *not*?",
+      "word": "why",
+      "role": "officer",
+      "caption": "Mountains, tunnels and a very annoying plan",
+      "date": "1940"
+    },
+    "exampleNarration": "Germany had France. Germany had Austria. Germany had basically everyone around it. So why not Switzerland? The officers stared at the map, and the map stared back."
+  },
+  {
+    "id": "timeline-war",
+    "name": "Timeline",
+    "description": "A road-style timeline with date tags and label cards that pop up one by one on their narration words, while a small chibi marches along the road and cheers at each stop. Optional flags at events.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional small title (≤ 4 words)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny tag above the title."
+        },
+        "events": {
+          "type": "array",
+          "description": "2–6 events in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Date tag (1–2 words)."
+              },
+              "label": {
+                "type": "string",
+                "description": "Event label (2–6 words)."
+              },
+              "word": {
+                "type": "string",
+                "description": "Narration word."
+              },
+              "nation": {
+                "type": "string",
+                "description": "Optional flag at the event.",
+                "enum": [
+                  "germany",
+                  "britain",
+                  "usa",
+                  "ussr",
+                  "france",
+                  "italy",
+                  "japan",
+                  "switzerland",
+                  "sweden",
+                  "poland",
+                  "austria",
+                  "finland",
+                  "netherlands",
+                  "belgium",
+                  "spain",
+                  "norway",
+                  "neutral"
+                ]
+              },
+              "expression": {
+                "type": "string",
+                "description": "Marcher's expression at this event.",
+                "enum": [
+                  "neutral",
+                  "smile",
+                  "happy",
+                  "excited",
+                  "proud",
+                  "smug",
+                  "worried",
+                  "nervous",
+                  "angry",
+                  "furious",
+                  "shocked",
+                  "surprised",
+                  "sad",
+                  "gloomy",
+                  "confused",
+                  "thinking",
+                  "determined",
+                  "serious",
+                  "scared",
+                  "dizzy",
+                  "tired",
+                  "sleepy",
+                  "calm",
+                  "embarrassed"
+                ]
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "role": {
+          "type": "string",
+          "description": "Marching chibi's role (default soldier).",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "nation": {
+          "type": "string",
+          "description": "Marching chibi's nation.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "color": {
+          "type": "string",
+          "description": "Background colour (CSS)."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Eight letters",
+      "events": [
+        {
+          "date": "JAN",
+          "label": "First letter sent",
+          "word": "January"
+        },
+        {
+          "date": "MAR",
+          "label": "Polite reminder",
+          "word": "March"
+        },
+        {
+          "date": "JUN",
+          "label": "Less polite reminder",
+          "word": "June"
+        },
+        {
+          "date": "OCT",
+          "label": "Still no reply",
+          "word": "October",
+          "nation": "switzerland"
+        }
+      ],
+      "role": "civilian",
+      "nation": "switzerland"
+    },
+    "exampleNarration": "In January the first letter went out. In March a polite reminder. In June a less polite reminder. And by October, still no reply at all."
+  },
+  {
+    "id": "crowd-scene",
+    "name": "Crowd Scene",
+    "description": "Many small chibis at once: a cheering street crowd with bunting and hand flags, soldiers marching across the frame, or an anxious waiting crowd — with a bigger leader in front narrating. Chunky text can land on a word.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "number",
+          "description": "How many chibis (6–30)."
+        },
+        "roles": {
+          "type": "array",
+          "description": "Roles mixed through the crowd.",
+          "items": {
+            "type": "string",
+            "description": "Archetype by uniform (never a real person).",
+            "enum": [
+              "officer",
+              "general",
+              "soldier",
+              "sailor",
+              "pilot",
+              "diplomat",
+              "civilian",
+              "nurse",
+              "historian"
+            ]
+          }
+        },
+        "nation": {
+          "type": "string",
+          "description": "Nation of the crowd (flags, uniforms).",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "mood": {
+          "type": "string",
+          "description": "cheer (hopping, flags), march (soldiers march across), wait (anxious).",
+          "enum": [
+            "cheer",
+            "march",
+            "wait"
+          ]
+        },
+        "direction": {
+          "type": "string",
+          "description": "March direction.",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "Location (default parade).",
+          "enum": [
+            "war-room",
+            "trench",
+            "airfield",
+            "city",
+            "office",
+            "alps",
+            "sea",
+            "map",
+            "plain",
+            "parade",
+            "field"
+          ]
+        },
+        "leader": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string",
+              "description": "Archetype by uniform (never a real person).",
+              "enum": [
+                "officer",
+                "general",
+                "soldier",
+                "sailor",
+                "pilot",
+                "diplomat",
+                "civilian",
+                "nurse",
+                "historian"
+              ]
+            },
+            "nation": {
+              "type": "string",
+              "description": "Nation — defines flag and uniform colours.",
+              "enum": [
+                "germany",
+                "britain",
+                "usa",
+                "ussr",
+                "france",
+                "italy",
+                "japan",
+                "switzerland",
+                "sweden",
+                "poland",
+                "austria",
+                "finland",
+                "netherlands",
+                "belgium",
+                "spain",
+                "norway",
+                "neutral"
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "text": {
+          "type": "string",
+          "description": "Optional chunky text (1–4 words)."
+        },
+        "word": {
+          "type": "string",
+          "description": "Narration word the text and the crowd reaction land on."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Optional bottom caption (≤ 10 words)."
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        }
+      },
+      "required": [
+        "nation",
+        "mood"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "count": 16,
+      "roles": [
+        "civilian",
+        "nurse",
+        "civilian",
+        "soldier"
+      ],
+      "nation": "france",
+      "mood": "cheer",
+      "location": "parade",
+      "leader": {
+        "role": "officer",
+        "nation": "france"
+      },
+      "text": "It's *over*!",
+      "word": "over",
+      "date": "MAY 1945"
+    },
+    "exampleNarration": "And then, one morning in May, the radio said the words everyone had waited six years to hear. It's over. The streets filled in minutes."
+  },
+  {
+    "id": "aftermath-reflection",
+    "name": "Aftermath Reflection",
+    "description": "Quiet, non-graphic ending: a lone chibi stands hat-in-hand in a dusk field of poppies (or the alps, the sea, a night city), birds cross the sky, the camera drifts slowly and reflective lines fade in one by one. Vignette and a softer palette. Use once, at the end of a chapter or the video.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Who reflects (default soldier).",
+          "enum": [
+            "officer",
+            "general",
+            "soldier",
+            "sailor",
+            "pilot",
+            "diplomat",
+            "civilian",
+            "nurse",
+            "historian"
+          ]
+        },
+        "nation": {
+          "type": "string",
+          "description": "Nation — defines flag and uniform colours.",
+          "enum": [
+            "germany",
+            "britain",
+            "usa",
+            "ussr",
+            "france",
+            "italy",
+            "japan",
+            "switzerland",
+            "sweden",
+            "poland",
+            "austria",
+            "finland",
+            "netherlands",
+            "belgium",
+            "spain",
+            "norway",
+            "neutral"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "field (poppies at dusk), alps, sea or city (night).",
+          "enum": [
+            "war-room",
+            "trench",
+            "airfield",
+            "city",
+            "office",
+            "alps",
+            "sea",
+            "map",
+            "plain",
+            "parade",
+            "field"
+          ]
+        },
+        "lines": {
+          "type": "array",
+          "description": "1–4 short reflective lines (exact narration wording, ≤ 10 words each).",
+          "items": {
+            "type": "string",
+            "description": "Line."
+          }
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional closing title (≤ 4 words) near the end."
+        },
+        "expression": {
+          "type": "string",
+          "description": "Expression (default gloomy).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "endExpression": {
+          "type": "string",
+          "description": "Expression for the last third (default calm).",
+          "enum": [
+            "neutral",
+            "smile",
+            "happy",
+            "excited",
+            "proud",
+            "smug",
+            "worried",
+            "nervous",
+            "angry",
+            "furious",
+            "shocked",
+            "surprised",
+            "sad",
+            "gloomy",
+            "confused",
+            "thinking",
+            "determined",
+            "serious",
+            "scared",
+            "dizzy",
+            "tired",
+            "sleepy",
+            "calm",
+            "embarrassed"
+          ]
+        },
+        "hatOff": {
+          "type": "boolean",
+          "description": "Hold the hat in hand (default true)."
+        },
+        "side": {
+          "type": "string",
+          "description": "Character side (default left).",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "description": "Optional date tag, e.g. 'OCT 1945', '1914', 'MAY 1940' (1–3 words)."
+        }
+      },
+      "required": [
+        "role",
+        "nation"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "role": "soldier",
+      "nation": "britain",
+      "location": "field",
+      "lines": [
+        "The letters were never answered.",
+        "But the border stayed quiet.",
+        "And that, in 1945, was enough."
+      ],
+      "title": "The end",
+      "side": "left",
+      "date": "1945"
+    },
+    "exampleNarration": "The letters were never answered. But the border stayed quiet. And that, in 1945, was enough."
+  }
+]

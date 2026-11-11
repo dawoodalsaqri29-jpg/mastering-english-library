@@ -1,0 +1,27 @@
+/* minimal-explainer — light, clean, editorial explainer look */
+:root {
+  --bg: #F6F5F1;
+  --fg: #14161B;
+  --muted: #6B7280;
+  --accent: #2F6BFF;
+  --accent-2: #FF6B4A;
+  --accent-3: #16B88A;
+  --surface: #FFFFFF;
+  --line: #E2E0D8;
+  --on-accent: #FFFFFF;
+  --bar-muted: #CBD5EA;
+  --hl: rgba(47, 107, 255, 0.2);
+  --dot: rgba(20, 22, 27, 0.09);
+  --blob-1: rgba(47, 107, 255, 0.14);
+  --blob-2: rgba(255, 107, 74, 0.11);
+  --halo: rgba(47, 107, 255, 0.12);
+  --shadow: 0 calc(var(--u) * 2) calc(var(--u) * 6) rgba(20, 22, 27, 0.04), 0 calc(var(--u) * 22) calc(var(--u) * 56) rgba(20, 22, 27, 0.09);
+  --radius: calc(var(--u) * 30);
+  --code-bg: #15171E;
+  --neg: #E5484D;
+  --pos: #16B88A;
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .v-vs { background: var(--fg); color: #fff; box-shadow: var(--shadow); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: #fff; }

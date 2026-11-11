@@ -1,0 +1,8 @@
+{
+  "id": "founder-story",
+  "name": "Founder Story",
+  "description": "Hand-inked editorial caricatures of generic business archetypes — the suited founder, the engineer, the inventor, the hoodie techie, the investor — standing over a sweeping aerial empire of factories, campuses, ports and stores that grows as the company grows. Headline plates with the company name and year band, product sketches, growth charts, expansion maps, crisis storms and deal signings. For business-history and company-biography channels.",
+  "premium": true,
+  "palette": { "background": "#D8E4EA", "foreground": "#2B2420", "accent": "#C8503C", "muted": "#7C7268" },
+  "fonts": ["\"Inter\", \"Noto Sans\", \"Arial Narrow\", \"Segoe UI\", Arial, sans-serif", "Georgia, \"Noto Serif\", \"Times New Roman\", serif"]
+}

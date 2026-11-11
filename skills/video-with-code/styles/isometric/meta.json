@@ -1,0 +1,8 @@
+{
+  "id": "isometric",
+  "name": "Isometric World",
+  "description": "A living 2.5D isometric diorama — floating islands, towns that grow, 3D bar charts, conveyor belts and data flowing between servers, with tiny people and cars everywhere. For economics, tech, cities, supply chains and how-things-work explainers.",
+  "premium": false,
+  "palette": { "background": "#E3EEF1", "foreground": "#283050", "accent": "#FF6F59", "muted": "#5B6488" },
+  "fonts": ["\"Nunito\", \"Poppins\", \"Segoe UI Rounded\", Inter, \"Noto Sans\", \"Segoe UI\", system-ui, sans-serif"]
+}

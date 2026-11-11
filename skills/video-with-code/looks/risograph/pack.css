@@ -1,0 +1,46 @@
+/* risograph — two-ink overprint on paper: fluoro pink + blue, halftone, misregistration */
+:root {
+  --bg: #F3EDE0;
+  --fg: #1F2A5C;
+  --muted: #5B6386;
+  --accent: #FF48B0;
+  --accent-2: #0078BF;
+  --accent-3: #FF6C2F;
+  --surface: rgba(255, 255, 255, 0.55);
+  --line: rgba(31, 42, 92, 0.25);
+  --on-accent: #FFFFFF;
+  --bar-muted: rgba(0, 120, 191, 0.28);
+  --hl: rgba(255, 72, 176, 0.38);
+  --halo: rgba(255, 72, 176, 0.12);
+  --shadow: calc(var(--u) * 10) calc(var(--u) * 10) 0 rgba(0, 120, 191, 0.32);
+  --shadow-lg: calc(var(--u) * 14) calc(var(--u) * 14) 0 rgba(255, 72, 176, 0.35);
+  --card-border: 0;
+  --radius: calc(var(--u) * 6);
+  --title-weight: 900;
+  --title-tracking: -0.03em;
+  --code-bg: #1F2A5C;
+  --tk-k: #FF48B0;
+  --tk-s: #7FD3FF;
+  --tk-f: #FFB511;
+  --neg: #FF6C2F;
+  --pos: #00838A;
+  --edge: #1F2A5C;
+  --badge-bg: rgba(255, 72, 176, 0.16);
+}
+/* misregistered second ink layer behind headline type */
+.kind-minimal .v-title { text-shadow: calc(var(--u) * 5) calc(var(--u) * 4) 0 rgba(255, 72, 176, 0.75); }
+.kind-minimal .v-statnum { color: var(--accent-2); text-shadow: calc(var(--u) * 7) calc(var(--u) * 5) 0 rgba(255, 72, 176, 0.8); }
+.kind-minimal .v-em { color: var(--accent); text-shadow: calc(var(--u) * -4) calc(var(--u) * 3) 0 rgba(0, 120, 191, 0.55); }
+.kind-minimal .v-kicker { color: var(--accent-2); letter-spacing: 0.18em; font-weight: 800; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 8); box-shadow: calc(var(--u) * 6) calc(var(--u) * 4) 0 rgba(0, 120, 191, 0.6); }
+.kind-minimal .v-card { mix-blend-mode: multiply; }
+.kind-minimal .v-num { background: var(--accent); color: #fff; box-shadow: calc(var(--u) * 4) calc(var(--u) * 4) 0 var(--accent-2); }
+.kind-minimal .v-icon-badge { color: var(--accent-2); }
+.kind-minimal .v-vs { background: var(--accent); color: #fff; box-shadow: calc(var(--u) * 6) calc(var(--u) * 5) 0 var(--accent-2); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--accent-2); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: var(--accent); text-shadow: calc(var(--u) * 10) calc(var(--u) * 8) 0 rgba(0, 120, 191, 0.6); -webkit-text-stroke: 0; }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: #fff; }
+.kind-minimal .t-bars .v-bar { mix-blend-mode: multiply; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }

@@ -1,0 +1,72 @@
+/* studio-reel — motion designer's showreel in a viewfinder: hard colour flips, ultra-heavy caps, italic serif accents, a hero dot */
+:root {
+  --bg: #0F0F11;
+  --fg: #F2EFE7;
+  --muted: #8C8A85;
+  --accent: #F04B3A;
+  --accent-2: #3030F0;
+  --accent-3: #F3CD3E;
+  --hero: #F04B3A;
+  --surface: color-mix(in srgb, var(--fg) 6%, transparent);
+  --line: color-mix(in srgb, var(--fg) 22%, transparent);
+  --on-accent: #0F0F11;
+  --bar-muted: color-mix(in srgb, var(--fg) 24%, transparent);
+  --hl: color-mix(in srgb, var(--accent) 38%, transparent);
+  --halo: transparent;
+  --dot: transparent;
+  --shadow: none;
+  --shadow-lg: none;
+  --card-border: 1px solid color-mix(in srgb, var(--fg) 22%, transparent);
+  --radius: 0px;
+  --fs-hero: calc(var(--u) * 168);
+  --fs-xl: calc(var(--u) * 120);
+  --title-weight: 900;
+  --title-tracking: -0.05em;
+  --title-leading: 0.88;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --font-quote: "Noto Serif", Georgia, "Times New Roman", serif;
+  --quote-weight: 400;
+  --code-bg: #0F0F11;
+  --code-border: 1px solid rgba(242, 239, 231, 0.18);
+  --tk-k: #F04B3A;
+  --tk-s: #F3CD3E;
+  --tk-f: #8C8CFF;
+  --tk-n: #F2EFE7;
+  --neg: #F04B3A;
+  --pos: #3030F0;
+  --edge: var(--fg);
+  --badge-bg: color-mix(in srgb, var(--fg) 8%, transparent);
+}
+/* derived tokens re-resolve on the root, where the per-scene colours are set */
+#scene-root {
+  --surface: color-mix(in srgb, var(--fg) 6%, transparent);
+  --line: color-mix(in srgb, var(--fg) 22%, transparent);
+  --bar-muted: color-mix(in srgb, var(--fg) 24%, transparent);
+  --hl: color-mix(in srgb, var(--accent) 38%, transparent);
+  --card-border: 1px solid color-mix(in srgb, var(--fg) 22%, transparent);
+  --edge: var(--fg);
+  --badge-bg: color-mix(in srgb, var(--fg) 8%, transparent);
+}
+html.is-portrait { --fs-hero: calc(var(--u) * 140); --fs-xl: calc(var(--u) * 104); }
+.kind-minimal .v-title { text-transform: uppercase; }
+.kind-minimal .v-em { color: var(--accent); font-family: "Noto Serif", Georgia, serif; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: -0.02em; }
+.kind-minimal .v-text { font-weight: 500; }
+.kind-minimal .v-kicker { color: var(--fg); letter-spacing: 0.26em; font-weight: 600; }
+.kind-minimal .v-kicker::before { content: ""; display: inline-block; width: 0.6em; height: 0.6em; margin-right: 0.8em; border-radius: 50%; background: var(--hero); vertical-align: 0.04em; }
+.kind-minimal .v-line { background: var(--fg); height: calc(var(--u) * 3); width: calc(var(--u) * 180); border-radius: 0; }
+.kind-minimal .v-num { background: var(--hero); color: #F2EFE7; font-weight: 900; }
+.kind-minimal .v-icon-badge { color: var(--fg); border: 1px solid var(--line); background: transparent; }
+.kind-minimal .v-statnum { color: var(--fg); font-weight: 900; letter-spacing: -0.065em; }
+.kind-minimal .t-stat .v-statsub,
+.kind-minimal .t-quote .v-role { font-family: "Noto Serif", Georgia, serif; font-style: italic; }
+.kind-minimal .t-quote .v-quote { font-style: italic; }
+.kind-minimal .v-vs { background: var(--hero); color: #F2EFE7; }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--fg); }
+.kind-minimal .t-section .v-wipe { background: var(--hero); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: var(--bg); border-radius: 0; font-family: var(--font-kicker); }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-bars .v-val, .kind-minimal .t-timeline .v-date { font-family: var(--font-kicker); letter-spacing: -0.02em; }
+.kind-minimal .t-timeline .v-dot { border-color: var(--hero); }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--accent); }

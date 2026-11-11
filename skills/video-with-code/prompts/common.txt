@@ -1,0 +1,56 @@
+import type { Brief, StylePack } from "./shared";
+import { CHARS_PER_SECOND } from "./shared";
+
+export const TONE_GUIDE: Record<Brief["tone"], string> = {
+  educational:
+    "Clear, confident teacher who respects the viewer's intelligence. Explain with concrete examples and analogies; build from intuition to precision.",
+  storytelling:
+    "Narrative-driven. Use characters, stakes, tension and reveals. Let facts arrive as plot points, not lists.",
+  energetic:
+    "Fast, punchy, high momentum. Short sentences, vivid verbs, frequent pattern interrupts. Never shouty or hype without substance.",
+  calm: "Unhurried, warm and reassuring. Longer flowing sentences are fine; leave breathing room; no hype.",
+  humorous:
+    "Witty and playful, with light jokes that come from the subject itself. The humour must never get in the way of clarity.",
+  documentary:
+    "Measured, authoritative, cinematic. Precise facts, evocative but restrained language, a sense of gravity and wonder.",
+};
+
+export function languageName(code: string): string {
+  try {
+    const dn = new Intl.DisplayNames(["en"], { type: "language" });
+    return dn.of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+export function briefBlock(brief: Brief): string {
+  const lines = [
+    `<brief>`,
+    `Topic / request: ${brief.topic}`,
+    `Target length: ${formatDuration(brief.targetSeconds)} (${brief.targetSeconds} seconds of narration ≈ ${Math.round(
+      brief.targetSeconds * CHARS_PER_SECOND,
+    )} characters total)`,
+    `Language: ${languageName(brief.language)} (${brief.language}) — write ALL viewer-facing text in this language`,
+    `Tone: ${brief.tone} — ${TONE_GUIDE[brief.tone]}`,
+    `Aspect ratio: ${brief.aspect}${brief.aspect === "9:16" ? " (vertical / Shorts: faster pacing, bigger single ideas per scene)" : ""}`,
+  ];
+  if (brief.audience) lines.push(`Audience: ${brief.audience}`);
+  if (brief.extraInstructions) lines.push(`Creator's extra instructions (follow them unless they conflict with the output format): ${brief.extraInstructions}`);
+  lines.push(`</brief>`);
+  return lines.join("\n");
+}
+
+export function templateMenu(style: StylePack): string {
+  if (!style.templates.length) return "(this style has no templates — use \"custom\")";
+  return style.templates.map((t) => `- ${t.id}: ${t.name} — ${t.description}`).join("\n");
+}
+
+export function formatDuration(s: number): string {
+  if (s < 60) return `${Math.round(s)} s`;
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = Math.round(s % 60);
+  if (h) return `${h} h ${m} min`;
+  return sec ? `${m} min ${sec} s` : `${m} min`;
+}

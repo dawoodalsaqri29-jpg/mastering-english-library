@@ -1,0 +1,56 @@
+/* terminal-ascii — hacker terminal: monospace everything, ASCII plasma, prompt line */
+:root {
+  --bg: #0C0C0C;
+  --fg: #E6E6E6;
+  --muted: #7A7A7A;
+  --accent: #4AF626;
+  --accent-2: #FF5F87;
+  --accent-3: #5FD7FF;
+  --glow-rgb: 74, 246, 38;
+  --bar-bg: #161616;
+  --surface: #141414;
+  --line: #2E2E2E;
+  --on-accent: #0C0C0C;
+  --bar-muted: #2A2A2A;
+  --halo: transparent;
+  --card-border: 1px solid #333333;
+  --shadow: none;
+  --shadow-lg: none;
+  --radius: 0px;
+  --font-display: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --font-body: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 700;
+  --title-tracking: -0.02em;
+  --title-leading: 1.1;
+  --body-weight: 400;
+  --code-bg: #111111;
+  --code-border: 1px solid #333333;
+  --code-hi: rgba(74, 246, 38, 0.12);
+  --tk-k: #FF5F87;
+  --tk-s: #FFD75F;
+  --tk-f: #5FD7FF;
+  --tk-n: #AF87FF;
+  --tk-c: #6C6C6C;
+  --neg: #FF5F87;
+  --pos: #4AF626;
+  --edge: #7A7A7A;
+  --badge-bg: transparent;
+}
+.kind-neon .v-em { color: var(--accent); }
+.kind-neon .v-kicker { color: var(--accent); letter-spacing: 0.04em; font-weight: 500; text-transform: none; }
+.kind-neon .v-kicker::before { content: "$ "; color: var(--muted); }
+.kind-neon .v-title::after { content: "_"; color: var(--accent); margin-left: 0.1em; }
+.kind-neon .v-line { height: calc(var(--u) * 3); width: calc(var(--u) * 200); background: repeating-linear-gradient(90deg, var(--muted) 0 calc(var(--u) * 12), transparent calc(var(--u) * 12) calc(var(--u) * 20)); }
+.kind-neon .v-card { background: var(--surface); }
+.kind-neon .v-statnum { color: var(--accent); }
+.kind-neon .v-num { background: transparent; color: var(--accent); border: 1px solid var(--accent); border-radius: 0; }
+.kind-neon .v-icon-badge { color: var(--accent); border: 1px solid #333; border-radius: 0; }
+.kind-neon .v-bar { border-radius: 0 !important; }
+.kind-neon .v-bar.is-hi { background: var(--accent); }
+.kind-neon .v-vs { background: transparent; color: var(--accent-2); border: 1px solid var(--accent-2); border-radius: 0; }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-neon .t-timeline .v-dot { border-radius: 0; }
+.kind-neon .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; }
+.kind-neon .t-section .v-wipe { background: var(--accent); }
+.kind-neon .t-line .v-lc-call { background: var(--accent); color: var(--bg); border-radius: 0; }

@@ -1,0 +1,8 @@
+{
+  "id": "anime",
+  "name": "Anime",
+  "description": "An original cel-shaded anime episode: a recurring cast with big sparkling eyes, hard two-tone shading and lip-sync, cut together with shot / reverse-shot, eye cut-ins, focus and speed lines, impact frames, power-up auras, sakura and painted cumulus skies, slanted title cards and eyecatch wipes. For hype explainers, stories, lessons and anything that deserves a dramatic reveal.",
+  "premium": true,
+  "palette": { "background": "#FDF6FF", "foreground": "#1F1A3A", "accent": "#FF4F8B", "muted": "#6C6A9C" },
+  "fonts": ["\"Segoe UI\", \"Helvetica Neue\", Arial, \"Noto Sans\", system-ui, -apple-system, sans-serif"]
+}

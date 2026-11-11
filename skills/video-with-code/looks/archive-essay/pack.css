@@ -1,0 +1,74 @@
+/* archive-essay — antiquarian intellectual-history film: parchment, navy ink, oxblood marks, small caps */
+:root {
+  --bg: #E8E2D4;
+  --bg-center: #EFEADF;
+  --bg-edge: #CFC3A8;
+  --fg: #1F2A5A;
+  --muted: #6A6658;
+  --accent: #9B1C1C;
+  --accent-2: #4F6B7A;
+  --accent-3: #7A6A45;
+  --fibre-dark: rgba(92, 70, 38, 0.16);
+  --fibre-light: rgba(255, 250, 238, 0.5);
+  --surface: rgba(255, 250, 238, 0.32);
+  --line: rgba(31, 42, 90, 0.35);
+  --on-accent: #F3EEE3;
+  --bar-muted: rgba(31, 42, 90, 0.2);
+  --hl: rgba(155, 28, 28, 0.14);
+  --halo: transparent;
+  --shadow: none;
+  --card-border: 1px solid rgba(31, 42, 90, 0.4);
+  --radius: 0px;
+  --font-display: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-quote: "Noto Serif", Georgia, "Times New Roman", serif;
+  --font-kicker: "Noto Serif", Georgia, "Times New Roman", serif;
+  --title-weight: 600;
+  --quote-weight: 400;
+  --title-tracking: -0.015em;
+  --title-leading: 1.08;
+  --code-bg: #F1EBDD;
+  --code-fg: #1F2A5A;
+  --code-chrome: #E0D7C3;
+  --code-border: 1px solid rgba(31, 42, 90, 0.35);
+  --code-hi: rgba(155, 28, 28, 0.1);
+  --tk-k: #9B1C1C;
+  --tk-s: #4F6B7A;
+  --tk-f: #7A6A45;
+  --tk-n: #B5763A;
+  --tk-c: #8E8778;
+  --neg: #9B1C1C;
+  --pos: #1F2A5A;
+  --edge: rgba(31, 42, 90, 0.65);
+  --badge-bg: transparent;
+}
+.kind-documentary .v-title { color: var(--fg); }
+.kind-documentary .v-em { color: var(--accent); font-style: italic; font-weight: 500; }
+.kind-documentary .v-text { font-family: var(--font-display); font-weight: 400; }
+/* letter-spaced small caps kickers, flanked by hairlines when centred */
+.kind-documentary .v-kicker { text-transform: none; font-variant-caps: all-small-caps; font-size: calc(var(--fs-label) * 1.25); letter-spacing: 0.3em; font-weight: 600; color: var(--fg); }
+.kind-documentary .v-header.v-center .v-kicker { display: flex; align-items: center; justify-content: center; gap: 0.9em; }
+.kind-documentary .v-header.v-center .v-kicker::before,
+.kind-documentary .v-header.v-center .v-kicker::after { content: ""; flex: none; width: 2.4em; height: 1px; background: var(--accent); }
+/* hairline rule broken by a small oxblood lozenge */
+.kind-documentary .v-line { position: relative; height: 1px; width: calc(var(--u) * 280); border-radius: 0; background: linear-gradient(90deg, var(--fg) 0 44%, transparent 44% 56%, var(--fg) 56%); }
+.kind-documentary .v-line::after { content: ""; position: absolute; left: 50%; top: 50%; width: calc(var(--u) * 11); height: calc(var(--u) * 11); background: var(--accent); transform: translate(-50%, -50%) rotate(45deg); }
+.kind-documentary .v-card { background: var(--surface); outline: 1px solid rgba(31, 42, 90, 0.18); outline-offset: calc(var(--u) * 6); }
+/* bullet numbers become roman numerals */
+.kind-documentary .t-bullets .v-list { counter-reset: folio; }
+.kind-documentary .t-bullets .v-item { counter-increment: folio; }
+.kind-documentary .t-bullets .v-num { background: transparent; color: var(--accent); border: 1px solid var(--fg); font-size: 0; font-family: var(--font-display); }
+.kind-documentary .t-bullets .v-num::before { content: counter(folio, upper-roman); font-size: calc(var(--u) * 38); font-weight: 600; letter-spacing: 0.04em; }
+.kind-documentary .v-icon-badge { background: transparent; border: 1px solid var(--fg); color: var(--fg); }
+.kind-documentary .v-statnum { font-family: var(--font-display); font-weight: 600; color: var(--fg); }
+.kind-documentary .v-vs { background: transparent; color: var(--accent); border: 1px solid var(--accent); font-family: var(--font-display); font-style: italic; font-weight: 500; }
+.kind-documentary .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-documentary .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; font-family: var(--font-display); font-weight: 400; letter-spacing: 0.04em; }
+.kind-documentary .t-section .v-wipe { background: var(--bg-edge); }
+.kind-documentary .t-timeline .v-date { font-family: var(--font-display); font-style: italic; color: var(--accent); }
+.kind-documentary .t-timeline .v-dot { border-width: calc(var(--u) * 2); border-radius: 0; }
+.kind-documentary .t-quote .v-qmark { color: var(--accent); }
+.kind-documentary .t-quote .v-quote { font-style: italic; }
+.kind-documentary .t-line .v-lc-call { background: var(--fg); color: var(--bg); font-family: var(--font-display); font-style: italic; }
+.kind-documentary .t-bars .v-bar { background: var(--fg); }
+.kind-documentary .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-documentary .t-diagram .v-node.is-hub { color: var(--bg); }

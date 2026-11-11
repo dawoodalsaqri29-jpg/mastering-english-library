@@ -1,0 +1,8 @@
+{
+  "id": "pictogram",
+  "name": "Pictogram Protocol",
+  "description": "Stark safety-sign pictogram art for survival-rule and creepy-protocol videos: solid black silhouette figures with round heads and no face, flat white backgrounds or pure black rooms, heavy outlines and one alarm colour — signal red (plus warning yellow). Bold condensed headline stamps slam onto the key spoken word (DON'T MOVE, CHECK THE DATE), numbered RULE cards, red arrows and circles, warning triangles, 2:00 AM clock stamps, flickering lights, flashlight cones, hard cuts and an uncanny visitor whose eyes show in the dark.",
+  "premium": false,
+  "palette": { "background": "#FFFFFF", "foreground": "#0A0A0A", "accent": "#E3151B", "muted": "#8C8C8C" },
+  "fonts": ["Impact, Haettenschweiler, \"Arial Narrow Bold\", \"Franklin Gothic Demi Cond\", Oswald, \"Roboto Condensed\", \"Liberation Sans Narrow\", \"Arial Narrow\", \"Arial Black\", \"Noto Sans\", sans-serif"]
+}

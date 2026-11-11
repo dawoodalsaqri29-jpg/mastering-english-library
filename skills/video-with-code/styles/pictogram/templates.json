@@ -1,0 +1,2780 @@
+[
+  {
+    "id": "rule-scene",
+    "name": "Rule Scene",
+    "description": "THE WORKHORSE. A pictogram room (bedroom, hallway, front door, street...) with the cast in it; something happens (door opens, knock, lights flicker, dog hides, visitor at the window...) on its spoken word, then a bold headline stamp slams onto the key word with a red arrow or ring on the thing that matters. Use for most rules, situations and story beats.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "setting": {
+          "type": "string",
+          "description": "Where the scene happens.",
+          "enum": [
+            "bedroom",
+            "hallway",
+            "front-door",
+            "living-room",
+            "kitchen",
+            "street",
+            "car",
+            "bathroom",
+            "basement",
+            "forest",
+            "bus-stop",
+            "outside-window",
+            "plain",
+            "none"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        },
+        "time": {
+          "type": "string",
+          "description": "Optional clock stamp in the corner, e.g. \"2:00 AM\", \"3:33 AM\"."
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Cast id: you (plain figure, the viewer), mom (dress + bun), dad (cap, broad), kid (small), grandma (dress, cane), friend (backwards cap), stranger (hat + coat), visitor (too tall, long arms, white eyes, wide smile: the threat), dog, cat, owl, crow. Keep the same cast across the video.",
+                "enum": [
+                  "you",
+                  "mom",
+                  "dad",
+                  "kid",
+                  "grandma",
+                  "friend",
+                  "stranger",
+                  "visitor",
+                  "dog",
+                  "cat",
+                  "owl",
+                  "crow"
+                ]
+              },
+              "pose": {
+                "type": "string",
+                "description": "Starting pose (people): stand, sit, sit-bed, sleep, lie, look, listen, hide, scared, hands-up, phone, hush, cover-ears, cover-eyes, flashlight, stop, wave, point, knock, reach, peek, crouch, pray. Pets: stand, sit, lie, hide, alert, stare, sleep, growl.",
+                "enum": [
+                  "stand",
+                  "walk",
+                  "run",
+                  "point",
+                  "point-up",
+                  "point-down",
+                  "hands-up",
+                  "scared",
+                  "hide",
+                  "crouch",
+                  "sit",
+                  "sit-floor",
+                  "sit-bed",
+                  "lie",
+                  "sleep",
+                  "phone",
+                  "hush",
+                  "cover-ears",
+                  "cover-eyes",
+                  "knock",
+                  "flashlight",
+                  "stop",
+                  "wave",
+                  "shrug",
+                  "reach",
+                  "look",
+                  "listen",
+                  "peek",
+                  "open",
+                  "hold",
+                  "pray",
+                  "fall",
+                  "alert",
+                  "stare",
+                  "growl"
+                ]
+              },
+              "facing": {
+                "type": "string",
+                "description": "Which way the figure faces.",
+                "enum": [
+                  "left",
+                  "right",
+                  "front"
+                ]
+              },
+              "slot": {
+                "type": "number",
+                "description": "Which standing spot of the room to use (0 = main spot, 1, 2). Default: in order."
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          },
+          "description": "Who is in the room, 1-3 entries (first one is the protagonist). Default: you."
+        },
+        "action": {
+          "type": "string",
+          "description": "What happens, on actionKeyword (or about 30 % in): door-opens, door-slams, knock, lights-flicker, lights-out, phone-rings, curtains-close, curtains-open, visitor-at-door, visitor-at-window, eyes-in-the-dark (dark mode), dog-hides, dog-stares, dog-growls, tv-static (living-room), car-arrives (street), bus-arrives (bus-stop), clock-strikes, footsteps, run, hide, lamp-on, lamp-off, owl-watches, poster.",
+          "enum": [
+            "none",
+            "door-opens",
+            "door-slams",
+            "knock",
+            "lights-flicker",
+            "lights-out",
+            "phone-rings",
+            "curtains-close",
+            "curtains-open",
+            "visitor-at-door",
+            "visitor-at-window",
+            "eyes-in-the-dark",
+            "dog-hides",
+            "dog-stares",
+            "dog-growls",
+            "tv-static",
+            "car-arrives",
+            "bus-arrives",
+            "clock-strikes",
+            "footsteps",
+            "run",
+            "hide",
+            "lamp-on",
+            "lamp-off",
+            "owl-watches",
+            "poster"
+          ]
+        },
+        "actionKeyword": {
+          "type": "string",
+          "description": "Spoken word the action lands on (e.g. \"knock\", \"opens\")."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "The headline stamp, 1-6 words, e.g. \"DON'T *OPEN* IT\", \"CHECK THE *DATE*\". Star the key word."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "stampColor": {
+          "type": "string",
+          "description": "Stamp colouring: mixed = black blocks + red key word (default); red = all red; ink = all black; yellow = warning yellow blocks.",
+          "enum": [
+            "mixed",
+            "red",
+            "ink",
+            "yellow"
+          ]
+        },
+        "stampPos": {
+          "type": "string",
+          "description": "Where the stamp lands (default upper / top in portrait).",
+          "enum": [
+            "top",
+            "upper",
+            "center",
+            "lower",
+            "bottom"
+          ]
+        },
+        "arrowTo": {
+          "type": "string",
+          "description": "What the red arrow points at after the stamp: an object in the room (door, window, bed, clock, phone, lamp, tv, car, poster...), \"character\", \"pet\" or \"action\" (the thing that just happened). Default: a red ring around the action."
+        },
+        "ring": {
+          "type": "boolean",
+          "description": "Use a red ring instead of an arrow on arrowTo."
+        },
+        "triangle": {
+          "type": "boolean",
+          "description": "Show a warning triangle with the stamp."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Small boxed caption at the bottom (10 words max), e.g. \"IT IS NOT YOUR DOG\"."
+        },
+        "captionKeyword": {
+          "type": "string",
+          "description": "Spoken word the caption lands on."
+        },
+        "pose": {
+          "type": "string",
+          "description": "Pose the protagonist takes on the stamp when there is no action (default point-up).",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "endAction": {
+          "type": "string",
+          "description": "A second action near the end (e.g. run, hide, lights-out, visitor-at-door).",
+          "enum": [
+            "none",
+            "door-opens",
+            "door-slams",
+            "knock",
+            "lights-flicker",
+            "lights-out",
+            "phone-rings",
+            "curtains-close",
+            "curtains-open",
+            "visitor-at-door",
+            "visitor-at-window",
+            "eyes-in-the-dark",
+            "dog-hides",
+            "dog-stares",
+            "dog-growls",
+            "tv-static",
+            "car-arrives",
+            "bus-arrives",
+            "clock-strikes",
+            "footsteps",
+            "run",
+            "hide",
+            "lamp-on",
+            "lamp-off",
+            "owl-watches",
+            "poster"
+          ]
+        }
+      },
+      "required": [
+        "setting",
+        "stamp"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "setting": "bedroom",
+      "time": "2:00 AM",
+      "characters": [
+        {
+          "id": "you",
+          "pose": "sit-bed",
+          "slot": 0
+        },
+        {
+          "id": "dog",
+          "pose": "stand",
+          "slot": 1
+        }
+      ],
+      "action": "dog-hides",
+      "actionKeyword": "hides",
+      "stamp": "GET UNDER THERE *WITH* IT",
+      "keyword": "with",
+      "arrowTo": "bed",
+      "caption": "DO NOT ASK WHY",
+      "captionKeyword": "why"
+    },
+    "exampleNarration": "If your dog ever hides under your bed at two in the morning, do not call for it. Get under there with it. And do not ask why."
+  },
+  {
+    "id": "rule-card",
+    "name": "Rule Card",
+    "description": "A numbered RULE card: red RULE N tab, the rule in bold condensed type with its key word in red, a pictogram icon (object or cast member), crossed out with a red circle-slash when the rule is a DON'T, and optionally a figure beside it acting it out. Use for introducing or recapping each rule.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "number",
+          "description": "Rule number (1-99)."
+        },
+        "rule": {
+          "type": "string",
+          "description": "The rule, 2-12 words, e.g. \"NEVER *ANSWER* AFTER MIDNIGHT\". Star the key word."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Pictogram on the card: an object (door, phone, window, clock, bed, car, poster, key, mirror, tv, eye, hand, flashlight, bulb...) or a cast member (dog, visitor, kid...).",
+          "enum": [
+            "bed",
+            "door",
+            "window",
+            "phone",
+            "clock",
+            "clock-digital",
+            "house",
+            "car",
+            "poster",
+            "lamp",
+            "table-lamp",
+            "nightstand",
+            "tv",
+            "couch",
+            "chair",
+            "table",
+            "fridge",
+            "laptop",
+            "stairs",
+            "tree",
+            "pine",
+            "moon",
+            "key",
+            "bag",
+            "cup",
+            "bath",
+            "mirror",
+            "sink",
+            "wardrobe",
+            "mailbox",
+            "bus",
+            "lamppost",
+            "sign",
+            "stop-sign",
+            "eye",
+            "hand",
+            "footprints",
+            "pill",
+            "flashlight",
+            "candle",
+            "radio",
+            "camera",
+            "envelope",
+            "box",
+            "bench",
+            "plant",
+            "frame",
+            "teddy",
+            "fence",
+            "stone",
+            "ladder",
+            "bowl",
+            "bone",
+            "shelf",
+            "bulb",
+            "doormat",
+            "keyhole",
+            "umbrella",
+            "monitor",
+            "crib",
+            "sun",
+            "mask",
+            "skull",
+            "cross",
+            "check",
+            "triangle",
+            "road",
+            "bus-stop",
+            "bush",
+            "cloud",
+            "grave",
+            "cradle",
+            "cake",
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "forbidden": {
+          "type": "boolean",
+          "description": "Red circle-slash over the icon (a DON'T rule)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Tab text instead of RULE (e.g. \"STEP\", \"WARNING\", \"NOTE\")."
+        },
+        "subtext": {
+          "type": "string",
+          "description": "Small caption under the card (10 words max)."
+        },
+        "subtextKeyword": {
+          "type": "string",
+          "description": "Spoken word the subtext lands on."
+        },
+        "character": {
+          "type": "string",
+          "description": "Optional figure beside the card acting out the rule.",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "description": "Pose the figure snaps into on the key word (e.g. stop, hush, cover-ears, scared, point, hide).",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "number",
+        "rule"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "number": 3,
+      "rule": "DO NOT *ANSWER* THE DOOR",
+      "icon": "door",
+      "forbidden": true,
+      "subtext": "NO MATTER WHO IT SAYS IT IS",
+      "subtextKeyword": "who",
+      "character": "you",
+      "pose": "stop"
+    },
+    "exampleNarration": "Rule three. Do not answer the door after midnight. No matter who it says it is."
+  },
+  {
+    "id": "do-dont",
+    "name": "Do / Don't",
+    "description": "Split screen: the correct action on one side (figure + object, black check) and the wrong one on the other (red X slams in with a red flash). Use for \"do this, never that\" beats and myth-busting.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline at the top, 6 words max."
+        },
+        "do": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Label under this side, 6 words max, e.g. \"LOCK IT\" / \"OPEN IT\"."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Spoken word this side lands on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Figure on this side (default you).",
+              "enum": [
+                "you",
+                "mom",
+                "dad",
+                "kid",
+                "grandma",
+                "friend",
+                "stranger",
+                "visitor",
+                "dog",
+                "cat",
+                "owl",
+                "crow"
+              ]
+            },
+            "pose": {
+              "type": "string",
+              "description": "What the figure does.",
+              "enum": [
+                "stand",
+                "walk",
+                "run",
+                "point",
+                "point-up",
+                "point-down",
+                "hands-up",
+                "scared",
+                "hide",
+                "crouch",
+                "sit",
+                "sit-floor",
+                "sit-bed",
+                "lie",
+                "sleep",
+                "phone",
+                "hush",
+                "cover-ears",
+                "cover-eyes",
+                "knock",
+                "flashlight",
+                "stop",
+                "wave",
+                "shrug",
+                "reach",
+                "look",
+                "listen",
+                "peek",
+                "open",
+                "hold",
+                "pray",
+                "fall"
+              ]
+            },
+            "object": {
+              "type": "string",
+              "description": "Pictogram object next to the figure (door, phone, window, tv, car...).",
+              "enum": [
+                "bed",
+                "door",
+                "window",
+                "phone",
+                "clock",
+                "clock-digital",
+                "house",
+                "car",
+                "poster",
+                "lamp",
+                "table-lamp",
+                "nightstand",
+                "tv",
+                "couch",
+                "chair",
+                "table",
+                "fridge",
+                "laptop",
+                "stairs",
+                "tree",
+                "pine",
+                "moon",
+                "key",
+                "bag",
+                "cup",
+                "bath",
+                "mirror",
+                "sink",
+                "wardrobe",
+                "mailbox",
+                "bus",
+                "lamppost",
+                "sign",
+                "stop-sign",
+                "eye",
+                "hand",
+                "footprints",
+                "pill",
+                "flashlight",
+                "candle",
+                "radio",
+                "camera",
+                "envelope",
+                "box",
+                "bench",
+                "plant",
+                "frame",
+                "teddy",
+                "fence",
+                "stone",
+                "ladder",
+                "bowl",
+                "bone",
+                "shelf",
+                "bulb",
+                "doormat",
+                "keyhole",
+                "umbrella",
+                "monitor",
+                "crib",
+                "sun",
+                "mask",
+                "skull",
+                "cross",
+                "check",
+                "triangle",
+                "road",
+                "bus-stop",
+                "bush",
+                "cloud",
+                "grave",
+                "cradle",
+                "cake"
+              ]
+            },
+            "action": {
+              "type": "string",
+              "description": "Object animation on the key word.",
+              "enum": [
+                "none",
+                "open",
+                "answer",
+                "close",
+                "light"
+              ]
+            },
+            "accent": {
+              "type": "boolean",
+              "description": "Paint the wrong object red."
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "dont": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "Label under this side, 6 words max, e.g. \"LOCK IT\" / \"OPEN IT\"."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Spoken word this side lands on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Figure on this side (default you).",
+              "enum": [
+                "you",
+                "mom",
+                "dad",
+                "kid",
+                "grandma",
+                "friend",
+                "stranger",
+                "visitor",
+                "dog",
+                "cat",
+                "owl",
+                "crow"
+              ]
+            },
+            "pose": {
+              "type": "string",
+              "description": "What the figure does.",
+              "enum": [
+                "stand",
+                "walk",
+                "run",
+                "point",
+                "point-up",
+                "point-down",
+                "hands-up",
+                "scared",
+                "hide",
+                "crouch",
+                "sit",
+                "sit-floor",
+                "sit-bed",
+                "lie",
+                "sleep",
+                "phone",
+                "hush",
+                "cover-ears",
+                "cover-eyes",
+                "knock",
+                "flashlight",
+                "stop",
+                "wave",
+                "shrug",
+                "reach",
+                "look",
+                "listen",
+                "peek",
+                "open",
+                "hold",
+                "pray",
+                "fall"
+              ]
+            },
+            "object": {
+              "type": "string",
+              "description": "Pictogram object next to the figure (door, phone, window, tv, car...).",
+              "enum": [
+                "bed",
+                "door",
+                "window",
+                "phone",
+                "clock",
+                "clock-digital",
+                "house",
+                "car",
+                "poster",
+                "lamp",
+                "table-lamp",
+                "nightstand",
+                "tv",
+                "couch",
+                "chair",
+                "table",
+                "fridge",
+                "laptop",
+                "stairs",
+                "tree",
+                "pine",
+                "moon",
+                "key",
+                "bag",
+                "cup",
+                "bath",
+                "mirror",
+                "sink",
+                "wardrobe",
+                "mailbox",
+                "bus",
+                "lamppost",
+                "sign",
+                "stop-sign",
+                "eye",
+                "hand",
+                "footprints",
+                "pill",
+                "flashlight",
+                "candle",
+                "radio",
+                "camera",
+                "envelope",
+                "box",
+                "bench",
+                "plant",
+                "frame",
+                "teddy",
+                "fence",
+                "stone",
+                "ladder",
+                "bowl",
+                "bone",
+                "shelf",
+                "bulb",
+                "doormat",
+                "keyhole",
+                "umbrella",
+                "monitor",
+                "crib",
+                "sun",
+                "mask",
+                "skull",
+                "cross",
+                "check",
+                "triangle",
+                "road",
+                "bus-stop",
+                "bush",
+                "cloud",
+                "grave",
+                "cradle",
+                "cake"
+              ]
+            },
+            "action": {
+              "type": "string",
+              "description": "Object animation on the key word.",
+              "enum": [
+                "none",
+                "open",
+                "answer",
+                "close",
+                "light"
+              ]
+            },
+            "accent": {
+              "type": "boolean",
+              "description": "Paint the wrong object red."
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": false
+        },
+        "doKeyword": {
+          "type": "string",
+          "description": "Spoken word the check side lands on."
+        },
+        "dontKeyword": {
+          "type": "string",
+          "description": "Spoken word the X side lands on."
+        },
+        "verdict": {
+          "type": "string",
+          "description": "Final red stamp at the bottom, 5 words max."
+        },
+        "verdictKeyword": {
+          "type": "string",
+          "description": "Spoken word for the verdict."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "do",
+        "dont"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "WHEN IT *KNOCKS*",
+      "do": {
+        "text": "STAY *QUIET*",
+        "character": "you",
+        "pose": "hush",
+        "object": "door"
+      },
+      "dont": {
+        "text": "*OPEN* IT",
+        "character": "you",
+        "pose": "reach",
+        "object": "door",
+        "action": "open",
+        "accent": true
+      },
+      "verdict": "IT *COUNTS* THE SECONDS",
+      "verdictKeyword": "counts"
+    },
+    "exampleNarration": "When it knocks, you stay quiet. You never open it. Because it counts the seconds until you do."
+  },
+  {
+    "id": "room-at-night",
+    "name": "Room At Night",
+    "description": "Pure black room; a figure's flashlight cone sweeps across it and reveals one pictogram at a time (each with a small callout on its word), until the beam lands on a pair of white eyes and a smile in the dark. Use for the creepiest beats, searches and \"what is in your room at 3 AM\".",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "setting": {
+          "type": "string",
+          "description": "The dark room.",
+          "enum": [
+            "bedroom",
+            "hallway",
+            "front-door",
+            "living-room",
+            "kitchen",
+            "street",
+            "car",
+            "bathroom",
+            "basement",
+            "forest",
+            "bus-stop",
+            "outside-window",
+            "plain",
+            "none"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Who holds the flashlight (default you).",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "time": {
+          "type": "string",
+          "description": "Clock stamp, e.g. \"3:00 AM\"."
+        },
+        "reveals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "object": {
+                "type": "string",
+                "description": "What the beam finds: an object of the room (bed, window, door, clock, lamp, tv, couch, fridge, mirror, bath, stairs, tree, car...) or any pictogram (poster, teddy, phone, footprints, eye, hand, box, key, crib...).",
+                "enum": [
+                  "bed",
+                  "door",
+                  "window",
+                  "phone",
+                  "clock",
+                  "clock-digital",
+                  "house",
+                  "car",
+                  "poster",
+                  "lamp",
+                  "table-lamp",
+                  "nightstand",
+                  "tv",
+                  "couch",
+                  "chair",
+                  "table",
+                  "fridge",
+                  "laptop",
+                  "stairs",
+                  "tree",
+                  "pine",
+                  "moon",
+                  "key",
+                  "bag",
+                  "cup",
+                  "bath",
+                  "mirror",
+                  "sink",
+                  "wardrobe",
+                  "mailbox",
+                  "bus",
+                  "lamppost",
+                  "sign",
+                  "stop-sign",
+                  "eye",
+                  "hand",
+                  "footprints",
+                  "pill",
+                  "flashlight",
+                  "candle",
+                  "radio",
+                  "camera",
+                  "envelope",
+                  "box",
+                  "bench",
+                  "plant",
+                  "frame",
+                  "teddy",
+                  "fence",
+                  "stone",
+                  "ladder",
+                  "bowl",
+                  "bone",
+                  "shelf",
+                  "bulb",
+                  "doormat",
+                  "keyhole",
+                  "umbrella",
+                  "monitor",
+                  "crib",
+                  "sun",
+                  "mask",
+                  "skull",
+                  "cross",
+                  "check",
+                  "triangle",
+                  "road",
+                  "bus-stop",
+                  "bush",
+                  "cloud",
+                  "grave",
+                  "cradle",
+                  "cake"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "description": "Callout, 5 words max (e.g. \"STILL *CLOSED*\")."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Spoken word this reveal lands on."
+              },
+              "action": {
+                "type": "string",
+                "description": "Something that happens as it is lit (door-opens, curtains-close, tv-static, clock-strikes...).",
+                "enum": [
+                  "none",
+                  "door-opens",
+                  "door-slams",
+                  "knock",
+                  "lights-flicker",
+                  "lights-out",
+                  "phone-rings",
+                  "curtains-close",
+                  "curtains-open",
+                  "visitor-at-door",
+                  "visitor-at-window",
+                  "eyes-in-the-dark",
+                  "dog-hides",
+                  "dog-stares",
+                  "dog-growls",
+                  "tv-static",
+                  "car-arrives",
+                  "bus-arrives",
+                  "clock-strikes",
+                  "footsteps",
+                  "run",
+                  "hide",
+                  "lamp-on",
+                  "lamp-off",
+                  "owl-watches",
+                  "poster"
+                ]
+              }
+            },
+            "required": [
+              "object"
+            ],
+            "additionalProperties": false
+          },
+          "description": "What the flashlight finds, in order (1-4)."
+        },
+        "visitor": {
+          "type": "string",
+          "description": "Where the eyes appear at the end: door, window, corner, or none.",
+          "enum": [
+            "none",
+            "door",
+            "window",
+            "corner"
+          ]
+        },
+        "visitorKeyword": {
+          "type": "string",
+          "description": "Spoken word the eyes appear on."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Final red stamp, 5 words max (e.g. \"TURN IT *OFF*\")."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "ambient": {
+          "type": "number",
+          "description": "How much of the room leaks through outside the beam, 0-0.3 (default 0.08)."
+        }
+      },
+      "required": [
+        "setting",
+        "reveals"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "setting": "bedroom",
+      "time": "3:00 AM",
+      "reveals": [
+        {
+          "object": "window",
+          "text": "CURTAINS *OPEN*",
+          "keyword": "window"
+        },
+        {
+          "object": "clock",
+          "text": "STILL *3:00*",
+          "keyword": "clock"
+        },
+        {
+          "object": "door",
+          "text": "*AJAR*",
+          "keyword": "door",
+          "action": "door-opens"
+        }
+      ],
+      "visitor": "door",
+      "visitorKeyword": "there",
+      "stamp": "TURN IT *OFF*",
+      "keyword": "off"
+    },
+    "exampleNarration": "Check the window. Check the clock. Check the door. And if something is standing there, turn it off."
+  },
+  {
+    "id": "countdown-clock",
+    "name": "Countdown Clock",
+    "description": "A big digital time stamp ticks from one time to the next while the figure waits in the room (sitting up in bed by default); when it hits the target time, the event happens (lights flicker, knock, door opens, phone rings...) and the stamp slams in. Use for \"at exactly 2:00 AM...\" moments.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string",
+          "description": "Start time, e.g. \"1:58 AM\"."
+        },
+        "to": {
+          "type": "string",
+          "description": "Target time, e.g. \"2:00 AM\"."
+        },
+        "setting": {
+          "type": "string",
+          "description": "The room (default bedroom).",
+          "enum": [
+            "bedroom",
+            "hallway",
+            "front-door",
+            "living-room",
+            "kitchen",
+            "street",
+            "car",
+            "bathroom",
+            "basement",
+            "forest",
+            "bus-stop",
+            "outside-window",
+            "plain",
+            "none"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Who waits (default you).",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "description": "How they wait: sit-bed (default in a bedroom), sit, stand, lie, sleep, listen, cover-ears...",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "event": {
+          "type": "string",
+          "description": "What happens at the target time.",
+          "enum": [
+            "none",
+            "door-opens",
+            "door-slams",
+            "knock",
+            "lights-flicker",
+            "lights-out",
+            "phone-rings",
+            "curtains-close",
+            "curtains-open",
+            "visitor-at-door",
+            "visitor-at-window",
+            "eyes-in-the-dark",
+            "dog-hides",
+            "dog-stares",
+            "dog-growls",
+            "tv-static",
+            "car-arrives",
+            "bus-arrives",
+            "clock-strikes",
+            "footsteps",
+            "run",
+            "hide",
+            "lamp-on",
+            "lamp-off",
+            "owl-watches",
+            "poster"
+          ]
+        },
+        "eventKeyword": {
+          "type": "string",
+          "description": "Spoken word the clock reaches the target on (e.g. \"exactly\", \"two\")."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Stamp after the event, 6 words max."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption shown while the clock ticks (8 words max)."
+        },
+        "captionKeyword": {
+          "type": "string",
+          "description": "Spoken word for the caption."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "stamp"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "from": "1:58 AM",
+      "to": "2:00 AM",
+      "setting": "bedroom",
+      "pose": "sit-bed",
+      "event": "knock",
+      "eventKeyword": "exactly",
+      "stamp": "DON'T *MOVE*",
+      "keyword": "move",
+      "caption": "WAIT FOR IT",
+      "captionKeyword": "wait"
+    },
+    "exampleNarration": "Wait for it. At exactly two in the morning, something knocks on your bedroom door. Don't move."
+  },
+  {
+    "id": "object-warning",
+    "name": "Object Warning",
+    "description": "One pictogram object huge in frame with a blinking warning triangle and up to four callouts with red arrows (each on its spoken word), then a red stamp and a ring around it. Use for \"this is what to look for\" beats: the poster, the phone, the door, the mirror.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "object": {
+          "type": "string",
+          "description": "The object.",
+          "enum": [
+            "bed",
+            "door",
+            "window",
+            "phone",
+            "clock",
+            "clock-digital",
+            "house",
+            "car",
+            "poster",
+            "lamp",
+            "table-lamp",
+            "nightstand",
+            "tv",
+            "couch",
+            "chair",
+            "table",
+            "fridge",
+            "laptop",
+            "stairs",
+            "tree",
+            "pine",
+            "moon",
+            "key",
+            "bag",
+            "cup",
+            "bath",
+            "mirror",
+            "sink",
+            "wardrobe",
+            "mailbox",
+            "bus",
+            "lamppost",
+            "sign",
+            "stop-sign",
+            "eye",
+            "hand",
+            "footprints",
+            "pill",
+            "flashlight",
+            "candle",
+            "radio",
+            "camera",
+            "envelope",
+            "box",
+            "bench",
+            "plant",
+            "frame",
+            "teddy",
+            "fence",
+            "stone",
+            "ladder",
+            "bowl",
+            "bone",
+            "shelf",
+            "bulb",
+            "doormat",
+            "keyhole",
+            "umbrella",
+            "monitor",
+            "crib",
+            "sun",
+            "mask",
+            "skull",
+            "cross",
+            "check",
+            "triangle",
+            "road",
+            "bus-stop",
+            "bush",
+            "cloud",
+            "grave",
+            "cradle",
+            "cake"
+          ]
+        },
+        "objectKeyword": {
+          "type": "string",
+          "description": "Spoken word the object pops in on."
+        },
+        "title": {
+          "type": "string",
+          "description": "Headline at the top, 6 words max."
+        },
+        "titleKeyword": {
+          "type": "string",
+          "description": "Spoken word for the title."
+        },
+        "callouts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Callout, 5 words max."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Spoken word it lands on."
+              },
+              "dx": {
+                "type": "number",
+                "description": "Where the arrow points on the object, -0.5 to 0.5 of its width (default alternates)."
+              },
+              "dy": {
+                "type": "number",
+                "description": "Height on the object, 0 (bottom) to 1 (top)."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "1-4 callouts around the object."
+        },
+        "warning": {
+          "type": "boolean",
+          "description": "Show the warning triangle (default true)."
+        },
+        "accent": {
+          "type": "boolean",
+          "description": "Paint the object red."
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Final red stamp, 5 words max."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "object"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "object": "poster",
+      "title": "THE *POSTER*",
+      "callouts": [
+        {
+          "text": "YOUR DOG'S *FACE*",
+          "keyword": "face",
+          "dy": 0.5
+        },
+        {
+          "text": "YOUR *NUMBER*",
+          "keyword": "number",
+          "dy": 0.22
+        },
+        {
+          "text": "DATED *TOMORROW*",
+          "keyword": "tomorrow",
+          "dy": 0.86
+        }
+      ],
+      "stamp": "CHECK THE *DATE*",
+      "keyword": "date"
+    },
+    "exampleNarration": "The poster has your dog's face on it. Your number. And it is dated tomorrow. Check the date."
+  },
+  {
+    "id": "phone-screen",
+    "name": "Phone Screen",
+    "description": "A big pictogram phone with a fake screen: an incoming call that vibrates (from UNKNOWN, MOM, YOUR OWN NUMBER...) or a chat where messages arrive one by one on their words, with a figure beside it reacting. Use for calls, texts and DO NOT ANSWER rules.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "call or message.",
+          "enum": [
+            "call",
+            "message"
+          ]
+        },
+        "from": {
+          "type": "string",
+          "description": "Caller / sender name shown, e.g. \"UNKNOWN\", \"MOM\", \"YOU\"."
+        },
+        "time": {
+          "type": "string",
+          "description": "Status-bar time, e.g. \"2:04 AM\"."
+        },
+        "label": {
+          "type": "string",
+          "description": "Small red label above the name (default INCOMING CALL)."
+        },
+        "avatar": {
+          "type": "string",
+          "description": "Caller avatar pictogram (default a figure).",
+          "enum": [
+            "bed",
+            "door",
+            "window",
+            "phone",
+            "clock",
+            "clock-digital",
+            "house",
+            "car",
+            "poster",
+            "lamp",
+            "table-lamp",
+            "nightstand",
+            "tv",
+            "couch",
+            "chair",
+            "table",
+            "fridge",
+            "laptop",
+            "stairs",
+            "tree",
+            "pine",
+            "moon",
+            "key",
+            "bag",
+            "cup",
+            "bath",
+            "mirror",
+            "sink",
+            "wardrobe",
+            "mailbox",
+            "bus",
+            "lamppost",
+            "sign",
+            "stop-sign",
+            "eye",
+            "hand",
+            "footprints",
+            "pill",
+            "flashlight",
+            "candle",
+            "radio",
+            "camera",
+            "envelope",
+            "box",
+            "bench",
+            "plant",
+            "frame",
+            "teddy",
+            "fence",
+            "stone",
+            "ladder",
+            "bowl",
+            "bone",
+            "shelf",
+            "bulb",
+            "doormat",
+            "keyhole",
+            "umbrella",
+            "monitor",
+            "crib",
+            "sun",
+            "mask",
+            "skull",
+            "cross",
+            "check",
+            "triangle",
+            "road",
+            "bus-stop",
+            "bush",
+            "cloud",
+            "grave",
+            "cradle",
+            "cake",
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "ringKeyword": {
+          "type": "string",
+          "description": "Spoken word the phone starts ringing / first message lands on."
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Message text (8 words max)."
+              },
+              "me": {
+                "type": "boolean",
+                "description": "Sent by the viewer (right side, red)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Spoken word it arrives on."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "For kind = message: 1-6 messages in order."
+        },
+        "character": {
+          "type": "string",
+          "description": "Figure beside the phone (default you; \"none\" for phone only).",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow",
+            "none"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "description": "Pose the figure ends in (default cover-ears).",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Red stamp, 5 words max (e.g. \"DO NOT *ANSWER*\")."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Caption at the top before the ring (8 words max)."
+        },
+        "captionKeyword": {
+          "type": "string",
+          "description": "Spoken word for the caption."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "from"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "kind": "call",
+      "from": "MOM",
+      "time": "2:04 AM",
+      "ringKeyword": "calls",
+      "character": "you",
+      "pose": "scared",
+      "stamp": "DO NOT *ANSWER*",
+      "keyword": "answer",
+      "caption": "SHE IS *ASLEEP* UPSTAIRS",
+      "captionKeyword": "asleep"
+    },
+    "exampleNarration": "Your mom is asleep upstairs. So when your mom calls you at two in the morning, do not answer."
+  },
+  {
+    "id": "checklist-protocol",
+    "name": "Checklist Protocol",
+    "description": "A numbered protocol list: each step slams in on its word with a pictogram icon, then gets a black check (or a red X for the step you must NOT do). Optional figure beside it performing each step. Use for the full rule list, recaps and survival steps.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Red title tab, 4 words max (e.g. \"THE PROTOCOL\")."
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Step, 7 words max."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Pictogram icon.",
+                "enum": [
+                  "bed",
+                  "door",
+                  "window",
+                  "phone",
+                  "clock",
+                  "clock-digital",
+                  "house",
+                  "car",
+                  "poster",
+                  "lamp",
+                  "table-lamp",
+                  "nightstand",
+                  "tv",
+                  "couch",
+                  "chair",
+                  "table",
+                  "fridge",
+                  "laptop",
+                  "stairs",
+                  "tree",
+                  "pine",
+                  "moon",
+                  "key",
+                  "bag",
+                  "cup",
+                  "bath",
+                  "mirror",
+                  "sink",
+                  "wardrobe",
+                  "mailbox",
+                  "bus",
+                  "lamppost",
+                  "sign",
+                  "stop-sign",
+                  "eye",
+                  "hand",
+                  "footprints",
+                  "pill",
+                  "flashlight",
+                  "candle",
+                  "radio",
+                  "camera",
+                  "envelope",
+                  "box",
+                  "bench",
+                  "plant",
+                  "frame",
+                  "teddy",
+                  "fence",
+                  "stone",
+                  "ladder",
+                  "bowl",
+                  "bone",
+                  "shelf",
+                  "bulb",
+                  "doormat",
+                  "keyhole",
+                  "umbrella",
+                  "monitor",
+                  "crib",
+                  "sun",
+                  "mask",
+                  "skull",
+                  "cross",
+                  "check",
+                  "triangle",
+                  "road",
+                  "bus-stop",
+                  "bush",
+                  "cloud",
+                  "grave",
+                  "cradle",
+                  "cake",
+                  "you",
+                  "mom",
+                  "dad",
+                  "kid",
+                  "grandma",
+                  "friend",
+                  "stranger",
+                  "visitor",
+                  "dog",
+                  "cat",
+                  "owl",
+                  "crow"
+                ]
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Spoken word it lands on."
+              },
+              "done": {
+                "type": "boolean",
+                "description": "false = red X instead of a check."
+              },
+              "pose": {
+                "type": "string",
+                "description": "Pose the figure takes for this step.",
+                "enum": [
+                  "stand",
+                  "walk",
+                  "run",
+                  "point",
+                  "point-up",
+                  "point-down",
+                  "hands-up",
+                  "scared",
+                  "hide",
+                  "crouch",
+                  "sit",
+                  "sit-floor",
+                  "sit-bed",
+                  "lie",
+                  "sleep",
+                  "phone",
+                  "hush",
+                  "cover-ears",
+                  "cover-eyes",
+                  "knock",
+                  "flashlight",
+                  "stop",
+                  "wave",
+                  "shrug",
+                  "reach",
+                  "look",
+                  "listen",
+                  "peek",
+                  "open",
+                  "hold",
+                  "pray",
+                  "fall"
+                ]
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2-6 steps."
+        },
+        "character": {
+          "type": "string",
+          "description": "Figure beside the list acting out steps (landscape / square only).",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Final red stamp, 5 words max."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "THE PROTOCOL",
+      "steps": [
+        {
+          "text": "LOCK THE *DOOR*",
+          "icon": "door",
+          "keyword": "lock",
+          "pose": "stop"
+        },
+        {
+          "text": "CLOSE THE *CURTAINS*",
+          "icon": "window",
+          "keyword": "curtains",
+          "pose": "reach"
+        },
+        {
+          "text": "UNPLUG THE *PHONE*",
+          "icon": "phone",
+          "keyword": "unplug",
+          "pose": "hold"
+        },
+        {
+          "text": "DO NOT *LOOK* OUTSIDE",
+          "icon": "eye",
+          "keyword": "look",
+          "done": false,
+          "pose": "cover-eyes"
+        }
+      ],
+      "character": "you",
+      "stamp": "EVERY *NIGHT*",
+      "keyword": "night"
+    },
+    "exampleNarration": "Lock the door. Close the curtains. Unplug the phone. And do not look outside. Every night."
+  },
+  {
+    "id": "stinger-reveal",
+    "name": "Stinger Reveal",
+    "description": "A calm room with a build-up (knock, door opens, lights flicker...), lights dip, then a HARD CUT to black with the visitor's white eyes and too-wide smile filling the frame, red flash, shake and a stamp. Optionally cut back to the trembling cast. Use once or twice per video, on the scariest line.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "setting": {
+          "type": "string",
+          "description": "The room before the cut.",
+          "enum": [
+            "bedroom",
+            "hallway",
+            "front-door",
+            "living-room",
+            "kitchen",
+            "street",
+            "car",
+            "bathroom",
+            "basement",
+            "forest",
+            "bus-stop",
+            "outside-window",
+            "plain",
+            "none"
+          ]
+        },
+        "character": {
+          "type": "string",
+          "description": "Protagonist (default you).",
+          "enum": [
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "description": "Their starting pose.",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "pet": {
+          "type": "string",
+          "description": "Optional pet in the room.",
+          "enum": [
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "time": {
+          "type": "string",
+          "description": "Clock stamp, e.g. \"2:00 AM\"."
+        },
+        "before": {
+          "type": "string",
+          "description": "Calm stamp before the cut (5 words max, disappears on the cut)."
+        },
+        "buildup": {
+          "type": "string",
+          "description": "What happens just before the cut (default knock).",
+          "enum": [
+            "none",
+            "door-opens",
+            "door-slams",
+            "knock",
+            "lights-flicker",
+            "lights-out",
+            "phone-rings",
+            "curtains-close",
+            "curtains-open",
+            "visitor-at-door",
+            "visitor-at-window",
+            "eyes-in-the-dark",
+            "dog-hides",
+            "dog-stares",
+            "dog-growls",
+            "tv-static",
+            "car-arrives",
+            "bus-arrives",
+            "clock-strikes",
+            "footsteps",
+            "run",
+            "hide",
+            "lamp-on",
+            "lamp-off",
+            "owl-watches",
+            "poster"
+          ]
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the hard cut lands on (e.g. \"looks\", \"smiling\")."
+        },
+        "visitorPos": {
+          "type": "string",
+          "description": "face = eyes and smile fill the frame (default); full = the whole tall figure reaching.",
+          "enum": [
+            "face",
+            "full"
+          ]
+        },
+        "stamp": {
+          "type": "string",
+          "description": "Stamp over the black, 4 words max (e.g. \"*RUN*\", \"IT'S *INSIDE*\")."
+        },
+        "stampKeyword": {
+          "type": "string",
+          "description": "Spoken word for that stamp."
+        },
+        "hold": {
+          "type": "number",
+          "description": "Seconds to hold on the visitor before cutting back (0 = stay until the end, default)."
+        },
+        "after": {
+          "type": "string",
+          "description": "Stamp after cutting back (5 words max)."
+        },
+        "afterKeyword": {
+          "type": "string",
+          "description": "Spoken word for it."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "setting",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "setting": "hallway",
+      "pet": "dog",
+      "time": "2:00 AM",
+      "before": "JUST THE *WIND*",
+      "buildup": "knock",
+      "keyword": "smiling",
+      "stamp": "IT'S *INSIDE*",
+      "stampKeyword": "inside",
+      "hold": 2.2,
+      "after": "GET *OUT*",
+      "afterKeyword": "out"
+    },
+    "exampleNarration": "You tell yourself it's just the wind. Then the knocking stops, and something in the hallway is smiling at you. It's inside. Get out."
+  },
+  {
+    "id": "title-card",
+    "name": "Title Card",
+    "description": "Chapter / rule opener: lights flicker on, a giant condensed headline slams in with its key word in red, a kicker tab (RULE 1, PART 2), an optional pictogram or cast member under it, a warning triangle and a number badge. Use for the intro and every chapter break.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Headline, 2-9 words, e.g. \"IF YOUR DOG *HIDES* UNDER THE BED\"."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word the stamp slams on (default: the *starred* word in the stamp, else its longest word)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Line under it, 10 words max (e.g. \"GET UNDER THERE WITH IT\")."
+        },
+        "subtitleKeyword": {
+          "type": "string",
+          "description": "Spoken word for the subtitle."
+        },
+        "subtitleColor": {
+          "type": "string",
+          "description": "Subtitle box colour.",
+          "enum": [
+            "ink",
+            "red",
+            "yellow"
+          ]
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Red tab above the title, e.g. \"RULE 1\", \"PART 2\", \"WARNING\"."
+        },
+        "number": {
+          "type": "number",
+          "description": "Number badge in the corner (chapter / rule number)."
+        },
+        "icon": {
+          "type": "string",
+          "description": "Pictogram under the title: an object or a cast member (dog, visitor, kid...).",
+          "enum": [
+            "bed",
+            "door",
+            "window",
+            "phone",
+            "clock",
+            "clock-digital",
+            "house",
+            "car",
+            "poster",
+            "lamp",
+            "table-lamp",
+            "nightstand",
+            "tv",
+            "couch",
+            "chair",
+            "table",
+            "fridge",
+            "laptop",
+            "stairs",
+            "tree",
+            "pine",
+            "moon",
+            "key",
+            "bag",
+            "cup",
+            "bath",
+            "mirror",
+            "sink",
+            "wardrobe",
+            "mailbox",
+            "bus",
+            "lamppost",
+            "sign",
+            "stop-sign",
+            "eye",
+            "hand",
+            "footprints",
+            "pill",
+            "flashlight",
+            "candle",
+            "radio",
+            "camera",
+            "envelope",
+            "box",
+            "bench",
+            "plant",
+            "frame",
+            "teddy",
+            "fence",
+            "stone",
+            "ladder",
+            "bowl",
+            "bone",
+            "shelf",
+            "bulb",
+            "doormat",
+            "keyhole",
+            "umbrella",
+            "monitor",
+            "crib",
+            "sun",
+            "mask",
+            "skull",
+            "cross",
+            "check",
+            "triangle",
+            "road",
+            "bus-stop",
+            "bush",
+            "cloud",
+            "grave",
+            "cradle",
+            "cake",
+            "you",
+            "mom",
+            "dad",
+            "kid",
+            "grandma",
+            "friend",
+            "stranger",
+            "visitor",
+            "dog",
+            "cat",
+            "owl",
+            "crow"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "description": "Pose for a cast icon.",
+          "enum": [
+            "stand",
+            "walk",
+            "run",
+            "point",
+            "point-up",
+            "point-down",
+            "hands-up",
+            "scared",
+            "hide",
+            "crouch",
+            "sit",
+            "sit-floor",
+            "sit-bed",
+            "lie",
+            "sleep",
+            "phone",
+            "hush",
+            "cover-ears",
+            "cover-eyes",
+            "knock",
+            "flashlight",
+            "stop",
+            "wave",
+            "shrug",
+            "reach",
+            "look",
+            "listen",
+            "peek",
+            "open",
+            "hold",
+            "pray",
+            "fall"
+          ]
+        },
+        "triangle": {
+          "type": "boolean",
+          "description": "Warning triangle (default true)."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "IF YOUR DOG *HIDES* UNDER THE BED",
+      "subtitle": "GET UNDER THERE *WITH* IT",
+      "subtitleKeyword": "under",
+      "subtitleColor": "red",
+      "kicker": "RULE 1",
+      "number": 1,
+      "icon": "dog"
+    },
+    "exampleNarration": "Rule one. If your dog hides under the bed at two in the morning, get under there with it."
+  },
+  {
+    "id": "outcome-split",
+    "name": "Outcome Split",
+    "description": "\"IF YOU DO X\" split: one side shows what happens if you follow the rule (waving figure, calm), the other what happens if you don't (the visitor appears with a red flash and shake), then a tilted red verdict stamp. Use for consequences and \"this is why\".",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "type": "string",
+          "description": "Top headline, 7 words max (e.g. \"IF YOU *ANSWER* THE DOOR\")."
+        },
+        "conditionKeyword": {
+          "type": "string",
+          "description": "Spoken word for it."
+        },
+        "do": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Side heading (default IF YOU DO / IF YOU DON'T)."
+            },
+            "text": {
+              "type": "string",
+              "description": "Outcome, 7 words max."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Spoken word this side lands on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Figure on this side (default you on the good side, visitor on the bad side).",
+              "enum": [
+                "you",
+                "mom",
+                "dad",
+                "kid",
+                "grandma",
+                "friend",
+                "stranger",
+                "visitor",
+                "dog",
+                "cat",
+                "owl",
+                "crow"
+              ]
+            },
+            "pose": {
+              "type": "string",
+              "description": "Their pose.",
+              "enum": [
+                "stand",
+                "walk",
+                "run",
+                "point",
+                "point-up",
+                "point-down",
+                "hands-up",
+                "scared",
+                "hide",
+                "crouch",
+                "sit",
+                "sit-floor",
+                "sit-bed",
+                "lie",
+                "sleep",
+                "phone",
+                "hush",
+                "cover-ears",
+                "cover-eyes",
+                "knock",
+                "flashlight",
+                "stop",
+                "wave",
+                "shrug",
+                "reach",
+                "look",
+                "listen",
+                "peek",
+                "open",
+                "hold",
+                "pray",
+                "fall"
+              ]
+            },
+            "icon": {
+              "type": "string",
+              "description": "Pictogram object beside them.",
+              "enum": [
+                "bed",
+                "door",
+                "window",
+                "phone",
+                "clock",
+                "clock-digital",
+                "house",
+                "car",
+                "poster",
+                "lamp",
+                "table-lamp",
+                "nightstand",
+                "tv",
+                "couch",
+                "chair",
+                "table",
+                "fridge",
+                "laptop",
+                "stairs",
+                "tree",
+                "pine",
+                "moon",
+                "key",
+                "bag",
+                "cup",
+                "bath",
+                "mirror",
+                "sink",
+                "wardrobe",
+                "mailbox",
+                "bus",
+                "lamppost",
+                "sign",
+                "stop-sign",
+                "eye",
+                "hand",
+                "footprints",
+                "pill",
+                "flashlight",
+                "candle",
+                "radio",
+                "camera",
+                "envelope",
+                "box",
+                "bench",
+                "plant",
+                "frame",
+                "teddy",
+                "fence",
+                "stone",
+                "ladder",
+                "bowl",
+                "bone",
+                "shelf",
+                "bulb",
+                "doormat",
+                "keyhole",
+                "umbrella",
+                "monitor",
+                "crib",
+                "sun",
+                "mask",
+                "skull",
+                "cross",
+                "check",
+                "triangle",
+                "road",
+                "bus-stop",
+                "bush",
+                "cloud",
+                "grave",
+                "cradle",
+                "cake"
+              ]
+            },
+            "good": {
+              "type": "boolean",
+              "description": "Whether this outcome is good (default: first side good, second bad)."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "dont": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Side heading (default IF YOU DO / IF YOU DON'T)."
+            },
+            "text": {
+              "type": "string",
+              "description": "Outcome, 7 words max."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Spoken word this side lands on."
+            },
+            "character": {
+              "type": "string",
+              "description": "Figure on this side (default you on the good side, visitor on the bad side).",
+              "enum": [
+                "you",
+                "mom",
+                "dad",
+                "kid",
+                "grandma",
+                "friend",
+                "stranger",
+                "visitor",
+                "dog",
+                "cat",
+                "owl",
+                "crow"
+              ]
+            },
+            "pose": {
+              "type": "string",
+              "description": "Their pose.",
+              "enum": [
+                "stand",
+                "walk",
+                "run",
+                "point",
+                "point-up",
+                "point-down",
+                "hands-up",
+                "scared",
+                "hide",
+                "crouch",
+                "sit",
+                "sit-floor",
+                "sit-bed",
+                "lie",
+                "sleep",
+                "phone",
+                "hush",
+                "cover-ears",
+                "cover-eyes",
+                "knock",
+                "flashlight",
+                "stop",
+                "wave",
+                "shrug",
+                "reach",
+                "look",
+                "listen",
+                "peek",
+                "open",
+                "hold",
+                "pray",
+                "fall"
+              ]
+            },
+            "icon": {
+              "type": "string",
+              "description": "Pictogram object beside them.",
+              "enum": [
+                "bed",
+                "door",
+                "window",
+                "phone",
+                "clock",
+                "clock-digital",
+                "house",
+                "car",
+                "poster",
+                "lamp",
+                "table-lamp",
+                "nightstand",
+                "tv",
+                "couch",
+                "chair",
+                "table",
+                "fridge",
+                "laptop",
+                "stairs",
+                "tree",
+                "pine",
+                "moon",
+                "key",
+                "bag",
+                "cup",
+                "bath",
+                "mirror",
+                "sink",
+                "wardrobe",
+                "mailbox",
+                "bus",
+                "lamppost",
+                "sign",
+                "stop-sign",
+                "eye",
+                "hand",
+                "footprints",
+                "pill",
+                "flashlight",
+                "candle",
+                "radio",
+                "camera",
+                "envelope",
+                "box",
+                "bench",
+                "plant",
+                "frame",
+                "teddy",
+                "fence",
+                "stone",
+                "ladder",
+                "bowl",
+                "bone",
+                "shelf",
+                "bulb",
+                "doormat",
+                "keyhole",
+                "umbrella",
+                "monitor",
+                "crib",
+                "sun",
+                "mask",
+                "skull",
+                "cross",
+                "check",
+                "triangle",
+                "road",
+                "bus-stop",
+                "bush",
+                "cloud",
+                "grave",
+                "cradle",
+                "cake"
+              ]
+            },
+            "good": {
+              "type": "boolean",
+              "description": "Whether this outcome is good (default: first side good, second bad)."
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "doKeyword": {
+          "type": "string",
+          "description": "Spoken word the first side lands on."
+        },
+        "dontKeyword": {
+          "type": "string",
+          "description": "Spoken word the second side lands on."
+        },
+        "verdict": {
+          "type": "string",
+          "description": "Final tilted red stamp, 5 words max."
+        },
+        "verdictKeyword": {
+          "type": "string",
+          "description": "Spoken word for the verdict."
+        },
+        "mode": {
+          "type": "string",
+          "description": "Art mode: light = black silhouettes on white (default); dark = white silhouettes on black (night, dread).",
+          "enum": [
+            "light",
+            "dark"
+          ]
+        }
+      },
+      "required": [
+        "condition",
+        "do",
+        "dont"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "condition": "IF YOU *CHECK* THE DATE",
+      "do": {
+        "label": "IF YOU DO",
+        "text": "YOU *STAY* HOME",
+        "keyword": "home",
+        "icon": "house"
+      },
+      "dont": {
+        "label": "IF YOU DON'T",
+        "text": "YOU GO *LOOKING*",
+        "keyword": "looking",
+        "icon": "poster"
+      },
+      "verdict": "IT IS *WAITING*",
+      "verdictKeyword": "waiting"
+    },
+    "exampleNarration": "If you check the date, you stay home. If you don't, you go looking for the dog. And it is waiting."
+  }
+]

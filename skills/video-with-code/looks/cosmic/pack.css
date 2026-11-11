@@ -1,0 +1,46 @@
+/* cosmic — deep space: parallax stars, nebula light, soft glowing type */
+:root {
+  --bg: #03040A;
+  --fg: #EEF0FF;
+  --muted: #8E95B8;
+  --accent: #9DB4FF;
+  --accent-2: #FFB86B;
+  --accent-3: #C084FC;
+  --glow-rgb: 157, 180, 255;
+  --surface: rgba(14, 18, 40, 0.55);
+  --line: rgba(157, 180, 255, 0.2);
+  --on-accent: #03040A;
+  --bar-muted: rgba(157, 180, 255, 0.2);
+  --halo: rgba(157, 180, 255, 0.12);
+  --card-border: 1px solid rgba(157, 180, 255, 0.22);
+  --shadow: 0 0 calc(var(--u) * 40) rgba(157, 180, 255, 0.08);
+  --shadow-lg: 0 0 calc(var(--u) * 60) rgba(157, 180, 255, 0.12);
+  --radius: calc(var(--u) * 18);
+  --title-weight: 300;
+  --title-tracking: 0.01em;
+  --code-bg: rgba(6, 8, 20, 0.9);
+  --code-border: 1px solid rgba(157, 180, 255, 0.25);
+  --tk-k: #C084FC;
+  --tk-s: #6EE7F9;
+  --tk-f: #9DB4FF;
+  --tk-n: #FFB86B;
+  --neg: #F9A8D4;
+  --pos: #6EE7F9;
+  --edge: rgba(157, 180, 255, 0.55);
+  --badge-bg: rgba(157, 180, 255, 0.08);
+}
+.kind-neon .v-title { text-shadow: 0 0 calc(var(--u) * 30) rgba(157, 180, 255, 0.35); }
+.kind-neon .v-em { color: var(--accent-2); font-weight: 600; text-shadow: 0 0 calc(var(--u) * 26) rgba(255, 184, 107, 0.6); }
+.kind-neon .v-kicker { color: var(--accent); letter-spacing: 0.45em; font-weight: 500; }
+.kind-neon .v-line { height: 1px; width: calc(var(--u) * 260); background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+.kind-neon .v-statnum { font-weight: 200; color: #fff; text-shadow: 0 0 calc(var(--u) * 40) rgba(157, 180, 255, 0.7); }
+.kind-neon .v-num { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.kind-neon .v-icon-badge { color: var(--accent); border: 1px solid rgba(157, 180, 255, 0.35); }
+.kind-neon .v-bar.is-hi { background: linear-gradient(180deg, #fff, var(--accent)); box-shadow: 0 0 calc(var(--u) * 24) rgba(157, 180, 255, 0.6); }
+.kind-neon .v-vs { background: transparent; color: var(--accent-2); border: 1px solid var(--accent-2); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-neon .t-section .v-secnum { color: transparent; -webkit-text-stroke: 1px var(--accent); font-weight: 200; }
+.kind-neon .t-section .v-wipe { background: var(--accent-3); }
+.kind-neon .t-timeline .v-dot { box-shadow: 0 0 calc(var(--u) * 16) var(--accent); }
+.kind-neon .t-line .v-lc-line { filter: drop-shadow(0 0 calc(var(--u) * 8) rgba(157, 180, 255, 0.8)); }
+.kind-neon .t-line .v-lc-call { background: var(--accent); color: var(--bg); }

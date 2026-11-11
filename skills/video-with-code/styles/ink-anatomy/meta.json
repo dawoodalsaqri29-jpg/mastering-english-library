@@ -1,0 +1,8 @@
+{
+  "id": "ink-anatomy",
+  "name": "Ink Anatomy",
+  "description": "Black-and-white manga ink illustration for the science of strength: a lean white-spiky-haired athlete and a hulking rival drawn with brush contours and cross-hatching, exercise loops with effort shake and sweat, one red accent on the muscle, tendon or bone being discussed (red striations that pulse on the key word), orange shorts, handwritten labels with curved red arrows, rep counters, before/after transformations, x-ray limb cut-aways, speed lines, impact panels and ink-splash cuts. For fitness, calisthenics and body-science explainers.",
+  "premium": true,
+  "palette": { "background": "#FFFFFF", "foreground": "#0B0B0B", "accent": "#E8232A", "muted": "#8A8A8A" },
+  "fonts": ["Impact, \"Arial Black\", \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif", "\"Segoe Print\", \"Bradley Hand\", \"Comic Sans MS\", \"Chalkboard SE\", \"Comic Neue\", cursive"]
+}

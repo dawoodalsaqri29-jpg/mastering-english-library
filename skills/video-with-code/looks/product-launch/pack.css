@@ -1,0 +1,44 @@
+/* product-launch — bright SaaS launch film: soft orbs, crisp UI cards, indigo accent */
+:root {
+  --bg: #F7F7F9;
+  --fg: #0B0D12;
+  --muted: #667085;
+  --accent: #5B5BF7;
+  --accent-2: #FF5C8A;
+  --accent-3: #12B886;
+  --orb-1: rgba(91, 91, 247, 0.22);
+  --orb-2: rgba(255, 92, 138, 0.16);
+  --grid: rgba(11, 13, 18, 0.05);
+  --surface: #FFFFFF;
+  --line: #E4E7EC;
+  --on-accent: #FFFFFF;
+  --bar-muted: #D9DCF5;
+  --hl: rgba(91, 91, 247, 0.18);
+  --halo: rgba(91, 91, 247, 0.12);
+  --card-border: 1px solid rgba(11, 13, 18, 0.07);
+  --shadow: 0 calc(var(--u) * 1) calc(var(--u) * 2) rgba(16, 24, 40, 0.05), 0 calc(var(--u) * 16) calc(var(--u) * 40) rgba(16, 24, 40, 0.1);
+  --shadow-lg: 0 calc(var(--u) * 30) calc(var(--u) * 70) rgba(16, 24, 40, 0.16);
+  --radius: calc(var(--u) * 22);
+  --title-weight: 750;
+  --title-tracking: -0.035em;
+  --code-bg: #0F1117;
+  --neg: #F04438;
+  --pos: #12B886;
+  --edge: #98A2B3;
+  --badge-bg: rgba(91, 91, 247, 0.1);
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { display: inline-block; color: var(--accent); background: var(--badge-bg); padding: 0.35em 0.9em; border-radius: 999px; letter-spacing: 0.06em; font-weight: 700; }
+.kind-minimal .v-line { background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 999px; }
+.kind-minimal .v-num { background: var(--accent); color: #fff; }
+.kind-minimal .v-icon-badge { background: var(--badge-bg); color: var(--accent); }
+.kind-minimal .v-statnum { color: var(--fg); }
+.kind-minimal .v-vs { background: var(--fg); color: #fff; box-shadow: var(--shadow); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--accent); }
+.kind-minimal .t-section .v-wipe { background: var(--accent); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: #fff; }
+.kind-minimal .t-bars .v-bar.is-hi { background: linear-gradient(180deg, #7C7CFF, var(--accent)); }
+
+.v-kicker { width: fit-content; max-width: 100%; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }

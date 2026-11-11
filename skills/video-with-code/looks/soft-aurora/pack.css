@@ -1,0 +1,57 @@
+/* soft-aurora — airy assistant explainer: pastel corner glows, a floating lavender orb, light type */
+:root {
+  --bg: #FAF5FB;
+  --fg: #1B1530;
+  --muted: #6F6886;
+  --accent: #7B5CF0;
+  --accent-2: #3FAFD3;
+  --accent-3: #EE9F5E;
+  --glow-1: rgba(246, 199, 154, 0.62);
+  --glow-2: rgba(168, 230, 245, 0.66);
+  --glow-3: rgba(201, 166, 255, 0.58);
+  --orb-core: #9B6BFF;
+  --orb-rim: #C9A6FF;
+  --surface: rgba(255, 255, 255, 0.72);
+  --line: rgba(27, 21, 48, 0.08);
+  --on-accent: #FFFFFF;
+  --bar-muted: rgba(123, 92, 240, 0.18);
+  --hl: rgba(201, 166, 255, 0.42);
+  --halo: rgba(155, 107, 255, 0.14);
+  --dot: transparent;
+  --card-border: 1px solid rgba(255, 255, 255, 0.9);
+  --shadow: 0 calc(var(--u) * 2) calc(var(--u) * 6) rgba(80, 50, 160, 0.04), 0 calc(var(--u) * 24) calc(var(--u) * 60) rgba(80, 50, 160, 0.1);
+  --shadow-lg: 0 calc(var(--u) * 34) calc(var(--u) * 80) rgba(80, 50, 160, 0.16);
+  --radius: calc(var(--u) * 30);
+  --title-weight: 400;
+  --title-tracking: -0.025em;
+  --title-leading: 1.08;
+  --body-weight: 400;
+  --code-bg: #1B1530;
+  --code-border: none;
+  --tk-k: #C9A6FF;
+  --tk-s: #A8E6F5;
+  --tk-f: #F6C79A;
+  --tk-n: #FFB3D9;
+  --neg: #E5577A;
+  --pos: #2FB58C;
+  --edge: rgba(123, 92, 240, 0.45);
+  --badge-bg: rgba(123, 92, 240, 0.1);
+}
+.kind-minimal .v-card { backdrop-filter: blur(calc(var(--u) * 20)); -webkit-backdrop-filter: blur(calc(var(--u) * 20)); }
+.kind-minimal .v-title { font-weight: 400; }
+.kind-minimal .v-em { color: var(--accent); font-weight: 500; }
+.kind-minimal .v-kicker { display: inline-block; width: fit-content; color: var(--accent); background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(123, 92, 240, 0.22); padding: 0.4em 1em; border-radius: 999px; letter-spacing: 0.04em; text-transform: none; font-weight: 500; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }
+.kind-minimal .v-line { background: linear-gradient(90deg, var(--glow-1), var(--accent), var(--glow-2)); height: calc(var(--u) * 4); width: calc(var(--u) * 220); border-radius: 999px; }
+.kind-minimal .v-num { background: radial-gradient(circle at 35% 30%, #FFFFFF 0%, var(--orb-rim) 35%, var(--orb-core) 100%); color: #fff; font-weight: 500; box-shadow: 0 0 calc(var(--u) * 24) rgba(155, 107, 255, 0.35); }
+.kind-minimal .v-icon-badge { background: rgba(255, 255, 255, 0.8); color: var(--accent); box-shadow: 0 0 0 1px rgba(123, 92, 240, 0.15), 0 calc(var(--u) * 10) calc(var(--u) * 30) rgba(155, 107, 255, 0.18); }
+.kind-minimal .v-statnum { color: var(--fg); font-weight: 300; letter-spacing: -0.05em; }
+.kind-minimal .v-vs { background: #fff; color: var(--accent); font-weight: 500; box-shadow: var(--shadow); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-compare .v-side-title { font-weight: 500; }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 2) var(--accent); font-weight: 300; }
+.kind-minimal .t-section .v-wipe { background: linear-gradient(120deg, var(--glow-1), var(--glow-3), var(--glow-2)); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: #fff; border-radius: 999px; }
+.kind-minimal .t-bars .v-bar.is-hi { background: linear-gradient(180deg, var(--orb-rim), var(--accent)); }
+.kind-minimal .t-timeline .v-dot { background: #fff; border-color: var(--orb-core); box-shadow: 0 0 calc(var(--u) * 18) rgba(155, 107, 255, 0.45); }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--accent); }

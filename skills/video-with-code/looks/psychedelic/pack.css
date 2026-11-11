@@ -1,0 +1,45 @@
+/* psychedelic — kaleidoscope colour, pulsing rings, bubbly type with layered outlines */
+:root {
+  --bg: #12001F;
+  --fg: #FFF6FF;
+  --muted: #D2B7E5;
+  --accent: #FF2E97;
+  --accent-2: #FFE100;
+  --accent-3: #00F0FF;
+  --glow-rgb: 255, 46, 151;
+  --surface: rgba(18, 0, 31, 0.72);
+  --line: rgba(255, 246, 255, 0.25);
+  --on-accent: #12001F;
+  --bar-muted: rgba(255, 246, 255, 0.18);
+  --halo: rgba(255, 46, 151, 0.12);
+  --card-border: calc(var(--u) * 3) solid #FFE100;
+  --shadow: calc(var(--u) * 6) calc(var(--u) * 6) 0 #FF2E97, calc(var(--u) * 12) calc(var(--u) * 12) 0 #00F0FF;
+  --shadow-lg: var(--shadow);
+  --radius: calc(var(--u) * 28);
+  --title-weight: 900;
+  --title-tracking: -0.02em;
+  --code-bg: rgba(18, 0, 31, 0.92);
+  --code-border: calc(var(--u) * 3) solid #FFE100;
+  --tk-k: #FF2E97;
+  --tk-s: #7CFF4F;
+  --tk-f: #00F0FF;
+  --tk-n: #FFE100;
+  --neg: #FF2E97;
+  --pos: #7CFF4F;
+  --edge: #FFE100;
+  --badge-bg: rgba(255, 225, 0, 0.12);
+}
+/* stacked outline echoes behind headline type */
+.kind-neon .v-title { text-shadow: calc(var(--u) * 3) calc(var(--u) * 3) 0 #FF2E97, calc(var(--u) * 6) calc(var(--u) * 6) 0 rgba(0, 240, 255, 0.7); }
+.kind-neon .v-statnum { color: var(--accent-2); text-shadow: calc(var(--u) * 6) calc(var(--u) * 6) 0 #FF2E97, calc(var(--u) * 12) calc(var(--u) * 12) 0 #00F0FF; }
+.kind-neon .v-em { color: var(--accent-2); }
+.kind-neon .v-kicker { color: var(--accent-3); letter-spacing: 0.3em; font-weight: 800; }
+.kind-neon .v-line { height: calc(var(--u) * 10); width: calc(var(--u) * 220); border-radius: 999px; background: linear-gradient(90deg, #FF2E97, #FFE100, #00F0FF, #9D4EDD); }
+.kind-neon .v-num { background: var(--accent-2); color: var(--bg); border-radius: 50%; }
+.kind-neon .v-icon-badge { background: var(--accent); color: #fff; border-radius: 50%; }
+.kind-neon .v-bar.is-hi { background: linear-gradient(180deg, #FFE100, #FF2E97); }
+.kind-neon .v-vs { background: var(--accent-2); color: var(--bg); border-radius: 50%; }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-3); }
+.kind-neon .t-section .v-secnum { color: var(--accent-2); -webkit-text-stroke: 0; text-shadow: calc(var(--u) * 8) calc(var(--u) * 8) 0 #FF2E97, calc(var(--u) * 16) calc(var(--u) * 16) 0 #00F0FF; }
+.kind-neon .t-section .v-wipe { background: linear-gradient(90deg, #FF2E97, #FFE100, #00F0FF); }
+.kind-neon .t-line .v-lc-call { background: var(--accent-2); color: var(--bg); }

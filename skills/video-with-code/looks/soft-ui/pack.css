@@ -1,0 +1,53 @@
+/* soft-ui — product UI micro-demos: light grey, soft white cards, black pills, one orange accent */
+:root {
+  --bg: #ECEBE9;
+  --fg: #111111;
+  --muted: #6F6E6B;
+  --accent: #F0522A;
+  --accent-2: #111111;
+  --accent-3: #F7A47F;
+  --dot: rgba(17, 17, 17, 0.2);
+  --surface: #FFFFFF;
+  --line: rgba(17, 17, 17, 0.08);
+  --on-accent: #FFFFFF;
+  --bar-muted: #D6D4D0;
+  --hl: rgba(240, 82, 42, 0.18);
+  --halo: rgba(240, 82, 42, 0.1);
+  --card-border: none;
+  --shadow: 0 calc(var(--u) * 2) calc(var(--u) * 4) rgba(17, 17, 17, 0.04), 0 calc(var(--u) * 18) calc(var(--u) * 44) rgba(17, 17, 17, 0.09);
+  --shadow-lg: 0 calc(var(--u) * 30) calc(var(--u) * 70) rgba(17, 17, 17, 0.14);
+  --radius: calc(var(--u) * 36);
+  --title-weight: 700;
+  --title-tracking: -0.04em;
+  --title-leading: 1.02;
+  --code-bg: #111111;
+  --code-border: none;
+  --tk-k: #F0522A;
+  --tk-s: #F7C9A8;
+  --tk-f: #FFFFFF;
+  --tk-n: #F7A47F;
+  --neg: #E5484D;
+  --pos: #1FA46A;
+  --edge: rgba(17, 17, 17, 0.35);
+  --badge-bg: #F4F3F1;
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { display: inline-block; width: fit-content; color: #fff; background: var(--fg); padding: 0.5em 1.1em; border-radius: 999px; letter-spacing: 0.02em; text-transform: none; font-weight: 600; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 6); width: calc(var(--u) * 80); border-radius: 999px; }
+.kind-minimal .v-num { background: var(--fg); color: #fff; font-weight: 700; }
+.kind-minimal .v-icon-badge { background: var(--badge-bg); color: var(--fg); border-radius: calc(var(--u) * 26); box-shadow: inset 0 0 0 1px var(--line); }
+.kind-minimal .v-statnum { color: var(--fg); font-weight: 700; letter-spacing: -0.06em; }
+.kind-minimal .v-vs { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--muted); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--fg); }
+.kind-minimal .t-compare .v-side.is-right { box-shadow: 0 0 0 calc(var(--u) * 3) var(--accent), var(--shadow-lg); }
+.kind-minimal .t-section .v-secnum { color: var(--fg); -webkit-text-stroke: 0; font-weight: 700; }
+.kind-minimal .t-section .v-wipe { background: var(--fg); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: #fff; border-radius: 999px; }
+.kind-minimal .t-line .v-lc-dot { background: var(--accent); border-color: #fff; }
+.kind-minimal .t-bars .v-bar { border-radius: calc(var(--u) * 18); }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-bars.is-h .v-track { background: #fff; box-shadow: inset 0 0 0 1px var(--line); }
+.kind-minimal .t-timeline .v-dot { background: #fff; border-color: var(--accent); }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--accent); }

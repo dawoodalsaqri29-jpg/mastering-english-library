@@ -1,0 +1,45 @@
+/* paper-cutout — layered construction paper with real cast shadows, warm and handmade */
+:root {
+  --bg: #EDE4D3;
+  --paper-1: #C9A983;
+  --paper-2: #D8C1A0;
+  --paper-3: #E4D3B8;
+  --fg: #2B2420;
+  --muted: #6F6254;
+  --accent: #D9542B;
+  --accent-2: #2F6F73;
+  --accent-3: #E3A72F;
+  --surface: #FBF7EF;
+  --line: rgba(43, 36, 32, 0.18);
+  --on-accent: #FFFFFF;
+  --bar-muted: #D6C7AE;
+  --hl: rgba(227, 167, 47, 0.42);
+  --halo: rgba(217, 84, 43, 0.1);
+  --shadow: 0 calc(var(--u) * 3) 0 rgba(60, 40, 20, 0.08), 0 calc(var(--u) * 16) calc(var(--u) * 22) rgba(60, 40, 20, 0.24);
+  --shadow-lg: 0 calc(var(--u) * 24) calc(var(--u) * 40) rgba(60, 40, 20, 0.3);
+  --card-border: 0;
+  --radius: calc(var(--u) * 8);
+  --title-weight: 800;
+  --title-tracking: -0.025em;
+  --code-bg: #2B2420;
+  --neg: #C2412D;
+  --pos: #2F6F73;
+  --edge: #2B2420;
+  --badge-bg: #FBF7EF;
+}
+/* type sits on the paper like a cut-out letter: a tight shadow lifts it */
+.kind-minimal .v-title { text-shadow: 0 calc(var(--u) * 3) calc(var(--u) * 4) rgba(60, 40, 20, 0.22); }
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--accent-2); letter-spacing: 0.14em; font-weight: 800; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 10); border-radius: calc(var(--u) * 3); box-shadow: 0 calc(var(--u) * 4) calc(var(--u) * 6) rgba(60, 40, 20, 0.25); }
+.kind-minimal .v-card { transform-origin: 50% 0%; }
+.kind-minimal .v-num { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+.kind-minimal .v-icon-badge { background: var(--surface); color: var(--accent); box-shadow: var(--shadow); }
+.kind-minimal .v-statnum { color: var(--accent); text-shadow: 0 calc(var(--u) * 6) calc(var(--u) * 10) rgba(60, 40, 20, 0.25); }
+.kind-minimal .v-vs { background: var(--accent-2); color: #fff; box-shadow: var(--shadow); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; text-shadow: 0 calc(var(--u) * 10) calc(var(--u) * 16) rgba(60, 40, 20, 0.3); }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: #fff; }
+.kind-minimal .t-bars .v-bar { box-shadow: 0 calc(var(--u) * 6) calc(var(--u) * 10) rgba(60, 40, 20, 0.22); }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }

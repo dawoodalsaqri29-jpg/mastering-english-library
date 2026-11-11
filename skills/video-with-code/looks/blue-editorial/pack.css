@@ -1,0 +1,51 @@
+/* blue-editorial — single cobalt ink on warm paper: magazine serif headlines, rules, folios */
+:root {
+  --bg: #EFEBE2;
+  --fg: #1A35C9;
+  --muted: rgba(26, 53, 201, 0.68);
+  --accent: #1A35C9;
+  --accent-2: #0E1A66;
+  --accent-3: #6B7FE0;
+  --surface: transparent;
+  --line: rgba(26, 53, 201, 0.4);
+  --on-accent: #EFEBE2;
+  --bar-muted: rgba(26, 53, 201, 0.22);
+  --hl: rgba(26, 53, 201, 0.16);
+  --halo: transparent;
+  --dot: transparent;
+  --shadow: none;
+  --shadow-lg: none;
+  --card-border: 1px solid #1A35C9;
+  --radius: 0px;
+  --font-display: "Noto Serif", "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-quote: "Noto Serif", "Playfair Display", Georgia, "Times New Roman", serif;
+  --title-weight: 500;
+  --title-tracking: -0.03em;
+  --title-leading: 1.0;
+  --code-bg: #1A35C9;
+  --code-fg: #EFEBE2;
+  --tk-k: #FFFFFF;
+  --tk-s: #C9D1F6;
+  --tk-f: #FFFFFF;
+  --tk-n: #C9D1F6;
+  --tk-c: #A9B5F0;
+  --neg: #1A35C9;
+  --pos: #1A35C9;
+  --edge: #1A35C9;
+  --badge-bg: transparent;
+}
+.kind-minimal .v-text { color: var(--fg); }
+.kind-minimal .v-em { font-style: italic; color: var(--fg); }
+.kind-minimal .v-kicker { color: var(--fg); letter-spacing: 0.3em; font-weight: 600; font-size: 0.85em; }
+.kind-minimal .v-line { background: var(--fg); height: 1px; width: calc(var(--u) * 240); }
+.kind-minimal .v-num { background: var(--fg); color: var(--bg); border-radius: 0; font-family: var(--font-display); font-style: italic; }
+.kind-minimal .v-icon-badge { color: var(--fg); border: 1px solid var(--fg); }
+.kind-minimal .v-statnum { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.05em; color: var(--fg); }
+.kind-minimal .v-vs { background: var(--fg); color: var(--bg); font-family: var(--font-display); font-style: italic; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: var(--fg); -webkit-text-stroke: 0; font-family: var(--font-display); font-style: italic; font-weight: 400; }
+.kind-minimal .t-section .v-wipe { background: var(--fg); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: var(--bg); border-radius: 0; }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--fg); }
+.kind-minimal .t-timeline .v-dot { background: var(--bg); border-color: var(--fg); }

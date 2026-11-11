@@ -1,0 +1,1704 @@
+[
+  {
+    "id": "splash-title",
+    "name": "Splash cover",
+    "description": "Comic-book cover: full-bleed action backdrop, a hero pose, a giant 3D logo that slams in letter by letter with an impact shake, issue box and a subtitle caption. Use for the video intro or a big section opener.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Cover title, 1–4 words (big 3D lettering)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Tagline caption, ≤ 14 words."
+        },
+        "issue": {
+          "type": "string",
+          "description": "Issue badge text, e.g. 'No. 1', 'Part 2'."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the logo slams in (usually the first title word)."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "point",
+            "explain",
+            "present",
+            "wave",
+            "think",
+            "cheer",
+            "shock",
+            "fist",
+            "hips",
+            "shrug",
+            "crossed",
+            "run",
+            "fight"
+          ],
+          "description": "Cover pose (hips = heroic)."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "grin",
+            "shock",
+            "angry",
+            "sad",
+            "smirk",
+            "think",
+            "determined",
+            "scared"
+          ],
+          "description": "Face."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Backdrop (action = sunburst rays)."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Lighting for city/street/sky."
+        },
+        "palette": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "yellow",
+            "purple",
+            "green",
+            "pink"
+          ],
+          "description": "Colour of the rays and logo."
+        },
+        "sfx": {
+          "type": "string",
+          "description": "Optional SFX word that pops after the title, e.g. 'KRAKOOM!'."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Battery Wars",
+      "subtitle": "How a tiny cell changed the whole world",
+      "issue": "No. 1",
+      "keyword": "battery",
+      "character": "ace",
+      "pose": "hips",
+      "expression": "grin",
+      "background": "action",
+      "palette": "red",
+      "sfx": "ZAP!"
+    },
+    "exampleNarration": "This is the story of the battery wars — how a tiny cell changed the whole world."
+  },
+  {
+    "id": "panel-sequence",
+    "name": "Panel sequence",
+    "description": "2–6 panels told in reading order: each panel gets a backdrop, an optional cast member, a caption box, an optional speech line and SFX. The camera glides panel to panel like a motion comic, then pulls back to the full page. The workhorse template for step-by-step stories and processes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "panels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "caption": {
+                "type": "string",
+                "description": "Narration caption, ≤ 16 words."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word that reveals this panel."
+              },
+              "background": {
+                "type": "string",
+                "enum": [
+                  "city",
+                  "street",
+                  "lab",
+                  "space",
+                  "interior",
+                  "action",
+                  "explosion",
+                  "halftone",
+                  "focus",
+                  "speed",
+                  "sky",
+                  "plain"
+                ],
+                "description": "Panel backdrop."
+              },
+              "mood": {
+                "type": "string",
+                "enum": [
+                  "day",
+                  "dusk",
+                  "night"
+                ],
+                "description": "Lighting."
+              },
+              "character": {
+                "type": "string",
+                "enum": [
+                  "nova",
+                  "sam",
+                  "vex",
+                  "pip",
+                  "bolt",
+                  "ace",
+                  "none"
+                ],
+                "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+              },
+              "shot": {
+                "type": "string",
+                "enum": [
+                  "full",
+                  "mid",
+                  "close",
+                  "silhouette"
+                ],
+                "description": "Framing."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "stand",
+                  "point",
+                  "explain",
+                  "present",
+                  "wave",
+                  "think",
+                  "cheer",
+                  "shock",
+                  "fist",
+                  "hips",
+                  "shrug",
+                  "crossed",
+                  "run",
+                  "fight"
+                ],
+                "description": "Pose."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "grin",
+                  "shock",
+                  "angry",
+                  "sad",
+                  "smirk",
+                  "think",
+                  "determined",
+                  "scared"
+                ],
+                "description": "Face."
+              },
+              "line": {
+                "type": "string",
+                "description": "Optional words the character says (speech balloon), ≤ 14 words — copy from narration if it is dialogue."
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "speech",
+                  "thought",
+                  "shout",
+                  "whisper",
+                  "radio"
+                ],
+                "description": "Balloon type."
+              },
+              "sfx": {
+                "type": "string",
+                "description": "Optional SFX, 1 word, e.g. 'WHOOSH!'."
+              },
+              "sfxColor": {
+                "type": "string",
+                "enum": [
+                  "fire",
+                  "pow",
+                  "zap",
+                  "ice",
+                  "slime",
+                  "pink",
+                  "red",
+                  "gold"
+                ],
+                "description": "SFX colours."
+              },
+              "effect": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "focus",
+                  "speed"
+                ],
+                "description": "Overlay: radial focus lines or moving speed lines."
+              }
+            },
+            "required": [
+              "caption"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 panels in narration order."
+        },
+        "layout": {
+          "type": "string",
+          "enum": [
+            "grid",
+            "feature",
+            "strip"
+          ],
+          "description": "grid = balanced, feature = first panel big, strip = one row (one column in portrait)."
+        },
+        "camera": {
+          "type": "string",
+          "enum": [
+            "follow",
+            "page"
+          ],
+          "description": "follow = camera glides between panels (default); page = whole page stays in view."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Default lighting."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "panels"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "panels": [
+        {
+          "caption": "Water evaporates from the warm ocean...",
+          "keyword": "evaporates",
+          "background": "sky",
+          "character": "pip",
+          "shot": "mid",
+          "pose": "point",
+          "expression": "happy"
+        },
+        {
+          "caption": "...rises and cools into towering clouds...",
+          "keyword": "clouds",
+          "background": "city",
+          "mood": "dusk",
+          "character": "nova",
+          "shot": "mid",
+          "pose": "explain",
+          "line": "It condenses around tiny specks of dust!",
+          "kind": "speech"
+        },
+        {
+          "caption": "...until the drops get too heavy and fall!",
+          "keyword": "heavy",
+          "background": "street",
+          "mood": "night",
+          "character": "sam",
+          "shot": "mid",
+          "expression": "shock",
+          "sfx": "SPLASH!",
+          "sfxColor": "ice",
+          "effect": "speed"
+        }
+      ],
+      "layout": "feature",
+      "camera": "follow"
+    },
+    "exampleNarration": "Water evaporates from the warm ocean, rises and cools into clouds. It condenses around tiny specks of dust, until the drops get too heavy and fall."
+  },
+  {
+    "id": "dialogue-panels",
+    "name": "Dialogue panels",
+    "description": "Two cast members talk across 2–4 panels (up to 6 lines): two-shots and close-ups, speech/thought/shout balloons with tails, words appearing as they are spoken and mouths moving in sync. Use for Q&A, debates, explaining to a newcomer, or dramatised history.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Character on the left."
+        },
+        "right": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Character on the right."
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Backdrop for two-shots."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Lighting."
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "speaker": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ],
+                "description": "Who speaks."
+              },
+              "text": {
+                "type": "string",
+                "description": "What they say — copy the narration words exactly, ≤ 20 words."
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "speech",
+                  "thought",
+                  "shout",
+                  "whisper",
+                  "radio"
+                ],
+                "description": "Balloon type."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "grin",
+                  "shock",
+                  "angry",
+                  "sad",
+                  "smirk",
+                  "think",
+                  "determined",
+                  "scared"
+                ],
+                "description": "Speaker's face for this line."
+              },
+              "reaction": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "grin",
+                  "shock",
+                  "angry",
+                  "sad",
+                  "smirk",
+                  "think",
+                  "determined",
+                  "scared"
+                ],
+                "description": "Listener's face while this line is spoken."
+              }
+            },
+            "required": [
+              "speaker",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 lines in narration order."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "left",
+        "right",
+        "lines"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": "pip",
+      "right": "nova",
+      "setting": "lab",
+      "lines": [
+        {
+          "speaker": "left",
+          "text": "Why is the sky blue, Doctor?",
+          "kind": "speech",
+          "expression": "think"
+        },
+        {
+          "speaker": "right",
+          "text": "Sunlight bounces off air molecules — and *blue* light scatters the most!",
+          "kind": "speech",
+          "expression": "happy"
+        },
+        {
+          "speaker": "left",
+          "text": "WOW! So the sky is full of scattered light!",
+          "kind": "shout",
+          "expression": "shock",
+          "reaction": "grin"
+        }
+      ]
+    },
+    "exampleNarration": "Why is the sky blue, Doctor? Sunlight bounces off air molecules, and blue light scatters the most! Wow! So the sky is full of scattered light!"
+  },
+  {
+    "id": "big-reveal",
+    "name": "Big reveal",
+    "description": "Set-up panel with a curious character, then on the key word the camera crash-zooms into a second panel: white flash, radial focus lines, impact burst and the reveal in giant 3D letters, plus a shocked close-up inset. Use for surprising facts, answers and plot twists.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "setup": {
+          "type": "string",
+          "description": "Caption for the set-up panel, ≤ 16 words."
+        },
+        "reveal": {
+          "type": "string",
+          "description": "The reveal, 1–4 words (giant lettering)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the reveal explodes."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Set-up panel backdrop."
+        },
+        "revealBackground": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Reveal panel backdrop (focus = radial lines, explosion, action)."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Lighting."
+        },
+        "palette": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "yellow",
+            "purple",
+            "green",
+            "pink"
+          ],
+          "description": "Reveal colours."
+        },
+        "sfx": {
+          "type": "string",
+          "description": "Optional SFX after the reveal, e.g. 'KA-BOOM!'."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "reveal",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "setup": "Scientists spent decades asking what makes up most of the universe...",
+      "reveal": "Dark Matter!",
+      "keyword": "dark",
+      "character": "nova",
+      "background": "space",
+      "revealBackground": "focus",
+      "palette": "red",
+      "sfx": "BOOM!"
+    },
+    "exampleNarration": "Scientists spent decades asking what makes up most of the universe. The answer? Dark matter, and we still cannot see it."
+  },
+  {
+    "id": "versus",
+    "name": "Versus clash",
+    "description": "Two sides split by a slashing diagonal, each with its own coloured sunburst, a fighter-pose character, a 3D name and up to 3 points in caption boxes; then a VS burst clashes in the middle with a shake. Use for comparisons, rivalries, pros vs cons, old vs new.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Side name, 1–3 words."
+            },
+            "character": {
+              "type": "string",
+              "enum": [
+                "nova",
+                "sam",
+                "vex",
+                "pip",
+                "bolt",
+                "ace",
+                "none"
+              ],
+              "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Point, ≤ 8 words."
+              },
+              "description": "0–3 points."
+            },
+            "palette": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "yellow",
+                "purple",
+                "green",
+                "pink"
+              ],
+              "description": "Side colour."
+            },
+            "pose": {
+              "type": "string",
+              "enum": [
+                "stand",
+                "point",
+                "explain",
+                "present",
+                "wave",
+                "think",
+                "cheer",
+                "shock",
+                "fist",
+                "hips",
+                "shrug",
+                "crossed",
+                "run",
+                "fight"
+              ],
+              "description": "Pose."
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "happy",
+                "grin",
+                "shock",
+                "angry",
+                "sad",
+                "smirk",
+                "think",
+                "determined",
+                "scared"
+              ],
+              "description": "Face."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Side name, 1–3 words."
+            },
+            "character": {
+              "type": "string",
+              "enum": [
+                "nova",
+                "sam",
+                "vex",
+                "pip",
+                "bolt",
+                "ace",
+                "none"
+              ],
+              "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Point, ≤ 8 words."
+              },
+              "description": "0–3 points."
+            },
+            "palette": {
+              "type": "string",
+              "enum": [
+                "red",
+                "blue",
+                "yellow",
+                "purple",
+                "green",
+                "pink"
+              ],
+              "description": "Side colour."
+            },
+            "pose": {
+              "type": "string",
+              "enum": [
+                "stand",
+                "point",
+                "explain",
+                "present",
+                "wave",
+                "think",
+                "cheer",
+                "shock",
+                "fist",
+                "hips",
+                "shrug",
+                "crossed",
+                "run",
+                "fight"
+              ],
+              "description": "Pose."
+            },
+            "expression": {
+              "type": "string",
+              "enum": [
+                "neutral",
+                "happy",
+                "grin",
+                "shock",
+                "angry",
+                "sad",
+                "smirk",
+                "think",
+                "determined",
+                "scared"
+              ],
+              "description": "Face."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "vs": {
+          "type": "string",
+          "description": "Clash word (default 'VS')."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the VS clash lands."
+        },
+        "sfx": {
+          "type": "string",
+          "description": "Optional SFX under the VS, e.g. 'CLASH!'."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "name": "Cats",
+        "character": "pip",
+        "points": [
+          "Independent",
+          "Low maintenance"
+        ],
+        "palette": "red",
+        "pose": "fist",
+        "expression": "grin"
+      },
+      "right": {
+        "name": "Dogs",
+        "character": "bolt",
+        "points": [
+          "Loyal",
+          "Love walks"
+        ],
+        "palette": "blue",
+        "pose": "fight",
+        "expression": "determined"
+      },
+      "keyword": "winner",
+      "sfx": "CLASH!"
+    },
+    "exampleNarration": "Cats are independent and low maintenance. Dogs are loyal and love walks. So who is the winner?"
+  },
+  {
+    "id": "caption-narration",
+    "name": "Atmospheric narration",
+    "description": "One big atmospheric panel (night city, rain, space…) with an optional silhouette or mid-shot character while yellow caption boxes carry the narration, one per beat, and the camera slowly pushes in. Use for moody openings, transitions, 'meanwhile…' moments and reflective narration.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "captions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Caption text, ≤ 18 words."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word that shows this caption."
+              },
+              "tone": {
+                "type": "string",
+                "enum": [
+                  "yellow",
+                  "white",
+                  "dark",
+                  "red"
+                ],
+                "description": "Box colour."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "1–5 captions in narration order."
+        },
+        "label": {
+          "type": "string",
+          "description": "Small heading on the first caption, e.g. 'Meanwhile...', 'Paris, 1889'."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Backdrop."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Lighting (night is moodiest)."
+        },
+        "weather": {
+          "type": "string",
+          "enum": [
+            "none",
+            "rain",
+            "snow"
+          ],
+          "description": "Falling rain or snow."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "shot": {
+          "type": "string",
+          "enum": [
+            "silhouette",
+            "full",
+            "mid"
+          ],
+          "description": "Framing of the character."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "point",
+            "explain",
+            "present",
+            "wave",
+            "think",
+            "cheer",
+            "shock",
+            "fist",
+            "hips",
+            "shrug",
+            "crossed",
+            "run",
+            "fight"
+          ],
+          "description": "Pose."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "grin",
+            "shock",
+            "angry",
+            "sad",
+            "smirk",
+            "think",
+            "determined",
+            "scared"
+          ],
+          "description": "Face."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "captions"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "label": "Meanwhile...",
+      "background": "city",
+      "mood": "night",
+      "weather": "rain",
+      "character": "vex",
+      "shot": "silhouette",
+      "captions": [
+        {
+          "text": "The city slept, unaware of the storm gathering above."
+        },
+        {
+          "text": "And one man was waiting for the lights to go out."
+        }
+      ]
+    },
+    "exampleNarration": "The city slept, unaware of the storm gathering above. And one man was waiting for the lights to go out."
+  },
+  {
+    "id": "stat-burst",
+    "name": "Stat burst",
+    "description": "A giant number in extruded 3D lettering counts up inside an explosion burst on a sunburst backdrop, a caption explains it and an inset panel shows a character reacting. Use for one big statistic.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "The number."
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Before the number, e.g. '$'."
+        },
+        "suffix": {
+          "type": "string",
+          "description": "After the number, e.g. '%', 'M', '+'."
+        },
+        "decimals": {
+          "type": "number",
+          "description": "Decimals 0–3."
+        },
+        "label": {
+          "type": "string",
+          "description": "What it means, ≤ 14 words."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the count starts."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "grin",
+            "shock",
+            "angry",
+            "sad",
+            "smirk",
+            "think",
+            "determined",
+            "scared"
+          ],
+          "description": "Reaction face."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Backdrop."
+        },
+        "palette": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "yellow",
+            "purple",
+            "green",
+            "pink"
+          ],
+          "description": "Colours."
+        },
+        "sfx": {
+          "type": "string",
+          "description": "Optional SFX when the count lands, e.g. 'KA-CHING!'."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "value": 8600,
+      "suffix": " km",
+      "label": "The length of the Great Wall of China",
+      "keyword": "length",
+      "character": "pip",
+      "expression": "shock",
+      "background": "action",
+      "palette": "red",
+      "sfx": "WOW!"
+    },
+    "exampleNarration": "The total length of the Great Wall of China is about eight thousand six hundred kilometres."
+  },
+  {
+    "id": "origin-story",
+    "name": "Origin story timeline",
+    "description": "A history told as 2–6 panels: each has a dark date tab, a scene with an optional cast member, and a caption; the camera travels through the panels in order. Use for timelines, biographies and how-it-started stories.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional red label on the first panel, ≤ 5 words."
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string",
+                "description": "Date tab, e.g. '1879', 'Day 1'."
+              },
+              "text": {
+                "type": "string",
+                "description": "What happened, ≤ 16 words."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word that reveals this panel (default: the date)."
+              },
+              "background": {
+                "type": "string",
+                "enum": [
+                  "city",
+                  "street",
+                  "lab",
+                  "space",
+                  "interior",
+                  "action",
+                  "explosion",
+                  "halftone",
+                  "focus",
+                  "speed",
+                  "sky",
+                  "plain"
+                ],
+                "description": "Panel backdrop."
+              },
+              "mood": {
+                "type": "string",
+                "enum": [
+                  "day",
+                  "dusk",
+                  "night"
+                ],
+                "description": "Lighting."
+              },
+              "character": {
+                "type": "string",
+                "enum": [
+                  "nova",
+                  "sam",
+                  "vex",
+                  "pip",
+                  "bolt",
+                  "ace",
+                  "none"
+                ],
+                "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+              },
+              "pose": {
+                "type": "string",
+                "enum": [
+                  "stand",
+                  "point",
+                  "explain",
+                  "present",
+                  "wave",
+                  "think",
+                  "cheer",
+                  "shock",
+                  "fist",
+                  "hips",
+                  "shrug",
+                  "crossed",
+                  "run",
+                  "fight"
+                ],
+                "description": "Pose."
+              },
+              "expression": {
+                "type": "string",
+                "enum": [
+                  "neutral",
+                  "happy",
+                  "grin",
+                  "shock",
+                  "angry",
+                  "sad",
+                  "smirk",
+                  "think",
+                  "determined",
+                  "scared"
+                ],
+                "description": "Face."
+              }
+            },
+            "required": [
+              "date",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 events in order."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "The Light Bulb",
+      "events": [
+        {
+          "date": "1802",
+          "text": "Humphry Davy makes the first electric light glow.",
+          "background": "lab",
+          "character": "nova",
+          "pose": "point",
+          "expression": "happy"
+        },
+        {
+          "date": "1879",
+          "text": "Edison's bulb burns for over 13 hours.",
+          "background": "interior",
+          "mood": "night",
+          "character": "sam",
+          "pose": "cheer",
+          "expression": "grin"
+        },
+        {
+          "date": "Today",
+          "text": "LEDs use a fraction of the power.",
+          "background": "city",
+          "mood": "night",
+          "character": "bolt",
+          "pose": "wave",
+          "expression": "happy"
+        }
+      ]
+    },
+    "exampleNarration": "In 1802 Humphry Davy made the first electric light glow. By 1879 Edison's bulb burned for over thirteen hours. Today, LEDs use a fraction of the power."
+  },
+  {
+    "id": "close-up-reaction",
+    "name": "Close-up reaction",
+    "description": "An extreme close-up face; on the key word the expression snaps, the camera punches in, focus lines burst out and an SFX pops, with a speech/thought/shout balloon. Use for emotional beats, surprise, doubt, 'wait, what?' moments.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "from": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "grin",
+            "shock",
+            "angry",
+            "sad",
+            "smirk",
+            "think",
+            "determined",
+            "scared"
+          ],
+          "description": "Starting face."
+        },
+        "expression": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "happy",
+            "grin",
+            "shock",
+            "angry",
+            "sad",
+            "smirk",
+            "think",
+            "determined",
+            "scared"
+          ],
+          "description": "Face after the key word."
+        },
+        "line": {
+          "type": "string",
+          "description": "Balloon text — copy from narration, ≤ 16 words."
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "speech",
+            "thought",
+            "shout",
+            "whisper",
+            "radio"
+          ],
+          "description": "Balloon type."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Narration word on which the reaction hits."
+        },
+        "sfx": {
+          "type": "string",
+          "description": "Optional SFX, e.g. 'GASP!'."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "halftone",
+            "focus",
+            "speed",
+            "action",
+            "plain"
+          ],
+          "description": "Backdrop."
+        },
+        "palette": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "yellow",
+            "purple",
+            "green",
+            "pink"
+          ],
+          "description": "Backdrop colour."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "character",
+        "expression",
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "character": "sam",
+      "from": "neutral",
+      "expression": "shock",
+      "line": "Wait... the moon is drifting away from us?!",
+      "kind": "shout",
+      "keyword": "drifting",
+      "sfx": "GASP!",
+      "background": "halftone",
+      "palette": "pink"
+    },
+    "exampleNarration": "Wait... the moon is drifting away from us? Every year, about four centimetres."
+  },
+  {
+    "id": "page-turn-chapter",
+    "name": "Page-turn chapter",
+    "description": "The previous comic page curls away (2D page turn) to reveal a new chapter splash: a chapter banner, a big 3D title, subtitle caption and a waving cast member. Use between chapters / major sections.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "chapter": {
+          "type": "string",
+          "description": "Banner text, e.g. 'Chapter 2'."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chapter title, 1–5 words."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional caption, ≤ 14 words."
+        },
+        "character": {
+          "type": "string",
+          "enum": [
+            "nova",
+            "sam",
+            "vex",
+            "pip",
+            "bolt",
+            "ace",
+            "none"
+          ],
+          "description": "Recurring cast member: nova (scientist), sam (everyday narrator), vex (villain), pip (kid sidekick), bolt (robot), ace (caped hero), none."
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "stand",
+            "point",
+            "explain",
+            "present",
+            "wave",
+            "think",
+            "cheer",
+            "shock",
+            "fist",
+            "hips",
+            "shrug",
+            "crossed",
+            "run",
+            "fight"
+          ],
+          "description": "Pose."
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Splash backdrop."
+        },
+        "previousBackground": {
+          "type": "string",
+          "enum": [
+            "city",
+            "street",
+            "lab",
+            "space",
+            "interior",
+            "action",
+            "explosion",
+            "halftone",
+            "focus",
+            "speed",
+            "sky",
+            "plain"
+          ],
+          "description": "Backdrop of the page that turns away."
+        },
+        "mood": {
+          "type": "string",
+          "enum": [
+            "day",
+            "dusk",
+            "night"
+          ],
+          "description": "Lighting."
+        },
+        "palette": {
+          "type": "string",
+          "enum": [
+            "red",
+            "blue",
+            "yellow",
+            "purple",
+            "green",
+            "pink"
+          ],
+          "description": "Title colours (blue = icy)."
+        },
+        "endCaption": {
+          "type": "string",
+          "description": "Caption on the page that turns away (default 'To be continued...')."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "chapter",
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "chapter": "Chapter 2",
+      "title": "Into the Machine",
+      "subtitle": "Where the real work happens",
+      "character": "bolt",
+      "pose": "wave",
+      "background": "lab",
+      "mood": "day"
+    },
+    "exampleNarration": "Chapter two. Into the machine, where the real work happens."
+  },
+  {
+    "id": "fact-panels",
+    "name": "Fact panels",
+    "description": "2–6 numbered pop-art panels, each with a halftone colour field, a big inked icon in a starburst and a label caption, popping in on their key words. Use for lists, tips, features and key points.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional red heading caption, ≤ 6 words."
+        },
+        "facts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Fact, ≤ 10 words."
+              },
+              "icon": {
+                "type": "string",
+                "description": "Icon name from the shared icon set (e.g. rocket, heart, bolt, globe, brain, clock, leaf, shield)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Narration word that reveals it."
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "description": "2–6 facts in order."
+        },
+        "print": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "aged",
+            "misprint"
+          ],
+          "description": "Print finish. Keep the SAME value for every scene of a video. clean = crisp newsprint, aged = yellowed vintage paper, misprint = off-register cyan ghosting."
+        }
+      },
+      "required": [
+        "facts"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Super sleep powers",
+      "facts": [
+        {
+          "label": "Boosts memory",
+          "icon": "brain",
+          "keyword": "memory"
+        },
+        {
+          "label": "Repairs muscles",
+          "icon": "heart",
+          "keyword": "muscles"
+        },
+        {
+          "label": "Sharpens focus",
+          "icon": "target",
+          "keyword": "focus"
+        },
+        {
+          "label": "Saves energy",
+          "icon": "bolt",
+          "keyword": "energy"
+        }
+      ]
+    },
+    "exampleNarration": "Sleep has super powers. It boosts your memory, repairs your muscles, sharpens your focus and saves energy."
+  }
+]

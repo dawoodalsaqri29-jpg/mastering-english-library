@@ -1594,6 +1594,9 @@
   S.factionInfo = FACTIONS;
   function fac(id) { return FACTIONS[id] || FACTIONS[S.guessFaction(id)] || FACTIONS.redcoat; }
   S.faction = fac;
+  // gunpowder only for musket-era factions (no cannons at Hastings)
+  function hasGuns(f) { return fac(f).weapon === "musket"; }
+  S.hasGuns = hasGuns;
   S.guessFaction = function (text) {
     var t = str(text).toLowerCase();
     var M = [["redcoat", /british|red ?coat|english|king's|royal/], ["bluecoat", /french|napoleon|blue ?coat|grande/], ["prussian", /prussia|german|hessian/], ["union", /union|federal|yankee|civil war/], ["continental", /continental|patriot|revolution|washington/],
@@ -3511,7 +3514,7 @@
     var zPush = Pt ? 1.35 : p.title ? 1.3 : 1.55, zClash = Pt ? 1.6 : p.title ? 1.5 : 1.9;
     // guns behind each side
     var guns = [];
-    if (action === "cannonade" || p.cannons !== false) {
+    if (action === "cannonade" || (p.cannons !== false && (hasGuns(left.faction) || hasGuns(right.faction)))) {
       var gy = arm.groundY - arm.size * 0.9, gs = arm.size * 0.75;
       var gL = S.cannon({ x: W * (Pt ? 0.08 : 0.07), y: gy, size: gs, facing: 1, faction: left.faction }), gR = S.cannon({ x: W * (Pt ? 0.92 : 0.93), y: gy, size: gs, facing: -1, faction: right.faction });
       guns.push(gL, gR);
@@ -3699,7 +3702,7 @@
     var fa = fitArmy(pickCount(att.count, 40, Pt ? 44 : 70), size, W * (Pt ? 0.42 : 0.36));
     var atts = S.army({ faction: att.faction, x: ax, y: gy, count: fa.count, ranks: fa.ranks, size: size, facing: side, pose: "stand", flags: Pt ? 1 : 2, seed: "assault" });
     var guns = [];
-    for (var gi = 0; gi < (Pt ? 1 : 2); gi++) guns.push(S.cannon({ x: ax - side * (atts.w * 0.5 + size * (1.2 + gi * 1.5)), y: gy - size * (0.8 - gi * 0.3), size: size * 0.8, facing: side, faction: att.faction }));
+    for (var gi = 0; gi < (hasGuns(att.faction) ? (Pt ? 1 : 2) : 0); gi++) guns.push(S.cannon({ x: ax - side * (atts.w * 0.5 + size * (1.2 + gi * 1.5)), y: gy - size * (0.8 - gi * 0.3), size: size * 0.8, facing: side, faction: att.faction }));
     guns.forEach(function (gn) { atts.el.parentNode.insertBefore(gn.el, atts.el); });
     // ladders against the wall
     var lad = G(a.layers.ground.g);
@@ -3733,7 +3736,7 @@
     var arm = twoArmies(a, { left: left, right: right, pose: "march", groundFrac: Pt ? 0.24 : 0.25, scale: 0.9 });
     arm.left.march(0, d, arm.size * 1.2, 0, { ease: "linear" }); arm.right.march(0, d, -arm.size * 1.2, 0, { ease: "linear" });
     dustAt(arm.left, 0, d); dustAt(arm.right, 0, d);
-    for (var gi = 0; gi < 2; gi++) { var gn = S.cannon({ x: W * (gi ? 0.9 : 0.1), y: arm.groundY - arm.size * 0.9, size: arm.size * 0.7, facing: gi ? -1 : 1, faction: gi ? right.faction : left.faction }); gn.fire(1.2 + gi * 1.4); if (d > 7) gn.fire(4.6 + gi * 1.1); arm.left.el.parentNode.insertBefore(gn.el, arm.left.el); }
+    for (var gi = 0; gi < 2; gi++) { if (!hasGuns(gi ? right.faction : left.faction)) continue; var gn = S.cannon({ x: W * (gi ? 0.9 : 0.1), y: arm.groundY - arm.size * 0.9, size: arm.size * 0.7, facing: gi ? -1 : 1, faction: gi ? right.faction : left.faction }); gn.fire(1.2 + gi * 1.4); if (d > 7) gn.fire(4.6 + gi * 1.1); arm.left.el.parentNode.insertBefore(gn.el, arm.left.el); }
     S.fadeIn(0, 1.4, { paper: true });
     S.lightRays({ opacity: 0.3 });
     S.smokeBank({ x0: arm.left.x, x1: arm.right.x, y: arm.groundY - arm.size * 0.3, n: 14, size: arm.size * 0.9, opacity: 0.4 });

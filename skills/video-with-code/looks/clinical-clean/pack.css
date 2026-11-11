@@ -1,0 +1,62 @@
+/* clinical-clean — calm health-tech film: pale blue-white gradient, light rays, ECG trace, blue pill tags */
+:root {
+  --bg: #DDE4EC;
+  --bg-light: #EEF2F6;
+  --bg-deep: #C9D3DE;
+  --fg: #0E1A2B;
+  --muted: #5B6B80;
+  --accent: #1E6FD9;
+  --accent-2: #19B37A;
+  --accent-3: #E5484D;
+  --ray: rgba(255, 255, 255, 0.55);
+  --trace-base: rgba(14, 26, 43, 0.08);
+  --dot: transparent;
+  --surface: rgba(255, 255, 255, 0.82);
+  --line: rgba(14, 26, 43, 0.12);
+  --on-accent: #FFFFFF;
+  --bar-muted: rgba(14, 26, 43, 0.12);
+  --hl: rgba(30, 111, 217, 0.16);
+  --halo: rgba(30, 111, 217, 0.12);
+  --shadow: 0 calc(var(--u) * 14) calc(var(--u) * 40) rgba(30, 70, 130, 0.12), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  --shadow-lg: 0 calc(var(--u) * 24) calc(var(--u) * 64) rgba(30, 70, 130, 0.18);
+  --card-border: 1px solid rgba(255, 255, 255, 0.9);
+  --radius: calc(var(--u) * 22);
+  --title-weight: 800;
+  --title-tracking: -0.03em;
+  --title-leading: 1.02;
+  --code-bg: #FFFFFF;
+  --code-fg: #0E1A2B;
+  --code-chrome: #EEF2F6;
+  --code-border: 1px solid rgba(14, 26, 43, 0.1);
+  --code-hi: rgba(30, 111, 217, 0.1);
+  --tk-k: #1E6FD9;
+  --tk-s: #19B37A;
+  --tk-f: #7A4FD6;
+  --tk-n: #E5484D;
+  --tk-c: #8A97A8;
+  --neg: #E5484D;
+  --pos: #19B37A;
+  --edge: rgba(14, 26, 43, 0.4);
+  --badge-bg: rgba(30, 111, 217, 0.1);
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-text.v-muted { color: var(--accent); }
+/* uppercase blue pill category tags */
+.kind-minimal .v-kicker { align-self: flex-start; width: fit-content; padding: 0.5em 1.15em; border-radius: 99px; background: rgba(30, 111, 217, 0.1); border: 1px solid rgba(30, 111, 217, 0.28); color: var(--accent); letter-spacing: 0.16em; font-weight: 700; font-size: calc(var(--fs-label) * 0.9); }
+.kind-minimal .v-header.v-center .v-kicker { align-self: center; }
+.kind-minimal .v-line { background: linear-gradient(90deg, var(--accent), var(--accent-2)); height: calc(var(--u) * 5); width: calc(var(--u) * 150); box-shadow: 0 0 calc(var(--u) * 16) rgba(30, 111, 217, 0.4); }
+.kind-minimal .v-card { backdrop-filter: blur(calc(var(--u) * 14)); -webkit-backdrop-filter: blur(calc(var(--u) * 14)); }
+.kind-minimal .v-num { background: var(--accent); color: #fff; box-shadow: 0 0 calc(var(--u) * 22) rgba(30, 111, 217, 0.35); }
+.kind-minimal .v-icon-badge { background: #FFFFFF; color: var(--accent); box-shadow: 0 calc(var(--u) * 6) calc(var(--u) * 18) rgba(30, 70, 130, 0.14); }
+.kind-minimal .v-statnum { color: var(--accent); text-shadow: 0 0 calc(var(--u) * 30) rgba(30, 111, 217, 0.25); }
+.kind-minimal .v-vs { background: #FFFFFF; color: var(--accent); box-shadow: var(--shadow); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--accent-3); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--accent); }
+.kind-minimal .t-section .v-wipe { background: linear-gradient(90deg, var(--bg-light), var(--accent)); }
+.kind-minimal .t-timeline .v-dot { border-color: var(--accent); box-shadow: 0 0 calc(var(--u) * 14) rgba(30, 111, 217, 0.4); }
+.kind-minimal .t-bars .v-bar { background: rgba(30, 111, 217, 0.35); }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); box-shadow: 0 0 calc(var(--u) * 24) rgba(30, 111, 217, 0.35); }
+.kind-minimal .t-line .v-lc-line { filter: drop-shadow(0 0 calc(var(--u) * 6) rgba(30, 111, 217, 0.45)); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: #fff; }
+.kind-minimal .t-quote .v-qmark { color: var(--accent); }

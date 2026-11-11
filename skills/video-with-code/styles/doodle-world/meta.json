@@ -1,0 +1,8 @@
+{
+  "id": "doodle-world",
+  "name": "Doodle World",
+  "description": "Simple, scrappy hand-drawn doodle people with thick uneven outlines and big round eyes, dropped into richly painted, warm, textured worlds — firelit caves, savanna sunrises, snowy tundra, the Nile, Roman forums, medieval villages, far-future cities and a dying sun. Era outfits (cavemen, Egyptians, Romans, peasants, moderns, futurists), animals, deadpan reactions, chunky thumbnail headlines, labelled arrows, thermometers and year counters. The 'what did ancient humans actually do all day?' history-and-deep-time explainer look.",
+  "premium": true,
+  "palette": { "background": "#F3D9A6", "foreground": "#2B1A12", "accent": "#FFD400", "muted": "#8C6B4F" },
+  "fonts": ["\"Luckiest Guy\", \"Bangers\", Impact, \"Arial Black\", \"Segoe UI Black\", \"Franklin Gothic Heavy\", sans-serif", "\"Patrick Hand\", \"Segoe Print\", \"Comic Sans MS\", \"Chalkboard SE\", \"Comic Neue\", \"Noto Sans\", cursive"]
+}

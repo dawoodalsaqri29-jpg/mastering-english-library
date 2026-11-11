@@ -1,0 +1,57 @@
+/* pastel-pop — friendly brutalist app explainer: cream, pastel panels, ink outlines, hard shadows */
+:root {
+  --bg: #EFEEE8;
+  --fg: #18181B;
+  --muted: #55555C;
+  --accent: #F07A2A;
+  --accent-2: #8FA3F0;
+  --accent-3: #7DE0B5;
+  --panel: #FFB27A;
+  --panel-2: #8FA3F0;
+  --surface: #FFFFFF;
+  --line: #18181B;
+  --on-accent: #18181B;
+  --bar-muted: #D9D7CC;
+  --hl: var(--panel);
+  --halo: transparent;
+  --dot: transparent;
+  --card-border: calc(var(--u) * 3) solid #18181B;
+  --shadow: calc(var(--u) * 8) calc(var(--u) * 8) 0 #18181B;
+  --shadow-lg: calc(var(--u) * 12) calc(var(--u) * 12) 0 #18181B;
+  --radius: calc(var(--u) * 18);
+  --title-weight: 800;
+  --title-tracking: -0.035em;
+  --title-leading: 1.0;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --code-bg: #18181B;
+  --code-border: calc(var(--u) * 3) solid #18181B;
+  --tk-k: #FFB27A;
+  --tk-s: #7DE0B5;
+  --tk-f: #8FA3F0;
+  --tk-n: #F2EE3A;
+  --neg: #E8483B;
+  --pos: #23A26D;
+  --edge: #18181B;
+  --badge-bg: var(--panel);
+}
+.kind-minimal .v-em { color: var(--fg); background: var(--panel); padding: 0 0.14em; border-radius: calc(var(--u) * 8); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.kind-minimal .v-kicker { font-family: var(--font-kicker); color: var(--fg); text-transform: none; letter-spacing: 0.04em; font-weight: 600; }
+.kind-minimal .v-kicker::before { content: "// "; color: var(--accent); }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 10); width: calc(var(--u) * 150); border-radius: 999px; border: calc(var(--u) * 3) solid var(--fg); }
+.kind-minimal .v-num { background: var(--panel); color: var(--fg); border: calc(var(--u) * 3) solid var(--fg); box-shadow: calc(var(--u) * 4) calc(var(--u) * 4) 0 var(--fg); font-weight: 900; }
+.kind-minimal .v-icon-badge { background: var(--panel); color: var(--fg); border: calc(var(--u) * 3) solid var(--fg); border-radius: calc(var(--u) * 20); box-shadow: calc(var(--u) * 4) calc(var(--u) * 4) 0 var(--fg); }
+.kind-minimal .v-statnum { color: var(--fg); text-shadow: calc(var(--u) * 8) calc(var(--u) * 8) 0 var(--panel); }
+.kind-minimal .v-vs { background: var(--accent); color: var(--fg); border: calc(var(--u) * 3) solid var(--fg); box-shadow: calc(var(--u) * 5) calc(var(--u) * 5) 0 var(--fg); }
+.kind-minimal .t-compare .v-side.is-left { background: var(--panel); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: var(--panel); -webkit-text-stroke: calc(var(--u) * 4) var(--fg); text-shadow: calc(var(--u) * 10) calc(var(--u) * 10) 0 var(--fg); }
+.kind-minimal .t-section .v-wipe { background: var(--panel); }
+.kind-minimal .t-line .v-lc-call { background: var(--panel); color: var(--fg); border: calc(var(--u) * 3) solid var(--fg); }
+.kind-minimal .t-line .v-lc-dot { background: var(--accent); border-color: var(--fg); }
+.kind-minimal .t-bars .v-bar { border: calc(var(--u) * 3) solid var(--fg); border-radius: calc(var(--u) * 10) calc(var(--u) * 10) 0 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-bars.is-h .v-track { border: calc(var(--u) * 3) solid var(--fg); background: #fff; }
+.kind-minimal .t-timeline .v-dot { background: var(--panel); border: calc(var(--u) * 4) solid var(--fg); }
+.kind-minimal .t-code .v-editor { box-shadow: var(--shadow-lg); }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--fg); background: var(--panel); padding: 0 0.12em; border-radius: calc(var(--u) * 8); }

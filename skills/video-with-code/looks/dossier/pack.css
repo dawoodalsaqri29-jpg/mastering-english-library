@@ -1,0 +1,67 @@
+/* dossier — a declassified technical file: warm black, grey linework, signal orange, paper inserts, red stamps */
+:root {
+  --bg: #141110;
+  --fg: #ECE8DF;
+  --muted: #AAA099;
+  --accent: #FF6A1A;
+  --accent-2: #DAD8CD;
+  --accent-3: #E0442A;
+  --paper: #DAD8CD;
+  --paper-ink: #1C1916;
+  --stamp: #E0442A;
+  --linework: #AAA099;
+  --grid: rgba(170, 160, 153, 0.13);
+  --dot: transparent;
+  --surface: rgba(170, 160, 153, 0.05);
+  --line: rgba(170, 160, 153, 0.3);
+  --on-accent: #141110;
+  --bar-muted: rgba(170, 160, 153, 0.22);
+  --hl: rgba(255, 106, 26, 0.28);
+  --halo: transparent;
+  --shadow: none;
+  --shadow-lg: none;
+  --card-border: 1px solid rgba(170, 160, 153, 0.35);
+  --radius: 0px;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 800;
+  --title-tracking: -0.02em;
+  --title-leading: 1.0;
+  --code-bg: #0E0C0B;
+  --code-fg: #DAD8CD;
+  --code-chrome: #1E1A18;
+  --code-border: 1px solid rgba(170, 160, 153, 0.35);
+  --code-hi: rgba(255, 106, 26, 0.14);
+  --tk-k: #FF6A1A;
+  --tk-s: #C9A24A;
+  --tk-f: #DAD8CD;
+  --tk-n: #E0442A;
+  --tk-c: #6F6A63;
+  --neg: #E0442A;
+  --pos: #6E8C8A;
+  --edge: rgba(170, 160, 153, 0.6);
+  --badge-bg: transparent;
+}
+.kind-minimal .v-title { text-transform: uppercase; }
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--muted); letter-spacing: 0.18em; font-weight: 500; }
+.kind-minimal .v-kicker::before { content: ""; display: inline-block; width: 0.62em; height: 1em; margin-right: 0.7em; background: var(--accent); vertical-align: -0.16em; }
+.kind-minimal .v-line { background: repeating-linear-gradient(90deg, var(--accent) 0 calc(var(--u) * 14), transparent calc(var(--u) * 14) calc(var(--u) * 22)); height: calc(var(--u) * 4); width: calc(var(--u) * 240); border-radius: 0; }
+.kind-minimal .v-card { background: var(--surface); }
+.kind-minimal .v-card::before { content: ""; position: absolute; left: calc(var(--u) * -1); top: calc(var(--u) * -1); width: calc(var(--u) * 22); height: calc(var(--u) * 22); border-left: calc(var(--u) * 3) solid var(--accent); border-top: calc(var(--u) * 3) solid var(--accent); }
+.kind-minimal .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 2) solid var(--accent); border-radius: 0; font-family: var(--font-kicker); font-weight: 600; }
+.kind-minimal .v-icon-badge { background: transparent; color: var(--accent); border: 1px solid var(--line); border-radius: 0; }
+.kind-minimal .v-statnum { color: var(--fg); font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+/* the versus badge is a rubber stamp */
+.kind-minimal .v-vs { background: transparent; color: var(--stamp); border: calc(var(--u) * 4) double var(--stamp); border-radius: 0; font-family: var(--font-kicker); font-weight: 700; rotate: -8deg; }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 2) var(--accent); font-family: var(--font-kicker); }
+.kind-minimal .t-section .v-wipe { background: var(--paper); }
+.kind-minimal .t-timeline .v-dot { border-radius: 0; border-color: var(--accent); }
+.kind-minimal .t-timeline .v-date { font-family: var(--font-kicker); color: var(--accent); }
+.kind-minimal .t-bars .v-bar { border-radius: 0; background: var(--linework); }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-bars .v-val { font-family: var(--font-kicker); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: var(--bg); border-radius: 0; font-family: var(--font-kicker); }
+.kind-minimal .t-line .v-lc-grid { stroke: rgba(170, 160, 153, 0.14); }
+.kind-minimal .t-quote .v-quote { font-family: var(--font-kicker); font-weight: 500; }
+.kind-minimal .t-quote .v-qmark { color: var(--accent); }

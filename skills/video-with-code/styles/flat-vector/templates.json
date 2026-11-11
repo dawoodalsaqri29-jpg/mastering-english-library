@@ -1,0 +1,1678 @@
+[
+  {
+    "id": "title-landscape",
+    "name": "Title Landscape",
+    "description": "Opening/section title over a big illustrated parallax world (rolling hills, dusk mountains, night city, space, ocean or micro-world) with a mascot that drops in and waves and a hero illustration. Use for video intros and chapter openers.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Main title, 2–7 words. Wrap one word in *asterisks* to colour it yellow."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Optional short subtitle (≤ 10 words)"
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Optional tiny label above the title, e.g. 'Chapter 2'"
+        },
+        "setting": {
+          "type": "string",
+          "description": "Illustrated world",
+          "enum": [
+            "meadow",
+            "dusk",
+            "night",
+            "space",
+            "ocean",
+            "micro"
+          ]
+        },
+        "creature": {
+          "type": "string",
+          "description": "Mascot from the recurring cast",
+          "enum": [
+            "pip",
+            "nova",
+            "momo",
+            "zib"
+          ]
+        },
+        "hero": {
+          "type": "string",
+          "description": "Hero illustration standing in the world (house, tree, rocket, saturn…)",
+          "enum": [
+            "planet",
+            "saturn",
+            "gasgiant",
+            "mars",
+            "earth",
+            "moon",
+            "sun",
+            "star",
+            "galaxy",
+            "blackhole",
+            "rocket",
+            "satellite",
+            "cell",
+            "bacteria",
+            "virus",
+            "dna",
+            "molecule",
+            "atom",
+            "neuron",
+            "body",
+            "brain",
+            "heart",
+            "pill",
+            "tree",
+            "sprout",
+            "flower",
+            "fish",
+            "wave",
+            "drop",
+            "cloud",
+            "mountain",
+            "city",
+            "house",
+            "people",
+            "factory",
+            "coin",
+            "cash",
+            "gear",
+            "clock",
+            "blast",
+            "bolt",
+            "flame",
+            "bulb",
+            "book",
+            "laptop",
+            "chip",
+            "magnet",
+            "trophy"
+          ]
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How *Volcanoes* Work",
+      "subtitle": "From magma to mountains",
+      "kicker": "Chapter 1",
+      "setting": "meadow",
+      "creature": "pip",
+      "hero": "house"
+    },
+    "exampleNarration": "How volcanoes work. Let us go from deep magma all the way up to brand new mountains."
+  },
+  {
+    "id": "cosmic-zoom",
+    "name": "Cosmic Zoom",
+    "description": "Continuous camera dive through 2–6 nested scales (e.g. galaxy → sun → earth → city → cell). Each next world opens as a liquid portal inside the previous one while the camera keeps zooming; each level's label lands on its key word. The signature 'zoom through scales' shot.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title shown before the dive"
+        },
+        "levels": {
+          "type": "array",
+          "description": "2–6 levels, outermost first. Each level's label should be spoken in the narration in this order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "illus": {
+                "type": "string",
+                "description": "Hero illustration of this level",
+                "enum": [
+                  "planet",
+                  "saturn",
+                  "gasgiant",
+                  "mars",
+                  "earth",
+                  "moon",
+                  "sun",
+                  "star",
+                  "galaxy",
+                  "blackhole",
+                  "rocket",
+                  "satellite",
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "body",
+                  "brain",
+                  "heart",
+                  "pill",
+                  "tree",
+                  "sprout",
+                  "flower",
+                  "fish",
+                  "wave",
+                  "drop",
+                  "cloud",
+                  "mountain",
+                  "city",
+                  "house",
+                  "people",
+                  "factory",
+                  "coin",
+                  "cash",
+                  "gear",
+                  "clock",
+                  "blast",
+                  "bolt",
+                  "flame",
+                  "bulb",
+                  "book",
+                  "laptop",
+                  "chip",
+                  "magnet",
+                  "trophy"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "Short label (1–3 words), spoken in the narration"
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional scale note, e.g. '100,000 light-years'"
+              },
+              "world": {
+                "type": "string",
+                "description": "Optional backdrop for this level (auto from the illustration)",
+                "enum": [
+                  "space",
+                  "sky",
+                  "dusk",
+                  "night",
+                  "micro",
+                  "body",
+                  "ocean",
+                  "studio"
+                ]
+              }
+            },
+            "required": [
+              "illus",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "levels"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "levels": [
+        {
+          "illus": "galaxy",
+          "label": "Milky Way",
+          "note": "100,000 light-years"
+        },
+        {
+          "illus": "sun",
+          "label": "Sun",
+          "note": "1.4 million km"
+        },
+        {
+          "illus": "earth",
+          "label": "Earth",
+          "note": "12,742 km"
+        },
+        {
+          "illus": "city",
+          "label": "City"
+        },
+        {
+          "illus": "cell",
+          "label": "Cell",
+          "note": "0.01 mm"
+        }
+      ]
+    },
+    "exampleNarration": "Start with the Milky Way. Dive past our Sun, down to Earth, into a single city, and finally into one tiny cell."
+  },
+  {
+    "id": "micro-world",
+    "name": "Micro World",
+    "description": "Microscopic world in liquid: 1–4 living subjects (cells, bacteria, viruses, DNA, molecules, atoms, neurons) wobble and float with labels, a swarm drifts behind, and an optional event makes one subject move into another with a burst (attack, bond, infect, divide).",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "subjects": {
+          "type": "array",
+          "description": "1–4 subjects",
+          "items": {
+            "type": "object",
+            "properties": {
+              "illus": {
+                "type": "string",
+                "description": "Microscopic subject",
+                "enum": [
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "heart",
+                  "brain",
+                  "drop",
+                  "pill"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "Short label, spoken in narration"
+              }
+            },
+            "required": [
+              "illus",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "event": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "number",
+              "description": "Index of the subject that moves (0-based)"
+            },
+            "to": {
+              "type": "number",
+              "description": "Index of the subject it reaches"
+            },
+            "verb": {
+              "type": "string",
+              "description": "Short action word/phrase spoken in narration, e.g. 'attacks'"
+            }
+          },
+          "required": [
+            "from",
+            "to",
+            "verb"
+          ],
+          "additionalProperties": false
+        },
+        "world": {
+          "type": "string",
+          "description": "Backdrop",
+          "enum": [
+            "micro",
+            "body",
+            "ocean"
+          ]
+        },
+        "faces": {
+          "type": "boolean",
+          "description": "Give bacteria/viruses cute faces"
+        }
+      },
+      "required": [
+        "subjects"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Inside your *blood*",
+      "subjects": [
+        {
+          "illus": "virus",
+          "label": "Virus"
+        },
+        {
+          "illus": "cell",
+          "label": "White blood cell"
+        }
+      ],
+      "event": {
+        "from": 1,
+        "to": 0,
+        "verb": "swallows it"
+      },
+      "world": "body"
+    },
+    "exampleNarration": "A virus slips into your blood. But a white blood cell spots it, races over, and swallows it whole."
+  },
+  {
+    "id": "creature-explains",
+    "name": "Creature Explains",
+    "description": "A recurring mascot (pip, nova, momo, zib) stands beside a big illustrated concept, talks while the narration plays, looks at the concept and reacts (wow, happy, think) as 1–4 key points pop in. The workhorse explainer scene.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "creature": {
+          "type": "string",
+          "description": "Mascot",
+          "enum": [
+            "pip",
+            "nova",
+            "momo",
+            "zib"
+          ]
+        },
+        "illus": {
+          "type": "string",
+          "description": "The concept illustration",
+          "enum": [
+            "planet",
+            "saturn",
+            "gasgiant",
+            "mars",
+            "earth",
+            "moon",
+            "sun",
+            "star",
+            "galaxy",
+            "blackhole",
+            "rocket",
+            "satellite",
+            "cell",
+            "bacteria",
+            "virus",
+            "dna",
+            "molecule",
+            "atom",
+            "neuron",
+            "body",
+            "brain",
+            "heart",
+            "pill",
+            "tree",
+            "sprout",
+            "flower",
+            "fish",
+            "wave",
+            "drop",
+            "cloud",
+            "mountain",
+            "city",
+            "house",
+            "people",
+            "factory",
+            "coin",
+            "cash",
+            "gear",
+            "clock",
+            "blast",
+            "bolt",
+            "flame",
+            "bulb",
+            "book",
+            "laptop",
+            "chip",
+            "magnet",
+            "trophy"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional title (≤ 8 words)"
+        },
+        "points": {
+          "type": "array",
+          "description": "0–4 short points (≤ 6 words each), spoken in order",
+          "items": {
+            "type": "string",
+            "description": "Point"
+          }
+        },
+        "mood": {
+          "type": "string",
+          "description": "Starting expression",
+          "enum": [
+            "neutral",
+            "happy",
+            "wow",
+            "think",
+            "sad",
+            "excited"
+          ]
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "creature",
+        "illus"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "creature": "nova",
+      "illus": "brain",
+      "title": "Why we *dream*",
+      "points": [
+        "Sorts memories",
+        "Rehearses fears",
+        "Sparks ideas"
+      ],
+      "mood": "neutral",
+      "world": "dusk"
+    },
+    "exampleNarration": "Why do we dream? Scientists think dreaming sorts memories, rehearses our fears, and even sparks new ideas."
+  },
+  {
+    "id": "morph-sequence",
+    "name": "Morph Sequence",
+    "description": "One big glossy shape liquid-morphs into the next on each key word (circle → drop → leaf → tree…), colour blending, with ripples, bursts and orbiting dots. Great for transformations, metaphors and match-cuts between ideas.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "steps": {
+          "type": "array",
+          "description": "2–6 steps; each label is spoken in order",
+          "items": {
+            "type": "object",
+            "properties": {
+              "shape": {
+                "type": "string",
+                "description": "Silhouette",
+                "enum": [
+                  "circle",
+                  "blob",
+                  "star",
+                  "sparkle",
+                  "heart",
+                  "drop",
+                  "leaf",
+                  "cloud",
+                  "hexagon",
+                  "triangle",
+                  "square",
+                  "bolt",
+                  "moon",
+                  "flower",
+                  "gear",
+                  "house",
+                  "arrow",
+                  "person",
+                  "tree",
+                  "bulb",
+                  "planet",
+                  "rocket",
+                  "brain",
+                  "virus",
+                  "cell",
+                  "shield",
+                  "crown",
+                  "fish"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "1–3 words, spoken in the narration"
+              },
+              "color": {
+                "type": "string",
+                "description": "Optional colour (hex or palette name: coral, sky, mint, sun, violet, pink, orange, teal, green)"
+              }
+            },
+            "required": [
+              "shape",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "face": {
+          "type": "boolean",
+          "description": "Put a cute face on the morphing shape"
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "steps": [
+        {
+          "shape": "drop",
+          "label": "Water",
+          "color": "sky"
+        },
+        {
+          "shape": "leaf",
+          "label": "Leaf",
+          "color": "mint"
+        },
+        {
+          "shape": "tree",
+          "label": "Tree",
+          "color": "green"
+        },
+        {
+          "shape": "cloud",
+          "label": "Cloud",
+          "color": "#BFE6FF"
+        }
+      ],
+      "face": true,
+      "world": "studio"
+    },
+    "exampleNarration": "Water feeds a leaf. The leaf becomes a tree, and the tree breathes water back into a cloud."
+  },
+  {
+    "id": "scale-compare",
+    "name": "Scale Compare",
+    "description": "Size comparison: 2–5 illustrated objects at true relative size (ratios up to 20,000×); the camera zooms out smoothly to fit each bigger one as its name is spoken. Use for planets vs stars, cells vs viruses, buildings…",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "items": {
+          "type": "array",
+          "description": "2–5 items (any order; sorted by value)",
+          "items": {
+            "type": "object",
+            "properties": {
+              "illus": {
+                "type": "string",
+                "description": "Illustration from the flat-vector kit",
+                "enum": [
+                  "planet",
+                  "saturn",
+                  "gasgiant",
+                  "mars",
+                  "earth",
+                  "moon",
+                  "sun",
+                  "star",
+                  "galaxy",
+                  "blackhole",
+                  "rocket",
+                  "satellite",
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "body",
+                  "brain",
+                  "heart",
+                  "pill",
+                  "tree",
+                  "sprout",
+                  "flower",
+                  "fish",
+                  "wave",
+                  "drop",
+                  "cloud",
+                  "mountain",
+                  "city",
+                  "house",
+                  "people",
+                  "factory",
+                  "coin",
+                  "cash",
+                  "gear",
+                  "clock",
+                  "blast",
+                  "bolt",
+                  "flame",
+                  "bulb",
+                  "book",
+                  "laptop",
+                  "chip",
+                  "magnet",
+                  "trophy"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "Name, spoken in narration"
+              },
+              "value": {
+                "type": "number",
+                "description": "Relative size (diameter/height) in any consistent unit"
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional note, e.g. '12,742 km'"
+              }
+            },
+            "required": [
+              "illus",
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "items": [
+        {
+          "illus": "moon",
+          "label": "Moon",
+          "value": 3474,
+          "note": "3,474 km"
+        },
+        {
+          "illus": "earth",
+          "label": "Earth",
+          "value": 12742,
+          "note": "12,742 km"
+        },
+        {
+          "illus": "gasgiant",
+          "label": "Jupiter",
+          "value": 139820,
+          "note": "139,820 km"
+        },
+        {
+          "illus": "sun",
+          "label": "Sun",
+          "value": 1392700,
+          "note": "1.39 million km"
+        }
+      ],
+      "world": "space"
+    },
+    "exampleNarration": "Here is the Moon. Earth is almost four times wider. Jupiter dwarfs them both, and the Sun swallows everything."
+  },
+  {
+    "id": "population-grid",
+    "name": "Population Grid",
+    "description": "A crowd of up to 100 mini bird creatures pops in as a wave; on the key word a fraction of them lights up and hops while a big percentage counts up. Use for 'X in Y people', shares and probabilities.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional short title"
+        },
+        "total": {
+          "type": "number",
+          "description": "Total (e.g. 100, or 8000000000 — shown as up to 100 creatures)"
+        },
+        "highlight": {
+          "type": "number",
+          "description": "How many of the total are highlighted"
+        },
+        "label": {
+          "type": "string",
+          "description": "What the highlighted share means (≤ 10 words), spoken in narration"
+        },
+        "display": {
+          "type": "string",
+          "description": "Optional text instead of the computed percentage, e.g. '1 in 4'"
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional crowd colour"
+        },
+        "highlightColor": {
+          "type": "string",
+          "description": "Optional highlight colour"
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "total",
+        "highlight",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Who needs glasses?",
+      "total": 100,
+      "highlight": 64,
+      "label": "of adults need help to see clearly",
+      "world": "studio"
+    },
+    "exampleNarration": "Who needs glasses? About sixty four percent of adults need some help to see clearly."
+  },
+  {
+    "id": "timeline-orbit",
+    "name": "Timeline Orbit",
+    "description": "History as an orbit: 2–6 events sit like planets around a central body; a comet travels the orbit and reaches each event as it is spoken, lighting the path behind it. Use for chronologies and milestones.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "center": {
+          "type": "string",
+          "description": "Central illustration (default sun)",
+          "enum": [
+            "planet",
+            "saturn",
+            "gasgiant",
+            "mars",
+            "earth",
+            "moon",
+            "sun",
+            "star",
+            "galaxy",
+            "blackhole",
+            "rocket",
+            "satellite",
+            "cell",
+            "bacteria",
+            "virus",
+            "dna",
+            "molecule",
+            "atom",
+            "neuron",
+            "body",
+            "brain",
+            "heart",
+            "pill",
+            "tree",
+            "sprout",
+            "flower",
+            "fish",
+            "wave",
+            "drop",
+            "cloud",
+            "mountain",
+            "city",
+            "house",
+            "people",
+            "factory",
+            "coin",
+            "cash",
+            "gear",
+            "clock",
+            "blast",
+            "bolt",
+            "flame",
+            "bulb",
+            "book",
+            "laptop",
+            "chip",
+            "magnet",
+            "trophy"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "description": "2–6 events in order",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "string",
+                "description": "Year or date label"
+              },
+              "label": {
+                "type": "string",
+                "description": "Event (≤ 5 words), spoken in narration"
+              },
+              "illus": {
+                "type": "string",
+                "description": "Optional illustration (default a coloured planet)",
+                "enum": [
+                  "planet",
+                  "saturn",
+                  "gasgiant",
+                  "mars",
+                  "earth",
+                  "moon",
+                  "sun",
+                  "star",
+                  "galaxy",
+                  "blackhole",
+                  "rocket",
+                  "satellite",
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "body",
+                  "brain",
+                  "heart",
+                  "pill",
+                  "tree",
+                  "sprout",
+                  "flower",
+                  "fish",
+                  "wave",
+                  "drop",
+                  "cloud",
+                  "mountain",
+                  "city",
+                  "house",
+                  "people",
+                  "factory",
+                  "coin",
+                  "cash",
+                  "gear",
+                  "clock",
+                  "blast",
+                  "bolt",
+                  "flame",
+                  "bulb",
+                  "book",
+                  "laptop",
+                  "chip",
+                  "magnet",
+                  "trophy"
+                ]
+              }
+            },
+            "required": [
+              "year",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "events"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Race to *space*",
+      "center": "earth",
+      "events": [
+        {
+          "year": "1957",
+          "label": "Sputnik",
+          "illus": "satellite"
+        },
+        {
+          "year": "1961",
+          "label": "First human",
+          "illus": "rocket"
+        },
+        {
+          "year": "1969",
+          "label": "Moon landing",
+          "illus": "moon"
+        },
+        {
+          "year": "1998",
+          "label": "Space station",
+          "illus": "satellite"
+        }
+      ]
+    },
+    "exampleNarration": "The race to space began with Sputnik in 1957, the first human in orbit in 1961, the Moon landing in 1969, and the Space station in 1998."
+  },
+  {
+    "id": "cause-effect",
+    "name": "Cause & Effect",
+    "description": "Illustrated chain reaction: 2–5 illustrations linked by self-drawing dotted arrows; an energy ball travels each link and the next item spins in with a burst on its key word. Use for processes, consequences and how-it-works chains.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "steps": {
+          "type": "array",
+          "description": "2–5 steps in order; labels are spoken",
+          "items": {
+            "type": "object",
+            "properties": {
+              "illus": {
+                "type": "string",
+                "description": "Illustration from the flat-vector kit",
+                "enum": [
+                  "planet",
+                  "saturn",
+                  "gasgiant",
+                  "mars",
+                  "earth",
+                  "moon",
+                  "sun",
+                  "star",
+                  "galaxy",
+                  "blackhole",
+                  "rocket",
+                  "satellite",
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "body",
+                  "brain",
+                  "heart",
+                  "pill",
+                  "tree",
+                  "sprout",
+                  "flower",
+                  "fish",
+                  "wave",
+                  "drop",
+                  "cloud",
+                  "mountain",
+                  "city",
+                  "house",
+                  "people",
+                  "factory",
+                  "coin",
+                  "cash",
+                  "gear",
+                  "clock",
+                  "blast",
+                  "bolt",
+                  "flame",
+                  "bulb",
+                  "book",
+                  "laptop",
+                  "chip",
+                  "magnet",
+                  "trophy"
+                ]
+              },
+              "label": {
+                "type": "string",
+                "description": "1–4 words"
+              }
+            },
+            "required": [
+              "illus",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "How rain is made",
+      "steps": [
+        {
+          "illus": "sun",
+          "label": "Sun heats"
+        },
+        {
+          "illus": "wave",
+          "label": "Ocean evaporates"
+        },
+        {
+          "illus": "cloud",
+          "label": "Clouds form"
+        },
+        {
+          "illus": "drop",
+          "label": "Rain falls"
+        }
+      ],
+      "world": "dusk"
+    },
+    "exampleNarration": "The sun heats the ocean, water evaporates, clouds form, and finally rain falls back down."
+  },
+  {
+    "id": "big-number-world",
+    "name": "Big Number World",
+    "description": "A giant friendly number counts up in front of a big illustrated hero (earth, coin, heart, cell…) with orbiting objects and sparks; the label lands on its key word. Use for headline statistics.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "The number"
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Optional prefix, e.g. '$'"
+        },
+        "suffix": {
+          "type": "string",
+          "description": "Optional suffix, e.g. '%', ' km', ' billion'"
+        },
+        "decimals": {
+          "type": "number",
+          "description": "Decimal places (0–3)"
+        },
+        "label": {
+          "type": "string",
+          "description": "What it means (≤ 10 words), spoken"
+        },
+        "illus": {
+          "type": "string",
+          "description": "Hero illustration behind the number",
+          "enum": [
+            "planet",
+            "saturn",
+            "gasgiant",
+            "mars",
+            "earth",
+            "moon",
+            "sun",
+            "star",
+            "galaxy",
+            "blackhole",
+            "rocket",
+            "satellite",
+            "cell",
+            "bacteria",
+            "virus",
+            "dna",
+            "molecule",
+            "atom",
+            "neuron",
+            "body",
+            "brain",
+            "heart",
+            "pill",
+            "tree",
+            "sprout",
+            "flower",
+            "fish",
+            "wave",
+            "drop",
+            "cloud",
+            "mountain",
+            "city",
+            "house",
+            "people",
+            "factory",
+            "coin",
+            "cash",
+            "gear",
+            "clock",
+            "blast",
+            "bolt",
+            "flame",
+            "bulb",
+            "book",
+            "laptop",
+            "chip",
+            "magnet",
+            "trophy"
+          ]
+        },
+        "orbiters": {
+          "type": "array",
+          "description": "Optional 1–3 small illustrations orbiting the hero",
+          "items": {
+            "type": "string",
+            "description": "Illustration from the flat-vector kit",
+            "enum": [
+              "planet",
+              "saturn",
+              "gasgiant",
+              "mars",
+              "earth",
+              "moon",
+              "sun",
+              "star",
+              "galaxy",
+              "blackhole",
+              "rocket",
+              "satellite",
+              "cell",
+              "bacteria",
+              "virus",
+              "dna",
+              "molecule",
+              "atom",
+              "neuron",
+              "body",
+              "brain",
+              "heart",
+              "pill",
+              "tree",
+              "sprout",
+              "flower",
+              "fish",
+              "wave",
+              "drop",
+              "cloud",
+              "mountain",
+              "city",
+              "house",
+              "people",
+              "factory",
+              "coin",
+              "cash",
+              "gear",
+              "clock",
+              "blast",
+              "bolt",
+              "flame",
+              "bulb",
+              "book",
+              "laptop",
+              "chip",
+              "magnet",
+              "trophy"
+            ]
+          }
+        },
+        "color": {
+          "type": "string",
+          "description": "Optional number colour"
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "value": 8.1,
+      "suffix": " billion",
+      "decimals": 1,
+      "label": "people share this *one* planet",
+      "illus": "earth",
+      "orbiters": [
+        "moon",
+        "satellite"
+      ],
+      "world": "space"
+    },
+    "exampleNarration": "Eight point one billion people share this one small planet."
+  },
+  {
+    "id": "split-worlds",
+    "name": "Split Worlds",
+    "description": "Two contrasting illustrated worlds side by side (stacked in portrait) divided by a living wavy line with a VS badge — e.g. forest vs factory, day vs night, healthy vs infected. Each side gets a title, hero and up to 2 points.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "left": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Side title, spoken"
+            },
+            "illus": {
+              "type": "string",
+              "description": "Illustration from the flat-vector kit",
+              "enum": [
+                "planet",
+                "saturn",
+                "gasgiant",
+                "mars",
+                "earth",
+                "moon",
+                "sun",
+                "star",
+                "galaxy",
+                "blackhole",
+                "rocket",
+                "satellite",
+                "cell",
+                "bacteria",
+                "virus",
+                "dna",
+                "molecule",
+                "atom",
+                "neuron",
+                "body",
+                "brain",
+                "heart",
+                "pill",
+                "tree",
+                "sprout",
+                "flower",
+                "fish",
+                "wave",
+                "drop",
+                "cloud",
+                "mountain",
+                "city",
+                "house",
+                "people",
+                "factory",
+                "coin",
+                "cash",
+                "gear",
+                "clock",
+                "blast",
+                "bolt",
+                "flame",
+                "bulb",
+                "book",
+                "laptop",
+                "chip",
+                "magnet",
+                "trophy"
+              ]
+            },
+            "world": {
+              "type": "string",
+              "description": "Illustrated world / backdrop",
+              "enum": [
+                "space",
+                "sky",
+                "dusk",
+                "night",
+                "micro",
+                "body",
+                "ocean",
+                "studio"
+              ]
+            },
+            "points": {
+              "type": "array",
+              "description": "0–2 short points",
+              "items": {
+                "type": "string",
+                "description": "Point"
+              }
+            }
+          },
+          "required": [
+            "title",
+            "illus"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "Side title, spoken"
+            },
+            "illus": {
+              "type": "string",
+              "description": "Illustration from the flat-vector kit",
+              "enum": [
+                "planet",
+                "saturn",
+                "gasgiant",
+                "mars",
+                "earth",
+                "moon",
+                "sun",
+                "star",
+                "galaxy",
+                "blackhole",
+                "rocket",
+                "satellite",
+                "cell",
+                "bacteria",
+                "virus",
+                "dna",
+                "molecule",
+                "atom",
+                "neuron",
+                "body",
+                "brain",
+                "heart",
+                "pill",
+                "tree",
+                "sprout",
+                "flower",
+                "fish",
+                "wave",
+                "drop",
+                "cloud",
+                "mountain",
+                "city",
+                "house",
+                "people",
+                "factory",
+                "coin",
+                "cash",
+                "gear",
+                "clock",
+                "blast",
+                "bolt",
+                "flame",
+                "bulb",
+                "book",
+                "laptop",
+                "chip",
+                "magnet",
+                "trophy"
+              ]
+            },
+            "world": {
+              "type": "string",
+              "description": "Illustrated world / backdrop",
+              "enum": [
+                "space",
+                "sky",
+                "dusk",
+                "night",
+                "micro",
+                "body",
+                "ocean",
+                "studio"
+              ]
+            },
+            "points": {
+              "type": "array",
+              "description": "0–2 short points",
+              "items": {
+                "type": "string",
+                "description": "Point"
+              }
+            }
+          },
+          "required": [
+            "title",
+            "illus"
+          ],
+          "additionalProperties": false
+        },
+        "vs": {
+          "type": "string",
+          "description": "Badge text (default VS, ≤ 4 chars)"
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "left": {
+        "title": "Forest",
+        "illus": "tree",
+        "world": "sky",
+        "points": [
+          "Stores carbon"
+        ]
+      },
+      "right": {
+        "title": "Factory",
+        "illus": "factory",
+        "world": "dusk",
+        "points": [
+          "Releases carbon"
+        ]
+      },
+      "vs": "VS"
+    },
+    "exampleNarration": "A forest stores carbon for centuries, while a factory releases it in seconds."
+  },
+  {
+    "id": "pillar-chart",
+    "name": "Pillar Chart",
+    "description": "Illustrated bar chart: 2–6 glowing pillars rise elastically from a stage with a mini creature or small illustration riding on top and values counting up. Use for comparisons of amounts.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional title"
+        },
+        "bars": {
+          "type": "array",
+          "description": "2–6 bars; labels spoken in order",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "Short label"
+              },
+              "value": {
+                "type": "number",
+                "description": "Value"
+              },
+              "illus": {
+                "type": "string",
+                "description": "Optional rider illustration (default mini creature)",
+                "enum": [
+                  "planet",
+                  "saturn",
+                  "gasgiant",
+                  "mars",
+                  "earth",
+                  "moon",
+                  "sun",
+                  "star",
+                  "galaxy",
+                  "blackhole",
+                  "rocket",
+                  "satellite",
+                  "cell",
+                  "bacteria",
+                  "virus",
+                  "dna",
+                  "molecule",
+                  "atom",
+                  "neuron",
+                  "body",
+                  "brain",
+                  "heart",
+                  "pill",
+                  "tree",
+                  "sprout",
+                  "flower",
+                  "fish",
+                  "wave",
+                  "drop",
+                  "cloud",
+                  "mountain",
+                  "city",
+                  "house",
+                  "people",
+                  "factory",
+                  "coin",
+                  "cash",
+                  "gear",
+                  "clock",
+                  "blast",
+                  "bolt",
+                  "flame",
+                  "bulb",
+                  "book",
+                  "laptop",
+                  "chip",
+                  "magnet",
+                  "trophy"
+                ]
+              },
+              "color": {
+                "type": "string",
+                "description": "Optional colour"
+              }
+            },
+            "required": [
+              "label",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "prefix": {
+          "type": "string",
+          "description": "Value prefix, e.g. '$'"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Value suffix, e.g. '%', ' h'"
+        },
+        "decimals": {
+          "type": "number",
+          "description": "Decimal places"
+        },
+        "world": {
+          "type": "string",
+          "description": "Illustrated world / backdrop",
+          "enum": [
+            "space",
+            "sky",
+            "dusk",
+            "night",
+            "micro",
+            "body",
+            "ocean",
+            "studio"
+          ]
+        }
+      },
+      "required": [
+        "bars"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Hours of *sleep* we need",
+      "bars": [
+        {
+          "label": "Baby",
+          "value": 15
+        },
+        {
+          "label": "Child",
+          "value": 11
+        },
+        {
+          "label": "Teen",
+          "value": 9
+        },
+        {
+          "label": "Adult",
+          "value": 8
+        }
+      ],
+      "unit": " h",
+      "world": "studio"
+    },
+    "exampleNarration": "How much sleep do we need? A baby needs fifteen hours, a child eleven, a teen nine, and an adult about eight."
+  }
+]

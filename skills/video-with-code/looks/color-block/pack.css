@@ -1,0 +1,45 @@
+/* color-block — full-bleed flat colour per scene, giant type, hard cuts. --bg/--fg/--accent are set per scene by pack.js
+   on #scene-root, so derived tokens are declared there too (custom properties resolve where they are declared). */
+:root,
+#scene-root {
+  --bg: #FF5A1F;
+  --fg: #111111;
+  --accent: #FFFFFF;
+  --accent-2: #111111;
+  --accent-3: #FFFFFF;
+  --shape: #FFB199;
+  --muted: color-mix(in srgb, var(--fg) 70%, transparent);
+  --surface: color-mix(in srgb, var(--fg) 8%, transparent);
+  --line: color-mix(in srgb, var(--fg) 30%, transparent);
+  --on-accent: #111111;
+  --bar-muted: color-mix(in srgb, var(--fg) 22%, transparent);
+  --hl: color-mix(in srgb, var(--accent) 45%, transparent);
+  --halo: transparent;
+  --dot: transparent;
+  --shadow: none;
+  --card-border: calc(var(--u) * 3) solid var(--fg);
+  --radius: 0px;
+  --fs-hero: calc(var(--u) * 160);
+  --title-weight: 900;
+  --title-tracking: -0.05em;
+  --title-leading: 0.9;
+  --code-bg: #111111;
+  --neg: #111111;
+  --pos: #111111;
+  --edge: var(--fg);
+  --badge-bg: transparent;
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--fg); letter-spacing: 0.2em; font-weight: 800; }
+.kind-minimal .v-text { color: var(--fg); }
+.kind-minimal .v-line { background: var(--fg); height: calc(var(--u) * 8); border-radius: 0; }
+.kind-minimal .v-num { background: var(--fg); color: var(--bg); border-radius: 0; }
+.kind-minimal .v-icon-badge { border: calc(var(--u) * 3) solid var(--fg); color: var(--fg); border-radius: 0; }
+.kind-minimal .v-statnum { color: var(--fg); letter-spacing: -0.07em; font-weight: 900; }
+.kind-minimal .v-vs { background: var(--fg); color: var(--bg); border-radius: 0; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: var(--fg); -webkit-text-stroke: 0; }
+.kind-minimal .t-section .v-wipe { background: var(--fg); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: var(--bg); border-radius: 0; }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--fg); }

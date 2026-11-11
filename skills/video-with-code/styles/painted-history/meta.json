@@ -1,0 +1,8 @@
+{
+  "id": "painted-history",
+  "name": "Painted History",
+  "description": "Military-history storytelling in painterly digital oils: wide history-book battle paintings in warm parchment and golden light, with atmospheric smoke, canvas grain and brushy textures. Armies of many small soldiers in era presets (redcoats, bluecoats, legionaries, knights, samurai, musketeers and more) march, volley and charge; cannons fire, flags wave, cavalry gallops; generals argue over a candle-lit map table; tactical battle maps sweep manoeuvre arrows across parchment. Signature cream title banners in big dark serif caps, troop-count versus banners and place/date lower-thirds.",
+  "premium": true,
+  "palette": { "background": "#1E150D", "foreground": "#F3E6C8", "accent": "#C8963E", "muted": "#9A845F" },
+  "fonts": ["\"Times New Roman\", Times, Georgia, serif", "Georgia, \"Times New Roman\", Times, serif"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "cartoon",
+  "name": "Cartoon Characters",
+  "description": "A recurring cast of rigged 2D cartoon characters who act out your story — talking with lip-sync, waving, pointing, reacting and celebrating in illustrated parallax worlds, with speech bubbles, emotion marks, props and a moving camera. Like a modern animated explainer channel.",
+  "premium": true,
+  "palette": { "background": "#FFE3C2", "foreground": "#2A2140", "accent": "#FF7A59", "muted": "#6E6482" },
+  "fonts": ["\"Baloo 2\", \"Fredoka\", \"Nunito\", \"Trebuchet MS\", \"Segoe UI\", Inter, \"Noto Sans\", system-ui, sans-serif"]
+}

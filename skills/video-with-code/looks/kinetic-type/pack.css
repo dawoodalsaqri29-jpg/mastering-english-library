@@ -1,0 +1,50 @@
+/* kinetic-type — oversized type on near-black, one acid accent, hard cuts */
+:root {
+  --bg: #0A0A0A;
+  --fg: #F5F5F0;
+  --muted: #8A8A84;
+  --accent: #D7FF3A;
+  --accent-2: #FF4D2E;
+  --accent-3: #7DF9FF;
+  --surface: #151515;
+  --line: rgba(245, 245, 240, 0.14);
+  --on-accent: #0A0A0A;
+  --bar-muted: #3A3A36;
+  --hl: rgba(215, 255, 58, 0.32);
+  --halo: rgba(215, 255, 58, 0.08);
+  --dot: transparent;
+  --shadow: none;
+  --card-border: 1px solid #2A2A28;
+  --radius: 0px;
+  --fs-hero: calc(var(--u) * 172);
+  --fs-xl: calc(var(--u) * 124);
+  --title-weight: 900;
+  --title-tracking: -0.055em;
+  --title-leading: 0.88;
+  --code-bg: #111111;
+  --code-border: 1px solid #2A2A28;
+  --tk-k: #D7FF3A;
+  --tk-s: #7DF9FF;
+  --tk-f: #FF4D2E;
+  --tk-n: #FFB238;
+  --neg: #FF4D2E;
+  --pos: #D7FF3A;
+  --edge: rgba(245, 245, 240, 0.6);
+  --badge-bg: #1E1E1C;
+}
+html.is-portrait { --fs-hero: calc(var(--u) * 140); --fs-xl: calc(var(--u) * 108); }
+.kind-minimal .v-title { text-transform: uppercase; }
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--accent); letter-spacing: 0.3em; font-weight: 700; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 8); width: calc(var(--u) * 120); border-radius: 0; }
+.kind-minimal .v-num { background: var(--accent); color: var(--bg); border-radius: 0; font-weight: 900; }
+.kind-minimal .v-icon-badge { color: var(--accent); border-radius: 0; }
+.kind-minimal .v-statnum { color: var(--accent); letter-spacing: -0.07em; font-weight: 900; }
+.kind-minimal .v-vs { background: var(--accent-2); color: var(--fg); border-radius: 0; font-weight: 900; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--accent); }
+.kind-minimal .t-section .v-wipe { background: var(--accent); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: var(--bg); border-radius: 0; }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-kinetic .v-kw.is-em { color: var(--accent); }

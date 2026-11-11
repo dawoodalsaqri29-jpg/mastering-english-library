@@ -1,0 +1,52 @@
+/* whiteboard — hand-drawn marker on paper: sketchy strokes, write-on text */
+:root {
+  --bg: #FBFAF6;
+  --fg: #1F2430;
+  --ink: #1F2430;
+  --muted: #5B6170;
+  --accent: #2563EB;
+  --accent-2: #E5484D;
+  --accent-3: #16A34A;
+  --surface: transparent;
+  --line: #1F2430;
+  --on-accent: #FFFFFF;
+  --bar-muted: #CBD5E1;
+  --halo: rgba(37, 99, 235, 0);
+  --grid: rgba(37, 99, 235, 0.075);
+  --radius: 0px;
+  --shadow: none;
+  --title-weight: 800;
+  --title-tracking: -0.02em;
+  --code-bg: #FFFFFF;
+  --code-fg: #1F2430;
+  --code-chrome: #F1EFE8;
+  --code-border: calc(var(--u) * 4) solid #1F2430;
+  --shadow-lg: calc(var(--u) * 10) calc(var(--u) * 10) 0 rgba(31, 36, 48, 0.9);
+  --code-hi: rgba(250, 204, 21, 0.35);
+  --tk-k: #2563EB;
+  --tk-s: #16A34A;
+  --tk-f: #9333EA;
+  --tk-n: #E5484D;
+  --tk-c: #8A8F9C;
+  --neg: #E5484D;
+  --pos: #16A34A;
+  --edge: #1F2430;
+}
+.kind-whiteboard .v-em { color: var(--accent-2); }
+.kind-whiteboard .v-card { background: transparent; box-shadow: none; }
+.kind-whiteboard .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 4) solid var(--accent); border-radius: 50% 46% 52% 48%; }
+.kind-whiteboard .v-icon-badge { background: transparent; border: calc(var(--u) * 3.5) solid currentColor; border-radius: 48% 52% 50% 46%; }
+.kind-whiteboard .v-vs { background: var(--accent-2); color: #fff; border-radius: 47% 53% 50% 48%; }
+.kind-whiteboard .t-timeline .v-dot { border-color: var(--ink); }
+.kind-whiteboard .t-timeline .v-tl-line { background: rgba(31, 36, 48, 0.25); }
+.kind-whiteboard .t-bars .v-bar { border-radius: calc(var(--u) * 6) calc(var(--u) * 6) 0 0; }
+.kind-whiteboard .t-bars .v-bar.is-hi { background: repeating-linear-gradient(-45deg, var(--accent) 0 calc(var(--u) * 10), #4F86F7 calc(var(--u) * 10) calc(var(--u) * 20)); }
+.kind-whiteboard .t-bars.is-h .v-track { background: transparent; border: calc(var(--u) * 3) solid var(--ink); }
+.kind-whiteboard .t-section .v-secnum { -webkit-text-stroke: calc(var(--u) * 4) var(--accent-2); }
+.kind-whiteboard .t-section .v-wipe { background: var(--ink); }
+.kind-whiteboard .t-code .v-chrome { border-bottom: calc(var(--u) * 3) solid var(--ink); }
+.kind-whiteboard .t-code .v-chrome span { opacity: 0.7; }
+.kind-whiteboard .t-diagram .v-node.is-hub { background: transparent !important; color: var(--accent) !important; }
+.kind-whiteboard .t-line .v-lc-call { background: var(--accent-2); color: #fff; }
+.kind-whiteboard .t-line .v-lc-grid { stroke: rgba(31, 36, 48, 0.12); }
+.kind-whiteboard .t-stat .v-statnum { color: var(--accent); }

@@ -1,0 +1,1987 @@
+[
+  {
+    "id": "timelapse",
+    "name": "City timelapse",
+    "description": "THE workhorse: the city grows from yearFrom to yearTo on its terrain — huts, village, stone town, grid, factories and rail, skyscrapers, glass skyline — with a huge ticking year counter, era lower-thirds synced to narration beats, district labels, population counter and a slow orbiting camera. Use for most scenes of a history-of-a-city video.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "camera": {
+          "type": "string",
+          "enum": [
+            "orbit",
+            "dolly",
+            "flyover",
+            "reverse",
+            "static"
+          ],
+          "description": "orbit (default, slow 14° turn + push-in), dolly (push-in only), flyover (wider turn, tilts down), reverse (pull-out), static."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "population": {
+          "type": "number",
+          "description": "Population today (used to scale the counter). Default 8,000,000."
+        },
+        "showPopulation": {
+          "type": "boolean",
+          "description": "Show the small population counter under the year (default true)."
+        },
+        "yearFrom": {
+          "type": "integer",
+          "description": "Year the scene starts (e.g. 1609)."
+        },
+        "yearTo": {
+          "type": "integer",
+          "description": "Year the scene ends (e.g. 2024). For a 10-minute video, each scene covers a slice: 1609→1700, 1700→1800 …"
+        },
+        "endsNow": {
+          "type": "boolean",
+          "description": "Show 'NOW' instead of yearTo when the counter reaches it."
+        },
+        "beats": {
+          "type": "array",
+          "description": "1–8 narration beats in order. The year ticks to each beat's year exactly when its keyword is spoken; the lower-third shows its label.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer",
+                "description": "Year reached at this beat."
+              },
+              "label": {
+                "type": "string",
+                "description": "Lower-third title (≤ 32 chars), e.g. 'The grid is laid out'."
+              },
+              "caption": {
+                "type": "string",
+                "description": "Lower-third second line (≤ 70 chars)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Word spoken in the narration when this beat lands."
+              }
+            },
+            "required": [
+              "year",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "titleUntil": {
+          "type": "number",
+          "description": "Seconds after which the title fades (default 4.5)."
+        }
+      },
+      "required": [
+        "yearFrom",
+        "yearTo"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "yearFrom": 1609,
+      "yearTo": 2024,
+      "endsNow": true,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "population": 8800000,
+      "beats": [
+        {
+          "year": 1626,
+          "label": "A trading post",
+          "caption": "A fort and thirty houses at the tip of the island",
+          "keyword": "fort"
+        },
+        {
+          "year": 1811,
+          "label": "The grid",
+          "caption": "A plan of straight avenues and numbered streets",
+          "keyword": "grid"
+        },
+        {
+          "year": 1883,
+          "label": "Bridges and steam",
+          "caption": "Factories, railways and the first great bridge",
+          "keyword": "bridge"
+        },
+        {
+          "year": 1931,
+          "label": "Race to the sky",
+          "caption": "Steel frames push past 300 metres",
+          "keyword": "sky"
+        }
+      ]
+    },
+    "exampleNarration": "It began as a fort at the tip of an island. Two centuries later the city drew a grid of straight streets across the land. Then came steam, factories and the first great bridge, and by the nineteen-thirties the race to the sky had begun."
+  },
+  {
+    "id": "era-snapshot",
+    "name": "Era snapshot",
+    "description": "The city frozen in one year while the camera slowly orbits; callouts pop on district or landmark anchors as their keywords are spoken. Use to dwell on one moment: 'this is what the town looked like in 1750'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "camera": {
+          "type": "string",
+          "enum": [
+            "orbit",
+            "dolly",
+            "flyover",
+            "reverse",
+            "static"
+          ],
+          "description": "orbit (default, slow 14° turn + push-in), dolly (push-in only), flyover (wider turn, tilts down), reverse (pull-out), static."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "population": {
+          "type": "number",
+          "description": "Population today (used to scale the counter). Default 8,000,000."
+        },
+        "showPopulation": {
+          "type": "boolean",
+          "description": "Show the small population counter under the year (default true)."
+        },
+        "year": {
+          "type": "integer",
+          "description": "Year shown."
+        },
+        "label": {
+          "type": "string",
+          "description": "Lower-third title (≤ 32 chars). Default: the era name."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Lower-third second line (≤ 70 chars)."
+        },
+        "callouts": {
+          "type": "array",
+          "description": "0–5 callouts; each lands on its keyword.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "Callout text (≤ 24 chars)."
+              },
+              "keyword": {
+                "type": "string",
+                "description": "Spoken word that triggers it."
+              },
+              "district": {
+                "type": "string",
+                "description": "District name to anchor to (fuzzy match; default: next district)."
+              },
+              "landmark": {
+                "type": "string",
+                "description": "Landmark name/kind to anchor to instead (fort, cathedral, church, station, bridge…)."
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "year"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "year": 1760,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "label": "A colonial port",
+      "caption": "Twenty thousand people, one church, a busy harbour",
+      "callouts": [
+        {
+          "text": "The old fort",
+          "keyword": "fort",
+          "landmark": "fort"
+        },
+        {
+          "text": "Harbour",
+          "keyword": "harbour",
+          "district": "Harbor"
+        },
+        {
+          "text": "Farmland",
+          "keyword": "farms"
+        }
+      ]
+    },
+    "exampleNarration": "By seventeen sixty the fort still guarded the tip of the island, the harbour was crowded with ships, and beyond the town lay farms."
+  },
+  {
+    "id": "landmark-rise",
+    "name": "Landmark rises",
+    "description": "One major landmark (tower, spire, bridge-style arch, dome, obelisk, stadium, pagoda, ferris wheel, TV tower) is built up on its keyword while the camera pushes in; a big label and an optional height counter. Use for 'and then they built…' moments.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "year": {
+          "type": "integer",
+          "description": "Year of construction (city state)."
+        },
+        "landmark": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Landmark name (≤ 26 chars). Fictional or generic — not a trademark."
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "tower",
+                "supertall",
+                "earlytower",
+                "spire",
+                "tvtower",
+                "dome",
+                "arch",
+                "obelisk",
+                "stadium",
+                "ferris",
+                "pagoda",
+                "cathedral",
+                "church",
+                "cityhall",
+                "station"
+              ],
+              "description": "What it looks like."
+            },
+            "keyword": {
+              "type": "string",
+              "description": "Spoken word when construction starts."
+            },
+            "heightMetres": {
+              "type": "number",
+              "description": "Optional height; shows a counting 'm' stat."
+            },
+            "riseSeconds": {
+              "type": "number",
+              "description": "Build duration 0.8–8 s (default 2.6)."
+            },
+            "color": {
+              "type": "string",
+              "description": "Optional hex colour for the walls."
+            },
+            "year": {
+              "type": "integer",
+              "description": "Completion year for the lower-third."
+            }
+          },
+          "required": [
+            "name",
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        "statLabel": {
+          "type": "string",
+          "description": "Label under the height stat (default 'height')."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Lower-third second line (≤ 70 chars)."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Small line under the floating label (≤ 30 chars)."
+        }
+      },
+      "required": [
+        "year",
+        "landmark"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "year": 1931,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "landmark": {
+        "name": "Meridian Tower",
+        "kind": "spire",
+        "keyword": "tower",
+        "heightMetres": 381,
+        "year": 1931
+      },
+      "caption": "Finished in 410 days — the tallest building on Earth"
+    },
+    "exampleNarration": "And then, in just four hundred and ten days, they raised a tower taller than anything ever built, three hundred and eighty one metres of steel and stone."
+  },
+  {
+    "id": "before-after",
+    "name": "Before / after wipe",
+    "description": "The same view in two years; a bright wipe line sweeps across on the keyword to reveal the later city. Year chips on each side. Use for 'then vs now'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "yearA": {
+          "type": "integer",
+          "description": "Earlier year (left)."
+        },
+        "yearB": {
+          "type": "integer",
+          "description": "Later year (revealed)."
+        },
+        "labelA": {
+          "type": "string",
+          "description": "Small label under year A (≤ 24 chars)."
+        },
+        "labelB": {
+          "type": "string",
+          "description": "Small label under year B (≤ 24 chars)."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word when the wipe starts."
+        },
+        "wipeSeconds": {
+          "type": "number",
+          "description": "Wipe duration 0.4–5 s (default 1.4)."
+        },
+        "endsNow": {
+          "type": "boolean",
+          "description": "Show 'NOW' for year B."
+        }
+      },
+      "required": [
+        "yearA",
+        "yearB"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "yearA": 1850,
+      "yearB": 2024,
+      "labelA": "Steam and brick",
+      "labelB": "Glass and steel",
+      "keyword": "today",
+      "endsNow": true
+    },
+    "exampleNarration": "In eighteen fifty this was a city of brick, smoke and sail. Today, the same island carries more than a million people to work every morning."
+  },
+  {
+    "id": "district-growth",
+    "name": "District growth",
+    "description": "One district is highlighted (the rest dims) while it fills in from yearFrom to yearTo; the camera pushes toward it and its name floats above. Use for 'the harbour quarter boomed', 'uptown was farmland until…'.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "population": {
+          "type": "number",
+          "description": "Population today (used to scale the counter). Default 8,000,000."
+        },
+        "showPopulation": {
+          "type": "boolean",
+          "description": "Show the small population counter under the year (default true)."
+        },
+        "district": {
+          "type": "string",
+          "description": "District name (fuzzy; from your districts list or the style defaults, e.g. 'Harbor', 'Midtown', 'Factory Row')."
+        },
+        "yearFrom": {
+          "type": "integer",
+          "description": "Growth starts."
+        },
+        "yearTo": {
+          "type": "integer",
+          "description": "Growth ends."
+        },
+        "keyword": {
+          "type": "string",
+          "description": "Spoken word when the highlight begins."
+        },
+        "label": {
+          "type": "string",
+          "description": "Lower-third title (default: district name)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Lower-third second line (≤ 70 chars)."
+        },
+        "color": {
+          "type": "string",
+          "description": "Highlight hex colour (default accent)."
+        }
+      },
+      "required": [
+        "district",
+        "yearFrom",
+        "yearTo"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "district": "Factory Row",
+      "yearFrom": 1850,
+      "yearTo": 1910,
+      "keyword": "factories",
+      "caption": "Mills, warehouses and tenements along the rail line"
+    },
+    "exampleNarration": "Along the railway the factories came first, and the tenements followed. In sixty years an empty shore became the engine of the city."
+  },
+  {
+    "id": "population-chart",
+    "name": "Population chart",
+    "description": "The city grows on one side while a line chart of population (or any series) draws in sync with the year on the other; a big live readout. Use for numbers over time.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Chart title (≤ 36 chars). *word* = accent."
+        },
+        "yearFrom": {
+          "type": "integer",
+          "description": "Chart start (default first point)."
+        },
+        "yearTo": {
+          "type": "integer",
+          "description": "Chart end (default last point)."
+        },
+        "points": {
+          "type": "array",
+          "description": "2–14 {year, value} points in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "year",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "unit": {
+          "type": "string",
+          "description": "Suffix for the readout, e.g. ' people' or '%'."
+        },
+        "format": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "raw"
+          ],
+          "description": "compact = 8.8M / 150k, raw = 8,800,000."
+        },
+        "logScale": {
+          "type": "boolean",
+          "description": "Log y-axis (good for population)."
+        },
+        "marks": {
+          "type": "array",
+          "description": "0–4 annotated years.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "label": {
+                "type": "string",
+                "description": "≤ 18 chars"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "year"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "points"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "title": "Population *explodes*",
+      "points": [
+        {
+          "year": 1700,
+          "value": 5000
+        },
+        {
+          "year": 1800,
+          "value": 60000
+        },
+        {
+          "year": 1850,
+          "value": 515000
+        },
+        {
+          "year": 1900,
+          "value": 3400000
+        },
+        {
+          "year": 1950,
+          "value": 7900000
+        },
+        {
+          "year": 2020,
+          "value": 8800000
+        }
+      ],
+      "marks": [
+        {
+          "year": 1850,
+          "label": "Famine ships",
+          "keyword": "ships"
+        },
+        {
+          "year": 1900,
+          "label": "3.4 million",
+          "keyword": "million"
+        }
+      ]
+    },
+    "exampleNarration": "Five thousand people in seventeen hundred. Then the ships came, and by nineteen hundred three point four million lived here, more than in any city on the continent."
+  },
+  {
+    "id": "disaster-rebuild",
+    "name": "Disaster and rebuild",
+    "description": "A fire, flood, earthquake or storm hits an area (it darkens, buildings sink or flood — never graphic), then on the rebuild keyword taller, newer buildings rise and the year ticks on. Use for 'the great fire of…' chapters.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "year": {
+          "type": "integer",
+          "description": "Year of the event."
+        },
+        "event": {
+          "type": "string",
+          "enum": [
+            "fire",
+            "flood",
+            "quake",
+            "storm"
+          ]
+        },
+        "area": {
+          "type": "string",
+          "enum": [
+            "core",
+            "waterfront",
+            "north",
+            "south",
+            "east",
+            "west"
+          ],
+          "description": "Where it strikes (default core)."
+        },
+        "radius": {
+          "type": "number",
+          "description": "Affected radius in blocks, 2–12 (default 4.5)."
+        },
+        "keywordHit": {
+          "type": "string",
+          "description": "Spoken word when the disaster strikes."
+        },
+        "keywordRebuild": {
+          "type": "string",
+          "description": "Spoken word when rebuilding starts."
+        },
+        "rebuildYear": {
+          "type": "integer",
+          "description": "Year the rebuild completes (default year + 20)."
+        },
+        "label": {
+          "type": "string",
+          "description": "Lower-third title at the hit (≤ 32 chars)."
+        },
+        "caption": {
+          "type": "string",
+          "description": "Second line at the hit."
+        },
+        "rebuildLabel": {
+          "type": "string",
+          "description": "Lower-third title for the rebuild."
+        },
+        "rebuildCaption": {
+          "type": "string",
+          "description": "Second line for the rebuild."
+        }
+      },
+      "required": [
+        "year",
+        "event"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "Lakeport",
+      "preset": "lake",
+      "style": "american",
+      "seed": 12,
+      "year": 1871,
+      "event": "fire",
+      "area": "core",
+      "radius": 5,
+      "keywordHit": "fire",
+      "keywordRebuild": "rebuilt",
+      "rebuildYear": 1893,
+      "label": "The Great Fire",
+      "caption": "Three days, 17,000 buildings",
+      "rebuildLabel": "Rebuilt in steel",
+      "rebuildCaption": "Out of the ashes came the first skyscrapers"
+    },
+    "exampleNarration": "In October eighteen seventy one a fire swept through the wooden city for three days. But within twenty years it was rebuilt, this time in steel, and the first skyscrapers rose from the ashes."
+  },
+  {
+    "id": "map-overlay",
+    "name": "Street plan",
+    "description": "Top-down plan view: the street grid and blocks draw in over time on a parchment-coloured plan with district labels and the year counter. Use for 'the plan', 'how the grid was laid out', or as a change of rhythm between 3D scenes.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "population": {
+          "type": "number",
+          "description": "Population today (used to scale the counter). Default 8,000,000."
+        },
+        "showPopulation": {
+          "type": "boolean",
+          "description": "Show the small population counter under the year (default true)."
+        },
+        "yearFrom": {
+          "type": "integer"
+        },
+        "yearTo": {
+          "type": "integer"
+        },
+        "endsNow": {
+          "type": "boolean"
+        },
+        "beats": {
+          "type": "array",
+          "description": "0–8 narration beats {year, label, caption, keyword} as in timelapse.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "label": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "year",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "yearFrom",
+        "yearTo"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "title": "The *plan* of 1811",
+      "kicker": "Street plan",
+      "yearFrom": 1780,
+      "yearTo": 1900,
+      "beats": [
+        {
+          "year": 1811,
+          "label": "Commissioners' plan",
+          "keyword": "plan"
+        },
+        {
+          "year": 1860,
+          "label": "Half the island built",
+          "keyword": "half"
+        },
+        {
+          "year": 1900,
+          "label": "Grid complete",
+          "keyword": "complete"
+        }
+      ]
+    },
+    "exampleNarration": "The plan was brutally simple: twelve avenues, one hundred and fifty five streets. By eighteen sixty half the island was built, and by nineteen hundred the grid was complete."
+  },
+  {
+    "id": "title-card",
+    "name": "Title card",
+    "description": "Opener: the modern skyline at golden hour, slow dolly, with the city name huge and the year range '1609 → NOW' underneath. Use once at the start and for chapter cards.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "yearFrom": {
+          "type": "integer"
+        },
+        "yearTo": {
+          "type": "integer"
+        },
+        "endsNow": {
+          "type": "boolean",
+          "description": "Show 'NOW' instead of yearTo (default true)."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Small line above the name (≤ 30 chars), e.g. 'The evolution of'."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Line under the range (≤ 60 chars)."
+        }
+      },
+      "required": [
+        "yearFrom",
+        "yearTo"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "yearFrom": 1609,
+      "yearTo": 2024,
+      "kicker": "The evolution of",
+      "subtitle": "Four centuries in twelve minutes"
+    },
+    "exampleNarration": "This is the story of one island, and how four hundred years turned a forest into the greatest city on Earth."
+  },
+  {
+    "id": "timeline-strip",
+    "name": "Timeline strip",
+    "description": "A strip of era thumbnails (rendered from the same city) along the bottom; the big view jumps to each era on its keyword and the matching thumbnail lights up. Use for recaps and chapter overviews.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+        },
+        "preset": {
+          "type": "string",
+          "enum": [
+            "island",
+            "bay",
+            "desert",
+            "delta",
+            "lake",
+            "peninsula",
+            "river"
+          ],
+          "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "european",
+            "american",
+            "desert",
+            "asian"
+          ],
+          "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+        },
+        "seed": {
+          "type": "integer",
+          "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+        },
+        "keyDates": {
+          "type": "object",
+          "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+          "properties": {
+            "settlement": {
+              "type": "integer"
+            },
+            "village": {
+              "type": "integer"
+            },
+            "town": {
+              "type": "integer"
+            },
+            "grid": {
+              "type": "integer"
+            },
+            "industry": {
+              "type": "integer"
+            },
+            "skyscraper": {
+              "type": "integer"
+            },
+            "modern": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "districts": {
+          "type": "array",
+          "description": "Optional district names (≤ 8, ≤ 18 chars each) in order: core, waterfront, then outer quarters; index 4 is the industrial quarter.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "population": {
+          "type": "number",
+          "description": "Population today (used to scale the counter). Default 8,000,000."
+        },
+        "showPopulation": {
+          "type": "boolean",
+          "description": "Show the small population counter under the year (default true)."
+        },
+        "yearFrom": {
+          "type": "integer"
+        },
+        "yearTo": {
+          "type": "integer"
+        },
+        "eras": {
+          "type": "array",
+          "description": "2–7 eras in order.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "label": {
+                "type": "string",
+                "description": "≤ 18 chars"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "keyword": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "year",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "eras"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "city": "New Harbor",
+      "preset": "island",
+      "style": "american",
+      "seed": 7,
+      "keyDates": {
+        "settlement": 1624,
+        "village": 1660,
+        "town": 1760,
+        "grid": 1811,
+        "industry": 1850,
+        "skyscraper": 1900,
+        "modern": 1960
+      },
+      "eras": [
+        {
+          "year": 1660,
+          "label": "Trading post",
+          "keyword": "post"
+        },
+        {
+          "year": 1800,
+          "label": "Port town",
+          "keyword": "port"
+        },
+        {
+          "year": 1900,
+          "label": "Industrial giant",
+          "keyword": "industrial"
+        },
+        {
+          "year": 2024,
+          "label": "Metropolis",
+          "keyword": "metropolis"
+        }
+      ]
+    },
+    "exampleNarration": "Four chapters: a trading post, a port town, an industrial giant, and finally the metropolis we know today."
+  },
+  {
+    "id": "skyline-compare",
+    "name": "Skyline compare",
+    "description": "Two cities side by side (stacked in portrait), each lit and orbiting, with name, stat and year chips that land on their keywords. Use to compare two cities or the same city under two styles.",
+    "propsSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Optional headline (≤ 50 chars). *word* = accent colour."
+        },
+        "kicker": {
+          "type": "string",
+          "description": "Tiny label above the title (≤ 24 chars)."
+        },
+        "light": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "dawn",
+            "day",
+            "haze",
+            "golden",
+            "night"
+          ],
+          "description": "auto = dawn mist → clear day → industrial haze → golden hour as the city grows. Fixed values for mood scenes."
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+            },
+            "preset": {
+              "type": "string",
+              "enum": [
+                "island",
+                "bay",
+                "desert",
+                "delta",
+                "lake",
+                "peninsula",
+                "river"
+              ],
+              "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+            },
+            "style": {
+              "type": "string",
+              "enum": [
+                "european",
+                "american",
+                "desert",
+                "asian"
+              ],
+              "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+            },
+            "seed": {
+              "type": "integer",
+              "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+            },
+            "keyDates": {
+              "type": "object",
+              "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+              "properties": {
+                "settlement": {
+                  "type": "integer"
+                },
+                "village": {
+                  "type": "integer"
+                },
+                "town": {
+                  "type": "integer"
+                },
+                "grid": {
+                  "type": "integer"
+                },
+                "industry": {
+                  "type": "integer"
+                },
+                "skyscraper": {
+                  "type": "integer"
+                },
+                "modern": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
+            },
+            "year": {
+              "type": "integer"
+            },
+            "stat": {
+              "type": "string",
+              "description": "One figure, e.g. '8.8M people' (≤ 20 chars)."
+            }
+          },
+          "required": [
+            "city",
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        "right": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string",
+              "description": "City name shown in the corner tag (≤ 24 chars). Also used to guess preset/style if those are omitted. The city is procedural — never a real map."
+            },
+            "preset": {
+              "type": "string",
+              "enum": [
+                "island",
+                "bay",
+                "desert",
+                "delta",
+                "lake",
+                "peninsula",
+                "river"
+              ],
+              "description": "Terrain: island between rivers, bay with hills, desert grid, river delta, lake shore, hilly peninsula, winding river plain. Keep the same preset for one city across the whole video."
+            },
+            "style": {
+              "type": "string",
+              "enum": [
+                "european",
+                "american",
+                "desert",
+                "asian"
+              ],
+              "description": "Architecture: european old town, american grid, desert boomtown, asian mega-city. Keep constant per city."
+            },
+            "seed": {
+              "type": "integer",
+              "description": "Same seed + preset + style = identical city in every scene. Use one seed per city for the whole video (e.g. 7)."
+            },
+            "keyDates": {
+              "type": "object",
+              "description": "Optional real-world era years for this city (settlement, village, town, grid, industry, skyscraper, modern). Missing ones are spread evenly. Keep identical across scenes.",
+              "properties": {
+                "settlement": {
+                  "type": "integer"
+                },
+                "village": {
+                  "type": "integer"
+                },
+                "town": {
+                  "type": "integer"
+                },
+                "grid": {
+                  "type": "integer"
+                },
+                "industry": {
+                  "type": "integer"
+                },
+                "skyscraper": {
+                  "type": "integer"
+                },
+                "modern": {
+                  "type": "integer"
+                }
+              },
+              "additionalProperties": false
+            },
+            "year": {
+              "type": "integer"
+            },
+            "stat": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "year"
+          ],
+          "additionalProperties": false
+        },
+        "keywordLeft": {
+          "type": "string"
+        },
+        "keywordRight": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "left",
+        "right"
+      ],
+      "additionalProperties": false
+    },
+    "exampleProps": {
+      "title": "Two cities, one *century*",
+      "left": {
+        "city": "New Harbor",
+        "preset": "island",
+        "style": "american",
+        "seed": 7,
+        "year": 2024,
+        "stat": "8.8M people"
+      },
+      "right": {
+        "city": "Bayhaven",
+        "preset": "bay",
+        "style": "asian",
+        "seed": 3,
+        "year": 2024,
+        "stat": "7.4M people"
+      },
+      "keywordLeft": "Harbor",
+      "keywordRight": "Bayhaven"
+    },
+    "exampleNarration": "New Harbor grew on an island; Bayhaven climbed its hills around a bay. A century later both hold nearly nine million people."
+  }
+]

@@ -1,0 +1,124 @@
+import type { Brief, StylePack, WordTiming } from "./shared";
+import { RESOLUTIONS } from "./shared";
+
+/**
+ * The stable, cached part of the scene-code system prompt. It depends only on the style
+ * pack and runtime docs, so it is byte-identical for every scene of a video (cache hits).
+ */
+export function sceneSystemPrompt(style: StylePack, runtimeDocs: string): string {
+  const templates = style.templates
+    .map(
+      (t) =>
+        `### Template \`${t.id}\` — ${t.name}\n${t.description}\nProps JSON Schema:\n\`\`\`json\n${JSON.stringify(t.propsSchema)}\n\`\`\`\nExample props:\n\`\`\`json\n${JSON.stringify(t.exampleProps)}\n\`\`\``,
+    )
+    .join("\n\n");
+  const examples = style.examples
+    .map(
+      (e, i) =>
+        `### Example ${i + 1}\nNarration: ${e.narration}\nVisual intent: ${e.visualIntent}\nCode:\n\`\`\`js\n${e.code}\n\`\`\``,
+    )
+    .join("\n\n");
+
+  return `You are a senior motion designer and creative coder. You turn one scene of a narrated, fully animated YouTube video into a deterministic HTML animation for the "${style.name}" visual style. A headless renderer seeks your animation frame by frame, so everything must be a pure function of time.
+
+For each scene you choose ONE of two modes:
+
+1. TEMPLATE mode (preferred — cheaper and most reliable): pick the template that best expresses the visual intent and fill in its props. Props must satisfy the template's JSON Schema exactly. Write on-screen text in the video's language, short (labels ≤ 7 words), never the full narration. Use word timings to set any time-related props (seconds from scene start) so visuals land on the words they illustrate.
+2. CUSTOM mode: only when no template can express the visual intent well (or when a note asks for it). Write the BODY of \`function scene(V, S, root) { ... }\` where V is the runtime API, S is this style's component library (window.SceneStyle), and root is the full-frame container element. Build DOM inside root and schedule all animation on V.timeline(). Rules for custom code:
+   - Use only V, S, root and standard DOM/SVG APIs. Prefer S components and the style's CSS classes/variables so the scene matches the style.
+   - NO network of any kind: no fetch, XMLHttpRequest, WebSocket, import, external URLs, <script src>, url(http…), external fonts or images. Inline SVG and CSS only.
+   - NO timers or real time: no setTimeout, setInterval, requestAnimationFrame, Date-based logic, async/await, Promises for animation. All motion goes through V.timeline() tweens or V.onFrame(t => …) as a pure function of t.
+   - NO eval, new Function, document.write, innerHTML with <script>.
+   - Randomness only via V.rand() (seeded).
+   - Sync key moments to speech with V.at("word") (seconds when the word is spoken) instead of hard-coded numbers where possible; keep every tween inside [0, V.duration].
+   - Lay out relative to V.width / V.height (the frame can be 16:9, 9:16 or 1:1). Keep all text inside the frame with safe margins (≥ 5% each side); size fonts so text never overflows.
+   - Something meaningful must be visible from about 0.3 s onward, and the frame must not be blank at the end. Leave the final state readable for the last second.
+   - The code must be syntactically valid JavaScript (it is a function body; do not wrap it in a function declaration).
+
+General design rules:
+- Follow the style guide below exactly (palette, typography, pacing, do/don't).
+- Visual hierarchy: one focal point at a time; animate elements in as they are mentioned; remove or dim what is no longer relevant.
+- Motion should feel intentional: ease-out entrances, 0.3–0.8 s durations, small staggers; no constant jitter.
+- Do not repeat the same template as the previous two scenes unless it is clearly the only good fit.
+
+Composition rules (a clean frame beats a busy one):
+- No duplicates: backdrops and templates already include things like a sun, moon, clouds, windows or a character. Reuse what is there; never add a second sun, a second copy of a prop, or a twin character.
+- Characters are the focal point: never cover a character's head, face or body with beams, panels, bubbles, charts or labels. Put effects behind the character (lower z-index) or beside them, and move the character aside if the effect needs the space.
+- Everything the visual intent names must actually appear (a sticker, label, chart, caption, icon), timed to its word. If something is hard to draw, draw a simpler version rather than leaving it out.
+- No empty containers: thought/speech bubbles, cards and panels always hold readable content (text, an icon or a small drawing) — never a blank shape with a few dots.
+- Before answering, picture the frame at 0.5 s, at the middle and at the end, and fix any overlap, duplicate or large empty area.
+
+# STYLE GUIDE — ${style.name}
+${style.skill}
+
+# STYLE COMPONENT API (S = window.SceneStyle)
+${style.componentDocs}
+
+# RUNTIME API (V)
+${runtimeDocs}
+
+# TEMPLATES
+${templates || "(none — always use custom mode)"}
+
+# GOLD-STANDARD CUSTOM SCENES
+${examples || "(none)"}
+
+# OUTPUT FORMAT
+Respond with a single JSON object:
+{ "mode": "template" | "custom", "templateId": string, "propsJson": string, "code": string }
+- template mode: templateId = the template id, propsJson = the props object serialized as a JSON string, code = "".
+- custom mode: templateId = "", propsJson = "{}", code = the function body.`;
+}
+
+export interface SceneUserInput {
+  brief: Brief;
+  style: StylePack;
+  narration: string;
+  visualIntent: string;
+  words: WordTiming[];
+  durationS: number;
+  previousTemplates: string[];
+  note?: string;
+}
+
+export function formatWords(words: WordTiming[]): string {
+  return words.map((w) => `${w.word}@${w.start.toFixed(2)}`).join(" ");
+}
+
+export function sceneUserPrompt(input: SceneUserInput): string {
+  const { width, height } = RESOLUTIONS[input.brief.aspect].final;
+  const recent = input.previousTemplates.slice(-2).filter(Boolean);
+  return `<scene>
+Frame: ${width}×${height} (${input.brief.aspect}), duration ${input.durationS.toFixed(2)} s, language ${input.brief.language}.
+Narration (spoken over this scene):
+${input.narration}
+
+Visual intent:
+${input.visualIntent}
+
+Word timings (word@start-seconds):
+${formatWords(input.words) || "(none — estimate proportionally)"}
+
+Templates used by the previous two scenes: ${recent.length ? recent.join(", ") : "(none)"}${recent.length ? " — avoid repeating these unless nothing else fits." : ""}
+${input.note ? `\nCreator's note for this scene (high priority): ${input.note}\n` : ""}</scene>
+
+Choose the mode and produce the JSON.`;
+}
+
+export function repairUserPrompt(input: SceneUserInput, previous: string, errors: string[], attempt: number): string {
+  return `${sceneUserPrompt(input)}
+
+<previous_attempt>
+${previous}
+</previous_attempt>
+
+<problems>
+${errors.map((e) => `- ${e}`).join("\n")}
+</problems>
+
+The previous attempt failed validation or rendering with the problems above. Produce a corrected version that fixes every problem while still expressing the visual intent.
+- If it was template mode: fix the props so they satisfy the schema exactly (or pick a better template).
+- If it was custom mode: fix the code with the smallest changes that solve the problems; remove any forbidden API usage; make sure text fits inside the frame and something is visible at every moment.${
+    attempt >= 2 ? "\n- This is the last attempt: prefer the simplest robust solution — a well-fitting template if at all possible." : ""
+  }`;
+}

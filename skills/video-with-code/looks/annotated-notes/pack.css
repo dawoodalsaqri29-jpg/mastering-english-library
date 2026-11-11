@@ -1,0 +1,67 @@
+/* annotated-notes — a clean lesson sheet marked up by hand: dot grid, highlighters, blue notes, red corrections */
+:root {
+  --bg: #F1F1EF;
+  --fg: #17181C;
+  --ink: #17181C;
+  --muted: #6B6E76;
+  --accent: #2F7CF6;
+  --accent-2: #E23B3B;
+  --accent-3: #4FAF3E;
+  --hl-blue: #A9C8F5;
+  --hl-pink: #F5A9C8;
+  --hl-green: #B7F0A0;
+  --hl: rgba(169, 200, 245, 0.75);
+  --dot: rgba(23, 24, 28, 0.13);
+  --crop: rgba(23, 24, 28, 0.55);
+  --grid: transparent;
+  --surface: #FFFFFF;
+  --line: #17181C;
+  --on-accent: #FFFFFF;
+  --bar-muted: rgba(23, 24, 28, 0.16);
+  --halo: transparent;
+  --radius: calc(var(--u) * 4);
+  --shadow: 0 calc(var(--u) * 2) calc(var(--u) * 12) rgba(23, 24, 28, 0.07);
+  --shadow-lg: 0 calc(var(--u) * 8) calc(var(--u) * 28) rgba(23, 24, 28, 0.12);
+  --title-weight: 800;
+  --title-tracking: -0.045em;
+  --title-leading: 0.96;
+  --code-bg: #FFFFFF;
+  --code-fg: #17181C;
+  --code-chrome: #E8E8E5;
+  --code-border: 1px solid rgba(23, 24, 28, 0.2);
+  --code-hi: rgba(169, 200, 245, 0.55);
+  --tk-k: #2F7CF6;
+  --tk-s: #4FAF3E;
+  --tk-f: #9B4FD6;
+  --tk-n: #E23B3B;
+  --tk-c: #8A8E97;
+  --neg: #E23B3B;
+  --pos: #4FAF3E;
+  --edge: #17181C;
+  --badge-bg: transparent;
+}
+/* bold condensed-feel titles; emphasis is a pastel highlighter sweep, not a colour change */
+.kind-whiteboard .v-title { text-transform: uppercase; }
+.kind-whiteboard .v-em { color: var(--fg); background: linear-gradient(180deg, transparent 50%, var(--hl-blue) 50% 90%, transparent 90%); padding: 0 0.08em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.kind-whiteboard .v-text .v-em { background: linear-gradient(180deg, transparent 45%, var(--hl-pink) 45% 92%, transparent 92%); }
+.kind-whiteboard .v-kicker { font-family: var(--font-mono); color: var(--accent); letter-spacing: 0.16em; font-weight: 600; }
+.kind-whiteboard .v-line { height: calc(var(--u) * 14); width: calc(var(--u) * 220); border-radius: calc(var(--u) * 3); background: var(--hl-green); transform: rotate(-1.5deg); }
+.kind-whiteboard .v-card { background: var(--surface); box-shadow: var(--shadow); }
+.kind-whiteboard .v-num { background: var(--hl-pink); color: var(--ink); font-family: var(--font-mono); font-weight: 700; border-radius: 50% 44% 52% 46%; }
+.kind-whiteboard .v-icon-badge { background: transparent; color: var(--accent); border: calc(var(--u) * 3) solid var(--accent); border-radius: 48% 52% 46% 54%; }
+.kind-whiteboard .v-statnum { color: var(--accent); }
+.kind-whiteboard .v-vs { background: transparent; color: var(--accent-2); border: calc(var(--u) * 3) solid var(--accent-2); border-radius: 46% 54% 50% 50%; }
+.kind-whiteboard .t-compare .v-side.is-left .v-side-title { color: var(--accent); }
+.kind-whiteboard .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-whiteboard .t-timeline .v-dot { border-color: var(--accent); }
+.kind-whiteboard .t-timeline .v-tl-line { background: rgba(23, 24, 28, 0.22); }
+.kind-whiteboard .t-timeline .v-date { font-family: var(--font-mono); color: var(--accent); }
+.kind-whiteboard .t-bars .v-bar { border-radius: 0; background: var(--hl-blue); }
+.kind-whiteboard .t-bars .v-bar.is-hi { background: var(--accent-2); }
+.kind-whiteboard .t-bars .v-val { font-family: var(--font-mono); }
+.kind-whiteboard .t-section .v-secnum { color: var(--ink); -webkit-text-stroke: 0; background: linear-gradient(180deg, transparent 55%, var(--hl-pink) 55% 85%, transparent 85%); }
+.kind-whiteboard .t-section .v-wipe { background: var(--hl-blue); }
+.kind-whiteboard .t-diagram .v-node.is-hub { background: var(--hl-blue) !important; color: var(--ink) !important; }
+.kind-whiteboard .t-line .v-lc-call { background: var(--accent); color: #fff; font-family: var(--font-mono); }
+.kind-whiteboard .t-line .v-lc-grid { stroke: rgba(23, 24, 28, 0.1); }
+.kind-whiteboard .t-quote .v-qmark { color: var(--accent); }

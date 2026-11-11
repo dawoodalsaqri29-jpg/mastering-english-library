@@ -1,0 +1,832 @@
+[
+ {
+  "id": "puppet-talks",
+  "name": "Puppet talks",
+  "description": "A paper puppet hops onto a diorama set and talks (mouth synced to the voice); the speech-bubble words land as they are spoken; an optional second puppet listens and reacts; optional stencil tags pop in on key words. The default storytelling shot.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "set": {
+     "type": "string",
+     "enum": [
+      "town",
+      "countryside",
+      "kitchen",
+      "classroom",
+      "ocean",
+      "underwater",
+      "space"
+     ],
+     "description": "Diorama set (location). Keep the same set for scenes in the same place."
+    },
+    "speaker": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot"
+     ],
+     "description": "Recurring puppet: mo (kid, orange hoodie), pip (girl, yellow dress), otto (grandpa), ada (scientist), leo (chef), biscuit (dog), mittens (cat), hoot (owl)."
+    },
+    "listener": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot",
+      "none"
+     ],
+     "description": "Optional puppet, or \"none\"."
+    },
+    "bubble": {
+     "type": "string",
+     "description": "What the speaker says in the bubble — a short line from the narration, max 14 words. *word* = red emphasis strip."
+    },
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "0-3 short labels (1-3 words) that pop in on their key words."
+    },
+    "title": {
+     "type": "string",
+     "description": "Optional headline at the top (max 6 words); usually leave empty."
+    }
+   },
+   "required": [
+    "set",
+    "speaker",
+    "listener",
+    "bubble"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "set": "town",
+   "speaker": "pip",
+   "listener": "otto",
+   "bubble": "Did you know our town *recycles* half its rubbish?",
+   "tags": [
+    "Paper",
+    "Glass",
+    "Cans"
+   ]
+  },
+  "exampleNarration": "Did you know our town recycles half its rubbish? Paper, glass and cans all get a second life."
+ },
+ {
+  "id": "diorama-scene",
+  "name": "Diorama scene",
+  "description": "A layered paper diorama; 1-5 cut-paper props drop in and bounce on their key words, each with an optional stencil label; an optional puppet points at each arrival. For listing concrete things in a place.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "set": {
+     "type": "string",
+     "enum": [
+      "town",
+      "countryside",
+      "kitchen",
+      "classroom",
+      "ocean",
+      "underwater",
+      "space"
+     ],
+     "description": "Diorama set (location). Keep the same set for scenes in the same place."
+    },
+    "title": {
+     "type": "string",
+     "description": "Optional headline (max 6 words), or empty string."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot",
+      "none"
+     ],
+     "description": "Optional puppet, or \"none\"."
+    },
+    "items": {
+     "type": "array",
+     "description": "1-5 props, in narration order.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "prop": {
+        "type": "string",
+        "description": "Prop name: tree, pine, house, sun, cloud, moon, star, planet, rocket, car, boat, plane, apple, book, lightbulb, coin, money, heart, flower, mountain, fish, cup, clock, globe, gift, trophy, cake, laptop, drop, leaf, flame, bolt, bread, carrot, pizza, battery, magnet, phone, tooth — or any icon name (becomes a paper sticker)."
+       },
+       "label": {
+        "type": "string",
+        "description": "Short label, 1-3 words (optional, may be empty)."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration when it lands (optional)."
+       }
+      },
+      "required": [
+       "prop",
+       "label"
+      ],
+      "additionalProperties": false
+     }
+    }
+   },
+   "required": [
+    "set",
+    "items",
+    "character"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "set": "countryside",
+   "title": "",
+   "character": "mo",
+   "items": [
+    {
+     "prop": "sun",
+     "label": "Sunlight",
+     "keyword": "sunlight"
+    },
+    {
+     "prop": "drop",
+     "label": "Water",
+     "keyword": "water"
+    },
+    {
+     "prop": "flower",
+     "label": "Growth",
+     "keyword": "grow"
+    }
+   ]
+  },
+  "exampleNarration": "Plants need three things: sunlight, water, and time to grow."
+ },
+ {
+  "id": "paper-list",
+  "name": "Corkboard list",
+  "description": "Torn-off sticky notes are pinned one by one to a corkboard (push pins pop in), with a cut-paper title strip. For lists, steps, tips (2-6 items).",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Board title (max 6 words)."
+    },
+    "board": {
+     "type": "string",
+     "enum": [
+      "cork",
+      "felt",
+      "kraft"
+     ],
+     "description": "Board material."
+    },
+    "items": {
+     "type": "array",
+     "description": "2-6 notes in narration order.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "text": {
+        "type": "string",
+        "description": "Note text, max 10 words. *word* = red emphasis."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word from the narration when it is pinned (optional)."
+       }
+      },
+      "required": [
+       "text"
+      ],
+      "additionalProperties": false
+     }
+    }
+   },
+   "required": [
+    "title",
+    "items"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "Three habits that stick",
+   "board": "cork",
+   "items": [
+    {
+     "text": "Start *tiny* — two minutes a day",
+     "keyword": "tiny"
+    },
+    {
+     "text": "Stack it on an existing habit",
+     "keyword": "stack"
+    },
+    {
+     "text": "Track your streak on paper",
+     "keyword": "track"
+    }
+   ]
+  },
+  "exampleNarration": "Three habits that stick. Start tiny. Stack the new habit on an old one. And track your streak."
+ },
+ {
+  "id": "cut-out-chart",
+  "name": "Cut-out bar chart",
+  "description": "Bars built from paper strips that drop and stack one by one on a ruler, on taped graph paper; value tags stamp on top. For comparing 2-6 numbers.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Chart title (max 7 words)."
+    },
+    "bars": {
+     "type": "array",
+     "description": "2-6 bars.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "label": {
+        "type": "string",
+        "description": "Bar label, 1-3 words."
+       },
+       "value": {
+        "type": "number",
+        "description": "Value (>= 0)."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word when this bar builds (optional)."
+       }
+      },
+      "required": [
+       "label",
+       "value"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "prefix": {
+     "type": "string",
+     "description": "Value prefix, e.g. \"$\" (or empty)."
+    },
+    "suffix": {
+     "type": "string",
+     "description": "Value suffix, e.g. \"%\" (or empty)."
+    },
+    "highlight": {
+     "type": "number",
+     "description": "Index of the bar to colour red (optional)."
+    }
+   },
+   "required": [
+    "title",
+    "bars"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "Hours of screen time a day",
+   "bars": [
+    {
+     "label": "Kids",
+     "value": 4
+    },
+    {
+     "label": "Teens",
+     "value": 7
+    },
+    {
+     "label": "Adults",
+     "value": 6
+    }
+   ],
+   "suffix": "h",
+   "highlight": 1
+  },
+  "exampleNarration": "Kids average four hours of screen time a day. Teens, seven. Adults, about six."
+ },
+ {
+  "id": "pop-up-book",
+  "name": "Pop-up book",
+  "description": "A storybook cover swings open on the desk and paper layers fold up off the page (sky arch, props, grass); the title is a ransom-note collage on the left page. For story openings, chapters, 'once upon a time'.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Page title (max 6 words)."
+    },
+    "set": {
+     "type": "string",
+     "enum": [
+      "town",
+      "countryside",
+      "kitchen",
+      "classroom",
+      "ocean",
+      "underwater",
+      "space"
+     ],
+     "description": "Diorama set (location). Keep the same set for scenes in the same place."
+    },
+    "items": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "description": "Prop name: tree, pine, house, sun, cloud, moon, star, planet, rocket, car, boat, plane, apple, book, lightbulb, coin, money, heart, flower, mountain, fish, cup, clock, globe, gift, trophy, cake, laptop, drop, leaf, flame, bolt, bread, carrot, pizza, battery, magnet, phone, tooth — or any icon name (becomes a paper sticker)."
+     },
+     "description": "0-3 props that pop up (empty = themed defaults for the set)."
+    },
+    "caption": {
+     "type": "string",
+     "description": "Optional typewriter caption (max 8 words), or empty."
+    }
+   },
+   "required": [
+    "title",
+    "set"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "The story of bread",
+   "set": "countryside",
+   "items": [
+    "bread",
+    "tree"
+   ],
+   "caption": "Chapter one: the wheat field"
+  },
+  "exampleNarration": "The story of bread begins ten thousand years ago, in a wheat field."
+ },
+ {
+  "id": "collage-title",
+  "name": "Collage title",
+  "description": "Torn paper scraps are laid down, then the title assembles letter by letter as a ransom-note collage; subtitle on a stencil tag; an optional puppet pops up from the corner and waves. For video/chapter titles.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Title, max 6 words."
+    },
+    "subtitle": {
+     "type": "string",
+     "description": "Optional subtitle (max 8 words) or empty."
+    },
+    "kicker": {
+     "type": "string",
+     "description": "Optional tiny label above, e.g. 'Chapter 2', or empty."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot",
+      "none"
+     ],
+     "description": "Optional puppet, or \"none\"."
+    },
+    "backdrop": {
+     "type": "string",
+     "enum": [
+      "kraft",
+      "cork",
+      "night"
+     ],
+     "description": "Backdrop paper."
+    }
+   },
+   "required": [
+    "title"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "How Bees Make Honey",
+   "subtitle": "A sticky little miracle",
+   "kicker": "Chapter 1",
+   "character": "pip",
+   "backdrop": "kraft"
+  },
+  "exampleNarration": "Chapter one. How bees make honey — a sticky little miracle."
+ },
+ {
+  "id": "before-after-flip",
+  "name": "Before / after flap",
+  "description": "A taped paper flap shows BEFORE; on the key word it flips over to reveal AFTER (prop + text). An optional puppet shrugs, then cheers. For transformations, myths vs facts, problem to solution.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Optional headline or empty."
+    },
+    "before": {
+     "type": "object",
+     "properties": {
+      "label": {
+       "type": "string",
+       "description": "Tag, e.g. 'Before' / 'Myth'."
+      },
+      "text": {
+       "type": "string",
+       "description": "Max 10 words."
+      },
+      "prop": {
+       "type": "string",
+       "description": "Prop name: tree, pine, house, sun, cloud, moon, star, planet, rocket, car, boat, plane, apple, book, lightbulb, coin, money, heart, flower, mountain, fish, cup, clock, globe, gift, trophy, cake, laptop, drop, leaf, flame, bolt, bread, carrot, pizza, battery, magnet, phone, tooth — or any icon name (becomes a paper sticker)."
+      }
+     },
+     "required": [
+      "label",
+      "text",
+      "prop"
+     ],
+     "additionalProperties": false
+    },
+    "after": {
+     "type": "object",
+     "properties": {
+      "label": {
+       "type": "string",
+       "description": "Tag, e.g. 'After' / 'Fact'."
+      },
+      "text": {
+       "type": "string",
+       "description": "Max 10 words."
+      },
+      "prop": {
+       "type": "string",
+       "description": "Prop name: tree, pine, house, sun, cloud, moon, star, planet, rocket, car, boat, plane, apple, book, lightbulb, coin, money, heart, flower, mountain, fish, cup, clock, globe, gift, trophy, cake, laptop, drop, leaf, flame, bolt, bread, carrot, pizza, battery, magnet, phone, tooth — or any icon name (becomes a paper sticker)."
+      }
+     },
+     "required": [
+      "label",
+      "text",
+      "prop"
+     ],
+     "additionalProperties": false
+    },
+    "keyword": {
+     "type": "string",
+     "description": "Word in the narration when it flips."
+    },
+    "character": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot",
+      "none"
+     ],
+     "description": "Optional puppet, or \"none\"."
+    },
+    "set": {
+     "type": "string",
+     "enum": [
+      "town",
+      "countryside",
+      "kitchen",
+      "classroom",
+      "ocean",
+      "underwater",
+      "space",
+      "kraft",
+      "cardboard",
+      "cork",
+      "mat"
+     ],
+     "description": "Background (kraft = plain craft paper)."
+    }
+   },
+   "required": [
+    "before",
+    "after",
+    "keyword"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "",
+   "before": {
+    "label": "Myth",
+    "text": "Goldfish forget everything in *3 seconds*",
+    "prop": "fish"
+   },
+   "after": {
+    "label": "Fact",
+    "text": "They remember things for *months*",
+    "prop": "lightbulb"
+   },
+   "keyword": "actually",
+   "character": "ada",
+   "set": "kraft"
+  },
+  "exampleNarration": "People say goldfish forget everything in three seconds. Actually, they can remember things for months."
+ },
+ {
+  "id": "map-journey",
+  "name": "Map journey",
+  "description": "A creased paper map on a corkboard; a traveller (puppet or paper vehicle) hops from stop to stop while a dashed paper trail appears behind it; pins and name labels land on arrival. For journeys, routes, history across places, processes as a path.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Optional headline or empty."
+    },
+    "stops": {
+     "type": "array",
+     "description": "2-6 stops in order.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string",
+        "description": "Stop name, 1-3 words."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word when the traveller arrives (optional)."
+       }
+      },
+      "required": [
+       "name"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "traveller": {
+     "type": "string",
+     "enum": [
+      "mo",
+      "pip",
+      "otto",
+      "ada",
+      "leo",
+      "biscuit",
+      "mittens",
+      "hoot",
+      "car",
+      "boat",
+      "plane",
+      "rocket"
+     ],
+     "description": "Who travels: a cast puppet or a paper vehicle."
+    }
+   },
+   "required": [
+    "stops",
+    "traveller"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "Marco Polo's road east",
+   "stops": [
+    {
+     "name": "Venice"
+    },
+    {
+     "name": "Baghdad"
+    },
+    {
+     "name": "Samarkand"
+    },
+    {
+     "name": "Beijing"
+    }
+   ],
+   "traveller": "otto"
+  },
+  "exampleNarration": "From Venice, Marco Polo travelled to Baghdad, crossed the desert to Samarkand, and finally reached Beijing."
+ },
+ {
+  "id": "stack-of-facts",
+  "name": "Stack of facts",
+  "description": "Index cards slide in and land on a growing pile on a cutting mat; each has an optional big cut-letter number and a typewritten fact. For 2-5 punchy facts or stats.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Optional label (max 5 words) or empty."
+    },
+    "facts": {
+     "type": "array",
+     "description": "2-5 cards.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "big": {
+        "type": "string",
+        "description": "Optional big number/word (max 6 chars), e.g. '70%', or empty."
+       },
+       "text": {
+        "type": "string",
+        "description": "Fact, max 14 words. *word* = red emphasis."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word when the card lands (optional)."
+       }
+      },
+      "required": [
+       "text"
+      ],
+      "additionalProperties": false
+     }
+    }
+   },
+   "required": [
+    "facts"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "Octopus facts",
+   "facts": [
+    {
+     "big": "3",
+     "text": "An octopus has *three* hearts.",
+     "keyword": "three"
+    },
+    {
+     "big": "9",
+     "text": "It has nine brains, one in each arm plus one.",
+     "keyword": "brains"
+    },
+    {
+     "big": "",
+     "text": "Its blood is *blue*.",
+     "keyword": "blue"
+    }
+   ]
+  },
+  "exampleNarration": "An octopus has three hearts. It has nine brains. And its blood is blue."
+ },
+ {
+  "id": "paper-quote",
+  "name": "Taped quote",
+  "description": "A torn notebook page is taped to the board; red cut-paper quote marks pop, and the quote's words are stamped on one by one as they are spoken; the author hangs on a kraft tag.",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "quote": {
+     "type": "string",
+     "description": "The quote, max 25 words. *word* = highlighted."
+    },
+    "author": {
+     "type": "string",
+     "description": "Author name (or empty)."
+    },
+    "role": {
+     "type": "string",
+     "description": "Optional role/date, or empty."
+    },
+    "keyword": {
+     "type": "string",
+     "description": "Optional word to highlight with a marker."
+    },
+    "backdrop": {
+     "type": "string",
+     "enum": [
+      "cork",
+      "kraft"
+     ],
+     "description": "Board behind the note."
+    }
+   },
+   "required": [
+    "quote",
+    "author"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "quote": "The best way to *predict* the future is to create it.",
+   "author": "Peter Drucker",
+   "role": "",
+   "keyword": "create",
+   "backdrop": "cork"
+  },
+  "exampleNarration": "The best way to predict the future is to create it."
+ },
+ {
+  "id": "clothesline-timeline",
+  "name": "Clothesline timeline",
+  "description": "Cards slide down and are pegged to a string across the set, swinging as they land: dates or steps in order. For timelines, histories, sequences (2-6 events).",
+  "propsSchema": {
+   "type": "object",
+   "properties": {
+    "title": {
+     "type": "string",
+     "description": "Optional headline or empty."
+    },
+    "set": {
+     "type": "string",
+     "enum": [
+      "town",
+      "countryside",
+      "kitchen",
+      "classroom",
+      "ocean",
+      "underwater",
+      "space",
+      "kraft",
+      "cardboard",
+      "cork"
+     ],
+     "description": "Background."
+    },
+    "events": {
+     "type": "array",
+     "description": "2-6 events in order.",
+     "items": {
+      "type": "object",
+      "properties": {
+       "when": {
+        "type": "string",
+        "description": "Date or step label, max 8 chars, e.g. '1969'."
+       },
+       "text": {
+        "type": "string",
+        "description": "Max 8 words."
+       },
+       "keyword": {
+        "type": "string",
+        "description": "Word when it is pegged (optional)."
+       }
+      },
+      "required": [
+       "when",
+       "text"
+      ],
+      "additionalProperties": false
+     }
+    }
+   },
+   "required": [
+    "events"
+   ],
+   "additionalProperties": false
+  },
+  "exampleProps": {
+   "title": "Flight in four steps",
+   "set": "countryside",
+   "events": [
+    {
+     "when": "1783",
+     "text": "First hot-air balloon"
+    },
+    {
+     "when": "1903",
+     "text": "Wright brothers fly"
+    },
+    {
+     "when": "1969",
+     "text": "Humans land on the *Moon*"
+    },
+    {
+     "when": "2021",
+     "text": "A helicopter flies on Mars"
+    }
+   ]
+  },
+  "exampleNarration": "In 1783 the first hot-air balloon rose. In 1903 the Wright brothers flew. In 1969 we landed on the Moon. And in 2021 a helicopter flew on Mars."
+ }
+]

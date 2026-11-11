@@ -1,0 +1,58 @@
+/* chalkboard — chalk on slate: dusty strokes, pastel chalk colours, classroom math feel */
+:root {
+  --bg: #1E2B27;
+  --fg: #ECEDE6;
+  --ink: #ECEDE6;
+  --muted: #A9B3AA;
+  --accent: #F9E27D;
+  --accent-2: #F28B82;
+  --accent-3: #8FD3F4;
+  --surface: transparent;
+  --line: rgba(236, 237, 230, 0.6);
+  --on-accent: #1E2B27;
+  --bar-muted: rgba(236, 237, 230, 0.2);
+  --halo: rgba(249, 226, 125, 0);
+  --grid: transparent;
+  --radius: 0px;
+  --shadow: none;
+  --title-weight: 700;
+  --title-tracking: -0.01em;
+  --code-bg: rgba(0, 0, 0, 0.22);
+  --code-fg: #ECEDE6;
+  --code-chrome: rgba(0, 0, 0, 0.25);
+  --code-border: calc(var(--u) * 3) solid rgba(236, 237, 230, 0.7);
+  --shadow-lg: none;
+  --code-hi: rgba(249, 226, 125, 0.18);
+  --tk-k: #F9E27D;
+  --tk-s: #A8E6A1;
+  --tk-f: #8FD3F4;
+  --tk-n: #F28B82;
+  --tk-c: #8E9A91;
+  --neg: #F28B82;
+  --pos: #A8E6A1;
+  --edge: #ECEDE6;
+  --badge-bg: transparent;
+}
+/* chalk: slightly soft, dusty edges on everything drawn or written */
+.kind-whiteboard .v-title,
+.kind-whiteboard .v-text,
+.kind-whiteboard .v-statnum { text-shadow: 0 0 calc(var(--u) * 1.5) rgba(236, 237, 230, 0.45), 0 0 calc(var(--u) * 6) rgba(236, 237, 230, 0.12); }
+.kind-whiteboard svg path { filter: drop-shadow(0 0 calc(var(--u) * 1.2) rgba(236, 237, 230, 0.4)); }
+.kind-whiteboard .v-em { color: var(--accent); }
+.kind-whiteboard .v-kicker { color: var(--accent-3); letter-spacing: 0.14em; }
+.kind-whiteboard .v-card { background: transparent; box-shadow: none; }
+.kind-whiteboard .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 3) solid var(--accent); border-radius: 50% 46% 52% 48%; }
+.kind-whiteboard .v-icon-badge { background: transparent; border: calc(var(--u) * 3) solid currentColor; border-radius: 48% 52% 50% 46%; color: var(--fg); }
+.kind-whiteboard .v-vs { background: transparent; color: var(--accent-2); border: calc(var(--u) * 3) solid var(--accent-2); border-radius: 47% 53% 50% 48%; }
+.kind-whiteboard .t-timeline .v-dot { border-color: var(--ink); background: var(--bg); }
+.kind-whiteboard .t-timeline .v-tl-line { background: rgba(236, 237, 230, 0.3); }
+.kind-whiteboard .t-bars .v-bar { border-radius: 0; background: repeating-linear-gradient(-45deg, rgba(236, 237, 230, 0.55) 0 calc(var(--u) * 3), transparent calc(var(--u) * 3) calc(var(--u) * 12)); }
+.kind-whiteboard .t-bars .v-bar.is-hi { background: repeating-linear-gradient(-45deg, var(--accent) 0 calc(var(--u) * 4), transparent calc(var(--u) * 4) calc(var(--u) * 11)); }
+.kind-whiteboard .t-bars.is-h .v-track { background: transparent; border: calc(var(--u) * 2) solid rgba(236, 237, 230, 0.5); }
+.kind-whiteboard .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 3) var(--accent); }
+.kind-whiteboard .t-section .v-wipe { background: #16201D; }
+.kind-whiteboard .t-code .v-chrome { border-bottom: calc(var(--u) * 2) solid rgba(236, 237, 230, 0.5); }
+.kind-whiteboard .t-diagram .v-node.is-hub { background: transparent !important; color: var(--accent) !important; }
+.kind-whiteboard .t-line .v-lc-call { background: var(--accent); color: var(--bg); }
+.kind-whiteboard .t-line .v-lc-grid { stroke: rgba(236, 237, 230, 0.12); }
+.kind-whiteboard .t-stat .v-statnum { color: var(--accent); }

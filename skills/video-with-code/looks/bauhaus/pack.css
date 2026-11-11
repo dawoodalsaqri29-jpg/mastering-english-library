@@ -1,0 +1,42 @@
+/* bauhaus — primary colours, pure geometry, cream paper, heavy geometric type */
+:root {
+  --bg: #F1E9DA;
+  --fg: #1A1A1A;
+  --muted: #5C564C;
+  --accent: #D7263D;
+  --accent-2: #1B4F9C;
+  --accent-3: #F2B705;
+  --surface: #FBF6EC;
+  --line: #1A1A1A;
+  --on-accent: #FFFFFF;
+  --bar-muted: #D8CDB8;
+  --hl: rgba(242, 183, 5, 0.55);
+  --halo: transparent;
+  --shadow: none;
+  --card-border: calc(var(--u) * 3) solid #1A1A1A;
+  --radius: 0px;
+  --title-weight: 900;
+  --title-tracking: -0.03em;
+  --title-leading: 0.95;
+  --code-bg: #1A1A1A;
+  --neg: #D7263D;
+  --pos: #1B4F9C;
+  --edge: #1A1A1A;
+  --badge-bg: transparent;
+}
+.kind-minimal .v-title { text-transform: uppercase; }
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--accent-2); letter-spacing: 0.24em; font-weight: 800; }
+.kind-minimal .v-line { background: linear-gradient(90deg, var(--accent) 0 33%, var(--accent-3) 33% 66%, var(--accent-2) 66%); height: calc(var(--u) * 10); width: calc(var(--u) * 210); border-radius: 0; }
+.kind-minimal .v-num { background: var(--accent); color: #fff; border-radius: 50%; }
+.kind-minimal .v-icon-badge { background: var(--accent-3); color: var(--fg); border-radius: 50%; }
+.kind-minimal .v-statnum { color: var(--accent-2); font-weight: 900; }
+.kind-minimal .v-vs { background: var(--accent); color: #fff; border-radius: 50%; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--accent-2); }
+.kind-minimal .t-compare .v-side.is-right .v-side-title { color: var(--accent); }
+.kind-minimal .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: #fff; border-radius: 0; }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-timeline .v-dot { background: var(--accent-3); }

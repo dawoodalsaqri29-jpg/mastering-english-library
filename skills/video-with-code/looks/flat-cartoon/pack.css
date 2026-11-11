@@ -1,0 +1,45 @@
+/* flat-cartoon — sunny flat vector cartoon: thick outlines, candy colours, offset shadows */
+:root {
+  --bg: #FFF4DE;
+  --fg: #2D2A32;
+  --muted: #6B6573;
+  --accent: #FF6B6B;
+  --accent-2: #4D96FF;
+  --accent-3: #6BCB77;
+  --ray: rgba(255, 217, 61, 0.28);
+  --surface: #FFFFFF;
+  --line: #2D2A32;
+  --on-accent: #FFFFFF;
+  --bar-muted: #F1DFC0;
+  --hl: rgba(255, 217, 61, 0.7);
+  --halo: transparent;
+  --card-border: calc(var(--u) * 4) solid #2D2A32;
+  --shadow: calc(var(--u) * 7) calc(var(--u) * 7) 0 #2D2A32;
+  --shadow-lg: calc(var(--u) * 10) calc(var(--u) * 10) 0 #2D2A32;
+  --radius: calc(var(--u) * 26);
+  --title-weight: 900;
+  --title-tracking: -0.02em;
+  --code-bg: #2D2A32;
+  --neg: #FF6B6B;
+  --pos: #6BCB77;
+  --edge: #2D2A32;
+  --badge-bg: #FFD93D;
+}
+.kind-minimal .v-title { text-shadow: calc(var(--u) * 4) calc(var(--u) * 4) 0 #FFD93D; }
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { display: inline-block; background: var(--accent-2); color: #fff; padding: 0.3em 0.9em; border-radius: 999px; border: calc(var(--u) * 3) solid var(--fg); font-weight: 800; letter-spacing: 0.08em; }
+.kind-minimal .v-line { background: var(--accent); height: calc(var(--u) * 10); border-radius: 999px; border: calc(var(--u) * 3) solid var(--fg); }
+.kind-minimal .v-num { background: var(--accent-3); color: var(--fg); border: calc(var(--u) * 4) solid var(--fg); }
+.kind-minimal .v-icon-badge { background: #FFD93D; color: var(--fg); border: calc(var(--u) * 4) solid var(--fg); }
+.kind-minimal .v-statnum { color: var(--accent); text-shadow: calc(var(--u) * 7) calc(var(--u) * 7) 0 var(--fg); }
+.kind-minimal .v-vs { background: var(--accent); color: #fff; border: calc(var(--u) * 4) solid var(--fg); box-shadow: calc(var(--u) * 5) calc(var(--u) * 5) 0 var(--fg); }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--accent-2); }
+.kind-minimal .t-section .v-secnum { color: #FFD93D; -webkit-text-stroke: calc(var(--u) * 4) var(--fg); }
+.kind-minimal .t-section .v-wipe { background: var(--accent-2); }
+.kind-minimal .t-line .v-lc-call { background: var(--accent); color: #fff; border: calc(var(--u) * 3) solid var(--fg); }
+.kind-minimal .t-bars .v-bar { border: calc(var(--u) * 4) solid var(--fg); }
+.kind-minimal .t-bars .v-bar.is-hi { background: var(--accent); }
+.kind-minimal .t-timeline .v-dot { border: calc(var(--u) * 4) solid var(--fg); background: #FFD93D; }
+
+.v-kicker { width: fit-content; max-width: 100%; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }

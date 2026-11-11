@@ -1,0 +1,42 @@
+/* swiss-grid — International Typographic Style: grid, flush-left grotesk, one red */
+:root {
+  --bg: #F2F0EB;
+  --fg: #111111;
+  --muted: #5E5E5E;
+  --accent: #E30613;
+  --accent-2: #0057B8;
+  --accent-3: #F2A900;
+  --surface: #FFFFFF;
+  --line: #111111;
+  --grid: rgba(17, 17, 17, 0.07);
+  --on-accent: #FFFFFF;
+  --bar-muted: #CFCBC2;
+  --hl: rgba(227, 6, 19, 0.2);
+  --halo: rgba(227, 6, 19, 0);
+  --shadow: none;
+  --radius: 0px;
+  --card-border: 0;
+  --title-weight: 800;
+  --title-tracking: -0.045em;
+  --title-leading: 0.96;
+  --code-bg: #111111;
+  --neg: #E30613;
+  --pos: #00875A;
+  --edge: #111111;
+  --badge-bg: #111111;
+}
+.kind-minimal .v-em { color: var(--accent); }
+.kind-minimal .v-kicker { color: var(--fg); letter-spacing: 0.08em; font-weight: 700; }
+.kind-minimal .v-kicker::before { content: ""; display: inline-block; width: 0.7em; height: 0.7em; margin-right: 0.6em; background: var(--accent); vertical-align: -0.04em; }
+.kind-minimal .v-line { background: var(--fg); height: calc(var(--u) * 6); width: calc(var(--u) * 160); border-radius: 0; }
+.kind-minimal .v-card { border-top: calc(var(--u) * 8) solid var(--fg); box-shadow: none; }
+.kind-minimal .v-num { background: var(--accent); color: #fff; border-radius: 0; }
+.kind-minimal .v-icon-badge { background: var(--fg); color: #fff; border-radius: 0; }
+.kind-minimal .v-statnum { letter-spacing: -0.06em; }
+.kind-minimal .v-vs { background: var(--accent); color: #fff; border-radius: 0; }
+.kind-minimal .t-compare .v-side.is-left .v-side-title { color: var(--fg); }
+.kind-minimal .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; }
+.kind-minimal .t-section .v-wipe { background: var(--accent); }
+.kind-minimal .t-line .v-lc-call { background: var(--fg); color: #fff; border-radius: 0; }
+.kind-minimal .t-timeline .v-dot { border-radius: 0; }
+.kind-minimal .t-bars .v-bar { border-radius: 0; }

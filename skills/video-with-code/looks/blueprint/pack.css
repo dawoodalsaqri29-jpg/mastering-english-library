@@ -1,0 +1,59 @@
+/* blueprint — engineering drawing: white linework on blueprint blue, grid, title block, dimension lines */
+:root {
+  --bg: #0F3B66;
+  --fg: #EAF4FF;
+  --ink: #EAF4FF;
+  --muted: rgba(234, 244, 255, 0.65);
+  --accent: #FFD166;
+  --accent-2: #FF7B7B;
+  --accent-3: #9AD1FF;
+  --grid-minor: rgba(234, 244, 255, 0.06);
+  --grid-major: rgba(234, 244, 255, 0.14);
+  --grid: transparent;
+  --surface: transparent;
+  --line: rgba(234, 244, 255, 0.55);
+  --on-accent: #0F3B66;
+  --bar-muted: rgba(234, 244, 255, 0.18);
+  --halo: transparent;
+  --radius: 0px;
+  --shadow: none;
+  --shadow-lg: none;
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 600;
+  --title-tracking: 0.02em;
+  --code-bg: rgba(8, 36, 64, 0.85);
+  --code-fg: #EAF4FF;
+  --code-chrome: rgba(8, 36, 64, 0.9);
+  --code-border: calc(var(--u) * 2) solid rgba(234, 244, 255, 0.55);
+  --code-hi: rgba(255, 209, 102, 0.15);
+  --tk-k: #FFD166;
+  --tk-s: #7CE0B6;
+  --tk-f: #9AD1FF;
+  --tk-n: #FF7B7B;
+  --tk-c: rgba(234, 244, 255, 0.5);
+  --neg: #FF7B7B;
+  --pos: #7CE0B6;
+  --edge: #EAF4FF;
+  --badge-bg: transparent;
+}
+.kind-whiteboard .v-title { text-transform: uppercase; }
+.kind-whiteboard .v-em { color: var(--accent); }
+.kind-whiteboard .v-kicker { color: var(--accent-3); letter-spacing: 0.2em; font-family: var(--font-kicker); }
+.kind-whiteboard .v-card { background: rgba(15, 59, 102, 0.6); box-shadow: none; }
+.kind-whiteboard .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 2) solid var(--accent); border-radius: 50%; font-family: var(--font-kicker); }
+.kind-whiteboard .v-icon-badge { background: transparent; border: calc(var(--u) * 2) solid currentColor; border-radius: 50%; color: var(--fg); }
+.kind-whiteboard .v-statnum { font-family: var(--font-kicker); }
+.kind-whiteboard .v-vs { background: transparent; color: var(--accent); border: calc(var(--u) * 2) solid var(--accent); border-radius: 50%; font-family: var(--font-kicker); }
+.kind-whiteboard .t-timeline .v-dot { border-color: var(--ink); background: var(--bg); }
+.kind-whiteboard .t-timeline .v-tl-line { background: rgba(234, 244, 255, 0.35); }
+.kind-whiteboard .t-timeline .v-date { font-family: var(--font-kicker); }
+.kind-whiteboard .t-bars .v-bar { border-radius: 0; background: repeating-linear-gradient(45deg, rgba(234, 244, 255, 0.5) 0 1px, transparent 1px calc(var(--u) * 8)); border: 1px solid var(--ink); }
+.kind-whiteboard .t-bars .v-bar.is-hi { background: repeating-linear-gradient(45deg, var(--accent) 0 calc(var(--u) * 2), transparent calc(var(--u) * 2) calc(var(--u) * 7)); border-color: var(--accent); }
+.kind-whiteboard .t-bars.is-h .v-track { background: transparent; border: 1px solid rgba(234, 244, 255, 0.5); }
+.kind-whiteboard .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 2) var(--fg); font-family: var(--font-kicker); }
+.kind-whiteboard .t-section .v-wipe { background: #0A2C4D; }
+.kind-whiteboard .t-code .v-chrome { border-bottom: 1px solid rgba(234, 244, 255, 0.5); }
+.kind-whiteboard .t-diagram .v-node.is-hub { background: transparent !important; color: var(--accent) !important; }
+.kind-whiteboard .t-line .v-lc-call { background: var(--accent); color: var(--bg); font-family: var(--font-kicker); }
+.kind-whiteboard .t-line .v-lc-grid { stroke: rgba(234, 244, 255, 0.12); }
+.kind-whiteboard .t-stat .v-statnum { color: var(--accent); }

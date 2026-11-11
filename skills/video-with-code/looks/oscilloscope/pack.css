@@ -1,0 +1,57 @@
+/* oscilloscope — green phosphor vector display: graticule, glowing traces, CRT scanlines */
+:root {
+  --bg: #020A06;
+  --fg: #C8FFDC;
+  --muted: #4F8F68;
+  --accent: #39FF88;
+  --accent-2: #FFB000;
+  --accent-3: #5CE1FF;
+  --glow-rgb: 57, 255, 136;
+  --grat: rgba(57, 255, 136, 0.09);
+  --grat-strong: rgba(57, 255, 136, 0.2);
+  --surface: rgba(4, 24, 14, 0.7);
+  --line: rgba(57, 255, 136, 0.25);
+  --on-accent: #020A06;
+  --bar-muted: rgba(57, 255, 136, 0.22);
+  --halo: rgba(57, 255, 136, 0.1);
+  --card-border: 1px solid rgba(57, 255, 136, 0.45);
+  --shadow: 0 0 calc(var(--u) * 30) rgba(57, 255, 136, 0.12), inset 0 0 calc(var(--u) * 30) rgba(57, 255, 136, 0.05);
+  --shadow-lg: 0 0 calc(var(--u) * 50) rgba(57, 255, 136, 0.16);
+  --radius: calc(var(--u) * 6);
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 700;
+  --title-tracking: -0.02em;
+  --code-bg: rgba(2, 14, 8, 0.92);
+  --code-border: 1px solid rgba(57, 255, 136, 0.45);
+  --code-hi: rgba(57, 255, 136, 0.12);
+  --tk-k: #FFB000;
+  --tk-s: #C6FF6B;
+  --tk-f: #5CE1FF;
+  --tk-n: #FF6B8B;
+  --tk-c: #4F8F68;
+  --neg: #FF6B8B;
+  --pos: #39FF88;
+  --edge: rgba(57, 255, 136, 0.75);
+  --badge-bg: rgba(57, 255, 136, 0.08);
+}
+.kind-neon .v-title { text-shadow: 0 0 calc(var(--u) * 18) rgba(57, 255, 136, 0.45); }
+.kind-neon .v-text { text-shadow: 0 0 calc(var(--u) * 10) rgba(57, 255, 136, 0.25); }
+.kind-neon .v-em { color: var(--accent-2); text-shadow: 0 0 calc(var(--u) * 20) rgba(255, 176, 0, 0.7); }
+.kind-neon .v-kicker { letter-spacing: 0.24em; font-weight: 600; color: var(--accent); text-shadow: 0 0 calc(var(--u) * 12) rgba(57, 255, 136, 0.8); }
+.kind-neon .v-kicker::before { content: "CH1 \00B7  "; opacity: 0.6; }
+.kind-neon .v-line { height: calc(var(--u) * 3); width: calc(var(--u) * 220); background: var(--accent); box-shadow: 0 0 calc(var(--u) * 16) rgba(57, 255, 136, 0.9); }
+.kind-neon .v-statnum { color: var(--accent); font-family: var(--font-kicker); text-shadow: 0 0 calc(var(--u) * 26) rgba(57, 255, 136, 0.9); }
+.kind-neon .v-num { background: transparent; color: var(--accent); border: calc(var(--u) * 2) solid var(--accent); box-shadow: 0 0 calc(var(--u) * 14) rgba(57, 255, 136, 0.5); font-family: var(--font-kicker); }
+.kind-neon .v-icon-badge { border: 1px solid rgba(57, 255, 136, 0.5); color: var(--accent); box-shadow: 0 0 calc(var(--u) * 14) rgba(57, 255, 136, 0.25); }
+.kind-neon .v-bar.is-hi { background: var(--accent); box-shadow: 0 0 calc(var(--u) * 24) rgba(57, 255, 136, 0.6); }
+.kind-neon .t-bars .v-val, .kind-neon .t-bars .v-hval { font-family: var(--font-kicker); }
+.kind-neon .v-vs { background: var(--bg); color: var(--accent-2); border: calc(var(--u) * 2) solid var(--accent-2); box-shadow: 0 0 calc(var(--u) * 20) rgba(255, 176, 0, 0.6); font-family: var(--font-kicker); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--accent-2); }
+.kind-neon .t-timeline .v-date { font-family: var(--font-kicker); color: var(--accent); }
+.kind-neon .t-timeline .v-tl-prog { box-shadow: 0 0 calc(var(--u) * 14) rgba(57, 255, 136, 0.9); }
+.kind-neon .t-section .v-secnum { color: transparent; -webkit-text-stroke: calc(var(--u) * 2) var(--accent); filter: drop-shadow(0 0 calc(var(--u) * 14) rgba(57, 255, 136, 0.8)); }
+.kind-neon .t-section .v-wipe { background: var(--accent); }
+.kind-neon .t-line .v-lc-line { filter: drop-shadow(0 0 calc(var(--u) * 8) rgba(57, 255, 136, 0.9)); }
+.kind-neon .t-line .v-lc-call { background: var(--accent); color: var(--bg); font-family: var(--font-kicker); }
+.kind-neon .t-diagram .v-edge { filter: drop-shadow(0 0 calc(var(--u) * 5) rgba(57, 255, 136, 0.8)); }
+.kind-neon .t-kinetic .v-kw.is-em { color: var(--accent-2); }

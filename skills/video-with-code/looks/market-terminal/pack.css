@@ -1,0 +1,54 @@
+/* market-terminal — trading-desk dashboard: black, amber headers, green/red moves, dense mono data */
+:root {
+  --bg: #0A0A0A;
+  --fg: #F2F2F2;
+  --muted: #8C8C8C;
+  --accent: #FF9F1C;
+  --accent-2: #3FA9F5;
+  --accent-3: #00C076;
+  --glow-rgb: 255, 159, 28;
+  --grid: rgba(255, 255, 255, 0.035);
+  --surface: #121212;
+  --line: #262626;
+  --on-accent: #0A0A0A;
+  --bar-muted: #2B2B2B;
+  --halo: transparent;
+  --card-border: 1px solid #2A2A2A;
+  --shadow: none;
+  --shadow-lg: none;
+  --radius: calc(var(--u) * 4);
+  --font-kicker: "JetBrains Mono", "Noto Sans Mono", "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  --title-weight: 700;
+  --title-tracking: -0.02em;
+  --code-bg: #111111;
+  --code-border: 1px solid #2A2A2A;
+  --code-hi: rgba(255, 159, 28, 0.12);
+  --tk-k: #FF9F1C;
+  --tk-s: #00C076;
+  --tk-f: #3FA9F5;
+  --tk-n: #B37FEB;
+  --neg: #FF3B30;
+  --pos: #00C076;
+  --edge: #8C8C8C;
+  --badge-bg: rgba(255, 159, 28, 0.08);
+}
+.kind-neon .v-em { color: var(--accent); }
+.kind-neon .v-kicker { color: var(--bg); background: var(--accent); padding: 0.2em 0.6em; letter-spacing: 0.08em; font-weight: 700; display: inline-block; }
+.kind-neon .v-line { height: calc(var(--u) * 3); width: calc(var(--u) * 160); background: var(--accent); }
+.kind-neon .v-card { border-top: calc(var(--u) * 3) solid var(--accent); }
+.kind-neon .v-statnum { color: var(--fg); font-family: var(--font-kicker); letter-spacing: -0.04em; }
+.kind-neon .v-num { background: var(--accent); color: var(--bg); border-radius: calc(var(--u) * 4); font-family: var(--font-kicker); }
+.kind-neon .v-icon-badge { color: var(--accent); border: 1px solid #333; border-radius: calc(var(--u) * 4); }
+.kind-neon .t-bars .v-val, .kind-neon .t-bars .v-hval { font-family: var(--font-kicker); }
+.kind-neon .v-bar.is-hi { background: var(--accent); }
+.kind-neon .v-vs { background: var(--accent); color: var(--bg); border-radius: calc(var(--u) * 4); font-family: var(--font-kicker); }
+.kind-neon .t-compare .v-side.is-left .v-side-title { color: var(--neg); }
+.kind-neon .t-compare .v-side.is-right .v-side-title { color: var(--pos); }
+.kind-neon .t-timeline .v-date { font-family: var(--font-kicker); color: var(--accent); }
+.kind-neon .t-section .v-secnum { color: var(--accent); -webkit-text-stroke: 0; font-family: var(--font-kicker); }
+.kind-neon .t-section .v-wipe { background: var(--accent); }
+.kind-neon .t-line .v-lc-line { stroke: var(--pos); }
+.kind-neon .t-line .v-lc-call { background: var(--accent); color: var(--bg); font-family: var(--font-kicker); }
+
+.v-kicker { width: fit-content; max-width: 100%; }
+.v-center .v-kicker, .v-header.v-center .v-kicker { margin-left: auto; margin-right: auto; }
