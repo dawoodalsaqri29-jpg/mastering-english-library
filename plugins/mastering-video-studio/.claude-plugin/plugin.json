@@ -1,7 +1,16 @@
 {
   "name": "mastering-video-studio",
-  "version": "0.1.2",
-  "description": "All 19 coded video styles plus Sketch to Motion, with one studio skill that writes, voices (free Kokoro Isabella) and renders Mastering English Library videos in 4K.",
-  "author": { "name": "Dawood Al-Saqri" },
-  "keywords": ["youtube", "video", "animation", "english-learning", "shorts", "documentary"]
+  "version": "0.2.0",
+  "description": "Mastering English Library video studio: the full YouTube agent (topic, script, fact check, 19 animated styles, Isabella voice, English + Arabic subtitles, 4K, thumbnail, publishing on approval) plus Sketch to Motion Shorts.",
+  "author": {
+    "name": "Dawood Al-Saqri"
+  },
+  "keywords": [
+    "youtube",
+    "video",
+    "animation",
+    "english-learning",
+    "shorts",
+    "documentary"
+  ]
 }

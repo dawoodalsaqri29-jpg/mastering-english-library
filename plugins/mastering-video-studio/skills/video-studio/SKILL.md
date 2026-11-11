@@ -7,6 +7,8 @@ description: Produces Mastering English Library YouTube videos from code in any 
 
 This skill is the front door to the plugin. It picks the style, writes the scenes, voices them and renders the video. Each style has its own skill in this plugin (same folder name), with its templates, props and art rules.
 
+For a full YouTube video from topic to upload (script, fact check, subtitles, thumbnail, YouTube text), use the `youtube-agent` skill in this plugin: it is the main workflow. This skill is the quick renderer for a ready scene list.
+
 ## Channel rules (always)
 
 - **Shorts** (9:16, 15 to 60 s): about words only, such as vocabulary, phrases and mistakes. Best formats: Sketch to Motion ("Name it before I do!"), anime dialogue, pictogram rules, stick-figure.

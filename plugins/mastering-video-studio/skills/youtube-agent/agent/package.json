@@ -1,0 +1,11 @@
+{
+  "name": "youtube-agent-claude-code",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "doctor": "node tools/doctor.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.64.1"
+  }
+}
