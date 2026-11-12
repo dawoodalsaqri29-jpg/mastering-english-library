@@ -3,6 +3,10 @@
 // second reading in Chromium itself (checkDomLinks). Usage: node site-safety.js <repo root>
 const fs = require("fs"), path = require("path"), zlib = require("zlib");
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://static.wixstatic.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
+// Transition (security review 2026-11-12): the same policy without 'unsafe-inline' in style-src is also accepted, so the
+// pages can move to it. Once every page uses it, CSP becomes this value and the old one is no longer accepted.
+const CSP_STRICT = CSP.replace("style-src 'self' 'unsafe-inline'", "style-src 'self'");
+const APPROVED_CSPS = [CSP, CSP_STRICT];
 // PR-B (CSP on every page) sets this to true.
 const REQUIRE_CSP = true;
 // Every script file the pages may load, and every outside host. A new one fails until it is added here on purpose,
@@ -118,7 +122,7 @@ function checkSafety(ROOT) {
       const csps = [...text.matchAll(/<meta\b[^>]*http-equiv\s*=\s*["']?content-security-policy[^>]*>/gi)];
       const head = text.split(/<\/head\s*>/i)[0];
       if (csps.length !== 1) safety.push(f + ": needs exactly one CSP meta, found " + csps.length);
-      else if (attr(csps[0][0], "content") !== CSP) safety.push(f + ": CSP differs from the approved policy");
+      else if (!APPROVED_CSPS.includes(attr(csps[0][0], "content"))) safety.push(f + ": CSP differs from the approved policy");
       else if (!head.includes(csps[0][0]) || head.indexOf(csps[0][0]) > head.search(/<script\b|<link\b/i) && head.search(/<script\b|<link\b/i) >= 0) safety.push(f + ": CSP meta must be in <head> before any <script> or <link>");
     }
   }
