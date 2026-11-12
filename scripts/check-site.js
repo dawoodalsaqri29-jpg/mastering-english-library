@@ -136,10 +136,12 @@ async function checkBrowser(pages) {
       want: (window.BOOKS || []).filter((b) => b.link).length,
       got: document.querySelectorAll("#grid a.btn").length,
       store: (document.getElementById("storeBtn") || {}).href || "",
+      // Every store link carries utm_source, so Wix analytics can tell sales from this site (assets/store.js withUtm).
+      untagged: [...document.querySelectorAll("#grid a.btn, #storeBtn")].filter((a) => !new URL(a.href).searchParams.get("utm_source")).length,
       site: (() => { try { return new URL((window.SITE || {}).storeUrl).href; } catch (e) { return "bad: " + (window.SITE || {}).storeUrl; } })(),
     }));
-    record("Store buttons all work", buy.want > 0 && buy.got === buy.want && buy.store === buy.site && /^https:\/\/www\.masteringenglishlibrary\.com\//.test(buy.store),
-      buy.got + " of " + buy.want + " Get PDF buttons; store " + (buy.store || "(none)"));
+    record("Store buttons all work", buy.want > 0 && buy.got === buy.want && buy.store.split("?")[0] === buy.site && !buy.untagged && /^https:\/\/www\.masteringenglishlibrary\.com\//.test(buy.store),
+      buy.got + " of " + buy.want + " Get PDF buttons; " + buy.untagged + " without UTM tags; store " + (buy.store || "(none)"));
     // Teachers page: the course map lists every lesson, a working contact link exists, and an outreach tag (?ref=)
     // survives a visit to a lesson and reaches the store links and the contact message.
     await page.goto(base + "teachers.html?ref=test");

@@ -17,6 +17,7 @@ Last updated: 2026-11-12
 - Site CSP tightened (2026-11-12): no style-src 'unsafe-inline' on any page; the safety check accepts only the strict policy (PRs #81, #82, #83, merged).
 - Ruflo reviewed 2026-11-12: runtime not installed (unpinned hooks on every command). Its "pods" idea is in ROSTER.md
   "Pods by channel": site, YouTube, Instagram and TikTok, store and sales, each with a lead, members, rhythm and measure.
+- Floorplan fixes (branch claude/dreamy-cannon-2mtb6s, 2026-11-12): store links carry UTM tags (library-site / shop or teachers), 8 covers moved to assets/covers/*.webp, safety rules accept a CSP without static.wixstatic.com (step 1 of 3). Next: step 2 drops wixstatic from every page's CSP, step 3 makes it the only policy.
 - swarm-sim skill (MiroFish-style, 2026-11-12): first run with 30 people, 2 rounds, on 5 real pages. Result: 0 buy, 30 free only.
   Top blockers: unknown owner and no reviews (17), no IELTS promise (11), USD and foreign payment (11), no free sample of a paid
   pack (10, plus 14 more after the group chat), unclear class-set price and invoice (8). Shipped: rial and riyal prices on the store cards; Exam Quick-Packs now names its task types (graph description,
@@ -42,6 +43,7 @@ Last updated: 2026-11-12
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-12: Floorplan (haydenschmitty/floorplan @5e3eaac, MIT, run from scratchpad, not installed) mapped the site: 97 files, 0 unassigned, Health 0 issues; check-site all green. Map given to the owner as a file; floorplan/ stays out of git.
 - 2026-11-09: Owner connected Manual Payments (mobile transfer, Oman). Payment line (PayPal or mobile transfer, link within 12 h) added to the descriptions of the 61 paid products; 3 free products left as they are.
 - 2026-11-09: Published the Wix blog post «الاستعداد لاختبار الآيلتس: الدرجات والمستويات وخطة التحضير» (IELTS queries). Band-to-CEFR table marked approximate, as IELTS itself says. Three Arabic posts now live: level, vocabulary, IELTS. Next: check Wix search queries for clicks in 2–3 weeks.
 - 2026-11-09: Published the Wix blog post «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة».
