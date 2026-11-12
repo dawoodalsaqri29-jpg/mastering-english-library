@@ -61,7 +61,7 @@ window.BOOKS = [
     subtitle: "Complete Bundle · 6 PDFs",
     level: "B1–C1",
     category: "Bundles",
-    description: "Short, focused practice for academic English exams, with full answer keys. Save $18.",
+    description: "Graph description, True/False/Not Given, matching headings, paraphrasing, spelling traps and a 14-day plan, with full answer keys. Practice for academic exams such as IELTS Academic. Save $18.",
     price: "$24",
     cover: "assets/covers/exam-quick-packs.webp",
     link: "https://www.masteringenglishlibrary.com/product-page/exam-quick-packs-complete-bundle-all-6-pdfs",

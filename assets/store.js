@@ -49,6 +49,14 @@
     </div>`;
   }
 
+  // The rial and the riyal are pegged to the dollar, so these fixed rates stay right (buyers asked to see local prices).
+  function localPrice(price) {
+    const m = /^\$(\d+(?:\.\d+)?)$/.exec(String(price).trim());
+    if (!m) return "";
+    const usd = Number(m[1]);
+    return `<small class="local">≈ ${(usd * 0.385).toFixed(1)} OMR · ${Math.round(usd * 3.75)} SAR</small>`;
+  }
+
   function card(b, i) {
     // Titles without a real link show a disabled "Coming soon" label instead of a button that jumps to the top.
     const link = withUtm(safeUrl(b.link));
@@ -61,7 +69,7 @@
         <div class="meta"><span class="tag">${esc(b.level)}</span><span class="tag cat">${esc(b.category)}</span></div>
         <h3>${esc(b.title)}</h3>
         <p>${esc(b.description)}</p>
-        <div class="buy"><span class="price">${esc(b.price)}</span>${action}</div>
+        <div class="buy"><span class="price">${esc(b.price)}${localPrice(b.price)}</span>${action}</div>
       </div>
     </article>`;
   }
