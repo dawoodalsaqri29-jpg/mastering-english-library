@@ -4,7 +4,7 @@ Claude keeps this file current so a new session, or a session after its context 
 knows exactly where work stands. One line per item. No secrets, no private contact details:
 the repo is public. Update it in the same commit as the work it describes.
 
-Last updated: 2026-11-08
+Last updated: 2026-11-12
 
 ## In progress
 - Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
@@ -14,6 +14,9 @@ Last updated: 2026-11-08
   SEO check, SECURITY.md, Dependabot, CSP. Done: safe links (PR #60). Done: daily live check (PR #61, first manual run green, no API errors). Next:
   PDF byte check (PR #62). seo-content-brief + roster (PR #63). The plan's Claude part is done. Owner part P0
   (2FA everywhere, Wix roles, payments and custom code, remove ChatPlace access) waits on the owner.
+- Site CSP tightened (2026-11-12): no style-src 'unsafe-inline' on any page; the safety check accepts only the strict policy (PRs #81, #82, #83, merged).
+- Ruflo reviewed 2026-11-12: runtime not installed (unpinned hooks on every command). Its "pods" idea is in ROSTER.md
+  "Pods by channel": site, YouTube, Instagram and TikTok, store and sales, each with a lead, members, rhythm and measure.
 - (none waiting on CI)
 
 ## Waiting on the owner
