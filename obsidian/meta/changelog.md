@@ -280,3 +280,15 @@ budget, visibility, draw range and pointer binding without compiling a program.
 updated to match; §14 gained a tier-switch round-trip check. Reasoning in
 [[decisions-log]] ADR-0023. Measured on the project that surfaced it: phone
 390×844 / 3 draws ↔ desktop 2160×1350 / 4 draws, program count unchanged.
+
+## 2026-11-12 — Security pass
+
+- `next` and `eslint-config-next` 16.3.7 → 16.4.3; `zod` ^4.6.5 → ^4.6.7. 16.3.7 had two critical advisories
+  (unauthenticated RCE in image optimisation and `use cache`), plus SSRF, DoS and cache-poisoning issues.
+- `resolutions`: `source-map-js` 1.2.2 and `baseline-browser-mapping` 2.11.33 (fixed versions of Next's transitive deps).
+  `yarn audit --groups dependencies`: 0 vulnerabilities. Dev-only advisories remain in the eslint-config-next tree.
+- Removed the starter's example `app/api/contact` route: nothing called it, it had no rate limit or origin check,
+  and it logged visitors' names and emails. Add a real route (zod, rate limit, origin check, no PII in logs) when needed.
+- `next.config.ts` sends HSTS, `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy` and
+  `Permissions-Policy` on every response. A Content-Security-Policy needs a per-request nonce for Next's inline
+  scripts; add it in `src/proxy.ts` before launch.

@@ -4,6 +4,24 @@ const nextConfig: NextConfig = {
   // Drop the `X-Powered-By: Next.js` response header.
   poweredByHeader: false,
 
+  // Security headers on every response. A Content-Security-Policy needs a
+  // per-request nonce for Next's inline scripts, so it belongs in src/proxy.ts
+  // once the site goes live (see obsidian/meta/changelog.md, 2026-11-12).
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "DENY" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=()" },
+        ],
+      },
+    ];
+  },
+
   compiler: {
     // Strip `console.*` from production bundles, keeping error/warn for
     // monitoring. Left on in dev so logs stay available.

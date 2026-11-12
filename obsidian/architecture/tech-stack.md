@@ -12,7 +12,7 @@ Package name: `next16-claude-starter` · version `0.1.0` · private.
 
 | Package | Version | Role |
 |---------|---------|------|
-| `next` | `16.3.7` | App Router framework. ⚠️ See warning below. |
+| `next` | `16.4.3` | App Router framework. ⚠️ See warning below. |
 | `react` / `react-dom` | `19.3.0` | UI runtime |
 | `typescript` | `^5` | Type system — `any` is banned |
 
@@ -109,7 +109,7 @@ only when a project needs them (ADR-0020):
 
 > [!note] Payload compatibility — verified 2026-10-07
 > The kits are proven on Payload **3.89** (`next >=16.2.6 <17`; 3.90 wants
-> ≥ 16.3.3). The starter is on `16.3.7`. Pin every `@payloadcms/*` + `payload` to
+> ≥ 16.3.3). The project is on `16.4.3`. Pin every `@payloadcms/*` + `payload` to
 > one exact version, and run the Payload CLI on **Node ≥ 22** (on 20.17 it exits
 > 0 and does nothing). Re-check when either side moves.
 
