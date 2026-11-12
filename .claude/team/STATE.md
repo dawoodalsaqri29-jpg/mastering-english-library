@@ -17,6 +17,7 @@ Last updated: 2026-11-12
 - Site CSP tightened (2026-11-12): no style-src 'unsafe-inline' on any page; the safety check accepts only the strict policy (PRs #81, #82, #83, merged).
 - Ruflo reviewed 2026-11-12: runtime not installed (unpinned hooks on every command). Its "pods" idea is in ROSTER.md
   "Pods by channel": site, YouTube, Instagram and TikTok, store and sales, each with a lead, members, rhythm and measure.
+- Floorplan fixes (branch claude/dreamy-cannon-2mtb6s, 2026-11-12): store links carry UTM tags (library-site / shop or teachers), 8 covers moved to assets/covers/*.webp, safety rules accept a CSP without static.wixstatic.com (step 1 of 3). Next: step 2 drops wixstatic from every page's CSP, step 3 makes it the only policy.
 - (none waiting on CI)
 
 ## Waiting on the owner

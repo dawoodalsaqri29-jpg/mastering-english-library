@@ -26,6 +26,18 @@
       return x.protocol === "https:" && !x.username && !x.password && STORE_HOSTS.includes(x.host) ? x.href : "";
     } catch (e) { return ""; }
   };
+  // Every store link carries UTM tags so the Wix store's analytics shows which sales came from this site.
+  // A link that already has utm_source keeps its own tags.
+  const withUtm = (u) => {
+    if (!u) return "";
+    const x = new URL(u);
+    if (!x.searchParams.has("utm_source")) {
+      x.searchParams.set("utm_source", "library-site");
+      x.searchParams.set("utm_medium", "referral");
+      x.searchParams.set("utm_campaign", "shop");
+    }
+    return x.href;
+  };
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function cover(b, i) {
@@ -39,7 +51,7 @@
 
   function card(b, i) {
     // Titles without a real link show a disabled "Coming soon" label instead of a button that jumps to the top.
-    const link = safeUrl(b.link);
+    const link = withUtm(safeUrl(b.link));
     const action = link
       ? `<a class="btn btn-small" href="${esc(link)}" target="_blank" rel="noopener">Get PDF</a>`
       : `<span class="btn btn-small btn-soon" aria-disabled="true">Coming soon</span>`;
@@ -91,7 +103,7 @@
   document.getElementById("statCount").textContent = books.length;
   document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById("author").textContent = site.author || site.name || "";
-  const store = safeUrl(site.storeUrl);
+  const store = withUtm(safeUrl(site.storeUrl));
   if (store) {
     const s = document.getElementById("storeBtn");
     s.href = store; s.target = "_blank"; s.rel = "noopener"; s.textContent = "Visit store";

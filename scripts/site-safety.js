@@ -3,6 +3,9 @@
 // second reading in Chromium itself (checkDomLinks). Usage: node site-safety.js <repo root>
 const fs = require("fs"), path = require("path"), zlib = require("zlib");
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://static.wixstatic.com; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests";
+// Transition (step 1 of 3): the book covers now live in assets/covers/, so pages may also drop static.wixstatic.com
+// from img-src. Step 2 changes every page to CSP_NEXT; step 3 makes CSP_NEXT the only accepted policy.
+const CSP_NEXT = CSP.replace(" https://static.wixstatic.com", "");
 // PR-B (CSP on every page) sets this to true.
 const REQUIRE_CSP = true;
 // Every script file the pages may load, and every outside host. A new one fails until it is added here on purpose,
@@ -118,7 +121,7 @@ function checkSafety(ROOT) {
       const csps = [...text.matchAll(/<meta\b[^>]*http-equiv\s*=\s*["']?content-security-policy[^>]*>/gi)];
       const head = text.split(/<\/head\s*>/i)[0];
       if (csps.length !== 1) safety.push(f + ": needs exactly one CSP meta, found " + csps.length);
-      else if (attr(csps[0][0], "content") !== CSP) safety.push(f + ": CSP differs from the approved policy");
+      else if (![CSP, CSP_NEXT].includes(attr(csps[0][0], "content"))) safety.push(f + ": CSP differs from the approved policy");
       else if (!head.includes(csps[0][0]) || head.indexOf(csps[0][0]) > head.search(/<script\b|<link\b/i) && head.search(/<script\b|<link\b/i) >= 0) safety.push(f + ": CSP meta must be in <head> before any <script> or <link>");
     }
   }

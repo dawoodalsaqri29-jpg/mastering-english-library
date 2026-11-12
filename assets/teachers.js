@@ -19,7 +19,8 @@
     }
   } catch (e) { /* storage blocked: use only the tag in this page's address */ }
   var tagged = function (s) { return s + (ref ? " [" + ref + "]" : ""); };
-  var tag = function (url) { return ref ? url + (url.indexOf("?") < 0 ? "?" : "&") + "utm_source=" + ref + "&utm_medium=referral&utm_campaign=institutes" : url; };
+  // Store links always carry UTM tags (Wix analytics then shows sales from this page); an institute ?ref= tag wins.
+  var tag = function (url) { return url + (url.indexOf("?") < 0 ? "?" : "&") + (ref ? "utm_source=" + ref + "&utm_medium=referral&utm_campaign=institutes" : "utm_source=library-site&utm_medium=referral&utm_campaign=teachers"); };
   var isStore = function (url) { return /^https:\/\/www\.masteringenglishlibrary\.com\//.test(url || ""); };
 
   // Paid packs, each linking to its own store page.
