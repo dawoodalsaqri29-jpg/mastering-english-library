@@ -34,6 +34,7 @@ Last updated: 2026-11-12
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-12: Floorplan (haydenschmitty/floorplan @5e3eaac, MIT, run from scratchpad, not installed) mapped the site: 97 files, 0 unassigned, Health 0 issues; check-site all green. Map given to the owner as a file; floorplan/ stays out of git.
 - 2026-11-09: Owner connected Manual Payments (mobile transfer, Oman). Payment line (PayPal or mobile transfer, link within 12 h) added to the descriptions of the 61 paid products; 3 free products left as they are.
 - 2026-11-09: Published the Wix blog post «الاستعداد لاختبار الآيلتس: الدرجات والمستويات وخطة التحضير» (IELTS queries). Band-to-CEFR table marked approximate, as IELTS itself says. Three Arabic posts now live: level, vocabulary, IELTS. Next: check Wix search queries for clicks in 2–3 weeks.
 - 2026-11-09: Published the Wix blog post «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة».
