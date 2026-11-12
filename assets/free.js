@@ -62,10 +62,12 @@
       progress.hidden = !n;
       if (n) progress.innerHTML = `You have finished <strong>${n}</strong> of ${lessons.length} free lessons. <a href="library.html?done=hide">Continue with the rest &rarr;</a>`;
     }
+    // Only lesson pages may become links: a bad path in the JSON (javascript:, another host) turns into "#".
+    const safePath = (p) => (/^lessons\/[a-z0-9-]+\.html$/.test(p) ? p : "#");
     // Keep the home page short: 8 lessons across levels, or 6 across skills for one level.
     // The full, filtered list lives on library.html.
     const list = lv === "All" ? mixed(pool) : sample(levelPool(lv, fresh), 6, "skill");
-    grid.innerHTML = list.map((l) => `<a class="free-card" href="${esc(l.path)}">
+    grid.innerHTML = list.map((l) => `<a class="free-card" href="${esc(safePath(l.path))}">
       <div class="meta"><span class="tag">${esc(l.level)}</span><span class="tag cat">${esc(l.skill)}</span></div>
       <h3>${esc(l.title)}</h3>
       <p>${esc(l.description)}</p>
