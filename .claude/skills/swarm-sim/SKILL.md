@@ -27,9 +27,9 @@ Work in the scratchpad, never in the repo. The answers are simulated, and the re
 committed: the repo is public.
 
 ```bash
-S=~/.claude/skills/../..   # any scratch folder
-python3 <skill>/swarm.py --dir swarm init --customer <skill>/customer.json --pages index.html levels.html teachers.html level-ar.html lessons/b1-articles.html --n 30
-python3 <skill>/swarm.py --dir swarm prompts 1
+# run from the repo root; <scratch> is the session scratchpad
+python3 .claude/skills/swarm-sim/swarm.py --dir <scratch>/swarm init --customer .claude/skills/swarm-sim/customer.json --pages index.html levels.html teachers.html level-ar.html lessons/b1-articles.html --n 30
+python3 .claude/skills/swarm-sim/swarm.py --dir <scratch>/swarm prompts 1
 ```
 
 For each wave, send one message with one Agent call per persona: `subagent_type: general-purpose`,
