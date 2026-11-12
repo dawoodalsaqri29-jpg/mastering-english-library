@@ -19,12 +19,14 @@ Last updated: 2026-11-12
   "Pods by channel": site, YouTube, Instagram and TikTok, store and sales, each with a lead, members, rhythm and measure.
 - swarm-sim skill (MiroFish-style, 2026-11-12): first run with 30 people, 2 rounds, on 5 real pages. Result: 0 buy, 30 free only.
   Top blockers: unknown owner and no reviews (17), no IELTS promise (11), USD and foreign payment (11), no free sample of a paid
-  pack (10, plus 14 more after the group chat), unclear class-set price and invoice (8). Shipped: rial and riyal prices on the store cards.
+  pack (10, plus 14 more after the group chat), unclear class-set price and invoice (8). Shipped: rial and riyal prices on the store cards; Exam Quick-Packs now names its task types (graph description,
+  True/False/Not Given, matching headings; "such as IELTS Academic"); a "Try one PDF first" box with four $5 singles and the $1.99
+  Giant Book (from the Wix catalogue); "How it works" now states PayPal or mobile transfer within Oman.
 - (none waiting on CI)
 
 ## Waiting on the owner
 - From the swarm run (2026-11-12): (1) one or two free sample pages from each paid pack, above all Exam Quick-Packs;
-  (2) say which exam Exam Quick-Packs fits (IELTS or not); (3) an "about" line with the owner's name and a first real review;
+  (3) an "about" line with the owner's name and a first real review;
   (4) a written class-set price and "invoice on request"; (5) Apple Pay / local payment in Wix.
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
