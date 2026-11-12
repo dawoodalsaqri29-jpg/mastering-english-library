@@ -3,10 +3,7 @@
   const site = window.SITE || {};
   const LEVELS = ["B1", "B2", "C1", "C2"];
   const ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  const palettes = [
-    ["#1f1f5c", "#3b3b98"], ["#0b5d5f", "#0f8b8d"], ["#3a2a6e", "#6a4cc0"],
-    ["#5a2a1f", "#a0522d"], ["#1d3b5c", "#2f6fa3"], ["#2b4a2b", "#4c8c4a"],
-  ];
+  const PALETTES = 6; // cover gradients .cover.pal-0 … .pal-5 live in store.css
 
   const state = { level: "All", cat: "All", q: "" };
 
@@ -32,9 +29,9 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   function cover(b, i) {
-    const [c1, c2] = palettes[i % palettes.length];
+    const pal = i % PALETTES;
     const img = b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : "";
-    return `<div class="cover" style="background:linear-gradient(155deg,${c1},${c2})">${img}
+    return `<div class="cover pal-${pal}">${img}
       ${b.cover ? "" : `<div class="c-top">Mastering English</div>
       <div><div class="c-bar"></div><div class="c-title">${esc(b.title)}</div><div class="c-sub">${esc(b.subtitle)}</div></div>`}
     </div>`;
