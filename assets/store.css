@@ -72,6 +72,13 @@ section.wrap { padding-top: 64px; padding-bottom: 16px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; margin-top: 28px; }
 .book { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); }
 .cover { aspect-ratio: 2 / 3; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 20px; color: #fff; overflow: hidden; }
+/* Cover gradients as classes, so the CSP needs no 'unsafe-inline' for styles. Order matches palettes in store.js. */
+.cover.pal-0 { background: linear-gradient(155deg, #1f1f5c, #3b3b98); }
+.cover.pal-1 { background: linear-gradient(155deg, #0b5d5f, #0f8b8d); }
+.cover.pal-2 { background: linear-gradient(155deg, #3a2a6e, #6a4cc0); }
+.cover.pal-3 { background: linear-gradient(155deg, #5a2a1f, #a0522d); }
+.cover.pal-4 { background: linear-gradient(155deg, #1d3b5c, #2f6fa3); }
+.cover.pal-5 { background: linear-gradient(155deg, #2b4a2b, #4c8c4a); }
 .cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cover .c-top { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
 .cover .c-title { font-family: Fraunces, serif; font-size: 1.35rem; line-height: 1.15; }
