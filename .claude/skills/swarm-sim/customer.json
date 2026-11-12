@@ -1,0 +1,40 @@
+{
+  "business": "Mastering English Library: free English lessons site (B1-C2) with printable PDFs and a paid PDF store",
+  "question": "You found this site from a post. Would you use it, would you pay for any pack, and what would you change?",
+  "age": [16, 52],
+  "segments": [
+    {"name": "University student", "group": "classmates group", "share": 0.25, "age": [18, 24], "english": "B1-B2", "budget": [0, 15]},
+    {"name": "Preparing for IELTS for a job or a scholarship", "group": "IELTS prep group", "share": 0.2, "age": [20, 32], "english": "B1-B2", "budget": [5, 60]},
+    {"name": "Working adult who needs English at work", "group": "work colleagues group", "share": 0.18, "age": [24, 45], "english": "B1-C1", "budget": [10, 50]},
+    {"name": "Parent looking for help for a teenager", "group": "family and parents group", "share": 0.12, "age": [35, 52], "english": "A2-B2", "budget": [10, 60]},
+    {"name": "School English teacher", "group": "English teachers group", "share": 0.17, "age": [26, 50], "english": "C1-C2", "budget": [5, 40]},
+    {"name": "Owner or manager of a small tutoring centre", "group": "English teachers group", "share": 0.08, "age": [30, 52], "english": "B2-C2", "budget": [30, 300]}
+  ],
+  "behaviours": [
+    {"name": "Free-only learner", "share": 0.22, "how": "Learns from YouTube and free PDFs; rarely pays for study material."},
+    {"name": "Exam-driven", "share": 0.18, "how": "Pays quickly for anything that helps before a test date."},
+    {"name": "Trusts Arabic explanations", "share": 0.15, "how": "Buys only material that explains in Arabic and fits Arabic speakers' mistakes."},
+    {"name": "Reads every review", "share": 0.14, "how": "Will not pay a new site until they see reviews, a sample or a friend who used it."},
+    {"name": "Prefers a teacher or an app", "share": 0.12, "how": "Would rather pay a tutor, a course or an app than buy PDFs."},
+    {"name": "Bulk buyer for a class", "share": 0.11, "how": "Wants class sets, worksheets with answers and an invoice."},
+    {"name": "Impulse buyer from Instagram", "share": 0.08, "how": "Buys a cheap pack straight from a post if checkout is easy."}
+  ],
+  "objections": [
+    "Prices in dollars and paying a foreign site feels risky",
+    "I can find free PDFs anywhere",
+    "I don't know who is behind this site",
+    "PDFs alone don't make me speak",
+    "Is the level right for me?",
+    "Can I use it with a whole class?",
+    "Too much English on the page"
+  ],
+  "habits": [
+    "you scroll Instagram at night",
+    "you study on your phone, rarely on a laptop",
+    "you share useful links in WhatsApp groups",
+    "you prepare worksheets on Thursday for next week",
+    "you have a test date in two months",
+    "you check prices in rials before buying anything online"
+  ],
+  "extra_seed": "Payment on the store: card or PayPal, or a mobile transfer that the owner confirms by hand. Prices are in US dollars. The store is on Wix (masteringenglishlibrary.com)."
+}

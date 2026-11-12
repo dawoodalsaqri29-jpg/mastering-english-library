@@ -59,6 +59,7 @@ precise and saves tokens.
 | Replies to customer messages (drafts only) | `agency-support-support-responder` |
 | Instagram comment and DM replies (drafts only) | `agency-support-support-responder` + `agency-marketing-instagram-curator` |
 | Site SEO, code, security, accessibility | the `ecc-*` agents above |
+| Simulate Gulf visitors on the real pages, MiroFish style: personas read the site, post in their WhatsApp group, read the group and decide again (likes and dislikes as exact tag counts, who moved the group). Runs in the scratchpad; the report is never committed | `swarm-sim` skill |
 | Test a new product or offer before building it (board vote: offer, monopoly, product) | `founder-board` skill |
 | Real profit per pack after Wix fees, payment fees and ads | `founder-cfo` skill |
 | How Gulf learners and school buyers react to an offer (100 simulated buyers) | `founder-consumer` skill |
@@ -229,6 +230,9 @@ is stored as a network secret (`x-goog-api-key` for `generativelanguage.googleap
   and the Wix store already covers forms, bookings, invoices and email. Revisit only if a Wix bill becomes the problem.
 - Reverse API Engineer: reviewed 2026-11-07 as not needed; on 2026-11-08 the owner chose to keep it on demand
   (see the `reverse-api-engineer` skill: own or permitted sites only, never the stealth extra).
+- MiroFish (github.com/666ghj/MiroFish, reviewed 2026-11-12 at 7657031): not installed. It needs a Zep Cloud account and an
+  OpenAI-style model key, and it is AGPL. Its loop (seed from real text, personas, social rounds, report) is rebuilt
+  without keys in the `swarm-sim` skill.
 - Ruflo (github.com/ruvnet/ruflo, reviewed 2026-11-12 at cee5022): only the "pods by channel" idea is used (see
   "Pods by channel"). Its runtime is not installed. `ruflo init` and its plugins add hooks that run on every Bash
   command and every file edit, and those hooks call `npx ruflo@latest` with no fixed version. It also adds an MCP

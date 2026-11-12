@@ -92,6 +92,16 @@ section.wrap { padding-top: 64px; padding-bottom: 16px; }
 .book p { margin: 0; color: var(--ink-soft); font-size: .92rem; }
 .buy { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 10px; }
 .price { font-family: Fraunces, serif; font-size: 1.3rem; }
+.price .local { display: block; font-family: inherit; font-size: .72rem; color: var(--ink-soft); font-weight: 400; }
+.try-one { margin-top: 28px; padding: 20px 22px; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
+.try-one h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.try-one p { margin: 0 0 12px; color: var(--ink-soft); }
+.try-one ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.try-one li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.try-one li a { font-weight: 600; color: var(--indigo); }
+.try-one .try-meta { grid-column: 1; font-size: .85rem; color: var(--ink-soft); }
+.try-one .try-price { grid-column: 2; grid-row: 1 / span 2; text-align: right; font-family: Fraunces, serif; }
+.try-one .try-price small { display: block; font-size: .72rem; color: var(--ink-soft); }
 .empty { text-align: center; color: var(--ink-soft); padding: 40px 0; }
 
 /* How */
