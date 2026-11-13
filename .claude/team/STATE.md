@@ -18,6 +18,15 @@ Last updated: 2026-11-13
      collect emails through $0 store products.
   5. Long YouTube films scheduled through Zernio, 18:00 Muscat, 15–21 Nov: dictionary, describe, ukus, bell,
      alphabet, jar, mistakes. Shorts through Zernio and Buffer.
+  Checked 2026-11-13: Zernio has all 7 films at 18:00 Muscat, 15–21 Nov (plus the war film on 14 Nov) and no failed
+  posts; Buffer has 15 scheduled, no errors. The three funnel reels are 2160x3840 with EN+AR subtitles. The Wix
+  store cannot be reached from cloud sessions (DNS blocked), so the gift product page was not checked.
+- mastering-video-studio plugin in cloud sessions: `pip install kokoro-onnx soundfile numpy`, model files in `~/tts`
+  (see the video-studio skill), and `ln -s /opt/node-tools/node_modules /root/node_modules` so the styles' .mjs
+  scripts find Playwright. Then film-studio `build.py` renders style scenes and `{"clip": ...}` footage scenes.
+- Owner's 4 stock clips (globe, glowing map, typewriter, rain at night; 1080p) work as film-studio clip scenes:
+  test film rendered 2026-11-13. Cut each clip to its line, or the clip's full length plays in silence.
+  Waiting on the owner: the clips' source and licence, and where to keep them (not in the site repo).
 - Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
   line, "store price" only, class sets asked on WhatsApp; no licence terms written).
 - Security and SEO plan (arena winner a007, 2026-11-08): Claude's part fully done (PR-A1 to E, A1b, A4; SEO S1, S3, S6 part). Claude's part is PR-A to PR-E
