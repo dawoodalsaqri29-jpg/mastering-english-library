@@ -66,6 +66,11 @@ Last updated: 2026-11-13
   Downloads and free-work but does not serve them to cloud sessions (not_available, also after updating the app);
   owner may have linked them in another session. Next: his Voice Studio recordings and new videos (uploaded in chat).
 
+- 2026-11-13 night (owner asleep, asked Claude to keep working): Map of Seven Words episodes 3–7 written
+  (ancient, perilous, loyal, wisdom, hope), recording sheets in `studio/cinematic/scripts-to-record/`, YouTube titles
+  and descriptions in `map-of-seven-words-youtube.md`; previews of all 7 episodes sent with temporary voices.
+  Next: owner records the lines in Voice Studio (two-box way), reviews the episodes, then final cuts.
+
 ## Waiting on the owner
 - From the swarm run (2026-11-12): (1) one or two free sample pages from each paid pack, above all Exam Quick-Packs;
   (3) an "about" line with the owner's name and a first real review;

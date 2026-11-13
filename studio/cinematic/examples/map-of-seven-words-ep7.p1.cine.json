@@ -8,7 +8,7 @@
  {
   "cine": {
    "type": "fog",
-   "title": "The Door in the Mountain",
+   "title": "The Door Opens",
    "subtitle": "The Map of Seven Words · Final Episode",
    "textAt": 0.6,
    "lightX": 0.5,
@@ -61,18 +61,10 @@
  },
  {
   "cine": {
-   "type": "fog",
-   "title": "",
-   "subtitle": "",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightColor": "#ffd9a0",
-   "tint": [
-    150,
-    140,
-    120
-   ],
-   "seed": 78
+   "type": "typewriter",
+   "text": "The last word cannot be taken. It can only be found.",
+   "typeAt": 0.4,
+   "cps": 11
   },
   "say": "Because the last word cannot be taken. It can only be found, after a long, perilous road.",
   "ar": "لأن الكلمة الأخيرة ما تنأخذ. بس تنلقى، بعد طريق طويل وخطير.",
