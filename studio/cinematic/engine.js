@@ -171,8 +171,7 @@
   // Glowing world map with light streaks, slow camera and optional routes (wars, empires, trade, borrowed words)
   SC.map = {
     setup() { S.land = landCanvas(3600, 1800, '#fff'); S.glow = mk(1800, 900); const g = S.glow.getContext('2d'); g.filter = 'blur(14px)'; g.drawImage(S.land, 0, 0, 1800, 900);
-      const col = P.color ?? '#ff7a1a'; S.tint = mk(3600, 1800); const x = S.tint.getContext('2d'); x.drawImage(S.land, 0, 0); x.globalCompositeOperation = 'source-in';
-      const gr = x.createLinearGradient(0, 0, 3600, 1800); gr.addColorStop(0, P.color2 ?? '#ffd27a'); gr.addColorStop(0.5, col); gr.addColorStop(1, P.color2 ?? '#ffd27a'); x.fillStyle = gr; x.fillRect(0, 0, 3600, 1800);
+      const col = P.color ?? '#ff7a1a';
       S.gt = mk(1800, 900); const y = S.gt.getContext('2d'); y.drawImage(S.glow, 0, 0); y.globalCompositeOperation = 'source-in'; y.fillStyle = col; y.fillRect(0, 0, 1800, 900);
       const r = rng(P.seed ?? 21); S.streaks = []; for (let i = 0; i < 14; i++) S.streaks.push({ y: r(), sp: 0.2 + r() * 0.8, a: 0.15 + r() * 0.5, w: 1 + r() * 3 }); },
     frame(t) { const col = P.color ?? '#ff7a1a'; ctx.fillStyle = P.bg ?? '#140502'; ctx.fillRect(0, 0, W, H);
@@ -180,8 +179,12 @@
       const lon = lerp(c0.lon, c1.lon, k), lat = lerp(c0.lat, c1.lat, k), zoom = lerp(c0.zoom, c1.zoom, k);
       const mw = W * zoom, mh = mw / 2; const ox = W / 2 - (lon + 180) / 360 * mw, oy = H / 2 - (90 - lat) / 180 * mh;
       const toXY = (lo, la) => [ox + (lo + 180) / 360 * mw, oy + (90 - la) / 180 * mh];
-      ctx.save(); ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = 0.9 + 0.1 * Math.sin(t * 2); ctx.drawImage(S.gt, ox, oy, mw, mh); ctx.drawImage(S.gt, ox, oy, mw, mh); ctx.restore();
-      ctx.globalAlpha = 0.92; ctx.drawImage(S.tint, ox, oy, mw, mh); ctx.globalAlpha = 1;
+      ctx.save(); ctx.globalCompositeOperation = 'lighter'; const ga = Math.min(1, 1.4 / zoom); ctx.globalAlpha = ga * (0.9 + 0.1 * Math.sin(t * 2)); ctx.drawImage(S.gt, ox, oy, mw, mh); if (zoom < 1.8) ctx.drawImage(S.gt, ox, oy, mw, mh); ctx.restore(); // the blurred glow spreads with zoom, so it fades as the camera moves in
+      // sharp coastlines at any zoom: fill the land as vector paths in map space
+      if (!S.path) { S.path = new Path2D(); for (const r of LAND) { for (let i = 0; i < r.length; i += 2) { const x = r[i] + 180, y = 90 - r[i + 1]; i ? S.path.lineTo(x, y) : S.path.moveTo(x, y); } S.path.closePath(); } }
+      ctx.save(); ctx.globalAlpha = 0.92; ctx.translate(ox, oy); ctx.scale(mw / 360, mh / 180);
+      const lg = ctx.createLinearGradient(0, 0, 360, 180); lg.addColorStop(0, P.color2 ?? '#ffd27a'); lg.addColorStop(0.5, col); lg.addColorStop(1, P.color2 ?? '#ffd27a'); ctx.fillStyle = lg; ctx.fill(S.path);
+      ctx.strokeStyle = hexA('#fff1d6', 0.55); ctx.lineWidth = 1.2 * 360 / mw; ctx.stroke(S.path); ctx.restore();
       for (const s of S.streaks) { const y = s.y * H, x = ((t * s.sp * 900 + s.y * 3000) % (W * 1.6)) - W * 0.3; const g = ctx.createLinearGradient(x - 500, 0, x + 500, 0); g.addColorStop(0, hexA(col, 0)); g.addColorStop(0.5, hexA('#ffe0b0', s.a)); g.addColorStop(1, hexA(col, 0)); ctx.fillStyle = g; ctx.fillRect(x - 500, y, 1000, s.w); }
       // routes: [{from:[lon,lat], to:[lon,lat], at, dur, label}]
       for (const rt of (P.routes ?? [])) { const p = ease((t - (rt.at ?? 1)) / (rt.dur ?? 2.5)); if (p <= 0) continue; const [x1, y1] = toXY(...rt.from), [x2, y2] = toXY(...rt.to); const mx = (x1 + x2) / 2, my = Math.min(y1, y2) - Math.hypot(x2 - x1, y2 - y1) * 0.3;

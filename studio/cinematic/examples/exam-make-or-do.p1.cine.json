@@ -1,0 +1,104 @@
+[
+ {
+  "cine": {
+   "type": "word",
+   "word": "make or do?",
+   "kind": "Exam practice",
+   "meaning": "the mistake that costs marks",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Make or do? This small choice costs learners marks in every English exam.",
+  "ar": "Make ولا do؟ هالاختيار الصغير يضيّع درجات على الطلاب في كل اختبار إنجليزي.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "priya",
+   "location": "classroom",
+   "title": "*make* = create, *do* = task",
+   "kicker": "The rule",
+   "keyword": "make",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "task",
+     "pose": "point-viewer",
+     "expression": "excited",
+     "mark": "sparkle"
+    }
+   ]
+  },
+  "say": "Here is the rule. Make is for creating something. Do is for a task or a job.",
+  "ar": "القاعدة: make لما تصنع شي، و do لما تسوي مهمة أو شغل."
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Question 1",
+   "question": "I need to ___ a decision today.",
+   "options": [
+    "make",
+    "do"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "make a decision = تتخذ قرار"
+  },
+  "say": "Question one. I need to blank a decision today.",
+  "ar": "سؤال واحد: لازم ___ قرار اليوم.",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Question 2",
+   "question": "Have you ___ your homework?",
+   "options": [
+    "made",
+    "done"
+   ],
+   "answer": 1,
+   "countFrom": 3,
+   "explain": "do homework = تحل الواجب"
+  },
+  "say": "Question two. Have you blank your homework?",
+  "ar": "سؤال اثنين: ___ واجبك؟",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Question 3",
+   "question": "Everyone ___ mistakes.",
+   "options": [
+    "makes",
+    "does"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "make a mistake = تغلط"
+  },
+  "say": "Question three. Everyone blank mistakes.",
+  "ar": "سؤال ثلاثة: كل الناس ___ أخطاء.",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "make: a decision, a mistake, a plan. do: homework, the dishes, business.",
+   "typeAt": 0.3,
+   "cps": 13
+  },
+  "say": "Write these down. Make a decision, a mistake, a plan. Do your homework, the dishes, business.",
+  "ar": "اكتبها عندك: make مع decision و mistake و plan، و do مع homework و dishes و business.",
+  "lead": 0.4,
+  "tail": 0.8
+ }
+]

@@ -1,0 +1,121 @@
+[
+ {
+  "cine": {
+   "type": "fog",
+   "subtitle": "Nature words",
+   "title": "Five words for a morning walk",
+   "textAt": 0.5,
+   "lightX": 0.75,
+   "lightY": 0.3,
+   "lightColor": "#ffe2a8",
+   "tint": [
+    190,
+    200,
+    185
+   ],
+   "base": [
+    "#0b140d",
+    "#2a3a2c"
+   ]
+  },
+  "say": "Five beautiful English words for a morning walk in nature. How many do you know?",
+  "ar": "خمس كلمات إنجليزية حلوة لمشية الصبح في الطبيعة. كم وحدة تعرف؟",
+  "lead": 0.5,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "dawn",
+   "kind": "noun",
+   "ipa": "/dɔːn/",
+   "meaning": "the first light of the morning",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Dawn. The first light of the morning.",
+  "ar": "Dawn: أول ضوء الصبح، الفجر.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "breeze",
+   "kind": "noun",
+   "ipa": "/briːz/",
+   "meaning": "a soft, gentle wind",
+   "mood": "nature",
+   "textAt": 0.3
+  },
+  "say": "Breeze. A soft, gentle wind.",
+  "ar": "Breeze: نسمة هوا خفيفة.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "meadow",
+   "kind": "noun",
+   "ipa": "/ˈmedəʊ/",
+   "meaning": "a field of grass and flowers",
+   "mood": "nature",
+   "textAt": 0.3
+  },
+  "say": "Meadow. A field full of grass and flowers.",
+  "ar": "Meadow: مرج، أرض مليانة عشب وورد.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "lush",
+   "kind": "adjective",
+   "ipa": "/lʌʃ/",
+   "meaning": "green, thick and full of life",
+   "mood": "nature",
+   "textAt": 0.3
+  },
+  "say": "Lush. Very green, thick, and full of life.",
+  "ar": "Lush: أخضر وكثيف ومليان حياة.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "serene",
+   "kind": "adjective",
+   "ipa": "/səˈriːn/",
+   "meaning": "calm, peaceful and quiet",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Serene. Calm, peaceful, and quiet. The lake was serene at dawn.",
+  "ar": "Serene: هادي وساكن. البحيرة كانت هادية وقت الفجر.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Quick check",
+   "question": "A soft, gentle wind is a…",
+   "options": [
+    "breeze",
+    "meadow",
+    "dawn",
+    "storm"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "breeze = نسمة"
+  },
+  "say": "Quick check. A soft, gentle wind is a what?",
+  "ar": "سؤال سريع: النسمة الخفيفة اسمها؟",
+  "lead": 0.4,
+  "tail": 3.4
+ }
+]

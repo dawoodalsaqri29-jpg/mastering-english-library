@@ -1,0 +1,102 @@
+[
+ {
+  "cine": {
+   "type": "word",
+   "word": "Guess the word",
+   "kind": "Game · 3 clues",
+   "meaning": "can you get it before the answer?",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Three clues. One word. Can you guess it before I say it?",
+  "ar": "ثلاث تلميحات، وكلمة وحدة. تقدر تعرفها قبل ما أقولها؟",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Clue 1 · It is big",
+   "question": "It is big, it is blue, and you can swim in it. What is it?",
+   "options": [
+    "the ocean",
+    "a river",
+    "the sky",
+    "a pool"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "ocean = المحيط"
+  },
+  "say": "It is big. It is blue. And you can swim in it. What is it?",
+  "ar": "كبير، وأزرق، وتقدر تسبح فيه. وش هو؟",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "globe",
+   "lon0": -30,
+   "speed": 0.08,
+   "tilt": 10,
+   "title": "The ocean",
+   "textAt": 0.4
+  },
+  "say": "The ocean. It covers about seventy percent of our planet.",
+  "ar": "المحيط. يغطي حوالي سبعين بالمية من كوكبنا.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Round 2",
+   "question": "You open it to read stories, and it has pages. What is it?",
+   "options": [
+    "a door",
+    "a book",
+    "a box",
+    "a phone"
+   ],
+   "answer": 1,
+   "countFrom": 3,
+   "explain": "book = كتاب"
+  },
+  "say": "You open it to read stories, and it has pages. What is it?",
+  "ar": "تفتحه علشان تقرأ قصص، وفيه صفحات. وش هو؟",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Final round",
+   "question": "It falls from the sky, and it makes the streets wet. What is it?",
+   "options": [
+    "snow",
+    "sun",
+    "rain",
+    "wind"
+   ],
+   "answer": 2,
+   "countFrom": 3,
+   "explain": "rain = مطر"
+  },
+  "say": "Last one. It falls from the sky, and it makes the streets wet. What is it?",
+  "ar": "آخر وحدة: ينزل من السما، ويخلي الشوارع مبلولة. وش هو؟",
+  "lead": 0.4,
+  "tail": 3.4
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "How many did you get?",
+   "textAt": 0.5,
+   "seed": 21
+  },
+  "say": "Rain! How many did you get? Write your score in the comments.",
+  "ar": "مطر! كم وحدة عرفت؟ اكتب نتيجتك في التعليقات.",
+  "lead": 0.4,
+  "tail": 1.2
+ }
+]

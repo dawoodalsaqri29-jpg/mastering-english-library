@@ -1,0 +1,127 @@
+[
+ {
+  "cine": {
+   "type": "globe",
+   "lon0": 55,
+   "speed": 0.12,
+   "tilt": 25,
+   "markers": [
+    {
+     "lat": 23.6,
+     "lon": 58.3,
+     "label": "Muscat",
+     "at": 1.0
+    },
+    {
+     "lat": 51.5,
+     "lon": -0.1,
+     "label": "London",
+     "at": 2.0
+    }
+   ],
+   "title": "English at the airport",
+   "textAt": 0.4
+  },
+  "say": "Flying abroad? These five words will get you from check-in to your seat.",
+  "ar": "مسافر برا؟ هالخمس كلمات توصلك من الـ check-in لين كرسيك.",
+  "lead": 0.5,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "boarding pass",
+   "kind": "noun",
+   "ipa": "",
+   "meaning": "the card that lets you get on the plane",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Boarding pass. The card that lets you get on the plane.",
+  "ar": "Boarding pass: بطاقة الصعود للطيارة.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "gate",
+   "kind": "noun",
+   "ipa": "/ɡeɪt/",
+   "meaning": "where you wait to get on the plane",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Gate. The place where you wait to board. Your flight leaves from gate twelve.",
+  "ar": "Gate: البوابة اللي تنتظر عندها. رحلتك من بوابة 12.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "delayed",
+   "kind": "adjective",
+   "ipa": "/dɪˈleɪd/",
+   "meaning": "later than planned",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Delayed. Later than planned. Our flight is delayed by one hour.",
+  "ar": "Delayed: متأخر عن الموعد. رحلتنا متأخرة ساعة.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "luggage",
+   "kind": "noun",
+   "ipa": "/ˈlʌɡɪdʒ/",
+   "meaning": "your bags and suitcases",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Luggage. Your bags and suitcases. It has no plural: never say luggages.",
+  "ar": "Luggage: الشنط. وما لها جمع، لا تقول luggages.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "map",
+   "from": {
+    "lon": 30,
+    "lat": 35,
+    "zoom": 1.6
+   },
+   "to": {
+    "lon": 25,
+    "lat": 40,
+    "zoom": 1.9
+   },
+   "color": "#3fb6ff",
+   "color2": "#c8ecff",
+   "bg": "#020a14",
+   "routes": [
+    {
+     "from": [
+      58.3,
+      23.6
+     ],
+     "to": [
+      -0.1,
+      51.5
+     ],
+     "at": 0.8,
+     "dur": 3.0,
+     "label": "London"
+    }
+   ]
+  },
+  "say": "Window seat or aisle seat? Aisle is the seat next to the walkway. Which one do you choose?",
+  "ar": "Window seat ولا aisle seat؟ الـ aisle هو الكرسي اللي جنب الممر. أنت أيش تختار؟",
+  "lead": 0.5,
+  "tail": 1.2
+ }
+]

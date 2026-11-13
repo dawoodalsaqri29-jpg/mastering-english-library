@@ -1,0 +1,150 @@
+[
+ {
+  "cine": {
+   "type": "fog",
+   "subtitle": "History of English",
+   "title": "Why English has two words for everything",
+   "textAt": 0.5,
+   "lightX": 0.8,
+   "tint": [
+    170,
+    160,
+    140
+   ],
+   "lightColor": "#ffd9a0",
+   "accent": "#e6b94f",
+   "silhouette": false
+  },
+  "say": "Why does English have one word for the animal in the field, and another word for the meat on your plate?",
+  "ar": "ليش الإنجليزي فيه كلمة للحيوان في الحقل، وكلمة ثانية للحم اللي في صحنك؟",
+  "lead": 0.6,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "map",
+   "from": {
+    "lon": 0.2,
+    "lat": 50.0,
+    "zoom": 7
+   },
+   "to": {
+    "lon": 0.2,
+    "lat": 50.0,
+    "zoom": 9
+   },
+   "routes": [
+    {
+     "from": [
+      -0.4,
+      49.2
+     ],
+     "to": [
+      0.6,
+      50.9
+     ],
+     "at": 1.0,
+     "dur": 2.2,
+     "label": "Hastings"
+    }
+   ],
+   "labels": [
+    {
+     "lon": -0.4,
+     "lat": 49.0,
+     "label": "Normandy",
+     "at": 0.6
+    }
+   ],
+   "title": "1066"
+  },
+  "say": "In ten sixty six, William of Normandy crossed the sea and won the Battle of Hastings.",
+  "ar": "في 1066، عبر وليام النورماندي البحر وانتصر في معركة هاستينغز.",
+  "lead": 0.5,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "The rulers spoke French. The farmers spoke English.",
+   "typeAt": 0.4,
+   "cps": 10
+  },
+  "say": "For about three hundred years, the rulers of England spoke French. The farmers kept speaking English.",
+  "ar": "لحوالي ثلاثمية سنة، حكّام إنجلترا كانوا يتكلمون فرنسي، والفلاحين ظلوا يتكلمون إنجليزي.",
+  "lead": 0.5,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "cow → beef",
+   "kind": "field → table",
+   "ipa": "",
+   "meaning": "the farmer's word and the lord's word",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "The farmer raised the cow. The French-speaking lord ate the beef.",
+  "ar": "الفلاح يربّي الـ cow، والسيّد اللي يتكلم فرنسي ياكل الـ beef.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "pig → pork",
+   "kind": "field → table",
+   "ipa": "",
+   "meaning": "from French porc",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Pig and pork. Sheep and mutton. The English word stayed in the field, and the French word went to the table.",
+  "ar": "pig و pork، وsheep و mutton. الكلمة الإنجليزية ظلت في الحقل، والفرنسية راحت للسفرة.",
+  "lead": 0.4,
+  "tail": 0.8
+ },
+ {
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "maya",
+   "location": "classroom",
+   "title": "Two words, one *history*",
+   "kicker": "Remember",
+   "keyword": "history",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "history",
+     "pose": "point-viewer",
+     "expression": "excited",
+     "mark": "sparkle"
+    }
+   ]
+  },
+  "say": "So every time you order beef, you are speaking a little bit of history.",
+  "ar": "فكل ما تطلب beef، أنت تتكلم شوية من التاريخ."
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Your turn",
+   "question": "Which word came from French?",
+   "options": [
+    "pork",
+    "pig",
+    "cow",
+    "sheep"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "pork ← French porc"
+  },
+  "say": "Your turn. Which of these words came from French?",
+  "ar": "دورك: أي كلمة من هذي جات من الفرنسي؟",
+  "lead": 0.4,
+  "tail": 3.4
+ }
+]
