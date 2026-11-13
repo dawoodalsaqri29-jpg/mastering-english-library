@@ -4,9 +4,20 @@ Claude keeps this file current so a new session, or a session after its context 
 knows exactly where work stands. One line per item. No secrets, no private contact details:
 the repo is public. Update it in the same commit as the work it describes.
 
-Last updated: 2026-11-12
+Last updated: 2026-11-13
 
 ## In progress
+- Handoff from the Claude chat (2026-11-13, zip uploaded by the owner; files not in this repo):
+  1. Free gift "Stop Saying Beautiful" (6-page PDF, 68 words) is a $0 Wix product, for comment-to-DM.
+  2. SuperProfile auto-DM (free, replaces ChatPlace): owner was connecting Instagram. Next: AutoDM on all posts,
+     keywords `كتاب` and `BOOK`, DM links the $0 product. Only after it works, add "علّق: كتاب" to captions.
+  3. Three funnel reels (9:16, 4K, EN+AR subtitles), not yet published: stop-saying-beautiful (CTA comment كتاب),
+     whats-your-level (level test), one-word-a-day (daily word game). Before posting, check those pages are live:
+     this repo has levels.html and level-ar.html, but no daily-word page (may live on Wix; to confirm).
+  4. Content mix agreed: 70% educational, 20% site-tool promos, 10% direct offers; each video points to one freebie;
+     collect emails through $0 store products.
+  5. Long YouTube films scheduled through Zernio, 18:00 Muscat, 15–21 Nov: dictionary, describe, ukus, bell,
+     alphabet, jar, mistakes. Shorts through Zernio and Buffer.
 - Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
   line, "store price" only, class sets asked on WhatsApp; no licence terms written).
 - Security and SEO plan (arena winner a007, 2026-11-08): Claude's part fully done (PR-A1 to E, A1b, A4; SEO S1, S3, S6 part). Claude's part is PR-A to PR-E
