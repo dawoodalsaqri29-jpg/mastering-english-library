@@ -27,7 +27,7 @@
 - **Meaning:** تنين؟ جدّي، هذا صدق؟
 
 ### 5. ⬜ `p1-s005.wav`
-- **Voice:** Tom  ·  **Emotion:** tender [gently]
+- **Voice:** Grandpa  ·  **Emotion:** tender [gently]
 - **Direction:** Gentle and loving, soft and close, like talking to a child at bedtime.
 - **Line:** [gently] As real as the rain on that window, Sami. And now the map has chosen you.
 - **Meaning:** صدق مثل المطر اللي على الشباك يا سامي. والحين الخريطة اختارتك.

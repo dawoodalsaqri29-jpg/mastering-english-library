@@ -69,5 +69,19 @@
   "persona": "A deep, wise, older Arab man telling legends and history.",
   "use": "Arabic narration for history and legend videos.",
   "studio": "Rawi Al-Asateer"
+ },
+ "grandpa": {
+  "engine": "kokoro",
+  "voice": "bm_george",
+  "lang": "en-gb",
+  "studio": "Grandpa",
+  "use": "Grandfathers, old men, wise elders in stories."
+ },
+ "grandma": {
+  "engine": "kokoro",
+  "voice": "bf_emma",
+  "lang": "en-gb",
+  "studio": "Grandma",
+  "use": "Grandmothers, old women, storytellers at bedtime."
  }
 }

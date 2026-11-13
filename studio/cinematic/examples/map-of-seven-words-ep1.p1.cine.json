@@ -1,21 +1,159 @@
 [
- {"defaults": {"voice": "epic", "emotion": "epic"}},
- {"cine": {"type": "fog", "subtitle": "The Map of Seven Words · Episode 1", "title": "The Door in the Mountain", "textAt": 1.0, "lightX": 0.5, "lightY": 0.3, "lightColor": "#ffd9a0", "tint": [150, 140, 130]},
-  "say": "Inside the oldest mountain in the world, there is a door. And it opens for only one thing: seven words.", "ar": "داخل أقدم جبل في العالم، فيه باب. وما ينفتح إلا بشي واحد: سبع كلمات.", "voice": "epic", "emotion": "epic", "lead": 0.8},
- {"cine": {"type": "rain", "title": "The village of Brightwater", "textAt": 0.6, "seed": 31, "colors": ["#ffd27a", "#ffb347", "#ffe9b0", "#7a1f1f"]},
-  "say": "On a stormy night, in the village of Brightwater, a boy called Sami found a torn map under his grandfather's bed.", "ar": "في ليلة عاصفة، في قرية برايت ووتر، ولد اسمه سامي لقى خريطة ممزقة تحت سرير جدّه.", "voice": "epic", "emotion": "suspense"},
- {"cine": {"type": "typewriter", "text": "Seven words open the door. Find them before the dragon wakes.", "typeAt": 0.4, "cps": 11},
-  "say": "Seven words open the door. Find them before the dragon wakes.", "ar": "سبع كلمات تفتح الباب. لاقها قبل لا يصحى التنين.", "voice": "kid-boy", "emotion": "whisper"},
- {"cine": {"type": "fog", "title": "", "lightX": 0.3, "lightColor": "#ffcf80", "tint": [140, 150, 160], "silhouette": true, "seed": 12},
-  "say": "A dragon? Grandpa, is this real?", "ar": "تنين؟ جدّي، هذا صدق؟", "voice": "kid-boy", "emotion": "surprise"},
- {"cine": {"type": "rain", "title": "", "seed": 44, "lamp": true},
-  "say": "As real as the rain on that window, Sami. And now the map has chosen you.", "ar": "صدق مثل المطر اللي على الشباك يا سامي. والحين الخريطة اختارتك.", "voice": "man-uk", "emotion": "tender"},
- {"cine": {"type": "word", "word": "quest", "kind": "Word 1 of 7 · noun", "ipa": "/kwest/", "meaning": "a long, hard journey to find something important", "mood": "gold", "textAt": 0.3},
-  "say": "The first word. Quest. A long, hard journey to find something important.", "ar": "الكلمة الأولى: Quest، رحلة طويلة وصعبة علشان تلاقي شي مهم.", "voice": "isabella", "emotion": "calm"},
- {"cine": {"type": "fog", "subtitle": "Word 1", "title": "QUEST", "textAt": 0.5, "lightX": 0.75, "lightColor": "#e6b94f", "tint": [160, 150, 120]},
-  "say": "And so the quest began. Sami packed bread, a lamp, and the map, and he walked into the dark.", "ar": "وهكذا بدأت الرحلة. سامي أخذ خبز وفانوس والخريطة، ومشى في الظلام.", "voice": "epic", "emotion": "epic"},
- {"cine": {"type": "word", "word": "valiant", "kind": "Coming in Episode 2", "meaning": "very brave", "mood": "night", "textAt": 0.3},
-  "say": "But someone was following him. And the second word would need a valiant heart.", "ar": "بس كان فيه أحد يلحقه. والكلمة الثانية بتحتاج قلب شجاع.", "voice": "epic", "emotion": "suspense"},
- {"cine": {"type": "quiz", "kicker": "Before you go", "question": "What is a quest?", "options": ["a long journey to find something", "a kind of dragon", "a small house", "a quiet night"], "answer": 0, "countFrom": 3, "explain": "quest = رحلة بحث طويلة"},
-  "say": "Before you go. What is a quest? Write your answer in the comments.", "ar": "قبل لا تروح: وش معنى quest؟ اكتب جوابك في التعليقات.", "voice": "isabella", "emotion": "joy", "tail": 3.2}
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "subtitle": "The Map of Seven Words · Episode 1",
+   "title": "The Door in the Mountain",
+   "textAt": 1.0,
+   "lightX": 0.5,
+   "lightY": 0.3,
+   "lightColor": "#ffd9a0",
+   "tint": [
+    150,
+    140,
+    130
+   ]
+  },
+  "say": "Inside the oldest mountain in the world, there is a door. And it opens for only one thing: seven words.",
+  "ar": "داخل أقدم جبل في العالم، فيه باب. وما ينفتح إلا بشي واحد: سبع كلمات.",
+  "voice": "epic",
+  "emotion": "epic",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "The village of Brightwater",
+   "textAt": 0.6,
+   "seed": 31,
+   "colors": [
+    "#ffd27a",
+    "#ffb347",
+    "#ffe9b0",
+    "#7a1f1f"
+   ]
+  },
+  "say": "On a stormy night, in the village of Brightwater, a boy called Sami found a torn map under his grandfather's bed.",
+  "ar": "في ليلة عاصفة، في قرية برايت ووتر، ولد اسمه سامي لقى خريطة ممزقة تحت سرير جدّه.",
+  "voice": "epic",
+  "emotion": "suspense"
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "Seven words open the door. Find them before the dragon wakes.",
+   "typeAt": 0.4,
+   "cps": 11
+  },
+  "say": "Seven words open the door. Find them before the dragon wakes.",
+  "ar": "سبع كلمات تفتح الباب. لاقها قبل لا يصحى التنين.",
+  "voice": "kid-boy",
+  "emotion": "whisper"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "lightX": 0.3,
+   "lightColor": "#ffcf80",
+   "tint": [
+    140,
+    150,
+    160
+   ],
+   "silhouette": true,
+   "seed": 12
+  },
+  "say": "A dragon? Grandpa, is this real?",
+  "ar": "تنين؟ جدّي، هذا صدق؟",
+  "voice": "kid-boy",
+  "emotion": "surprise"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "seed": 44,
+   "lamp": true
+  },
+  "say": "As real as the rain on that window, Sami. And now the map has chosen you.",
+  "ar": "صدق مثل المطر اللي على الشباك يا سامي. والحين الخريطة اختارتك.",
+  "voice": "grandpa",
+  "emotion": "tender"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "quest",
+   "kind": "Word 1 of 7 · noun",
+   "ipa": "/kwest/",
+   "meaning": "a long, hard journey to find something important",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "The first word. Quest. A long, hard journey to find something important.",
+  "ar": "الكلمة الأولى: Quest، رحلة طويلة وصعبة علشان تلاقي شي مهم.",
+  "voice": "isabella",
+  "emotion": "calm"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "subtitle": "Word 1",
+   "title": "QUEST",
+   "textAt": 0.5,
+   "lightX": 0.75,
+   "lightColor": "#e6b94f",
+   "tint": [
+    160,
+    150,
+    120
+   ]
+  },
+  "say": "And so the quest began. Sami packed bread, a lamp, and the map, and he walked into the dark.",
+  "ar": "وهكذا بدأت الرحلة. سامي أخذ خبز وفانوس والخريطة، ومشى في الظلام.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "valiant",
+   "kind": "Coming in Episode 2",
+   "meaning": "very brave",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "But someone was following him. And the second word would need a valiant heart.",
+  "ar": "بس كان فيه أحد يلحقه. والكلمة الثانية بتحتاج قلب شجاع.",
+  "voice": "epic",
+  "emotion": "suspense"
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Before you go",
+   "question": "What is a quest?",
+   "options": [
+    "a long journey to find something",
+    "a kind of dragon",
+    "a small house",
+    "a quiet night"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "quest = رحلة بحث طويلة"
+  },
+  "say": "Before you go. What is a quest? Write your answer in the comments.",
+  "ar": "قبل لا تروح: وش معنى quest؟ اكتب جوابك في التعليقات.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
 ]

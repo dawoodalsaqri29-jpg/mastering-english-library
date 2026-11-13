@@ -54,6 +54,39 @@ Paste the **Description** into Voice Studio's voice design box. Save the voice u
 - **Name:** `Jake` (the owner's existing American male voice)
 - **Use:** friends, travellers, conversation videos.
 
+### 9. Grandpa
+- **Name:** `Grandpa`
+- **Description:** An old British man in his seventies, warm and wise, a little slow and husky, kind eyes in his
+  voice, a grandfather telling secrets by the fire.
+- **Use:** grandfathers, old men, wise elders.
+
+### 10. Grandma
+- **Name:** `Grandma`
+- **Description:** An old British woman in her seventies, soft, warm and a little shaky, gentle humour, a
+  grandmother telling a bedtime story.
+- **Use:** grandmothers, old women, bedtime stories.
+
+## Who speaks: match the voice to the character's age
+
+| Character | Voice |
+|---|---|
+| a boy (5–12) | Boy |
+| a girl (5–12) | Girl |
+| a young man (18–35) | Jake (American) or Tom (British) |
+| a young woman / the narrator | Isabella |
+| a grandfather, an old man | Grandpa |
+| a grandmother, an old woman | Grandma |
+| legends, history, battles | Legend |
+| Arabic hook or explanation | Rawi Khaleeji; legends and history: Rawi Al-Asateer |
+
+## How to use Voice Studio (two boxes)
+
+1. **Voice description box:** paste only that voice's **Description** from this file, once, when you create the
+   voice. Each voice has its own description.
+2. **Text box (what it says):** paste only the **Line** from the recording sheet, for example
+   `[dramatic] Inside the oldest mountain in the world, there is a door.` Never paste the description here.
+3. Save the result with the file name from the sheet (`p1-s001.wav`).
+
 ## Emotions
 
 Each line in a script sheet has one emotion. If Voice Studio takes a style or emotion note, paste the
