@@ -1,0 +1,147 @@
+[
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "The River of Teeth",
+   "subtitle": "The Map of Seven Words · Episode 4",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.35,
+   "lightColor": "#cfe3ff",
+   "tint": [
+    120,
+    140,
+    170
+   ]
+  },
+  "say": "The fourth word was on the other side of a river that no boat had ever crossed. Until that night.",
+  "ar": "الكلمة الرابعة كانت ورا نهر ما عبره أي قارب. لين ذيك الليلة.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "textAt": 0.5,
+   "seed": 81,
+   "colors": [
+    "#9fc6ff",
+    "#ffe9b0",
+    "#4fa3ff"
+   ]
+  },
+  "say": "You want to cross my river? Ha! Children always do. And they always come back wet.",
+  "ar": "تبون تعبرون نهري؟ هه! الأطفال دايم يبون. ودايم يرجعون مبلولين.",
+  "voice": "grandma",
+  "emotion": "joy"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.25,
+   "lightColor": "#ffe2a8",
+   "tint": [
+    140,
+    150,
+    160
+   ],
+   "seed": 44
+  },
+  "say": "Please, ma'am. We need the fourth word. Someone is following us.",
+  "ar": "لو سمحتي يا خالة. نحتاج الكلمة الرابعة. فيه أحد يلحقنا.",
+  "voice": "kid-girl",
+  "emotion": "sad"
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "The river is perilous. Only those who say so may cross.",
+   "typeAt": 0.4,
+   "cps": 11
+  },
+  "say": "The old ferry woman wrote on her paddle. The river is perilous. Only those who say so may cross.",
+  "ar": "العجوز صاحبة القارب كتبت على مجدافها: النهر خطير. ما يعبر إلا اللي يقولها.",
+  "voice": "epic",
+  "emotion": "suspense"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "perilous",
+   "kind": "Word 4 of 7 · adjective",
+   "ipa": "/ˈperələs/",
+   "meaning": "very dangerous",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Perilous. Very dangerous. A perilous road, a perilous sea.",
+  "ar": "Perilous: خطير جدًا. طريق خطير، بحر خطير.",
+  "voice": "isabella",
+  "emotion": "calm"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "PERILOUS",
+   "subtitle": "Word 4",
+   "textAt": 0.6,
+   "lightX": 0.7,
+   "lightColor": "#9fc6ff",
+   "tint": [
+    130,
+    140,
+    160
+   ]
+  },
+  "say": "Perilous, said Sami. The water went still, like glass, and the little boat carried them across.",
+  "ar": "قال سامي: Perilous. الماي صار ساكن مثل الزجاج، والقارب الصغير عبّرهم.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "Something in the water",
+   "textAt": 0.5,
+   "seed": 88,
+   "lamp": false
+  },
+  "say": "But under the glass, something long and dark swam slowly after them.",
+  "ar": "بس تحت الزجاج، شي طويل وأسود سبح وراهم على مهل.",
+  "voice": "epic",
+  "emotion": "fear",
+  "tail": 1.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Your turn",
+   "question": "Which word means 'very dangerous'?",
+   "options": [
+    "perilous",
+    "ancient",
+    "calm",
+    "gentle"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "perilous = خطير جدًا"
+  },
+  "say": "Your turn. Which word means very dangerous? Episode five is coming.",
+  "ar": "دورك: أي كلمة معناها خطير جدًا؟ الحلقة الخامسة جاية.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
+]

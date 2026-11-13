@@ -1,0 +1,151 @@
+[
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "The Grey Cloak",
+   "subtitle": "The Map of Seven Words · Episode 5",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.3,
+   "lightColor": "#d8d8d8",
+   "tint": [
+    150,
+    150,
+    155
+   ]
+  },
+  "say": "For four nights, the man in the grey cloak had followed them. On the fifth night, he spoke.",
+  "ar": "أربع ليالي والرجل اللي لابس العباءة الرمادية يلحقهم. في الليلة الخامسة، تكلّم.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "textAt": 0.5,
+   "seed": 91,
+   "lamp": true
+  },
+  "say": "Give me the map, boy. Your grandfather stole it from me, fifty years ago.",
+  "ar": "عطني الخريطة يا ولد. جدّك سرقها مني، قبل خمسين سنة.",
+  "voice": "grandpa",
+  "emotion": "anger"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.3,
+   "lightColor": "#ffcf80",
+   "tint": [
+    140,
+    140,
+    150
+   ],
+   "seed": 55
+  },
+  "say": "That's not true! My grandpa never stole anything!",
+  "ar": "هذا مو صحيح! جدّي عمره ما سرق شي!",
+  "voice": "kid-boy",
+  "emotion": "anger"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.65,
+   "lightColor": "#ffe2a8",
+   "tint": [
+    150,
+    150,
+    140
+   ],
+   "seed": 56
+  },
+  "say": "Run, Sami! I'll stay. I won't leave you, but I won't let him take it either!",
+  "ar": "اركض يا سامي! أنا بقعد. ما بتركك، وما بخليه ياخذها!",
+  "voice": "kid-girl",
+  "emotion": "excited"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "loyal",
+   "kind": "Word 5 of 7 · adjective",
+   "ipa": "/ˈlɔɪəl/",
+   "meaning": "always on your side; you never leave a friend",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Loyal. Always on your side. A loyal friend never leaves you.",
+  "ar": "Loyal: وفي، دايم في صفك. الصديق الوفي عمره ما يتركك.",
+  "voice": "isabella",
+  "emotion": "tender"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "LOYAL",
+   "subtitle": "Word 5",
+   "textAt": 0.6,
+   "lightX": 0.7,
+   "lightColor": "#e6b94f",
+   "tint": [
+    160,
+    150,
+    120
+   ]
+  },
+  "say": "Lina stood between Sami and the stranger. And the map glowed, and wrote a new word. Loyal.",
+  "ar": "لينا وقفت بين سامي والغريب. والخريطة ضوّت، وكتبت كلمة جديدة: Loyal.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "He was not lying",
+   "textAt": 0.5,
+   "seed": 99,
+   "lamp": false
+  },
+  "say": "The stranger stepped back into the dark. And Sami saw his face. It looked just like Grandpa.",
+  "ar": "الغريب رجع ورا في الظلام. وسامي شاف وجهه. كان يشبه جدّه تمامًا.",
+  "voice": "epic",
+  "emotion": "surprise",
+  "tail": 1.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Your turn",
+   "question": "A friend who never leaves you is…",
+   "options": [
+    "loyal",
+    "perilous",
+    "ancient",
+    "rude"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "loyal = وفي"
+  },
+  "say": "Your turn. A friend who never leaves you is… what? Episode six is next.",
+  "ar": "دورك: الصديق اللي ما يتركك أبدًا هو...؟ الحلقة السادسة الجاية.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
+]

@@ -1,0 +1,156 @@
+[
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "The Door in the Mountain",
+   "subtitle": "The Map of Seven Words · Final Episode",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.3,
+   "lightColor": "#ffd9a0",
+   "tint": [
+    150,
+    140,
+    130
+   ]
+  },
+  "say": "Seven nights. Six words. And now, at last, the door in the mountain.",
+  "ar": "سبع ليالي. ست كلمات. والحين، أخيرًا، الباب اللي في الجبل.",
+  "voice": "epic",
+  "emotion": "epic",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.3,
+   "lightColor": "#ffcf80",
+   "tint": [
+    140,
+    130,
+    120
+   ],
+   "seed": 77
+  },
+  "say": "You came. Good. I was the one who drew that map, Sami. I'm your grandfather's brother.",
+  "ar": "جيت. زين. أنا اللي رسمت الخريطة يا سامي. أنا أخو جدّك.",
+  "voice": "grandpa",
+  "emotion": "tender"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "textAt": 0.5,
+   "seed": 111,
+   "lamp": true
+  },
+  "say": "Then why did you follow us? Why did you scare us?",
+  "ar": "عيل ليش كنت تلحقنا؟ ليش خوّفتنا؟",
+  "voice": "kid-boy",
+  "emotion": "sad"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightColor": "#ffd9a0",
+   "tint": [
+    150,
+    140,
+    120
+   ],
+   "seed": 78
+  },
+  "say": "Because the last word cannot be taken. It can only be found, after a long, perilous road.",
+  "ar": "لأن الكلمة الأخيرة ما تنأخذ. بس تنلقى، بعد طريق طويل وخطير.",
+  "voice": "grandpa",
+  "emotion": "calm"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "hope",
+   "kind": "Word 7 of 7 · noun",
+   "ipa": "/həʊp/",
+   "meaning": "believing that something good will happen",
+   "mood": "gold",
+   "textAt": 0.3
+  },
+  "say": "Hope. Believing that something good will happen, even in the dark.",
+  "ar": "Hope: الأمل، إنك تصدّق إن شي حلو بيصير، حتى في الظلام.",
+  "voice": "isabella",
+  "emotion": "tender"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "HOPE",
+   "subtitle": "Word 7",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.35,
+   "lightColor": "#ffe9b0",
+   "tint": [
+    170,
+    160,
+    130
+   ]
+  },
+  "say": "Quest. Valiant. Ancient. Perilous. Loyal. Wisdom. Hope. The door opened. And the dragon opened both its eyes.",
+  "ar": "Quest، Valiant، Ancient، Perilous، Loyal، Wisdom، Hope. الباب انفتح. والتنين فتح عيونه الثنتين.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "Seven words. One friend.",
+   "textAt": 0.5,
+   "seed": 120,
+   "colors": [
+    "#ffe9b0",
+    "#ffd27a",
+    "#ffb347"
+   ]
+  },
+  "say": "But the dragon did not roar. It smiled. It had waited a hundred years for someone to say those seven words.",
+  "ar": "بس التنين ما زأر. ابتسم. كان ينتظر مية سنة أحد يقول هالسبع كلمات.",
+  "voice": "epic",
+  "emotion": "joy",
+  "tail": 1.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Final test",
+   "question": "Which word means \"very brave\"?",
+   "options": [
+    "valiant",
+    "ancient",
+    "perilous",
+    "loyal"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "valiant = شجاع جدًا"
+  },
+  "say": "Final test. Can you remember all seven words? Write them in the comments.",
+  "ar": "الاختبار الأخير: تتذكر السبع كلمات كلها؟ اكتبها في التعليقات.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
+]

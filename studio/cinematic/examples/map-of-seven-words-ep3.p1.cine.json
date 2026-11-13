@@ -1,0 +1,151 @@
+[
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "The Forest That Remembers",
+   "subtitle": "The Map of Seven Words · Episode 3",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.3,
+   "lightColor": "#c8f0c0",
+   "tint": [
+    120,
+    150,
+    120
+   ],
+   "base": [
+    "#050c06",
+    "#1a2a1c"
+   ]
+  },
+  "say": "Some forests forget. This one remembered everything, and it did not like strangers.",
+  "ar": "بعض الغابات تنسى. بس هذي تتذكر كل شي، وما تحب الغرباء.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "textAt": 0.5,
+   "seed": 71,
+   "colors": [
+    "#9be15d",
+    "#3e8e41",
+    "#f6e27f"
+   ]
+  },
+  "say": "Sami, the trees are moving. I'm sure they're moving.",
+  "ar": "سامي، الأشجار تتحرك. متأكدة إنها تتحرك.",
+  "voice": "kid-girl",
+  "emotion": "fear"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.3,
+   "lightColor": "#ffe2a8",
+   "tint": [
+    140,
+    150,
+    130
+   ],
+   "seed": 33
+  },
+  "say": "Don't stop walking, Lina. Grandpa said the third word sleeps in the oldest tree.",
+  "ar": "لا توقفين يا لينا. جدّي قال إن الكلمة الثالثة نايمة في أقدم شجرة.",
+  "voice": "kid-boy",
+  "emotion": "whisper"
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "I was here before the kings. I am older than the rain.",
+   "typeAt": 0.4,
+   "cps": 11
+  },
+  "say": "On the oldest tree, the bark had words. I was here before the kings. I am older than the rain.",
+  "ar": "على أقدم شجرة كانت فيه كلمات محفورة: كنت هنا قبل الملوك. أنا أقدم من المطر.",
+  "voice": "epic",
+  "emotion": "suspense"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "ancient",
+   "kind": "Word 3 of 7 · adjective",
+   "ipa": "/ˈeɪnʃənt/",
+   "meaning": "very, very old",
+   "mood": "nature",
+   "textAt": 0.3
+  },
+  "say": "Ancient. Very, very old. Older than anyone can remember.",
+  "ar": "Ancient: قديم جدًا جدًا، أقدم من أي أحد يتذكر.",
+  "voice": "isabella",
+  "emotion": "calm"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "ANCIENT",
+   "subtitle": "Word 3",
+   "textAt": 0.6,
+   "lightX": 0.7,
+   "lightColor": "#e6b94f",
+   "tint": [
+    150,
+    150,
+    120
+   ]
+  },
+  "say": "Sami put his hand on the tree and said the word. Ancient. And the forest let them pass.",
+  "ar": "سامي حط يده على الشجرة وقال الكلمة: Ancient. والغابة خلّتهم يعبرون.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "A grey cloak in the dark",
+   "textAt": 0.5,
+   "seed": 77,
+   "lamp": false
+  },
+  "say": "But behind them, a man in a grey cloak picked up a fallen leaf, and smiled.",
+  "ar": "بس وراهم، رجل لابس عباءة رمادية التقط ورقة طايحة، وابتسم.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "tail": 1.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Your turn",
+   "question": "Which word means 'very, very old'?",
+   "options": [
+    "ancient",
+    "valiant",
+    "quest",
+    "tiny"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "ancient = قديم جدًا"
+  },
+  "say": "Your turn. Which word means very, very old? See you in episode four.",
+  "ar": "دورك: أي كلمة معناها قديم جدًا؟ نشوفك في الحلقة الرابعة.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
+]

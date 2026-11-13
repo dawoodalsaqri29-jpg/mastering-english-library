@@ -1,0 +1,147 @@
+[
+ {
+  "defaults": {
+   "voice": "epic",
+   "emotion": "epic"
+  }
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "The Lake of Questions",
+   "subtitle": "The Map of Seven Words · Episode 6",
+   "textAt": 0.6,
+   "lightX": 0.5,
+   "lightY": 0.3,
+   "lightColor": "#cfe3ff",
+   "tint": [
+    140,
+    160,
+    180
+   ]
+  },
+  "say": "The sixth word was not hidden. It was asked. And whoever answered wrong would forget their own name.",
+  "ar": "الكلمة السادسة ما كانت مخبّاة. كانت سؤال. واللي يجاوب غلط ينسى اسمه.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "lead": 0.8
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "",
+   "textAt": 0.5,
+   "seed": 101,
+   "colors": [
+    "#9fc6ff",
+    "#e6eefc",
+    "#4fa3ff"
+   ]
+  },
+  "say": "Sami, the stranger looks like your grandpa. Do you think they're brothers?",
+  "ar": "سامي، الغريب يشبه جدّك. تتوقع إنهم إخوان؟",
+  "voice": "kid-girl",
+  "emotion": "whisper"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "",
+   "subtitle": "",
+   "textAt": 0.6,
+   "lightX": 0.7,
+   "lightColor": "#fff1c8",
+   "tint": [
+    150,
+    160,
+    170
+   ],
+   "seed": 66
+  },
+  "say": "I don't know. But I know Grandpa. He would tell me the truth.",
+  "ar": "ما أدري. بس أعرف جدّي. كان بيقول لي الصدق.",
+  "voice": "kid-boy",
+  "emotion": "sad"
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "What grows when you share it, and is lost when you hide it?",
+   "typeAt": 0.4,
+   "cps": 11
+  },
+  "say": "Then the lake spoke. What grows when you share it, and is lost when you hide it?",
+  "ar": "بعدها تكلمت البحيرة: وش الشي اللي يكبر لما تشاركه، ويضيع لما تخبّيه؟",
+  "voice": "epic",
+  "emotion": "suspense"
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "wisdom",
+   "kind": "Word 6 of 7 · noun",
+   "ipa": "/ˈwɪzdəm/",
+   "meaning": "knowing what is true and what is right to do",
+   "mood": "night",
+   "textAt": 0.3
+  },
+  "say": "Wisdom. Knowing what is true, and what is right to do. Wisdom grows when you share it.",
+  "ar": "Wisdom: الحكمة، إنك تعرف وش الصح ووش اللي لازم تسويه. والحكمة تكبر لما تشاركها.",
+  "voice": "isabella",
+  "emotion": "calm"
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "title": "WISDOM",
+   "subtitle": "Word 6",
+   "textAt": 0.6,
+   "lightX": 0.6,
+   "lightColor": "#e6b94f",
+   "tint": [
+    150,
+    150,
+    140
+   ]
+  },
+  "say": "Wisdom, said Lina and Sami together. The lake opened like a door, and showed them the mountain.",
+  "ar": "قالوا لينا وسامي مع بعض: Wisdom. والبحيرة انفتحت مثل الباب، ووراتهم الجبل.",
+  "voice": "epic",
+  "emotion": "epic"
+ },
+ {
+  "cine": {
+   "type": "rain",
+   "title": "One word left",
+   "textAt": 0.5,
+   "seed": 109,
+   "lamp": false
+  },
+  "say": "Six words. One left. And the dragon was waking up.",
+  "ar": "ست كلمات. باقي وحدة. والتنين قاعد يصحى.",
+  "voice": "epic",
+  "emotion": "suspense",
+  "tail": 1.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Your turn",
+   "question": "What grows when you share it?",
+   "options": [
+    "wisdom",
+    "a secret",
+    "fear",
+    "a lie"
+   ],
+   "answer": 0,
+   "countFrom": 3,
+   "explain": "wisdom = الحكمة"
+  },
+  "say": "Your turn. What grows when you share it? The final episode is next.",
+  "ar": "دورك: وش اللي يكبر لما تشاركه؟ الحلقة الأخيرة الجاية.",
+  "voice": "isabella",
+  "emotion": "joy",
+  "tail": 3.2
+ }
+]
