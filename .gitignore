@@ -2,3 +2,6 @@ strix_runs/
 
 # Arena skill run folders
 .arena/
+
+# Video transcripts from the learn-video skill (stay on the machine)
+learned/
