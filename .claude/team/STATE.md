@@ -4,7 +4,7 @@ Claude keeps this file current so a new session, or a session after its context 
 knows exactly where work stands. One line per item. No secrets, no private contact details:
 the repo is public. Update it in the same commit as the work it describes.
 
-Last updated: 2026-11-08
+Last updated: 2026-11-13
 
 ## In progress
 - Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
@@ -17,6 +17,7 @@ Last updated: 2026-11-08
 - (none waiting on CI)
 
 ## Waiting on the owner
+- TikTok reel b1-present-perfect-vs-past-simple: listen before posting (narration not checked by ear), then post on TikTok. To work on the owner's PC: share a folder in the Claude desktop app (Settings, Claude Code, Remote Control) or run `claude remote-control` there; none was shared on 2026-11-13.
 - Check the published Wix post «اعرف مستواك…» on a phone (does the embedded check show and fit?).
 - Outreach to IFI, BIA, Mind Base: drafts given to the owner 2026-11-08 (teachers.html?ref=ifi|bia|mindbase); he sends them.
 - 3D business dashboard (private artifact https://claude.ai/artifact/4otQxnhTmweEhsZjYaXcbo, version 2): real numbers
@@ -31,6 +32,7 @@ Last updated: 2026-11-08
 - Optional: delete the stray branch `instagram-assets-lantern` (same commit as `instagram-assets`).
 
 ## Done recently (newest first)
+- 2026-11-13: `/tiktok-lesson-reel` skill: one lesson to a 34 s 9:16 4K TikTok (Skillry's free CreatorMotion checklist in the library colours, EN and AR subtitles in separate boxes, TikTok right-margin kept clear). First reel: b1-present-perfect-vs-past-simple, sent to the owner, not posted. Narration used the Gemini fallback (Kokoro needs Hugging Face, blocked in the cloud; ElevenLabs out of credit until 2026-11-22; OpenAI billing inactive). Videos are not committed.
 - 2026-11-09: Owner connected Manual Payments (mobile transfer, Oman). Payment line (PayPal or mobile transfer, link within 12 h) added to the descriptions of the 61 paid products; 3 free products left as they are.
 - 2026-11-09: Published the Wix blog post «الاستعداد لاختبار الآيلتس: الدرجات والمستويات وخطة التحضير» (IELTS queries). Band-to-CEFR table marked approximate, as IELTS itself says. Three Arabic posts now live: level, vocabulary, IELTS. Next: check Wix search queries for clicks in 2–3 weeks.
 - 2026-11-09: Published the Wix blog post «كيف تحفظ كلمات الإنجليزي بدون نسيان: 6 خطوات بسيطة».
@@ -65,6 +67,7 @@ Last updated: 2026-11-08
 - 2026-11-07: free.js shows a message when lessons fail to load (PR #49); roster updates (PR #48).
 
 ## Decisions that stand (do not reopen without the owner)
+- 2026-11-13: platform formats. TikTok: the CreatorMotion checklist reel (`/tiktok-lesson-reel`), TikTok only. YouTube: unchanged, the `youtube-agent` way. Instagram: the usual carousels and videos, not this reel.
 - 2026-11-09: mobile-transfer orders. A scheduled task (every 3 h, this session) lists unpaid offline orders and asks the owner per order. Claude marks an order paid (Add Payments, offline) only after the owner says yes for that order number. Buyer details stay out of chat and repo.
 - 2026-11-09: the owner said Claude publishes Wix blog posts itself ("كله سوي انت"). Posts stay factual, link to the free lessons, and add no prices or claims the site cannot back.
 - The Arabic level page lives on the Wix site (blog post) and embeds level-ar.html from this repo.

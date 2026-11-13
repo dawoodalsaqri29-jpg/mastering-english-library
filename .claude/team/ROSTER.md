@@ -36,6 +36,7 @@ precise and saves tokens.
 | Brand look and voice across platforms | `agency-design-brand-guardian` |
 | Reels and TikTok edit plan (cuts, captions, pacing) | `agency-marketing-short-video-editing-coach` |
 | TikTok posting plan and trends | `agency-marketing-tiktok-strategist` |
+| TikTok lesson video (checklist reel, TikTok only) | `/tiktok-lesson-reel` skill |
 | Instagram posts, captions, profile | `agency-marketing-instagram-curator` |
 | YouTube titles, descriptions, retention | `agency-marketing-video-optimization-specialist` |
 | Content calendar across platforms | `agency-marketing-content-creator` |

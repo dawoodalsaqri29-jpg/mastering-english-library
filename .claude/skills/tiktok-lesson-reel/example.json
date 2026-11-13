@@ -1,0 +1,17 @@
+{
+  "slug": "b1-present-perfect-vs-past-simple",
+  "lesson": "lessons/b1-present-perfect-vs-past-simple.html",
+  "level": "B1",
+  "skill": "Grammar",
+  "title": "Present perfect or past simple?",
+  "arTitle": "متى تقول I have done ومتى تقول I did؟",
+  "tasks": ["Finished time? Past simple", "Connected to now? Present perfect", "Spot the signal word"],
+  "voice": "kokoro",
+  "lines": [
+    {"en": "Present perfect or past simple? Three quick checks.", "ar": "المضارع التام ولا الماضي البسيط؟ ثلاث خطوات سريعة"},
+    {"en": "One: is the time finished, like yesterday or in 2019? Use the past simple.", "ar": "أولاً: هل الوقت انتهى، مثل yesterday أو in 2019؟ استخدم الماضي البسيط"},
+    {"en": "Two: is it connected to now, like today, ever or yet? Use the present perfect.", "ar": "ثانياً: هل له علاقة بالحاضر، مثل today أو ever أو yet؟ استخدم المضارع التام"},
+    {"en": "Three: spot the signal word, and the tense chooses itself.", "ar": "ثالثاً: دوّر على الكلمة الدالّة، وهي تختار لك الزمن"},
+    {"en": "Free lesson and PDF: link in bio.", "ar": "الدرس وملف PDF مجاناً: الرابط في البايو"}
+  ]
+}
