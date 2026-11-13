@@ -16,7 +16,7 @@
   const fadeIO = (t, a, b, f = 0.6) => ease((t - a) / f) * (1 - ease((t - (b - f)) / f));
   function mk(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
   function noise1(x, seed = 1) { const i = Math.floor(x), f = x - i; const h = n => { const r = rng(seed * 9973 + n * 7919)(); return r; }; return lerp(h(i), h(i + 1), ease(f)); }
-  function hexA(hex, a) { const n = parseInt(hex.replace('#', ''), 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; }
+  function hexA(hex, a) { let h = hex.replace('#', ''); if (h.length === 3) h = h.split('').map(c => c + c).join(''); const n = parseInt(h, 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; }
   function vignette(strength = 0.75) {
     const g = ctx.createRadialGradient(W / 2, H / 2, H * 0.35, W / 2, H / 2, H * 0.95);
     g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, `rgba(0,0,0,${strength})`); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
@@ -64,7 +64,11 @@
         const v = lerp(lerp(g[iy * 13 + ix], g[iy * 13 + ix + 1], ax), lerp(g[(iy + 1) * 13 + ix], g[(iy + 1) * 13 + ix + 1], ax), ay); const o = (j * lw + i) * 4;
         d.data[o] = tint[0]; d.data[o + 1] = tint[1]; d.data[o + 2] = tint[2]; d.data[o + 3] = Math.pow(v, 1.6) * 255; }
       x.putImageData(d, 0, 0); const big = mk(W * 1.5, H * 1.2), bx = big.getContext('2d'); bx.filter = 'blur(28px)'; bx.drawImage(c, 0, 0, big.width, big.height); L.push(big); } return L; }
-  function drawFog(t, layers, alpha = 0.55, speed = 18) { layers.forEach((L, k) => { const dx = -((t * speed * (k + 1) * 0.6) % (W * 0.5)); ctx.save(); ctx.globalAlpha = alpha * (0.5 + 0.25 * k); ctx.drawImage(L, dx - W * 0.1, -H * 0.1 + Math.sin(t * 0.2 + k) * 20); ctx.restore(); }); }
+  // Fog layers drift left and repeat seamlessly: the layer is drawn twice, mirrored, so the seam never shows.
+  function drawFog(t, layers, alpha = 0.55, speed = 18) { layers.forEach((L, k) => { const lw = L.width; const dx = -((t * speed * (k + 1) * 0.6) % (lw * 2)); const y = -H * 0.1 + Math.sin(t * 0.2 + k) * 20;
+    ctx.save(); ctx.globalAlpha = alpha * (0.5 + 0.25 * k);
+    for (const ox of [dx, dx + lw * 2]) { ctx.drawImage(L, ox, y); ctx.save(); ctx.translate(ox + lw * 2, y); ctx.scale(-1, 1); ctx.drawImage(L, 0, 0); ctx.restore(); }
+    ctx.restore(); }); }
 
   // ---------- scenes ----------
   const SC = {};
@@ -94,14 +98,14 @@
 
   // Drifting fog with a flickering lamp or candle (horror)
   SC.fog = {
-    setup() { const tint = P.tint ?? [150, 160, 170]; S.fog = fogLayers(P.seed ?? 9, tint); S.r = rng(P.seed ?? 9); },
+    setup() { const tint = P.tint ?? [150, 160, 170]; S.fog = fogLayers(P.seed ?? 9, tint); },
     frame(t) { const base = P.base ?? ['#05070a', '#0e1418'];
       const g0 = ctx.createLinearGradient(0, 0, 0, H); g0.addColorStop(0, base[1]); g0.addColorStop(1, base[0]); ctx.fillStyle = g0; ctx.fillRect(0, 0, W, H);
       const lx = W * (P.lightX ?? 0.72), ly = H * (P.lightY ?? 0.42); const fl = 0.7 + 0.3 * noise1(t * 6, 2) * noise1(t * 1.3, 4); const lc = P.lightColor ?? '#ffcf80';
       const g = ctx.createRadialGradient(lx, ly, 0, lx, ly, 520); g.addColorStop(0, hexA(lc, 0.95 * fl)); g.addColorStop(0.08, hexA(lc, 0.55 * fl)); g.addColorStop(0.5, hexA(lc, 0.10 * fl)); g.addColorStop(1, hexA(lc, 0));
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
       if (P.silhouette !== false) { // bare trees and a lamp post
-        ctx.fillStyle = '#020304'; const r = rng(41); for (let k = 0; k < 5; k++) { const x0 = r() * W, h0 = H * (0.45 + r() * 0.35); ctx.save(); ctx.globalAlpha = 0.55 + 0.4 * (k / 5);
+        ctx.fillStyle = '#020304'; const r = rng((P.seed ?? 9) + 41); for (let k = 0; k < 5; k++) { const x0 = r() * W, h0 = H * (0.45 + r() * 0.35); ctx.save(); ctx.globalAlpha = 0.55 + 0.4 * (k / 5);
           (function br(x, y, a, len, w, d) { if (d > 6) return; const x2 = x + Math.cos(a) * len, y2 = y + Math.sin(a) * len; ctx.lineWidth = w; ctx.strokeStyle = '#020304'; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x2, y2); ctx.stroke(); br(x2, y2, a - 0.35 - r() * 0.3, len * 0.72, w * 0.68, d + 1); br(x2, y2, a + 0.35 + r() * 0.3, len * 0.72, w * 0.68, d + 1); })(x0, H, -Math.PI / 2 + (r() - 0.5) * 0.2, h0 * 0.35, 22, 0); ctx.restore(); }
         ctx.fillRect(lx - 7, ly + 30, 14, H - ly); ctx.fillRect(lx - 34, ly + 10, 68, 22);
       }
@@ -113,10 +117,12 @@
   SC.typewriter = {
     setup() { const r = rng(P.seed ?? 5); S.paper = mk(W, H); const x = S.paper.getContext('2d'); x.fillStyle = '#efe9dc'; x.fillRect(0, 0, W, H);
       for (let i = 0; i < 9000; i++) { x.fillStyle = `rgba(90,70,40,${r() * 0.05})`; x.fillRect(r() * W, r() * H, 1 + r() * 2, 1 + r() * 2); }
-      S.text = String(P.text ?? 'Writer: paints in the imagination with words.'); S.cps = P.cps ?? 11; S.start = P.typeAt ?? 0.6; },
-    frame(t) { const n = Math.floor(clamp((t - S.start) * S.cps, 0, S.text.length)); const typed = S.text.slice(0, n);
-      const lines = []; let cur = ''; ctx.font = '500 58px "Courier 10 Pitch", "Liberation Mono", monospace'; const cw = ctx.measureText('M').width; const maxC = 38;
-      for (const word of typed.split(' ')) { if ((cur + ' ' + word).trim().length > maxC) { lines.push(cur); cur = word; } else cur = (cur ? cur + ' ' : '') + word; } lines.push(cur);
+      S.text = String(P.text ?? 'Writer: paints in the imagination with words.'); S.cps = P.cps ?? 11; S.start = P.typeAt ?? 0.6;
+      // wrap the whole text once, so a word never jumps to the next line while it is being typed
+      S.full = []; let cur = ''; for (const word of S.text.split(' ')) { if ((cur + ' ' + word).trim().length > 38) { S.full.push(cur); cur = word; } else cur = (cur ? cur + ' ' : '') + word; } S.full.push(cur); },
+    frame(t) { const n = Math.floor(clamp((t - S.start) * S.cps, 0, S.text.length));
+      ctx.font = '500 58px "Courier 10 Pitch", "Liberation Mono", monospace'; const cw = ctx.measureText('M').width;
+      const lines = []; let left = n; for (const ln of S.full) { if (left <= 0 && lines.length) break; lines.push(ln.slice(0, Math.max(0, left))); left -= ln.length + 1; }
       const li = lines.length - 1; const curLen = lines[li].length;
       // camera: paper scrolls up per line, carriage moves left per char
       const carX = W * 0.5 - curLen * cw; const lineY = H * 0.46; const scrollY = li * 84;
@@ -147,7 +153,7 @@
       S.fog = fogLayers(P.seed ?? 12, P.fogTint ?? [40, 140, 130]); S.markers = P.markers ?? []; },
     frame(t) { const tc = P.color ?? '#7fe0d0'; const bg = ctx.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, P.bgTop ?? '#0f3b38'); bg.addColorStop(1, '#020807'); ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
       drawFog(t, S.fog, 0.35, 10);
-      const cx = W / 2, cy = H * 0.5, R = H * (P.radius ?? 0.40); const rot = (P.lon0 ?? 0) * Math.PI / 180 + t * (P.speed ?? 0.18); const tilt = (P.tilt ?? 18) * Math.PI / 180;
+      const cx = W / 2, cy = H * 0.5, R = H * (P.radius ?? 0.40); const rot = -(P.lon0 ?? 0) * Math.PI / 180 + t * (P.speed ?? 0.18); /* lon0 = longitude facing the camera at t = 0, east positive */ const tilt = (P.tilt ?? 18) * Math.PI / 180;
       const at = ctx.createRadialGradient(cx, cy, R * 0.9, cx, cy, R * 1.25); at.addColorStop(0, hexA(tc, 0.18)); at.addColorStop(1, hexA(tc, 0)); ctx.fillStyle = at; ctx.fillRect(0, 0, W, H);
       const proj = (lat, lon) => { const x = Math.cos(lat) * Math.sin(lon + rot), y0 = Math.sin(lat), z0 = Math.cos(lat) * Math.cos(lon + rot); const y = y0 * Math.cos(tilt) - z0 * Math.sin(tilt), z = y0 * Math.sin(tilt) + z0 * Math.cos(tilt); return [cx + x * R, cy - y * R, z]; };
       for (const [lat, lon, land] of S.pts) { const [x, y, z] = proj(lat, lon); if (z < -0.05) continue; const a = (land ? 0.35 + 0.65 * z : 0.12 * z); ctx.fillStyle = land ? hexA(tc, a) : hexA('#9fd', a); const s = land ? 2.3 : 1.4; ctx.fillRect(x - s / 2, y - s / 2, s, s); }
@@ -197,8 +203,11 @@
       ctx.save(); ctx.translate(W / 2, H * 0.47); ctx.scale(sc, sc); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       if (P.kind) { ctx.globalAlpha = a; ctx.fillStyle = S.acc; ctx.font = '600 34px Inter'; ctx.letterSpacing = '12px'; ctx.fillText(P.kind.toUpperCase(), 0, -150); ctx.letterSpacing = '0px'; }
       const size = Math.min(190, 1500 / Math.max(4, String(P.word).length) * 1.6); ctx.font = `700 ${size}px Caladea`; ctx.globalAlpha = a; ctx.shadowColor = 'rgba(0,0,0,0.8)'; ctx.shadowBlur = 40; ctx.fillStyle = '#fbf6ea'; ctx.fillText(P.word, 0, 0);
-      // light sweep across the word
-      const sw = ((t - a0 - 0.6) / 1.6); if (sw > 0 && sw < 1) { ctx.save(); ctx.globalCompositeOperation = 'source-atop'; const wdt = ctx.measureText(P.word).width; const sx = -wdt / 2 + sw * wdt * 1.4 - wdt * 0.2; const g = ctx.createLinearGradient(sx - 120, 0, sx + 120, 0); g.addColorStop(0, 'rgba(255,255,255,0)'); g.addColorStop(0.5, 'rgba(255,240,200,0.9)'); g.addColorStop(1, 'rgba(255,255,255,0)'); ctx.fillStyle = g; ctx.fillRect(-W, -size, W * 2, size * 2); ctx.restore(); }
+      // light sweep across the letters only: drawn on its own canvas, clipped to the glyphs there
+      const sw = ((t - a0 - 0.6) / 1.6); if (sw > 0 && sw < 1) { if (!S.sweep) S.sweep = mk(W, H); const o = S.sweep.getContext('2d'); o.setTransform(1, 0, 0, 1, 0, 0); o.clearRect(0, 0, W, H); o.translate(W / 2, H / 2);
+        o.font = ctx.font; o.textAlign = 'center'; o.textBaseline = 'middle'; o.fillStyle = '#fff'; o.fillText(P.word, 0, 0); const wdt = o.measureText(P.word).width; const sx = -wdt / 2 + sw * wdt * 1.4 - wdt * 0.2;
+        o.globalCompositeOperation = 'source-in'; const g = o.createLinearGradient(sx - 120, 0, sx + 120, 0); g.addColorStop(0, 'rgba(255,240,200,0)'); g.addColorStop(0.5, 'rgba(255,240,200,0.9)'); g.addColorStop(1, 'rgba(255,240,200,0)'); o.fillStyle = g; o.fillRect(-W / 2, -H / 2, W, H); o.globalCompositeOperation = 'source-over';
+        ctx.save(); ctx.shadowBlur = 0; ctx.globalAlpha = a; ctx.drawImage(S.sweep, -W / 2, -H / 2); ctx.restore(); }
       ctx.shadowBlur = 20; const b = ease((t - a0 - 0.9) / 0.8);
       if (P.ipa) { ctx.globalAlpha = b; ctx.fillStyle = '#d6cfc0'; ctx.font = '400 44px "DejaVu Sans"'; ctx.fillText(P.ipa, 0, size * 0.62); }
       if (P.meaning) { ctx.globalAlpha = ease((t - a0 - 1.4) / 0.8); ctx.fillStyle = S.acc; ctx.font = 'italic 400 50px Caladea'; wrapText(P.meaning, 'italic 400 50px Caladea', W * 0.7).forEach((ln, i) => ctx.fillText(ln, 0, size * 0.62 + 80 + i * 60)); }
@@ -226,7 +235,8 @@
       ctx.globalAlpha = 1; vignette(0.6); grain(t, 0.04); }
   };
 
-  window.setup = (params, land) => { P = params; LAND = land || []; S = {}; ctx.letterSpacing = '0px'; SC[P.type].setup(); };
+  window.setup = (params, land) => { P = params; LAND = land || []; S = {}; ctx.letterSpacing = '0px';
+    if (!SC[P.type]) throw new Error(`unknown scene type "${P.type}"; use one of: ${Object.keys(SC).join(', ')}`); SC[P.type].setup(); };
   window.frame = t => { ctx.save(); ctx.globalAlpha = 1; ctx.filter = 'none'; ctx.globalCompositeOperation = 'source-over'; SC[P.type].frame(t); ctx.restore();
     const fi = P.fadeIn ?? 0.4, fo = P.fadeOut ?? 0.4; const k = Math.min(ease(t / fi), 1 - ease((t - (P.duration - fo)) / fo)); if (k < 1) { ctx.fillStyle = `rgba(0,0,0,${1 - k})`; ctx.fillRect(0, 0, W, H); } };
   window.SCENES = Object.keys(SC);

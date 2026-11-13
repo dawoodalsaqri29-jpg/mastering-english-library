@@ -27,7 +27,7 @@
  {
   "cine": {
    "type": "globe",
-   "lon0": -20,
+   "lon0": 20,
    "markers": [
     {
      "lat": 51.5,

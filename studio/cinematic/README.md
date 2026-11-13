@@ -12,7 +12,7 @@ pipeline as narrated clip scenes, next to the plugin's 19 animated styles.
 | `rain` | rain drops on a window at night, warm street-lamp bokeh | horror and mystery stories, calm outros | `title`, `subtitle`, `caption`, `textAt`, `colors`, `drops`, `lamp` |
 | `fog` | drifting fog, bare trees, a flickering lamp | horror, ghost stories, chapter cards | `title`, `subtitle`, `lightX`, `lightY`, `lightColor`, `tint`, `accent`, `silhouette` |
 | `typewriter` | a line typing onto paper, carriage moving | stories, writers, dates, quotes, word origins | `text`, `typeAt`, `cps` (characters a second) |
-| `globe` | rotating dotted globe with real continents, light trails | history of English, where English is spoken | `lon0`, `speed`, `tilt`, `markers` `[{lat, lon, label, at}]`, `title` |
+| `globe` | rotating dotted globe with real continents, light trails | history of English, where English is spoken | `lon0` (longitude facing the camera at the start, east positive), `speed`, `tilt`, `markers` `[{lat, lon, label, at}]`, `title` |
 | `map` | glowing world map, light streaks, slow camera, routes | empires, wars, trade, words travelling | `from`/`to` `{lon, lat, zoom}`, `routes` `[{from:[lon,lat], to, at, dur, label}]`, `labels`, `color` |
 | `word` | a word appearing in bokeh with a light sweep | vocabulary, nature words, topic words | `word`, `kind`, `ipa`, `meaning`, `mood` (`night`, `nature`, `gold`, `fog`) |
 | `quiz` | question, four options, countdown, answer lights up | games, level tests, exam practice | `question`, `options`, `answer` (index), `countFrom`, `revealAt`, `kicker`, `explain` |

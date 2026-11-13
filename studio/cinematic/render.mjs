@@ -12,6 +12,7 @@ import { fileURLToPath } from 'url';
 const here = dirname(fileURLToPath(import.meta.url));
 const arg = k => { const i = process.argv.indexOf('--' + k); return i > 0 ? process.argv[i + 1] : undefined; };
 const params = JSON.parse(readFileSync(arg('scene'), 'utf8'));
+params.duration ??= 8;   // prep.py always sets it; this keeps a hand-written preview scene working
 const fps = Number(arg('fps') ?? 30);
 const out = arg('out');
 const needsLand = ['globe', 'map'].includes(params.type);
@@ -32,6 +33,7 @@ await page.evaluate(async () => { await document.fonts.ready; for (const f of ['
 await page.evaluate(([p, l]) => window.setup(p, l), [params, land]);
 
 if (arg('preview')) {
+  if (!arg('png')) { console.error('--preview needs --png <file>'); await browser.close(); process.exit(2); }
   await page.evaluate(t => window.frame(t), Number(arg('preview')));
   await page.screenshot({ path: arg('png') });
   await browser.close(); process.exit(0);
@@ -40,12 +42,23 @@ if (arg('preview')) {
 const n = Math.round(params.duration * fps);
 const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-',
   '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '17', '-pix_fmt', 'yuv420p', '-r', String(fps), '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
-for (let i = 0; i < n; i++) {
-  await page.evaluate(t => window.frame(t), i / fps);
-  const buf = await page.screenshot({ type: 'jpeg', quality: 93 });
-  if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r));
+// Watch ffmpeg from the start: if it dies mid-render, stop instead of waiting forever on a pipe.
+let ffDone = false;
+const exited = new Promise((res, rej) => {
+  ff.on('error', rej);
+  ff.on('close', c => { ffDone = true; c === 0 ? res() : rej(new Error('ffmpeg exited with ' + c)); });
+});
+ff.stdin.on('error', () => {});   // a broken pipe surfaces through `exited`
+try {
+  for (let i = 0; i < n; i++) {
+    if (ffDone) throw new Error('ffmpeg stopped early');
+    await page.evaluate(t => window.frame(t), i / fps);
+    const buf = await page.screenshot({ type: 'jpeg', quality: 93 });
+    if (!ff.stdin.write(buf)) await Promise.race([new Promise(r => ff.stdin.once('drain', r)), exited]);
+  }
+  ff.stdin.end();
+  await exited;
+} finally {
+  await browser.close();
 }
-ff.stdin.end();
-await new Promise((res, rej) => ff.on('close', c => c === 0 ? res() : rej(new Error('ffmpeg ' + c))));
-await browser.close();
 console.log('rendered', out, n, 'frames');
