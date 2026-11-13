@@ -1,0 +1,73 @@
+{
+ "isabella": {
+  "engine": "kokoro",
+  "voice": "bf_isabella",
+  "lang": "en-gb",
+  "use": "Default narrator, free and unlimited. Emotions are shaped (pace, pitch, tremble, echo), not acted.",
+  "studio": "Isabella"
+ },
+ "isabella-gemini": {
+  "engine": "gemini",
+  "voice": "Sulafat",
+  "accent": "Soft British English accent.",
+  "persona": "A warm young Englishwoman from London, a storyteller for English learners. Keep a clear British accent in every line.",
+  "use": "Isabella's role with real acting: lessons, stories, history. The owner's pick from the voice test.",
+  "studio": "Isabella"
+ },
+ "man-uk": {
+  "engine": "gemini",
+  "voice": "Charon",
+  "accent": "British English (RP) accent.",
+  "persona": "A calm middle-aged man, a gentle storyteller.",
+  "use": "Second narrator, fathers, teachers, old men in stories (like the owner's Voice Studio British man).",
+  "studio": "Tom"
+ },
+ "man-us": {
+  "engine": "gemini",
+  "voice": "Iapetus",
+  "accent": "General American accent.",
+  "persona": "A friendly young man in his twenties with a clear male voice.",
+  "use": "Young men, friends, travellers (like the owner's Voice Studio American man).",
+  "studio": "Jake"
+ },
+ "kid-girl": {
+  "engine": "gemini",
+  "voice": "Leda",
+  "accent": "General American accent.",
+  "persona": "An eight-year-old girl with a light, high, bright child's voice, curious and sweet.",
+  "use": "Children's videos and girl characters (like the owner's Voice Studio child voice).",
+  "studio": "Girl"
+ },
+ "kid-boy": {
+  "engine": "gemini",
+  "voice": "Laomedeia",
+  "accent": "General American accent.",
+  "persona": "A nine-year-old boy, voiced like a cartoon boy: high, young, playful child's voice, never an adult voice.",
+  "use": "Children's videos and boy characters.",
+  "studio": "Boy"
+ },
+ "epic": {
+  "engine": "gemini",
+  "voice": "Algenib",
+  "accent": "British English accent.",
+  "persona": "A legendary narrator with a deep, rich, slightly gravelly voice, like the voice of an ancient chronicle.",
+  "use": "Legends, epic quests, history films and battles.",
+  "studio": "Legend"
+ },
+ "gulf-narrator": {
+  "engine": "gemini",
+  "voice": "Orus",
+  "accent": "Gulf Arabic (Khaleeji) dialect, natural Omani and Emirati style.",
+  "persona": "A warm Gulf Arab man telling a story to friends in a majlis.",
+  "use": "Arabic lines in Gulf dialect: hooks, explanations, story intros.",
+  "studio": "Rawi Khaleeji"
+ },
+ "gulf-elder": {
+  "engine": "gemini",
+  "voice": "Algenib",
+  "accent": "Simple Gulf Arabic, an old storyteller.",
+  "persona": "A deep, wise, older Arab man telling legends and history.",
+  "use": "Arabic narration for history and legend videos.",
+  "studio": "Rawi Al-Asateer"
+ }
+}

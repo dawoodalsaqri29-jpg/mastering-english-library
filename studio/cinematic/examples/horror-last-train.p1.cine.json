@@ -1,5 +1,11 @@
 [
  {
+  "defaults": {
+   "voice": "isabella",
+   "emotion": "suspense"
+  }
+ },
+ {
   "cine": {
    "type": "rain",
    "subtitle": "A short horror story · B1",
@@ -9,7 +15,9 @@
   "say": "The last train of the night was empty. Or that is what Sara thought.",
   "ar": "آخر قطار في الليل كان فاضي. أو هذا اللي ظنّته سارة.",
   "lead": 0.6,
-  "tail": 0.8
+  "tail": 0.8,
+  "emotion": "suspense",
+  "voice": "isabella"
  },
  {
   "cine": {
@@ -28,7 +36,9 @@
   "say": "Rain ran down the windows. The lights flickered. Then, a voice behind her whispered her name.",
   "ar": "المطر ينزل على الشبابيك. الأضواء ترمش. وفجأة، صوت وراها همس باسمها.",
   "lead": 0.5,
-  "tail": 0.8
+  "tail": 0.8,
+  "emotion": "fear",
+  "voice": "isabella"
  },
  {
   "cine": {
@@ -43,7 +53,9 @@
   "say": "Whisper. To speak very, very quietly.",
   "ar": "Whisper: يهمس، يتكلم بصوت واطي جدًا.",
   "lead": 0.4,
-  "tail": 0.8
+  "tail": 0.8,
+  "emotion": "whisper",
+  "voice": "isabella"
  },
  {
   "cine": {
@@ -55,7 +67,9 @@
   "say": "Next stop, Hollow Lane, said the speaker. But everyone in the town knew. Nobody gets off at Hollow Lane.",
   "ar": "المحطة الجاية: هولو لين، قال المذيع. بس كل أهل البلد يعرفون: محد ينزل في هولو لين.",
   "lead": 0.5,
-  "tail": 0.8
+  "tail": 0.8,
+  "emotion": "suspense",
+  "voice": "epic"
  },
  {
   "cine": {
@@ -70,7 +84,9 @@
   "say": "Eerie. Strange, quiet, and a little frightening.",
   "ar": "Eerie: غريب وهادي ومخيف شوي.",
   "lead": 0.4,
-  "tail": 0.8
+  "tail": 0.8,
+  "emotion": "fear",
+  "voice": "isabella"
  },
  {
   "cine": {
@@ -83,6 +99,8 @@
   "say": "The doors opened. Cold air came in. Would you get off the train? Tell me in the comments.",
   "ar": "الأبواب انفتحت، ودخل هوا بارد. تنزل من القطار ولا لا؟ قول لي في التعليقات.",
   "lead": 0.5,
-  "tail": 1.2
+  "tail": 1.2,
+  "emotion": "suspense",
+  "voice": "isabella"
  }
 ]

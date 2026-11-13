@@ -60,3 +60,19 @@ Every scene also takes `duration`, `seed`, `fadeIn` and `fadeOut`. `prep.py` set
   no music, facts checked.
 - Keep on-screen text short; the voice carries the detail.
 - Land shapes: Natural Earth (public domain) via the `world-atlas` package (ISC), in `land.json`.
+
+## Voices with emotion (Voice Studio)
+
+The owner records the voices in Voice Studio; `VOICE-STUDIO.md` has the cast (Isabella, Legend, the Gulf
+storytellers, Boy, Girl, Tom, Jake), the voice descriptions to paste into Voice Studio, and the emotions.
+
+```bash
+python3 studio/cinematic/script_sheet.py <film> p1   # the recording sheet: line, voice, emotion, file name
+# the owner saves each line as films/<film>/voice-studio/p1-s001.wav, p1-s002.wav, ...
+python3 studio/cinematic/film.py <film> p1           # builds the part: recordings + scenes + subtitles + 4K
+```
+
+In `p1.cine.json` each scene may name a `voice` (a role in `voices.json`) and an `emotion` (see `voice.py`).
+`film.py` uses the Voice Studio recording when there is one. Otherwise it uses the role in `voices.json`:
+Isabella on Kokoro (free, emotions shaped by pace and pitch) or a Gemini voice (acted, but limited free requests
+a day, and the owner preferred Voice Studio). Sheets waiting to be recorded are in `scripts-to-record/`.

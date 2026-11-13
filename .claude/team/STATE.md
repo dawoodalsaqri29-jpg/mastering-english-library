@@ -52,10 +52,12 @@ Last updated: 2026-11-13
   `.claude/skills/learn-video/`; `learned/` is git-ignored. Cloud sessions: www.youtube.com is now allowed in the
   "openmontage" environment, but YouTube asks data-center servers to sign in, so here paste a transcript; on the
   owner's own computer (desktop app, Code tab) links work directly. The optional Watch plugin was not installed.
-- Emotional voices (2026-11-13): owner finds Isabella flat and wants fear, joy and sadness. ElevenLabs has 3 of
-  131,000 characters left until about 22 Nov; OpenAI billing is inactive. Gemini TTS (connected key) works with a
-  direction per line, checked by transcription; comparison video sent. Waiting on the owner: pick the new voice,
-  then the films switch from Kokoro (the standing Kokoro decision changes only on his word).
+- Voices (2026-11-13): owner found Kokoro flat and Gemini voices "not nice"; decision: the voices come from his
+  Voice Studio app. Claude writes the lines; `studio/cinematic/script_sheet.py` makes the recording sheet; he saves
+  `films/<film>/voice-studio/p1-s001.wav`...; `film.py` puts each recording in its scene (tested with his 4 samples).
+  Voice descriptions for Voice Studio (Legend, Gulf storytellers, Boy, Girl) are in `studio/cinematic/VOICE-STUDIO.md`.
+  Waiting on him to record: `studio/cinematic/scripts-to-record/` (Map of Seven Words ep. 1, The Last Train).
+  Declined: removing AI-voice watermarks or provenance (asked 2026-11-13).
 
 ## Waiting on the owner
 - From the swarm run (2026-11-12): (1) one or two free sample pages from each paid pack, above all Exam Quick-Packs;
