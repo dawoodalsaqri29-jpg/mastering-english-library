@@ -1,0 +1,164 @@
+[
+ {
+  "cine": {
+   "type": "rain",
+   "subtitle": "A short horror story",
+   "title": "Never Follow the Bell",
+   "textAt": 1.2
+  },
+  "say": "Every night at midnight, an old bell rings in the fog. And everyone in the village knows one rule.",
+  "ar": "كل ليلة الساعة 12، يرن جرس قديم في الضباب. وكل أهل القرية يعرفون قاعدة وحدة.",
+  "lead": 0.6
+ },
+ {
+  "cine": {
+   "type": "fog",
+   "subtitle": "The rule",
+   "title": "Never follow the bell.",
+   "textAt": 0.6,
+   "lightX": 0.8,
+   "accent": "#d0473c"
+  },
+  "say": "Never follow the bell.",
+  "ar": "لا تتبع الجرس أبدًا.",
+  "lead": 0.8,
+  "tail": 1.6
+ },
+ {
+  "cine": {
+   "type": "globe",
+   "lon0": -20,
+   "markers": [
+    {
+     "lat": 51.5,
+     "lon": -0.1,
+     "label": "London",
+     "at": 1.5
+    }
+   ],
+   "title": "One island. One language.",
+   "textAt": 2.0,
+   "speed": 0.1,
+   "tilt": 38,
+   "radius": 0.36
+  },
+  "say": "Today, about one and a half billion people speak English. And it all began on one small island.",
+  "ar": "اليوم، حوالي مليار ونص إنسان يتكلمون الإنجليزي. وكل شي بدأ من جزيرة صغيرة.",
+  "lead": 0.5
+ },
+ {
+  "cine": {
+   "type": "map",
+   "from": {
+    "lon": -25,
+    "lat": 30,
+    "zoom": 1.1
+   },
+   "to": {
+    "lon": 15,
+    "lat": 28,
+    "zoom": 1.45
+   },
+   "routes": [
+    {
+     "from": [
+      -0.1,
+      51.5
+     ],
+     "to": [
+      -74,
+      40.7
+     ],
+     "at": 1.0,
+     "dur": 2.0,
+     "label": "America"
+    },
+    {
+     "from": [
+      -0.1,
+      51.5
+     ],
+     "to": [
+      72.8,
+      19.0
+     ],
+     "at": 2.6,
+     "dur": 2.0,
+     "label": "India"
+    }
+   ],
+   "title": "Where English travelled",
+   "textAt": 0.5
+  },
+  "say": "Ships and trade carried it across the oceans, to America, to India, and far beyond.",
+  "ar": "السفن والتجارة نقلته عبر البحار، لأمريكا، وللهند، وأبعد بكثير.",
+  "lead": 0.5
+ },
+ {
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "maya",
+   "location": "classroom",
+   "title": "Every story adds *new* words",
+   "kicker": "Did you know?",
+   "keyword": "story",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "words",
+     "pose": "point-viewer",
+     "expression": "excited",
+     "mark": "sparkle"
+    }
+   ]
+  },
+  "say": "And every story, every letter, every book added new words.",
+  "ar": "وكل قصة، وكل رسالة، وكل كتاب أضاف كلمات جديدة."
+ },
+ {
+  "cine": {
+   "type": "typewriter",
+   "text": "1879: a dictionary in ten years. It took almost fifty.",
+   "typeAt": 0.4,
+   "cps": 9
+  },
+  "say": "In eighteen seventy nine, a teacher promised a complete dictionary in ten years. It took almost fifty.",
+  "ar": "في 1879، وعد مدرّس بقاموس كامل خلال عشر سنين. أخذ تقريبًا خمسين سنة.",
+  "lead": 0.5
+ },
+ {
+  "cine": {
+   "type": "word",
+   "word": "serene",
+   "kind": "adjective",
+   "ipa": "/səˈriːn/",
+   "meaning": "calm, peaceful and quiet",
+   "mood": "nature",
+   "textAt": 0.3
+  },
+  "say": "Serene. Calm, peaceful and quiet. The lake was serene at dawn.",
+  "ar": "Serene: هادئ وساكن ومطمئن. البحيرة كانت هادئة وقت الفجر.",
+  "lead": 0.4
+ },
+ {
+  "cine": {
+   "type": "quiz",
+   "kicker": "Quick test",
+   "question": "Which word means 'very beautiful to look at'?",
+   "options": [
+    "breathtaking",
+    "boring",
+    "crowded",
+    "noisy"
+   ],
+   "answer": 0,
+   "countFrom": 4,
+   "explain": "breathtaking = يخطف الأنفاس"
+  },
+  "say": "Quick test. Which word means very beautiful to look at? Breathtaking, boring, crowded, or noisy?",
+  "ar": "اختبار سريع: أي كلمة معناها «جميل جدًا للنظر»؟",
+  "lead": 0.4,
+  "tail": 3.2
+ }
+]
