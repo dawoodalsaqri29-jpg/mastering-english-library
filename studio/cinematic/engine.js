@@ -110,7 +110,7 @@
         ctx.fillRect(lx - 7, ly + 30, 14, H - ly); ctx.fillRect(lx - 34, ly + 10, 68, 22);
       }
       drawFog(t, S.fog, P.fogAlpha ?? 0.6, P.fogSpeed ?? 22);
-      titleBlock(t, { color: P.textColor ?? '#e9e4da', accent: P.accent ?? '#b3241f' }); vignette(0.9); grain(t, 0.08); }
+      titleBlock(t, { color: P.textColor ?? '#e9e4da', accent: P.accent ?? '#e0574a' }); vignette(0.9); grain(t, 0.08); }
   };
 
   // Typewriter close-up typing a line on paper (stories, writers, quotes, word origins)
@@ -230,7 +230,7 @@
         const isA = i === ans, shown = t >= rev; ctx.save(); ctx.globalAlpha = ap * (shown && !isA ? 0.35 : 1); ctx.translate(x, y + (1 - ap) * 20);
         ctx.fillStyle = shown && isA ? '#1f8a4c' : 'rgba(255,255,255,0.08)'; ctx.strokeStyle = shown && isA ? '#7dffb0' : 'rgba(255,255,255,0.35)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.roundRect(-bw / 2, -bh / 2, bw, bh, 26); ctx.fill(); ctx.stroke();
         if (shown && isA) { ctx.shadowColor = '#7dffb0'; ctx.shadowBlur = 40 * (0.6 + 0.4 * Math.sin(t * 6)); ctx.stroke(); ctx.shadowBlur = 0; }
-        ctx.fillStyle = '#e6b94f'; ctx.font = '800 46px Inter'; ctx.fillText('ABCD'[i], -bw / 2 + 60, 2); ctx.fillStyle = '#fff'; ctx.font = '600 50px Inter'; ctx.fillText(o, 30, 2); ctx.restore(); });
+        ctx.fillStyle = '#e6b94f'; ctx.font = '800 46px Inter'; ctx.fillText('ABCD'[i], -bw / 2 + 60, 2); ctx.fillStyle = '#fff'; let fs = 50; ctx.font = `600 ${fs}px Inter`; while (ctx.measureText(o).width > bw - 170 && fs > 26) { fs -= 2; ctx.font = `600 ${fs}px Inter`; } ctx.fillText(o, 30, 2); ctx.restore(); }); // long answers shrink to fit their box
       // countdown ring
       if (t >= cdStart && t < rev) { const left = rev - t; const x = W - 170, y = H - 150; ctx.strokeStyle = 'rgba(255,255,255,0.15)'; ctx.lineWidth = 14; ctx.beginPath(); ctx.arc(x, y, 80, 0, 7); ctx.stroke();
         ctx.strokeStyle = left < 2 ? '#ff5a4f' : '#e6b94f'; ctx.beginPath(); ctx.arc(x, y, 80, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (left / cd)); ctx.stroke(); ctx.fillStyle = '#fff'; ctx.font = '800 72px Inter'; ctx.fillText(String(Math.ceil(left)), x, y + 4); }

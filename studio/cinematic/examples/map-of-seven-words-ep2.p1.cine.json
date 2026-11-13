@@ -1,0 +1,19 @@
+[
+ {"defaults": {"voice": "epic", "emotion": "epic"}},
+ {"cine": {"type": "fog", "subtitle": "The Map of Seven Words · Episode 2", "title": "The Bridge of Bones", "textAt": 1.0, "lightX": 0.5, "lightY": 0.35, "lightColor": "#cfe3ff", "tint": [130, 140, 160]},
+  "say": "Someone was following Sami. And the second word was waiting on the most dangerous bridge in the kingdom.", "ar": "كان فيه أحد يلحق سامي. والكلمة الثانية كانت تنتظر على أخطر جسر في المملكة.", "voice": "epic", "emotion": "suspense", "lead": 0.8},
+ {"cine": {"type": "rain", "title": "", "seed": 52, "lamp": false},
+  "say": "Who's there? I have a lamp, and I'm not afraid!", "ar": "مين هناك؟ معي فانوس، وما أخاف!", "voice": "kid-boy", "emotion": "fear"},
+ {"cine": {"type": "fog", "title": "", "lightX": 0.3, "lightY": 0.4, "lightColor": "#ffe2a8", "tint": [160, 160, 150], "seed": 21},
+  "say": "Calm down! It's only me, Lina. Grandpa sent me. He said you would need help.", "ar": "اهدأ! هذي أنا، لينا. جدّي أرسلني. قال إنك بتحتاج مساعدة.", "voice": "kid-girl", "emotion": "joy"},
+ {"cine": {"type": "typewriter", "text": "Only the valiant may cross. Say the word, and the bridge will hold.", "typeAt": 0.4, "cps": 11},
+  "say": "On the bridge, old letters were carved into the stone. Only the valiant may cross. Say the word, and the bridge will hold.", "ar": "على الجسر، كانت فيه حروف قديمة محفورة في الحجر: ما يعبر إلا الشجاع. قول الكلمة، والجسر بيصمد.", "voice": "epic", "emotion": "suspense"},
+ {"cine": {"type": "word", "word": "valiant", "kind": "Word 2 of 7 · adjective", "ipa": "/ˈvæliənt/", "meaning": "very brave, especially in danger", "mood": "night", "textAt": 0.3},
+  "say": "Valiant. Very brave, especially when you are in danger.", "ar": "Valiant: شجاع جدًا، خصوصًا وقت الخطر.", "voice": "isabella", "emotion": "calm"},
+ {"cine": {"type": "fog", "subtitle": "Word 2", "title": "VALIANT", "textAt": 0.4, "lightX": 0.7, "lightColor": "#e6b94f", "tint": [150, 140, 120]},
+  "say": "Sami took a deep breath, held Lina's hand, and shouted the word into the wind. Valiant!", "ar": "سامي أخذ نفس عميق، ومسك يد لينا، وصرخ بالكلمة في وجه الريح: Valiant!", "voice": "epic", "emotion": "epic"},
+ {"cine": {"type": "rain", "title": "The bridge held.", "textAt": 0.5, "seed": 60},
+  "say": "The bridge held. But far behind them, in the mountain, something very old opened one eye.", "ar": "الجسر صمد. بس بعيد وراهم، في الجبل، شي قديم جدًا فتح عين وحدة.", "voice": "epic", "emotion": "suspense", "tail": 1.4},
+ {"cine": {"type": "quiz", "kicker": "Your turn", "question": "Which word means 'very brave'?", "options": ["valiant", "quest", "eerie", "calm"], "answer": 0, "countFrom": 3, "explain": "valiant = شجاع جدًا"},
+  "say": "Your turn. Which word means very brave? Tell me in the comments, and I'll see you in episode three.", "ar": "دورك: أي كلمة معناها شجاع جدًا؟ قول لي في التعليقات، ونشوفك في الحلقة الثالثة.", "voice": "isabella", "emotion": "joy", "tail": 3.2}
+]

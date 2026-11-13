@@ -12,7 +12,8 @@
   "accent": "Soft British English accent.",
   "persona": "A warm young Englishwoman from London, a storyteller for English learners. Keep a clear British accent in every line.",
   "use": "Isabella's role with real acting: lessons, stories, history. The owner's pick from the voice test.",
-  "studio": "Isabella"
+  "studio": "Isabella",
+  "preview": "bf_isabella"
  },
  "man-uk": {
   "engine": "gemini",
@@ -20,7 +21,8 @@
   "accent": "British English (RP) accent.",
   "persona": "A calm middle-aged man, a gentle storyteller.",
   "use": "Second narrator, fathers, teachers, old men in stories (like the owner's Voice Studio British man).",
-  "studio": "Tom"
+  "studio": "Tom",
+  "preview": "bm_george"
  },
  "man-us": {
   "engine": "gemini",
@@ -28,7 +30,8 @@
   "accent": "General American accent.",
   "persona": "A friendly young man in his twenties with a clear male voice.",
   "use": "Young men, friends, travellers (like the owner's Voice Studio American man).",
-  "studio": "Jake"
+  "studio": "Jake",
+  "preview": "am_michael"
  },
  "kid-girl": {
   "engine": "gemini",
@@ -36,7 +39,8 @@
   "accent": "General American accent.",
   "persona": "An eight-year-old girl with a light, high, bright child's voice, curious and sweet.",
   "use": "Children's videos and girl characters (like the owner's Voice Studio child voice).",
-  "studio": "Girl"
+  "studio": "Girl",
+  "preview": "af_sky"
  },
  "kid-boy": {
   "engine": "gemini",
@@ -44,7 +48,8 @@
   "accent": "General American accent.",
   "persona": "A nine-year-old boy, voiced like a cartoon boy: high, young, playful child's voice, never an adult voice.",
   "use": "Children's videos and boy characters.",
-  "studio": "Boy"
+  "studio": "Boy",
+  "preview": "af_nicole"
  },
  "epic": {
   "engine": "gemini",
@@ -52,7 +57,8 @@
   "accent": "British English accent.",
   "persona": "A legendary narrator with a deep, rich, slightly gravelly voice, like the voice of an ancient chronicle.",
   "use": "Legends, epic quests, history films and battles.",
-  "studio": "Legend"
+  "studio": "Legend",
+  "preview": "bm_fable"
  },
  "gulf-narrator": {
   "engine": "gemini",

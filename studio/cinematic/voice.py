@@ -157,6 +157,13 @@ def speak(text, role='isabella', emotion='neutral'):
     if os.path.exists(path):
         y, sr = sf.read(path, dtype='float32')
         return y, sr
+    if os.environ.get('VOICE_PREVIEW') and c['engine'] != 'kokoro' and c.get('preview'):
+        # temporary free voice for a preview cut, until the Voice Studio recording arrives
+        c = {'engine': 'kokoro', 'voice': c['preview'], 'lang': 'en-gb' if c['preview'][0] == 'b' else 'en-us'}
+        key = 'preview-' + key
+        path = os.path.join(CACHE, f'{role}_{emotion}_{key}.wav')
+        if os.path.exists(path):
+            return sf.read(path, dtype='float32')
     if c['engine'] == 'kokoro':
         y, sr = _kokoro(text, c['voice'], c.get('lang', 'en-gb'), emotion)
     else:
