@@ -59,6 +59,13 @@ Last updated: 2026-11-13
   Waiting on him to record: `studio/cinematic/scripts-to-record/` (Map of Seven Words ep. 1, The Last Train).
   Declined: removing AI-voice watermarks or provenance (asked 2026-11-13).
 
+- 2026-11-13 evening: previews sent with temporary voices by age: Map of Seven Words ep. 1 and ep. 2, The Last Train.
+  Build any of them again with `VOICE_PREVIEW=1 python3 studio/cinematic/film.py <film> p1` from the scripts in
+  `studio/cinematic/examples/` (copy to films/<film>/p1.cine.json). Owner's first 5 Voice Studio files all read
+  Isabella's description, not the lines; he was shown the two-box fix. Remote Control: computer DESKTOP-T9E24GM lists
+  Downloads and free-work but does not serve them to cloud sessions (not_available, also after updating the app);
+  owner may have linked them in another session. Next: his Voice Studio recordings and new videos (uploaded in chat).
+
 ## Waiting on the owner
 - From the swarm run (2026-11-12): (1) one or two free sample pages from each paid pack, above all Exam Quick-Packs;
   (3) an "about" line with the owner's name and a first real review;
