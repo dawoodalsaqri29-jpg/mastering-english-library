@@ -6,20 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "subtitle": "The Map of Seven Words · Episode 2",
-   "title": "The Bridge of Bones",
-   "textAt": 1.0,
-   "lightX": 0.5,
-   "lightY": 0.35,
-   "lightColor": "#cfe3ff",
-   "tint": [
-    130,
-    140,
-    160
-   ]
-  },
+  "clip": "rough-sea.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "Someone was following Sami. And the second word was waiting on the most dangerous bridge in the kingdom.",
   "ar": "كان فيه أحد يلحق سامي. والكلمة الثانية كانت تنتظر على أخطر جسر في المملكة.",
   "voice": "epic",
@@ -27,12 +16,9 @@
   "lead": 0.8
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "",
-   "seed": 52,
-   "lamp": false
-  },
+  "clip": "lone-candle-dark.mp4",
+  "from": 2,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "Who's there? I have a lamp, and I'm not afraid!",
   "ar": "مين هناك؟ معي فانوس، وما أخاف!",
   "voice": "kid-boy",

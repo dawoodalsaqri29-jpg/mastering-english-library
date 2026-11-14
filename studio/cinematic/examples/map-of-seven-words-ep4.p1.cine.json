@@ -33,20 +33,9 @@
   "emotion": "joy"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "",
-   "subtitle": "",
-   "textAt": 0.6,
-   "lightX": 0.25,
-   "lightColor": "#ffe2a8",
-   "tint": [
-    140,
-    150,
-    160
-   ],
-   "seed": 44
-  },
+  "clip": "old-wooden-boat.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "Please, ma'am. We need the fourth word. Someone is following us.",
   "ar": "لو سمحتي يا خالة. نحتاج الكلمة الرابعة. فيه أحد يلحقنا.",
   "voice": "kid-girl",

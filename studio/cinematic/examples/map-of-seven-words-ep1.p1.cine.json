@@ -27,12 +27,13 @@
   "lead": 0.8
  },
  {
+  "clip": "map-compass-candles.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "On a stormy night, in the village of Brightwater, a boy called Sami found a torn map under his grandfather's bed.",
   "ar": "في ليلة عاصفة، في قرية برايت ووتر، ولد اسمه سامي لقى خريطة ممزقة تحت سرير جدّه.",
   "voice": "epic",
-  "emotion": "suspense",
-  "clip": "07_old-library-books_close-up-of-a-male-hand-taking-a-book-from-a-shelf_4K.mp4",
-  "from": 0
+  "emotion": "suspense"
  },
  {
   "cine": {
