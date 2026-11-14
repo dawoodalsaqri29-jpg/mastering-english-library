@@ -75,7 +75,7 @@
   "props": {
    "setup": "What do you call someone very brave in danger?",
    "reveal": "VALIANT!",
-   "keyword": "Valiant",
+   "keyword": "brave",
    "character": "ace",
    "background": "city",
    "revealBackground": "focus",

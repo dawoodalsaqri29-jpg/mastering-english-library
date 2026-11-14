@@ -81,7 +81,7 @@
   "props": {
    "setup": "A road full of danger. A sea full of storms.",
    "reveal": "PERILOUS!",
-   "keyword": "Perilous",
+   "keyword": "dangerous",
    "character": "pip",
    "background": "action",
    "revealBackground": "explosion",
