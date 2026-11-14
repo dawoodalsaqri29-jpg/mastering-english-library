@@ -81,7 +81,10 @@ def main():
             y, sr = sf.read(recorded, dtype='float32')
             y = y.mean(1) if y.ndim > 1 else y
             nz = np.where(np.abs(y) > 0.01)[0]
-            y = y[max(nz[0] - int(sr * 0.05), 0):nz[-1] + int(sr * 0.1)] if len(nz) else y
+            # keep 0.25 s after the last loud sample: soft endings (-ng, -s, -t) sit below the threshold
+            y = y[max(nz[0] - int(sr * 0.05), 0):nz[-1] + int(sr * 0.25)] if len(nz) else y
+            # a short fade-out, so a recording that stops abruptly does not end in a click
+            f = min(len(y), int(sr * 0.03)); y = y.copy(); y[len(y) - f:] *= np.linspace(1, 0, f, dtype='float32')
         else:
             y, sr = speak(sc['say'], voice, emotion)
         speech = len(y) / sr

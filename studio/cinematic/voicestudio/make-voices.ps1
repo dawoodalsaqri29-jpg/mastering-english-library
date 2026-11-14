@@ -4,7 +4,7 @@
 # 2. Put this file and lines.json in the same folder.
 # 3. Right-click this file > "Run with PowerShell"
 #    (or in PowerShell:  powershell -ExecutionPolicy Bypass -File .\make-voices.ps1 )
-# The recordings go to the folder "voicestudio-recordings" (next to this file, or on the Desktop), named ep1-s001.wav and so on.
+# The recordings go to the folder "voicestudio-recordings" (next to this file, or on the Desktop; version 2 adds a pause at the end so the last word is not cut), named ep1-s001.wav and so on.
 # Lines that are already there are skipped, so you can run it again after adding a missing voice.
 # It only talks to VoiceStudio on this computer (localhost); nothing is sent anywhere else.
 
@@ -13,7 +13,7 @@ $ErrorActionPreference = 'Stop'
 $Base  = 'http://localhost:3900'
 # Works as a saved file or pasted straight into PowerShell (then the lines come from the project on GitHub).
 $Here  = if ($PSScriptRoot) { $PSScriptRoot } else { [Environment]::GetFolderPath('Desktop') }
-$Out   = Join-Path $Here 'voicestudio-recordings'
+$Out   = Join-Path $Here 'voicestudio-recordings-2'
 New-Item -ItemType Directory -Force -Path $Out | Out-Null
 $LocalLines = Join-Path $Here 'lines.json'
 $LinesUrl = 'https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/9c8da940c0a5c49fa8f45554cd2fc2b5eacb3feb/studio/cinematic/voicestudio/lines.json'
