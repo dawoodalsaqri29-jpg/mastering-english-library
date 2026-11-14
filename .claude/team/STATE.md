@@ -4,7 +4,7 @@ Claude keeps this file current so a new session, or a session after its context 
 knows exactly where work stands. One line per item. No secrets, no private contact details:
 the repo is public. Update it in the same commit as the work it describes.
 
-Last updated: 2026-11-12
+Last updated: 2026-11-14
 
 ## In progress
 - Schools plan step 4, teachers page (PR #73, merged): owner approved the defaults on 2026-11-08 (library name only, no bio
@@ -65,6 +65,7 @@ Last updated: 2026-11-12
 - 2026-11-08: Site safety rules and SEO checks in the site check (PR #56); C4 workflow rules, SECURITY.md, Dependabot (PR #55).
 - 2026-11-08: 3D business dashboard v1 (three.js, golden library, 7 objects, data.json + saved copy, 2D cards on phones).
 - 2026-11-08: OWASP arena done (8 agents): do not install owasp-security; 4 gaps found (C1 to C5).
+- 2026-11-14: Installed the lazy-software-engineer plugin (v0.1.3, reviewed: text-only SessionStart hook, no network) at project scope in .claude/plugins/, enabled in .claude/settings.json. Always on at level full; skills lazy-review, lazy-trim, shortcut-ledger.
 - 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
 - 2026-11-08: Installed the 11 founder-* skills (MIT, pinned fd9385b); four have their own job in the roster.
 - 2026-11-08: PDFs never link to the local build server (PR #53); found by the security arena.

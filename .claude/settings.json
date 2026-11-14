@@ -1,0 +1,13 @@
+{
+  "enabledPlugins": {
+    "lazy-software-engineer@lazy-software-engineer": true
+  },
+  "extraKnownMarketplaces": {
+    "lazy-software-engineer": {
+      "source": {
+        "source": "directory",
+        "path": "/home/user/mastering-english-library/.claude/plugins/lazy-software-engineer"
+      }
+    }
+  }
+}
