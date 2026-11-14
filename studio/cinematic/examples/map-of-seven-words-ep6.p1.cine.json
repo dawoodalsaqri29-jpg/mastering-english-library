@@ -6,20 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "The Lake of Questions",
-   "subtitle": "The Map of Seven Words · Episode 6",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.3,
-   "lightColor": "#cfe3ff",
-   "tint": [
-    140,
-    160,
-    180
-   ]
-  },
+  "clip": "mountain-lake-boat.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "The sixth word was not hidden. It was asked. And whoever answered wrong would forget their own name.",
   "ar": "الكلمة السادسة ما كانت مخبّاة. كانت سؤال. واللي يجاوب غلط ينسى اسمه.",
   "voice": "epic",
@@ -81,19 +70,9 @@
   "emotion": "calm"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "WISDOM",
-   "subtitle": "Word 6",
-   "textAt": 0.6,
-   "lightX": 0.6,
-   "lightColor": "#e6b94f",
-   "tint": [
-    150,
-    150,
-    140
-   ]
-  },
+  "clip": "cliff-waterfalls.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "Wisdom, said Lina and Sami together. The lake opened like a door, and showed them the mountain.",
   "ar": "قالوا لينا وسامي مع بعض: Wisdom. والبحيرة انفتحت مثل الباب، ووراتهم الجبل.",
   "voice": "epic",

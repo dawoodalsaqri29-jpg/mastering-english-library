@@ -6,20 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "The Grey Cloak",
-   "subtitle": "The Map of Seven Words · Episode 5",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.3,
-   "lightColor": "#d8d8d8",
-   "tint": [
-    150,
-    150,
-    155
-   ]
-  },
+  "clip": "misty-sea-moon.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "For four nights, the man in the grey cloak had followed them. On the fifth night, he spoke.",
   "ar": "أربع ليالي والرجل اللي لابس العباءة الرمادية يلحقهم. في الليلة الخامسة، تكلّم.",
   "voice": "epic",

@@ -47,31 +47,18 @@
   "emotion": "whisper"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "",
-   "lightX": 0.3,
-   "lightColor": "#ffcf80",
-   "tint": [
-    140,
-    150,
-    160
-   ],
-   "silhouette": true,
-   "seed": 12
-  },
+  "clip": "book-tea-candle.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "A dragon? Grandpa, is this real?",
   "ar": "تنين؟ جدّي، هذا صدق؟",
   "voice": "kid-boy",
   "emotion": "surprise"
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "",
-   "seed": 44,
-   "lamp": true
-  },
+  "clip": "candles-window-night.mp4",
+  "from": 2,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "As real as the rain on that window, Sami. And now the map has chosen you.",
   "ar": "صدق مثل المطر اللي على الشباك يا سامي. والحين الخريطة اختارتك.",
   "voice": "grandpa",

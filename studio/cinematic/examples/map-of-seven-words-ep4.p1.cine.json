@@ -6,20 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "The River of Teeth",
-   "subtitle": "The Map of Seven Words · Episode 4",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.35,
-   "lightColor": "#cfe3ff",
-   "tint": [
-    120,
-    140,
-    170
-   ]
-  },
+  "clip": "waterfall-roar.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "The fourth word was on the other side of a river that no boat had ever crossed. Until that night.",
   "ar": "الكلمة الرابعة كانت ورا نهر ما عبره أي قارب. لين ذيك الليلة.",
   "voice": "epic",
@@ -102,13 +91,9 @@
   "from": 1
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "Something in the water",
-   "textAt": 0.5,
-   "seed": 88,
-   "lamp": false
-  },
+  "clip": "storm-sea-snow.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "But under the glass, something long and dark swam slowly after them.",
   "ar": "بس تحت الزجاج، شي طويل وأسود سبح وراهم على مهل.",
   "voice": "epic",

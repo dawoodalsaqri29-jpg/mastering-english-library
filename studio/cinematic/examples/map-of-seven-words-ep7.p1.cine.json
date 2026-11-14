@@ -6,20 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "The Door Opens",
-   "subtitle": "The Map of Seven Words · Final Episode",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.3,
-   "lightColor": "#ffd9a0",
-   "tint": [
-    150,
-    140,
-    130
-   ]
-  },
+  "clip": "mountain-waterfall.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "Seven nights. Six words. And now, at last, the door in the mountain.",
   "ar": "سبع ليالي. ست كلمات. والحين، أخيرًا، الباب اللي في الجبل.",
   "voice": "epic",
@@ -117,17 +106,9 @@
   "emotion": "epic"
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "Seven words. One friend.",
-   "textAt": 0.5,
-   "seed": 120,
-   "colors": [
-    "#ffe9b0",
-    "#ffd27a",
-    "#ffb347"
-   ]
-  },
+  "clip": "sunset-sea.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "But the dragon did not roar. It smiled. It had waited a hundred years for someone to say those seven words.",
   "ar": "بس التنين ما زأر. ابتسم. كان ينتظر مية سنة أحد يقول هالسبع كلمات.",
   "voice": "epic",
