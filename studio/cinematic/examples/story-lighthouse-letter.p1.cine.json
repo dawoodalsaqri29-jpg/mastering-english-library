@@ -1,19 +1,8 @@
 [
  {
-  "cine": {
-   "type": "fog",
-   "subtitle": "A short story · A2",
-   "title": "The Lighthouse Letter",
-   "textAt": 0.8,
-   "lightX": 0.7,
-   "lightY": 0.3,
-   "lightColor": "#fff1c8",
-   "tint": [
-    150,
-    165,
-    180
-   ]
-  },
+  "clip": "lighthouse-coast.mp4",
+  "from": 1,
+  "grade": "eq=saturation=0.9:contrast=1.04,colorbalance=rs=0.05:bs=-0.03,vignette=PI/5",
   "say": "Every evening for forty years, old Tom lit the lighthouse. And every evening, he wrote one letter.",
   "ar": "كل مسا لمدة أربعين سنة، العم توم يشغّل المنارة. وكل مسا، يكتب رسالة وحدة.",
   "lead": 0.6,
@@ -32,14 +21,16 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "calm",
-   "kind": "adjective",
-   "ipa": "/kɑːm/",
-   "meaning": "quiet, with no wind or waves",
-   "mood": "night",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "water-drop",
+   "label": "*Calm*",
+   "caption": "quiet and peaceful, no big waves",
+   "keyword": "Calm",
+   "accents": [
+    "star"
+   ]
   },
   "say": "Calm. Quiet and peaceful, with no big waves.",
   "ar": "Calm: هادي، بدون موج قوي.",
@@ -105,17 +96,9 @@
   "ar": "Keep the light on: يعني لين الحين أنتظرك."
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "Who knocked on the door?",
-   "textAt": 0.6,
-   "seed": 12,
-   "colors": [
-    "#ffe9b0",
-    "#ffd27a",
-    "#9fc6ff"
-   ]
-  },
+  "clip": "storm-sea-snow.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "Then one stormy night, someone knocked on the lighthouse door.",
   "ar": "وفي ليلة عاصفة، أحد دق على باب المنارة.",
   "lead": 0.5,

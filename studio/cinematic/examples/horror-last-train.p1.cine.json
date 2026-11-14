@@ -20,19 +20,9 @@
   "voice": "isabella"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "",
-   "lightX": 0.25,
-   "lightY": 0.35,
-   "lightColor": "#cfe3ff",
-   "tint": [
-    120,
-    135,
-    150
-   ],
-   "silhouette": false
-  },
+  "clip": "candles-window-night.mp4",
+  "from": 3,
+  "grade": "eq=brightness=-0.16:saturation=0.55:contrast=1.1,colorbalance=bs=0.1,vignette=PI/3.5",
   "say": "Rain ran down the windows. The lights flickered. Then, a voice behind her whispered her name.",
   "ar": "المطر ينزل على الشبابيك. الأضواء ترمش. وفجأة، صوت وراها همس باسمها.",
   "lead": 0.5,
@@ -41,14 +31,16 @@
   "voice": "isabella"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "whisper",
-   "kind": "verb",
-   "ipa": "/ˈwɪspə/",
-   "meaning": "to speak very quietly",
-   "mood": "fog",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "speech-bubble",
+   "label": "*Whisper*",
+   "caption": "to speak very, very quietly",
+   "keyword": "Whisper",
+   "accents": [
+    "question-mark"
+   ]
   },
   "say": "Whisper. To speak very, very quietly.",
   "ar": "Whisper: يهمس، يتكلم بصوت واطي جدًا.",
@@ -72,14 +64,18 @@
   "voice": "epic"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "eerie",
-   "kind": "adjective",
-   "ipa": "/ˈɪəri/",
-   "meaning": "strange and frightening",
-   "mood": "fog",
-   "textAt": 0.3
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "Strange. Quiet. A little frightening...",
+   "reveal": "EERIE",
+   "keyword": "frightening",
+   "character": "pip",
+   "background": "street",
+   "revealBackground": "focus",
+   "mood": "night",
+   "palette": "purple",
+   "sfx": "SHHH..."
   },
   "say": "Eerie. Strange, quiet, and a little frightening.",
   "ar": "Eerie: غريب وهادي ومخيف شوي.",
