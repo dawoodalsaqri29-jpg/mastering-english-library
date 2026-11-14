@@ -64,16 +64,12 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "typewriter",
-   "text": "The rulers spoke French. The farmers spoke English.",
-   "typeAt": 0.4,
-   "cps": 10
-  },
   "say": "For about three hundred years, the rulers of England spoke French. The farmers kept speaking English.",
   "ar": "لحوالي ثلاثمية سنة، حكّام إنجلترا كانوا يتكلمون فرنسي، والفلاحين ظلوا يتكلمون إنجليزي.",
   "lead": 0.5,
-  "tail": 0.8
+  "tail": 0.8,
+  "clip": "04_medieval-castle_aerial-view-of-historic-austrian-castle_4K.mp4",
+  "from": 6
  },
  {
   "cine": {

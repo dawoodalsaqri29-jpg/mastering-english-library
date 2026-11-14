@@ -54,19 +54,12 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "meadow",
-   "kind": "noun",
-   "ipa": "/ˈmedəʊ/",
-   "meaning": "a field of grass and flowers",
-   "mood": "nature",
-   "textAt": 0.3
-  },
   "say": "Meadow. A field full of grass and flowers.",
   "ar": "Meadow: مرج، أرض مليانة عشب وورد.",
   "lead": 0.4,
-  "tail": 0.8
+  "tail": 0.8,
+  "clip": "321952_medium.mp4",
+  "from": 0
  },
  {
   "cine": {
