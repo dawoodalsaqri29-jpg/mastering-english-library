@@ -16,7 +16,7 @@ $Here  = if ($PSScriptRoot) { $PSScriptRoot } else { [Environment]::GetFolderPat
 $Out   = Join-Path $Here 'voicestudio-recordings-2'
 New-Item -ItemType Directory -Force -Path $Out | Out-Null
 $LocalLines = Join-Path $Here 'lines.json'
-$LinesUrl = 'https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/9c8da940c0a5c49fa8f45554cd2fc2b5eacb3feb/studio/cinematic/voicestudio/lines.json'
+$LinesUrl = 'https://raw.githubusercontent.com/dawoodalsaqri29-jpg/mastering-english-library/b61d8c0757cd870cad61e31b2f907ad1cdd1f824/studio/cinematic/voicestudio/lines.json'
 if (Test-Path $LocalLines) { $Lines = Get-Content -Raw -Encoding UTF8 $LocalLines | ConvertFrom-Json }
 else { $Lines = Invoke-RestMethod $LinesUrl }
 
