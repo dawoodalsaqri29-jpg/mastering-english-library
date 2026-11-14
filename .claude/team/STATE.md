@@ -71,6 +71,12 @@ Last updated: 2026-11-13
   and descriptions in `map-of-seven-words-youtube.md`; previews of all 7 episodes sent with temporary voices.
   Next: owner records the lines in Voice Studio (two-box way), reviews the episodes, then final cuts.
 
+- 2026-11-14: VoiceStudio.sh (owner's local app, API on localhost:3900) made 51 of 63 lines through
+  `studio/cinematic/voicestudio/make-voices.ps1` (one PowerShell line, script pinned on GitHub). All 51 checked by
+  transcription; built at 85% pace. Seven episodes and The Last Train sent with his voices. Open: Boy, Grandpa and
+  Grandma designs sound like adults (shaping did not fix it); asked him to pick child/elderly voices from VoiceStudio's
+  Gallery under those names and rerun the line. His local Claude session found new videos: to be zipped and uploaded.
+
 ## Waiting on the owner
 - From the swarm run (2026-11-12): (1) one or two free sample pages from each paid pack, above all Exam Quick-Packs;
   (3) an "about" line with the owner's name and a first real review;
