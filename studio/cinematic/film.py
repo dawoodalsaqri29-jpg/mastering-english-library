@@ -91,8 +91,14 @@ def main():
         y = np.concatenate([np.zeros(int(sr * lead), 'float32'), y, np.zeros(int(sr * tail), 'float32')])
         dur = len(y) / sr
         wav = os.path.join(wd, f's{i:03}.wav'); sf.write(wav, y, sr)
+        # a replaced footage file (same name, new content) must give a new key
+        clip_id = b''
+        if 'clip' in sc:
+            cp = sc['clip'] if os.path.isabs(sc['clip']) else os.path.join(os.environ.get('FOOTAGE_DIR', 'footage'), sc['clip'])
+            if os.path.exists(cp):
+                st = os.stat(cp); clip_id = f'{st.st_size}:{int(st.st_mtime)}'.encode()
         key = hashlib.sha1(json.dumps({k: v for k, v in sc.items() if k not in ('ar', 'en')}, sort_keys=True).encode()
-                           + y.tobytes()[:200000] + str(round(dur, 3)).encode() + code).hexdigest()[:12]
+                           + y.tobytes()[:200000] + str(round(dur, 3)).encode() + code + clip_id).hexdigest()[:12]
         mp4 = os.path.join(wd, f's{i:03}_{key}.mp4')
         # 2. the picture, exactly as long as the voice
         if not os.path.exists(mp4):
