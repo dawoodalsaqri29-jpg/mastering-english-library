@@ -144,3 +144,9 @@ Last updated: 2026-11-13
   build scripts already use ffmpeg directly), Claude Shorts and OpenMontage (install scripts; we have no long
   footage). HyperFrames, from the same guide, is already installed: use it for the Lantern section I slides.
 - Arenas: 8 agents by default (about 43 calls); 16 only for big decisions.
+
+## 2026-11-14 · Plugin scenes for teaching, stock clips for story (owner rule)
+- Standing rule: explanation/word-meaning scenes use the video-studio plugin styles (cartoon, comic-book, whiteboard-hand, ...); story scenes use the owner's stock clips (cine scenes as fallback).
+- Done: word scene in all 7 episodes of The Map of Seven Words is now a plugin scene (ep1 cartoon board, ep2/ep4 comic big-reveal on "brave"/"dangerous", ep3/ep6 whiteboard, ep5 cartoon idea, ep7 cartoon narrator). Ep3 opens with the owner's snowy-forest clips. All 7 sent.
+- Voice cut: owner reported the last sounds of lines are cut. Cause: the VoiceStudio files themselves stop mid-sound (e.g. ep3 s002 "moving", s008 "four"). Fix: lines.json v2 adds " ..." and a direction to finish every word; script writes to "voicestudio-recordings-2". Waiting on the owner to run it again and send the folder. film.py now keeps 0.25 s after the last loud sample and fades 30 ms.
+- Drive: still only the same 12 files (owner sorted 370 clips locally; upload not done yet).
