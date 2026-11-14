@@ -1,12 +1,19 @@
 {
   "enabledPlugins": {
-    "lazy-software-engineer@lazy-software-engineer": true
+    "lazy-software-engineer@lazy-software-engineer": true,
+    "write-like-a-human@write-like-a-human": true
   },
   "extraKnownMarketplaces": {
     "lazy-software-engineer": {
       "source": {
         "source": "directory",
         "path": "./.claude/plugins/lazy-software-engineer"
+      }
+    },
+    "write-like-a-human": {
+      "source": {
+        "source": "directory",
+        "path": "./.claude/plugins/write-like-a-human"
       }
     }
   }

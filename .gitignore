@@ -2,3 +2,5 @@ strix_runs/
 
 # Arena skill run folders
 .arena/
+# Personal voice profile from write-like-a-human (holds writing samples; never commit, the repo is public)
+.claude/plugins/write-like-a-human/config.json

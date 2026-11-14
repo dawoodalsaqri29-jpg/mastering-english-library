@@ -1,0 +1,8 @@
+{
+  "name": "write-like-a-human",
+  "version": "1.0.0",
+  "description": "Turn robotic AI drafts into writing that sounds like you. 13 skills for voice profiling, AI-tell detection, humanizing, rhythm, specificity, platform adaptation, fact-checking, scoring, and batch processing.",
+  "author": {
+    "name": "AI Black Magic"
+  }
+}

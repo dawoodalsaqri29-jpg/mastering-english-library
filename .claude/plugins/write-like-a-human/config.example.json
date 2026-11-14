@@ -1,0 +1,12 @@
+{
+  "writer": { "name": "", "role": "", "primary_use_case": "", "audience": "" },
+  "voice_profile": {
+    "tone_words": [], "sentence_rhythm": "", "vocabulary_notes": "", "signature_quirks": "",
+    "dos": [], "donts": [], "reading_level": "", "emoji_usage": "", "profanity_ok": false
+  },
+  "samples": { "sample_count": 0, "sample_source_note": "" },
+  "platforms": { "primary": "", "secondary": [], "detector_sensitivity": "" },
+  "fact_guard": { "strictness": "strict" },
+  "tools": { "planner": "" },
+  "preferences": { "default_rewrite_intensity": "medium", "save_outputs_to": "" }
+}

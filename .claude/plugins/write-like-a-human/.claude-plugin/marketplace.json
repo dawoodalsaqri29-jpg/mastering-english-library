@@ -1,0 +1,5 @@
+{
+  "name": "write-like-a-human",
+  "owner": { "name": "AI Black Magic" },
+  "plugins": [ { "name": "write-like-a-human", "source": "./", "version": "1.0.0", "category": "writing" } ]
+}
