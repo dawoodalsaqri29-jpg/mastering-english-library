@@ -14,6 +14,7 @@ Spoken line fields:
   "audio": "/path/own-recording.wav"  use the owner's own recording instead of a voice role
 Voice Studio: a recording saved as <film>/voice-studio/<part>-s<NNN>.wav (or .mp3/.m4a) replaces the voice role for
 scene NNN (counted from 1, not counting a defaults line). See VOICE-STUDIO.md and script_sheet.py.
+Recordings are slowed to "pace" (default 0.85, set in defaults or per scene; 1.0 keeps them as recorded).
 A first scene of the form {"defaults": {"voice": "...", "emotion": "..."}} sets defaults for the part.
 Voices are in voices.json, emotions in voice.py. Everything is cached, so a rerun only redoes what changed.
 """
@@ -72,9 +73,10 @@ def main():
         recorded = [os.path.join(R, 'voice-studio', f'{part}-s{i:03}{ext}') for ext in ('.wav', '.mp3', '.m4a')]
         recorded = next((r for r in recorded if os.path.exists(r)), None) or sc.get('audio')
         if recorded:
-            if not recorded.endswith('.wav'):   # mp3 or m4a from the app: make a wav first
-                wv = os.path.join(wd, f's{i:03}_in.wav')
-                run(['ffmpeg', '-v', 'error', '-y', '-i', recorded, '-ac', '1', '-ar', '24000', wv]); recorded = wv
+            # Recordings come out fast (about 4 words a second); learners need them slower. atempo keeps the pitch.
+            pace = sc.get('pace', defaults.get('pace', 0.85))
+            wv = os.path.join(wd, f's{i:03}_in.wav')
+            run(['ffmpeg', '-v', 'error', '-y', '-i', recorded, '-ac', '1', '-ar', '24000', '-af', f'atempo={pace}', wv]); recorded = wv
             y, sr = sf.read(recorded, dtype='float32')
             y = y.mean(1) if y.ndim > 1 else y
             nz = np.where(np.abs(y) > 0.01)[0]
