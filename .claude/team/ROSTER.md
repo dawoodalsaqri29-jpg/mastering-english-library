@@ -24,6 +24,8 @@ The owner (Dawood) writes in Gulf Arabic: every report and suggestion is in Arab
 
 ## Agents by job
 
+The full catalogue of agents, plugins and skills, grouped by job, is in `.claude/team/TOOLKIT.md`.
+
 One job, one agent. Give it a short brief (the goal, the files, the output) and nothing it does not need, and
 start a second agent only when the first one's output is the input of the next job. This keeps every job
 precise and saves tokens.
@@ -90,8 +92,8 @@ that already exist above, so a pod adds no new tools and no new schedule.
 | Pod | Lead | Members | Rhythm | Measure |
 |-----|------|---------|--------|---------|
 | الموقع (site) | الحارس اليقظ (guard) | `/qa`, `ecc-seo-specialist`, `ecc-performance-optimizer`, `ecc-security-reviewer`, `ecc-a11y-architect`, content editor | The hourly guard run and the daily patrol | `check-site.js` green; 0 CSP violations; no page over 500 KB |
-| يوتيوب (YouTube) | `agency-marketing-video-optimization-specialist` | `agency-academic-narratologist`, `agency-design-visual-storyteller`, narrator Isabella (Kokoro), video producer, `youtube-agent:*` skills | Thursday patrol, and when the owner asks for a video | Each video ready to upload: 16:9 file, title, description, chapters and thumbnail, in English and Arabic |
-| إنستغرام وتيك توك (Instagram and TikTok) | `agency-marketing-instagram-curator` | `agency-marketing-tiktok-strategist`, `agency-marketing-short-video-editing-coach`, `agency-design-brand-guardian`, `agency-support-support-responder` | Thursday patrol; replies whenever the owner pastes comments | Three post drafts a week built on real lessons; a reply draft for every pasted comment |
+| يوتيوب (YouTube) | `agency-marketing-video-optimization-specialist` | `agency-academic-narratologist`, `agency-design-visual-storyteller`, narrator Isabella (Kokoro), video producer, `youtube-agent:*` skills, voice pass (`ai-tell-detector`, `humanizer-engine`, `rhythm-and-flow-editor`, then `fact-guard`) on every script | Thursday patrol, and when the owner asks for a video | Each video ready to upload: 16:9 file, title, description, chapters and thumbnail, in English and Arabic |
+| إنستغرام وتيك توك (Instagram and TikTok) | `agency-marketing-instagram-curator` | `agency-marketing-tiktok-strategist`, `agency-marketing-short-video-editing-coach`, `agency-design-brand-guardian`, `agency-support-support-responder`, voice pass (`ai-tell-detector`, light `humanizer-engine`, `platform-adapter`) on every caption | Thursday patrol; replies whenever the owner pastes comments | Three post drafts a week built on real lessons; a reply draft for every pasted comment |
 | المتجر والمبيعات (store and sales) | مدير المتجر (Wix Stores) | 3-hourly order check, `client-hunter`, `agency-specialized-pricing-analyst`, `agency-sales-offer-lead-gen-strategist`, `agency-sales-outbound-strategist`, `agency-sales-outreach` | Order check every 3 hours; Thursday patrol | Every mobile-transfer order reported to the owner within 3 hours; the catalogue matches the store |
 
 Limits for every pod: drafts only. No pod posts, uploads, sends, spends or marks an order paid; the owner does. A

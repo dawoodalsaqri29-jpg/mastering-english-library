@@ -68,6 +68,7 @@ Last updated: 2026-11-14
 - 2026-11-14: Installed the lazy-software-engineer plugin (v0.1.3, reviewed: text-only SessionStart hook, no network) at project scope in .claude/plugins/, enabled in .claude/settings.json. Always on at level full; skills lazy-review, lazy-trim, shortcut-ledger.
 - 2026-11-14: Lazy plugin wired into the sprint: CLAUDE.md section 3b and routing; roster Tuesday crew + lazy-trim, Friday + shortcut-ledger. First ledger: 0 shortcut markers.
 - 2026-11-14: Installed write-like-a-human (v1.0.0, 13 skills, text only, no hooks) at project scope; added the missing config.example.json; the personal config.json is gitignored (holds writing samples).
+- 2026-11-14: TOOLKIT.md catalogue of every agent, plugin and skill by job; voice pass added to the YouTube and Instagram/TikTok pods.
 - 2026-11-08: Installed Anthropic's claude-automation-recommender skill (claude-code-setup plugin, Apache-2.0); Friday, suggestions only.
 - 2026-11-08: Installed the 11 founder-* skills (MIT, pinned fd9385b); four have their own job in the roster.
 - 2026-11-08: PDFs never link to the local build server (PR #53); found by the security arena.
