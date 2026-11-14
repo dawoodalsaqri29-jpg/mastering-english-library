@@ -7,7 +7,8 @@ writes $FILMS_DIR/<film>/out/<part>_1080p.mp4, <part>.en.srt, <part>.ar.srt, <pa
 A scene is one of these, plus the spoken line:
   {"cine": {"type": "fog", "title": "..."}, ...}                       a cinematic scene (render.mjs)
   {"style": "cartoon", "template": "...", "props": {...}, ...}          a scene from the video-studio plugin
-  {"clip": "/path/footage.mp4", ...}                                    stock or own footage, trimmed to the line
+  {"clip": "name.mp4", "from": 3, ...}                                  stock footage ($FOOTAGE_DIR/name.mp4), from second 3,
+                                                                         trimmed to the line and lightly graded ("grade": "" turns it off)
 Spoken line fields:
   "say": "English line."   "ar": "الترجمة"   "voice": "isabella-gemini"   "emotion": "fear"
   "lead": 0.5 (silence before)   "tail": 0.8 (after)   "en": subtitle text if the spoken line is not English
@@ -98,8 +99,14 @@ def main():
                 json.dump(dict(sc['cine'], duration=round(dur, 3)), open(pj, 'w'), ensure_ascii=False)
                 run(['node', os.path.join(HERE, 'render.mjs'), '--scene', pj, '--out', pic])
             elif 'clip' in sc:
-                run(['ffmpeg', '-v', 'error', '-y', '-stream_loop', '-1', '-i', sc['clip'], '-t', f'{dur:.3f}', '-an',
-                     '-vf', 'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30', '-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', pic])
+                # stock footage: a name is looked up in $FOOTAGE_DIR; start at "from" seconds; a light grade
+                # (warmer, a little darker, soft vignette) so real footage sits with the drawn scenes
+                src = sc['clip'] if os.path.isabs(sc['clip']) else os.path.join(os.environ.get('FOOTAGE_DIR', 'footage'), sc['clip'])
+                grade = sc.get('grade', 'eq=brightness=-0.04:saturation=0.82:contrast=1.06,colorbalance=rs=0.05:bs=-0.05,vignette=PI/5')
+                run(['ffmpeg', '-v', 'error', '-y', '-ss', str(sc.get('from', 0)), '-stream_loop', '-1', '-i', src, '-t', f'{dur:.3f}', '-an',
+                     '-vf', f'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30,{grade}' if grade else
+                     'scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080,fps=30',
+                     '-c:v', 'libx264', '-crf', '18', '-preset', 'veryfast', pic])
             else:
                 if not PLUGIN:
                     sys.exit('set MVS_STYLES to the video-studio plugin skills folder for style scenes')

@@ -27,22 +27,12 @@
   "lead": 0.8
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "The village of Brightwater",
-   "textAt": 0.6,
-   "seed": 31,
-   "colors": [
-    "#ffd27a",
-    "#ffb347",
-    "#ffe9b0",
-    "#7a1f1f"
-   ]
-  },
   "say": "On a stormy night, in the village of Brightwater, a boy called Sami found a torn map under his grandfather's bed.",
   "ar": "في ليلة عاصفة، في قرية برايت ووتر، ولد اسمه سامي لقى خريطة ممزقة تحت سرير جدّه.",
   "voice": "epic",
-  "emotion": "suspense"
+  "emotion": "suspense",
+  "clip": "07_old-library-books_close-up-of-a-male-hand-taking-a-book-from-a-shelf_4K.mp4",
+  "from": 0
  },
  {
   "cine": {

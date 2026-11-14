@@ -91,23 +91,12 @@
   "emotion": "calm"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "PERILOUS",
-   "subtitle": "Word 4",
-   "textAt": 0.6,
-   "lightX": 0.7,
-   "lightColor": "#9fc6ff",
-   "tint": [
-    130,
-    140,
-    160
-   ]
-  },
   "say": "Perilous, said Sami. The water went still, like glass, and the little boat carried them across.",
   "ar": "قال سامي: Perilous. الماي صار ساكن مثل الزجاج، والقارب الصغير عبّرهم.",
   "voice": "epic",
-  "emotion": "epic"
+  "emotion": "epic",
+  "clip": "01_old-sailing-ship_close-up-on-boat-moored-in-harbor_4K.mp4",
+  "from": 1
  },
  {
   "cine": {

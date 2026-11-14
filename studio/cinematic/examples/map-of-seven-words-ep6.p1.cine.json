@@ -44,24 +44,12 @@
   "emotion": "whisper"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "",
-   "subtitle": "",
-   "textAt": 0.6,
-   "lightX": 0.7,
-   "lightColor": "#fff1c8",
-   "tint": [
-    150,
-    160,
-    170
-   ],
-   "seed": 66
-  },
   "say": "I don't know. But I know Grandpa. He would tell me the truth.",
   "ar": "ما أدري. بس أعرف جدّي. كان بيقول لي الصدق.",
   "voice": "kid-boy",
-  "emotion": "sad"
+  "emotion": "sad",
+  "clip": "08_old-library-books_close-up-view-of-antique-books_4K.mp4",
+  "from": 1
  },
  {
   "cine": {
