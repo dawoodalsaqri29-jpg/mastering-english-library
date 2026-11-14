@@ -85,19 +85,9 @@
   "emotion": "calm"
  },
  {
-  "cine": {
-   "type": "fog",
-   "subtitle": "Word 1",
-   "title": "QUEST",
-   "textAt": 0.5,
-   "lightX": 0.75,
-   "lightColor": "#e6b94f",
-   "tint": [
-    160,
-    150,
-    120
-   ]
-  },
+  "clip": "old-lantern.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "And so the quest began. Sami packed bread, a lamp, and the map, and he walked into the dark.",
   "ar": "وهكذا بدأت الرحلة. سامي أخذ خبز وفانوس والخريطة، ومشى في الظلام.",
   "voice": "epic",

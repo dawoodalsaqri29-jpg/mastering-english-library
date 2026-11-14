@@ -105,13 +105,9 @@
   "emotion": "epic"
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "He was not lying",
-   "textAt": 0.5,
-   "seed": 99,
-   "lamp": false
-  },
+  "clip": "full-moon.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "The stranger stepped back into the dark. And Sami saw his face. It looked just like Grandpa.",
   "ar": "الغريب رجع ورا في الظلام. وسامي شاف وجهه. كان يشبه جدّه تمامًا.",
   "voice": "epic",

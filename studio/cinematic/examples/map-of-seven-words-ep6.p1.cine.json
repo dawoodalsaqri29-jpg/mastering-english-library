@@ -79,13 +79,9 @@
   "emotion": "epic"
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "One word left",
-   "textAt": 0.5,
-   "seed": 109,
-   "lamp": false
-  },
+  "clip": "fog-forest-mountains.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.7:contrast=1.08,colorbalance=bs=0.08,vignette=PI/4",
   "say": "Six words. One left. And the dragon was waking up.",
   "ar": "ست كلمات. باقي وحدة. والتنين قاعد يصحى.",
   "voice": "epic",

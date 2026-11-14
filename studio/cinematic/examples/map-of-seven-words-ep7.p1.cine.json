@@ -86,20 +86,9 @@
   "emotion": "tender"
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "HOPE",
-   "subtitle": "Word 7",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.35,
-   "lightColor": "#ffe9b0",
-   "tint": [
-    170,
-    160,
-    130
-   ]
-  },
+  "clip": "fireplace.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "Quest. Valiant. Ancient. Perilous. Loyal. Wisdom. Hope. The door opened. And the dragon opened both its eyes.",
   "ar": "Quest، Valiant، Ancient، Perilous، Loyal، Wisdom، Hope. الباب انفتح. والتنين فتح عيونه الثنتين.",
   "voice": "epic",

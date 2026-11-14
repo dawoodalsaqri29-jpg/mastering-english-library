@@ -38,36 +38,9 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "map",
-   "from": {
-    "lon": -10,
-    "lat": 52,
-    "zoom": 2.6
-   },
-   "to": {
-    "lon": -30,
-    "lat": 50,
-    "zoom": 2.2
-   },
-   "color": "#4fa3ff",
-   "color2": "#bfe3ff",
-   "bg": "#020814",
-   "routes": [
-    {
-     "from": [
-      -5.7,
-      50.1
-     ],
-     "to": [
-      -52.7,
-      47.6
-     ],
-     "at": 1.0,
-     "dur": 3.0
-    }
-   ]
-  },
+  "clip": "old-world-map.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.03:saturation=0.9:contrast=1.05,colorbalance=rs=0.06:bs=-0.04,vignette=PI/5",
   "say": "He never sent the letters. Anna had sailed away across the ocean, a long time ago.",
   "ar": "ما أرسل ولا رسالة. آنا سافرت بالبحر بعيد، من زمان.",
   "lead": 0.5,
