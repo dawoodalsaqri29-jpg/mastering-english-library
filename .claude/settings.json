@@ -6,7 +6,7 @@
     "lazy-software-engineer": {
       "source": {
         "source": "directory",
-        "path": "/home/user/mastering-english-library/.claude/plugins/lazy-software-engineer"
+        "path": "./.claude/plugins/lazy-software-engineer"
       }
     }
   }
