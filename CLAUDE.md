@@ -56,7 +56,9 @@ Use `/browse` (gstack) for all web browsing; never use `mcp__claude-in-chrome__*
 | Plan | `/autoplan` | Review pipeline | All plan reviews in one go |
 | Plan | `/spec` | Spec author | Turn a vague ask into an executable spec |
 | Build | `/design-consultation`, `/design-shotgun`, `/design-html` | Design team | Design system, variants, production HTML |
+| Build | `lazy-engineer` (always on) | Lazy senior engineer | Smallest change that fully works; ends with Done / Skipped / Risk |
 | Review | `/review` | Staff engineer | Bugs that pass CI but break in production |
+| Review | `lazy-review` | Plain-language reviewer | Owner-facing verdict: Ship / Fix first / Rethink |
 | Review | `/cso` | Security officer | OWASP + STRIDE security audit |
 | Review | `/health` | Quality dashboard | Overall code quality score |
 | Debug | `/investigate` | Debugger | Root cause before any fix |
@@ -91,6 +93,21 @@ ECC agents are specialists you call for one job.
 
 Do not install ECC's hooks or run its install scripts in this repo.
 
+### 3b. Lazy Software Engineer plugin (`.claude/plugins/lazy-software-engineer`)
+
+Pinned v0.1.3, reviewed 2026-11-14 (its only hook prints its rules at session start; no network, no file writes).
+Enabled for this project in `.claude/settings.json`. It shapes *how* code is written inside gstack's Build stage;
+gstack still runs the sprint and `/review` is still the required gate.
+
+- **lazy-engineer** (always on, level `full`): before any code, pick the lowest rung that works: no code, reuse
+  `assets/*.js` / `scripts/*.js`, a browser feature, then the minimum new code. No new libraries or CDN scripts
+  (they also break the CSP and `site-safety.js`). Never cut escaping, error messages shown to the user,
+  accessibility or the CSP. End code replies with Done / Skipped / Risk.
+- **lazy-review**: second opinion after `/review` when the owner wants the verdict in plain words.
+- **lazy-trim**: after a feature lands, next to `ecc-refactor-cleaner`; CUT only what is proven unused, ASK the rest.
+- **shortcut-ledger**: Fridays; lists `shortcut: <limit>; upgrade when <trigger>` comments and flags the due ones.
+- For a session that is only marketing, video or content, say "normal mode" to switch the rules off and save context.
+
 25 more specialists from The Agency (`.claude/agents/agency-*`, pinned, see `.claude/agents/AGENCY.md`)
 cover stories, video, social platforms, sales to schools and pricing. Which agent does which job is in
 the "Agents by job" table in `.claude/team/ROSTER.md`: one job, one agent, a short brief.
@@ -103,7 +120,9 @@ Suggestions from the daily patrol collect in `.claude/team/suggestions.md`.
 ### 4. Default routing for this repo
 
 - New page, lesson section or feature → `/office-hours` then `/autoplan`, then build.
+- Writing code → lazy-engineer rules (always on): reuse before writing, no new dependencies.
 - Any change before commit → `/review`, plus `ecc-code-reviewer` for JS changes.
+- After a feature lands → `lazy-trim` (plan first) with `ecc-refactor-cleaner`.
 - Anything user-visible (HTML/CSS/lessons) → `/qa` on the page and `/design-review`; `ecc-a11y-architect` and `ecc-seo-specialist` for new pages.
 - Before going public or touching forms/scripts/links → `/cso`.
 - Something broken → `/investigate` (no fix without a found cause).

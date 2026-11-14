@@ -17,10 +17,10 @@ The owner (Dawood) writes in Gulf Arabic: every report and suggestion is in Arab
 | Saturday | `ecc-seo-specialist`, `ecc-performance-optimizer`, `/benchmark` | Search visibility and speed |
 | Sunday | `ecc-security-reviewer`, `ecc-silent-failure-hunter`, `/cso` | Security and hidden failures |
 | Monday | `ecc-a11y-architect`, `/design-review` | Accessibility and visual quality |
-| Tuesday | `ecc-code-reviewer`, `ecc-typescript-reviewer`, `ecc-code-simplifier`, `ecc-refactor-cleaner` | Code quality and dead code |
+| Tuesday | `ecc-code-reviewer`, `ecc-typescript-reviewer`, `ecc-code-simplifier`, `ecc-refactor-cleaner`, `lazy-trim` | Code quality and dead code |
 | Wednesday | Content editor (below), `ecc-comment-analyzer`, `ecc-doc-updater` | Lesson accuracy and docs |
 | Thursday | `ecc-marketing-agent`, Store manager | Store, conversion, social content ideas |
-| Friday | `ecc-planner`, `ecc-architect`, `/retro` | Week review and next week's plan |
+| Friday | `ecc-planner`, `ecc-architect`, `/retro`, `shortcut-ledger` | Week review and next week's plan |
 
 ## Agents by job
 
@@ -65,6 +65,9 @@ precise and saves tokens.
 | How Gulf learners and school buyers react to an offer (100 simulated buyers) | `founder-consumer` skill |
 | One-page launch plan from the board, CFO and panel results | `founder-plan` skill |
 | Which automations (skills, subagents, MCP servers) the team is missing; Friday review, suggestions only, no hooks | `claude-automation-recommender` skill |
+| Shrink existing JS/CSS without changing behaviour (CUT / ASK / KEEP, check-site.js before and after) | `lazy-trim` skill |
+| Code review in plain words for the owner, with a Ship / Fix first / Rethink verdict | `lazy-review` skill |
+| Deliberate shortcuts in the code and which are overdue (Friday) | `shortcut-ledger` skill |
 
 The other seven `founder-*` skills (marketing, launch, pricing, offer, competitors, brand, ops) are installed but
 are second choice: their jobs already belong to the agents above (pricing analyst, offer strategist, marketing
@@ -145,6 +148,9 @@ pod that needs a member from another pod asks the lead, who hands over one short
   a failure must show the user something, never a blank area.
 - **مبسّط الكود (`ecc-code-simplifier`) + منظّف الكود (`ecc-refactor-cleaner`):** duplicated code across
   `assets/*.js`, unused CSS rules, unused files; safe removals become fixes, the rest suggestions.
+  `lazy-trim` sorts each removal: CUT (proven unused, applied with `check-site.js` green before and after),
+  ASK (goes to suggestions), KEEP (escaping, error paths, accessibility, CSP, `shortcut:` markers).
+- **سجل الاختصارات (`shortcut-ledger`):** Fridays, every `shortcut:` comment; a DUE one becomes a suggestion with its evidence.
 - **المعماري (`ecc-architect`) + المخطط (`ecc-planner`):** on Fridays, the plan for next week: five ranked suggestions
   with effort (S/M/L) and expected gain.
 
