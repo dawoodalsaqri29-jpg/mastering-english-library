@@ -86,6 +86,11 @@ def main():
             # a short fade-out, so a recording that stops abruptly does not end in a click
             f = min(len(y), int(sr * 0.03)); y = y.copy(); y[len(y) - f:] *= np.linspace(1, 0, f, dtype='float32')
         else:
+            # Owner rule: every character voice comes from his Voice Studio recordings; only Isabella may be
+            # made here. Stop instead of putting a stand-in voice into a film.
+            if voice != 'isabella' and not os.environ.get('ALLOW_STAND_IN_VOICES'):
+                sys.exit(f'{film} {part}-s{i:03}: needs a Voice Studio recording for "{voice}" '
+                         f'(put it in {os.path.join(R, "voice-studio")}/{part}-s{i:03}.wav)')
             y, sr = speak(sc['say'], voice, emotion)
         speech = len(y) / sr
         y = np.concatenate([np.zeros(int(sr * lead), 'float32'), y, np.zeros(int(sr * tail), 'float32')])
