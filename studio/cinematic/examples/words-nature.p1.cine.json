@@ -24,14 +24,16 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "dawn",
-   "kind": "noun",
-   "ipa": "/dɔːn/",
-   "meaning": "the first light of the morning",
-   "mood": "gold",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "sun",
+   "label": "*Dawn*",
+   "caption": "the first light of the morning",
+   "keyword": "Dawn",
+   "accents": [
+    "star"
+   ]
   },
   "say": "Dawn. The first light of the morning.",
   "ar": "Dawn: أول ضوء الصبح، الفجر.",
@@ -39,14 +41,24 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "breeze",
-   "kind": "noun",
-   "ipa": "/briːz/",
-   "meaning": "a soft, gentle wind",
-   "mood": "nature",
-   "textAt": 0.3
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "maya",
+   "location": "park",
+   "title": "*Breeze* = a soft, gentle wind",
+   "kicker": "Word 2",
+   "keyword": "Breeze",
+   "prop": "plant",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "Breeze",
+     "pose": "point-viewer",
+     "expression": "excited",
+     "mark": "sparkle"
+    }
+   ]
   },
   "say": "Breeze. A soft, gentle wind.",
   "ar": "Breeze: نسمة هوا خفيفة.",
@@ -62,14 +74,16 @@
   "from": 0
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "lush",
-   "kind": "adjective",
-   "ipa": "/lʌʃ/",
-   "meaning": "green, thick and full of life",
-   "mood": "nature",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "tree",
+   "label": "*Lush*",
+   "caption": "very green, thick and full of life",
+   "keyword": "Lush",
+   "accents": [
+    "star"
+   ]
   },
   "say": "Lush. Very green, thick, and full of life.",
   "ar": "Lush: أخضر وكثيف ومليان حياة.",
@@ -77,15 +91,9 @@
   "tail": 0.8
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "serene",
-   "kind": "adjective",
-   "ipa": "/səˈriːn/",
-   "meaning": "calm, peaceful and quiet",
-   "mood": "night",
-   "textAt": 0.3
-  },
+  "clip": "snow-bridge.mp4",
+  "from": 1,
+  "grade": "eq=saturation=0.9:contrast=1.03,vignette=PI/5",
   "say": "Serene. Calm, peaceful, and quiet. The lake was serene at dawn.",
   "ar": "Serene: هادي وساكن. البحيرة كانت هادية وقت الفجر.",
   "lead": 0.4,
