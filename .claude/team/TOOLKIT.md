@@ -10,7 +10,7 @@ Counted 2026-11-14. Update it when a tool is added or removed.
 | gstack (pinned 1.96.0.0) | The sprint: think, plan, build, review, test, ship | ~65 skills | `~/.claude/skills/` (installed each session, see CLAUDE.md) |
 | ECC agents (pinned) | Engineering specialists | 14 agents | `.claude/agents/ecc-*` |
 | The Agency (pinned) | Content, video, social, sales, pricing | 25 agents | `.claude/agents/agency-*` |
-| Repo marketing skills | SEO, copy, CRO, ads, pricing, founder-*, swarm-sim | 73 skills | `.claude/skills/` |
+| Repo marketing skills | SEO, copy, CRO, ads, pricing, founder-*, swarm-sim, youtube-to-social | 74 skills | `.claude/skills/` |
 | Repo plugins | `lazy-software-engineer` (4 skills), `write-like-a-human` (13 skills) | 2 plugins | `.claude/plugins/`, enabled in `.claude/settings.json` |
 | Account plugins (claude.ai) | youtube-agent, instagram-agent, mastering-video-studio, social-media-skills, content-engine-v5 and 20 more | 25 plugins, ~350 skills | Synced from the owner's account into every session |
 
@@ -32,11 +32,12 @@ Counted 2026-11-14. Update it when a tool is added or removed.
 4. Video: `mastering-video-studio:*` (23 skills, one per style), `anthropic-skills:mastering-english-lesson-video`, `anthropic-skills:english-story-video`, `ltx-video-studio:*`
 5. Package: `youtube-agent:yt-package`, `yt-seo`, `yt-chapters`, `social-media-skills:thumbnail-design`, `agency-marketing-video-optimization-specialist`
 6. Shorts: `youtube-agent:yt-shorts`, `anthropic-skills:story-to-shorts`; `platform-adapter` turns the description into a Shorts caption
+6b. **Repurpose each published lesson video:** `youtube-to-social` takes the video's URL and gives a 30-60 s Reel/TikTok script or a carousel (PNG + PDF), then the voice pass and `fact-guard`. Use it on the library's own videos; another creator's video is research only, never copied as ours
 7. After upload: `youtube-agent:yt-retention`, `yt-comment`, `yt-audit`
 
 ### Instagram and TikTok
 - Plan and write: `instagram-agent:*` (13), `agency-marketing-instagram-curator`, `agency-marketing-tiktok-strategist`
-- Carousels and covers: `content-engine-v5:carousel-creator`, `content-engine-v5:quality-manager` (agent)
+- Carousels and covers: `youtube-to-social` (from a YouTube URL), `content-engine-v5:carousel-creator`, `content-engine-v5:quality-manager` (agent)
 - **Voice pass on every caption:** `ai-tell-detector` then `humanizer-engine` (light), `platform-adapter` per platform
 - Replies (drafts only): `agency-support-support-responder`, `instagram-agent:ig-reply`
 

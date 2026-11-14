@@ -1,0 +1,37 @@
+{
+  "_comment": "Sample config. The skill creates the real config.json on first run by asking you these questions interactively. Required fields for basic onboarding: brand.name, audience, voice.preset. Carousel-specific fields (carousel.*) are filled in the first time you make a carousel.",
+  "brand": {
+    "name": "Your Brand Name"
+  },
+  "audience": "Describe your audience in one sentence (e.g., 'small-business owners learning AI').",
+  "voice": {
+    "preset": "polished",
+    "custom_description": ""
+  },
+  "cta": {
+    "text": "",
+    "url": ""
+  },
+  "carousel": {
+    "_comment": "Filled in on first carousel use, not during basic onboarding.",
+    "aspect_ratio": "4:5",
+    "font": {
+      "name": "Inter",
+      "path": "${SKILL_PATH}/assets/fonts/Inter/Inter-Variable.ttf",
+      "italic_path": "${SKILL_PATH}/assets/fonts/Inter/Inter-Italic-Variable.ttf",
+      "bold_weight": 700
+    },
+    "visual_mode": "text_only",
+    "image_gen": "",
+    "aesthetic": "Atmospheric painterly cinematic illustration, muted color palette, dramatic light, textured visible brush strokes",
+    "aesthetic_source": "preset",
+    "aesthetic_references": [],
+    "page_indicator": true,
+    "colors": {
+      "text": "#FFFFFF",
+      "accent": "#EBD7AF",
+      "image_gradient": "#000000"
+    },
+    "background_gradient": ["#1a1a2e", "#16213e"]
+  }
+}
