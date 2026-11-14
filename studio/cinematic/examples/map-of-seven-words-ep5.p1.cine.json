@@ -80,14 +80,16 @@
   "emotion": "excited"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "loyal",
-   "kind": "Word 5 of 7 · adjective",
-   "ipa": "/ˈlɔɪəl/",
-   "meaning": "always on your side; you never leave a friend",
-   "mood": "gold",
-   "textAt": 0.3
+  "style": "cartoon",
+  "template": "idea-moment",
+  "props": {
+   "character": "maya",
+   "location": "park",
+   "problem": "Who stays by your side?",
+   "idea": "A loyal friend",
+   "word": "Loyal",
+   "kicker": "Loyal",
+   "prop": "heart"
   },
   "say": "Loyal. Always on your side. A loyal friend never leaves you.",
   "ar": "Loyal: وفي، دايم في صفك. الصديق الوفي عمره ما يتركك.",

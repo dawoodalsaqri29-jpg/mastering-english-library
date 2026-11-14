@@ -76,14 +76,17 @@
   "emotion": "suspense"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "perilous",
-   "kind": "Word 4 of 7 · adjective",
-   "ipa": "/ˈperələs/",
-   "meaning": "very dangerous",
-   "mood": "night",
-   "textAt": 0.3
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "A road full of danger. A sea full of storms.",
+   "reveal": "PERILOUS!",
+   "keyword": "Perilous",
+   "character": "pip",
+   "background": "action",
+   "revealBackground": "explosion",
+   "palette": "red",
+   "sfx": "CRASH!"
   },
   "say": "Perilous. Very dangerous. A perilous road, a perilous sea.",
   "ar": "Perilous: خطير جدًا. طريق خطير، بحر خطير.",

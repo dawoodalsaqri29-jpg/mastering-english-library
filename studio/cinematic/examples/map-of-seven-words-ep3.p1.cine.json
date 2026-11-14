@@ -6,24 +6,9 @@
   }
  },
  {
-  "cine": {
-   "type": "fog",
-   "title": "The Forest That Remembers",
-   "subtitle": "The Map of Seven Words · Episode 3",
-   "textAt": 0.6,
-   "lightX": 0.5,
-   "lightY": 0.3,
-   "lightColor": "#c8f0c0",
-   "tint": [
-    120,
-    150,
-    120
-   ],
-   "base": [
-    "#050c06",
-    "#1a2a1c"
-   ]
-  },
+  "clip": "snow-forest.mp4",
+  "from": 1,
+  "grade": "eq=brightness=-0.10:saturation=0.6:contrast=1.08,colorbalance=bs=0.06,vignette=PI/4",
   "say": "Some forests forget. This one remembered everything, and it did not like strangers.",
   "ar": "بعض الغابات تنسى. بس هذي تتذكر كل شي، وما تحب الغرباء.",
   "voice": "epic",
@@ -31,17 +16,9 @@
   "lead": 0.8
  },
  {
-  "cine": {
-   "type": "rain",
-   "title": "",
-   "textAt": 0.5,
-   "seed": 71,
-   "colors": [
-    "#9be15d",
-    "#3e8e41",
-    "#f6e27f"
-   ]
-  },
+  "clip": "snow-branches.mp4",
+  "from": 0,
+  "grade": "eq=brightness=-0.10:saturation=0.6:contrast=1.08,colorbalance=bs=0.06,vignette=PI/4",
   "say": "Sami, the trees are moving. I'm sure they're moving.",
   "ar": "سامي، الأشجار تتحرك. متأكدة إنها تتحرك.",
   "voice": "kid-girl",
@@ -80,14 +57,16 @@
   "emotion": "suspense"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "ancient",
-   "kind": "Word 3 of 7 · adjective",
-   "ipa": "/ˈeɪnʃənt/",
-   "meaning": "very, very old",
-   "mood": "nature",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "tree",
+   "label": "*Ancient* = very, very old",
+   "caption": "older than anyone can remember",
+   "keyword": "Ancient",
+   "accents": [
+    "star"
+   ]
   },
   "say": "Ancient. Very, very old. Older than anyone can remember.",
   "ar": "Ancient: قديم جدًا جدًا، أقدم من أي أحد يتذكر.",

@@ -78,14 +78,18 @@
   "emotion": "tender"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "quest",
-   "kind": "Word 1 of 7 · noun",
-   "ipa": "/kwest/",
-   "meaning": "a long, hard journey to find something important",
-   "mood": "gold",
-   "textAt": 0.3
+  "style": "cartoon",
+  "template": "explain-with-board",
+  "props": {
+   "character": "leo",
+   "location": "classroom",
+   "title": "Quest = a long *journey*",
+   "mode": "list",
+   "items": [
+    "Long and hard",
+    "To find something important"
+   ],
+   "expression": "happy"
   },
   "say": "The first word. Quest. A long, hard journey to find something important.",
   "ar": "الكلمة الأولى: Quest، رحلة طويلة وصعبة علشان تلاقي شي مهم.",

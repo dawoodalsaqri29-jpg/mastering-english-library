@@ -70,14 +70,17 @@
   "emotion": "suspense"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "valiant",
-   "kind": "Word 2 of 7 · adjective",
-   "ipa": "/ˈvæliənt/",
-   "meaning": "very brave, especially in danger",
-   "mood": "night",
-   "textAt": 0.3
+  "style": "comic-book",
+  "template": "big-reveal",
+  "props": {
+   "setup": "What do you call someone very brave in danger?",
+   "reveal": "VALIANT!",
+   "keyword": "Valiant",
+   "character": "ace",
+   "background": "city",
+   "revealBackground": "focus",
+   "palette": "red",
+   "sfx": "POW!"
   },
   "say": "Valiant. Very brave, especially when you are in danger.",
   "ar": "Valiant: شجاع جدًا، خصوصًا وقت الخطر.",

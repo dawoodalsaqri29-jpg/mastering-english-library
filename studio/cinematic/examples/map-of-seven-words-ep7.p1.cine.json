@@ -72,14 +72,24 @@
   "emotion": "calm"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "hope",
-   "kind": "Word 7 of 7 · noun",
-   "ipa": "/həʊp/",
-   "meaning": "believing that something good will happen",
-   "mood": "gold",
-   "textAt": 0.3
+  "style": "cartoon",
+  "template": "narrator-talks",
+  "props": {
+   "character": "priya",
+   "location": "stage",
+   "title": "*Hope* = something good will happen",
+   "kicker": "Word 7",
+   "keyword": "Hope",
+   "prop": "star",
+   "expression": "happy",
+   "beats": [
+    {
+     "word": "Hope",
+     "pose": "point-viewer",
+     "expression": "excited",
+     "mark": "sparkle"
+    }
+   ]
   },
   "say": "Hope. Believing that something good will happen, even in the dark.",
   "ar": "Hope: الأمل، إنك تصدّق إن شي حلو بيصير، حتى في الظلام.",

@@ -64,14 +64,16 @@
   "emotion": "suspense"
  },
  {
-  "cine": {
-   "type": "word",
-   "word": "wisdom",
-   "kind": "Word 6 of 7 · noun",
-   "ipa": "/ˈwɪzdəm/",
-   "meaning": "knowing what is true and what is right to do",
-   "mood": "night",
-   "textAt": 0.3
+  "style": "whiteboard-hand",
+  "template": "draw-concept",
+  "props": {
+   "doodle": "brain",
+   "label": "*Wisdom*",
+   "caption": "knowing what is true and right",
+   "keyword": "Wisdom",
+   "accents": [
+    "lightbulb"
+   ]
   },
   "say": "Wisdom. Knowing what is true, and what is right to do. Wisdom grows when you share it.",
   "ar": "Wisdom: الحكمة، إنك تعرف وش الصح ووش اللي لازم تسويه. والحكمة تكبر لما تشاركها.",
