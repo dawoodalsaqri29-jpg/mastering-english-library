@@ -88,6 +88,9 @@ def main():
         else:
             # Owner rule: every character voice comes from his Voice Studio recordings; only Isabella may be
             # made here. Stop instead of putting a stand-in voice into a film.
+            # ISABELLA_FILLS=1: a preview cut where Isabella reads the lines still waiting for a recording
+            if voice != 'isabella' and os.environ.get('ISABELLA_FILLS'):
+                voice = 'isabella'
             if voice != 'isabella' and not os.environ.get('ALLOW_STAND_IN_VOICES'):
                 sys.exit(f'{film} {part}-s{i:03}: needs a Voice Studio recording for "{voice}" '
                          f'(put it in {os.path.join(R, "voice-studio")}/{part}-s{i:03}.wav)')
