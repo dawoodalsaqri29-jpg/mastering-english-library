@@ -1,0 +1,31 @@
+{
+  "writer": {
+    "name": "Mastering English Library",
+    "role": "English teacher who runs an online library of English lessons, PDFs and videos",
+    "primary_use_case": "research papers, YouTube scripts, Instagram captions and store copy that start as AI drafts and need to read like a real person wrote them",
+    "audience": "Arabic-speaking English learners in the Gulf, beginner to intermediate, plus teachers and schools"
+  },
+  "voice_profile": {
+    "tone_words": ["clear", "warm", "direct", "encouraging"],
+    "sentence_rhythm": "mostly short sentences (6 to 15 words) with an occasional longer one to explain; never three long sentences in a row",
+    "vocabulary_notes": "Everyday words a B1 learner knows. Prefers 'use' over 'utilize', 'help' over 'facilitate', 'a lot' over 'numerous'. Would never say: delve, leverage, robust, seamless, moreover, furthermore, in today's fast-paced world, it is important to note.",
+    "signature_quirks": "Gives one concrete example (a real sentence) for every rule or claim. Explains a hard word in plain words the first time it appears.",
+    "dos": ["one idea per sentence", "a real example for every point", "plain words first, the technical term second", "active voice"],
+    "donts": ["long stacked clauses", "formal connectors like moreover and furthermore", "summary endings that repeat the text", "idioms a learner will not know"],
+    "reading_level": "simple to intermediate (about CEFR B1, B2 at most): short sentences, everyday words, no jargon without a plain explanation",
+    "emoji_usage": "none in research and scripts; one or two at most in Instagram captions",
+    "profanity_ok": false
+  },
+  "samples": {
+    "sample_count": 0,
+    "sample_source_note": "Quick setup chosen by the owner on 2026-11-15: no writing samples yet; profile set from the owner's request (simple to intermediate language). Add 3 to 5 samples later with humanizer-setup for a closer match."
+  },
+  "platforms": {
+    "primary": "research papers and YouTube scripts",
+    "secondary": ["Instagram captions", "TikTok and Shorts scripts", "website and store copy"],
+    "detector_sensitivity": "medium: wants natural writing; never promise a text is undetectable"
+  },
+  "fact_guard": { "strictness": "strict: flag any change to a number, name, date, quote, citation or grammar rule" },
+  "tools": { "planner": "" },
+  "preferences": { "default_rewrite_intensity": "medium", "save_outputs_to": "" }
+}
