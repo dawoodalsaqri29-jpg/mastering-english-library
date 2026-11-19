@@ -81,6 +81,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -173,6 +181,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -261,6 +277,14 @@
         "date": {
           "type": "string",
           "description": "Optional typed date stamp."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -360,6 +384,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -452,6 +484,14 @@
             "modern"
           ],
           "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -570,6 +610,14 @@
             "modern"
           ],
           "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -640,6 +688,14 @@
         "place": {
           "type": "string",
           "description": "Place written at the top right."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -715,6 +771,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -805,6 +869,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -937,6 +1009,14 @@
         "keyword": {
           "type": "string",
           "description": "One word copied exactly from the narration; the key visual lands on it."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [
@@ -1022,6 +1102,14 @@
             "modern"
           ],
           "description": "Print tone. sepia (default, 1860s-1920s), silver (black and white, 1920s-1960s), cyanotype (blueprint blue), faded (washed-out), modern (crisp, for 'now' shots). Keep one tone per era across the video."
+        },
+        "era": {
+          "type": "string",
+          "enum": [
+            "modern",
+            "early"
+          ],
+          "description": "early: no stray photographs in the desk clutter (use for stories before about 1840, e.g. Vikings, medieval). Default modern."
         }
       },
       "required": [

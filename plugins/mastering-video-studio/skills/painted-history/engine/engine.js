@@ -1585,6 +1585,7 @@
     hoplite: { name: "Hoplites", era: "Greek city-state phalanx", coat: "#B9893A", trim: "#2A2A2A", trousers: "#C9A77A", hat: "corinthian", weapon: "hoplon", flag: { field: "#2A4F8C", pattern: "sun", c1: "#F1E6C8", c2: "#D9B05A" }, cannon: "#4A3A2A" },
     knight: { name: "Knights", era: "High medieval men-at-arms", coat: "#8E9096", trim: "#B3271E", trousers: "#6E7076", hat: "greathelm", weapon: "sword", flag: { field: "#F1E6C8", pattern: "george", c1: "#B3271E", c2: "#B3271E" }, cannon: "#4A3A2A" },
     samurai: { name: "Samurai", era: "Sengoku Japan", coat: "#2A2A30", trim: "#B3271E", trousers: "#2A2A30", hat: "kabuto", weapon: "yari", flag: { field: "#F1E6C8", pattern: "mon", c1: "#B3271E", c2: "#2A2A30" }, cannon: "#4A3A2A" },
+    saxon: { name: "Saxons", era: "Anglo-Saxon fyrd, 9th to 11th c. (plain banner: no surviving design)", coat: "#3E5A7A", trim: "#C9A77A", trousers: "#4A3E30", hat: "nasal", weapon: "axe", flag: { field: "#8E2A1E", pattern: "plain", c1: "#F1E6C8", c2: "#F1E6C8" }, cannon: "#4A3A2A" },
     viking: { name: "Northmen", era: "Viking age shield wall", coat: "#6E5A3E", trim: "#C9A77A", trousers: "#3A2E22", hat: "nasal", weapon: "axe", flag: { field: "#2A2A2A", pattern: "raven", c1: "#F1E6C8", c2: "#B3271E" }, cannon: "#4A3A2A" },
     mongol: { name: "Horde", era: "Steppe horse archers", coat: "#3A5A96", trim: "#C9A77A", trousers: "#5A4030", hat: "furcap", weapon: "bow", flag: { field: "#2A4F8C", pattern: "tails", c1: "#F1E6C8", c2: "#D9B05A" }, cannon: "#4A3A2A" },
     ottoman: { name: "Janissaries", era: "Ottoman infantry", coat: "#B3271E", trim: "#D9B05A", trousers: "#2A4F8C", hat: "bork", weapon: "musket", flag: { field: "#B3271E", pattern: "crescent", c1: "#F1E6C8", c2: "#F1E6C8" }, cannon: "#5A4A2A" },
@@ -1600,12 +1601,12 @@
   S.guessFaction = function (text) {
     var t = str(text).toLowerCase();
     var M = [["redcoat", /british|red ?coat|english|king's|royal/], ["bluecoat", /french|napoleon|blue ?coat|grande/], ["prussian", /prussia|german|hessian/], ["union", /union|federal|yankee|civil war/], ["continental", /continental|patriot|revolution|washington/],
-      ["roman", /roman|legion|caesar|centur/], ["hoplite", /greek|spart|athen|hoplite|phalanx|macedon/], ["knight", /knight|crusad|medieval|norman|chivalr/], ["samurai", /samurai|japan|shogun|daimyo/], ["viking", /viking|norse|dane|saxon/],
+      ["roman", /roman|legion|caesar|centur/], ["hoplite", /greek|spart|athen|hoplite|phalanx|macedon/], ["knight", /knight|crusad|medieval|norman|chivalr/], ["samurai", /samurai|japan|shogun|daimyo/], ["saxon", /saxon|wessex|mercia|anglo/], ["viking", /viking|norse|dane/],
       ["mongol", /mongol|horde|steppe|khan|hun/], ["ottoman", /ottoman|turk|janissar|sultan/], ["musketeer", /musketeer|pike|tercio|cavalier|roundhead|thirty/], ["whitecoat", /austria|bourbon|white ?coat|spanish/], ["greencoat", /russia|tsar|rifle|jäger|jager/]];
     for (var i = 0; i < M.length; i++) if (M[i][1].test(t)) return M[i][0];
     return "redcoat";
   };
-  var ENEMY = { redcoat: "bluecoat", bluecoat: "redcoat", whitecoat: "prussian", greencoat: "bluecoat", prussian: "whitecoat", union: "greencoat", continental: "redcoat", musketeer: "whitecoat", roman: "viking", hoplite: "ottoman", knight: "ottoman", samurai: "mongol", viking: "knight", mongol: "samurai", ottoman: "knight" };
+  var ENEMY = { redcoat: "bluecoat", bluecoat: "redcoat", whitecoat: "prussian", greencoat: "bluecoat", prussian: "whitecoat", union: "greencoat", continental: "redcoat", musketeer: "whitecoat", roman: "viking", hoplite: "ottoman", knight: "ottoman", samurai: "mongol", viking: "saxon", saxon: "viking", mongol: "samurai", ottoman: "knight" };
   S.enemyOf = function (id) { return ENEMY[id] || "bluecoat"; };
 
   // ───────────────────────── sky / time-of-day and terrain presets ─────────────────────────
@@ -2406,7 +2407,7 @@
     return s;
   }
   S.hatMarkup = hatMk;
-  function isArmour(F) { return F.weapon === "scutum" || F.weapon === "hoplon" || F.weapon === "sword" || F.weapon === "yari"; }
+  function isArmour(F) { return F.weapon === "scutum" || F.weapon === "hoplon" || F.weapon === "sword" || F.weapon === "yari" || F.weapon === "axe"; } // axe = Viking-age mail, no coat tails or crossbelts
   /** Leg: hip → foot with knee bend; angle in radians (positive = forward). */
   function legMk(hx, hy, len, ang, lift, col, boot, w) {
     var kx = hx + Math.sin(ang) * len * 0.5 + lift * 6, ky = hy + Math.cos(ang) * len * 0.5 - lift * 4;
@@ -2853,11 +2854,13 @@
     for (var fd = 0; fd < 5; fd++) html += '<path d="M' + A2(-30 + fd * 14, -140) + " q" + A2((r() - 0.5) * 8, 60) + " " + A2(-4 + fd * 2, 130) + '" fill="none" stroke="' + shade(coat, -0.5) + '" stroke-width="2" opacity="0.4"/>';
     html += '<path d="M58 -118 Q56 -150 26 -156" fill="none" stroke="#FFE0A0" stroke-width="4" opacity="0.5"/>';
     html += mkPoly([[-8, -150], [30, -150], [14, -30], [-2, -30]], F.hat === "bork" ? GOLD : "#F1E6C8"); // waistcoat / breastplate
-    html += mkLine(-20, -146, 20, -20, isArmour(F) ? GOLD : "#B3271E", 14, ' opacity="0.85"'); // sash
-    html += '<path d="M-56 -150 Q-36 -162 -14 -152 L-18 -132 Q-38 -140 -58 -128 Z" fill="' + G2.gold + '"/>' + '<path d="M18 -152 Q40 -162 60 -150 L62 -128 Q42 -140 22 -132 Z" fill="' + G2.gold + '"/>'; // epaulettes
-    for (var e = 0; e < 9; e++) html += mkLine(-58 + e * 2.2, -130 + e * 0.6, -60 + e * 2.2 + (r() - 0.5) * 3, -106 + (r() - 0.5) * 6, e % 2 ? "#B8862A" : "#F0D070", 2.2) + mkLine(62 - e * 2.2, -130 + e * 0.6, 64 - e * 2.2 + (r() - 0.5) * 3, -106 + (r() - 0.5) * 6, e % 2 ? "#B8862A" : "#F0D070", 2.2); // fringe
-    html += mkCi(-36, -146, 6, "#F0D070") + mkCi(40, -146, 6, "#F0D070");
-    html += mkLine(-6, -140, 2, -40, GOLD, 3); for (var b = 0; b < 6; b++) html += mkCi(-2, -130 + b * 16, 3.2, GOLD);
+    var preMod = F.weapon === "axe"; // Viking-age chiefs: a cloak clasp, no sash, epaulettes or buttons
+    if (preMod) html += mkCi(-30, -146, 9, GOLD) + mkCi(-30, -146, 4, "#8E2A1E");
+    else html += mkLine(-20, -146, 20, -20, isArmour(F) ? GOLD : "#B3271E", 14, ' opacity="0.85"'); // sash
+    if (!preMod) html += '<path d="M-56 -150 Q-36 -162 -14 -152 L-18 -132 Q-38 -140 -58 -128 Z" fill="' + G2.gold + '"/>' + '<path d="M18 -152 Q40 -162 60 -150 L62 -128 Q42 -140 22 -132 Z" fill="' + G2.gold + '"/>'; // epaulettes
+    if (!preMod) for (var e = 0; e < 9; e++) html += mkLine(-58 + e * 2.2, -130 + e * 0.6, -60 + e * 2.2 + (r() - 0.5) * 3, -106 + (r() - 0.5) * 6, e % 2 ? "#B8862A" : "#F0D070", 2.2) + mkLine(62 - e * 2.2, -130 + e * 0.6, 64 - e * 2.2 + (r() - 0.5) * 3, -106 + (r() - 0.5) * 6, e % 2 ? "#B8862A" : "#F0D070", 2.2); // fringe
+    if (!preMod) html += mkCi(-36, -146, 6, "#F0D070") + mkCi(40, -146, 6, "#F0D070");
+    if (!preMod) for (var b = -1; b < 6; b++) if (b < 0) html += mkLine(-6, -140, 2, -40, GOLD, 3); else html += mkCi(-2, -130 + b * 16, 3.2, GOLD);
     html += mkPoly([[-16, -150], [-4, -168], [34, -168], [26, -150]], shade(coat, -0.3)) + mkRect(-4, -170, 36, 22, "#F1E6C8", ' opacity="0.9"'); // collar + stock
     var statics = sv("g", null, g); statics.innerHTML = html;
     // back arm (hand on hip)

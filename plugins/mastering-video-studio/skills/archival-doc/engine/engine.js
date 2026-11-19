@@ -3559,6 +3559,7 @@
   };
   /** A blank sheet / old photo pile for desk clutter. kind: sheet | print | news | card */
   function clutterSheet(kind, cx, cy, w, rot, r) {
+    if (kind === "print" && S.era === "early") kind = "card"; // no photographs on the desk for pre-photography stories
     if (kind === "print") return S.photo({ subject: SUBJECT_IDS[Math.floor(r() * SUBJECT_IDS.length)], cx: cx, cy: cy, w: w, rot: rot, tone: r() > 0.5 ? "sepia" : "silver", mounts: false, damage: 0.8 });
     var h = kind === "card" ? w * 0.6 : w * 1.3;
     var it = makeItem("sheet", { cx: cx, cy: cy, w: w, h: h, rot: rot });
@@ -4041,6 +4042,7 @@
     try {
       A = null;
       root.innerHTML = "";
+      S.era = props.era === "early" ? "early" : "modern";
       fn(props, root);
     } catch (e) {
       V.error("[archival-doc:" + id + "] " + (e && e.message ? e.message : String(e)));

@@ -11,7 +11,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -33,7 +33,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -168,7 +168,7 @@
             "properties": {
               "faction": {
                 "type": "string",
-                "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+                "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
               },
               "name": {
                 "type": "string",
@@ -260,7 +260,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -282,7 +282,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -394,7 +394,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -416,7 +416,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -514,7 +514,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -630,7 +630,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -652,7 +652,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -796,7 +796,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -818,7 +818,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -908,7 +908,7 @@
         },
         "faction": {
           "type": "string",
-          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
         },
         "hat": {
           "type": "string",
@@ -996,7 +996,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -1018,7 +1018,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -1166,7 +1166,7 @@
           "properties": {
             "faction": {
               "type": "string",
-              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
+              "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset."
             },
             "name": {
               "type": "string",
@@ -1280,7 +1280,7 @@
         },
         "faction": {
           "type": "string",
-          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset. Colours the armies behind the quote."
+          "description": "Army preset: redcoat (British line, red coats), bluecoat (Napoleonic French), whitecoat (Austrian / Bourbon), greencoat (Russian / riflemen), prussian (dark blue, spiked helmets), union (US Civil War federal), continental (American Revolution), musketeer (17th-century pike and shot), roman (legionaries with scutum), hoplite (Greek phalanx), knight (medieval men-at-arms), samurai (Sengoku Japan), viking (shield wall, raven banner), saxon (Anglo-Saxon fyrd, plain banner), mongol (steppe horse archers), ottoman (janissaries). A free-text nation name is also mapped to the nearest preset. Colours the armies behind the quote."
         },
         "sky": {
           "type": "string",
