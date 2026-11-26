@@ -1,0 +1,1147 @@
+[
+ {
+  "style": "map-reveal",
+  "template": "headline-title",
+  "props": {
+   "region": "uk",
+   "headline": "THREE KINGS IN ONE *YEAR*",
+   "keyword": "year",
+   "sync": true,
+   "place": "-0.13,51.51",
+   "kicker": "1066",
+   "sub": "ENGLAND",
+   "color": "red"
+  },
+  "say": "Three kings in one year. In ten sixty six, England was ruled by three different kings, one after another."
+ },
+ {
+  "style": "painted-history",
+  "template": "march",
+  "props": {
+   "army": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "direction": "right",
+   "keyword": "north",
+   "cavalry": true,
+   "title": "NINETEEN DAYS LATER",
+   "place": "England",
+   "date": "1066",
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "One of them marched his army about three hundred kilometres north, and won one of the most famous victories in English history. Nineteen days later, he had to fight again, on a hill near Hastings."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "Words From the Conquest",
+   "items": [
+    {
+     "label": "beef",
+     "note": "French"
+    },
+    {
+     "label": "army",
+     "note": "French"
+    },
+    {
+     "label": "justice",
+     "note": "French"
+    },
+    {
+     "label": "war",
+     "note": "Norman French"
+    }
+   ],
+   "tone": "sepia",
+   "era": "early"
+  },
+  "say": "Beef. Army. Justice. Even the word war. What happened on that hill is a big part of the reason these words are English today. And it pushed English out of the halls of power for nearly three hundred years."
+ },
+ {
+  "style": "painted-history",
+  "template": "title-banner",
+  "props": {
+   "title": "1066",
+   "chapter": "Part Three",
+   "subtitle": "Three kings, two battles and a flood of French words",
+   "keyword": "three",
+   "place": "England",
+   "date": "1066",
+   "left": {
+    "faction": "saxon"
+   },
+   "right": {
+    "faction": "norman"
+   },
+   "sky": "golden",
+   "terrain": "hills"
+  },
+  "say": "How War Made English. Part three. Ten sixty six. Three kings, two great battles, and a flood of new words."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "911",
+   "stops": [
+    {
+     "place": "10,60",
+     "label": "Scandinavia",
+     "keyword": "Vikings"
+    },
+    {
+     "place": "north-sea"
+    },
+    {
+     "place": "1.10,49.44",
+     "label": "Normandy",
+     "keyword": "Rollo"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "red",
+   "keyword": "secret",
+   "headline": "NORTHMEN BECOME *NORMANS*"
+  },
+  "say": "At the end of part two, we found a family secret. The Normans, across the sea in northern France, were descended from Vikings. Their leader, Rollo, was given land there, traditionally in nine hundred and eleven."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Norman",
+   "date": "911",
+   "subject": "Northman",
+   "body": "Norman comes from Northman. The Viking settlers of northern France gave up Norse within a few generations, and spoke French.",
+   "classification": "Etymology",
+   "stamp": "Northman",
+   "stampColor": "red",
+   "keyword": "Northman",
+   "era": "early"
+  },
+  "say": "Their very name tells the story. Norman simply means Northman. But within a few generations, these Northmen had stopped speaking Norse. They spoke French."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "europe",
+   "place": "1.10,49.44",
+   "headline": "AN ENGLISH PRINCE IN *NORMANDY*",
+   "keyword": "Normandy",
+   "label": "Normandy",
+   "sub": "ABOUT 25 YEARS IN EXILE",
+   "kicker": "EDWARD",
+   "color": "yellow",
+   "zoom": 2.4
+  },
+  "say": "And there was a link to England. Queen Emma, the wife of King Ethelred, was the daughter of a duke of Normandy. Her son Edward grew up in exile there, for about twenty five years."
+ },
+ {
+  "style": "painted-history",
+  "template": "portrait-of-commander",
+  "props": {
+   "name": "Edward",
+   "role": "King of England",
+   "dates": "1042 - 1066",
+   "faction": "saxon",
+   "keyword": "Edward",
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "In ten forty two, Edward came home and became king of England. He is remembered as Edward the Confessor. He had no children. And on the fifth of January, ten sixty six, he died."
+ },
+ {
+  "style": "archival-doc",
+  "template": "timeline-ribbon",
+  "props": {
+   "tone": "sepia",
+   "events": [
+    {
+     "date": "1042",
+     "label": "Edward becomes king"
+    },
+    {
+     "date": "1066",
+     "label": "5 January: Edward dies"
+    },
+    {
+     "date": "1066",
+     "label": "6 January: Harold is crowned"
+    }
+   ],
+   "era": "early"
+  },
+  "say": "What came next happened fast. The very next day, the day of Edward's funeral, the most powerful earl in England, Harold Godwinson, was crowned king in Westminster Abbey."
+ },
+ {
+  "style": "map-reveal",
+  "template": "fact-countdown",
+  "props": {
+   "region": "europe",
+   "title": "THREE MEN, ONE CROWN",
+   "countdown": false,
+   "facts": [
+    {
+     "place": "-0.13,51.51",
+     "label": "Harold",
+     "sub": "KING OF ENGLAND",
+     "keyword": "Harold"
+    },
+    {
+     "place": "1.10,49.44",
+     "label": "William",
+     "sub": "DUKE OF NORMANDY",
+     "keyword": "William",
+     "color": "yellow"
+    },
+    {
+     "place": "8,61",
+     "label": "Harald Hardrada",
+     "sub": "KING OF NORWAY",
+     "keyword": "Norway",
+     "color": "orange"
+    }
+   ]
+  },
+  "say": "Harold had the crown. But across the sea, two other men believed it was theirs. In Normandy, Edward's relative, Duke William. And in Norway, King Harald Hardrada, one of the most feared warriors of his age. Three men. One crown."
+ },
+ {
+  "style": "painted-history",
+  "template": "general-council",
+  "props": {
+   "commanders": [
+    {
+     "faction": "norman",
+     "name": "Duke William"
+    },
+    {
+     "faction": "norman",
+     "name": "A Norman lord"
+    }
+   ],
+   "speaker": 0,
+   "decision": "INVADE ENGLAND",
+   "keyword": "force",
+   "setting": "hall",
+   "focus": "map",
+   "place": "Normandy",
+   "date": "1066"
+  },
+  "say": "Norman writers said that Edward had promised William the crown, and that Harold himself had once sworn an oath to support him. English writers told a different story. William decided to take the crown by force."
+ },
+ {
+  "style": "painted-history",
+  "template": "quote-from-history",
+  "props": {
+   "quote": "These men wonder at the star.",
+   "author": "The Bayeux Tapestry",
+   "date": "1066",
+   "keyword": "These",
+   "faction": "saxon",
+   "sky": "night",
+   "terrain": "hills"
+  },
+  "say": "These men wonder at the star. That Latin caption on the Bayeux Tapestry shows men pointing up at a bright star with a long tail, seen in late April of that year. It was Halley's Comet."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "SEPTEMBER 1066",
+   "stops": [
+    {
+     "place": "norway",
+     "label": "Norway",
+     "keyword": "Norway"
+    },
+    {
+     "place": "north-sea"
+    },
+    {
+     "place": "-1.0,53.8",
+     "label": "Yorkshire",
+     "keyword": "Tostig"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "red",
+   "keyword": "blow",
+   "headline": "THE NORTHMEN *RETURN*",
+   "stat": 300,
+   "statSuffix": " SHIPS",
+   "statCaption": "Anglo-Saxon Chronicle"
+  },
+  "say": "In September, the first blow fell. Harald Hardrada sailed from Norway with a huge fleet. The Anglo-Saxon Chronicle says three hundred ships. With him was Tostig, Harold's own brother, who had been driven out of England."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "viking",
+    "name": "Norwegians"
+   },
+   "right": {
+    "faction": "saxon",
+    "name": "Northern English"
+   },
+   "attacker": "left",
+   "action": "clash",
+   "cannons": false,
+   "keyword": "crushed",
+   "title": "DEFEAT AT FULFORD",
+   "place": "Fulford",
+   "date": "1066",
+   "sky": "storm",
+   "terrain": "river"
+  },
+  "say": "On the twentieth of September, at Fulford, just outside York, the Norwegians crushed the two northern English earls, Edwin and Morcar. York made peace with the invaders, and handed over hostages."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "uk",
+   "title": "THE RACE NORTH",
+   "stops": [
+    {
+     "place": "-0.13,51.51",
+     "label": "London",
+     "keyword": "south"
+    },
+    {
+     "place": "-1.26,53.88",
+     "label": "Tadcaster"
+    },
+    {
+     "place": "-1.08,53.96",
+     "label": "York",
+     "keyword": "week"
+    }
+   ],
+   "vehicle": "dot",
+   "color": "yellow",
+   "keyword": "raced",
+   "headline": "THE RACE *NORTH*",
+   "stat": 300,
+   "statSuffix": " KM",
+   "statCaption": "in about a week"
+  },
+  "say": "Harold was in the south, watching the coast for William. When the news came, he raced north with his army. About three hundred kilometres, in roughly a week."
+ },
+ {
+  "style": "painted-history",
+  "template": "march",
+  "props": {
+   "army": {
+    "faction": "saxon",
+    "name": "Housecarls"
+   },
+   "direction": "right",
+   "keyword": "idea",
+   "cavalry": true,
+   "place": "Northern England",
+   "date": "1066",
+   "sky": "golden",
+   "terrain": "plain"
+  },
+  "say": "His best soldiers were the housecarls, professional warriors who fought on foot with long, heavy axes. They pushed north, mile after mile. And the Norwegians had no idea they were coming."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "uk",
+   "place": "-0.91,53.99",
+   "headline": "A TERRIBLE *SURPRISE*",
+   "keyword": "surprise",
+   "label": "Stamford Bridge",
+   "sub": "EAST OF YORK",
+   "kicker": "1066",
+   "color": "red",
+   "zoom": 2.4
+  },
+  "say": "On the twenty fifth of September, the Norwegians were waiting at a place called Stamford Bridge, east of York, for the hostages they had been promised. Instead, they got a terrible surprise. The English army."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Stories About 1066",
+   "title": "The Man on the Bridge",
+   "date": "1066",
+   "subject": "Stamford Bridge",
+   "body": "One Norwegian holds the bridge alone, until an Englishman floats beneath it in a tub. The story was added to the Chronicle in the twelfth century.",
+   "classification": "Folk tale",
+   "stamp": "Legend",
+   "stampColor": "blue",
+   "keyword": "legend",
+   "era": "early"
+  },
+  "say": "There is a famous story about this battle. A single giant Norwegian held the narrow bridge alone, until an Englishman floated under it and stabbed him from below. But the story was only added to the Chronicle in the twelfth century. It is probably a legend."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "right": {
+    "faction": "viking",
+    "name": "Norwegians"
+   },
+   "attacker": "left",
+   "action": "charge",
+   "cannons": false,
+   "keyword": "broke",
+   "title": "STAMFORD BRIDGE",
+   "place": "Stamford Bridge",
+   "date": "1066",
+   "sky": "golden",
+   "terrain": "river"
+  },
+  "say": "The real battle was long and hard. But in the end, the English broke through. Harald Hardrada was killed. So was Tostig, Harold's own brother."
+ },
+ {
+  "style": "painted-history",
+  "template": "aftermath",
+  "props": {
+   "army": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "right": {
+    "faction": "viking",
+    "name": "Norwegians"
+   },
+   "keyword": "destroyed",
+   "title": "THE END OF AN AGE",
+   "stat": "300",
+   "statLabel": "ships came",
+   "stat2": "24",
+   "stat2Label": "ships went home",
+   "place": "Stamford Bridge",
+   "date": "1066",
+   "sky": "dusk",
+   "terrain": "river"
+  },
+  "say": "The Norwegian army was destroyed. One version of the Anglo-Saxon Chronicle says the survivors needed only twenty four ships to sail home. Many historians see this as the end of the Viking Age."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "europe",
+   "title": "28 SEPTEMBER 1066",
+   "stops": [
+    {
+     "place": "1.63,50.19",
+     "keyword": "wind"
+    },
+    {
+     "place": "channel"
+    },
+    {
+     "place": "0.33,50.82",
+     "label": "Pevensey",
+     "keyword": "Pevensey"
+    }
+   ],
+   "vehicle": "ship",
+   "color": "red",
+   "keyword": "rest",
+   "headline": "THE NORMANS *LAND*"
+  },
+  "say": "But Harold had no time to rest. For weeks, William had been waiting for the right wind. On the twenty eighth of September, just three days after Stamford Bridge, the Normans landed at Pevensey, on the south coast."
+ },
+ {
+  "style": "painted-history",
+  "template": "march",
+  "props": {
+   "army": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "direction": "left",
+   "keyword": "south",
+   "cavalry": true,
+   "place": "Hastings",
+   "date": "1066",
+   "sky": "golden",
+   "terrain": "coast"
+  },
+  "say": "William moved his army to Hastings, built a wooden castle there, and raided the countryside around it, to draw Harold south."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Castle",
+   "date": "1066",
+   "subject": "A private fortress",
+   "body": "Old North French castel, from Latin castellum. In English from around the time of the conquest.",
+   "classification": "Etymology",
+   "stamp": "Norman French",
+   "stampColor": "red",
+   "keyword": "Castle",
+   "era": "early"
+  },
+  "say": "And here is our first new word. Castle. Before the Normans, castles were almost unknown in England. The word castel entered English around the time of the conquest, from Norman French."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "uk",
+   "title": "SOUTH AGAIN",
+   "stops": [
+    {
+     "place": "-1.08,53.96",
+     "label": "York"
+    },
+    {
+     "place": "-0.13,51.51",
+     "label": "London",
+     "keyword": "London"
+    },
+    {
+     "place": "0.49,50.91",
+     "label": "Hastings",
+     "keyword": "William"
+    }
+   ],
+   "vehicle": "dot",
+   "color": "yellow",
+   "keyword": "south",
+   "headline": "BACK TO THE *SOUTH*"
+  },
+  "say": "Harold hurried south again. He gathered more men in London, then marched to meet William. His army had fought one hard battle and made two long marches in less than a month."
+ },
+ {
+  "style": "archival-doc",
+  "template": "chapter-title",
+  "props": {
+   "chapter": "The Battle",
+   "title": "Hastings",
+   "subtitle": "Saturday, 14 October",
+   "date": "1066",
+   "place": "Battle, Sussex",
+   "subject": "landscape",
+   "tone": "sepia",
+   "keyword": "Hastings",
+   "era": "early"
+  },
+  "say": "The fourteenth of October, ten sixty six. A Saturday. About eleven kilometres from Hastings, on a ridge at the place now simply called Battle."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-map",
+  "props": {
+   "attacker": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "defender": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "manoeuvre": "frontal",
+   "keyword": "uphill",
+   "title": "Hastings, 1066",
+   "towns": [
+    "Battle",
+    "Hastings"
+   ],
+   "river": false,
+   "place": "Battle",
+   "date": "1066"
+  },
+  "say": "Harold placed his army along the top of the ridge. The English stood shoulder to shoulder in a shield wall. If William wanted the crown, he would have to attack uphill."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "Two Armies",
+   "items": [
+    {
+     "label": "Shield wall",
+     "note": "English, on foot"
+    },
+    {
+     "label": "Housecarls",
+     "note": "Two-handed axes"
+    },
+    {
+     "label": "Archers",
+     "note": "Norman"
+    },
+    {
+     "label": "Knights",
+     "note": "Norman, on horseback"
+    }
+   ],
+   "links": [
+    {
+     "from": 0,
+     "to": 1
+    },
+    {
+     "from": 2,
+     "to": 3
+    }
+   ],
+   "tone": "sepia",
+   "era": "early"
+  },
+  "say": "The English fought on foot. Their best men, the housecarls, swung long, two handed axes. The Normans brought three kinds of soldier. Archers. Foot soldiers. And knights on horseback."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "right": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "attacker": "left",
+   "action": "charge",
+   "cavalry": "left",
+   "cannons": false,
+   "keyword": "charged",
+   "place": "Senlac Ridge",
+   "date": "1066",
+   "sky": "noon",
+   "terrain": "hills"
+  },
+  "say": "The battle began around nine in the morning. The Norman archers shot up the slope, and then the knights charged. But again and again, the shield wall held."
+ },
+ {
+  "style": "map-reveal",
+  "template": "headline-title",
+  "props": {
+   "region": "uk",
+   "headline": "THE WALL *HELD*",
+   "keyword": "held",
+   "sync": true,
+   "place": "0.49,50.91",
+   "kicker": "14 OCTOBER 1066",
+   "sub": "SENLAC RIDGE",
+   "color": "yellow"
+  },
+  "say": "The wall held. Hour after hour, the Normans could not break the English line on the hill."
+ },
+ {
+  "style": "painted-history",
+  "template": "portrait-of-commander",
+  "props": {
+   "name": "William",
+   "role": "Duke of Normandy",
+   "dates": "1028 - 1087",
+   "faction": "norman",
+   "keyword": "alive",
+   "sky": "storm",
+   "terrain": "hills"
+  },
+  "say": "Then a rumour spread through the Norman army. The duke was dead. According to a Norman writer, William pushed back his helmet and rode along his lines, so that his men could see his face. He was alive."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-map",
+  "props": {
+   "attacker": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "defender": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "manoeuvre": "feigned-retreat",
+   "keyword": "pretended",
+   "title": "The Trick",
+   "towns": [
+    "Battle"
+   ],
+   "river": false,
+   "place": "Battle",
+   "date": "1066"
+  },
+  "say": "Norman writers say that William then used a trick. His knights pretended to run away. English soldiers chased them down the hill, and the knights turned and cut them off. Historians still argue about how much of this is true."
+ },
+ {
+  "style": "painted-history",
+  "template": "battle-scene",
+  "props": {
+   "left": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "right": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "attacker": "left",
+   "action": "clash",
+   "cavalry": "left",
+   "cannons": false,
+   "keyword": "broke",
+   "title": "THE LINE BREAKS",
+   "place": "Senlac Ridge",
+   "date": "1066",
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "Slowly, the shield wall grew thinner. Late in the day, as the light began to fade, the Normans broke through at last."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "The Death of a King",
+   "title": "The Arrow",
+   "date": "1066",
+   "subject": "Harold",
+   "body": "The Bayeux Tapestry: here King Harold is killed. Which figure is Harold? The arrow may have been changed by later repairs.",
+   "classification": "Bayeux Tapestry",
+   "stamp": "Uncertain",
+   "stampColor": "blue",
+   "keyword": "killed",
+   "era": "early"
+  },
+  "say": "Somewhere in that last fight, King Harold was killed. The Bayeux Tapestry shows a man with an arrow near his eye, under the words: here King Harold is killed. But no one is sure that this man is Harold, and later repairs may have changed the arrow."
+ },
+ {
+  "style": "painted-history",
+  "template": "aftermath",
+  "props": {
+   "army": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "right": {
+    "faction": "saxon",
+    "name": "English"
+   },
+   "keyword": "over",
+   "title": "THE KING IS DEAD",
+   "stat": "VICTORY",
+   "statLabel": "Normans",
+   "stat2": "DEFEAT",
+   "stat2Label": "English",
+   "place": "Battle",
+   "date": "1066",
+   "sky": "dusk",
+   "terrain": "hills"
+  },
+  "say": "By nightfall, it was over. Harold was dead, and so were his brothers Gyrth and Leofwine. In one day, England had lost its king and many of its leaders."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "uk",
+   "place": "0.49,50.91",
+   "headline": "A TOWN CALLED *BATTLE*",
+   "keyword": "Battle",
+   "label": "Battle Abbey",
+   "sub": "EAST SUSSEX",
+   "kicker": "1066",
+   "color": "red",
+   "zoom": 2.6
+  },
+  "say": "A few years later, William built an abbey on the battlefield. Tradition says its high altar was placed where Harold fell. The town that grew up around it is still called Battle."
+ },
+ {
+  "style": "map-reveal",
+  "template": "route-journey",
+  "props": {
+   "region": "uk",
+   "title": "THE LAST RESISTANCE",
+   "stops": [
+    {
+     "place": "0.57,50.86",
+     "label": "Hastings",
+     "keyword": "Edgar"
+    },
+    {
+     "place": "-0.13,51.51",
+     "label": "London",
+     "keyword": "Berkhamsted"
+    }
+   ],
+   "vehicle": "dot",
+   "color": "red",
+   "keyword": "Edgar",
+   "headline": "THE ENGLISH *SUBMIT*"
+  },
+  "say": "In London, the English leaders chose a young prince, Edgar, as their king. But he was never crowned. As William's army closed in, they came out to meet him at Berkhamsted, and submitted."
+ },
+ {
+  "style": "map-reveal",
+  "template": "headline-title",
+  "props": {
+   "region": "uk",
+   "headline": "CROWNED ON *CHRISTMAS* DAY",
+   "keyword": "Christmas",
+   "sync": true,
+   "place": "-0.13,51.51",
+   "kicker": "1066",
+   "sub": "WESTMINSTER ABBEY",
+   "color": "yellow",
+   "headlineColor": "yellow"
+  },
+  "say": "Crowned on Christmas Day. On the twenty fifth of December, ten sixty six, William was crowned king of England in Westminster Abbey."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Westminster, Christmas Day",
+   "title": "Two Languages, One Crowd",
+   "date": "1066",
+   "subject": "The coronation",
+   "body": "Inside, the crowd shouts its approval in English and in French. Outside, Norman guards fear an attack and set houses on fire.",
+   "classification": "Norman chronicle",
+   "stamp": "Recorded",
+   "stampColor": "red",
+   "keyword": "languages",
+   "era": "early"
+  },
+  "say": "Something strange happened inside. The crowd shouted its approval in two languages, English and French. Outside, the Norman guards heard the noise, thought it was an attack, and set fire to the houses nearby."
+ },
+ {
+  "style": "painted-history",
+  "template": "timeline-of-campaign",
+  "props": {
+   "events": [
+    {
+     "date": "January",
+     "label": "Edward dies, Harold crowned"
+    },
+    {
+     "date": "20 September",
+     "label": "Fulford"
+    },
+    {
+     "date": "25 September",
+     "label": "Stamford Bridge"
+    },
+    {
+     "date": "14 October",
+     "label": "Hastings"
+    },
+    {
+     "date": "25 December",
+     "label": "William crowned"
+    }
+   ],
+   "army": {
+    "faction": "norman",
+    "name": "Normans"
+   },
+   "title": "1066",
+   "subtitle": "Three crowned kings",
+   "sky": "winter",
+   "terrain": "plain"
+  },
+  "say": "Look at that year. Edward dies in January. Fulford, in September. Stamford Bridge, five days later. Hastings, in October. And a new king at Christmas. Three crowned kings in a single year."
+ },
+ {
+  "style": "painted-history",
+  "template": "general-council",
+  "props": {
+   "commanders": [
+    {
+     "faction": "norman",
+     "name": "King William"
+    },
+    {
+     "faction": "norman",
+     "name": "A Norman baron"
+    },
+    {
+     "faction": "norman",
+     "name": "A Norman bishop"
+    }
+   ],
+   "speaker": 0,
+   "decision": "THE LAND IS SHARED OUT",
+   "keyword": "land",
+   "setting": "hall",
+   "focus": "commanders",
+   "place": "England",
+   "date": "1086"
+  },
+  "say": "William gave the land of England to his Norman followers. By the time of the great survey called the Domesday Book, in ten eighty six, very few of the great landholders were English."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "Who Spoke What",
+   "items": [
+    {
+     "label": "French",
+     "note": "The king and nobles"
+    },
+    {
+     "label": "Latin",
+     "note": "Official writing"
+    },
+    {
+     "label": "English",
+     "note": "Ordinary people"
+    }
+   ],
+   "tone": "sepia",
+   "era": "early"
+  },
+  "say": "So now England had three languages. The king and his nobles spoke French. The main written language of government was Latin. And most ordinary people, the farmers, servants and craftsmen, still spoke English."
+ },
+ {
+  "style": "map-reveal",
+  "template": "map-focus",
+  "props": {
+   "region": "uk",
+   "place": "-0.24,52.57",
+   "headline": "ENGLISH *SURVIVED*",
+   "keyword": "survived",
+   "label": "Peterborough",
+   "sub": "THE LAST CHRONICLE IN ENGLISH",
+   "kicker": "1154",
+   "color": "cyan",
+   "zoom": 2.4
+  },
+  "say": "English survived. At Peterborough Abbey, monks kept writing their chronicle in English until eleven fifty four, almost ninety years after Hastings."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "War",
+   "date": "1100 - 1154",
+   "subject": "werre",
+   "body": "Old North French werre (French guerre), from a Germanic word. First recorded in English in the Peterborough Chronicle, in the early 1100s.",
+   "classification": "Etymology",
+   "stamp": "Norman French",
+   "stampColor": "red",
+   "keyword": "war",
+   "era": "early"
+  },
+  "say": "And in that chronicle, in the early eleven hundreds, we find a new word: werre. It came from Norman French, and today we spell it W A R. Yes. Even the word war came to English with the Normans. And the French had first borrowed it from a Germanic language."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "Field and Table",
+   "items": [
+    {
+     "label": "cow / beef",
+     "note": "Old English / French"
+    },
+    {
+     "label": "swine / pork",
+     "note": "Old English / French"
+    },
+    {
+     "label": "sheep / mutton",
+     "note": "Old English / French"
+    },
+    {
+     "label": "calf / veal",
+     "note": "Old English / French"
+    }
+   ],
+   "tone": "sepia",
+   "era": "early"
+  },
+  "say": "Cow and beef. Swine and pork. Sheep and mutton. Calf and veal. These are the most famous Norman words of all. The animals in the field kept their old English names, but the meat on the table got French names."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Word Origins",
+   "title": "Field and Table",
+   "date": "1300",
+   "subject": "beef, pork, mutton, veal",
+   "body": "Anglo-French boef, porc, moton, veel. Most were borrowed around 1300, and at first beef and mutton could also mean the living animals.",
+   "classification": "Etymology",
+   "stamp": "Messier",
+   "stampColor": "blue",
+   "keyword": "messier",
+   "era": "early"
+  },
+  "say": "The usual story: English farmers raised the animals, and French speaking lords ate the meat. The novelist Walter Scott made this idea famous in Ivanhoe, in eighteen nineteen. The truth is messier. These words arrived slowly, mostly around thirteen hundred, and at first, beef could also mean the living animal."
+ },
+ {
+  "style": "painted-history",
+  "template": "general-council",
+  "props": {
+   "commanders": [
+    {
+     "faction": "norman",
+     "name": "The King"
+    },
+    {
+     "faction": "norman",
+     "name": "A royal judge"
+    }
+   ],
+   "speaker": 0,
+   "decision": "THE WORDS OF POWER",
+   "keyword": "power",
+   "setting": "hall",
+   "focus": "map",
+   "place": "The royal court",
+   "date": "1100 - 1400"
+  },
+  "say": "The same thing happened wherever power was. Government. Court. Judge. Jury. Justice. Crime. Prison. Army. Navy. Soldier. Enemy. Peace. All of these came into English from French."
+ },
+ {
+  "style": "archival-doc",
+  "template": "stat-ledger",
+  "props": {
+   "title": "The French Flood",
+   "year": "1066 - 1500",
+   "stats": [
+    {
+     "value": 10000,
+     "label": "French words borrowed into Middle English"
+    },
+    {
+     "value": 75,
+     "suffix": "%",
+     "label": "still in use today"
+    }
+   ],
+   "source": "Baugh and Cable, A History of the English Language",
+   "keyword": "thousand",
+   "era": "early"
+  },
+  "say": "In all, some ten thousand French words came into English in the centuries after the conquest. And about three quarters of them are still used today."
+ },
+ {
+  "style": "archival-doc",
+  "template": "document-reveal",
+  "props": {
+   "header": "Two Words, One Idea",
+   "title": "Old English and French",
+   "date": "Today",
+   "subject": "Everyday and formal",
+   "body": "begin / commence. ask / demand. freedom / liberty. kingly / royal. help / aid. The first word in each pair is Old English; the second is French.",
+   "classification": "Vocabulary",
+   "stamp": "Learn both",
+   "stampColor": "red",
+   "keyword": "formal",
+   "era": "early"
+  },
+  "say": "This is why English often has two words for one idea. The short, everyday word is usually Old English. The longer, more formal one is often French. Begin, and commence. Ask, and demand. Freedom, and liberty. Help, and aid."
+ },
+ {
+  "style": "archival-doc",
+  "template": "evidence-board",
+  "props": {
+   "title": "New Spellings",
+   "items": [
+    {
+     "label": "cwen",
+     "note": "Old English"
+    },
+    {
+     "label": "queen",
+     "note": "qu, Norman spelling"
+    },
+    {
+     "label": "cirice",
+     "note": "Old English"
+    },
+    {
+     "label": "church",
+     "note": "ch, Norman spelling"
+    }
+   ],
+   "links": [
+    {
+     "from": 0,
+     "to": 1
+    },
+    {
+     "from": 2,
+     "to": 3
+    }
+   ],
+   "tone": "sepia",
+   "era": "early"
+  },
+  "say": "The Normans even changed how English was written. French trained scribes spelled the old English c w as q u. So cwen became queen. And they used c h for the sound at the start of church."
+ },
+ {
+  "style": "map-reveal",
+  "template": "stat-on-map",
+  "props": {
+   "region": "uk",
+   "place": "-0.13,51.51",
+   "value": 28,
+   "suffix": "%",
+   "caption": "of English words come from French",
+   "keyword": "French",
+   "label": "English today",
+   "headline": "MORE THAN A QUARTER *FRENCH*",
+   "kicker": "ONE FAMOUS COUNT",
+   "color": "yellow",
+   "zoom": 1.4
+  },
+  "say": "And the result is still with us. In one famous study of about eighty thousand words in an English dictionary, around twenty eight percent came from French. Only about a quarter came from the old Germanic roots."
+ },
+ {
+  "style": "painted-history",
+  "template": "aftermath",
+  "props": {
+   "army": {
+    "faction": "saxon",
+    "name": "The English"
+   },
+   "keyword": "richer",
+   "title": "ENGLISH LIVES ON",
+   "place": "England",
+   "date": "1066 - 1300",
+   "sky": "dawn",
+   "terrain": "hills"
+  },
+  "say": "So the Normans won the war. But they never defeated the English language. The farmers kept speaking it. And slowly, the words of their conquerors flowed into it, and made it richer."
+ },
+ {
+  "style": "map-reveal",
+  "template": "headline-title",
+  "props": {
+   "region": "europe",
+   "headline": "THE LONGEST *WAR*",
+   "keyword": "war",
+   "sync": true,
+   "place": "0.5,48.5",
+   "kicker": "NEXT: PART FOUR",
+   "sub": "ENGLAND AGAINST FRANCE",
+   "color": "red"
+  },
+  "say": "The longest war. That is what it would take for English to win back the king's court: a war between England and France that lasted more than a hundred years. That is the story of part four."
+ }
+]

@@ -67,7 +67,8 @@ battle-map arrows** and place/date lower-thirds. Keep every second moving: no st
 - Palette: dark umber `#1E150D`, cream `#F3E6C8`, gold `#C8963E`, faction reds and blues for coats.
 - Type: Times/Georgia bold caps for banners, italic Georgia for captions. No sans-serif, no icons.
 - Factions are presets (`faction`): `redcoat`, `bluecoat`, `whitecoat`, `greencoat`, `prussian`, `union`,
-  `continental`, `musketeer`, `roman`, `hoplite`, `knight`, `samurai`, `viking`, `saxon`, `mongol`, `ottoman`.
+  `continental`, `musketeer`, `roman`, `hoplite`, `knight`, `samurai`, `viking`, `saxon`, `norman`, `mongol`, `ottoman`.
+  For 1066 use `norman` (mail, nasal helmet, kite shield, plain banner), never `knight` (its great helm and St George flag are later).
   Each has its own coat, hat, weapon and flag. A free-text nation ("Carthaginian") maps to the nearest preset.
 - Skies set the mood: `golden` (default), `dawn`, `dusk`, `storm` (defeat, aftermath), `noon`, `night`, `winter`.
 - Never gory: smoke, fallen flags, broken wheels and quiet survivors stand in for casualties.

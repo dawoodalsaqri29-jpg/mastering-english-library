@@ -2576,6 +2576,7 @@
     R(g, 250, 268, 110, 22, T(0.15)); Ci(g, 268, 292, 6, T(0.08)); Ci(g, 342, 292, 6, T(0.08));
     for (var wk = 0; wk < 5; wk++) figure(g, T, 40 + wk * 34 + r() * 10, 296, 30 + r() * 6, 0.1, r, { hat: "cap" });
   } };
+  // landscape: the windmill is left out in era "early" (no windmills in England before the late 1100s)
   SUBJECTS.landscape = { vb: [400, 300], focus: [0.5, 0.55], draw: function (g, defs, T, r) {
     skyRect(g, defs, T, 400, 300, 0.9, 0.72);
     clouds(g, T, r, 7, 400, 20, 100, 0.96);
@@ -2588,8 +2589,8 @@
     R(g, hx, hy - 16, 26, 16, T(0.86)); P(g, "M" + (hx - 3) + " " + (hy - 16) + " L" + (hx + 13) + " " + (hy - 28) + " L" + (hx + 29) + " " + (hy - 16) + " Z", T(0.2));
     R(g, hx + 30, hy - 22, 26, 22, T(0.3)); P(g, "M" + (hx + 28) + " " + (hy - 22) + " L" + (hx + 43) + " " + (hy - 34) + " L" + (hx + 58) + " " + (hy - 22) + " Z", T(0.16));
     var mx = 120, my = 206;
-    P(g, "M" + (mx - 4) + " " + my + " L" + (mx - 2) + " " + (my - 36) + " L" + (mx + 2) + " " + (my - 36) + " L" + (mx + 4) + " " + my + " Z", T(0.22));
-    for (var bl = 0; bl < 4; bl++) { var a = bl * 1.57 + 0.4; Ln(g, mx, my - 36, mx + Math.cos(a) * 18, my - 36 + Math.sin(a) * 18, T(0.25), 2.4); }
+    if (S.era !== "early") P(g, "M" + (mx - 4) + " " + my + " L" + (mx - 2) + " " + (my - 36) + " L" + (mx + 2) + " " + (my - 36) + " L" + (mx + 4) + " " + my + " Z", T(0.22));
+    if (S.era !== "early") for (var bl = 0; bl < 4; bl++) { var a = bl * 1.57 + 0.4; Ln(g, mx, my - 36, mx + Math.cos(a) * 18, my - 36 + Math.sin(a) * 18, T(0.25), 2.4); }
     for (var tr = 0; tr < 14; tr++) {
       var tx = r() * 400, ty = 200 + r() * 30, ts = 6 + r() * 10;
       El(g, tx, ty - ts, ts * 0.8, ts * 1.1, T(0.14 + r() * 0.12));

@@ -5,10 +5,11 @@
 | 2026-11-11 | How War Made English, Part 1: Rome and the Anglo-Saxons | documentary | painted-history, map-reveal, archival-doc | rendered, awaiting review (3:19, EN + AR subtitles) |
 | 2026-11-11 | How War Made English, Part 2: The Northmen | documentary | painted-history, map-reveal, archival-doc | script ready (ch02.json); expanded and rendered on 2026-11-19, see below |
 | 2026-11-19 | How War Made English, Part 2: The Northmen (793 to 1042: Lindisfarne, the Great Army, Alfred and Edington, the Danelaw, Norse words, Cnut, the Normandy twist) | documentary | painted-history, map-reveal, archival-doc | rendered, awaiting review (9:54, 52 scenes, EN + AR subtitles) |
+| 2026-11-26 | How War Made English, Part 3: 1066 (Edward's death, Hardrada and Fulford, Stamford Bridge, the Norman landing, Hastings, the Christmas coronation, French words: castle, war, beef/pork, words of power, doublets, qu/ch spellings) | documentary | painted-history, map-reveal, archival-doc | rendered, awaiting review (10:10, 52 scenes, EN + AR subtitles) |
 | 2026-11-11 | The Secret History of Your English Words (word origins, spelling history, four-step learning method) | long explainer, 24:49 | 15 styles mixed | rendered, awaiting review |
 
 ## Planned (from yt/long/how-war-made-english/outline.md)
-- Next to make: Part 3 (write ch03.json from outline.md)
+- Next to make: Part 4 (write ch04.json from outline.md: the Hundred Years' War, 1337 to 1453; English returns to the courts; Chaucer)
 - Part 3: 1066 (Stamford Bridge, Hastings, French words)
 - Part 4: The Hundred Years' War and English coming back
 - Part 5: Roses and the printing press
